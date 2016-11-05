@@ -344,26 +344,12 @@
 
       
         
-          
-            <h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><ul>
-<li>为了在不同电脑上写完并提交博文后，博客能自动更新内容。本文介绍如何通过Travis CI来实现github上的hexo博客自动部署。</li>
-</ul>
-<h1 id="123"><a href="#123" class="headerlink" title="123"></a>123</h1><p>$a^2$</p>
-<p>接入Travis CI<br>打开Travis CI网站，使用github账号登录。<br>将鼠标放在右上角的用户名上，点击Account选项，会显示github的项目。<br>找到博客项目，点击前面带有 X 符号的按钮，开启travis支持。</p>
-<p>安装ruby<br><a href="http://rubyinstaller.org/downloads/" target="_blank" rel="external">ruby官网下载地址</a><br>Personal access tokens  blog-travis-CI</p>
-<p>testing travis CI…..</p>
-<h1 id="参考博客"><a href="#参考博客" class="headerlink" title="参考博客"></a>参考博客</h1><ul>
-<li><a href="https://hexo.io/zh-cn/" target="_blank" rel="external">hexo官方文档</a></li>
-<li><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">NexT主题官方文档</a></li>
-<li><a href="https://www.zhihu.com/question/29017171" target="_blank" rel="external">hexo 下的分类和表签无法显示，怎么解决？</a></li>
-<li><a href="http://www.jianshu.com/p/f4cc5866946b" target="_blank" rel="external">手把手教从零开始在GitHub上使用Hexo搭建博客教程(一)</a></li>
-<li><a href="https://segmentfault.com/q/1010000004593371" target="_blank" rel="external">Github上搭建Hexo如何跨电脑写作部署方便？</a></li>
-<li><a href="http://blog.bigruan.com/2015-03-09-Continuous-Integration-Your-Hexo-Blog-With-TravisCI/" target="_blank" rel="external">Continuous Integration Your Hexo Blog With Travis CI</a></li>
-<li><a href="http://www.jianshu.com/p/1d427e888dda" target="_blank" rel="external">【Hexo+Github】域名和github绑定的问题</a></li>
-<li><a href="http://www.jianshu.com/p/3cb4c9ff5b58" target="_blank" rel="external">万网域名+GitHub平台搭建的博客</a></li>
-</ul>
-
-          
+          <p>本文介绍了如何使用Travis CI自动部署hexo，解决了家里和公司两地写博客的麻烦。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/11/02/hexo教程系列——使用Travis自动部署hexo/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -480,26 +466,12 @@
 
       
         
-          
-            <h1 id="网站的配置文件"><a href="#网站的配置文件" class="headerlink" title="网站的配置文件"></a>网站的配置文件</h1><ul>
-<li>网站配置文件的存储位置：<strong>hexo_blog/_config.yml</strong>。</li>
-<li>配置文件中，冒号后面一定要加空格。</li>
-<li><a href="https://hexo.io/docs/configuration.html" target="_blank" rel="external">hexo官方配置说明</a></li>
-<li>我的配置文件内容如下所示。<figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># Hexo Configuration Hexo配置文件</span></div><div class="line"><span class="meta">## Docs: https://hexo.io/docs/configuration.html</span></div><div class="line"><span class="meta">## Source: https://github.com/hexojs/hexo/</span></div><div class="line"></div><div class="line"><span class="meta"># Site 网站信息</span></div><div class="line"><span class="meta">#标题</span></div><div class="line">title: 学志の博客</div><div class="line"><span class="meta">#副标题</span></div><div class="line">subtitle: 记录学习的技能和遇到的问题</div><div class="line"><span class="meta">#网站描述</span></div><div class="line">description: 本网站是个人博客。记录了作者学习过程中遇到的一系列的问题，以及在解决问题过程中获得的技能和成长。</div><div class="line"><span class="meta">#作者</span></div><div class="line">author: 张学志</div><div class="line"><span class="meta">#网站语言，默认英语</span></div><div class="line">language: zh-Hans</div><div class="line"><span class="meta">#时区，默认电脑时区</span></div><div class="line">timezone: </div><div class="line"><span class="meta">#timezone: Asia/Shanghai</span></div><div class="line"></div><div class="line"><span class="meta"># URL 网址设置</span></div><div class="line"><span class="meta">#如果网站是放在子目录中，将url设置成'http://yoursite.com/child'，将root设置成'/child/'</span></div><div class="line"><span class="meta">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></div><div class="line"><span class="meta">#网址</span></div><div class="line">url: http:<span class="comment">//zhangxuezhi.com</span></div><div class="line"><span class="meta">#网站根目录。如果网站是放在子目录中，将root设置成'子目录名'</span></div><div class="line">root: /</div><div class="line"><span class="meta">#文章链接地址格式 </span></div><div class="line">permalink: :year/:month/:day/:title/</div><div class="line">permalink_defaults:</div><div class="line"></div><div class="line"><span class="meta"># Directory 目录设置</span></div><div class="line"><span class="meta">#资源文件夹，放在里面的文件会上传到github中</span></div><div class="line">source_dir: source</div><div class="line"><span class="meta">#公共文件夹，存放生成的静态文件</span></div><div class="line">public_dir: <span class="keyword">public</span></div><div class="line"><span class="meta">#标签文件夹，默认是tags。实际存放在source/tags中。</span></div><div class="line">tag_dir: tags</div><div class="line"><span class="meta">#档案文件夹，默认是archives。</span></div><div class="line">archive_dir: archives</div><div class="line"><span class="meta">#分类文件夹，默认是categories。实际存放在source/categories中。</span></div><div class="line">category_dir: categories</div><div class="line"><span class="meta">#代码文件夹，默认是downloads/code</span></div><div class="line">code_dir: downloads/code</div><div class="line"><span class="meta">#国际化文件夹，默认跟language相同</span></div><div class="line">i18n_dir: :lang</div><div class="line"><span class="meta">#不需要渲染的文件夹或文件夹,放在[]中</span></div><div class="line">skip_render:</div><div class="line"></div><div class="line"><span class="meta"># Writing 写作选项</span></div><div class="line"><span class="meta"># 新建博文（帖子）的默认名称</span></div><div class="line">new_post_name: :title.md # File name of <span class="keyword">new</span> posts</div><div class="line"><span class="meta">#默认布局模板是post，而不是draft和page</span></div><div class="line">default_layout: post</div><div class="line"><span class="meta">#是否将标题转换成标题形式（首字母大写）</span></div><div class="line">titlecase: <span class="literal">false</span> # Transform title into titlecase</div><div class="line"><span class="meta">#在新标签页面中打开网页</span></div><div class="line">external_link: <span class="literal">true</span> # Open external links in <span class="keyword">new</span> tab</div><div class="line">filename_case: <span class="number">0</span></div><div class="line"><span class="meta">#是否渲染草稿</span></div><div class="line">render_drafts: <span class="literal">false</span></div><div class="line"></div><div class="line">post_asset_folder: <span class="literal">false</span></div><div class="line"><span class="meta">#是否支持相关链接</span></div><div class="line">relative_link: <span class="literal">false</span></div><div class="line">future: <span class="literal">true</span></div><div class="line"><span class="meta">#高亮选项</span></div><div class="line">highlight:</div><div class="line">  enable: <span class="literal">true</span></div><div class="line">  line_number: <span class="literal">true</span></div><div class="line">  auto_detect: <span class="literal">true</span></div><div class="line">  tab_replace:</div><div class="line"></div><div class="line"><span class="meta"># Category &amp; Tag 分类和标签</span></div><div class="line"><span class="meta"># 默认分类</span></div><div class="line"><span class="meta">#default_category: uncategorized</span></div><div class="line">default_category: 未分类</div><div class="line">category_map:</div><div class="line">tag_map:</div><div class="line"></div><div class="line"><span class="meta"># Date / Time format 日期和时间格式</span></div><div class="line"><span class="meta">## Hexo uses Moment.js to parse and display date</span></div><div class="line"><span class="meta">## You can customize the date format as defined in</span></div><div class="line"><span class="meta">## http://momentjs.com/docs/#/displaying/format/</span></div><div class="line">date_format: YYYY-MM-DD</div><div class="line">time_format: HH:mm:ss</div><div class="line"></div><div class="line"><span class="meta"># Pagination 分页配置</span></div><div class="line"><span class="meta">## Set per_page to 0 to disable pagination</span></div><div class="line"><span class="meta">#每页10篇博文</span></div><div class="line">per_page: <span class="number">10</span></div><div class="line">pagination_dir: page</div><div class="line"></div><div class="line"><span class="meta"># Extensions 拓展插件配置</span></div><div class="line"><span class="meta">## Plugins: https://hexo.io/plugins/</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="meta"># 主题配置</span></div><div class="line"><span class="meta">## Themes: https://hexo.io/themes/</span></div><div class="line"><span class="meta">#theme: landscape</span></div><div class="line">theme: next</div><div class="line"></div><div class="line"></div><div class="line"><span class="meta"># Deployment 部署配置</span></div><div class="line"><span class="meta">## Docs: https://hexo.io/docs/deployment.html</span></div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: git@github.com:xuezhisd/xuezhisd.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="主题的配置文件"><a href="#主题的配置文件" class="headerlink" title="主题的配置文件"></a>主题的配置文件</h1><ul>
-<li>默认主题是landscape</li>
-<li><a href="https://hexo.io/themes/" target="_blank" rel="external">hexo官方主题页面</a>。从中选择喜欢的主题，下载并放到themes文件中。</li>
-<li>我使用的主题是<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">NexT</a>。</li>
-</ul>
-<h1 id="参考博客"><a href="#参考博客" class="headerlink" title="参考博客"></a>参考博客</h1><ul>
-<li><a href="http://www.jianshu.com/p/dd9ef08b12df" target="_blank" rel="external">手把手教从零开始在GitHub上使用Hexo搭建博客教程(二)</a></li>
-<li><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">hexo官方文档</a></li>
-<li><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">next主题官方文档</a></li>
-</ul>
-
-          
+          <p>本文对hexo的配置文件进行了说明。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/11/02/hexo教程系列——hexo配置教程/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -616,98 +588,12 @@
 
       
         
-          
-            <h1 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h1><h2 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h2><ul>
-<li><a href="https://nodejs.org/en/" target="_blank" rel="external">node.js官方下载地址</a></li>
-<li>从上面的链接下载node.js，并安装。<ul>
-<li>注意：官方链接可能需要<strong>翻墙</strong></li>
-<li>注意：我的操作系统是<strong>Windows 7 (64bit)</strong></li>
-</ul>
-</li>
-</ul>
-<h2 id="设置npm淘宝镜像站"><a href="#设置npm淘宝镜像站" class="headerlink" title="设置npm淘宝镜像站"></a>设置npm淘宝镜像站</h2><ul>
-<li>npm默认的源的下载速度可能很慢，建议使用淘宝镜像替换。</li>
-<li>执行下面的命令，将npm的源设置成淘宝镜像站。<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm config <span class="built_in">set</span> registry <span class="string">"https://registry.npm.taobao.org"</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="申请Github账号"><a href="#申请Github账号" class="headerlink" title="申请Github账号"></a>申请Github账号</h2><ul>
-<li><a href="https://github.com/join?source=header-home" target="_blank" rel="external">Github注册页面</a></li>
-<li>输入<strong>用户名，Email，密码</strong>，注册账号。比如我的用户名是：xuezhisd</li>
-</ul>
-<h3 id="创建博客仓库"><a href="#创建博客仓库" class="headerlink" title="创建博客仓库"></a>创建博客仓库</h3><ul>
-<li>注意，仓库名应该为：用户名.github.io。比如，我的仓库名是：<strong><a href="https://github.com/xuezhisd/xuezhisd.github.io" target="_blank" rel="external">xuezhisd.github.io</a></strong>。</li>
-</ul>
-<h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><ul>
-<li><a href="https://git-scm.com/downloads/" target="_blank" rel="external">git下载地址</a></li>
-<li>下载git安装文件，双击执行安装。<h3 id="配置ssh"><a href="#配置ssh" class="headerlink" title="配置ssh"></a>配置ssh</h3></li>
-<li>打开git bash终端。</li>
-<li><p>设置user.name和user.email。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name <span class="string">"你的GitHub用户名"</span></div><div class="line">git config --global user.email <span class="string">"你的GitHub注册邮箱"</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>生成ssh密匙</p>
-<figure class="highlight excel"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -<span class="built_in">t</span> rsa -C <span class="string">"你的GitHub注册邮箱"</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>此时，在用户文件夹下就会有一个新的文件夹.ssh，里面有刚刚创建的ssh密钥文件id_rsa和id_rsa.pub。</p>
-</li>
-</ul>
-<h3 id="将公匙添加到github上"><a href="#将公匙添加到github上" class="headerlink" title="将公匙添加到github上"></a>将公匙添加到github上</h3><ul>
-<li>详细教程自行baidu。</li>
-<li>用户头像→Settings→SSH and GPG keys→New SSH key→将id_rsa.pub中的内容复制到Key文本框中，然后点击Add SSH key(添加SSH)按钮。</li>
-</ul>
-<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><ul>
-<li>执行以下命令安装hexo。<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 安装hexo</span></div><div class="line">npm install hexo-cli g</div><div class="line"><span class="comment"># 初始化博客文件夹</span></div><div class="line">hexo init blog</div><div class="line"><span class="comment"># 切换到该路径</span></div><div class="line"><span class="built_in">cd</span> blog</div><div class="line"><span class="comment"># 安装hexo的扩展插件</span></div><div class="line">npm install</div><div class="line"><span class="comment"># 安装其它插件</span></div><div class="line">npm install hexo-server --save</div><div class="line">npm install hexo-admin --save</div><div class="line">npm install hexo-generator-archive --save</div><div class="line">npm install hexo-generator-feed --save</div><div class="line">npm install hexo-generator-search --save</div><div class="line">npm install hexo-generator-tag --save</div><div class="line">npm install hexo-deployer-git --save</div><div class="line">npm install hexo-generator-sitemap --save</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="初探hexo"><a href="#初探hexo" class="headerlink" title="初探hexo"></a>初探hexo</h2><ul>
-<li><p>第一次使用hexo，在本地创建服务器使用。</p>
-<figure class="highlight verilog"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># 生成静态页面</div><div class="line">hexo <span class="keyword">generate</span></div><div class="line"># 开启本地服务器</div><div class="line">hexo s</div></pre></td></tr></table></figure>
-</li>
-<li><p>打开浏览器，地址栏中输入：<strong><a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a></strong>,应该可以看见刚刚创建的博客了。</p>
-</li>
-<li>问题：为什么访问<strong><a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a></strong>，无反应？<ul>
-<li>解决方法：可能是由于端口问题引起的。使用Ctrl+C中断本地服务，使用命令<code>hexo s -p 5000</code>重新开启本地服务，访问<strong><a href="http://localhost:5000/" target="_blank" rel="external">http://localhost:5000/</a></strong>可以看到博客页面了。</li>
-</ul>
-</li>
-</ul>
-<h2 id="将hexo博客部署到github上"><a href="#将hexo博客部署到github上" class="headerlink" title="将hexo博客部署到github上"></a>将hexo博客部署到github上</h2><ul>
-<li><p>修改配置文件<strong>blog/_config.yml</strong>，修改deploy项的内容，如下所示：</p>
-<figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># Deployment 注释</span></div><div class="line"><span class="meta">## Docs: https:<span class="comment">//hexo.io/docs/deployment.html</span></span></div><div class="line"><span class="symbol">deploy:</span></div><div class="line">  <span class="meta"># 类型</span></div><div class="line"><span class="symbol">  type:</span> git</div><div class="line">  <span class="meta"># 仓库</span></div><div class="line"><span class="symbol">  repo:</span> git@github.com:xuezhisd/xuezhisd.github.io.git</div><div class="line">  <span class="meta"># 分支</span></div><div class="line"><span class="symbol">  branch:</span> master</div></pre></td></tr></table></figure>
-</li>
-<li><p>注意：<strong>type: git</strong>中的冒号后面由空格。</p>
-</li>
-<li>注意：将git@github.com:<strong>xuezhisd/xuezhisd</strong>.github.io.git中的用户名换成自己的用户名git@github.com:<strong>github_username/github_username</strong>.github.io.git。<h3 id="部署hexo"><a href="#部署hexo" class="headerlink" title="部署hexo"></a>部署hexo</h3></li>
-<li><p>输入下面的命令将hexo博客部署到github中：</p>
-<figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># 清空静态页面</span></div><div class="line">hexo clean</div><div class="line"><span class="meta"># 生成静态页面</span></div><div class="line">hexo generate</div><div class="line"><span class="meta"># 部署 </span></div><div class="line">hexo deploy</div></pre></td></tr></table></figure>
-</li>
-<li><p>打开网页，输入<a href="http://github_username.github.io，打开github上托管的博客。如我的博客地址是：http://xuezhisd.github.io。" target="_blank" rel="external">http://github_username.github.io，打开github上托管的博客。如我的博客地址是：http://xuezhisd.github.io。</a></p>
-</li>
-</ul>
-<h1 id="hexo命令缩写"><a href="#hexo命令缩写" class="headerlink" title="hexo命令缩写"></a>hexo命令缩写</h1><ul>
-<li>hexo支持命令缩写，如下所示。<code>hexo g</code>等价于<code>hexo generate</code><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo g：hexo generate</div><div class="line">hexo c：hexo clean</div><div class="line">hexo s：hexo server</div><div class="line">hexo d：hexo deploy</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="hexo组合命令"><a href="#hexo组合命令" class="headerlink" title="hexo组合命令"></a>hexo组合命令</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 清除、生成、启动</span></div><div class="line">hexo clean &amp;&amp; hexo g <span class="_">-s</span></div><div class="line"><span class="comment"># 清除、生成、部署</span></div><div class="line">hexo clean &amp;&amp; hexo g <span class="_">-d</span></div></pre></td></tr></table></figure>
-<h1 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><h2 id="hexo-deploy没有反应？"><a href="#hexo-deploy没有反应？" class="headerlink" title="hexo deploy没有反应？"></a>hexo deploy没有反应？</h2><ul>
-<li>修改配置文件：<strong>_config.yml</strong>时，冒号后面没加空格。</li>
-</ul>
-<h2 id="hexo-s-网站打不开？"><a href="#hexo-s-网站打不开？" class="headerlink" title="hexo s 网站打不开？"></a>hexo s 网站打不开？</h2><ul>
-<li>端口占用，换个端口就好了。执行命令<code>hexo s -p 5000</code>，并在浏览器地址栏输入<a href="http://localhost:5000，回车访问。" target="_blank" rel="external">http://localhost:5000，回车访问。</a></li>
-</ul>
-<h2 id="如何换主题？"><a href="#如何换主题？" class="headerlink" title="如何换主题？"></a>如何换主题？</h2><ul>
-<li>将主题下载后，放到themes文件夹中即可。例如，下面命令安装next主题：<code>git clone https://github.com/iissnan/hexo-theme-next themes/next</code>。</li>
-</ul>
-<h1 id="参考博客"><a href="#参考博客" class="headerlink" title="参考博客"></a>参考博客</h1><ul>
-<li><a href="https://hexo.io/zh-cn/" target="_blank" rel="external">hexo官方文档</a></li>
-<li><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">NexT主题官方文档</a></li>
-<li><a href="https://www.zhihu.com/question/29017171" target="_blank" rel="external">hexo 下的分类和表签无法显示，怎么解决？</a></li>
-<li><a href="http://www.jianshu.com/p/f4cc5866946b" target="_blank" rel="external">手把手教从零开始在GitHub上使用Hexo搭建博客教程(一)</a></li>
-<li><a href="https://segmentfault.com/q/1010000004593371" target="_blank" rel="external">Github上搭建Hexo如何跨电脑写作部署方便？</a></li>
-<li><a href="http://blog.bigruan.com/2015-03-09-Continuous-Integration-Your-Hexo-Blog-With-TravisCI/" target="_blank" rel="external">Continuous Integration Your Hexo Blog With Travis CI</a></li>
-<li><a href="http://www.jianshu.com/p/1d427e888dda" target="_blank" rel="external">【Hexo+Github】域名和github绑定的问题</a></li>
-<li><a href="http://www.jianshu.com/p/3cb4c9ff5b58" target="_blank" rel="external">万网域名+GitHub平台搭建的博客</a></li>
-</ul>
-
-          
+          <p>本文详细描述了如何在Github上，使用hexo部署博客。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/11/01/hexo教程系列——hexo安装教程/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
