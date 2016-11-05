@@ -91,7 +91,7 @@ hexo官方配置说明
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: '0',
+      userId: '13664197',
       author: '博主'
     }
   };
@@ -380,6 +380,11 @@ hexo官方配置说明
     <div>
       
         
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/wechat-qcode.jpg" alt="张学志 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎您扫一扫上面的微信公众号，订阅我的博客！</div>
+</div>
+
 
       
     </div>
@@ -387,6 +392,27 @@ hexo官方配置说明
     <div>
       
         
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div></div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechat-reward-image.jpg" alt="张学志 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay-reward-image.jpg" alt="张学志 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
 
       
     </div>
@@ -629,11 +655,9 @@ hexo官方配置说明
   <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
-    <span class="site-uv">访问人数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
-  
 
   
-    <span class="site-pv">总访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+    <span class="site-pv">访问量：<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
   
   
 </div>
