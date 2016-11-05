@@ -6,7 +6,9 @@
     <entry>
       <title><![CDATA[hexo教程系列——使用Travis自动部署hexo]]></title>
       <url>http://zhangxuezhi.com/2016/11/02/hexo%E6%95%99%E7%A8%8B%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%BD%BF%E7%94%A8Travis%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2hexo/</url>
-      <content type="html"><![CDATA[<p>本文介绍了如何使用Travis CI自动部署hexo，解决了家里和公司两地写博客的麻烦。<br><a id="more"></a></p>
+      <content type="html"><![CDATA[<blockquote>
+<p>本文介绍了如何使用Travis CI自动部署hexo，解决了家里和公司两地写博客的麻烦。<br><a id="more"></a></p>
+</blockquote>
 <h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><ul>
 <li>为了在不同电脑上写完并提交博文后，博客能自动更新内容。本文介绍如何通过Travis CI来实现github上的hexo博客自动部署。</li>
 </ul>
@@ -30,7 +32,9 @@
     <entry>
       <title><![CDATA[hexo教程系列——hexo配置教程]]></title>
       <url>http://zhangxuezhi.com/2016/11/02/hexo%E6%95%99%E7%A8%8B%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94hexo%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</url>
-      <content type="html"><![CDATA[<p>本文对hexo的配置文件进行了说明。<br><a id="more"></a></p>
+      <content type="html"><![CDATA[<blockquote>
+<p>本文对hexo的配置文件进行了说明。<br><a id="more"></a></p>
+</blockquote>
 <h1 id="网站的配置文件"><a href="#网站的配置文件" class="headerlink" title="网站的配置文件"></a>网站的配置文件</h1><ul>
 <li>网站配置文件的存储位置：<strong>hexo_blog/_config.yml</strong>。</li>
 <li>配置文件中，冒号后面一定要加空格。</li>
@@ -56,7 +60,9 @@
     <entry>
       <title><![CDATA[hexo教程系列——hexo安装教程]]></title>
       <url>http://zhangxuezhi.com/2016/11/01/hexo%E6%95%99%E7%A8%8B%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94hexo%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
-      <content type="html"><![CDATA[<p>本文详细描述了如何在Github上，使用hexo部署博客。<br><a id="more"></a></p>
+      <content type="html"><![CDATA[<blockquote>
+<p>本文详细描述了如何在Github上，使用hexo部署博客。<br><a id="more"></a></p>
+</blockquote>
 <h1 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h1><h2 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h2><ul>
 <li><a href="https://nodejs.org/en/" target="_blank" rel="external">node.js官方下载地址</a></li>
 <li>从上面的链接下载node.js，并安装。<ul>
