@@ -30,6 +30,118 @@
     </entry>
     
     <entry>
+      <title><![CDATA[使用XX-Net翻墙(访问google学术、youtube、Facebook等等）]]></title>
+      <url>http://zhangxuezhi.com/2016/11/02/%E4%BD%BF%E7%94%A8XX-Net%E7%BF%BB%E5%A2%99(%E8%AE%BF%E9%97%AEgoogle%E5%AD%A6%E6%9C%AF%E3%80%81youtube%E3%80%81Facebook%E7%AD%89%E7%AD%89%EF%BC%89/</url>
+      <content type="html"><![CDATA[<blockquote>
+<a id="more"></a>
+</blockquote>
+<h2 id="一、XX-Net简介"><a href="#一、XX-Net简介" class="headerlink" title="一、XX-Net简介"></a>一、XX-Net简介</h2><p>XX-net是在原来goagent基础上开发，使用非常的方便，不需要复杂的操作。<br>需要（类）Chrome浏览器，SwitchySharp。</p>
+<h3 id="主要特性"><a href="#主要特性" class="headerlink" title="主要特性"></a>主要特性</h3><ul>
+<li>集成GoAgent、GoGoTest等自动扫描IP，省事省力</li>
+<li>Web界面，人性化交互，傻瓜易用</li>
+<li>内置了公共 appid, 方便新手</li>
+<li>方便易用的细节、细节提示<h3 id="平台支持情况"><a href="#平台支持情况" class="headerlink" title="平台支持情况"></a>平台支持情况</h3></li>
+<li>Windows 7/8/10 （xp 需要 tcpip.sys 补丁, 比如用 tcp-z）</li>
+<li>Linux （Ubuntu不显示系统托盘）</li>
+<li>Mac OS X(10.7; 10.8; 10.9; 10.10)<h2 id="二、下载地址"><a href="#二、下载地址" class="headerlink" title="二、下载地址"></a>二、下载地址</h2></li>
+</ul>
+<p><strong><em>下载 Chrome</em></strong> 通过360软件管家下载或百度搜索并下载<br><a href="http://pan.baidu.com/s/1eQCoeQ2" target="_blank" rel="external">下载 SwitchySharp</a><br><a href="https://github.com/XX-net/XX-Net" target="_blank" rel="external">下载 XX-Net</a> 如下图所示。<br><img src="http://img.blog.csdn.net/20150911170406459" alt="这里写图片描述"></p>
+<h2 id="三、安装过程"><a href="#三、安装过程" class="headerlink" title="三、安装过程"></a>三、安装过程</h2><h3 id="1-安装Chrome"><a href="#1-安装Chrome" class="headerlink" title="1.安装Chrome"></a>1.安装Chrome</h3><ul>
+<li><p>方法一、通过360软甲管家直接安装，如下图所示。</p>
+<ul>
+<li>在搜索框中输入<strong>chrome</strong>，并点击<em>Enter键</em>；</li>
+<li>安装第一个（即稳定版）；<br><img src="http://img.blog.csdn.net/20150911170009049" alt="这里写图片描述"></li>
+</ul>
+</li>
+<li><p>方法二、百度搜索，下载chrome**.exe，双击自动安装，所有选项按照默认参数即可。</p>
+</li>
+</ul>
+<h3 id="2-安装SwitchySharp"><a href="#2-安装SwitchySharp" class="headerlink" title="2.安装SwitchySharp"></a>2.安装SwitchySharp</h3><ul>
+<li>方法一、官方安装<ul>
+<li>在地址栏中输入<code>chrome://extensions</code>，回车，进入到<strong>拓展程序页面</strong>。</li>
+<li>点击下方的<strong><em>获取更多扩展程序 </em></strong>按钮，进入到Google Store中；</li>
+<li>搜索框中输入<code>switchysharp</code>，安装SwitchySharp。<br><img src="http://img.blog.csdn.net/20150911170929423" alt="这里写图片描述"><br><img src="http://img.blog.csdn.net/20150911171234901" alt="这里写图片描述"></li>
+</ul>
+</li>
+<li>方法二、使用前面下载的SwitchySharp.crx文件安装<ul>
+<li>在地址栏中输入<code>chrome://extensions</code>，回车，进入到<strong>拓展程序页面</strong>；</li>
+<li>将SwitchySharp.crx拖拽到该页面，即可自动安装。</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-安装XX-Net"><a href="#3-安装XX-Net" class="headerlink" title="3. 安装XX-Net"></a>3. 安装XX-Net</h3><ul>
+<li>解压XX-Net-**.zip文件到当前路径下；</li>
+<li>（可选）将解压文件夹放到 <em>D:\Program Files\ </em>或其他你想要的<strong>安装路径</strong>；</li>
+<li>切换到安装路径下，双击Start快捷方式，启动XX-Net。跳出对话框，选择确认即可。如果出现警告，一定要通过，否则程序无法运行。</li>
+<li>重启浏览器，应该可以上网了。</li>
+</ul>
+<h2 id="四、配置"><a href="#四、配置" class="headerlink" title="四、配置"></a>四、配置</h2><ul>
+<li>如果安装完XX-Net，并重启浏览器后仍无法翻墙，请按如下操作。<h3 id="1-配置SWitchySharp"><a href="#1-配置SWitchySharp" class="headerlink" title="1. 配置SWitchySharp"></a>1. 配置SWitchySharp</h3></li>
+<li>点击SWitchySharp图标，点击<strong><em>选项</em></strong>按钮，如下图所示；</li>
+<li>跳转到下面页面，点击<strong><em>从文件恢复</em></strong>按钮；</li>
+<li>选择<strong>SwitchyOptions.bak</strong>文件【在XX-Net安装路径下】，如下图所示。</li>
+<li>点击SWitchySharp图标，选中<strong><em>GoAgent</em></strong>按钮，如下图所示；</li>
+<li>重启XX-Net和浏览器，查看是否可以翻墙。<br><img src="http://img.blog.csdn.net/20150911175737230" alt="这里写图片描述"><br><img src="http://img.blog.csdn.net/20150911175751423" alt="这里写图片描述"><br><img src="http://img.blog.csdn.net/20150911175921885" alt="这里写图片描述"><br><img src="http://img.blog.csdn.net/20150911185603513" alt="这里写图片描述"><h3 id="2-如何可以观看视频（youtube）"><a href="#2-如何可以观看视频（youtube）" class="headerlink" title="2. 如何可以观看视频（youtube）"></a>2. 如何可以观看视频（youtube）</h3></li>
+<li>安装完成XX-Net之后，默认使用<strong><em>公用appid</em></strong>，不能看视频。如果想看视频的话，还需要申请去GAE申请自己的appid。</li>
+<li>如何申请自己的GAE Application，请查看<a href="http://www.appifan.com/jc/201209/35517.html" target="_blank" rel="external">博客</a></li>
+<li>建立好自己的GAE appid之后，在浏览器地址栏中输入<code>127.0.0.1:8085</code>，并回车。跳转到XX-Net管理页面。如下图所示。<br><img src="http://img.blog.csdn.net/20150911183847260" alt="这里写图片描述"></li>
+<li>点击左侧的<strong><em>部署服务端</em></strong>。右侧第一行填刚才申请的GAE appID，多个使用<code>|</code>分隔；第二行填自己的gmail邮箱；第三项填Gmail邮箱的密码。填完之后点击<strong><em>开始部署</em></strong>，部署完成后如下图所示。<br><img src="http://img.blog.csdn.net/20150911184949241" alt="这里写图片描述"></li>
+<li>然后点击右侧的<strong>配置</strong>。如下图所示。填写刚刚部署过的GAE appID，多个使用<code>|</code>分隔。填写完成之后，点击<strong>保存</strong>。<br><img src="http://img.blog.csdn.net/20150911185121207" alt="这里写图片描述"></li>
+<li>重启XX-Net和Chrome，看看能不能在youtube.com上观看视频了。</li>
+</ul>
+<h3 id="3-如何使用IPv6"><a href="#3-如何使用IPv6" class="headerlink" title="3. 如何使用IPv6"></a>3. 如何使用IPv6</h3><ul>
+<li>校园网的同学可以直接使用IPv6进行翻墙，节省流量。如果不是校园网用户就不用设置了。。。</li>
+<li>在浏览器地址栏中输入<code>127.0.0.1:8085</code>，并回车。跳转到XX-Net管理页面。如下图所示。</li>
+<li>在左侧选择<strong>配置</strong>按钮。点击右侧的<strong>高级选项</strong>下拉菜单，将<strong><em>使用IPv6</em></strong>选项设置为ON。<br><img src="http://img.blog.csdn.net/20150911185946032" alt="这里写图片描述"></li>
+<li>打开XX-Net安装目录，使用记事本打开<code>.\gae_proxy\local\proxy.ini</code>，将<code>use_ipv6 = 0</code>修改为<code>use_ipv6 = 1</code>。</li>
+<li>重启XX-Net和Chrome之后，就能使用IPv6翻墙了，当然也能浏览其他的网页。</li>
+</ul>
+<h2 id="五、参考"><a href="#五、参考" class="headerlink" title="五、参考"></a>五、参考</h2><ul>
+<li><a href="http://wallfans.eu.org/xxnet-optimize-1/" target="_blank" rel="external">xxnet优化教程1</a></li>
+<li><a href="https://appengine.google.com/" target="_blank" rel="external">GAE</a></li>
+<li><a href="https://github.com/XX-net/XX-Net" target="_blank" rel="external">XX-Net项目组</a></li>
+<li><a href="https://github.com/XX-net/XX-Net/wiki/XXNET%E8%B6%85%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B" target="_blank" rel="external">XX-Net超详细教程</a></li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[服务器安装并配置Ubuntu Server 14.04]]></title>
+      <url>http://zhangxuezhi.com/2016/11/02/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85%E5%B9%B6%E9%85%8D%E7%BD%AEUbuntu%20Server%2014.04/</url>
+      <content type="html"><![CDATA[<blockquote>
+<a id="more"></a>
+</blockquote>
+<h2 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h2><ul>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48437097" target="_blank" rel="external">服务器如何进入Bios</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48437187" target="_blank" rel="external">U盘安装Ubuntu Server ，CD-ROM自检，安装失败</a></li>
+</ul>
+<h2 id="远程访问"><a href="#远程访问" class="headerlink" title="远程访问"></a>远程访问</h2><ul>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48437221" target="_blank" rel="external">使用Putty无法远程登录，显示服务器拒绝连接</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48622069" target="_blank" rel="external">Putty使用设置</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48437247" target="_blank" rel="external">Ubuntu Server 14.04安装Gnome桌面环境</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48437007" target="_blank" rel="external">windows使用VNC远程访问Ubuntu Server 14.04图形界面</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48662435" target="_blank" rel="external">在VNC中Xfce4中Tab键失效的解决方法</a></li>
+</ul>
+<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><ul>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48437901" target="_blank" rel="external">Ubuntu Server 添加/删除/修改用户</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48468143" target="_blank" rel="external">Ubuntu 14.04 64位安装32位兼容包</a></li>
+<li><a href="">开机自启任务</a></li>
+<li><a href="http://blog.csdn.net/eager7/article/details/14221901" target="_blank" rel="external">linux创建新用户后shell无法自动补全命令</a></li>
+<li><a href="http://www.cnblogs.com/vincedotnet/p/4013099.html" target="_blank" rel="external">ubuntu14.04设置静态ip</a></li>
+<li><a href="http://blog.sina.com.cn/s/blog_674d87000100pzmh.html" target="_blank" rel="external">linux下查看网关的命令</a></li>
+</ul>
+<h2 id="安装软件"><a href="#安装软件" class="headerlink" title="安装软件"></a>安装软件</h2><ul>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/46872285" target="_blank" rel="external">Ubuntu-安装-Chrome</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/46876717" target="_blank" rel="external">Ubuntu-安装-搜狗输入法-详细教程</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/46878577" target="_blank" rel="external">Ubuntu-安装-Python包</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/47065475" target="_blank" rel="external">Ubuntu14.04安装Theano详细教程</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/47075401" target="_blank" rel="external"> Ubuntu-安装-cuda7.0-单显卡-超详细教程</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/47169583" target="_blank" rel="external">Ubuntu-安装-theano+caffe-超详细教程</a></li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[hexo教程系列——hexo配置教程]]></title>
       <url>http://zhangxuezhi.com/2016/11/02/hexo%E6%95%99%E7%A8%8B%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94hexo%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</url>
       <content type="html"><![CDATA[<blockquote>
@@ -151,6 +263,96 @@
 <li><a href="http://blog.bigruan.com/2015-03-09-Continuous-Integration-Your-Hexo-Blog-With-TravisCI/" target="_blank" rel="external">Continuous Integration Your Hexo Blog With Travis CI</a></li>
 <li><a href="http://www.jianshu.com/p/1d427e888dda" target="_blank" rel="external">【Hexo+Github】域名和github绑定的问题</a></li>
 <li><a href="http://www.jianshu.com/p/3cb4c9ff5b58" target="_blank" rel="external">万网域名+GitHub平台搭建的博客</a></li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[caffe安装系列——安装caffe]]></title>
+      <url>http://zhangxuezhi.com/2015/10/13/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85caffe/</url>
+      <content type="html"><![CDATA[<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
+<li>网上关于caffe的安装教程非常多，但是关于每一步是否操作成功，出现了什么样的错误又该如何处理没有给出说明。因为大家的操作系统的环境千差万别，按照博客中的教程一步步的安装，最后可能失败——这是很常见的哦。有的教程甚至省略了一些细节部分，让小白更不知道如何判断每一步是否操作成功，如何处理出现的错误。</li>
+<li>作者花费了很长时间才成功地将caffe装完，期间遇到好多错误，多次重装操作系统。现在将经验写下来，一方面为了和大家分享，讨论；另一方面是为了记录一下下~~~</li>
+</ul>
+<a id="more"></a>
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>操作系统： <strong><em>Ubuntu 14.04</em></strong><br>GCC/G++:<strong><em>4.7.x</em></strong><br>OpenCV: <strong><em>2.4.11和3.0.0</em></strong><br>Matlab :<strong><em>R2014b(a)</em></strong><br>Python:   <strong><em>2.7</em></strong></p>
+<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><ul>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48649575" target="_blank" rel="external">综述</a></li>
+<li>0.准备工作</li>
+<li>1.<a href="http://blog.csdn.net/xuezhisdc/article/details/48650015" target="_blank" rel="external">安装GCC4.7和G++4.7并降级</a></li>
+<li>2.<a href="http://blog.csdn.net/xuezhisdc/article/details/48650565" target="_blank" rel="external">安装显卡驱动</a></li>
+<li>3.<a href="http://blog.csdn.net/xuezhisdc/article/details/48651003" target="_blank" rel="external">安装cuda和cudnn</a></li>
+<li>4.<a href="http://blog.csdn.net/xuezhisdc/article/details/48691147" target="_blank" rel="external">安装Matlab</a></li>
+<li>5.<a href="http://blog.csdn.net/xuezhisdc/article/details/48691797" target="_blank" rel="external">安装OpenCV</a></li>
+<li>6.<a href="http://blog.csdn.net/xuezhisdc/article/details/48706843" target="_blank" rel="external">安装Python依赖包</a></li>
+<li>7.<a href="http://blog.csdn.net/xuezhisdc/article/details/48707101" target="_blank" rel="external">安装caffe</a></li>
+</ul>
+<h2 id="安装caffe"><a href="#安装caffe" class="headerlink" title="安装caffe"></a>安装caffe</h2><ul>
+<li>这已经是caffe安装过程的最后一步了。但是<strong>行百里者，半于九十</strong>，因此还要小心。</li>
+</ul>
+<h3 id="1-安装Google-Logging-Library（glog）"><a href="#1-安装Google-Logging-Library（glog）" class="headerlink" title="1. 安装Google Logging Library（glog）"></a>1. 安装Google Logging Library（glog）</h3><ul>
+<li><a href="https://code.google.com/p/google-glog/" target="_blank" rel="external">glog 下载地址</a></li>
+<li>安装命令如下所示<figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># 解压</span></div><div class="line">tar -zxvf glog<span class="number">-0.3</span><span class="number">.3</span>.tar.gz</div><div class="line"><span class="meta"># 切换路径</span></div><div class="line">cd glog<span class="number">-0.3</span><span class="number">.3</span></div><div class="line">sudo ./configure</div><div class="line">sudo <span class="built_in">make</span> –j</div><div class="line">sudo <span class="built_in">make</span> install</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="2-安装其它依赖"><a href="#2-安装其它依赖" class="headerlink" title="2. 安装其它依赖"></a>2. 安装其它依赖</h3><ul>
+<li>执行以下命令即可。<figure class="highlight q"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="built_in">get</span> install -y libprotobuf-<span class="built_in">dev</span> libleveldb-<span class="built_in">dev</span> libsnappy-<span class="built_in">dev</span> libopencv-<span class="built_in">dev</span> libboost-<span class="built_in">all</span>-<span class="built_in">dev</span> libhdf5-serial-<span class="built_in">dev</span> </div><div class="line"></div><div class="line">sudo apt-<span class="built_in">get</span> install -y libgflags-<span class="built_in">dev</span> libgoogle-glog-<span class="built_in">dev</span> liblmdb-<span class="built_in">dev</span> protobuf-compiler protobuf-c-compiler python-pandas</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="3-编辑Makefile-config文件"><a href="#3-编辑Makefile-config文件" class="headerlink" title="3. 编辑Makefile.config文件"></a>3. 编辑Makefile.config文件</h3><ul>
+<li><p>操作命令如下所示。</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">unzip caffe-master<span class="selector-class">.zip</span> #本地解压caffe-master</div><div class="line">#切换路径</div><div class="line">cd /caffe-master </div><div class="line"><span class="number">#caf</span>fe源文件中没有Makefile.config，需要复制Makefile<span class="selector-class">.config</span><span class="selector-class">.example</span></div><div class="line">cp Makefile<span class="selector-class">.config</span><span class="selector-class">.example</span> Makefile<span class="selector-class">.config</span></div><div class="line">#编辑Makefile<span class="selector-class">.config</span></div><div class="line">vi Makefile.config</div></pre></td></tr></table></figure>
+</li>
+<li><p>修改Makefile.config</p>
+<ul>
+<li>取消第5行的注释，即将 <code>#USE_CUDNN=1 改为 USE_CUDNN=1</code>；</li>
+<li>如果使用本教程系列安装的，就不需要修改<code>BLAS=atlas</code>，如果是参考欧新宇的教程，安装了MKL，需要改成<code>BLAS=mkl</code>；</li>
+<li>启用CUDNN，加注释: <code>CPU_ONLY:=1 改成 # CPU_ONLY:=1</code>；</li>
+<li><p>配置路径，实现caffe对Python和Matlab接口的支持：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="string">PYTHON_LIB :</span>= <span class="regexp">/usr/</span>local/lib</div><div class="line"><span class="string">MATLAB_DIR :</span>= <span class="regexp">/usr/</span>local<span class="regexp">/MATLAB/</span>R2014a</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-编辑Makefile文件"><a href="#4-编辑Makefile文件" class="headerlink" title="4. 编辑Makefile文件"></a>4. 编辑Makefile文件</h3><ul>
+<li>如果openCV版本是2.4.x，此小节可以不再阅读</li>
+<li>如果openCV版本3.0，还需要修改Makefile文件，实现对OpenCV 3.x的支持。</li>
+<li>在Makefile文件中查找“Derive include and lib directories”一节，修改“LIBRARIES +=”的最后一行，增加<strong>opencv_imgcodecs</strong>，修改之后为：<figure class="highlight fix"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">LIBRARIES +</span>=<span class="string"> opencv_core opencv_highgui opencv_imgproc opencv_imgcodecs</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="5-编译caffe-master"><a href="#5-编译caffe-master" class="headerlink" title="5.  编译caffe-master"></a>5.  编译caffe-master</h3><ul>
+<li><p>依次执行下面的命令，编译caffe：</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">make all -<span class="built_in">j</span></div><div class="line">make <span class="keyword">test</span> -<span class="built_in">j</span></div><div class="line">make <span class="keyword">runtest</span> -<span class="built_in">j</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>runtest执行结束之后，如下图所示。这样子就说明安装成功了。<br><img src="http://img.blog.csdn.net/20150924102251050" alt="这里写图片描述"></p>
+</li>
+<li><p>编译Python和Matlab用到的caffe文件</p>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">make</span> pycaffe -j</div><div class="line"><span class="built_in">make</span> matcaffe -j</div></pre></td></tr></table></figure>
+</li>
+<li><p>pycaffe和matcaffe编译完成后，如下图所示：<br><img src="http://img.blog.csdn.net/20150924104443215" alt="这里写图片描述"></p>
+</li>
+<li>编译过程中可能会遇到错误，比如<strong><em>./include/caffe/util/cudnn.hpp:8:34: fatal error: caffe/proto/caffe.pb.h: No such file or director</em></strong>，这是因为protobuf和pillow没有安装，或者是通过apt-get安装的。使用pip重新安装一遍即可解决问题。删除caffe-mast（提前保存Makefile.config和Makefile），解压，解压重新编译。<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">pip install protobuf --upgrade -<span class="selector-tag">i</span> http:<span class="comment">//pypi.douban.com/simple </span></div><div class="line">pip install pillow --upgrade -<span class="selector-tag">i</span> http:<span class="comment">//pypi.douban.com/simple</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="6-设置Python环境变量"><a href="#6-设置Python环境变量" class="headerlink" title="6.设置Python环境变量"></a>6.设置Python环境变量</h3><ul>
+<li>此时虽然编译完成，但是python还不能使用caffe，需要设置python的环境变量，将其caffe/python路径添加到python环境变量中。</li>
+<li><p>操作命令如下所示：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo vi <span class="regexp">/etc/</span>profile <span class="comment"># 编辑profile文件</span></div><div class="line"><span class="comment">#在最后面添加以下语句，注意将path换成你的系统下的路径</span></div><div class="line">export PYTHONPATH=<span class="regexp">/path/</span>to<span class="regexp">/caffe/</span>python:<span class="variable">$PYTHONPATH</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>在caffe安装整个过程中，我么修改/etc/profile三次，如下图所示。<br><img src="http://img.blog.csdn.net/20150924102736837" alt="这里写图片描述"></p>
+</li>
+</ul>
+<h3 id="7-使用MNIST数据集进行测试"><a href="#7-使用MNIST数据集进行测试" class="headerlink" title="7.使用MNIST数据集进行测试"></a>7.使用MNIST数据集进行测试</h3><ul>
+<li>参考<a href="http://ouxinyu.github.io/Blogs/20140723001.html" target="_blank" rel="external">欧新宇的教程</a>即可。</li>
+<li>操作命令如下所示：<figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># 1. 数据预处理</span></div><div class="line">sh data/mnist/get_mnist.sh</div><div class="line"><span class="meta"># 2. 重建lmdb文件。Caffe支持三种数据格式输入网络，包括Image(.jpg, .png等)，leveldb，lmdb，根据自己需要选择不同输入吧。</span></div><div class="line"><span class="meta">#生成mnist-train-lmdb 和 mnist-train-lmdb文件夹，这里包含了lmdb格式的数据集</span></div><div class="line">sh examples/mnist/create_mnist.sh</div><div class="line"></div><div class="line"><span class="meta"># 3. 训练mnist</span></div><div class="line">sh examples/mnist/train_lenet.sh</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>注意：</strong>如果在使用过程中出现检测不到NVIDIA显卡的情况，重装显卡驱动和cuda即可。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>至此，ubuntu下安装caffe的工作已经结束了。如果你完全按照本教程操作，相信你一定已经成功安装caffe了，并且对caffe有了一定的了解。</li>
+<li><strong><em>世上无难事只怕有坚持</em></strong>，安装过程虽然很复杂，但是只要坚持，不断的Google解决它，caffe就一定能安装。</li>
+<li>错误不可怕，它是成功的障碍，同时也为我们成长提供了阶梯——所谓的能力，很大一部分是通过不断解决问题来获取的。</li>
+<li>下面开始学习如何使用caffe做深度学习的研究喽，祝大家学习愉快。。。</li>
 </ul>
 ]]></content>
     </entry>
