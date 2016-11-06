@@ -72,7 +72,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     scheme: 'Pisces',
-    sidebar: {"position":"right","display":"always"},
+    sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: false,
     duoshuo: {
@@ -128,7 +128,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right 
+  <div class="container one-collumn sidebar-position-left 
    page-home 
  ">
     <div class="headband"></div>
@@ -362,52 +362,20 @@
       
         
           
-            <h1 id="Ubuntu安装搜狗输入法"><a href="#Ubuntu安装搜狗输入法" class="headerlink" title="Ubuntu安装搜狗输入法"></a>Ubuntu安装搜狗输入法</h1><h2 id="下载deb安装包"><a href="#下载deb安装包" class="headerlink" title="下载deb安装包"></a>下载deb安装包</h2><ul>
-<li><a href="http://pinyin.sogou.com/linux/?r=pinyin" target="_blank" rel="external">安装包 下载地址</a></li>
-<li>系统32位的点击“立即下载32bit”，如下图所示；</li>
-<li>系统64位的点击“立即下载64bit”，如下图所示。<br><img src="http://img.blog.csdn.net/20150731074947628" alt="这里写图片描述"></li>
-</ul>
-<h2 id="安装fcitx"><a href="#安装fcitx" class="headerlink" title="安装fcitx"></a>安装fcitx</h2><ul>
-<li>打开Terminal，输入以下命令，安装fcitx<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install fcitx</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="安装搜狗输入法"><a href="#安装搜狗输入法" class="headerlink" title="安装搜狗输入法"></a>安装搜狗输入法</h2><ul>
-<li>输入以下命令，安装第一步下载的deb安装包</li>
-<li>注意：deb包名根据你下载的包名而定。</li>
-<li><p>下面以64位版本为例。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">sudo</span> <span class="selector-tag">dpkg</span> <span class="selector-tag">-i</span> <span class="selector-tag">sogoupinyin_1</span><span class="selector-class">.2</span><span class="selector-class">.0</span><span class="selector-class">.0048_amd64</span><span class="selector-class">.deb</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>如果出现错误，则输入以下命令，修复。</p>
-<figure class="highlight q"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="built_in">get</span> <span class="keyword">update</span></div><div class="line">sudo apt-<span class="built_in">get</span> -f install</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="配置输入方法"><a href="#配置输入方法" class="headerlink" title="配置输入方法"></a>配置输入方法</h2><ul>
-<li><p>输入以下命令</p>
-<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">im-<span class="built_in">config</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>跳出一个对话框，如下图所示，点击“OK”；<br><img src="http://img.blog.csdn.net/20150731075138684" alt="这里写图片描述"></p>
-</li>
-<li>点击“Yes”；<br><img src="http://img.blog.csdn.net/20150731075324395" alt="这里写图片描述"></li>
-<li>选择fcitx，点击“OK”；<br><img src="http://img.blog.csdn.net/20150731075426623" alt="这里写图片描述"></li>
-<li>点击“OK”；<br><img src="http://img.blog.csdn.net/20150731075404825" alt="这里写图片描述"></li>
-</ul>
-<h2 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h2><ul>
-<li>重启电脑，使配置生效。</li>
-</ul>
-<h2 id="添加搜狗输入法"><a href="#添加搜狗输入法" class="headerlink" title="添加搜狗输入法"></a>添加搜狗输入法</h2><ul>
-<li>点击右上角的<strong><code>小键盘图标</code></strong>，<br><img src="http://img.blog.csdn.net/20150731075545762" alt="这里写图片描述"></li>
-<li>选择<strong><code>配置</code></strong>选项，打开输入法配置对话框，点击左下角的<strong><code>+</code></strong>按钮；<br><img src="http://img.blog.csdn.net/20150731075710704" alt="这里写图片描述"></li>
-<li>在弹出的对话框中，取消<code>Only show current language</code>选项；<br><img src="http://img.blog.csdn.net/20150731075715863" alt="这里写图片描述"></li>
-<li>拖动滚动条到最后，选择<code>sougou  china</code>；<br><img src="http://img.blog.csdn.net/20150731075921662" alt="这里写图片描述"></li>
-<li><p>点击“Ok”，完成安装。<br><img src="http://img.blog.csdn.net/20150731080008992" alt="这里写图片描述"></p>
-</li>
-<li><p>注： 切换输入法快捷键“Ctrl + 空格”，切换中英文快捷键“Shift”</p>
-</li>
-</ul>
-<p>至此，搜狗输入法完成安装。。。</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://pinyin.sogou.com/linux/help.php" target="_blank" rel="external">http://pinyin.sogou.com/linux/help.php</a><br><a href="http://jingyan.baidu.com/article/0202781189b6ef1bcc9ce513.html" target="_blank" rel="external">http://jingyan.baidu.com/article/0202781189b6ef1bcc9ce513.html</a></p>
+          Ubuntu安装搜狗输入法下载deb安装包
+安装包 下载地址
+系统32位的点击“立即下载32bit”，如下图所示；
+系统64位的点击“立即下载64bit”，如下图所示。
 
-          
+安装fcitx
+打开Term
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/07/31/Ubuntu-安装-搜狗输入法-详细教程/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -537,30 +505,14 @@
       
         
           
-            <h2 id="一、下载Chrome的安装包"><a href="#一、下载Chrome的安装包" class="headerlink" title="一、下载Chrome的安装包"></a>一、下载Chrome的安装包</h2><p>打开终端，输入一下命令（区分64位和32位），下载Chrome的deb安装包。<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#<span class="number">32</span>位</div><div class="line">wget http<span class="variable">s:</span>//<span class="keyword">dl</span>.google.<span class="keyword">com</span>/linux/direct/google-chrome-stable_current_i386.<span class="keyword">deb</span></div><div class="line">#<span class="number">64</span>位</div><div class="line">wget http<span class="variable">s:</span>//<span class="keyword">dl</span>.google.<span class="keyword">com</span>/linux/direct/google-chrome-stable_current_amd64.<span class="keyword">deb</span></div></pre></td></tr></table></figure></p>
-<h2 id="二、安装Chrome"><a href="#二、安装Chrome" class="headerlink" title="二、安装Chrome"></a>二、安装Chrome</h2><ul>
-<li>注意：需要root权限</li>
-<li>在Terminal中输入以下命令<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#<span class="number">32</span>位安装命令</div><div class="line">sudo dpkg -<span class="selector-tag">i</span> google-chrome-stable_current_i386<span class="selector-class">.deb</span></div><div class="line">#<span class="number">64</span>位安装命令</div><div class="line">sudo dpkg -<span class="selector-tag">i</span> google-chrome-stable_current_amd64.deb</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="三、修复安装错误"><a href="#三、修复安装错误" class="headerlink" title="三、修复安装错误"></a>三、修复安装错误</h2><ul>
-<li>安装过程中会提示错误信息“在处理时有错误发生： google-chrome-stable”</li>
-<li><p>英文错误：</p>
-<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">dpkg: <span class="keyword">error</span> processing <span class="keyword">package</span> google-chrome-stable (--install):</div><div class="line">dependency problems - leaving unconfigured</div></pre></td></tr></table></figure>
-</li>
-<li><p>出现这个错误之后，执行下面的命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get <span class="_">-f</span> install</div></pre></td></tr></table></figure>
-</li>
-<li><p>执行完成后，Chrome就安装成功了。</p>
-</li>
-<li>在Dash中搜索Chrome，打开Chrome，并绑定到启动栏（launcher）</li>
-</ul>
-<h2 id="四、参考文章："><a href="#四、参考文章：" class="headerlink" title="四、参考文章："></a>四、参考文章：</h2><ul>
-<li><a href="http://www.linuxidc.com/Linux/2014-04/100645.htm" target="_blank" rel="external">http://www.linuxidc.com/Linux/2014-04/100645.htm</a></li>
-<li><a href="http://jingyan.baidu.com/article/a681b0de18071e3b1843463b.html" target="_blank" rel="external">http://jingyan.baidu.com/article/a681b0de18071e3b1843463b.html</a></li>
-</ul>
+          一、下载Chrome的安装包打开终端，输入一下命令（区分64位和32位），下载Chrome的deb安装包。1234#32位wget https://dl.google.com/linux/direct
+          ...
 
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/07/31/Ubuntu-安装-Chrome/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -690,34 +642,20 @@
       
         
           
-            <h2 id="系统环境"><a href="#系统环境" class="headerlink" title="系统环境"></a>系统环境</h2><ul>
-<li>Ubuntu 14.04</li>
-<li>Python2.7</li>
-</ul>
-<h2 id="安装依赖关系"><a href="#安装依赖关系" class="headerlink" title="安装依赖关系"></a>安装依赖关系</h2><pre><code>sudo apt-get update
-sudo python --version
-sudo apt-get install python-gevent python-pip
-sudo pip install shadowsocks
-</code></pre><h2 id="找到shadowsocks的安装位置"><a href="#找到shadowsocks的安装位置" class="headerlink" title="找到shadowsocks的安装位置"></a>找到shadowsocks的安装位置</h2><pre><code>sudo find / -name shadows*
-</code></pre><p>其中， “/“是根目录下， *是通配符。<br>我的安装路径是<code>/usr/local/lib/python2.7/dist-packages/shadowsocks</code></p>
-<h2 id="新建并修改配置文件"><a href="#新建并修改配置文件" class="headerlink" title="新建并修改配置文件"></a>新建并修改配置文件</h2><p>在安装路径下新建文件config.json，路径<code>/usr/local/lib/python2.7/dist-packages/shadowsocks</code>，创建命令<code>sudo touch config.json</code></p>
-<p>文件内容：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line"><span class="attr">"server"</span>:<span class="string">"79.45.115.110"</span>,</div><div class="line"><span class="attr">"server_port"</span>:<span class="number">12801</span>,</div><div class="line"><span class="attr">"local_port"</span>:<span class="number">10808</span>,</div><div class="line"><span class="attr">"password"</span>:<span class="string">"123456"</span>,</div><div class="line"><span class="attr">"timeout"</span>:<span class="number">600</span>,</div><div class="line"><span class="attr">"method"</span>:<span class="string">"aes-256-cfb"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="运行shadowsocks"><a href="#运行shadowsocks" class="headerlink" title="运行shadowsocks"></a>运行shadowsocks</h2><p>在安装路径下，输入<code>sslocal</code>，即可启动shadowsocks。</p>
-<h2 id="开机自动启动"><a href="#开机自动启动" class="headerlink" title="开机自动启动"></a>开机自动启动</h2><ul>
-<li><p>修改rc.local文件</p>
-<p>  cd /etc/<br>  sudo vim rc.local</p>
-</li>
-</ul>
-<p>加上一行：</p>
-<pre><code>/usr/local/bin/sslocal -c /usr/local/lib/python2.7/dist-packages/shadowsocks/config.json
-</code></pre><h2 id="配置SwitchySharp"><a href="#配置SwitchySharp" class="headerlink" title="配置SwitchySharp"></a>配置SwitchySharp</h2><ul>
-<li><a href="http://pan.baidu.com/s/1eQCoeQ2" target="_blank" rel="external">下载Switchysharp</a></li>
-<li><a href="http://jingyan.baidu.com/article/380abd0a5543221d90192c9f.html" target="_blank" rel="external">安装Switchysharp</a></li>
-<li>配置如下图所示，注意：端口根据根据配置中填写，上面的配置是10808，所以此处端口应该由1080改为：10808<br>  <img src="http://img.blog.csdn.net/20150802191807396" alt="这里写图片描述"></li>
-</ul>
+          系统环境
+Ubuntu 14.04
+Python2.7
 
-          
+安装依赖关系sudo apt-get update
+sudo python --version
+sudo apt-get install py
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/07/31/Ubuntu-安装-Shadowsocks/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -847,27 +785,16 @@ sudo pip install shadowsocks
       
         
           
-            <h2 id="一、apt-get-安装"><a href="#一、apt-get-安装" class="headerlink" title="一、apt-get 安装"></a>一、apt-get 安装</h2><pre><code>deb是debian linus的安装格式，跟red hat的rpm非常相似，最基本的安装命令是：dpkg -i file.deb或者直接双击此文件
+          一、apt-get 安装deb是debian linus的安装格式，跟red hat的rpm非常相似，最基本的安装命令是：dpkg -i file.deb或者直接双击此文件
 
-dpkg 是Debian Package的简写，是为Debian 专门开发的套件管理系统，方便软件的安装、更新及移除。所有源自Debian的Linux发行版都使用dpkg，例如Ubuntu、Knoppix 等。
-</code></pre><ul>
-<li>以下是一些 dpkg 的普通用法：</li>
-</ul>
-<h3 id="dpkg-i"><a href="#dpkg-i" class="headerlink" title="dpkg -i"></a>dpkg -i</h3><pre><code>安装一个 Debian 软件包，如你手动下载的文件。
-</code></pre><h3 id="dpkg-c"><a href="#dpkg-c" class="headerlink" title="dpkg -c"></a>dpkg -c</h3><pre><code>列出 的内容。
-</code></pre><h3 id="dpkg-I"><a href="#dpkg-I" class="headerlink" title="dpkg -I"></a>dpkg -I</h3><pre><code>从 中提取包裹信息。
-</code></pre><h3 id="dpkg-r"><a href="#dpkg-r" class="headerlink" title="dpkg -r"></a>dpkg -r</h3><pre><code>移除一个已安装的包裹。
-</code></pre><h3 id="dpkg-P"><a href="#dpkg-P" class="headerlink" title="dpkg -P"></a>dpkg -P</h3><pre><code>完全清除一个已安装的包裹。和 remove 不同的是，remove 只是删掉数据和可执行文件，purge 另外还删除所有的配制文件。
-</code></pre><h3 id="dpkg-L"><a href="#dpkg-L" class="headerlink" title="dpkg -L"></a>dpkg -L</h3><pre><code>列出 安装的所有文件清单。同时请看 dpkg -c 来检查一个 .deb 文件的内容。
-</code></pre><h3 id="dpkg-s"><a href="#dpkg-s" class="headerlink" title="dpkg -s"></a>dpkg -s</h3><pre><code>显示已安装包裹的信息。同时请看 apt-cache 显示 Debian 存档中的包裹信息，以及 dpkg -I 来显示从一个 .deb 文件中提取的包裹信息。
-</code></pre><h3 id="dpkg-reconfigure"><a href="#dpkg-reconfigure" class="headerlink" title="dpkg-reconfigure"></a>dpkg-reconfigure</h3><pre><code>重新配制一个已经安装的包裹，如果它使用的是 debconf (debconf 为包裹安装提供了一个统一的配制界面)。
-</code></pre><h2 id="二、软件安装后相关文件位置"><a href="#二、软件安装后相关文件位置" class="headerlink" title="二、软件安装后相关文件位置"></a>二、软件安装后相关文件位置</h2><h3 id="下载的软件存放位置"><a href="#下载的软件存放位置" class="headerlink" title="下载的软件存放位置"></a>下载的软件存放位置</h3><p>/var/cache/apt/archives</p>
-<h3 id="安装后软件默认位置"><a href="#安装后软件默认位置" class="headerlink" title="安装后软件默认位置"></a>安装后软件默认位置</h3><p>/usr/share</p>
-<h3 id="可执行文件位置"><a href="#可执行文件位置" class="headerlink" title="可执行文件位置"></a>可执行文件位置</h3><p>/usr/bin</p>
-<h3 id="配置文件位置"><a href="#配置文件位置" class="headerlink" title="配置文件位置"></a>配置文件位置</h3><p>/etc</p>
-<h3 id="lib文件位置"><a href="#lib文件位置" class="headerlink" title="lib文件位置"></a>lib文件位置</h3><p>/usr/lib</p>
+dpkg 是Debian
+          ...
 
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/07/28/ubuntu中apt-get安装与默认路径/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -997,234 +924,16 @@ dpkg 是Debian Package的简写，是为Debian 专门开发的套件管理系统
       
         
           
-            <p>1.平面操作工具箱</p>
-<p><a href="http://cathy.ijs.si/~leon/planman.html" target="_blank" rel="external">http://cathy.ijs.si/~leon/planman.html</a></p>
-<p>2.SimMechanics 工具箱 (这个好像不是免费的)<br><a href="http://www.mathworks.com/access/helpdesk/help/toolbox/physmod/mech/mech.shtml" target="_blank" rel="external">http://www.mathworks.com/access/helpdesk/help/toolbox/physmod/mech/mech.shtml</a></p>
-<p>3.gaot工具箱(遗传算法工具箱)<br><a href="http://www.dytrol.com/viewFile.asp?Boardid=11&amp;ID=263" target="_blank" rel="external">http://www.dytrol.com/viewFile.asp?Boardid=11&amp;ID=263</a></p>
-<p>4.Optimization Toolbox 2.2<br><a href="http://www.ttdown.com/SoftDown.asp?ID=25782" target="_blank" rel="external">http://www.ttdown.com/SoftDown.asp?ID=25782</a></p>
-<p>5.Vibration Toolbox<br><a href="http://www.cs.wright.edu/people/faculty/jslater/vtoolbox/vtoolbox.html" target="_blank" rel="external">http://www.cs.wright.edu/people/faculty/jslater/vtoolbox/vtoolbox.html</a></p>
-<p>6.MATLAB机器视觉工具箱<br><a href="http://www.cat.csiro.au/cmst/staff/pic/vision-tb.html" target="_blank" rel="external">http://www.cat.csiro.au/cmst/staff/pic/vision-tb.html</a></p>
-<p>7.Polynomial Toolbox<br><a href="http://www.polyx.com/frm-main-download.htm" target="_blank" rel="external">http://www.polyx.com/frm-main-download.htm</a></p>
-<p>8.TIME-FREQUENCY TOOLBOX<br><a href="http://crttsn.univ-nantes.fr/~auger/tftb.html" target="_blank" rel="external">http://crttsn.univ-nantes.fr/~auger/tftb.html</a></p>
-<p>9.Uvi_Wave Wavelet Toolbox<br><a href="http://www.gts.tsc.uvigo.es/~wavelets/" target="_blank" rel="external">http://www.gts.tsc.uvigo.es/~wavelets/</a></p>
-<p>10.THE NNSYSID TOOLBOX - Version 2<br><a href="http://kalman.iau.dtu.dk/research/control/nnsysid.html" target="_blank" rel="external">http://kalman.iau.dtu.dk/research/control/nnsysid.html</a></p>
-<p>11.Camera calibration toolbox<br><a href="http://www.ee.oulu.fi/~jth/calibr/" target="_blank" rel="external">http://www.ee.oulu.fi/~jth/calibr/</a></p>
-<p>12.Virtual Control Lab<br><a href="http://www.esr.ruhr-uni-bochum.de/VCLab/" target="_blank" rel="external">http://www.esr.ruhr-uni-bochum.de/VCLab/</a></p>
-<p>13.有限元工具箱<br><a href="http://www.dytrol.com/viewFile.asp?Boardid=11&amp;ID=264" target="_blank" rel="external">http://www.dytrol.com/viewFile.asp?Boardid=11&amp;ID=264</a></p>
-<p>14.最速梯度法<br><a href="http://www.dytrol.com/viewFile.asp?Boardid=11&amp;ID=265" target="_blank" rel="external">http://www.dytrol.com/viewFile.asp?Boardid=11&amp;ID=265</a></p>
-<p>MATLAB Toolboxes</p>
-<p>ZSM (zero sum multinomial)<br><a href="http://mcgillb.user.msu.edu/zsmcode.html" target="_blank" rel="external">http://mcgillb.user.msu.edu/zsmcode.html</a></p>
-<p>Binaural-modeling software for MATLAB/Windows<br><a href="http://www.lifesci.sussex.ac.uk/home/Michael_Akeroyd/download2.html" target="_blank" rel="external">http://www.lifesci.sussex.ac.uk/home/Michael_Akeroyd/download2.html</a></p>
-<p>Statistical Parametric Mapping (SPM)<br><a href="http://www.fil.ion.ucl.ac.uk/spm/ext/" target="_blank" rel="external">http://www.fil.ion.ucl.ac.uk/spm/ext/</a></p>
-<p>BOOTSTRAP MATLAB TOOLBOX<br><a href="http://www.csp.curtin.edu.au/downloads/bootstrap_toolbox.html" target="_blank" rel="external">http://www.csp.curtin.edu.au/downloads/bootstrap_toolbox.html</a></p>
-<p>The DSS package for MATLAB<br>DSS Matlab package contains algorithms for performing linear, deflation and symmetric DSS.<br><a href="http://www.cis.hut.fi/projects/dss/package/" target="_blank" rel="external">http://www.cis.hut.fi/projects/dss/package/</a></p>
-<p>Psychtoolbox<br><a href="http://www.psychtoolbox.org/download.html" target="_blank" rel="external">http://www.psychtoolbox.org/download.html</a></p>
-<p>Multisurface Method Tree with MATLAB<br><a href="http://www.cs.wisc.edu/~olvi/uwmp/msmt.html" target="_blank" rel="external">http://www.cs.wisc.edu/~olvi/uwmp/msmt.html</a></p>
-<p>A Matlab Toolbox for every single topic !<br><a href="http://stommel.tamu.edu/~baum/toolboxes.html" target="_blank" rel="external">http://stommel.tamu.edu/~baum/toolboxes.html</a><br>eg. BrainStorm - MEG and EEG data visualization and processing</p>
-<p>CLAWPACK is a software package designed to compute numerical solutions to hyperbolic partial differential equations using a wave propagation approach<br><a href="http://www.amath.washington.edu/~claw/" target="_blank" rel="external">http://www.amath.washington.edu/~claw/</a></p>
-<p>DIPimage - Image Processing Toolbox</p>
-<p>PRTools - Pattern Recognition Toolbox (+ Neural Networks)</p>
-<p>NetLab - Neural Network Toolbox</p>
-<p>FSTB - Fuzzy Systems Toolbox</p>
-<p>Fusetool - Image Fusion Toolbox<br><a href="http://www.metapix.de/toolbox.htm" target="_blank" rel="external">http://www.metapix.de/toolbox.htm</a></p>
-<p>WAVEKIT - Wavelet Toolbox</p>
-<p>Gat - Genetic Algorithm Toolbox</p>
-<p>TSTOOL is a MATLAB software package for nonlinear time series analysis.<br>TSTOOL can be used for computing: Time-delay reconstruction, Lyapunov exponents, Fractal dimensions, Mutual information, Surrogate data tests, Nearest neighbor statistics, Return times, Poincare sections, Nonlinear prediction<br><a href="http://www.physik3.gwdg.de/tstool/" target="_blank" rel="external">http://www.physik3.gwdg.de/tstool/</a></p>
-<p>MATLAB / Data description toolbox<br>A Matlab toolbox for data description, outlier and novelty detection<br>March 26, 2004 - D.M.J. Tax<br><a href="http://www-ict.ewi.tudelft.nl/~davidt/dd_tools/dd_manual.html" target="_blank" rel="external">http://www-ict.ewi.tudelft.nl/~davidt/dd_tools/dd_manual.html</a></p>
-<p>MBE<br><a href="http://www.pmarneffei.hku.hk/mbetoolbox/" target="_blank" rel="external">http://www.pmarneffei.hku.hk/mbetoolbox/</a></p>
-<p>Betabolic network toolbox for Matlab<br><a href="http://www.molgen.mpg.de/~lieberme/pages/network_matlab.html" target="_blank" rel="external">http://www.molgen.mpg.de/~lieberme/pages/network_matlab.html</a></p>
-<p>Pharmacokinetics toolbox for Matlab<br><a href="http://page.inf.fu-berlin.de/~lieber/seiten/pbpk_toolbox.html" target="_blank" rel="external">http://page.inf.fu-berlin.de/~lieber/seiten/pbpk_toolbox.html</a></p>
-<p>The Spider<br>The spider is intended to be a complete object orientated environment for machine learning in Matlab. Aside from easy use of base learning algorithms, algorithms can be plugged together and can be compared with, e.g model selection, statistical tests and visual plots. This gives all the power of objects (reusability, plug together, share code) but also all the power of Matlab for machine learning research.<br><a href="http://www.kyb.tuebingen.mpg.de/bs/people/spider/index.html" target="_blank" rel="external">http://www.kyb.tuebingen.mpg.de/bs/people/spider/index.html</a></p>
-<p>Schwarz-Christoffel Toolbox<br><a href="http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=1316&amp;objectType=file#" target="_blank" rel="external">http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=1316&amp;objectType=file#</a></p>
-<p>XML Toolbox<br><a href="http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=4278&amp;objectType=file" target="_blank" rel="external">http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=4278&amp;objectType=file</a></p>
-<p>FIR/TDNN Toolbox for MATLAB<br>Beta version of a toolbox for FIR (Finite Impulse Response) and TD (Time Delay) Neural Networks.<br><a href="http://www.cs.utep.edu/interval-comp/dagstuhl.03/oish.pdf" target="_blank" rel="external">http://www.cs.utep.edu/interval-comp/dagstuhl.03/oish.pdf</a></p>
-<p>Misc.</p>
-<p><a href="http://www.dcsc.tudelft.nl/Research/Software/index.html" target="_blank" rel="external">http://www.dcsc.tudelft.nl/Research/Software/index.html</a></p>
-<p>Astronomy</p>
-<p>Saturn and Titan trajectories … MALTAB astronomy<br><a href="http://sprg.ssl.berkeley.edu/~abrecht/Matlab-codes/" target="_blank" rel="external">http://sprg.ssl.berkeley.edu/~abrecht/Matlab-codes/</a></p>
-<p>Audio</p>
-<p>MA Toolbox for Matlab Implementing Similarity Measures for Audio<br><a href="http://www.oefai.at/~elias/ma/index.html" target="_blank" rel="external">http://www.oefai.at/~elias/ma/index.html</a></p>
-<p>MAD - Matlab Auditory Demonstrations<br><a href="http://www.dcs.shef.ac.uk/~martin/MAD/docs/mad.htm" target="_blank" rel="external">http://www.dcs.shef.ac.uk/~martin/MAD/docs/mad.htm</a></p>
-<p>Music Analysis - Toolbox for Matlab : Feature Extraction from Raw Audio Signals for Content-Based Music Retrieval<br><a href="http://www.ai.univie.ac.at/~elias/ma/" target="_blank" rel="external">http://www.ai.univie.ac.at/~elias/ma/</a></p>
-<p>WarpTB - Matlab Toolbox for Warped DSP<br>By Aki H?rm? and Matti Karjalainen<br><a href="http://www.acoustics.hut.fi/software/warp/" target="_blank" rel="external">http://www.acoustics.hut.fi/software/warp/</a></p>
-<p>MATLAB-related Software<br><a href="http://www.dpmi.tu-graz.ac.at/~schloegl/matlab/" target="_blank" rel="external">http://www.dpmi.tu-graz.ac.at/~schloegl/matlab/</a></p>
-<p>Biomedical Signal data formats (EEG machine specific file formats with Matlab import routines)<br><a href="http://www.dpmi.tu-graz.ac.at/~schloegl/matlab/eeg/" target="_blank" rel="external">http://www.dpmi.tu-graz.ac.at/~schloegl/matlab/eeg/</a></p>
-<p>MPEG Encoding library for MATLAB Movies (Created by David Foti)<br>It enables MATLAB users to read (MPGREAD) or write (MPGWRITE) MPEG movies. That should help Video Quality project.</p>
-<p>Filter Design package<br><a href="http://www.ee.ryerson.ca:8080/~mzeytin/dfp/index.html" target="_blank" rel="external">http://www.ee.ryerson.ca:8080/~mzeytin/dfp/index.html</a></p>
-<p>Octave by Christophe COUVREUR (Generates normalized A-weigthing, C-weighting, octave and one-third-octave digital filters)<br><a href="http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectType=file&amp;objectId=69" target="_blank" rel="external">http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectType=file&amp;objectId=69</a></p>
-<p>Source Coding MATLAB Toolbox<br><a href="http://www.ece.umn.edu/users/kieffer/programs.html" target="_blank" rel="external">http://www.ece.umn.edu/users/kieffer/programs.html</a></p>
-<p>Bio Medical Informatics (Top)</p>
-<p>CGH-Plotter: MATLAB Toolbox for CGH-data Analysis<br>Code: <a href="http://sigwww.cs.tut.fi/TICSP/CGH-Plotter/" target="_blank" rel="external">http://sigwww.cs.tut.fi/TICSP/CGH-Plotter/</a><br>Poster: <a href="http://sigwww.cs.tut.fi/TICSP/CSB2003/Posteri_CGH_Plotter.pdf" target="_blank" rel="external">http://sigwww.cs.tut.fi/TICSP/CSB2003/Posteri_CGH_Plotter.pdf</a></p>
-<p>The Brain Imaging Software Toolbox<br><a href="http://www.bic.mni.mcgill.ca/software/" target="_blank" rel="external">http://www.bic.mni.mcgill.ca/software/</a></p>
-<p>MRI Brain Segmentation<br><a href="http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=4879" target="_blank" rel="external">http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=4879</a></p>
-<p>Chemometrics (providing PCA) (Top)</p>
-<p>Matlab Molecular Biology &amp; Evolution Toolbox<br>(Toolbox Enables Evolutionary Biologists to Analyze and View DNA and Protein Sequences)<br>James J. Cai<br><a href="http://www.pmarneffei.hku.hk/mbetoolbox/" target="_blank" rel="external">http://www.pmarneffei.hku.hk/mbetoolbox/</a></p>
-<p>Toolbox provided by Prof. Massart research group<br><a href="http://minf.vub.ac.be/~fabi/publiek/" target="_blank" rel="external">http://minf.vub.ac.be/~fabi/publiek/</a></p>
-<p>Useful collection of routines from Prof age smilde research group<br><a href="http://www-its.chem.uva.nl/research/pac" target="_blank" rel="external">http://www-its.chem.uva.nl/research/pac</a></p>
-<p>Multivariate Toolbox written by Rune Mathisen<br><a href="http://www.bitjungle.com/~mvartools/index.html" target="_blank" rel="external">http://www.bitjungle.com/~mvartools/index.html</a></p>
-<p>Matlab code and datasets<br><a href="http://www.acc.umu.se/~tnkjtg/chemometrics/dataset.html" target="_blank" rel="external">http://www.acc.umu.se/~tnkjtg/chemometrics/dataset.html</a></p>
-<p>Chaos (Top)</p>
-<p>Chaotic Systems Toolbox<br><a href="http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=1597&amp;objectType=file#" target="_blank" rel="external">http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=1597&amp;objectType=file#</a></p>
-<p>HOSA Toolbox<br><a href="http://www.mathworks.nl/matlabcentral/fileexchange/loadFile.do?objectId=3013&amp;objectType=file" target="_blank" rel="external">http://www.mathworks.nl/matlabcentral/fileexchange/loadFile.do?objectId=3013&amp;objectType=file</a></p>
-<p>Chemistry (Top)</p>
-<p>MetMAP - (Metabolical Modeling, Analysis and oPtimization alias Met. M. A. P.)<br><a href="http://webpages.ull.es/users/sympbst/pag_ing/pag_metmap/index.htm" target="_blank" rel="external">http://webpages.ull.es/users/sympbst/pag_ing/pag_metmap/index.htm</a></p>
-<p>DoseLab - A set of software programs for quantitative comparison of measured and computed radiation dose distributions<br><a href="http://doselab.sourceforge.net" target="_blank" rel="external">http://doselab.sourceforge.net</a></p>
-<p>GenBank Overview<br><a href="http://www.ncbi.nlm.nih.gov/Genbank/GenbankOverview.html" target="_blank" rel="external">http://www.ncbi.nlm.nih.gov/Genbank/GenbankOverview.html</a><br>Matlab: <a href="http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=1139" target="_blank" rel="external">http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=1139</a></p>
-<p>Coding</p>
-<p>Code for the estimation of Scaling Exponents<br><a href="http://www.cubinlab.ee.mu.oz.au/~darryl/secondorder_code.html" target="_blank" rel="external">http://www.cubinlab.ee.mu.oz.au/~darryl/secondorder_code.html</a></p>
-<p>Control (Top)</p>
-<p>Control Tutorial for Matlab<br><a href="http://www.engin.umich.edu/group/ctm/" target="_blank" rel="external">http://www.engin.umich.edu/group/ctm/</a></p>
-<p>Another</p>
-<p>Communications (Top)</p>
-<p>Channel Learning Architecture toolbox<br>(This Matlab toolbox is a supplement to the article “HiperLearn: A High Performance Learning Architecture”)<br><a href="http://www.isy.liu.se/cvl/Projects/hiperlearn/" target="_blank" rel="external">http://www.isy.liu.se/cvl/Projects/hiperlearn/</a></p>
-<p>Source Coding MATLAB Toolbox<br><a href="http://www.ece.umn.edu/users/kieffer/programs.html" target="_blank" rel="external">http://www.ece.umn.edu/users/kieffer/programs.html</a></p>
-<p>TCP/UDP/IP Toolbox 2.0.4<br><a href="http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=345&amp;objectType=file" target="_blank" rel="external">http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=345&amp;objectType=file</a></p>
-<p>Home Networking Basis: Transmission Environments and Wired/Wireless Protocols<br>Walter Y. Chen<br><a href="http://www.mathworks.com/support/books/book5295.jsp?category=new&amp;language=-1" target="_blank" rel="external">http://www.mathworks.com/support/books/book5295.jsp?category=new&amp;language=-1</a></p>
-<p>MATLAB M-files and Simulink models<br><a href="http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=3834&amp;objectType=file" target="_blank" rel="external">http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=3834&amp;objectType=file</a></p>
-<p>Engineering (Top)</p>
-<p>OPNML/MATLAB Facilities<br><a href="http://www.opnml.unc.edu/OPNML_Matlab/" target="_blank" rel="external">http://www.opnml.unc.edu/OPNML_Matlab/</a></p>
-<p>Mesh Generation<br><a href="http://www.cs.cornell.edu/home/vavasis/qmg-home.html" target="_blank" rel="external">http://www.cs.cornell.edu/home/vavasis/qmg-home.html</a></p>
-<p>OpenFEM : An Open-Source Finite Element Toolbox<br><a href="http://www.openfem.net/" target="_blank" rel="external">http://www.openfem.net/</a></p>
-<p>CALFEM is an interactive computer program for teaching the finite element method (FEM)<br><a href="http://www.byggmek.lth.se/Calfem/frinfo.htm" target="_blank" rel="external">http://www.byggmek.lth.se/Calfem/frinfo.htm</a></p>
-<p>The Engineering Vibration Toolbox<br><a href="http://www.cs.wright.edu/people/faculty/jslater/vtoolbox/vtoolbox.html" target="_blank" rel="external">http://www.cs.wright.edu/people/faculty/jslater/vtoolbox/vtoolbox.html</a></p>
-<p>SaGA - Spatial and Geometric Analysis Toolbox<br>by Kirill K. Pankratov<br><a href="http://puddle.mit.edu/~glenn/kirill/saga.html" target="_blank" rel="external">http://puddle.mit.edu/~glenn/kirill/saga.html</a></p>
-<p>MexCDF and NetCDF Toolbox For Matlab-5&amp;6<br><a href="http://woodshole.er.usgs.gov/staffpages/cdenham/public_html/MexCDF/nc4ml5.html" target="_blank" rel="external">http://woodshole.er.usgs.gov/staffpages/cdenham/public_html/MexCDF/nc4ml5.html</a></p>
-<p>CUEDSID: Cambridge University System Identification Toolbox<br><a href="http://www-control.eng.cam.ac.uk/jmm/cuedsid/" target="_blank" rel="external">http://www-control.eng.cam.ac.uk/jmm/cuedsid/</a></p>
-<p>Kriging Toolbox<br><a href="http://www.ai-geostats.org/software/Geostats_software/MATLAB_KRIGING_TOOLBOX.htm" target="_blank" rel="external">http://www.ai-geostats.org/software/Geostats_software/MATLAB_KRIGING_TOOLBOX.htm</a></p>
-<p>Monte Carlo (Dr Nando)<br><a href="http://www.cs.ubc.ca/~nando/software.html" target="_blank" rel="external">http://www.cs.ubc.ca/~nando/software.html</a></p>
-<p>RIOTS - The Most Powerful Optimal Control Problem Solver<br><a href="http://blank.hypersurf.com/~adam/RIOTS/" target="_blank" rel="external">http://blank.hypersurf.com/~adam/RIOTS/</a></p>
-<p>Excel</p>
-<p>MATLAB xlsheets<br><a href="http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=4474&amp;objectType=file" target="_blank" rel="external">http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=4474&amp;objectType=file</a></p>
-<p>write2excel<br><a href="http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=4414&amp;objectType=file" target="_blank" rel="external">http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=4414&amp;objectType=file</a></p>
-<p>Finite Element Modeling (FEM) (Top)</p>
-<p>OpenFEM - An Open-Source Finite Element Toolbox<br><a href="http://www.openfem.net/" target="_blank" rel="external">http://www.openfem.net/</a></p>
-<p>NLFET - nonlinear finite element toolbox for MATLAB ( framework for setting up, solving, and interpreting results for nonlinear static and dynamic finite element analysis.)<br><a href="http://nlfet.sourceforge.net/" target="_blank" rel="external">http://nlfet.sourceforge.net/</a></p>
-<p>GetFEM - C++ library for finite element methods elementary computations with a Matlab interface<br><a href="http://www.gmm.insa-tlse.fr/getfem/" target="_blank" rel="external">http://www.gmm.insa-tlse.fr/getfem/</a></p>
-<p>FELIPE - FEA package to view results ( contains neat interface to MATLA<br><a href="http://www.brunel.ac.uk/~blstmbr/felipe/" target="_blank" rel="external">http://www.brunel.ac.uk/~blstmbr/felipe/</a></p>
-<p>Finance (Top)</p>
-<p>A NEW MATLAB-BASED TOOLBOX FOR COMPUTER AIDED DYNAMIC TECHNICAL TRADING<br>Stephanos Papadamou and George Stephanides<br>Department of Applied Informatics, University Of Macedonia Economic &amp; Social Sciences, Thessaloniki, Greece<br><a href="http://www.fenews.com/fen31/one_time_articles/dynamic_tech_trade_matlab6.htm" target="_blank" rel="external">http://www.fenews.com/fen31/one_time_articles/dynamic_tech_trade_matlab6.htm</a><br>Paper: <a href="http://econwpa.wustl.edu:8089/eps/prog/papers/0201/0201001.pdf" target="_blank" rel="external">http://econwpa.wustl.edu:8089/eps/prog/papers/0201/0201001.pdf</a></p>
-<p>CompEcon Toolbox for Matlab<br><a href="http://www4.ncsu.edu/~pfackler/compecon/toolbox.html" target="_blank" rel="external">http://www4.ncsu.edu/~pfackler/compecon/toolbox.html</a></p>
-<p>Genetic Algorithms (Top)</p>
-<p>The Genetic Algorithm Optimization Toolbox (GAOT) for Matlab 5<br><a href="http://www.ie.ncsu.edu/mirage/GAToolBox/gaot/" target="_blank" rel="external">http://www.ie.ncsu.edu/mirage/GAToolBox/gaot/</a></p>
-<p>Genetic Algorithm Toolbox<br>Written &amp; distributed by Andy Chipperfield (Sheffield University, UK)<br><a href="http://www.shef.ac.uk/uni/projects/gaipp/gatbx.html" target="_blank" rel="external">http://www.shef.ac.uk/uni/projects/gaipp/gatbx.html</a><br>Manual: <a href="http://www.shef.ac.uk/~gaipp/ga-toolbox/manual.pdf" target="_blank" rel="external">http://www.shef.ac.uk/~gaipp/ga-toolbox/manual.pdf</a></p>
-<p>Genetic and Evolutionary Algorithm Toolbox (GEATbx)<br><a href="http://www.geatbx.com" target="_blank" rel="external">http://www.geatbx.com</a></p>
-<p>Evolutionary Algorithms for MATLAB<br><a href="http://www.geatbx.com/links/ea_matlab.html" target="_blank" rel="external">http://www.geatbx.com/links/ea_matlab.html</a></p>
-<p>Genetic/Evolutionary Algorithms for MATLAB<br><a href="http://www.systemtechnik.tu-ilmenau.de/~pohlheim/EA_Matlab/ea_matlab.html" target="_blank" rel="external">http://www.systemtechnik.tu-ilmenau.de/~pohlheim/EA_Matlab/ea_matlab.html</a></p>
-<p>Graphics</p>
-<p>VideoToolbox (C routines for visual psychophysics on Macs by Denis Pelli)<br><a href="http://vision.nyu.edu/VideoToolbox/" target="_blank" rel="external">http://vision.nyu.edu/VideoToolbox/</a><br>Paper: <a href="http://psych.nyu.edu/pelli/pubs/pelli1997videotoolbox.pdf" target="_blank" rel="external">http://psych.nyu.edu/pelli/pubs/pelli1997videotoolbox.pdf</a></p>
-<p>4D toolbox<br><a href="http://www.nmr.mgh.harvard.edu/~daniel/links/matlab/4DToolbox.html" target="_blank" rel="external">http://www.nmr.mgh.harvard.edu/~daniel/links/matlab/4DToolbox.html</a></p>
-<p>Images (Top)</p>
-<p>Eyelink Toolbox<br><a href="http://psychtoolbox.org/eyelinktoolbox/" target="_blank" rel="external">http://psychtoolbox.org/eyelinktoolbox/</a><br>Paper: <a href="http://psychtoolbox.org/eyelinktoolbox/EyelinkToolbox.pdf" target="_blank" rel="external">http://psychtoolbox.org/eyelinktoolbox/EyelinkToolbox.pdf</a></p>
-<p>CellStats: Automated statistical analysis of color-stained cell images in Matlab<br><a href="http://sigwww.cs.tut.fi/TICSP/CellStats/" target="_blank" rel="external">http://sigwww.cs.tut.fi/TICSP/CellStats/</a></p>
-<p>SDC Morphology Toolbox for MATLAB (powerful collection of latest state-of-the-art gray-scale morphological tools that can be applied to image segmentation, non-linear filtering, pattern recognition and image analysis)<br><a href="http://www.mmorph.com/" target="_blank" rel="external">http://www.mmorph.com/</a></p>
-<p>Image Acquisition Toolbox<br><a href="http://www.mathworks.com/products/imaq/" target="_blank" rel="external">http://www.mathworks.com/products/imaq/</a></p>
-<p>Halftoning Toolbox for MATLAB<br><a href="http://www.ece.utexas.edu/~bevans/projects/halftoning/toolbox/index.html" target="_blank" rel="external">http://www.ece.utexas.edu/~bevans/projects/halftoning/toolbox/index.html</a></p>
-<p>DIPimage - A Scientific Image Processing Toolbox for MATLAB<br><a href="http://www.ph.tn.tudelft.nl/DIPlib/dipimage_1.html" target="_blank" rel="external">http://www.ph.tn.tudelft.nl/DIPlib/dipimage_1.html</a></p>
-<p>PNM Toolbox<br><a href="http://home.online.no/~pjacklam/matlab/software/pnm/index.html" target="_blank" rel="external">http://home.online.no/~pjacklam/matlab/software/pnm/index.html</a></p>
-<p>Another</p>
-<p>ICA / KICA and KPCA (Top)</p>
-<p>ICATU Toolbox<br><a href="http://mole.imm.dtu.dk/toolbox/menu.html" target="_blank" rel="external">http://mole.imm.dtu.dk/toolbox/menu.html</a></p>
-<p>MISEP Linear and Nonlinear ICA Toolbox<br><a href="http://neural.inesc-id.pt/~lba/ica/mitoolbox.html" target="_blank" rel="external">http://neural.inesc-id.pt/~lba/ica/mitoolbox.html</a></p>
-<p>Kernel Independant Component Analysis<br><a href="http://www.cs.berkeley.edu/~fbach/kernel-ica/index.htm" target="_blank" rel="external">http://www.cs.berkeley.edu/~fbach/kernel-ica/index.htm</a><br>Matlab: kernel-ica version 1.2</p>
-<p>KPCA- Please check the software section of kernel machines.</p>
-<p>Kernel</p>
-<p>Statistical Pattern Recognition Toolbox<br><a href="http://cmp.felk.cvut.cz/~xfrancv/stprtool/" target="_blank" rel="external">http://cmp.felk.cvut.cz/~xfrancv/stprtool/</a></p>
-<p>MATLABArsenal A MATLAB Wrapper for Classification<br><a href="http://finalfantasyxi.inf.cs.cmu.edu/tmp/MATLABArsenal.htm" target="_blank" rel="external">http://finalfantasyxi.inf.cs.cmu.edu/tmp/MATLABArsenal.htm</a></p>
-<p>Markov (Top)</p>
-<p>MapHMMBOX 1.1 - Matlab toolbox for Hidden Markov Modelling using Max. Aposteriori EM<br>Prerequisites: Matlab 5.0, Netlab. Last Updated: 18 March 2002.<br><a href="http://www.robots.ox.ac.uk/~parg/software/maphmmbox_1_1.tar" target="_blank" rel="external">http://www.robots.ox.ac.uk/~parg/software/maphmmbox_1_1.tar</a></p>
-<p>HMMBOX 4.1 - Matlab toolbox for Hidden Markov Modelling using Variational Bayes<br>Prerequisites: Matlab 5.0,Netlab. Last Updated: 15 February 2002..<br><a href="http://www.robots.ox.ac.uk/~parg/software/hmmbox_3_2.tar" target="_blank" rel="external">http://www.robots.ox.ac.uk/~parg/software/hmmbox_3_2.tar</a><br><a href="http://www.robots.ox.ac.uk/~parg/software/hmmbox_4_1.tar" target="_blank" rel="external">http://www.robots.ox.ac.uk/~parg/software/hmmbox_4_1.tar</a></p>
-<p>Markov Decision Process (MDP) Toolbox for Matlab<br>Kevin Murphy, 1999<br><a href="http://www.ai.mit.edu/~murphyk/Software/MDP/MDP.zip" target="_blank" rel="external">http://www.ai.mit.edu/~murphyk/Software/MDP/MDP.zip</a></p>
-<p>Markov Decision Process (MDP) Toolbox v1.0 for MATLAB<br><a href="http://www.inra.fr/bia/T/MDPtoolbox/" target="_blank" rel="external">http://www.inra.fr/bia/T/MDPtoolbox/</a></p>
-<p>Hidden Markov Model (HMM) Toolbox for Matlab<br><a href="http://www.ai.mit.edu/~murphyk/Software/HMM/hmm.html" target="_blank" rel="external">http://www.ai.mit.edu/~murphyk/Software/HMM/hmm.html</a></p>
-<p>Bayes Net Toolbox for Matlab<br><a href="http://www.ai.mit.edu/~murphyk/Software/BNT/bnt.html" target="_blank" rel="external">http://www.ai.mit.edu/~murphyk/Software/BNT/bnt.html</a></p>
-<p>Medical (Top)</p>
-<p>EEGLAB Open Source Matlab Toolbox for Physiological Research (formerly ICA/EEG Matlab toolbox)<br><a href="http://www.sccn.ucsd.edu/~scott/ica.html" target="_blank" rel="external">http://www.sccn.ucsd.edu/~scott/ica.html</a></p>
-<p>MATLAB Biomedical Signal Processing Toolbox<br><a href="http://bsp.pdx.edu/Toolbox/" target="_blank" rel="external">http://bsp.pdx.edu/Toolbox/</a></p>
-<p>Powerful package for neurophysiological data analysis ( Igor Kagan webpage)<br><a href="http://igoresha.virtualave.net/Matlab/Unitret.html" target="_blank" rel="external">http://igoresha.virtualave.net/Matlab/Unitret.html</a></p>
-<p>EEG / MRI Matlab Toolbox<br><a href="http://eeg.sourceforge.net/" target="_blank" rel="external">http://eeg.sourceforge.net/</a></p>
-<p>Microarray data analysis toolbox (MDAT): for normalization, adjustment and analysis of gene expression data.<br>Knowlton N, Dozmorov IM, Centola M. Department of Arthritis and Immunology, Oklahoma Medical Research Foundation, Oklahoma City, OK, USA 73104. We introduce a novel Matlab toolbox for microarray data analysis. This toolbox uses normalization based upon a normally distributed background and differential gene expression based on 5 statistical measures. The objects in this toolbox are open source and can be implemented to suit your application. AVAILABILITY: MDAT v1.0 is a Matlab toolbox and requires Matlab to run. MDAT is freely available at:<br><a href="http://microarray.omrf.org/publications/2004/knowlton/MDAT.zip" target="_blank" rel="external">http://microarray.omrf.org/publications/2004/knowlton/MDAT.zip</a></p>
-<p>MIDI (Top)</p>
-<p>MIDI Toolbox version 1.0 (GNU General Public License)<br><a href="http://www.jyu.fi/musica/miditoolbox/" target="_blank" rel="external">http://www.jyu.fi/musica/miditoolbox/</a></p>
-<p>Misc. (Top)</p>
-<p>MATLAB-The Graphing Tool<br><a href="http://sprg.ssl.berkeley.edu/~abrecht/matlab.html" target="_blank" rel="external">http://sprg.ssl.berkeley.edu/~abrecht/matlab.html</a></p>
-<p>3-D Circuits The Circuit Animation Toolbox for MATLAB<br><a href="http://engineering.dartmouth.edu/other/3Dcircuits/" target="_blank" rel="external">http://engineering.dartmouth.edu/other/3Dcircuits/</a></p>
-<p>SendMail<br><a href="http://carol.wins.uva.nl/~portegie/matlab/sendmail/" target="_blank" rel="external">http://carol.wins.uva.nl/~portegie/matlab/sendmail/</a></p>
-<p>Coolplot<br><a href="http://www.reimeika.ca/marco/matlab/coolplots.html" target="_blank" rel="external">http://www.reimeika.ca/marco/matlab/coolplots.html</a></p>
-<p>MPI (Matlab Parallel Interface)</p>
-<p>Cornell Multitask Toolbox for MATLAB<br><a href="http://www.tc.cornell.edu/Services/Software/CMTM/" target="_blank" rel="external">http://www.tc.cornell.edu/Services/Software/CMTM/</a></p>
-<p>Beolab Toolbox for v6.5<br>Thomas Abrahamsson (Professor, Chalmers University of Technology, Applied Mechanics, G?teborg, Sweden)<br><a href="http://www.mathworks.nl/matlabcentral/fileexchange/loadFile.do?objectId=1216&amp;objectType=file" target="_blank" rel="external">http://www.mathworks.nl/matlabcentral/fileexchange/loadFile.do?objectId=1216&amp;objectType=file</a></p>
-<p>PARMATLAB</p>
-<p>Neural Networks (Top)</p>
-<p>SOM Toolbox<br><a href="http://www.cis.hut.fi/projects/somtoolbox/" target="_blank" rel="external">http://www.cis.hut.fi/projects/somtoolbox/</a></p>
-<p>Bayes Net Toolbox for Matlab<br><a href="http://www.ai.mit.edu/~murphyk/Software/BNT/bnt.html" target="_blank" rel="external">http://www.ai.mit.edu/~murphyk/Software/BNT/bnt.html</a></p>
-<p>NetLab<br><a href="http://www.ncrg.aston.ac.uk/netlab/" target="_blank" rel="external">http://www.ncrg.aston.ac.uk/netlab/</a></p>
-<p>Random Neural Networks<br><a href="http://www.cs.ucf.edu/~ahossam/rnnsimv2/" target="_blank" rel="external">http://www.cs.ucf.edu/~ahossam/rnnsimv2/</a><br>ftp:</p>
-<p>NNSYSID Toolbox (tools for neural network based identification of nonlinear dynamic systems)<br><a href="http://www.iau.dtu.dk/research/control/nnsysid.html" target="_blank" rel="external">http://www.iau.dtu.dk/research/control/nnsysid.html</a></p>
-<p>Oceanography (Top)</p>
-<p>WAFO. Wave Analysis for Fatigue and Oceanography<br><a href="http://www.maths.lth.se/matstat/wafo/" target="_blank" rel="external">http://www.maths.lth.se/matstat/wafo/</a></p>
-<p>ADCP toolbox for MATLAB (USGS, USA)<br>Presented at the Hydroacoustics Workshop in Tampa and at ADCP’s in Action in San Diego<br><a href="http://woodshole.er.usgs.gov/operations/stg/pubs/ADCPtools" target="_blank" rel="external">http://woodshole.er.usgs.gov/operations/stg/pubs/ADCPtools</a></p>
-<p>SEA-MAT - Matlab Tools for Oceanographic Analysis<br>A collaborative effort to organize and distribute Matlab tools for the Oceanographic Community<br><a href="http://sea-mat.whoi.edu/" target="_blank" rel="external">http://sea-mat.whoi.edu/</a></p>
-<p>Ocean Toolbox<br><a href="http://www.mar.dfo-mpo.gc.ca/science/ocean/epsonde/programming.html" target="_blank" rel="external">http://www.mar.dfo-mpo.gc.ca/science/ocean/epsonde/programming.html</a></p>
-<p>EUGENE D. GALLAGHER<br>(Associate Professor, Environmental, Coastal &amp; Ocean Sciences)<br><a href="http://www.es.umb.edu/edgwebp.htm" target="_blank" rel="external">http://www.es.umb.edu/edgwebp.htm</a></p>
-<p>Optimization (Top)</p>
-<p>MODCONS - a MATLAB Toolbox for Multi-Objective Control System Design<br><a href="http://www.eee.kcl.ac.uk/mecheng/jfw/modcons.html" target="_blank" rel="external">http://www.eee.kcl.ac.uk/mecheng/jfw/modcons.html</a></p>
-<p>Lazy Learning Package<br><a href="http://iridia.ulb.ac.be/~lazy/" target="_blank" rel="external">http://iridia.ulb.ac.be/~lazy/</a></p>
-<p>SDPT3 version 3.02 – a MATLAB software for semidefinite-quadratic-linear programming<br><a href="http://www.math.nus.edu.sg/~mattohkc/sdpt3.html" target="_blank" rel="external">http://www.math.nus.edu.sg/~mattohkc/sdpt3.html</a></p>
-<p>Minimum Enclosing Balls: Matlab Code<br><a href="http://www.compgeom.com/meb/" target="_blank" rel="external">http://www.compgeom.com/meb/</a></p>
-<p>SOSTOOLS Sum of Squares Optimization Toolbox for MATLAB User’s guide<br><a href="http://www.cds.caltech.edu/sostools/sostools.pdf" target="_blank" rel="external">http://www.cds.caltech.edu/sostools/sostools.pdf</a></p>
-<p>PSOt - a Particle Swarm Optimization Toolbox for use with Matlab<br>By Brian Birge … A Particle Swarm Optimization Toolbox (PSOt) for use with the Matlab scientific programming environment has been developed. PSO is<br>introduced briefly and then the use of the toolbox is explained with some examples. A link to downloadable code is provided.</p>
-<p>Plot</p>
-<p><a href="http://globec.whoi.edu/software/plotting/gbplot/" target="_blank" rel="external">http://globec.whoi.edu/software/plotting/gbplot/</a></p>
-<p>Signal Processing (Top)</p>
-<p>Filter Design with Motorola DSP56K<br><a href="http://www.ee.ryerson.ca:8080/~mzeytin/dfp/index.html" target="_blank" rel="external">http://www.ee.ryerson.ca:8080/~mzeytin/dfp/index.html</a></p>
-<p>Change Detection and Adaptive Filtering Toolbox<br><a href="http://www.sigmoid.se/" target="_blank" rel="external">http://www.sigmoid.se/</a></p>
-<p>Signal Processing Toolbox<br><a href="http://www.mathworks.com/products/signal/" target="_blank" rel="external">http://www.mathworks.com/products/signal/</a></p>
-<p>ICATU Toolbox<br><a href="http://mole.imm.dtu.dk/toolbox/menu.html" target="_blank" rel="external">http://mole.imm.dtu.dk/toolbox/menu.html</a></p>
-<p>Time-Frequency Toolbox for Matlab<br><a href="http://crttsn.univ-nantes.fr/~auger/tftb.html" target="_blank" rel="external">http://crttsn.univ-nantes.fr/~auger/tftb.html</a></p>
-<p>VoiceBox - Speech Processing Toolbox<br><a href="http://www.ee.ic.ac.uk/hp/staff/dmb/voicebox/voicebox.html" target="_blank" rel="external">http://www.ee.ic.ac.uk/hp/staff/dmb/voicebox/voicebox.html</a></p>
-<p>Least Squared - Support Vector Machines (LS-SVM)<br><a href="http://www.esat.kuleuven.ac.be/sista/lssvmlab/" target="_blank" rel="external">http://www.esat.kuleuven.ac.be/sista/lssvmlab/</a></p>
-<p>WaveLab802 : the Wavelet Toolbox<br>By David Donoho, Mark Reynold Duncan, Xiaoming Huo, Ofer Levi<br><a href="http://www-stat.stanford.edu/~wavelab/" target="_blank" rel="external">http://www-stat.stanford.edu/~wavelab/</a></p>
-<p>Time-series Matlab scripts<br><a href="http://wise-obs.tau.ac.il/~eran/MATLAB/TimeseriesCon.html" target="_blank" rel="external">http://wise-obs.tau.ac.il/~eran/MATLAB/TimeseriesCon.html</a></p>
-<p>Uvi_Wave Wavelet Toolbox Home Page<br><a href="http://www.gts.tsc.uvigo.es/~wavelets/index.html" target="_blank" rel="external">http://www.gts.tsc.uvigo.es/~wavelets/index.html</a></p>
-<p>Another</p>
-<p>Support Vector Machine (Top)</p>
-<p>MATLAB Support Vector Machine Toolbox<br>Dr Gavin Cawley<br>School of Information Systems, University of East Anglia<br><a href="http://theoval.sys.uea.ac.uk/~gcc/svm/toolbox/" target="_blank" rel="external">http://theoval.sys.uea.ac.uk/~gcc/svm/toolbox/</a></p>
-<p>LS-SVM - SISTA</p>
-<p>SVM toolboxes<br><a href="http://www.cs.wisc.edu/dmi/svm/" target="_blank" rel="external">http://www.cs.wisc.edu/dmi/svm/</a></p>
-<p>LSVM Lagrangian Support Vector Machine<br><a href="http://www.cs.wisc.edu/dmi/lsvm/" target="_blank" rel="external">http://www.cs.wisc.edu/dmi/lsvm/</a></p>
-<p>Statistics (Top)</p>
-<p>Logistic regression<br><a href="http://www.spatial-econometrics.com/" target="_blank" rel="external">http://www.spatial-econometrics.com/</a></p>
-<p>SAGA<br><a href="http://globec.whoi.edu/software/saga/" target="_blank" rel="external">http://globec.whoi.edu/software/saga/</a></p>
-<p>Multi-Parametric Toolbox (MPT) A tool (not only) for multi-parametric optimization.<br><a href="http://control.ee.ethz.ch/~mpt/" target="_blank" rel="external">http://control.ee.ethz.ch/~mpt/</a></p>
-<p>ARfit: A Matlab package for the estimation of parameters and eigenmodes of multivariate autoregressive models<br><a href="http://www.mat.univie.ac.at/~neum/software/arfit/" target="_blank" rel="external">http://www.mat.univie.ac.at/~neum/software/arfit/</a></p>
-<p>The Dimensional Analysis Toolbox for MATLAB<br>Home: <a href="http://www.sbrs.de/" target="_blank" rel="external">http://www.sbrs.de/</a><br>Paper: <a href="http://www.isd.uni-stuttgart.de/~brueckner/Papers/similarity2002.pdf" target="_blank" rel="external">http://www.isd.uni-stuttgart.de/~brueckner/Papers/similarity2002.pdf</a></p>
-<p>FATHOM for Matlab<br><a href="http://www.rsmas.miami.edu/personal/djones/" target="_blank" rel="external">http://www.rsmas.miami.edu/personal/djones/</a></p>
-<p>PLS-toolbox<br><a href="http://www.eigenvector.com" target="_blank" rel="external">http://www.eigenvector.com</a></p>
-<p>Multivariate analysis toolbox (N-way Toolbox - paper)<br><a href="http://www.models.kvl.dk/source/nwaytoolbox/index.asp" target="_blank" rel="external">http://www.models.kvl.dk/source/nwaytoolbox/index.asp</a></p>
-<p>Classification Toolbox for Matlab<br><a href="http://tiger.technion.ac.il/~eladyt/classification/index.htm" target="_blank" rel="external">http://tiger.technion.ac.il/~eladyt/classification/index.htm</a></p>
-<p>Matlab toolbox for Robust Calibration<br><a href="http://www.wis.kuleuven.ac.be/stat/robust/toolbox.html" target="_blank" rel="external">http://www.wis.kuleuven.ac.be/stat/robust/toolbox.html</a></p>
-<p>Statistical Parametric Mapping<br><a href="http://www.fil.ion.ucl.ac.uk/spm/spm2.html" target="_blank" rel="external">http://www.fil.ion.ucl.ac.uk/spm/spm2.html</a></p>
-<p>EVIM: A Software Package for Extreme Value Analysis in Matlab<br>by Ramazan Gen?ay, Faruk Selcuk and Abdurrahman Ulugulyagci, 2001.<br>Manual (pdf file) evim.pdf - Software (zip file) evim.zip</p>
-<p>Time Series Analysis<br><a href="http://www.dpmi.tu-graz.ac.at/~schloegl/matlab/tsa/" target="_blank" rel="external">http://www.dpmi.tu-graz.ac.at/~schloegl/matlab/tsa/</a></p>
-<p>Bayes Net Toolbox for Matlab<br>Written by Kevin Murphy<br><a href="http://www.ai.mit.edu/~murphyk/Software/BNT/bnt.html" target="_blank" rel="external">http://www.ai.mit.edu/~murphyk/Software/BNT/bnt.html</a><br>Other: <a href="http://www.isp.pitt.edu/information/toolboxes.html" target="_blank" rel="external">http://www.isp.pitt.edu/information/toolboxes.html</a></p>
-<p>ARfit: A Matlab package for the estimation of parameters and eigenmodes of multivariate autoregressive models<br><a href="http://www.gps.caltech.edu/~tapio/arfit/" target="_blank" rel="external">http://www.gps.caltech.edu/~tapio/arfit/</a></p>
-<p>M-Fit<br><a href="http://www.ill.fr/tas/matlab/doc/mfit4/mfit.html" target="_blank" rel="external">http://www.ill.fr/tas/matlab/doc/mfit4/mfit.html</a></p>
-<p>Dimensional Analysis Toolbox for Matlab<br><a href="http://www.sbrs.net/" target="_blank" rel="external">http://www.sbrs.net/</a></p>
-<p>The NaN-toolbox: A statistic-toolbox for Octave and Matlab?<br>… handles data with and without MISSING VALUES.<br><a href="http://www-dpmi.tu-graz.ac.at/~schloegl/matlab/NaN/" target="_blank" rel="external">http://www-dpmi.tu-graz.ac.at/~schloegl/matlab/NaN/</a></p>
-<p>Iterative Methods for Optimization: Matlab Codes<br><a href="http://www4.ncsu.edu/~ctk/matlab_darts.html" target="_blank" rel="external">http://www4.ncsu.edu/~ctk/matlab_darts.html</a></p>
-<p>Multiscale Shape Analysis (MSA) Matlab Toolbox 2000<br><a href="http://www.vision.ime.usp.br/~cesar/projects/multiscale/" target="_blank" rel="external">http://www.vision.ime.usp.br/~cesar/projects/multiscale/</a></p>
-<p>Multivariate Ecological &amp; Oceanographic Data Analysis (FATHOM)<br>From David Jones<br><a href="http://www.rsmas.miami.edu/personal/djones/" target="_blank" rel="external">http://www.rsmas.miami.edu/personal/djones/</a></p>
-<p>glmlab (Generalized Linear Models in MATLA<br><a href="http://www.sci.usq.edu.au/staff/dunn/glmlab/glmlab.html" target="_blank" rel="external">http://www.sci.usq.edu.au/staff/dunn/glmlab/glmlab.html</a></p>
-<p><a href="http://www.wis.kuleuven.ac.be/stat/robust/toolbox.html" target="_blank" rel="external">http://www.wis.kuleuven.ac.be/stat/robust/toolbox.html</a></p>
-<p><a href="http://www.supercrawler.com/Science/Math/Software/MATLAB/" target="_blank" rel="external">http://www.supercrawler.com/Science/Math/Software/MATLAB/</a></p>
-<p>svm</p>
-<p>SVM and Kernel Methods Matlab Toolbox<br><a href="http://asi.insa-rouen.fr/~arakotom/toolbox/index" target="_blank" rel="external">http://asi.insa-rouen.fr/~arakotom/toolbox/index</a> </p>
-<p>MATLAB Support Vector Machine Toolbox<br>Dr Gavin Cawley<br>School of Information Systems, University of East Anglia<br><a href="http://theoval.sys.uea.ac.uk/~gcc/svm/toolbox/" target="_blank" rel="external">http://theoval.sys.uea.ac.uk/~gcc/svm/toolbox/</a>  </p>
-<p>LS-SVM - SISTA<br><a href="http://www.esat.kuleuven.ac.be/sista/lssvmlab/" target="_blank" rel="external">http://www.esat.kuleuven.ac.be/sista/lssvmlab/</a> </p>
-<p>SVM toolboxes<br><a href="http://www.cs.wisc.edu/dmi/svm/" target="_blank" rel="external">http://www.cs.wisc.edu/dmi/svm/</a> </p>
-<p>LSVM Lagrangian Support Vector Machine<br><a href="http://www.cs.wisc.edu/dmi/lsvm" target="_blank" rel="external">http://www.cs.wisc.edu/dmi/lsvm</a></p>
+          1.平面操作工具箱
+http://cathy.ijs.si/~leon/planman.html
+2.SimMechanics 工具箱 (这个好像不是免费的)http://www.mathworks.
+          ...
 
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/07/25/Matlab工具箱下载地址汇总/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1407,8 +1116,6 @@ dpkg 是Debian Package的简写，是为Debian 专门开发的套件管理系统
 
   
 
-  
-    <span class="site-pv">访问量：<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
   
   
 </div>

@@ -72,7 +72,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     scheme: 'Pisces',
-    sidebar: {"position":"right","display":"always"},
+    sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: false,
     duoshuo: {
@@ -128,7 +128,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right 
+  <div class="container one-collumn sidebar-position-left 
    page-home 
  ">
     <div class="headband"></div>
@@ -362,27 +362,20 @@
       
         
           
-            <h2 id="visudo"><a href="#visudo" class="headerlink" title="visudo"></a>visudo</h2><ul>
-<li><strong>功能</strong>：编辑sudoers文件</li>
-<li><strong>提示</strong>：<ul>
-<li>需要超级用户权限；</li>
-<li>默认编辑/etc/sudoers文件；</li>
-<li>sudoers文件的默认权限是440，即默认无法修改；</li>
-<li>visudo可以在不更改sudoers文件权限的情况下，直接修改sudoers文件；</li>
-</ul>
-</li>
-<li><strong>选项</strong>： <ul>
-<li>-c：使用<strong>check-only</strong>模式，打印语法等错误信息；</li>
-<li>-q：使用<strong>quiet</strong>模式，不打印语法等错误信息；</li>
-<li>-f：指定sudoers文件；</li>
-</ul>
-</li>
-<li><strong>示例</strong>：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 编辑/etc/sudoers文件</span></div><div class="line">visudo</div><div class="line"><span class="comment"># 编辑/etc/sudoers文件，并检查语法等错误</span></div><div class="line">visudo -c</div><div class="line"><span class="comment"># 编辑/etc/sudoers文件，但不打印语法等错误</span></div><div class="line">visudo -q</div><div class="line"><span class="comment"># 显示版本信息</span></div><div class="line">visudo -V</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h2><p><a href="http://www.lx138.com/" target="_blank" rel="external">Linux命令查询网站</a><br><a href="http://man.linuxde.net/" target="_blank" rel="external">Linux命令大全</a><br><a href="http://baidu.com/" target="_blank" rel="external">baidu</a><br><a href="google.com.hk">Google</a></p>
+          visudo
+功能：编辑sudoers文件
+提示：
+需要超级用户权限；
+默认编辑/etc/sudoers文件；
+sudoers文件的默认权限是440，即默认无法修改；
+visudo可以在不更改sudo
+          ...
 
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/11/04/Linux命令——visudo/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -512,26 +505,21 @@
       
         
           
-            <blockquote>
-</blockquote>
-<h2 id="alias"><a href="#alias" class="headerlink" title="alias"></a>alias</h2><ul>
-<li><strong>功能</strong>：设置指令的别名</li>
-<li><strong>提示</strong>：<ul>
-<li>该命令可将一些较长的命令进行简化；</li>
-<li>使用alias时，用户必须使用单引号’’将原来的命令引起来，防止特殊字符导致错误；</li>
-<li>alias命令的作用只局限于该次登入的操作，若要每次登入都能够使用这些命令别名，则可将相应的alias命令存放到bash的初始化文件<code>/etc/.bashrc</code>中；</li>
-</ul>
-</li>
-<li><strong>选项</strong>： <ul>
-<li>-p：打印已经设置的命令别名</li>
-</ul>
-</li>
-<li><strong>示例</strong>：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 显示已定义的命令别名</span></div><div class="line"><span class="built_in">alias</span></div><div class="line"><span class="built_in">alias</span> -p</div><div class="line"><span class="comment"># 显示某命令别名的信息</span></div><div class="line"><span class="built_in">alias</span> ll</div><div class="line"><span class="comment"># 定义命令xuezhisd,显示登录用户信息</span></div><div class="line"><span class="built_in">alias</span> xuezhisd=<span class="string">'who am i'</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h2><p><a href="http://www.lx138.com/" target="_blank" rel="external">Linux命令查询网站</a><br><a href="http://man.linuxde.net/" target="_blank" rel="external">Linux命令大全</a><br><a href="http://baidu.com/" target="_blank" rel="external">baidu</a><br><a href="google.com.hk">Google</a></p>
-
           
+
+alias
+功能：设置指令的别名
+提示：
+该命令可将一些较长的命令进行简化；
+使用alias时，用户必须使用单引号’’将原来的命令引起来，防止特殊字符导致错误；
+alias命令的作用只局限于该次登
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/11/04/Linux命令——alias/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -661,25 +649,21 @@
       
         
           
-            <h2 id="unalias"><a href="#unalias" class="headerlink" title="unalias"></a>unalias</h2><ul>
-<li><strong>功能</strong>：取消<strong>命令别名</strong>(shell内建命令)</li>
-<li><strong>提示</strong>：<ul>
-<li>如果需要取消任意一个命令别名，则使用该命令别名作为指令的参数选项即可；</li>
-<li>如果使用-a选项，则表示取消所有已经存在的命令别名；</li>
-</ul>
-</li>
-<li><p><strong>选项</strong>： </p>
-<ul>
-<li>-a：取消所有命令别名；</li>
-</ul>
-</li>
-<li><p><strong>示例</strong>：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 定义命令xuezhisd,显示登录用户信息</span></div><div class="line"><span class="built_in">alias</span> xuezhisd=<span class="string">'who am i'</span></div><div class="line"><span class="comment"># 测试命令xuezhisd是否可用（可用）</span></div><div class="line">xuezhisd</div><div class="line"><span class="comment"># 删除命令别名xuezhisd</span></div><div class="line"><span class="built_in">unalias</span> xuezhisd</div><div class="line"><span class="comment"># 测试命令xuezhisd是否可用（不可用）</span></div><div class="line">xuezhisd</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h2><p><a href="http://www.lx138.com/" target="_blank" rel="external">Linux命令查询网站</a><br><a href="http://man.linuxde.net/" target="_blank" rel="external">Linux命令大全</a><br><a href="http://baidu.com/" target="_blank" rel="external">baidu</a><br><a href="google.com.hk">Google</a></p>
+          unalias
+功能：取消命令别名(shell内建命令)
+提示：
+如果需要取消任意一个命令别名，则使用该命令别名作为指令的参数选项即可；
+如果使用-a选项，则表示取消所有已经存在的命令别名；
 
-          
+
+选项
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/11/04/Linux命令——unalias/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -809,53 +793,22 @@
       
         
           
-            <blockquote>
-</blockquote>
-<h2 id="awk"><a href="#awk" class="headerlink" title="awk"></a>awk</h2><ul>
-<li><p><strong>功能</strong>：模式匹配语言</p>
-<ul>
-<li>参考：<a href="http://man.linuxde.net/awk#awk的工作原理" target="_blank" rel="external">《awk工作原理》</a></li>
-<li><strong>awk</strong>是一种编程语言，用于在*nix下对<code>文本</code>和<code>数据</code>进行处理；</li>
-<li>数据可以来自标准输入(stdin)、一个或多个文件，或其它命令的输出；</li>
-<li>它支持<strong>用户自定义函数</strong>和<strong>动态正则表达式</strong>等先进功能，是*nix下的一个强大编程工具；</li>
-<li>它可以在命令行中使用，但更多是<strong>作为脚本来使用</strong>；</li>
-<li>awk有很多内建的功能，比如数组、函数等，这是它和C语言的相同之处；</li>
-<li>灵活性是awk一大的优势。</li>
-<li>awk脚本是由<strong>模式</strong>和<strong>操作</strong>组成的；<ul>
-<li>模式可以是以下任意一个： <ul>
-<li>正则表达式：使用通配符的扩展集；</li>
-<li>关系表达式：使用运算符进行操作，可以是字符串或数字的比较测试。 </li>
-<li>模式匹配表达式：用运算符<code>~</code>（匹配）和<code>~!</code>（不匹配）；</li>
-<li>BEGIN语句块、pattern语句块、END语句块；</li>
-</ul>
-</li>
-<li>操作由一个或多个命令、函数、表达式组成，之间由换行符或分号隔开，并位于大括号内，主要部分是：<ul>
-<li>变量或数组赋值 </li>
-<li>输出命令 </li>
-<li>内置函数 </li>
-<li>控制流语句</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>选项</strong>： </p>
-<ul>
-<li>-F fs   fs指定输入分隔符，fs可以是字符串或正则表达式，如-F: -v var=value   赋值一个用户定义变量，将外部变量传递给awk -f scripfile  从脚本文件中读取awk命令 -m[fr] val   对val值设置内在限制，-mf选项限制分配给val的最大块数目；-mr选项限制记录的最大数目。这两个功能是Bell实验室版awk的扩展功能，在标准awk中不适用。</li>
-<li>-F：指定将输入分离器</li>
-<li>-f：指定程序的源文件</li>
-<li>–help：显示帮助信息</li>
-<li>–version：显示版本信息</li>
-</ul>
-</li>
-<li><p><strong>示例</strong>：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h2><p><a href="http://www.lx138.com/" target="_blank" rel="external">Linux命令查询网站</a><br><a href="http://man.linuxde.net/" target="_blank" rel="external">Linux命令大全</a><br><a href="http://baidu.com/" target="_blank" rel="external">baidu</a><br><a href="google.com.hk">Google</a></p>
-
           
+
+awk
+功能：模式匹配语言
+
+参考：《awk工作原理》
+awk是一种编程语言，用于在*nix下对文本和数据进行处理；
+数据可以来自标准输入(stdin)、一个或多个文件，或其它命令的输出；
+它支持
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/11/04/Linux命令——awk/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -985,59 +938,19 @@
       
         
           
-            <ul>
-<li>通过下面一些练习（问题），来熟悉Xftp操作。。。。<br>##Xftp练习</li>
-<li>1 如何新建用户？</li>
-<li>2 如何打开属性对话框？</li>
-<li>3 如何通过设置UTF-8编码方式，防止乱码？</li>
-<li>4 如何设置迁移类型（ASCII，二进制，自动）？</li>
-<li>5 什么是同步浏览，如何同步浏览？</li>
-<li>6 如何打开（Xftp）选项对话框？</li>
-<li>7 如何显示隐藏文件？</li>
-<li>8 如何取消自动更新？</li>
-<li>9 如何设置Notepad++为默认文本编辑器？</li>
-</ul>
-<h2 id="问题答案"><a href="#问题答案" class="headerlink" title="问题答案"></a>问题答案</h2><h3 id="1-如何新建用户？"><a href="#1-如何新建用户？" class="headerlink" title="1.    如何新建用户？"></a>1.    如何新建用户？</h3><ul>
-<li>方法一：菜单栏【文件】→【新建】→打开新建对话框，输入“会话名称”，主机IP地址，协议（FTP&amp;SFTP），点击【确定】。</li>
-<li>方法二：标准菜单栏【新建】→打开新建对话框，输入“会话名称”，主机IP地址，协议（FTP&amp;SFTP），点击【确定】。</li>
-</ul>
-<hr>
-<h3 id="2-如何打开属性对话框？"><a href="#2-如何打开属性对话框？" class="headerlink" title="2.    如何打开属性对话框？"></a>2.    如何打开属性对话框？</h3><ul>
-<li>方法一：菜单栏【文件】→【属性】→打开属性对话框，输入“会话名称”，主机IP地址，协议（FTP&amp;SFTP），点击【确定】。</li>
-<li>方法二：标准菜单栏【熟悉】→打开属性对话框，输入“会话名称”，主机IP地址，协议（FTP&amp;SFTP），点击【确定】。</li>
-</ul>
-<hr>
-<h3 id="3-如何通过设置UTF-8编码方式，防止乱码？"><a href="#3-如何通过设置UTF-8编码方式，防止乱码？" class="headerlink" title="3.    如何通过设置UTF-8编码方式，防止乱码？"></a>3.    如何通过设置UTF-8编码方式，防止乱码？</h3><ul>
-<li>菜单栏【文件】→【属性】→打开属性对话框，选择“选项”选项卡，勾选“使用UTF-8编码”。</li>
-</ul>
-<hr>
-<h3 id="4-如何设置迁移类型（ASCII，二进制，自动）？"><a href="#4-如何设置迁移类型（ASCII，二进制，自动）？" class="headerlink" title="4.    如何设置迁移类型（ASCII，二进制，自动）？"></a>4.    如何设置迁移类型（ASCII，二进制，自动）？</h3><ul>
-<li>菜单栏【命令】→【迁移类型】，选择相应方式。</li>
-</ul>
-<hr>
-<h3 id="5-什么是同步浏览，如何同步浏览？"><a href="#5-什么是同步浏览，如何同步浏览？" class="headerlink" title="5.    什么是同步浏览，如何同步浏览？"></a>5.    什么是同步浏览，如何同步浏览？</h3><ul>
-<li>菜单栏【命令】→【同步浏览】，开启同步浏览功能。</li>
-</ul>
-<hr>
-<h3 id="6-如何打开（Xftp）选项对话框？"><a href="#6-如何打开（Xftp）选项对话框？" class="headerlink" title="6.    如何打开（Xftp）选项对话框？"></a>6.    如何打开（Xftp）选项对话框？</h3><ul>
-<li>菜单栏【工具】→【选项】，打开选项对话框。</li>
-</ul>
-<hr>
-<p>###7.    如何显示隐藏文件？</p>
-<ul>
-<li>菜单栏【工具】→【选项】，打开选项对话框，选择“常规”选项卡，勾选“显示隐藏的文件”，点击【确定】按钮。</li>
-</ul>
-<hr>
-<h3 id="8-如何取消自动更新？"><a href="#8-如何取消自动更新？" class="headerlink" title="8.    如何取消自动更新？"></a>8.    如何取消自动更新？</h3><ul>
-<li>菜单栏【工具】→【选项】，打开选项对话框，选择“更新”选项卡，取消勾选“更新检查时间间隔”，点击【确定】按钮。</li>
-</ul>
-<hr>
-<h3 id="9-如何设置Notepad-为默认文本编辑器？"><a href="#9-如何设置Notepad-为默认文本编辑器？" class="headerlink" title="9.    如何设置Notepad++为默认文本编辑器？"></a>9.    如何设置Notepad++为默认文本编辑器？</h3><ul>
-<li>菜单栏【工具】→【选项】，打开选项对话框，选择“高级”选项卡，取消勾选“将记事本用作文本编辑器”，设置编辑器路径（为Notepad++安装路径），点击【确定】按钮。</li>
-</ul>
-<p><strong><em>说明</em></strong> <em>学习Xftp，可是用它自带的Xftp帮助文件。</em></p>
-
           
+通过下面一些练习（问题），来熟悉Xftp操作。。。。##Xftp练习
+1 如何新建用户？
+2 如何打开属性对话框？
+3 如何通过设置UTF-8编码方式，防止乱码？
+4 如何设置迁移类型（ASCII，
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/11/03/Xftp使用教程——问答方式/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1220,8 +1133,6 @@
 
   
 
-  
-    <span class="site-pv">访问量：<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
   
   
 </div>

@@ -72,7 +72,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     scheme: 'Pisces',
-    sidebar: {"position":"right","display":"always"},
+    sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: false,
     duoshuo: {
@@ -128,7 +128,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right 
+  <div class="container one-collumn sidebar-position-left 
    page-home 
  ">
     <div class="headband"></div>
@@ -362,52 +362,14 @@
       
         
           
-            <h1 id="解决双系统时间不一致问题"><a href="#解决双系统时间不一致问题" class="headerlink" title="解决双系统时间不一致问题"></a>解决双系统时间不一致问题</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>最近需要使用Linux（Ubuntu），所以在自己的电脑上安装了双系统（Windows+Ubuntu）。但是发现Windows的时间不正确，每次开机时，时间都会慢8个小时。<br>每次通过同步互联网时间可以更正，但是重启后又是如此。<br>后来，发现windows time服务没有开启。将其设置为自启动之后，每次开机后依然如此。而且windows time服务没有开启。<br>最后发现<code>两个系统的时间时间相差8小时</code>，意识到时两个系统设置不同引起的。</p>
-<h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><ul>
-<li>UTC即Universal Time Coordinated，协调世界时</li>
-<li>GMT 即Greenwich Mean Time，格林尼治平时</li>
-<li>Windows把系统硬件时间当作本地时间(local time)，即操作系统中显示的时间跟BIOS中显示的时间是一样的。</li>
-<li>Linux/Unix/Mac把硬件时间当作 UTC，操作系统中显示的时间是硬件时间经过换算得来的。</li>
-<li>当PC中同时有多 系统共存时，就出现了问题。</li>
-</ul>
-<h2 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h2><h3 id="方法一Ubuntu不使用UTC"><a href="#方法一Ubuntu不使用UTC" class="headerlink" title="方法一Ubuntu不使用UTC"></a>方法一<code>Ubuntu不使用UTC</code></h3><p>如果Ubuntu 不使用 UTC 时间，则可以与 Windows时间 保持一致。<br>ubuntu默认开启UTC,即协调世界时，关闭它即可</p>
-<pre><code>sudo vi /etc/default/rcS
-</code></pre><p>将<code>UTC=yes</code>改为<code>UTC=no</code></p>
-<h3 id="方法二修改-Windows-对硬件时间的对待方式"><a href="#方法二修改-Windows-对硬件时间的对待方式" class="headerlink" title="方法二修改 Windows 对硬件时间的对待方式"></a>方法二<code>修改 Windows 对硬件时间的对待方式</code></h3><ul>
-<li>让 Windows 把硬件时间当作 UTC</li>
-<li><p>方法：</p>
-<ul>
-<li><p>开 始-&gt;运行-&gt;CMD，在命令行中输入下面命令并回车</p>
-<p>Reg add KLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1</p>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="CentOS时间同步问题"><a href="#CentOS时间同步问题" class="headerlink" title="CentOS时间同步问题"></a>CentOS时间同步问题</h1><h2 id="编辑时间配置文件"><a href="#编辑时间配置文件" class="headerlink" title="编辑时间配置文件"></a>编辑时间配置文件</h2><ul>
-<li><p>使用vi编辑<code>/etc/sysconfig/clock</code>文件，添加如下内容：</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">ZONE</span>=<span class="string">"Asia/Shanghai"</span></div><div class="line"><span class="attr">UTC</span>=<span class="literal">false</span>       #设置为<span class="literal">false</span>，硬件时钟不于utc时间一致</div><div class="line"><span class="attr">ARC</span>=<span class="literal">false</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>使配置立即生效<code>source /etc/sysconfig/clock</code></p>
-</li>
-</ul>
-<h2 id="设置为上海时区"><a href="#设置为上海时区" class="headerlink" title="设置为上海时区"></a>设置为上海时区</h2><ul>
-<li>执行下面的命令，将Linux的时区设置为上海时区<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ln -sf <span class="regexp">/usr/</span>share<span class="regexp">/zoneinfo/</span>Asia<span class="regexp">/Shanghai    /</span>etc<span class="regexp">/localtime</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="对准时间"><a href="#对准时间" class="headerlink" title="对准时间"></a>对准时间</h2><ul>
-<li>注意：需要联网</li>
-<li>安装ntpdate的命令:<code>yum install ntp</code></li>
-<li>执行以下命令，对准时间<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ntpdate us<span class="selector-class">.pool</span><span class="selector-class">.ntp</span><span class="selector-class">.org</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="设置硬件时间和系统时间一致并校准"><a href="#设置硬件时间和系统时间一致并校准" class="headerlink" title="设置硬件时间和系统时间一致并校准"></a>设置硬件时间和系统时间一致并校准</h2><ul>
-<li>命令：<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="regexp">/sbin/</span>hwclock --systohc   <span class="comment">#设置硬件时间和系统时间一致并校准</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>至此，CentOS的时间已经同步了。</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://www.ithov.com/linux/122268.shtml" target="_blank" rel="external">http://www.ithov.com/linux/122268.shtml</a><br><a href="http://os.51cto.com/art/201004/192549.htm" target="_blank" rel="external">http://os.51cto.com/art/201004/192549.htm</a></p>
+          解决双系统时间不一致问题问题描述最近需要使用Linux（Ubuntu），所以在自己的电脑上安装了双系统（Windows+Ubuntu）。但是发现Windows的时间不正确，每次开机时，时间都会慢8个小
+          ...
 
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/06/24/双系统(Linux)时间不一致问题/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -590,8 +552,6 @@
 
   
 
-  
-    <span class="site-pv">访问量：<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
   
   
 </div>
