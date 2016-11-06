@@ -1,0 +1,973 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next pisces">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="未标签," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="编码练习——Java-数组-API-练习">
+<meta property="og:url" content="http://zhangxuezhi.com/2016/11/06/编码练习——Java-数组-API-练习/index.html">
+<meta property="og:site_name" content="学志の博客">
+<meta property="og:updated_time" content="2016-11-06T06:11:28.956Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="编码练习——Java-数组-API-练习">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '13664197',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://zhangxuezhi.com/2016/11/06/编码练习——Java-数组-API-练习/"/>
+
+
+  <title> 编码练习——Java-数组-API-练习 | 学志の博客 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-86892026-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?bb56a0fd60eeb517330f8b1bbaad2dc4";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">学志の博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">记录学习的技能和遇到的问题</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                编码练习——Java-数组-API-练习
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-06T12:56:00+08:00" content="2016-11-06">
+              2016-11-06
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/未分类/" itemprop="url" rel="index">
+                    <span itemprop="name">未分类</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/06/编码练习——Java-数组-API-练习/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/06/编码练习——Java-数组-API-练习/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv"><i class="fa fa-eye"></i>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>人阅读
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<a id="more"></a>
+</blockquote>
+<h2 id="java-util-Arrays"><a href="#java-util-Arrays" class="headerlink" title="java.util.Arrays"></a>java.util.Arrays</h2><h3 id="Arrays-asList"><a href="#Arrays-asList" class="headerlink" title="Arrays.asList()"></a>Arrays.asList()</h3><ul>
+<li>数组转换成列表</li>
+</ul>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">String[] strArray = &#123;<span class="string">"zhang"</span>, <span class="string">"xue"</span>, <span class="string">"zhi"</span>&#125;;</div><div class="line"><span class="keyword">List</span>&lt;String&gt; <span class="keyword">list</span> = Arrays.asList(strArray);</div><div class="line"><span class="comment">// 打印元素</span></div><div class="line"><span class="keyword">for</span> (int i=0; i&lt;<span class="keyword">list</span>.size(); i++) &#123;</div><div class="line">	System.<span class="keyword">out</span>.<span class="keyword">print</span>(<span class="keyword">list</span>.<span class="built_in">get</span>(i) + <span class="string">" "</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Arrays-binarySearch"><a href="#Arrays-binarySearch" class="headerlink" title="Arrays.binarySearch()"></a>Arrays.binarySearch()</h3><ul>
+<li>二分查找</li>
+<li>查找前，一定要<strong>排序</strong>。</li>
+<li>如果查找元素不存在，返回(-(insertion point) - 1)。</li>
+<li>自然数表示查到，负数表示没有查找。</li>
+</ul>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">int</span>[] a = &#123;<span class="number">3</span>,<span class="number">5</span>,<span class="number">9</span>,<span class="number">7</span>,<span class="number">2</span>&#125;;</div><div class="line">Arrays.<span class="built_in">sort</span>(a); <span class="comment">// 排序</span></div><div class="line"><span class="comment">// 打印数组</span></div><div class="line"><span class="keyword">for</span> (<span class="built_in">int</span> item : a) </div><div class="line">	System.out.<span class="built_in">print</span>(item + <span class="string">" "</span>);</div><div class="line">System.out.<span class="built_in">println</span>();</div><div class="line"><span class="comment">// 二分查找</span></div><div class="line"><span class="built_in">int</span> ind1 = Arrays.binarySearch(a, <span class="number">2</span>);</div><div class="line"><span class="built_in">int</span> ind2 = Arrays.binarySearch(a, <span class="number">4</span>);</div><div class="line"><span class="built_in">int</span> ind3 = Arrays.binarySearch(a, <span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>);</div><div class="line">System.out.<span class="built_in">println</span>(<span class="string">"2的查找位置："</span> + ind1);</div><div class="line">System.out.<span class="built_in">println</span>(<span class="string">"4的查找位置："</span> + ind2);</div><div class="line">System.out.<span class="built_in">println</span>(<span class="string">"5的查找位置："</span> + ind3);</div><div class="line"></div><div class="line"><span class="comment">// 字符串</span></div><div class="line"><span class="keyword">String</span>[] strArray = &#123;<span class="string">"aa"</span>, <span class="string">"bc"</span>, <span class="string">"ab"</span>, <span class="string">"cd"</span>&#125;;</div><div class="line">Arrays.<span class="built_in">sort</span>(strArray);</div><div class="line"><span class="built_in">int</span> ind4 = Arrays.binarySearch(strArray, <span class="string">"bc"</span>);</div><div class="line">System.out.<span class="built_in">println</span>(<span class="string">"'bc'的查找位置是："</span> + ind4);</div></pre></td></tr></table></figure>
+<h3 id="Arrays-copyOf"><a href="#Arrays-copyOf" class="headerlink" title="Arrays.copyOf()"></a>Arrays.copyOf()</h3><ul>
+<li>复制长度大于原数组长度时，后面补零。</li>
+</ul>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span>[] a = &#123;<span class="number">3</span>,<span class="number">5</span>,<span class="number">9</span>,<span class="number">7</span>,<span class="number">2</span>&#125;;</div><div class="line"><span class="keyword">int</span>[] newa = Arrays.copyOf(a, <span class="number">2</span>);</div><div class="line"><span class="keyword">int</span>[] newa2 = Arrays.copyOf(a, <span class="number">7</span>);	<span class="comment">//复制长度大于原数组的长度</span></div><div class="line"></div><div class="line"><span class="built_in">for</span> (<span class="keyword">int</span> item : newa) </div><div class="line">	System.out.<span class="built_in">print</span>(item + <span class="string">" "</span>);</div><div class="line">System.out.<span class="built_in">println</span>();</div><div class="line"></div><div class="line"><span class="built_in">for</span> (<span class="keyword">int</span> item : newa2) </div><div class="line">	System.out.<span class="built_in">print</span>(item + <span class="string">" "</span>);</div><div class="line">System.out.<span class="built_in">println</span>();</div></pre></td></tr></table></figure>
+<h3 id="Arrays-copyOfRange"><a href="#Arrays-copyOfRange" class="headerlink" title="Arrays.copyOfRange()"></a>Arrays.copyOfRange()</h3><ul>
+<li>复制长度大于原数组长度时，后面补零。</li>
+<li>Java中区间一般都是左闭右开[a,b)，即包括左边，不包括右边。</li>
+</ul>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span>[] a = &#123;<span class="number">3</span>,<span class="number">5</span>,<span class="number">9</span>,<span class="number">7</span>,<span class="number">2</span>&#125;;</div><div class="line"><span class="keyword">int</span>[] newa = Arrays.copyOfRange(a, <span class="number">1</span>, <span class="number">3</span>);</div><div class="line"><span class="keyword">int</span>[] newa2 = Arrays.copyOfRange(a, <span class="number">1</span>, <span class="number">8</span>);	<span class="comment">//复制长度大于原数组的长度</span></div><div class="line"></div><div class="line"><span class="built_in">for</span> (<span class="keyword">int</span> item : newa) </div><div class="line">	System.out.<span class="built_in">print</span>(item + <span class="string">" "</span>);</div><div class="line">System.out.<span class="built_in">println</span>();</div><div class="line"></div><div class="line"><span class="built_in">for</span> (<span class="keyword">int</span> item : newa2) </div><div class="line">	System.out.<span class="built_in">print</span>(item + <span class="string">" "</span>);</div><div class="line">System.out.<span class="built_in">println</span>();</div></pre></td></tr></table></figure>
+<h3 id="Arrays-deepEquals"><a href="#Arrays-deepEquals" class="headerlink" title="Arrays.deepEquals()"></a>Arrays.deepEquals()</h3><ul>
+<li>比较数组元素是否深层相等。</li>
+<li>一维数组无区别，高维数组有区别。</li>
+</ul>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">String[][] ticTacToe1 = &#123; &#123; <span class="string">" O "</span>, <span class="string">" O "</span>, <span class="string">" X "</span> &#125;, &#123; <span class="string">" O "</span>, <span class="string">" X "</span>, <span class="string">" X "</span> &#125;,&#123; <span class="string">" X "</span>, <span class="string">" O "</span>, <span class="string">" O "</span> &#125; &#125;;</div><div class="line">String[][] ticTacToe2 = &#123; &#123; <span class="string">" O "</span>, <span class="string">" O "</span>, <span class="string">" X "</span> &#125;, &#123; <span class="string">" O "</span>, <span class="string">" X "</span>, <span class="string">" X "</span> &#125;,&#123; <span class="string">" X "</span>, <span class="string">" O "</span>, <span class="string">" O "</span> &#125; &#125;;</div><div class="line">System.out.println(Arrays.equals(ticTacToe1, ticTacToe2));// <span class="literal">false</span></div><div class="line">System.out.println(Arrays.deepEquals(ticTacToe1, ticTacToe2));// <span class="literal">true</span></div><div class="line"></div><div class="line">String[] ticTacToe3 = &#123; <span class="string">" O "</span>, <span class="string">" O "</span>, <span class="string">" X "</span> &#125;;</div><div class="line">String[] ticTacToe4 = &#123; <span class="string">" O "</span>, <span class="string">" O "</span>, <span class="string">" X "</span> &#125;;  </div><div class="line">System.out.println(Arrays.equals(ticTacToe3, ticTacToe4));  // <span class="literal">true</span></div><div class="line">System.out.println(Arrays.deepEquals(ticTacToe3, ticTacToe4));  // <span class="literal">true</span></div></pre></td></tr></table></figure>
+<h3 id="Arrays-deepHashCode"><a href="#Arrays-deepHashCode" class="headerlink" title="Arrays.deepHashCode()"></a>Arrays.deepHashCode()</h3><ul>
+<li>深层相等的两个数组的深层哈希编码也相等。</li>
+</ul>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">String[][] ticTacToe1 = &#123; &#123; <span class="string">" O "</span>, <span class="string">" O "</span>, <span class="string">" X "</span> &#125;, &#123; <span class="string">" O "</span>, <span class="string">" X "</span>, <span class="string">" X "</span> &#125;,&#123; <span class="string">" X "</span>, <span class="string">" O "</span>, <span class="string">" O "</span> &#125; &#125;;</div><div class="line">String[][] ticTacToe2 = &#123; &#123; <span class="string">" O "</span>, <span class="string">" O "</span>, <span class="string">" X "</span> &#125;, &#123; <span class="string">" O "</span>, <span class="string">" X "</span>, <span class="string">" X "</span> &#125;,&#123; <span class="string">" X "</span>, <span class="string">" O "</span>, <span class="string">" O "</span> &#125; &#125;;</div><div class="line">System.out.println(Arrays.equals(ticTacToe1, ticTacToe2));// <span class="literal">false</span></div><div class="line">System.out.println(Arrays.deepEquals(ticTacToe1, ticTacToe2));// <span class="literal">true</span></div><div class="line">// ticTacToe1和ticTacToe1深层相等，深层哈希编码也相等。</div><div class="line">System.out.println(Arrays.deepHashCode(ticTacToe1));</div><div class="line">System.out.println(Arrays.deepHashCode(ticTacToe2));</div></pre></td></tr></table></figure>
+<h3 id="Arrays-deepToString"><a href="#Arrays-deepToString" class="headerlink" title="Arrays.deepToString()"></a>Arrays.deepToString()</h3><figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 二维数组有区别</span></div><div class="line"><span class="keyword">String</span>[][] ticTacToe1 = &#123; &#123; <span class="string">" O "</span>, <span class="string">" O "</span>, <span class="string">" X "</span> &#125;, &#123; <span class="string">" O "</span>, <span class="string">" X "</span>, <span class="string">" X "</span> &#125;,&#123; <span class="string">" X "</span>, <span class="string">" O "</span>, <span class="string">" O "</span> &#125; &#125;;</div><div class="line">System.out.<span class="built_in">println</span>(Arrays.deepToString(ticTacToe1));	<span class="comment">// 深层变换成字符串</span></div><div class="line">System.out.<span class="built_in">println</span>(Arrays.toString(ticTacToe1));		<span class="comment">// 一般</span></div><div class="line"></div><div class="line"><span class="comment">// 一维数组无区别</span></div><div class="line"><span class="keyword">String</span>[] ticTacToe3 = &#123; <span class="string">" O "</span>, <span class="string">" O "</span>, <span class="string">" X "</span> &#125;;</div><div class="line">System.out.<span class="built_in">println</span>(Arrays.deepToString(ticTacToe3));	<span class="comment">// 深层变换成字符串</span></div><div class="line">System.out.<span class="built_in">println</span>(Arrays.toString(ticTacToe3));		<span class="comment">// 一般</span></div></pre></td></tr></table></figure>
+<h3 id="Arrays-equals"><a href="#Arrays-equals" class="headerlink" title="Arrays.equals()"></a>Arrays.equals()</h3><ul>
+<li>参考Arrays.deepArrays()</li>
+</ul>
+<h3 id="Arrays-fill"><a href="#Arrays-fill" class="headerlink" title="Arrays.fill()"></a>Arrays.fill()</h3><ul>
+<li>填充数组元素</li>
+</ul>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span>[] a = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;;</div><div class="line"></div><div class="line">Arrays.<span class="built_in">fill</span>(a, <span class="number">8</span>);<span class="comment">//全部填充</span></div><div class="line"><span class="built_in">for</span> (<span class="keyword">int</span> item : a) </div><div class="line">	System.out.<span class="built_in">print</span>(item + <span class="string">" "</span>);</div><div class="line">System.out.<span class="built_in">println</span>();</div><div class="line"></div><div class="line">Arrays.<span class="built_in">fill</span>(a, <span class="number">1</span>, <span class="number">3</span>, <span class="number">0</span>);<span class="comment">//指定范围，替换</span></div><div class="line"><span class="built_in">for</span> (<span class="keyword">int</span> item : a) </div><div class="line">	System.out.<span class="built_in">print</span>(item + <span class="string">" "</span>);</div></pre></td></tr></table></figure>
+<h3 id="Arrays-hashCode"><a href="#Arrays-hashCode" class="headerlink" title="Arrays.hashCode()"></a>Arrays.hashCode()</h3><ul>
+<li>如果两个数组相等，哈希编码也相等。</li>
+</ul>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">int[] a = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;;</div><div class="line">int[] b = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;;</div><div class="line">String[] c = &#123;<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>&#125;;</div><div class="line">String[] d = &#123;<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>&#125;;</div><div class="line"></div><div class="line">System.out.println(<span class="string">"a==b:"</span> + Arrays.equals(a, b));</div><div class="line">System.out.println(<span class="string">"a和b的哈希码分别为："</span> + Arrays.hashCode(a) + <span class="string">"<span class="subst">\t</span>"</span> + Arrays.hashCode(b));</div><div class="line"><span class="comment">// 字符串</span></div><div class="line">System.out.println(<span class="string">"c==d:"</span> + Arrays.equals(c, d));</div><div class="line">System.out.println(<span class="string">"c和d的哈希码分别为："</span> + Arrays.hashCode(c) + <span class="string">"<span class="subst">\t</span>"</span> + Arrays.hashCode(d));</div><div class="line"></div><div class="line">System.out.println(<span class="string">"c==d:"</span> + c.equals(d));</div><div class="line">System.out.println(<span class="string">"c和d的哈希码分别为："</span> + c.hashCode() + <span class="string">"<span class="subst">\t</span>"</span> + d.hashCode());</div></pre></td></tr></table></figure>
+<h3 id="Arrays-sort"><a href="#Arrays-sort" class="headerlink" title="Arrays.sort()"></a>Arrays.sort()</h3><figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span>[] a = &#123;<span class="number">6</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>&#125;;</div><div class="line"><span class="comment">// 指定范围排序</span></div><div class="line">Arrays.<span class="keyword">sort</span>(a, <span class="number">1</span>, <span class="number">4</span>);</div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> item : a) </div><div class="line">	System.out.<span class="keyword">print</span>(item + <span class="string">" "</span>);</div><div class="line">System.out.<span class="keyword">println</span>();</div><div class="line"><span class="comment">// 全部元素排序</span></div><div class="line">Arrays.<span class="keyword">sort</span>(a);</div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> item : a) </div><div class="line">	System.out.<span class="keyword">print</span>(item + <span class="string">" "</span>);</div><div class="line">System.out.<span class="keyword">println</span>();</div></pre></td></tr></table></figure>
+<h3 id="Arrays-toString"><a href="#Arrays-toString" class="headerlink" title="Arrays.toString()"></a>Arrays.toString()</h3><ul>
+<li>参考 Arrays.deepToString()</li>
+</ul>
+<h2 id="遍历数组"><a href="#遍历数组" class="headerlink" title="遍历数组"></a>遍历数组</h2><h3 id="遍历一维数组"><a href="#遍历一维数组" class="headerlink" title="遍历一维数组"></a>遍历一维数组</h3><figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">int[] a = &#123;<span class="number">6</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>&#125;;</div><div class="line"><span class="comment">// 遍历数组 for</span></div><div class="line"><span class="keyword">for</span> (int i=<span class="number">0</span>; i&lt;a.length; i++)</div><div class="line">	<span class="keyword">if</span> (i == a.length<span class="number">-1</span>)</div><div class="line">		<span class="keyword">System</span>.out.<span class="keyword">print</span>(a[i]);</div><div class="line">	<span class="keyword">else</span></div><div class="line">		<span class="keyword">System</span>.out.<span class="keyword">print</span>(a[i] + <span class="string">", "</span>);</div><div class="line"><span class="keyword">System</span>.out.println();</div><div class="line"></div><div class="line"><span class="comment">// 遍历数组  - foreach</span></div><div class="line"><span class="keyword">for</span> (int item : a)</div><div class="line">	<span class="keyword">if</span> (item == a[a.length<span class="number">-1</span>])</div><div class="line">		<span class="keyword">System</span>.out.<span class="keyword">print</span>(item);</div><div class="line">	<span class="keyword">else</span> </div><div class="line">		<span class="keyword">System</span>.out.<span class="keyword">print</span>(item + <span class="string">", "</span>);</div></pre></td></tr></table></figure>
+<h3 id="遍历二维数组"><a href="#遍历二维数组" class="headerlink" title="遍历二维数组"></a>遍历二维数组</h3><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">int[][] a = &#123;&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;, &#123;<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;, &#123;<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>&#125;&#125;;</div><div class="line"><span class="comment">// 遍历二维数组 for</span></div><div class="line">for (int i=<span class="number">0</span>; i&lt;a.length; i++) &#123;</div><div class="line">	for (int j=<span class="number">0</span>; j&lt;a[i].length; j++)</div><div class="line">		if (j == a[i].length<span class="number">-1</span>)</div><div class="line">			System.out.print(a[i][j]);</div><div class="line">		else</div><div class="line">			System.out.print(a[i][j] + <span class="string">", "</span>);</div><div class="line">	System.out.println();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="数组对象的方法"><a href="#数组对象的方法" class="headerlink" title="数组对象的方法"></a>数组对象的方法</h2><ul>
+<li>数组从java.lang.Object继承的方法：clone, equals, finalize, getClass, hashCode, notify, toString, wait</li>
+</ul>
+<h3 id="arr-clone"><a href="#arr-clone" class="headerlink" title="arr.clone()"></a>arr.clone()</h3><ul>
+<li>通过克隆生成另一个数组</li>
+</ul>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span>[] a = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;;</div><div class="line"><span class="keyword">int</span>[] b = a.clone();</div><div class="line">Arrays.<span class="built_in">fill</span>(a, <span class="number">1</span>, <span class="number">4</span>, <span class="number">0</span>); <span class="comment">// 改变a，看是否对b有影响</span></div><div class="line"><span class="comment">//打印b</span></div><div class="line"><span class="built_in">for</span> (<span class="keyword">int</span> item : b) </div><div class="line">	System.out.<span class="built_in">print</span>(item + <span class="string">" "</span>);</div></pre></td></tr></table></figure>
+<h3 id="arr-equals"><a href="#arr-equals" class="headerlink" title="arr.equals()"></a>arr.equals()</h3><ul>
+<li>arr.equals()和Arrays.equals()不同</li>
+</ul>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span>[] a = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;;</div><div class="line"><span class="keyword">int</span>[] b = a.clone();</div><div class="line"><span class="keyword">int</span>[] c = a;</div><div class="line"><span class="comment">// 判等</span></div><div class="line">System.<span class="keyword">out</span>.println(Arrays.<span class="keyword">equals</span>(a, b)); <span class="comment">// 比较内容</span></div><div class="line">System.<span class="keyword">out</span>.println(a.<span class="keyword">equals</span>(b));	<span class="comment">//比较地址</span></div><div class="line">System.<span class="keyword">out</span>.println(a.<span class="keyword">equals</span>(c));</div></pre></td></tr></table></figure>
+<h3 id="arr-getClass"><a href="#arr-getClass" class="headerlink" title="arr.getClass()"></a>arr.getClass()</h3><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">int[] a = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;;</div><div class="line"></div><div class="line">System.out.println(a.getClass());</div></pre></td></tr></table></figure>
+<h3 id="arr-hashCode"><a href="#arr-hashCode" class="headerlink" title="arr.hashCode()"></a>arr.hashCode()</h3><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">int[] a = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;;</div><div class="line"></div><div class="line"><span class="comment">// 两种方法的结果不同。</span></div><div class="line">System.out.println(a.hashCode()); </div><div class="line">System.out.println(Arrays.hashCode(a)); <span class="comment">// Arrays.hashCode()</span></div></pre></td></tr></table></figure>
+<h3 id="arr-toString"><a href="#arr-toString" class="headerlink" title="arr.toString()"></a>arr.toString()</h3><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">int[] a = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;;</div><div class="line"></div><div class="line">System.out.println(a.toString());	<span class="comment">// 地址</span></div><div class="line">System.out.println(Arrays.toString(a));	<span class="comment">//字符串</span></div></pre></td></tr></table></figure>
+<h2 id="数组对象的属性"><a href="#数组对象的属性" class="headerlink" title="数组对象的属性"></a>数组对象的属性</h2><h3 id="arr-length"><a href="#arr-length" class="headerlink" title="arr.length"></a>arr.length</h3><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">int[] a = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;;</div><div class="line"></div><div class="line">int len = a.length;</div><div class="line">System.out.println(len);</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div></div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechat-reward-image.jpg" alt="张学志 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay-reward-image.jpg" alt="张学志 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/未标签/" rel="tag">#未标签</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/06/剑指Offer——Java答案/" rel="next" title="剑指Offer——Java答案">
+                <i class="fa fa-chevron-left"></i> 剑指Offer——Java答案
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/11/06/编码练习——Java-String-API-练习/" rel="prev" title="编码练习——Java-String-API-练习">
+                编码练习——Java-String-API-练习 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/11/06/编码练习——Java-数组-API-练习/"
+           data-title="编码练习——Java-数组-API-练习" data-url="http://zhangxuezhi.com/2016/11/06/编码练习——Java-数组-API-练习/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="张学志" />
+          <p class="site-author-name" itemprop="name">张学志</p>
+          <p class="site-description motion-element" itemprop="description">做自己爱做的事，爱自己在做的事！</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">96</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xuezhisd/" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.csdn.net/xuezhisdc" target="_blank" title="CSDN">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  CSDN
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#java-util-Arrays"><span class="nav-number">1.</span> <span class="nav-text">java.util.Arrays</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Arrays-asList"><span class="nav-number">1.1.</span> <span class="nav-text">Arrays.asList()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Arrays-binarySearch"><span class="nav-number">1.2.</span> <span class="nav-text">Arrays.binarySearch()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Arrays-copyOf"><span class="nav-number">1.3.</span> <span class="nav-text">Arrays.copyOf()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Arrays-copyOfRange"><span class="nav-number">1.4.</span> <span class="nav-text">Arrays.copyOfRange()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Arrays-deepEquals"><span class="nav-number">1.5.</span> <span class="nav-text">Arrays.deepEquals()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Arrays-deepHashCode"><span class="nav-number">1.6.</span> <span class="nav-text">Arrays.deepHashCode()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Arrays-deepToString"><span class="nav-number">1.7.</span> <span class="nav-text">Arrays.deepToString()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Arrays-equals"><span class="nav-number">1.8.</span> <span class="nav-text">Arrays.equals()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Arrays-fill"><span class="nav-number">1.9.</span> <span class="nav-text">Arrays.fill()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Arrays-hashCode"><span class="nav-number">1.10.</span> <span class="nav-text">Arrays.hashCode()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Arrays-sort"><span class="nav-number">1.11.</span> <span class="nav-text">Arrays.sort()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Arrays-toString"><span class="nav-number">1.12.</span> <span class="nav-text">Arrays.toString()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#遍历数组"><span class="nav-number">2.</span> <span class="nav-text">遍历数组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#遍历一维数组"><span class="nav-number">2.1.</span> <span class="nav-text">遍历一维数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#遍历二维数组"><span class="nav-number">2.2.</span> <span class="nav-text">遍历二维数组</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组对象的方法"><span class="nav-number">3.</span> <span class="nav-text">数组对象的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#arr-clone"><span class="nav-number">3.1.</span> <span class="nav-text">arr.clone()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#arr-equals"><span class="nav-number">3.2.</span> <span class="nav-text">arr.equals()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#arr-getClass"><span class="nav-number">3.3.</span> <span class="nav-text">arr.getClass()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#arr-hashCode"><span class="nav-number">3.4.</span> <span class="nav-text">arr.hashCode()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#arr-toString"><span class="nav-number">3.5.</span> <span class="nav-text">arr.toString()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组对象的属性"><span class="nav-number">4.</span> <span class="nav-text">数组对象的属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#arr-length"><span class="nav-number">4.1.</span> <span class="nav-text">arr.length</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">张学志</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+    <span class="site-pv">访问量：<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"zhangxuezhi"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = false;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = decodeURIComponent(data.url);
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title >= 0 || index_content >= 0 ){
+                                isMatch = true;
+								if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            } 
+							
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+</body>
+</html>
