@@ -2,10 +2,8 @@
 
 
 
-  
 
-
-<html class="theme-next mist use-motion">
+<html class="theme-next pisces">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -58,10 +56,16 @@
 
 
 
+<meta name="description" content="说明，此博文是学习《Git教程——廖雪峰》的笔记
+
+一、安装和设置12345# Ubuntu安装Gitsudo apt-get install git -y# 设置全局用户名和邮件，该机器上所有仓库使用该配置$ git config --global user.name &quot;Your Name&quot;$ git config --global user.email &quot;email@example.com&quot;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="学习笔记——Git">
 <meta property="og:url" content="http://zhangxuezhi.com/2016/08/02/学习笔记——Git/index.html">
 <meta property="og:site_name" content="学志の博客">
+<meta property="og:description" content="说明，此博文是学习《Git教程——廖雪峰》的笔记
+
+一、安装和设置12345# Ubuntu安装Gitsudo apt-get install git -y# 设置全局用户名和邮件，该机器上所有仓库使用该配置$ git config --global user.name &quot;Your Name&quot;$ git config --global user.email &quot;email@example.com&quot;">
 <meta property="og:image" content="http://img.blog.csdn.net/20160802105724206">
 <meta property="og:image" content="http://img.blog.csdn.net/20160802105927894">
 <meta property="og:image" content="http://img.blog.csdn.net/20160802110018172">
@@ -70,9 +74,12 @@
 <meta property="og:image" content="http://img.blog.csdn.net/20160802111026992">
 <meta property="og:image" content="http://img.blog.csdn.net/20160802111056218">
 <meta property="og:image" content="http://img.blog.csdn.net/20160802112427859">
-<meta property="og:updated_time" content="2016-11-06T13:57:47.656Z">
+<meta property="og:updated_time" content="2016-11-06T16:32:12.303Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记——Git">
+<meta name="twitter:description" content="说明，此博文是学习《Git教程——廖雪峰》的笔记
+
+一、安装和设置12345# Ubuntu安装Gitsudo apt-get install git -y# 设置全局用户名和邮件，该机器上所有仓库使用该配置$ git config --global user.name &quot;Your Name&quot;$ git config --global user.email &quot;email@example.com&quot;">
 <meta name="twitter:image" content="http://img.blog.csdn.net/20160802105724206">
 
 
@@ -80,10 +87,10 @@
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: {"position":"left","display":"always"},
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"always"},
     fancybox: true,
-    motion: true,
+    motion: false,
     duoshuo: {
       userId: '13664197',
       author: '博主'
@@ -137,7 +144,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -370,12 +377,9 @@
 
       
         <blockquote>
-<a id="more"></a>
+<p>说明，此博文是学习《Git教程——廖雪峰》的笔记</p>
 </blockquote>
-<ul>
-<li>说明，此博文是学习《Git教程——廖雪峰》的笔记<h1 id="一、安装和设置"><a href="#一、安装和设置" class="headerlink" title="一、安装和设置"></a>一、安装和设置</h1></li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Ubuntu安装Git</span></div><div class="line">sudo apt-get install git -y</div><div class="line"><span class="comment"># 设置全局用户名和邮件，该机器上所有仓库使用该配置</span></div><div class="line">$ git config --global user.name <span class="string">"Your Name"</span></div><div class="line">$ git config --global user.email <span class="string">"email@example.com"</span></div></pre></td></tr></table></figure>
+<h1 id="一、安装和设置"><a href="#一、安装和设置" class="headerlink" title="一、安装和设置"></a>一、安装和设置</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Ubuntu安装Git</span></div><div class="line">sudo apt-get install git -y</div><div class="line"><span class="comment"># 设置全局用户名和邮件，该机器上所有仓库使用该配置</span></div><div class="line">$ git config --global user.name <span class="string">"Your Name"</span></div><div class="line">$ git config --global user.email <span class="string">"email@example.com"</span></div></pre></td></tr></table></figure>
 <h1 id="二、创建版本库"><a href="#二、创建版本库" class="headerlink" title="二、创建版本库"></a>二、创建版本库</h1><h2 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 创建一个空目录</span></div><div class="line">mkdir learngit</div><div class="line"><span class="built_in">cd</span> learngit</div><div class="line"><span class="built_in">pwd</span></div><div class="line"><span class="comment"># 将目录变成“Git仓库”</span></div><div class="line">git init</div></pre></td></tr></table></figure>
 <ul>
 <li>该Git库是空仓库。不要私自修改.git目录，Git用它来跟踪管理版本库。</li>
@@ -393,7 +397,7 @@
 </li>
 <li><code>git commit</code> 相当于保存一个快照，可以用于恢复。</li>
 <li><p>为什么Git添加文件需要add、commit两步？因为commit可以一次提交很多文件。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 多次add，一次提交</span></div><div class="line">git add file1.txt</div><div class="line">git add file2.txt file3.txt</div><div class="line">git commit –m “add 3 file.”</div><div class="line">``` </div><div class="line"><span class="comment">## 查看仓库状态和文件变化</span></div><div class="line">* 要随时掌握工作区的状态，使用git status命令。</div><div class="line">* 如果git status告诉你有文件被修改过，使用git diff查看修改内容。</div><div class="line">* 修改readme.txt，如下所示。</div><div class="line">```bash</div><div class="line">Git is a distributed version control system.</div><div class="line">Git is free software.</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 多次add，一次提交</span></div><div class="line">git add file1.txt</div><div class="line">git add file2.txt file3.txt</div><div class="line">git commit –m “add 3 file.”</div><div class="line">``` </div><div class="line"></div><div class="line"><span class="comment">## 查看仓库状态和文件变化</span></div><div class="line">* 要随时掌握工作区的状态，使用git status命令。</div><div class="line">* 如果git status告诉你有文件被修改过，使用git diff查看修改内容。</div><div class="line">* 修改readme.txt，如下所示。</div><div class="line">```bash</div><div class="line">Git is a distributed version control system.</div><div class="line">Git is free software.</div></pre></td></tr></table></figure>
 </li>
 <li><p>输入以下命令练习。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 掌握仓库的当前状态</span></div><div class="line">git status <span class="comment">#红色</span></div><div class="line"><span class="comment"># 查看修改内容</span></div><div class="line"><span class="comment"># git diff的显示格式是Unix通用的diff格式</span></div><div class="line">git diff readme.txt</div><div class="line"><span class="comment"># 添加到仓库</span></div><div class="line">git status <span class="comment">#绿色</span></div><div class="line"><span class="comment"># 提交到仓库</span></div><div class="line">git commit -m “add distributed”</div><div class="line">git status</div></pre></td></tr></table></figure>
@@ -464,21 +468,23 @@
 <li><p>命令git rm用于删除一个文件。如果一个文件已经被提交到版本库，那么你永远不用担心误删，但是要小心，你只能恢复文件到最新版本，你会丢失最近一次提交后你修改的内容。</p>
 </li>
 </ul>
-<h1 id="三、远程仓库"><a href="#三、远程仓库" class="headerlink" title="三、远程仓库"></a>三、远程仓库</h1><ul>
+<h1 id="四、远程仓库"><a href="#四、远程仓库" class="headerlink" title="四、远程仓库"></a>四、远程仓库</h1><ul>
 <li>Git杀手级功能：远程仓库。Git是分布式版本控制系统，同一个Git仓库，可以分布到不同的机器上。</li>
 <li>最早，肯定只有一台机器有一个原始版本库，此后，别的机器可以“克隆”这个原始版本库，而且每台机器的版本库其实都是一样的，并没有主次之分。</li>
 <li>实际情况：找一台电脑充当服务器的角色，每天24小时开机，其他每个人都从这个“服务器”仓库克隆一份到自己的电脑上，并且各自把各自的提交推送到服务器仓库里，也从服务器仓库中拉取别人的提交。</li>
 <li>Github，提供了Git仓库托管服务。国内有类似的coding。</li>
 <li>本地Git仓库和GitHub仓库之间的传输是通过SSH加密的。</li>
-<li>配置：<ul>
-<li>第1步：创建SSH Key。<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 创建SSH Key</span></div><div class="line">ssh-keygen -t rsa</div><div class="line">ssh-keygen -t rsa -C “youremail@example.com” </div><div class="line"><span class="comment">#~/.ssh目录下生成两个文件：id_rsa（私匙）和id_rsa.pub（公匙）</span></div></pre></td></tr></table></figure>
+<li><p>配置：</p>
+<ul>
+<li><p>第1步：创建SSH Key。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 创建SSH Key</span></div><div class="line">ssh-keygen -t rsa</div><div class="line">ssh-keygen -t rsa -C “youremail@example.com” </div><div class="line"><span class="comment">#~/.ssh目录下生成两个文件：id_rsa（私匙）和id_rsa.pub（公匙）</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面；然后，点“Bew SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容</p>
 </li>
 </ul>
 </li>
-</ul>
-<pre><code>* 第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面；然后，点“Bew SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容
-</code></pre><ul>
-<li>为什么GitHub需要SSH Key呢？因为GitHub需要识别出你推送的提交确实是你推送的，而不是别人冒充的。</li>
+<li><p>为什么GitHub需要SSH Key呢？因为GitHub需要识别出你推送的提交确实是你推送的，而不是别人冒充的。</p>
+</li>
 <li>Github上的免费托管的Git仓库是公开的，别人可以看到。国内的coding.net可以免费托管私有仓库。</li>
 </ul>
 <h2 id="添加远程仓库"><a href="#添加远程仓库" class="headerlink" title="添加远程仓库"></a>添加远程仓库</h2><ul>
@@ -501,7 +507,9 @@
 <h2 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h2><ul>
 <li>分支==平行宇宙</li>
 <li>通过创建自己的分支，既可以随时提交，又能避免丢失每天进度的风险。直到开发完成后，在一次性合并到原来的分支上。既安全，有不影响别人工作。</li>
-<li>Git分支优点：无论创建、切换和删除分支，1秒完成。<h2 id="创建于合并分支"><a href="#创建于合并分支" class="headerlink" title="创建于合并分支"></a>创建于合并分支</h2></li>
+<li>Git分支优点：无论创建、切换和删除分支，1秒完成。</li>
+</ul>
+<h2 id="创建于合并分支"><a href="#创建于合并分支" class="headerlink" title="创建于合并分支"></a>创建于合并分支</h2><ul>
 <li>每次提交串起来，就是一个分支。Git中的master分支是主分支。HEAD严格来说不是指向提交，而是指向master，master才是指向提交的，所以，HEAD指向的就是当前分支。</li>
 <li>Git用master指向最新的提交，再用HEAD指向master，就能确定当前分支，以及当前分支的提交点：<br><img src="http://img.blog.csdn.net/20160802110930107" alt="这里写图片描述"></li>
 <li>创建dev分支，并把HEAD指向dev：<br><img src="http://img.blog.csdn.net/20160802110957404" alt="这里写图片描述"></li>
@@ -557,11 +565,13 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 克隆远程库</span></div><div class="line">git <span class="built_in">clone</span> git@github.com:xuezhisd/learngit.git</div><div class="line"><span class="comment"># 从远程库克隆时，默认只有master分支</span></div><div class="line"><span class="comment"># 查看分支</span></div><div class="line">git branch</div><div class="line"><span class="comment">#在dev分支上开发，就必须创建远程origin的dev分支到本地</span></div><div class="line">git checkout -b dev origin/dev</div><div class="line"><span class="comment"># 多人协作时，可能同时修改了dev分支中的同一文件，这时就会推送失败</span></div><div class="line"><span class="comment"># 此时需要先抓取分支</span></div><div class="line"><span class="comment"># 地dev分支与远程origin/dev分支的链接</span></div><div class="line">git branch --set-upstream dev origin/dev</div><div class="line">git pull</div><div class="line"><span class="comment"># 有冲突，需要手动解决，再push</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h1 id="四、标签管理"><a href="#四、标签管理" class="headerlink" title="四、标签管理"></a>四、标签管理</h1><ul>
+<h1 id="五、标签管理"><a href="#五、标签管理" class="headerlink" title="五、标签管理"></a>五、标签管理</h1><ul>
 <li>发布一个版本时，我们通常先在版本库中打一个标签（tag），这样，就唯一确定了打标签时刻的版本。标签也是版本库的一个快照。</li>
 <li>Git的标签虽然是版本库的快照，但其实它就是指向某个commit的指针（跟分支很像，但是分支可以移动，标签不能移动）。</li>
 <li>tag就是一个让人容易记住的有意义的名字，它跟某个commit绑在一起。</li>
-<li>tag如下图所示：<br><img src="http://img.blog.csdn.net/20160802112427859" alt="这里写图片描述"><h2 id="创建标签"><a href="#创建标签" class="headerlink" title="创建标签"></a>创建标签</h2></li>
+<li>tag如下图所示：<br><img src="http://img.blog.csdn.net/20160802112427859" alt="这里写图片描述"></li>
+</ul>
+<h2 id="创建标签"><a href="#创建标签" class="headerlink" title="创建标签"></a>创建标签</h2><ul>
 <li><p>首先，切到需要打标签的分支上：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 查看分支情况</span></div><div class="line">git branch</div><div class="line"><span class="comment"># 切换</span></div><div class="line">git checkout master</div></pre></td></tr></table></figure>
 </li>
@@ -594,7 +604,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 先删除本地标签</span></div><div class="line">git tag <span class="_">-d</span> v0.9</div><div class="line"><span class="comment"># 再从远程删除</span></div><div class="line">git push origin :refs/tags/v0.9</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h1 id="五、参考"><a href="#五、参考" class="headerlink" title="五、参考"></a>五、参考</h1><ul>
+<h1 id="六、参考"><a href="#六、参考" class="headerlink" title="六、参考"></a>六、参考</h1><ul>
 <li><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">Git教程——廖雪峰</a></li>
 </ul>
 
@@ -828,7 +838,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、安装和设置"><span class="nav-number">1.</span> <span class="nav-text">一、安装和设置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、创建版本库"><span class="nav-number">2.</span> <span class="nav-text">二、创建版本库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建版本库"><span class="nav-number">2.1.</span> <span class="nav-text">创建版本库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加和提交文件"><span class="nav-number">2.2.</span> <span class="nav-text">添加和提交文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、时光穿梭机"><span class="nav-number">3.</span> <span class="nav-text">三、时光穿梭机</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#版本回退"><span class="nav-number">3.1.</span> <span class="nav-text">版本回退</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工作区和暂存区"><span class="nav-number">3.2.</span> <span class="nav-text">工作区和暂存区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#管理修改"><span class="nav-number">3.3.</span> <span class="nav-text">管理修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#撤销修改"><span class="nav-number">3.4.</span> <span class="nav-text">撤销修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除文件"><span class="nav-number">3.5.</span> <span class="nav-text">删除文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、远程仓库"><span class="nav-number">4.</span> <span class="nav-text">三、远程仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加远程仓库"><span class="nav-number">4.1.</span> <span class="nav-text">添加远程仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#从远程库克隆"><span class="nav-number">4.2.</span> <span class="nav-text">从远程库克隆</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支管理"><span class="nav-number">4.3.</span> <span class="nav-text">分支管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建于合并分支"><span class="nav-number">4.4.</span> <span class="nav-text">创建于合并分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决冲突"><span class="nav-number">4.5.</span> <span class="nav-text">解决冲突</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支管理策略"><span class="nav-number">4.6.</span> <span class="nav-text">分支管理策略</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bug分支"><span class="nav-number">4.7.</span> <span class="nav-text">Bug分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Feature分支"><span class="nav-number">4.8.</span> <span class="nav-text">Feature分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多人协作"><span class="nav-number">4.9.</span> <span class="nav-text">多人协作</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、标签管理"><span class="nav-number">5.</span> <span class="nav-text">四、标签管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建标签"><span class="nav-number">5.1.</span> <span class="nav-text">创建标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作标签"><span class="nav-number">5.2.</span> <span class="nav-text">操作标签</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、参考"><span class="nav-number">6.</span> <span class="nav-text">五、参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、安装和设置"><span class="nav-number">1.</span> <span class="nav-text">一、安装和设置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、创建版本库"><span class="nav-number">2.</span> <span class="nav-text">二、创建版本库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建版本库"><span class="nav-number">2.1.</span> <span class="nav-text">创建版本库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加和提交文件"><span class="nav-number">2.2.</span> <span class="nav-text">添加和提交文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、时光穿梭机"><span class="nav-number">3.</span> <span class="nav-text">三、时光穿梭机</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#版本回退"><span class="nav-number">3.1.</span> <span class="nav-text">版本回退</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工作区和暂存区"><span class="nav-number">3.2.</span> <span class="nav-text">工作区和暂存区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#管理修改"><span class="nav-number">3.3.</span> <span class="nav-text">管理修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#撤销修改"><span class="nav-number">3.4.</span> <span class="nav-text">撤销修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除文件"><span class="nav-number">3.5.</span> <span class="nav-text">删除文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、远程仓库"><span class="nav-number">4.</span> <span class="nav-text">四、远程仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加远程仓库"><span class="nav-number">4.1.</span> <span class="nav-text">添加远程仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#从远程库克隆"><span class="nav-number">4.2.</span> <span class="nav-text">从远程库克隆</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支管理"><span class="nav-number">4.3.</span> <span class="nav-text">分支管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建于合并分支"><span class="nav-number">4.4.</span> <span class="nav-text">创建于合并分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决冲突"><span class="nav-number">4.5.</span> <span class="nav-text">解决冲突</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支管理策略"><span class="nav-number">4.6.</span> <span class="nav-text">分支管理策略</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bug分支"><span class="nav-number">4.7.</span> <span class="nav-text">Bug分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Feature分支"><span class="nav-number">4.8.</span> <span class="nav-text">Feature分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多人协作"><span class="nav-number">4.9.</span> <span class="nav-text">多人协作</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、标签管理"><span class="nav-number">5.</span> <span class="nav-text">五、标签管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建标签"><span class="nav-number">5.1.</span> <span class="nav-text">创建标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作标签"><span class="nav-number">5.2.</span> <span class="nav-text">操作标签</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#六、参考"><span class="nav-number">6.</span> <span class="nav-text">六、参考</span></a></li></ol></div>
             
           </div>
         </section>
@@ -866,7 +876,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Pisces
   </a>
 </div>
 -->
@@ -945,6 +955,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>

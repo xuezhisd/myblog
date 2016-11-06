@@ -2,10 +2,8 @@
 
 
 
-  
 
-
-<html class="theme-next mist use-motion">
+<html class="theme-next pisces">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -58,14 +56,23 @@
 
 
 
+<meta name="description" content="说明
+网上关于caffe的安装教程非常多，但是关于每一步是否操作成功，出现了什么样的错误又该如何处理没有给出说明。因为大家的操作系统的环境千差万别，按照博客中的教程一步步的安装，最后可能失败——这是很常见的哦。有的教程甚至省略了一些细节部分，让小白更不知道如何判断每一步是否操作成功，如何处理出现的错误。
+作者花费了很长时间才成功地将caffe装完，期间遇到好多错误，多次重装操作系统。现在将经验写下">
 <meta property="og:type" content="article">
 <meta property="og:title" content="caffe安装系列——综述">
 <meta property="og:url" content="http://zhangxuezhi.com/2015/09/24/caffe安装系列——综述/index.html">
 <meta property="og:site_name" content="学志の博客">
+<meta property="og:description" content="说明
+网上关于caffe的安装教程非常多，但是关于每一步是否操作成功，出现了什么样的错误又该如何处理没有给出说明。因为大家的操作系统的环境千差万别，按照博客中的教程一步步的安装，最后可能失败——这是很常见的哦。有的教程甚至省略了一些细节部分，让小白更不知道如何判断每一步是否操作成功，如何处理出现的错误。
+作者花费了很长时间才成功地将caffe装完，期间遇到好多错误，多次重装操作系统。现在将经验写下">
 <meta property="og:image" content="http://img.blog.csdn.net/20150922092210340">
-<meta property="og:updated_time" content="2016-11-06T14:14:11.113Z">
+<meta property="og:updated_time" content="2016-11-06T16:32:35.918Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="caffe安装系列——综述">
+<meta name="twitter:description" content="说明
+网上关于caffe的安装教程非常多，但是关于每一步是否操作成功，出现了什么样的错误又该如何处理没有给出说明。因为大家的操作系统的环境千差万别，按照博客中的教程一步步的安装，最后可能失败——这是很常见的哦。有的教程甚至省略了一些细节部分，让小白更不知道如何判断每一步是否操作成功，如何处理出现的错误。
+作者花费了很长时间才成功地将caffe装完，期间遇到好多错误，多次重装操作系统。现在将经验写下">
 <meta name="twitter:image" content="http://img.blog.csdn.net/20150922092210340">
 
 
@@ -73,10 +80,10 @@
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: {"position":"left","display":"always"},
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"always"},
     fancybox: true,
-    motion: true,
+    motion: false,
     duoshuo: {
       userId: '13664197',
       author: '博主'
@@ -130,7 +137,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -362,10 +369,7 @@
       
 
       
-        <blockquote>
-<a id="more"></a>
-</blockquote>
-<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
+        <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
 <li>网上关于caffe的安装教程非常多，但是关于每一步是否操作成功，出现了什么样的错误又该如何处理没有给出说明。因为大家的操作系统的环境千差万别，按照博客中的教程一步步的安装，最后可能失败——这是很常见的哦。有的教程甚至省略了一些细节部分，让小白更不知道如何判断每一步是否操作成功，如何处理出现的错误。</li>
 <li>作者花费了很长时间才成功地将caffe装完，期间遇到好多错误，多次重装操作系统。现在将经验写下来，一方面为了和大家分享，讨论；另一方面是为了记录一下下~~~</li>
 </ul>
@@ -406,7 +410,9 @@
 <li>方法一：去NVIDIA官网下载相应的驱动二进制安装包，然后安装。</li>
 <li>方法二：通过<code>apt-get</code>来安装。</li>
 <li>区别：apt-get安装方便，但是不能安装最新的显卡驱动，目前ubuntu14.04通过apt-get可以安装nvidia-346显卡。</li>
-<li>安装过程中注意事项：①需要关闭显示管理器，②二进制安装需要修改文件，并重启。<h3 id="3-安装cuda和cudnn"><a href="#3-安装cuda和cudnn" class="headerlink" title="3.安装cuda和cudnn"></a>3.<a href="http://blog.csdn.net/xuezhisdc/article/details/48651003" target="_blank" rel="external">安装cuda和cudnn</a></h3></li>
+<li>安装过程中注意事项：①需要关闭显示管理器，②二进制安装需要修改文件，并重启。</li>
+</ul>
+<h3 id="3-安装cuda和cudnn"><a href="#3-安装cuda和cudnn" class="headerlink" title="3.安装cuda和cudnn"></a>3.<a href="http://blog.csdn.net/xuezhisdc/article/details/48651003" target="_blank" rel="external">安装cuda和cudnn</a></h3><ul>
 <li><strong><em>安装cuda的方式有哪些？</em></strong></li>
 <li>方法一：官网下载cuda开发包的二进制安装包进行安装。</li>
 <li>方法二：官网下载cuda开发包的deb文件进行安装。</li>
@@ -421,7 +427,9 @@
 <li>在Ubuntu中安装Matlab比较简单，除了几个注意事项，和Windows中安装没有区别。</li>
 <li><strong><em>为什么需要安装Matlab？</em></strong></li>
 <li>caffe有Matlab的接口，因此如果需要使用Matlab调用caffe，进行编程，就需要安装Matlab。如果你觉得使用C或Python编程比较难，就请安装Matlab。当然如果不需要，并且后面不会编译caffe生成Matlab的接口，就不需要安装Matlab了。这个纯粹根据个人需求来定。</li>
-<li>Matlab是商业软件，请自行百度下载。。。【主要是太大了，不方便提供】<h3 id="5-安装OpenCV"><a href="#5-安装OpenCV" class="headerlink" title="5.安装OpenCV"></a>5.<a href="http://blog.csdn.net/xuezhisdc/article/details/48691797" target="_blank" rel="external">安装OpenCV</a></h3></li>
+<li>Matlab是商业软件，请自行百度下载。。。【主要是太大了，不方便提供】</li>
+</ul>
+<h3 id="5-安装OpenCV"><a href="#5-安装OpenCV" class="headerlink" title="5.安装OpenCV"></a>5.<a href="http://blog.csdn.net/xuezhisdc/article/details/48691797" target="_blank" rel="external">安装OpenCV</a></h3><ul>
 <li><strong><em>为什么需要安装OpenCV？</em></strong></li>
 <li>caffe是用来做深度学习的，深度学习的一大应用对象就是图像和视频。而OpenCV是目前最火的开源计算机视觉库，非常多的项目多用到了OpenCV，当然caffe也依赖OpenCV。所以，需要安装OpenCV，否则无法使用caffe哦。。。</li>
 <li><strong><em>OpenCV安装简单吗？</em></strong></li>
@@ -442,7 +450,9 @@
 <li>答案是否定的。</li>
 <li>首先，google一下<code>apt-get vs pip</code>，查看两者区别。</li>
 <li>其次，安装theano的时候，发现apt-get安装的numPy和sciPy无法通过测试，并且造成theano测试失败。使用pip安装成功。参考<a href="http://blog.csdn.net/xuezhisdc/article/details/47065475" target="_blank" rel="external">《Ubuntu14.04安装Theano详细教程》</a>。</li>
-<li>最后，在安装caffe的过程中，发现有几个python依赖包必须通过pip安装（即自行编译），否则无法成功地编译caffe。<br>###6.<a href="http://blog.csdn.net/xuezhisdc/article/details/48707101" target="_blank" rel="external">安装caffe</a></li>
+<li>最后，在安装caffe的过程中，发现有几个python依赖包必须通过pip安装（即自行编译），否则无法成功地编译caffe。</li>
+</ul>
+<h3 id="7-安装caffe"><a href="#7-安装caffe" class="headerlink" title="7.安装caffe"></a>7.<a href="http://blog.csdn.net/xuezhisdc/article/details/48707101" target="_blank" rel="external">安装caffe</a></h3><ul>
 <li>再重复一遍，请在上面所有步骤成功执行的前提下，安装caffe，否则编译肯定不会通过的。</li>
 <li><strong><em>caffe源代码能不能直接拿过来编译呢？</em></strong></li>
 <li>不能。至少需要修改一个文件Makefile.config。该文件给caffe编译提供了必要的信息。</li>
@@ -689,7 +699,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#说明"><span class="nav-number">1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境"><span class="nav-number">2.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装步骤"><span class="nav-number">3.</span> <span class="nav-text">安装步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍"><span class="nav-number">4.</span> <span class="nav-text">介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#0-准备工作"><span class="nav-number">4.1.</span> <span class="nav-text">0.准备工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装GCC4-7和G-4-7并降级"><span class="nav-number">4.2.</span> <span class="nav-text">1.安装GCC4.7和G++4.7并降级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-安装NVIDIA显卡驱动"><span class="nav-number">4.3.</span> <span class="nav-text">2.安装NVIDIA显卡驱动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-安装cuda和cudnn"><span class="nav-number">4.4.</span> <span class="nav-text">3.安装cuda和cudnn</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-安装Matlab"><span class="nav-number">4.5.</span> <span class="nav-text">4.安装Matlab</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-安装OpenCV"><span class="nav-number">4.6.</span> <span class="nav-text">5.安装OpenCV</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-安装Python相关依赖"><span class="nav-number">4.7.</span> <span class="nav-text">6.安装Python相关依赖</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">6.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#说明"><span class="nav-number">1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境"><span class="nav-number">2.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装步骤"><span class="nav-number">3.</span> <span class="nav-text">安装步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍"><span class="nav-number">4.</span> <span class="nav-text">介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#0-准备工作"><span class="nav-number">4.1.</span> <span class="nav-text">0.准备工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装GCC4-7和G-4-7并降级"><span class="nav-number">4.2.</span> <span class="nav-text">1.安装GCC4.7和G++4.7并降级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-安装NVIDIA显卡驱动"><span class="nav-number">4.3.</span> <span class="nav-text">2.安装NVIDIA显卡驱动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-安装cuda和cudnn"><span class="nav-number">4.4.</span> <span class="nav-text">3.安装cuda和cudnn</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-安装Matlab"><span class="nav-number">4.5.</span> <span class="nav-text">4.安装Matlab</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-安装OpenCV"><span class="nav-number">4.6.</span> <span class="nav-text">5.安装OpenCV</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-安装Python相关依赖"><span class="nav-number">4.7.</span> <span class="nav-text">6.安装Python相关依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-安装caffe"><span class="nav-number">4.8.</span> <span class="nav-text">7.安装caffe</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">6.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
           </div>
         </section>
@@ -727,7 +737,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Pisces
   </a>
 </div>
 -->
@@ -806,6 +816,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>

@@ -2,10 +2,8 @@
 
 
 
-  
 
-
-<html class="theme-next mist use-motion">
+<html class="theme-next pisces">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -58,23 +56,26 @@
 
 
 
+<meta name="description" content="解决双系统时间不一致问题问题描述最近需要使用Linux（Ubuntu），所以在自己的电脑上安装了双系统（Windows+Ubuntu）。但是发现Windows的时间不正确，每次开机时，时间都会慢8个小时。每次通过同步互联网时间可以更正，但是重启后又是如此。后来，发现windows time服务没有开启。将其设置为自启动之后，每次开机后依然如此。而且windows time服务没有开启。最后发现两个">
 <meta property="og:type" content="article">
 <meta property="og:title" content="双系统(Linux)时间不一致问题">
 <meta property="og:url" content="http://zhangxuezhi.com/2015/06/24/双系统(Linux)时间不一致问题/index.html">
 <meta property="og:site_name" content="学志の博客">
-<meta property="og:updated_time" content="2016-11-06T14:25:46.828Z">
+<meta property="og:description" content="解决双系统时间不一致问题问题描述最近需要使用Linux（Ubuntu），所以在自己的电脑上安装了双系统（Windows+Ubuntu）。但是发现Windows的时间不正确，每次开机时，时间都会慢8个小时。每次通过同步互联网时间可以更正，但是重启后又是如此。后来，发现windows time服务没有开启。将其设置为自启动之后，每次开机后依然如此。而且windows time服务没有开启。最后发现两个">
+<meta property="og:updated_time" content="2016-11-06T16:31:56.567Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="双系统(Linux)时间不一致问题">
+<meta name="twitter:description" content="解决双系统时间不一致问题问题描述最近需要使用Linux（Ubuntu），所以在自己的电脑上安装了双系统（Windows+Ubuntu）。但是发现Windows的时间不正确，每次开机时，时间都会慢8个小时。每次通过同步互联网时间可以更正，但是重启后又是如此。后来，发现windows time服务没有开启。将其设置为自启动之后，每次开机后依然如此。而且windows time服务没有开启。最后发现两个">
 
 
 
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: {"position":"left","display":"always"},
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"always"},
     fancybox: true,
-    motion: true,
+    motion: false,
     duoshuo: {
       userId: '13664197',
       author: '博主'
@@ -128,7 +129,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -360,10 +361,7 @@
       
 
       
-        <blockquote>
-<a id="more"></a>
-</blockquote>
-<h1 id="解决双系统时间不一致问题"><a href="#解决双系统时间不一致问题" class="headerlink" title="解决双系统时间不一致问题"></a>解决双系统时间不一致问题</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>最近需要使用Linux（Ubuntu），所以在自己的电脑上安装了双系统（Windows+Ubuntu）。但是发现Windows的时间不正确，每次开机时，时间都会慢8个小时。<br>每次通过同步互联网时间可以更正，但是重启后又是如此。<br>后来，发现windows time服务没有开启。将其设置为自启动之后，每次开机后依然如此。而且windows time服务没有开启。<br>最后发现<code>两个系统的时间时间相差8小时</code>，意识到时两个系统设置不同引起的。</p>
+        <h1 id="解决双系统时间不一致问题"><a href="#解决双系统时间不一致问题" class="headerlink" title="解决双系统时间不一致问题"></a>解决双系统时间不一致问题</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>最近需要使用Linux（Ubuntu），所以在自己的电脑上安装了双系统（Windows+Ubuntu）。但是发现Windows的时间不正确，每次开机时，时间都会慢8个小时。<br>每次通过同步互联网时间可以更正，但是重启后又是如此。<br>后来，发现windows time服务没有开启。将其设置为自启动之后，每次开机后依然如此。而且windows time服务没有开启。<br>最后发现<code>两个系统的时间时间相差8小时</code>，意识到时两个系统设置不同引起的。</p>
 <h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><ul>
 <li>UTC即Universal Time Coordinated，协调世界时</li>
 <li>GMT 即Greenwich Mean Time，格林尼治平时</li>
@@ -670,7 +668,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Pisces
   </a>
 </div>
 -->
@@ -749,6 +747,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>

@@ -2,10 +2,8 @@
 
 
 
-  
 
-
-<html class="theme-next mist use-motion">
+<html class="theme-next pisces">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -58,14 +56,23 @@
 
 
 
+<meta name="description" content="visual studio link error问题VS2010 error: LINK : fatal error LNK1123: failure during conversion to COFF: file invalid or corrupt
+解决方法###方法1安装 VS2010 SP1。注：Visual Studio 2010 SP1 是微软在2011发布的VS2010的补丁包。
+方">
 <meta property="og:type" content="article">
 <meta property="og:title" content="错误-VS2010 error:LINK:fatal error LNK1123:failure during conversion to COFF:file invalid or c">
 <meta property="og:url" content="http://zhangxuezhi.com/2016/03/18/错误-VS2010 error -  fatal error LNK1123 - failure during conversion to COFF/index.html">
 <meta property="og:site_name" content="学志の博客">
+<meta property="og:description" content="visual studio link error问题VS2010 error: LINK : fatal error LNK1123: failure during conversion to COFF: file invalid or corrupt
+解决方法###方法1安装 VS2010 SP1。注：Visual Studio 2010 SP1 是微软在2011发布的VS2010的补丁包。
+方">
 <meta property="og:image" content="http://img.blog.csdn.net/20160318082120603">
-<meta property="og:updated_time" content="2016-11-06T14:06:00.900Z">
+<meta property="og:updated_time" content="2016-11-06T16:31:10.247Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="错误-VS2010 error:LINK:fatal error LNK1123:failure during conversion to COFF:file invalid or c">
+<meta name="twitter:description" content="visual studio link error问题VS2010 error: LINK : fatal error LNK1123: failure during conversion to COFF: file invalid or corrupt
+解决方法###方法1安装 VS2010 SP1。注：Visual Studio 2010 SP1 是微软在2011发布的VS2010的补丁包。
+方">
 <meta name="twitter:image" content="http://img.blog.csdn.net/20160318082120603">
 
 
@@ -73,10 +80,10 @@
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: {"position":"left","display":"always"},
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"always"},
     fancybox: true,
-    motion: true,
+    motion: false,
     duoshuo: {
       userId: '13664197',
       author: '博主'
@@ -130,7 +137,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -362,10 +369,7 @@
       
 
       
-        <blockquote>
-<a id="more"></a>
-</blockquote>
-<h1 id="visual-studio-link-error"><a href="#visual-studio-link-error" class="headerlink" title="visual studio link error"></a>visual studio link error</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><pre><code>VS2010 error: LINK : fatal error LNK1123: failure during conversion to COFF: file invalid or corrupt
+        <h1 id="visual-studio-link-error"><a href="#visual-studio-link-error" class="headerlink" title="visual studio link error"></a>visual studio link error</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><pre><code>VS2010 error: LINK : fatal error LNK1123: failure during conversion to COFF: file invalid or corrupt
 </code></pre><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>###方法1<br><strong>安装 VS2010 SP1</strong>。<br>注：Visual Studio 2010 SP1 是微软在2011发布的VS2010的补丁包。</p>
 <h3 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h3><p>另外，网上还有人说可以通过调整<code>Enable Incremental Linking</code>参数，解决这个问题，但是在我的系统环境下没有成功，大家可以先尝试使用这种方法，如果不行，再安装VS 2010 SP1。</p>
 <p>调整参数过程如下所示。<br><figure class="highlight livescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Project Properties<span class="function"> </span></div><div class="line">   -&gt; Configuration Properties<span class="function"> </span></div><div class="line">       -&gt; Linker <span class="function"><span class="params">(General)</span> </span></div><div class="line">          -&gt; Enable Incremental Linking<span class="function"> -&gt;</span> <span class="string">"No (/INCREMENTAL:NO)"</span></div></pre></td></tr></table></figure></p>
@@ -639,7 +643,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Pisces
   </a>
 </div>
 -->
@@ -718,6 +722,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>

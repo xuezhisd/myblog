@@ -2,10 +2,8 @@
 
 
 
-  
 
-
-<html class="theme-next mist use-motion">
+<html class="theme-next pisces">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -58,23 +56,26 @@
 
 
 
+<meta name="description" content="shell判断文件,目录是否存在或者具有权限1234567891011121314151617181920212223242526272829303132#!/bin/sh    myPath=&quot;/var/log/httpd/&quot;  myFile=&quot;/var /log/httpd/access.log&quot;    #这里的-x 参数判断$myPath是否存在并且是否具有可执行权限  if [ !">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux shell判断文件和文件夹是否存在">
 <meta property="og:url" content="http://zhangxuezhi.com/2015/09/22/Linux shell判断文件和文件夹是否存在/index.html">
 <meta property="og:site_name" content="学志の博客">
-<meta property="og:updated_time" content="2016-11-06T14:16:03.336Z">
+<meta property="og:description" content="shell判断文件,目录是否存在或者具有权限1234567891011121314151617181920212223242526272829303132#!/bin/sh    myPath=&quot;/var/log/httpd/&quot;  myFile=&quot;/var /log/httpd/access.log&quot;    #这里的-x 参数判断$myPath是否存在并且是否具有可执行权限  if [ !">
+<meta property="og:updated_time" content="2016-11-06T16:26:43.841Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux shell判断文件和文件夹是否存在">
+<meta name="twitter:description" content="shell判断文件,目录是否存在或者具有权限1234567891011121314151617181920212223242526272829303132#!/bin/sh    myPath=&quot;/var/log/httpd/&quot;  myFile=&quot;/var /log/httpd/access.log&quot;    #这里的-x 参数判断$myPath是否存在并且是否具有可执行权限  if [ !">
 
 
 
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: {"position":"left","display":"always"},
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"always"},
     fancybox: true,
-    motion: true,
+    motion: false,
     duoshuo: {
       userId: '13664197',
       author: '博主'
@@ -128,7 +129,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -361,7 +362,6 @@
 
       
         <blockquote>
-<a id="more"></a>
 </blockquote>
 <ul>
 <li>shell判断文件,目录是否存在或者具有权限<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/sh  </span></div><div class="line">  </div><div class="line">myPath=<span class="string">"/var/log/httpd/"</span>  </div><div class="line">myFile=<span class="string">"/var /log/httpd/access.log"</span>  </div><div class="line">  </div><div class="line"><span class="comment">#这里的-x 参数判断$myPath是否存在并且是否具有可执行权限  </span></div><div class="line"><span class="keyword">if</span> [ ! -x <span class="string">"<span class="variable">$myPath</span>"</span>]; <span class="keyword">then</span>  </div><div class="line">　　mkdir <span class="string">"<span class="variable">$myPath</span>"</span>  </div><div class="line"><span class="keyword">fi</span>  </div><div class="line"></div><div class="line"><span class="comment">#这里的-d 参数判断$myPath是否存在  </span></div><div class="line"><span class="keyword">if</span> [ ! <span class="_">-d</span> <span class="string">"<span class="variable">$myPath</span>"</span>]; <span class="keyword">then</span>  </div><div class="line">　　mkdir <span class="string">"<span class="variable">$myPath</span>"</span>  </div><div class="line"><span class="keyword">fi</span>  </div><div class="line">  </div><div class="line"><span class="comment">#这里的-f参数判断$myFile是否存在  </span></div><div class="line"><span class="keyword">if</span> [ ! <span class="_">-f</span> <span class="string">"<span class="variable">$myFile</span>"</span> ]; <span class="keyword">then</span>  </div><div class="line">　　touch <span class="string">"<span class="variable">$myFile</span>"</span>  </div><div class="line"><span class="keyword">fi</span>  </div><div class="line">  </div><div class="line"><span class="comment">#其他参数还有-n,-n是判断一个变量是否是否有值  </span></div><div class="line"><span class="keyword">if</span> [ ! -n <span class="string">"<span class="variable">$myVar</span>"</span> ]; <span class="keyword">then</span>  </div><div class="line">　　<span class="built_in">echo</span> <span class="string">"<span class="variable">$myVar</span> is empty"</span>  </div><div class="line">　　<span class="built_in">exit</span> 0  </div><div class="line"><span class="keyword">fi</span>  </div><div class="line">  </div><div class="line"><span class="comment">#两个变量判断是否相等  </span></div><div class="line"><span class="keyword">if</span> [ <span class="string">"<span class="variable">$var1</span>"</span> = <span class="string">"<span class="variable">$var2</span>"</span> ]; <span class="keyword">then</span>  </div><div class="line">　　<span class="built_in">echo</span> <span class="string">'$var1 eq $var2'</span>  </div><div class="line"><span class="keyword">else</span>  </div><div class="line">　　<span class="built_in">echo</span> <span class="string">'$var1 not eq $var2'</span>  </div><div class="line"><span class="keyword">fi</span></div></pre></td></tr></table></figure>
@@ -422,16 +422,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/09/21/使用Putty无法远程登录，显示服务器拒绝连接/" rel="next" title="使用Putty无法远程登录，显示服务器拒绝连接">
-                <i class="fa fa-chevron-left"></i> 使用Putty无法远程登录，显示服务器拒绝连接
+              <a href="/2015/09/22/在VNC中Xfce4中Tab键失效的解决方法/" rel="next" title="在VNC中Xfce4中Tab键失效的解决方法">
+                <i class="fa fa-chevron-left"></i> 在VNC中Xfce4中Tab键失效的解决方法
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/09/22/在VNC中Xfce4中Tab键失效的解决方法/" rel="prev" title="在VNC中Xfce4中Tab键失效的解决方法">
-                在VNC中Xfce4中Tab键失效的解决方法 <i class="fa fa-chevron-right"></i>
+              <a href="/2015/09/22/caffe安装系列——安装cuda和cudnn/" rel="prev" title="caffe安装系列——安装cuda和cudnn">
+                caffe安装系列——安装cuda和cudnn <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -637,7 +637,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Pisces
   </a>
 </div>
 -->
@@ -716,6 +716,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>

@@ -2,10 +2,8 @@
 
 
 
-  
 
-
-<html class="theme-next mist use-motion">
+<html class="theme-next pisces">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -42,7 +40,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Java,编程语言,剑指Offer," />
+  <meta name="keywords" content="编程语言,Java,剑指Offer," />
 
 
 
@@ -58,23 +56,35 @@
 
 
 
+<meta name="description" content="第二章 面试需要的基础知识数组 - 二维数组中查找
+题目：在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。
+
+方法一123456789101112public class Solution &amp;#123;    public boolean Find(int [][] array,">
 <meta property="og:type" content="article">
 <meta property="og:title" content="剑指Offer——Java答案">
 <meta property="og:url" content="http://zhangxuezhi.com/2016/09/04/剑指Offer——Java答案/index.html">
 <meta property="og:site_name" content="学志の博客">
-<meta property="og:updated_time" content="2016-11-06T13:51:41.274Z">
+<meta property="og:description" content="第二章 面试需要的基础知识数组 - 二维数组中查找
+题目：在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。
+
+方法一123456789101112public class Solution &amp;#123;    public boolean Find(int [][] array,">
+<meta property="og:updated_time" content="2016-11-06T16:31:26.463Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="剑指Offer——Java答案">
+<meta name="twitter:description" content="第二章 面试需要的基础知识数组 - 二维数组中查找
+题目：在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。
+
+方法一123456789101112public class Solution &amp;#123;    public boolean Find(int [][] array,">
 
 
 
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: {"position":"left","display":"always"},
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"always"},
     fancybox: true,
-    motion: true,
+    motion: false,
     duoshuo: {
       userId: '13664197',
       author: '博主'
@@ -128,7 +138,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -360,10 +370,7 @@
       
 
       
-        <blockquote>
-<a id="more"></a>
-</blockquote>
-<h2 id="第二章-面试需要的基础知识"><a href="#第二章-面试需要的基础知识" class="headerlink" title="第二章 面试需要的基础知识"></a>第二章 面试需要的基础知识</h2><h3 id="数组-二维数组中查找"><a href="#数组-二维数组中查找" class="headerlink" title="数组 - 二维数组中查找"></a>数组 - 二维数组中查找</h3><ul>
+        <h2 id="第二章-面试需要的基础知识"><a href="#第二章-面试需要的基础知识" class="headerlink" title="第二章 面试需要的基础知识"></a>第二章 面试需要的基础知识</h2><h3 id="数组-二维数组中查找"><a href="#数组-二维数组中查找" class="headerlink" title="数组 - 二维数组中查找"></a>数组 - 二维数组中查找</h3><ul>
 <li>题目：在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。</li>
 </ul>
 <h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><figure class="highlight zephir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">boolean</span> Find(<span class="keyword">int</span> [][] <span class="keyword">array</span>, <span class="keyword">int</span> target) &#123;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="keyword">array</span>.length; i++) &#123;</div><div class="line">    		<span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;<span class="keyword">array</span>[i].length; j++) &#123;</div><div class="line">    			<span class="keyword">if</span> (<span class="keyword">array</span>[i][j] == target)</div><div class="line">    				<span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">    		&#125;</div><div class="line">    	&#125;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -497,12 +504,7 @@
 <h3 id="对称的二叉树"><a href="#对称的二叉树" class="headerlink" title="对称的二叉树"></a>对称的二叉树</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span> </span>&#123;</div><div class="line">    int <span class="keyword">val</span> = <span class="number">0</span>;</div><div class="line">    TreeNode left = <span class="literal">null</span>;</div><div class="line">    TreeNode right = <span class="literal">null</span>;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> TreeNode(int <span class="keyword">val</span>) &#123;</div><div class="line">        <span class="keyword">this</span>.<span class="keyword">val</span> = <span class="keyword">val</span>;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    boolean isSymmetrical(TreeNode pRoot)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">return</span> isSymmetrical(pRoot, pRoot);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    boolean isSymmetrical(TreeNode pRoot1, TreeNode pRoot2) &#123;</div><div class="line">    	<span class="keyword">if</span> (pRoot1==<span class="literal">null</span> &amp;&amp; pRoot2==<span class="literal">null</span>) <span class="comment">// 两个都为null</span></div><div class="line">    		<span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">    	<span class="keyword">if</span> (pRoot1==<span class="literal">null</span> || pRoot2==<span class="literal">null</span>) <span class="comment">// 其中一个为null</span></div><div class="line">    		<span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    	<span class="keyword">if</span> (pRoot1.<span class="keyword">val</span> != pRoot2.<span class="keyword">val</span>)</div><div class="line">    		<span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    	</div><div class="line">    	<span class="keyword">return</span> isSymmetrical(pRoot1.left, pRoot2.right) </div><div class="line">    			&amp;&amp; isSymmetrical(pRoot1.right, pRoot2.left);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="按之字形顺序打印二叉树"><a href="#按之字形顺序打印二叉树" class="headerlink" title="按之字形顺序打印二叉树"></a>按之字形顺序打印二叉树</h3><figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.ArrayList;</div><div class="line"><span class="keyword">import</span> java.util.Stack;</div><div class="line"></div><div class="line"><span class="keyword">class</span> TreeNode &#123;</div><div class="line">    <span class="keyword">int</span> val = <span class="number">0</span>;</div><div class="line">    TreeNode left = <span class="keyword">null</span>;</div><div class="line">    TreeNode right = <span class="keyword">null</span>;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> TreeNode(<span class="keyword">int</span> val) &#123;</div><div class="line">        <span class="keyword">this</span>.val = val;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> Solution &#123;</div><div class="line">    <span class="keyword">public</span> ArrayList&lt;ArrayList&lt;Integer&gt; &gt; <span class="keyword">Print</span>(TreeNode pRoot) &#123;</div><div class="line">    	<span class="keyword">if</span> (pRoot == <span class="keyword">null</span>)</div><div class="line">    		<span class="keyword">return</span> <span class="keyword">new</span> ArrayList&lt;ArrayList&lt;Integer&gt; &gt;();</div><div class="line">    	</div><div class="line">    	ArrayList&lt;ArrayList&lt;Integer&gt;&gt; result = <span class="keyword">new</span> ArrayList&lt;ArrayList&lt;Integer&gt;&gt;();</div><div class="line">    	</div><div class="line">    	Stack&lt;TreeNode&gt; level0 = <span class="keyword">new</span> Stack&lt;TreeNode&gt;();</div><div class="line">    	Stack&lt;TreeNode&gt; level1 = <span class="keyword">new</span> Stack&lt;TreeNode&gt;();</div><div class="line">		Stack&lt;TreeNode&gt; levelCurrent;</div><div class="line">		Stack&lt;TreeNode&gt; levelNext;</div><div class="line">    	<span class="comment">//Stack&lt;TreeNode&gt;levleOdd = new Stack&lt;TreeNode&gt;();  // 奇数层栈</span></div><div class="line">    	<span class="comment">//Stack&lt;TreeNode&gt;levleEven = new Stack&lt;TreeNode&gt;(); // 偶数层栈</span></div><div class="line">    	<span class="keyword">int</span> current = <span class="number">0</span>;</div><div class="line">    	<span class="keyword">int</span> <span class="keyword">next</span> = <span class="number">1</span>;</div><div class="line">    	</div><div class="line">    	level0.<span class="keyword">push</span>(pRoot);</div><div class="line">    	<span class="keyword">while</span> (!level0.empty() || !level1.empty()) &#123;</div><div class="line">    		<span class="keyword">if</span> (current == <span class="number">0</span>) &#123;</div><div class="line">    			levelCurrent = level0;</div><div class="line">    			levelNext = level1;</div><div class="line">    		&#125; <span class="keyword">else</span> &#123;</div><div class="line">    			levelCurrent = level1;</div><div class="line">    			levelNext = level0;</div><div class="line">    		&#125;</div><div class="line">    		ArrayList&lt;Integer&gt; temp = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</div><div class="line">    		<span class="keyword">while</span> (!levelCurrent.empty()) &#123;</div><div class="line">        		TreeNode pNode = levelCurrent.peek();</div><div class="line">        		levelCurrent.<span class="keyword">pop</span>();</div><div class="line">        		temp.add(pNode.val);</div><div class="line">        		<span class="keyword">if</span> (current==<span class="number">0</span>) &#123;</div><div class="line">        			<span class="keyword">if</span> (pNode.left != <span class="keyword">null</span>)</div><div class="line">        				levelNext.<span class="keyword">push</span>(pNode.left);</div><div class="line">        			<span class="keyword">if</span> (pNode.right != <span class="keyword">null</span>) </div><div class="line">        				levelNext.<span class="keyword">push</span>(pNode.right);</div><div class="line">        		&#125; <span class="keyword">else</span> &#123;</div><div class="line">        			<span class="keyword">if</span> (pNode.right != <span class="keyword">null</span>)</div><div class="line">        				levelNext.<span class="keyword">push</span>(pNode.right);</div><div class="line">        			<span class="keyword">if</span> (pNode.left != <span class="keyword">null</span>)</div><div class="line">        				levelNext.<span class="keyword">push</span>(pNode.left);</div><div class="line">        		&#125;</div><div class="line">    		&#125;</div><div class="line">    		</div><div class="line">			result.add(temp);</div><div class="line">			current = <span class="number">1</span>-current;</div><div class="line">			<span class="keyword">next</span> = <span class="number">1</span>-<span class="keyword">next</span>;</div><div class="line">    	&#125;</div><div class="line">    	</div><div class="line">    	<span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main (String[] args) &#123;</div><div class="line">    	Solution solu = <span class="keyword">new</span> Solution();</div><div class="line">    	ArrayList&lt;ArrayList&lt;Integer&gt; &gt; result;</div><div class="line">    	TreeNode t0 = <span class="keyword">new</span> TreeNode(<span class="number">8</span>);</div><div class="line">    	TreeNode t1 = <span class="keyword">new</span> TreeNode(<span class="number">6</span>);</div><div class="line">    	TreeNode t2 = <span class="keyword">new</span> TreeNode(<span class="number">10</span>);</div><div class="line">    	TreeNode t3 = <span class="keyword">new</span> TreeNode(<span class="number">5</span>);</div><div class="line">    	TreeNode t4 = <span class="keyword">new</span> TreeNode(<span class="number">7</span>);</div><div class="line">    	TreeNode t5 = <span class="keyword">new</span> TreeNode(<span class="number">9</span>);</div><div class="line">    	TreeNode t6 = <span class="keyword">new</span> TreeNode(<span class="number">11</span>);</div><div class="line">    	t0.left = t1;</div><div class="line">    	t0.right = t2;</div><div class="line">    	t1.left = t3;</div><div class="line">    	t1.right = t4;</div><div class="line">    	t2.left = t5;</div><div class="line">    	t2.right = t6;</div><div class="line">    	result = solu.<span class="keyword">Print</span>(t0);</div><div class="line">    	System.out.<span class="keyword">println</span>(result.toString());</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="把二叉树打印成多行"><a href="#把二叉树打印成多行" class="headerlink" title="把二叉树打印成多行"></a>把二叉树打印成多行</h3><figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line">import java.util.ArrayList;</div><div class="line">import java.util.LinkedList;</div><div class="line">import java.util.Queue;</div><div class="line"></div><div class="line"><span class="keyword">class</span> <span class="title">TreeNode</span> &#123;</div><div class="line">    <span class="keyword">int</span> val = <span class="number">0</span>;</div><div class="line">    TreeNode left = <span class="literal">null</span>;</div><div class="line">    TreeNode right = <span class="literal">null</span>;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">TreeNode</span>(<span class="params"><span class="keyword">int</span> val</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.val = val;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Solution</span> &#123;</div><div class="line">    ArrayList&lt;ArrayList&lt;Integer&gt; &gt; Print(TreeNode pRoot) &#123;</div><div class="line">    	ArrayList&lt;ArrayList&lt;Integer&gt;&gt; result = <span class="keyword">new</span> ArrayList&lt;ArrayList&lt;Integer&gt;&gt;();</div><div class="line">    	<span class="keyword">if</span> (pRoot == <span class="literal">null</span>)</div><div class="line">    		<span class="keyword">return</span> result;</div><div class="line">    	Queue&lt;TreeNode&gt; nodes = <span class="keyword">new</span> LinkedList&lt;TreeNode&gt;();	<span class="comment">//创建队列</span></div><div class="line">    	nodes.<span class="keyword">add</span>(pRoot);</div><div class="line">    	<span class="keyword">int</span> nextLevel = <span class="number">0</span>;	 <span class="comment">// 下一层点数</span></div><div class="line">    	<span class="keyword">int</span> toBePrinted = <span class="number">1</span>; <span class="comment">// 当前层中还没有打印的点数</span></div><div class="line">    	<span class="keyword">while</span> (!nodes.isEmpty()) &#123;</div><div class="line">    		ArrayList&lt;Integer&gt; temp = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</div><div class="line">    		<span class="keyword">while</span> (toBePrinted &gt; <span class="number">0</span>) &#123;</div><div class="line">        		TreeNode pNode = nodes.peek();</div><div class="line">        		temp.<span class="keyword">add</span>(pNode.val);</div><div class="line">        		</div><div class="line">        		<span class="keyword">if</span> (pNode.left != <span class="literal">null</span>) &#123;</div><div class="line">        			nodes.<span class="keyword">add</span>(pNode.left);</div><div class="line">        			nextLevel++; <span class="comment">// 下一层增加一个结点</span></div><div class="line">        		&#125;</div><div class="line">        		<span class="keyword">if</span> (pNode.right != <span class="literal">null</span>) &#123;</div><div class="line">        			nodes.<span class="keyword">add</span>(pNode.right);</div><div class="line">        			nextLevel++;</div><div class="line">        		&#125;</div><div class="line">        		nodes.poll();</div><div class="line">        		toBePrinted--;</div><div class="line">    		&#125;</div><div class="line">    		result.<span class="keyword">add</span>(temp);</div><div class="line">    		toBePrinted = nextLevel;</div><div class="line">    		nextLevel = <span class="number">0</span>;</div><div class="line">    		</div><div class="line">    	&#125;</div><div class="line">    	</div><div class="line">    	<span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="序列化二叉树"><a href="#序列化二叉树" class="headerlink" title="序列化二叉树"></a>序列化二叉树</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<h3 id="二叉搜索树的第k个结点"><a href="#二叉搜索树的第k个结点" class="headerlink" title="二叉搜索树的第k个结点"></a>二叉搜索树的第k个结点</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<h3 id="数据流中的中位数"><a href="#数据流中的中位数" class="headerlink" title="数据流中的中位数"></a>数据流中的中位数</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<h3 id="滑动窗口的最大值"><a href="#滑动窗口的最大值" class="headerlink" title="滑动窗口的最大值"></a>滑动窗口的最大值</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<h3 id="矩阵中的路径"><a href="#矩阵中的路径" class="headerlink" title="矩阵中的路径"></a>矩阵中的路径</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<h3 id="机器人的运动范围"><a href="#机器人的运动范围" class="headerlink" title="机器人的运动范围"></a>机器人的运动范围</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<h3 id="序列化二叉树"><a href="#序列化二叉树" class="headerlink" title="序列化二叉树"></a>序列化二叉树</h3><h3 id="二叉搜索树的第k个结点"><a href="#二叉搜索树的第k个结点" class="headerlink" title="二叉搜索树的第k个结点"></a>二叉搜索树的第k个结点</h3><h3 id="数据流中的中位数"><a href="#数据流中的中位数" class="headerlink" title="数据流中的中位数"></a>数据流中的中位数</h3><h3 id="滑动窗口的最大值"><a href="#滑动窗口的最大值" class="headerlink" title="滑动窗口的最大值"></a>滑动窗口的最大值</h3><h3 id="矩阵中的路径"><a href="#矩阵中的路径" class="headerlink" title="矩阵中的路径"></a>矩阵中的路径</h3><h3 id="机器人的运动范围"><a href="#机器人的运动范围" class="headerlink" title="机器人的运动范围"></a>机器人的运动范围</h3>
       
     </div>
 
@@ -545,9 +547,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Java/" rel="tag">#Java</a>
-          
             <a href="/tags/编程语言/" rel="tag">#编程语言</a>
+          
+            <a href="/tags/Java/" rel="tag">#Java</a>
           
             <a href="/tags/剑指Offer/" rel="tag">#剑指Offer</a>
           
@@ -773,7 +775,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Pisces
   </a>
 </div>
 -->
@@ -852,6 +854,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>

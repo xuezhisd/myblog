@@ -2,10 +2,8 @@
 
 
 
-  
 
-
-<html class="theme-next mist use-motion">
+<html class="theme-next pisces">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -58,23 +56,32 @@
 
 
 
+<meta name="description" content="1.    安装所需软件12sudo apt-get install zh-autoconvertsudo apt-get install zhcon
+2.    配置系统1234$ vi /var/lib/locales/supported.d/local  加入zh_CN.GBK GBKzh_CN.GB2312 GB2312$ sudo locale-gen
+3. 修改ubuntu的字符集方法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="解决Ubuntu中文显示为乱码">
 <meta property="og:url" content="http://zhangxuezhi.com/2016/09/19/解决Ubuntu中文显示为乱码/index.html">
 <meta property="og:site_name" content="学志の博客">
-<meta property="og:updated_time" content="2016-11-06T13:51:14.795Z">
+<meta property="og:description" content="1.    安装所需软件12sudo apt-get install zh-autoconvertsudo apt-get install zhcon
+2.    配置系统1234$ vi /var/lib/locales/supported.d/local  加入zh_CN.GBK GBKzh_CN.GB2312 GB2312$ sudo locale-gen
+3. 修改ubuntu的字符集方法">
+<meta property="og:updated_time" content="2016-11-06T16:31:35.767Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="解决Ubuntu中文显示为乱码">
+<meta name="twitter:description" content="1.    安装所需软件12sudo apt-get install zh-autoconvertsudo apt-get install zhcon
+2.    配置系统1234$ vi /var/lib/locales/supported.d/local  加入zh_CN.GBK GBKzh_CN.GB2312 GB2312$ sudo locale-gen
+3. 修改ubuntu的字符集方法">
 
 
 
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: {"position":"left","display":"always"},
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"always"},
     fancybox: true,
-    motion: true,
+    motion: false,
     duoshuo: {
       userId: '13664197',
       author: '博主'
@@ -128,7 +135,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -360,10 +367,7 @@
       
 
       
-        <blockquote>
-<a id="more"></a>
-</blockquote>
-<h2 id="1-安装所需软件"><a href="#1-安装所需软件" class="headerlink" title="1.    安装所需软件"></a>1.    安装所需软件</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt-get <span class="keyword">install</span> zh-autoconvert</div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> zhcon</div></pre></td></tr></table></figure>
+        <h2 id="1-安装所需软件"><a href="#1-安装所需软件" class="headerlink" title="1.    安装所需软件"></a>1.    安装所需软件</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt-get <span class="keyword">install</span> zh-autoconvert</div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> zhcon</div></pre></td></tr></table></figure>
 <h2 id="2-配置系统"><a href="#2-配置系统" class="headerlink" title="2.    配置系统"></a>2.    配置系统</h2><figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ vi /var/<span class="class"><span class="keyword">lib</span>/<span class="title">locales</span>/<span class="title">supported</span>.<span class="title">d</span>/<span class="title">local</span>  加入</span></div><div class="line">zh_CN.GBK GBK</div><div class="line">zh_CN.GB2312 GB2312</div><div class="line">$ sudo locale-gen</div></pre></td></tr></table></figure>
 <h2 id="3-修改ubuntu的字符集"><a href="#3-修改ubuntu的字符集" class="headerlink" title="3. 修改ubuntu的字符集"></a>3. 修改ubuntu的字符集</h2><h3 id="方法一：-修改用户目录下的-profile或-bashrc文件，增加以下内容："><a href="#方法一：-修改用户目录下的-profile或-bashrc文件，增加以下内容：" class="headerlink" title="方法一： 修改用户目录下的.profile或.bashrc文件，增加以下内容："></a>方法一： 修改用户目录下的.profile或.bashrc文件，增加以下内容：</h3><figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attr">LANGUAGE</span>=”zh_CN:zh:en_US:en”</div><div class="line"><span class="attr">LANG</span>=zh_CN.GBK</div></pre></td></tr></table></figure>
 <p>重新登录即可。<br>这个方法只对该用户有效。</p>
@@ -643,7 +647,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Pisces
   </a>
 </div>
 -->
@@ -722,6 +726,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>

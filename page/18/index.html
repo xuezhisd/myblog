@@ -2,10 +2,8 @@
 
 
 
-  
 
-
-<html class="theme-next mist use-motion">
+<html class="theme-next pisces">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -42,7 +40,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT, Linux, CNN, OpenCV, 深度学习" />
+  <meta name="keywords" content="Linux, CNN, OpenCV, 深度学习" />
 
 
 
@@ -73,10 +71,10 @@
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: {"position":"left","display":"always"},
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"always"},
     fancybox: true,
-    motion: true,
+    motion: false,
     duoshuo: {
       userId: '13664197',
       author: '博主'
@@ -130,7 +128,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
+  <div class="container one-collumn sidebar-position-right 
    page-home 
  ">
     <div class="headband"></div>
@@ -351,12 +349,14 @@
 
       
         
-          <blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/07/25/希腊字母发音对照表/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <h2 id="希腊字母发音对照表"><a href="#希腊字母发音对照表" class="headerlink" title="希腊字母发音对照表"></a>希腊字母发音对照表</h2><p> <img src="http://img.blog.csdn.net/20150725162032105" alt="这里写图片描述"></p>
+<ul>
+<li>转载：<a href="http://www.360doc.com/content/10/0505/21/339365_26252025.shtml" target="_blank" rel="external">http://www.360doc.com/content/10/0505/21/339365_26252025.shtml</a></li>
+<li>推荐：<a href="http://app.baidu.com/greekalphabeta?keyword=%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D%E8%AF%BB%E9%9F%B3" target="_blank" rel="external">希腊字母发音App</a></li>
+</ul>
+
+          
         
       
     </div>
@@ -485,12 +485,21 @@
 
       
         
-          <blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/07/17/tar-Exiting with failure status due to previous errors/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>使用tar命令解压一个*.tar.gz文件，文件在/usr/local/目录下，使用普通用户解压。解压失败，显示错误：tar: Exiting with failure status due to previous errors</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ul>
+<li>需要root权限。<ul>
+<li>切换到root用户执行命令即可。</li>
+</ul>
+</li>
+<li>没有在当前目录<ul>
+<li>切换到当前目录再执行命令。</li>
+</ul>
+</li>
+</ul>
+<p><strong><em>参考博文</em></strong><br><a href="http://www.360doc.com/content/13/0119/09/1317564_261143499.shtml" target="_blank" rel="external">http://www.360doc.com/content/13/0119/09/1317564_261143499.shtml</a></p>
+
+          
         
       
     </div>
@@ -619,12 +628,14 @@
 
       
         
-          <blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/07/16/VMware的虚拟机无法ping到/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <ul>
+<li>问题：无法ping到VMware中的虚拟机。网络模式选择Host Only，系统是CentOS6.4，重新建立一个网络连接，使用静态IP。但是，在宿主机上面无法ping到该虚拟机，登录虚拟机之后，Terminal中运行命令ifconfig之后，可以ping到。</li>
+<li>分析：应该什么没有开启，必须等到用户登录之后才开启。。。</li>
+<li>解决方法：编辑上面新建的网络，勾选“Available to all users”,重启虚拟机，问题就解决了。</li>
+</ul>
+
+          
         
       
     </div>
@@ -741,12 +752,30 @@
 
       
         
-          <blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/07/15/虚拟机移动后，无法连网/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <h1 id="虚拟机移到另一台计算机上之后无法联网"><a href="#虚拟机移到另一台计算机上之后无法联网" class="headerlink" title="虚拟机移到另一台计算机上之后无法联网"></a>虚拟机移到另一台计算机上之后无法联网</h1><h2 id="一、没有开启DHCP和NAT服务"><a href="#一、没有开启DHCP和NAT服务" class="headerlink" title="一、没有开启DHCP和NAT服务"></a>一、没有开启DHCP和NAT服务</h2><ul>
+<li>Windows操作系统下</li>
+<li>我的电脑→右键→管理→服务</li>
+<li>设置<strong>VMware DHCP Service</strong>自启</li>
+<li>设置<strong>VMware NAT Service</strong>自启</li>
+</ul>
+<p>启动这两项服务之后，Vmware选择NAT网络连接方式，虚拟机即可联网。</p>
+<h2 id="二、没有eth0"><a href="#二、没有eth0" class="headerlink" title="二、没有eth0"></a>二、没有eth0</h2><ul>
+<li>问题：虚拟机复制之后，没有eth0</li>
+<li><p>方法：删除配置文件，如下命令：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo rm <span class="regexp">/etc/u</span>dev<span class="regexp">/rules.d/</span>*net.rules</div></pre></td></tr></table></figure>
+</li>
+<li><p>重启电脑，自动生成上述文件。问题解决。</p>
+</li>
+</ul>
+<h2 id="三、首次打开时的选项"><a href="#三、首次打开时的选项" class="headerlink" title="三、首次打开时的选项"></a>三、首次打开时的选项</h2><ul>
+<li>首次打开移动或复制的虚拟机时，VMware会弹出对话框。</li>
+<li>如果移动了虚拟机，就选择“移动虚拟机”</li>
+<li>如果复制了虚拟机，就选择后“复制虚拟机”</li>
+<li>VMware会根据选项，自动作出一些修改。</li>
+</ul>
+
+          
         
       
     </div>
@@ -875,12 +904,12 @@
 
       
         
-          <blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/07/14/Ubuntu-安装-有道词典/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <p>Windows下的有道词典非常地好用，在Ubuntu下也可以使用有道词典啦！！！</p>
+<h2 id="添加源，并更新"><a href="#添加源，并更新" class="headerlink" title="添加源，并更新"></a>添加源，并更新</h2><figure class="highlight smali"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 添加软件源</span></div><div class="line">sudo<span class="built_in"> add-apt-repository </span>ppa:justzx2011/openyoudao-v0.4</div><div class="line"><span class="comment"># 更新</span></div><div class="line">sudo apt-get update</div></pre></td></tr></table></figure>
+<h2 id="安装软件包"><a href="#安装软件包" class="headerlink" title="安装软件包"></a>安装软件包</h2><figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># 安装软件包</span></div><div class="line">sudo apt-<span class="keyword">get</span> install openyoudao</div></pre></td></tr></table></figure>
+
+          
         
       
     </div>
@@ -1051,7 +1080,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Pisces
   </a>
 </div>
 -->
@@ -1130,6 +1159,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
 
   
 

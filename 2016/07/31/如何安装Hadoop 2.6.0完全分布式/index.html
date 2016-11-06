@@ -2,10 +2,8 @@
 
 
 
-  
 
-
-<html class="theme-next mist use-motion">
+<html class="theme-next pisces">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -58,15 +56,30 @@
 
 
 
+<meta name="description" content="本教程是关于如何在Ubuntu中搭建完全分布式Hadoop2.6.*环境的完整教程。
+
+一、环境说明
+操作系统：Ubuntu 14.04  注：其它版本的Ubuntu安装过程一样
+虚拟机：VMware Workstation或VirtualBox  注：VMware Workstation的功能更强大，但是软件体积也比较大；而且在Ubuntu中我没有安装成功。VirtualBox软件体积小，更加">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何安装Hadoop 2.6.0完全分布式？">
 <meta property="og:url" content="http://zhangxuezhi.com/2016/07/31/如何安装Hadoop 2.6.0完全分布式/index.html">
 <meta property="og:site_name" content="学志の博客">
+<meta property="og:description" content="本教程是关于如何在Ubuntu中搭建完全分布式Hadoop2.6.*环境的完整教程。
+
+一、环境说明
+操作系统：Ubuntu 14.04  注：其它版本的Ubuntu安装过程一样
+虚拟机：VMware Workstation或VirtualBox  注：VMware Workstation的功能更强大，但是软件体积也比较大；而且在Ubuntu中我没有安装成功。VirtualBox软件体积小，更加">
 <meta property="og:image" content="http://img.blog.csdn.net/20160731101242857">
 <meta property="og:image" content="http://img.blog.csdn.net/20160731095102565">
-<meta property="og:updated_time" content="2016-11-06T13:59:11.720Z">
+<meta property="og:updated_time" content="2016-11-06T16:31:39.023Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何安装Hadoop 2.6.0完全分布式？">
+<meta name="twitter:description" content="本教程是关于如何在Ubuntu中搭建完全分布式Hadoop2.6.*环境的完整教程。
+
+一、环境说明
+操作系统：Ubuntu 14.04  注：其它版本的Ubuntu安装过程一样
+虚拟机：VMware Workstation或VirtualBox  注：VMware Workstation的功能更强大，但是软件体积也比较大；而且在Ubuntu中我没有安装成功。VirtualBox软件体积小，更加">
 <meta name="twitter:image" content="http://img.blog.csdn.net/20160731101242857">
 
 
@@ -74,10 +87,10 @@
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: {"position":"left","display":"always"},
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"always"},
     fancybox: true,
-    motion: true,
+    motion: false,
     duoshuo: {
       userId: '13664197',
       author: '博主'
@@ -131,7 +144,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -364,9 +377,8 @@
 
       
         <blockquote>
-<a id="more"></a>
+<p>本教程是关于如何在Ubuntu中搭建完全分布式Hadoop2.6.*环境的完整教程。</p>
 </blockquote>
-<p><strong>本教程是关于如何在Ubuntu中搭建完全分布式Hadoop2.6.*环境的完整教程。</strong></p>
 <h2 id="一、环境说明"><a href="#一、环境说明" class="headerlink" title="一、环境说明"></a>一、环境说明</h2><ul>
 <li>操作系统：Ubuntu 14.04<br>  注：其它版本的Ubuntu安装过程一样</li>
 <li>虚拟机：VMware Workstation或VirtualBox<br>  注：VMware Workstation的功能更强大，但是软件体积也比较大；而且在Ubuntu中我没有安装成功。VirtualBox软件体积小，更加灵活好用，而且可以跨平台使用。但是VirtualBox有些功能不支持，比如Linux版本的VirtualBox不支持文件拖拽和共享粘贴板功能。另外，Ubuntu版VirtualBox5.1存在问题，安装增强工具包之后无法启动。建议安装VirtualBox5.0。</li>
@@ -462,16 +474,22 @@
 </ul>
 <h2 id="五、安装hadoop"><a href="#五、安装hadoop" class="headerlink" title="五、安装hadoop"></a>五、安装hadoop</h2><ul>
 <li>注：如未其它说明，以下操作都是在<strong>master节点</strong>上进行的。</li>
-<li>原来教程将Hadoop安装在<code>/usr/local/</code>目录下，但是后面会遇到问题：无法启动NameNode或DataNode。这种问题归根结底都是由于权限造成的。所以，我修改了教程，将Hadoop安装在hadoop用户自己目录下：<code>/home/hadoop/software/</code>。<h3 id="下载安装包"><a href="#下载安装包" class="headerlink" title="下载安装包"></a>下载安装包</h3></li>
+<li>原来教程将Hadoop安装在<code>/usr/local/</code>目录下，但是后面会遇到问题：无法启动NameNode或DataNode。这种问题归根结底都是由于权限造成的。所以，我修改了教程，将Hadoop安装在hadoop用户自己目录下：<code>/home/hadoop/software/</code>。</li>
+</ul>
+<h3 id="下载安装包"><a href="#下载安装包" class="headerlink" title="下载安装包"></a>下载安装包</h3><ul>
 <li>下载地址：<a href="http://hadoop.apache.org/releases.html" target="_blank" rel="external">通用地址</a> or <a href="http://mirror.bit.edu.cn/apache/hadoop/common/hadoop-2.6.0/" target="_blank" rel="external">Hadoop 2.6.0下载地址</a></li>
 <li>注意：下载二进制版本就可以，不要下载源码。</li>
 <li>如果是在主机上下载的，请使用Xftp等其他工具将其上传到客户机master和slave1中。</li>
-<li>假定hadoop存储位置：<code>~/hadoop-2.6.0.tar.gz</code><h3 id="解压拷贝文件"><a href="#解压拷贝文件" class="headerlink" title="解压拷贝文件"></a>解压拷贝文件</h3></li>
+<li>假定hadoop存储位置：<code>~/hadoop-2.6.0.tar.gz</code></li>
+</ul>
+<h3 id="解压拷贝文件"><a href="#解压拷贝文件" class="headerlink" title="解压拷贝文件"></a>解压拷贝文件</h3><ul>
 <li><p>先解压，然后重命名，再复制到指定目录，最后创建tmp目录。</p>
   <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 解压</span></div><div class="line">tar -zxvf hadoop-2.6.0.tar.gz</div><div class="line"><span class="comment"># 重命名</span></div><div class="line">mv hadoop-2.6.0 hadoop</div><div class="line"><span class="comment"># 移动（我安装在/usr/local/下）</span></div><div class="line">sudo mv hadoop ~/software/</div><div class="line"><span class="comment"># 创建tmp目录，后面会用到</span></div><div class="line"><span class="built_in">cd</span> ~/software/hadoop</div><div class="line">mkdir -p tmp/dfs/data</div><div class="line">mkdir -p tmp/dfs/name</div></pre></td></tr></table></figure>
 </li>
 <li><p>注意：不要安装在<code>/usr/local</code>目录下。防止权限问题造成后面无法启动NameNode或DataNOde问题。</p>
-<h3 id="修改hadoop配置文件"><a href="#修改hadoop配置文件" class="headerlink" title="修改hadoop配置文件"></a>修改hadoop配置文件</h3></li>
+</li>
+</ul>
+<h3 id="修改hadoop配置文件"><a href="#修改hadoop配置文件" class="headerlink" title="修改hadoop配置文件"></a>修改hadoop配置文件</h3><ul>
 <li>此处需要修改<strong>7个</strong>配置文件，全部在<code>/usr/local/hadoop/etc/hadoop/</code>目录下。</li>
 <li><p>7个配置文件的名字分别是：</p>
   <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">hadoop-env.sh <span class="comment"># hadoop的环境变量</span></div><div class="line">yarn-env.sh   <span class="comment"># yarn的环境变量</span></div><div class="line">slaves        <span class="comment"># 数据节点名字列表</span></div><div class="line">core-site.xml   <span class="comment"># </span></div><div class="line">hdfs-site.xml   <span class="comment"># HDFS配置文件</span></div><div class="line">mapred-site.xml <span class="comment"># MapReduce配置文件</span></div><div class="line">yarn-site.xml   <span class="comment"># yarn配置文件</span></div></pre></td></tr></table></figure>
@@ -489,35 +507,33 @@
   <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> JAVA_HOME=/usr/<span class="built_in">local</span>/jdk</div></pre></td></tr></table></figure>
 </li>
 <li><p>注意：我的JDK安装位置时<code>/usr/local/jdk</code>。你的不一定相同。所以，这个需要根据自己的JDK位置来设定。</p>
-<h4 id="配置slave节点"><a href="#配置slave节点" class="headerlink" title="配置slave节点"></a>配置slave节点</h4></li>
+</li>
+</ul>
+<h4 id="配置slave节点"><a href="#配置slave节点" class="headerlink" title="配置slave节点"></a>配置slave节点</h4><ul>
 <li>需要修改slaves文件</li>
 <li>因为此教程只创建了两个虚拟机：master和slave1。master用作NameNode节点，slave1用作DataNode节点。所以，slaves文件仅需要添加slave1即可</li>
 <li><p>在slaves文件中添加一行：</p>
   <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">slave1</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>####配置core-site.xml</p>
-<ul>
+<h4 id="配置core-site-xml"><a href="#配置core-site-xml" class="headerlink" title="配置core-site.xml"></a>配置core-site.xml</h4><ul>
 <li><p>在core-site.xml文件中增加以下内容： </p>
   <figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="params">&lt;configuration&gt;</span></div><div class="line">    <span class="params">&lt;property&gt;</span></div><div class="line">        <span class="params">&lt;name&gt;</span>hadoop.tmp.dir<span class="params">&lt;/name&gt;</span></div><div class="line">        <span class="params">&lt;value&gt;</span>file:<span class="meta-keyword">/home/</span>hadoop<span class="meta-keyword">/software/</span>hadoop/tmp<span class="params">&lt;/value&gt;</span></div><div class="line">        <span class="params">&lt;description&gt;</span>Abase for other temporary directories.<span class="params">&lt;/description&gt;</span></div><div class="line">    <span class="params">&lt;/property&gt;</span></div><div class="line">    <span class="params">&lt;property&gt;</span></div><div class="line">        <span class="params">&lt;name&gt;</span>fs.defaultFS<span class="params">&lt;/name&gt;</span></div><div class="line">        <span class="params">&lt;value&gt;</span>hdfs:<span class="comment">//master:9000&lt;/value&gt;</span></div><div class="line">    <span class="params">&lt;/property&gt;</span></div><div class="line"><span class="params">&lt;/configuration&gt;</span></div></pre></td></tr></table></figure>
 </li>
 <li><p>注意：<code>hadoop.tmp.dir</code>的值需要和前面创建的tmp路径对应。</p>
 </li>
 </ul>
-<p>####配置hdfs-site.xml</p>
-<ul>
+<h4 id="配置hdfs-site-xml"><a href="#配置hdfs-site-xml" class="headerlink" title="配置hdfs-site.xml"></a>配置hdfs-site.xml</h4><ul>
 <li><p>在hdfs-site.xml文件中增加以下内容： </p>
   <figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="params">&lt;configuration&gt;</span></div><div class="line">    <span class="params">&lt;property&gt;</span></div><div class="line">        <span class="params">&lt;name&gt;</span>dfs.namenode.secondary.http-address<span class="params">&lt;/name&gt;</span></div><div class="line">        <span class="params">&lt;value&gt;</span>master:<span class="number">9001</span><span class="params">&lt;/value&gt;</span></div><div class="line">    <span class="params">&lt;/property&gt;</span></div><div class="line">    <span class="params">&lt;property&gt;</span></div><div class="line">        <span class="params">&lt;name&gt;</span>dfs.replication<span class="params">&lt;/name&gt;</span></div><div class="line">        <span class="params">&lt;value&gt;</span><span class="number">2</span><span class="params">&lt;/value&gt;</span></div><div class="line">    <span class="params">&lt;/property&gt;</span></div><div class="line">    <span class="params">&lt;property&gt;</span></div><div class="line">        <span class="params">&lt;name&gt;</span>dfs.namenode.name.dir<span class="params">&lt;/name&gt;</span></div><div class="line">        <span class="params">&lt;value&gt;</span>file:<span class="meta-keyword">/home/</span>hadoop<span class="meta-keyword">/software/</span>hadoop<span class="meta-keyword">/tmp/</span>dfs/name<span class="params">&lt;/value&gt;</span></div><div class="line">    <span class="params">&lt;/property&gt;</span></div><div class="line">    <span class="params">&lt;property&gt;</span></div><div class="line">        <span class="params">&lt;name&gt;</span>dfs.datanode.data.dir<span class="params">&lt;/name&gt;</span></div><div class="line">        <span class="params">&lt;value&gt;</span>file:<span class="meta-keyword">/home/</span>hadoop<span class="meta-keyword">/software/</span>hadoop<span class="meta-keyword">/tmp/</span>dfs/data<span class="params">&lt;/value&gt;</span></div><div class="line">    <span class="params">&lt;/property&gt;</span></div><div class="line">    <span class="params">&lt;property&gt;</span> </div><div class="line">            <span class="params">&lt;name&gt;</span>dfs.permissions<span class="params">&lt;/name&gt;</span>  </div><div class="line">            <span class="params">&lt;value&gt;</span>false<span class="params">&lt;/value&gt;</span>  </div><div class="line">     <span class="params">&lt;/property&gt;</span></div><div class="line">    <span class="params">&lt;property&gt;</span></div><div class="line">        <span class="params">&lt;name&gt;</span>dfs.webhdfs.enabled<span class="params">&lt;/name&gt;</span></div><div class="line">        <span class="params">&lt;value&gt;</span>true<span class="params">&lt;/value&gt;</span></div><div class="line">    <span class="params">&lt;/property&gt;</span></div><div class="line"><span class="params">&lt;/configuration&gt;</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>####配置mapred-site.xml</p>
-<ul>
+<h4 id="配置mapred-site-xml"><a href="#配置mapred-site-xml" class="headerlink" title="配置mapred-site.xml"></a>配置mapred-site.xml</h4><ul>
 <li><p>在mapred-site.xml文件中增加以下内容：</p>
   <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>mapreduce.framework.name<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>yarn<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>mapreduce.jobhistory.address<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>master:10020<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>mapreduce.jobhistory.webapp.address<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>master:19888<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>####配置yarn-site.xml</p>
-<ul>
+<h4 id="配置yarn-site-xml"><a href="#配置yarn-site-xml" class="headerlink" title="配置yarn-site.xml"></a>配置yarn-site.xml</h4><ul>
 <li><p>在yarn-site.xml文件中增加以下内容：</p>
   <figure class="highlight dust"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span></div><div class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.nodemanager.aux-services<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>mapreduce_shuffle<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.nodemanager.aux-services.mapreduce.shuffle.class<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>org.apache.hadoop.mapred.ShuffleHandler<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">property</span>&gt;</span>  </div><div class="line">		<span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.resourcemanager.hostname<span class="tag">&lt;/<span class="name">name</span>&gt;</span>  </div><div class="line">		<span class="tag">&lt;<span class="name">value</span>&gt;</span>master<span class="tag">&lt;/<span class="name">value</span>&gt;</span>  </div><div class="line">	<span class="tag">&lt;/<span class="name">property</span>&gt;</span> </div><div class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.resourcemanager.address<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>master:8032<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.resourcemanager.scheduler.address<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>master:8030<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.resourcemanager.resource-tracker.address<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>master:8035<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.resourcemanager.admin.address<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>master:8033<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.resourcemanager.webapp.address<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>master:8088<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span>  </div><div class="line">	<span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.resourcemanager.webapp.https.address<span class="tag">&lt;/<span class="name">name</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>$<span class="template-variable">&#123;yarn.resourcemanager.hostname&#125;</span><span class="xml">:8090<span class="tag">&lt;/<span class="name">value</span>&gt;</span>  </span></div><div class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></div></pre></td></tr></table></figure>
 </li>
@@ -783,7 +799,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、环境说明"><span class="nav-number">1.</span> <span class="nav-text">一、环境说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、安装虚拟机"><span class="nav-number">2.</span> <span class="nav-text">二、安装虚拟机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、准备工作"><span class="nav-number">3.</span> <span class="nav-text">三、准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Java"><span class="nav-number">3.1.</span> <span class="nav-text">安装Java</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#下载JDK"><span class="nav-number">3.1.1.</span> <span class="nav-text">下载JDK</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装JDK"><span class="nav-number">3.1.2.</span> <span class="nav-text">安装JDK</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建hadoop账号"><span class="nav-number">3.2.</span> <span class="nav-text">创建hadoop账号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复制虚拟机"><span class="nav-number">3.3.</span> <span class="nav-text">复制虚拟机</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、修改配置文件"><span class="nav-number">4.</span> <span class="nav-text">四、修改配置文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设置静态IP地址"><span class="nav-number">4.1.</span> <span class="nav-text">设置静态IP地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改hostname"><span class="nav-number">4.2.</span> <span class="nav-text">修改hostname</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改hosts文件"><span class="nav-number">4.3.</span> <span class="nav-text">修改hosts文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置ssh免密码登录"><span class="nav-number">4.4.</span> <span class="nav-text">配置ssh免密码登录</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、安装hadoop"><span class="nav-number">5.</span> <span class="nav-text">五、安装hadoop</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载安装包"><span class="nav-number">5.1.</span> <span class="nav-text">下载安装包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解压拷贝文件"><span class="nav-number">5.2.</span> <span class="nav-text">解压拷贝文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改hadoop配置文件"><span class="nav-number">5.3.</span> <span class="nav-text">修改hadoop配置文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#修改hadoop-env-sh"><span class="nav-number">5.3.1.</span> <span class="nav-text">修改hadoop-env.sh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改yarn-env-sh"><span class="nav-number">5.3.2.</span> <span class="nav-text">修改yarn-env.sh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置slave节点"><span class="nav-number">5.3.3.</span> <span class="nav-text">配置slave节点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复制修改后的hadoop文件夹到其它节点"><span class="nav-number">5.4.</span> <span class="nav-text">复制修改后的hadoop文件夹到其它节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改配置文件profile或-bashrc"><span class="nav-number">5.5.</span> <span class="nav-text">修改配置文件profile或.bashrc</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、测试hadoop"><span class="nav-number">6.</span> <span class="nav-text">六、测试hadoop</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#开启hadoop"><span class="nav-number">6.1.</span> <span class="nav-text">开启hadoop</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关闭hadoop"><span class="nav-number">6.2.</span> <span class="nav-text">关闭hadoop</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、环境说明"><span class="nav-number">1.</span> <span class="nav-text">一、环境说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、安装虚拟机"><span class="nav-number">2.</span> <span class="nav-text">二、安装虚拟机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、准备工作"><span class="nav-number">3.</span> <span class="nav-text">三、准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Java"><span class="nav-number">3.1.</span> <span class="nav-text">安装Java</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#下载JDK"><span class="nav-number">3.1.1.</span> <span class="nav-text">下载JDK</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装JDK"><span class="nav-number">3.1.2.</span> <span class="nav-text">安装JDK</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建hadoop账号"><span class="nav-number">3.2.</span> <span class="nav-text">创建hadoop账号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复制虚拟机"><span class="nav-number">3.3.</span> <span class="nav-text">复制虚拟机</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、修改配置文件"><span class="nav-number">4.</span> <span class="nav-text">四、修改配置文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设置静态IP地址"><span class="nav-number">4.1.</span> <span class="nav-text">设置静态IP地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改hostname"><span class="nav-number">4.2.</span> <span class="nav-text">修改hostname</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改hosts文件"><span class="nav-number">4.3.</span> <span class="nav-text">修改hosts文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置ssh免密码登录"><span class="nav-number">4.4.</span> <span class="nav-text">配置ssh免密码登录</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、安装hadoop"><span class="nav-number">5.</span> <span class="nav-text">五、安装hadoop</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载安装包"><span class="nav-number">5.1.</span> <span class="nav-text">下载安装包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解压拷贝文件"><span class="nav-number">5.2.</span> <span class="nav-text">解压拷贝文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改hadoop配置文件"><span class="nav-number">5.3.</span> <span class="nav-text">修改hadoop配置文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#修改hadoop-env-sh"><span class="nav-number">5.3.1.</span> <span class="nav-text">修改hadoop-env.sh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改yarn-env-sh"><span class="nav-number">5.3.2.</span> <span class="nav-text">修改yarn-env.sh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置slave节点"><span class="nav-number">5.3.3.</span> <span class="nav-text">配置slave节点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置core-site-xml"><span class="nav-number">5.3.4.</span> <span class="nav-text">配置core-site.xml</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置hdfs-site-xml"><span class="nav-number">5.3.5.</span> <span class="nav-text">配置hdfs-site.xml</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置mapred-site-xml"><span class="nav-number">5.3.6.</span> <span class="nav-text">配置mapred-site.xml</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置yarn-site-xml"><span class="nav-number">5.3.7.</span> <span class="nav-text">配置yarn-site.xml</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复制修改后的hadoop文件夹到其它节点"><span class="nav-number">5.4.</span> <span class="nav-text">复制修改后的hadoop文件夹到其它节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改配置文件profile或-bashrc"><span class="nav-number">5.5.</span> <span class="nav-text">修改配置文件profile或.bashrc</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、测试hadoop"><span class="nav-number">6.</span> <span class="nav-text">六、测试hadoop</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#开启hadoop"><span class="nav-number">6.1.</span> <span class="nav-text">开启hadoop</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关闭hadoop"><span class="nav-number">6.2.</span> <span class="nav-text">关闭hadoop</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
@@ -821,7 +837,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Pisces
   </a>
 </div>
 -->
@@ -900,6 +916,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>

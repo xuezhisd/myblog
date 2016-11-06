@@ -2,10 +2,8 @@
 
 
 
-  
 
-
-<html class="theme-next mist use-motion">
+<html class="theme-next pisces">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -58,23 +56,56 @@
 
 
 
+<meta name="description" content="虚拟机移到另一台计算机上之后无法联网一、没有开启DHCP和NAT服务
+Windows操作系统下
+我的电脑→右键→管理→服务
+设置VMware DHCP Service自启
+设置VMware NAT Service自启
+
+启动这两项服务之后，Vmware选择NAT网络连接方式，虚拟机即可联网。
+二、没有eth0
+问题：虚拟机复制之后，没有eth0
+方法：删除配置文件，如下命令：
+1sudo rm /">
 <meta property="og:type" content="article">
 <meta property="og:title" content="虚拟机移动后，无法连网">
 <meta property="og:url" content="http://zhangxuezhi.com/2015/07/15/虚拟机移动后，无法连网/index.html">
 <meta property="og:site_name" content="学志の博客">
-<meta property="og:updated_time" content="2016-11-06T14:23:42.669Z">
+<meta property="og:description" content="虚拟机移到另一台计算机上之后无法联网一、没有开启DHCP和NAT服务
+Windows操作系统下
+我的电脑→右键→管理→服务
+设置VMware DHCP Service自启
+设置VMware NAT Service自启
+
+启动这两项服务之后，Vmware选择NAT网络连接方式，虚拟机即可联网。
+二、没有eth0
+问题：虚拟机复制之后，没有eth0
+方法：删除配置文件，如下命令：
+1sudo rm /">
+<meta property="og:updated_time" content="2016-11-06T16:32:07.071Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="虚拟机移动后，无法连网">
+<meta name="twitter:description" content="虚拟机移到另一台计算机上之后无法联网一、没有开启DHCP和NAT服务
+Windows操作系统下
+我的电脑→右键→管理→服务
+设置VMware DHCP Service自启
+设置VMware NAT Service自启
+
+启动这两项服务之后，Vmware选择NAT网络连接方式，虚拟机即可联网。
+二、没有eth0
+问题：虚拟机复制之后，没有eth0
+方法：删除配置文件，如下命令：
+1sudo rm /">
 
 
 
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: {"position":"left","display":"always"},
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"always"},
     fancybox: true,
-    motion: true,
+    motion: false,
     duoshuo: {
       userId: '13664197',
       author: '博主'
@@ -128,7 +159,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -348,10 +379,7 @@
       
 
       
-        <blockquote>
-<a id="more"></a>
-</blockquote>
-<h1 id="虚拟机移到另一台计算机上之后无法联网"><a href="#虚拟机移到另一台计算机上之后无法联网" class="headerlink" title="虚拟机移到另一台计算机上之后无法联网"></a>虚拟机移到另一台计算机上之后无法联网</h1><h2 id="一、没有开启DHCP和NAT服务"><a href="#一、没有开启DHCP和NAT服务" class="headerlink" title="一、没有开启DHCP和NAT服务"></a>一、没有开启DHCP和NAT服务</h2><ul>
+        <h1 id="虚拟机移到另一台计算机上之后无法联网"><a href="#虚拟机移到另一台计算机上之后无法联网" class="headerlink" title="虚拟机移到另一台计算机上之后无法联网"></a>虚拟机移到另一台计算机上之后无法联网</h1><h2 id="一、没有开启DHCP和NAT服务"><a href="#一、没有开启DHCP和NAT服务" class="headerlink" title="一、没有开启DHCP和NAT服务"></a>一、没有开启DHCP和NAT服务</h2><ul>
 <li>Windows操作系统下</li>
 <li>我的电脑→右键→管理→服务</li>
 <li>设置<strong>VMware DHCP Service</strong>自启</li>
@@ -639,7 +667,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Pisces
   </a>
 </div>
 -->
@@ -718,6 +746,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
