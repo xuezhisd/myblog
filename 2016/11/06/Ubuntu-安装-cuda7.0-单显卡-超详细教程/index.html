@@ -2,8 +2,10 @@
 
 
 
+  
 
-<html class="theme-next pisces">
+
+<html class="theme-next mist use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -80,10 +82,10 @@
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post"},
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"always"},
     fancybox: true,
-    motion: false,
+    motion: true,
     duoshuo: {
       userId: '13664197',
       author: '博主'
@@ -465,7 +467,7 @@
 </ul>
 <h3 id="3-配置环境变量"><a href="#3-配置环境变量" class="headerlink" title="3. 配置环境变量"></a>3. 配置环境变量</h3><ul>
 <li><p>打开终端，在文件/etc/profile的最后添加以下内容：</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">PATH=/usr/<span class="built_in">local</span>/cuda/bin:<span class="variable">$PATH</span></div><div class="line"><span class="built_in">export</span> PATH</div></pre></td></tr></table></figure>
+  <figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">PATH=<span class="regexp">/usr/</span>local<span class="regexp">/cuda/</span>bin:<span class="variable">$PATH</span></div><div class="line">export PATH</div></pre></td></tr></table></figure>
 </li>
 <li><p>保存后, 执行下列命令, 使环境变量立即生效</p>
   <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">source</span> /etc/profile</div></pre></td></tr></table></figure>
@@ -775,20 +777,25 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">张学志</span>
+  <span class="author" itemprop="copyrightHolder"><a href="http://zhangxuezhi.com">张学志</a> </span>
+    <span class="circle">
+    &nbsp;<i class="fa fa-anchor"></i>
+  </span>
+  <span class="bei-an" >  &nbsp;<a href="http://icp.chinaz.com/info?q=zhangxuezhi.com">陕ICP备16007504号-1</a> </span>
 </div>
 
+<!--
 <div class="powered-by">
   由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
+</div> 
 
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
+    NexT.Mist
   </a>
 </div>
-
+-->
         
 
 <div class="busuanzi-count">
@@ -864,13 +871,6 @@
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
-
-
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
