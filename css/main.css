@@ -188,8 +188,8 @@ body {
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 16px;
   line-height: 2;
-  color: #555;
-  background: #fff;
+  color: #333;
+  background: $body-bg-color;
 }
 @media (max-width: 767px) {
   body {
@@ -203,7 +203,7 @@ body {
 }
 @media (min-width: 1600px) {
   body {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 h1,
@@ -277,14 +277,14 @@ p {
   margin: 0 0 25px 0;
 }
 a {
-  color: #555;
+  color: #0593d3;
   text-decoration: none;
   border-bottom: 1px solid #999;
   word-wrap: break-word;
 }
 a:hover {
-  color: #222;
-  border-bottom-color: #222;
+  color: #0477ab;
+  border-bottom-color: #0477ab;
 }
 ul {
   list-style: none;
@@ -455,7 +455,7 @@ body {
 .header-inner {
   margin: 0 auto;
   padding: 100px 0 70px;
-  width: 710px;
+  width: 820px;
 }
 @media (min-width: 1600px) {
   .container .header-inner {
@@ -467,7 +467,7 @@ body {
 }
 .main-inner {
   margin: 0 auto;
-  width: 710px;
+  width: 820px;
 }
 @media (min-width: 1600px) {
   .container .main-inner {
@@ -484,7 +484,7 @@ body {
 .footer-inner {
   box-sizing: border-box;
   margin: 20px auto;
-  width: 710px;
+  width: 820px;
 }
 @media (min-width: 1600px) {
   .container .footer-inner {
@@ -743,7 +743,7 @@ pre .javascript .function {
   font-size: 14px;
   color: #fff;
   background: #222;
-  border: 2px solid #555;
+  border: 2px solid #333;
   text-decoration: none;
   border-radius: 0;
   transition-property: background-color;
@@ -761,7 +761,7 @@ pre .javascript .function {
   display: block;
   width: 22px;
   height: 2px;
-  background: #555;
+  background: #333;
   border-radius: 1px;
 }
 .btn-bar+.btn-bar {
@@ -1324,7 +1324,7 @@ pre .javascript .function {
   margin-top: 50px;
 }
 .post-more-link .btn {
-  color: #555;
+  color: #333;
   font-size: 14px;
   background: #fff;
   border-radius: 2px;
@@ -1356,11 +1356,11 @@ pre .javascript .function {
   display: inline-block;
   line-height: 25px;
   font-size: 14px;
-  color: #555;
+  color: #0593d3;
   border-bottom: none;
 }
 .post-nav-item a:hover {
-  color: #222;
+  color: #0477ab;
   border-bottom: none;
 }
 .post-nav-item a:active {
@@ -1679,7 +1679,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #1cffff;
+  background: #69866c;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2443,7 +2443,7 @@ body {
 .header {
   position: relative;
   margin: 0 auto;
-  width: 960px;
+  width: 1080px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .header {
@@ -2499,7 +2499,7 @@ body {
   }
 }
 .container .main-inner {
-  width: 960px;
+  width: 1080px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .container .main-inner {
@@ -2515,7 +2515,7 @@ body {
   float: right;
   box-sizing: border-box;
   padding: 40px;
-  width: 710px;
+  width: 820px;
   background: #fff;
   min-height: 700px;
 }
@@ -2554,7 +2554,7 @@ body {
   display: none;
 }
 .footer-inner {
-  width: 960px;
+  width: 1080px;
 }
 .footer-inner:before {
   content: " ";
@@ -2691,7 +2691,7 @@ body {
 .sidebar-inner {
   box-sizing: border-box;
   width: 240px;
-  color: #555;
+  color: #333;
   background: #fff;
 }
 .sidebar-inner.affix {
