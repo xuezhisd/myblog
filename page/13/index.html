@@ -1073,8 +1073,8 @@
             
               
                 
-                <a class="post-title-link" href="/2015/09/22/Ubuntu Server 添加、删除和修改用户/" itemprop="url">
-                  Ubuntu Server 添加、删除和修改用户
+                <a class="post-title-link" href="/2015/09/22/caffe安装系列——安装GCC4.7和G++4.7并降级/" itemprop="url">
+                  caffe安装系列——安装GCC4.7和G++4.7并降级
                 </a>
               
             
@@ -1101,8 +1101,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
+                  <a href="/categories/深度学习/" itemprop="url" rel="index">
+                    <span itemprop="name">深度学习</span>
                   </a>
                 </span>
 
@@ -1113,8 +1113,8 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Linux/经验/" itemprop="url" rel="index">
-                    <span itemprop="name">经验</span>
+                  <a href="/categories/深度学习/cuda/" itemprop="url" rel="index">
+                    <span itemprop="name">cuda</span>
                   </a>
                 </span>
 
@@ -1129,8 +1129,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/09/22/Ubuntu Server 添加、删除和修改用户/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/22/Ubuntu Server 添加、删除和修改用户/" itemprop="commentsCount"></span>
+                <a href="/2015/09/22/caffe安装系列——安装GCC4.7和G++4.7并降级/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/22/caffe安装系列——安装GCC4.7和G++4.7并降级/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -1155,34 +1155,27 @@
       
         
           
-            <h2 id="添加用户"><a href="#添加用户" class="headerlink" title="添加用户"></a>添加用户</h2><ul>
-<li>添加用户的命令如下所示。添加一个用户名为sam的用户，主目录是/home/sam。<figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># -d 指定用户目录</span></div><div class="line"><span class="meta"># -m 创建用户目录（如果该目录不存在）</span></div><div class="line"><span class="meta"># useradd –d /home/sam -m sam</span></div></pre></td></tr></table></figure>
+            <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
+<li>网上关于caffe的安装教程非常多，但是关于每一步是否操作成功，出现了什么样的错误又该如何处理没有给出说明。因为大家的操作系统的环境千差万别，按照博客中的教程一步步的安装，最后可能失败——这是很常见的哦。有的教程甚至省略了一些细节部分，让小白更不知道如何判断每一步是否操作成功，如何处理出现的错误。</li>
+<li>作者花费了很长时间才成功地将caffe装完，期间遇到好多错误，多次重装操作系统。现在将经验写下来，一方面为了和大家分享，讨论；另一方面是为了记录一下下~~~</li>
+</ul>
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>操作系统： <strong><em>Ubuntu 14.04</em></strong><br>GCC/G++:<strong><em>4.7.x</em></strong><br>OpenCV: <strong><em>2.4.11和3.0.0</em></strong><br>Matlab :<strong><em>R2014b(a)</em></strong><br>Python:   <strong><em>2.7</em></strong></p>
+<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><ul>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48649575" target="_blank" rel="external">综述</a></li>
+<li>0.准备工作</li>
+<li>1.<a href="http://blog.csdn.net/xuezhisdc/article/details/48650015" target="_blank" rel="external">安装GCC4.7和G++4.7并降级</a></li>
+<li>2.<a href="http://blog.csdn.net/xuezhisdc/article/details/48650565" target="_blank" rel="external">安装显卡驱动</a></li>
+<li>3.<a href="http://blog.csdn.net/xuezhisdc/article/details/48651003" target="_blank" rel="external">安装cuda和cudnn</a></li>
+<li>4.<a href="http://blog.csdn.net/xuezhisdc/article/details/48691147" target="_blank" rel="external">安装Matlab</a></li>
+<li>5.<a href="http://blog.csdn.net/xuezhisdc/article/details/48691797" target="_blank" rel="external">安装OpenCV</a></li>
+<li>6.<a href="http://blog.csdn.net/xuezhisdc/article/details/48706843" target="_blank" rel="external">安装Python依赖包</a></li>
+<li>7.<a href="http://blog.csdn.net/xuezhisdc/article/details/48707101" target="_blank" rel="external">安装caffe</a></li>
+</ul>
+<h2 id="安装GCC4-7和G-4-7并降级"><a href="#安装GCC4-7和G-4-7并降级" class="headerlink" title="安装GCC4.7和G++4.7并降级"></a>安装GCC4.7和G++4.7并降级</h2><ul>
+<li>注意：需要联网。<br>###1.下载并安装gcc/g++ 4.7.x<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt-get <span class="keyword">install</span> -y gcc<span class="number">-4.7</span></div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> -y g++<span class="number">-4.7</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="修改密码"><a href="#修改密码" class="headerlink" title="修改密码"></a>修改密码</h2><ul>
-<li><p>root用在终端中运行以下命令，为sam用户重新设置密码。</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">sudo passwd sam</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>设置root密码。root用户初始密码是随机的。按照下面的命令可以重新设置固定的root密码。</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">sudo passwd root</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h2><ul>
-<li>root用在终端中运行以下命令，将删除sam，但不删除其主目录。<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">sudo userdel sam</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="添加超级用户权限"><a href="#添加超级用户权限" class="headerlink" title="添加超级用户权限"></a>添加超级用户权限</h2><ul>
-<li><p>修改<code>/etc/sudoers</code>文件，将sam添加到超级用户列表中，可以将sam设置成超级用户。</p>
-<ul>
-<li><p>执行下面的命令，使用vi打开sudoers文件；</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi <span class="regexp">/etc/</span>sudoers</div></pre></td></tr></table></figure>
-</li>
-<li><p>在<code>root ALL=(ALL) ALL</code>后面添加新的一行<code>sam ALL=(ALL) ALL</code> ，保存并退出，添加超级用户权限完成。</p>
-</li>
-<li>sam具有了超级用户权限，就可以具有root所有权限。执行命令式，使用sudo开头，并输入sam的密码，即能使用root权限执行命令。</li>
-</ul>
-</li>
-</ul>
+<h3 id="2-链接gcc-g-实现降级"><a href="#2-链接gcc-g-实现降级" class="headerlink" title="2.链接gcc/g++实现降级"></a>2.链接gcc/g++实现降级</h3><figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">cd</span> <span class="comment">/usr/bin</span></div><div class="line"><span class="comment">sudo</span> <span class="comment">rm</span> <span class="comment">gcc</span></div><div class="line"><span class="comment">sudo</span> <span class="comment">ln</span> <span class="literal">-</span><span class="comment">s</span> <span class="comment">gcc</span><span class="literal">-</span><span class="comment">4</span><span class="string">.</span><span class="comment">7</span> <span class="comment">gcc</span></div><div class="line"><span class="comment">sudo</span> <span class="comment">rm</span> <span class="comment">g</span><span class="literal">+</span><span class="literal">+</span></div><div class="line"><span class="comment">sudo</span> <span class="comment">ln</span> <span class="literal">-</span><span class="comment">s</span> <span class="comment">g</span><span class="literal">+</span><span class="literal">+</span><span class="literal">-</span><span class="comment">4</span><span class="string">.</span><span class="comment">7</span> <span class="comment">g</span><span class="literal">+</span><span class="literal">+</span></div><div class="line"><span class="comment">#</span> <span class="comment">查看是否连接到4</span><span class="string">.</span><span class="comment">7</span><span class="string">.</span><span class="comment">x</span></div><div class="line"><span class="comment">ls</span> <span class="comment">–al</span> <span class="comment">gcc</span> <span class="comment">g</span><span class="literal">+</span><span class="literal">+</span></div><div class="line"><span class="comment">gcc</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">version</span></div><div class="line"><span class="comment">g</span><span class="literal">+</span><span class="literal">+</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">version</span></div></pre></td></tr></table></figure>
 
           
         

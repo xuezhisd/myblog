@@ -488,170 +488,6 @@
             
               
                 
-                <a class="post-title-link" href="/2016/08/12/编码练习——Java-6-类的高级特性/" itemprop="url">
-                  编码练习——Java-6-类的高级特性
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-12T13:05:00+08:00" content="2016-08-12">
-              2016-08-12
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/编程语言/" itemprop="url" rel="index">
-                    <span itemprop="name">编程语言</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/编程语言/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/08/12/编码练习——Java-6-类的高级特性/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/12/编码练习——Java-6-类的高级特性/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="基础代码"><a href="#基础代码" class="headerlink" title="基础代码"></a>基础代码</h2><ul>
-<li><p>定义抽象类</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Fruit</span> </span>&#123;</div><div class="line">	<span class="keyword">public</span> String color;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Fruit</span><span class="params">()</span> </span>&#123;</div><div class="line">		color = <span class="string">"绿色"</span>;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>定义抽象方法</p>
-<ul>
-<li>抽象类：Fruit</li>
-<li>抽象方法：harvest()<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"调用Apple类的harvest()方法的结果是："</span>);</div><div class="line">		Apple apple = <span class="keyword">new</span> Apple();</div><div class="line">		apple.harvest();</div><div class="line">		System.out.println(<span class="string">"嗲用Orange类的harvest()方法的结果是："</span>);</div><div class="line">		Orange orange = <span class="keyword">new</span> Orange();</div><div class="line">		orange.harvest();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Fruit</span> </span>&#123;</div><div class="line">	<span class="keyword">public</span> String color;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Fruit</span><span class="params">()</span> </span>&#123;</div><div class="line">		color = <span class="string">"绿色"</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">harvest</span><span class="params">()</span></span>;	<span class="comment">//抽象方法</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Apple</span> <span class="keyword">extends</span> <span class="title">Fruit</span> </span>&#123;</div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">harvest</span><span class="params">()</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"苹果已经收获！"</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>成员内部类</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OuterClass</span> </span>&#123;</div><div class="line">	innerClass in = <span class="keyword">new</span> innerClass();</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ouf</span><span class="params">()</span> </span>&#123;</div><div class="line">		in.inf();</div><div class="line">	&#125;</div><div class="line">	<span class="class"><span class="keyword">class</span> <span class="title">innerClass</span> </span>&#123;</div><div class="line">		innerClass() &#123;</div><div class="line">		&#125;</div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">inf</span><span class="params">()</span> </span>&#123;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">int</span> y =  <span class="number">0</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> innerClass <span class="title">doit</span><span class="params">()</span> </span>&#123;</div><div class="line">		in.y = <span class="number">4</span>;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">new</span> innerClass();</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		OuterClass out = <span class="keyword">new</span> OuterClass();</div><div class="line">		<span class="comment">//内部类的对象实例化操作必须在外部类或外部类中的非静态方法中实现</span></div><div class="line">		OuterClass.innerClass in = out.doit();</div><div class="line">		OuterClass.innerClass in2 = out.new innerClass(); <span class="comment">//实例化内部类对象</span></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>获取内部类和外部类的引用</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OuterClass</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> x;</div><div class="line">	<span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">Inner</span> </span>&#123;</div><div class="line">		<span class="keyword">private</span> <span class="keyword">int</span> x=<span class="number">9</span>;</div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doit</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</div><div class="line">			x++;	<span class="comment">//调用形参x</span></div><div class="line">			<span class="keyword">this</span>.x++;	<span class="comment">//调用内部类的变量</span></div><div class="line">			OuterClass.<span class="keyword">this</span>.x++;	<span class="comment">//调用外部类的变量x</span></div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>局部内部类</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SellOutClass</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> String name;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">SellOutClass</span><span class="params">()</span> </span>&#123;</div><div class="line">		name = <span class="string">"苹果"</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sell</span><span class="params">(<span class="keyword">int</span> price)</span> </span>&#123;</div><div class="line">		<span class="class"><span class="keyword">class</span> <span class="title">Apple</span></span>&#123;</div><div class="line">			<span class="keyword">int</span> innerPrice=<span class="number">0</span>;</div><div class="line">			<span class="function"><span class="keyword">public</span> <span class="title">Apple</span><span class="params">(<span class="keyword">int</span> price)</span> </span>&#123;</div><div class="line">				innerPrice = price;</div><div class="line">			&#125;</div><div class="line">			<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">price</span><span class="params">()</span> </span>&#123;</div><div class="line">				System.out.println(<span class="string">"现在开始销售"</span> + name);</div><div class="line">				System.out.println(<span class="string">"单价为："</span> + innerPrice + <span class="string">"元"</span>);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		Apple apple = <span class="keyword">new</span> Apple(price);</div><div class="line">		apple.price();</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		SellOutClass sample = <span class="keyword">new</span> SellOutClass();</div><div class="line">		sample.sell(<span class="number">100</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>匿名内部类</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OutString</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		<span class="keyword">final</span> String sourceStr = <span class="string">"吉林省 明日 科技有限公司 —— 编程 词典！"</span>;</div><div class="line">		IStringDeal s = <span class="keyword">new</span> IStringDeal() &#123;	<span class="comment">//匿名内部类</span></div><div class="line">			<span class="meta">@Override</span></div><div class="line">			<span class="function"><span class="keyword">public</span> String <span class="title">filterBlankChar</span><span class="params">()</span> </span>&#123;</div><div class="line">				String convertStr = sourceStr;</div><div class="line">				convertStr = convertStr.replaceAll(<span class="string">" "</span>, <span class="string">""</span>);</div><div class="line">				<span class="keyword">return</span> convertStr;</div><div class="line">			&#125;</div><div class="line">		&#125;;</div><div class="line">		System.out.println(<span class="string">"源字符串："</span> + sourceStr);</div><div class="line">		System.out.println(<span class="string">"转换后的字符串："</span> + s.filterBlankChar());</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">interface</span> <span class="title">IStringDeal</span> </span>&#123; </div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">filterBlankChar</span><span class="params">()</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>静态内部类</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StaticInnerClass</span> </span>&#123;</div><div class="line">	<span class="keyword">static</span> <span class="keyword">int</span> x = <span class="number">100</span>;</div><div class="line">	<span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Inner</span> </span>&#123;</div><div class="line">		<span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">doitInner</span><span class="params">()</span> </span>&#123;</div><div class="line">			System.out.println(<span class="string">"外部类的成员变量"</span>+x);</div><div class="line">		&#125;</div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</div><div class="line">			doitInner();</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>内部类的继承</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OutputInnerClass</span> <span class="keyword">extends</span> <span class="title">ClassA</span>.<span class="title">ClassB</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">OutputInnerClass</span><span class="params">(ClassA a)</span> </span>&#123;</div><div class="line">		a.<span class="keyword">super</span>();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ClassA</span> </span>&#123;</div><div class="line">	<span class="class"><span class="keyword">class</span> <span class="title">ClassB</span> </span>&#123;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>实例 - 静态内部类求极值</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		<span class="keyword">double</span>[] array = <span class="keyword">new</span> <span class="keyword">double</span>[<span class="number">5</span>];</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;array.length; i++) &#123;</div><div class="line">			array[i] = <span class="number">100</span>*Math.random();</div><div class="line">		&#125;</div><div class="line">		System.out.println(<span class="string">"源数组："</span>);</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;array.length; i++) &#123;</div><div class="line">			System.out.print(array[i] + <span class="string">"  "</span>);</div><div class="line">		&#125;</div><div class="line">		System.out.println();</div><div class="line">		System.out.println(<span class="string">"最大值："</span> + MaxMin.getResult(array).getMax());</div><div class="line">		System.out.println(<span class="string">"最小值："</span> + MaxMin.getResult(array).getMin());</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MaxMin</span> </span>&#123;</div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Result</span> </span>&#123;</div><div class="line">		<span class="keyword">private</span> <span class="keyword">double</span> max;</div><div class="line">		<span class="keyword">private</span> <span class="keyword">double</span> min;</div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="title">Result</span><span class="params">(<span class="keyword">double</span> max, <span class="keyword">double</span> min)</span> </span>&#123;</div><div class="line">			<span class="keyword">this</span>.max = max;</div><div class="line">			<span class="keyword">this</span>.min = min;</div><div class="line">		&#125;</div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getMax</span><span class="params">()</span> </span>&#123;</div><div class="line">			<span class="keyword">return</span> max;</div><div class="line">		&#125;</div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getMin</span><span class="params">()</span> </span>&#123;</div><div class="line">			<span class="keyword">return</span> min;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Result <span class="title">getResult</span><span class="params">(<span class="keyword">double</span>[] array)</span> </span>&#123;</div><div class="line">		<span class="keyword">double</span> max = Double.MIN_VALUE;</div><div class="line">		<span class="keyword">double</span> min = Double.MAX_VALUE;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">double</span> i : array) &#123;</div><div class="line">			<span class="keyword">if</span> (i&gt;max)</div><div class="line">				max = i;</div><div class="line">			<span class="keyword">if</span> (i&lt;min)</div><div class="line">				min = i;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">new</span> Result(max, min);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2016/08/12/编码练习——Java-5-接口、继承与多态/" itemprop="url">
                   编码练习——Java-5-接口、继承与多态
                 </a>
@@ -783,6 +619,170 @@
 </li>
 <li><p>实例 - 使用Comparable接口自定义排序</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Employee</span> <span class="keyword">implements</span> <span class="title">Comparable</span>&lt;<span class="title">Employee</span>&gt; </span>&#123;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> id;</div><div class="line">	<span class="keyword">private</span> String name;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> age;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(<span class="keyword">int</span> id, String name, <span class="keyword">int</span> age)</span> </span>&#123;	<span class="comment">// 构造函数</span></div><div class="line">		<span class="keyword">this</span>.id = id;</div><div class="line">		<span class="keyword">this</span>.name = name;</div><div class="line">		<span class="keyword">this</span>.age = age;</div><div class="line">	&#125;</div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(Employee o)</span> </span>&#123;</div><div class="line">		<span class="keyword">if</span> (id &gt; o.id) &#123;</div><div class="line">			<span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (id &lt; o.id) &#123;</div><div class="line">			<span class="keyword">return</span> -<span class="number">1</span>;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</div><div class="line">		StringBuilder sb = <span class="keyword">new</span> StringBuilder();</div><div class="line">		sb.append(<span class="string">"员工的编号："</span> + id + <span class="string">"，"</span>);</div><div class="line">		sb.append(<span class="string">"员工的姓名："</span> + name + <span class="string">"，"</span>);</div><div class="line">		sb.append(<span class="string">"员工的年龄："</span> + age);</div><div class="line">		<span class="keyword">return</span> sb.toString();</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		Employee employee1 = <span class="keyword">new</span> Employee(<span class="number">1000</span>,<span class="string">"学志"</span>, <span class="number">27</span>);</div><div class="line">		Employee employee2 = <span class="keyword">new</span> Employee(<span class="number">1001</span>,<span class="string">"珊妮"</span>, <span class="number">27</span>);</div><div class="line">		System.out.println(<span class="string">"比较结果："</span> + employee1.compareTo(employee2));</div><div class="line">		System.out.println(<span class="string">"员工信息："</span> + employee1.toString());</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/08/12/编码练习——Java-6-类的高级特性/" itemprop="url">
+                  编码练习——Java-6-类的高级特性
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-12T13:05:00+08:00" content="2016-08-12">
+              2016-08-12
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程语言/" itemprop="url" rel="index">
+                    <span itemprop="name">编程语言</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程语言/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/12/编码练习——Java-6-类的高级特性/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/12/编码练习——Java-6-类的高级特性/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="基础代码"><a href="#基础代码" class="headerlink" title="基础代码"></a>基础代码</h2><ul>
+<li><p>定义抽象类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Fruit</span> </span>&#123;</div><div class="line">	<span class="keyword">public</span> String color;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Fruit</span><span class="params">()</span> </span>&#123;</div><div class="line">		color = <span class="string">"绿色"</span>;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>定义抽象方法</p>
+<ul>
+<li>抽象类：Fruit</li>
+<li>抽象方法：harvest()<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"调用Apple类的harvest()方法的结果是："</span>);</div><div class="line">		Apple apple = <span class="keyword">new</span> Apple();</div><div class="line">		apple.harvest();</div><div class="line">		System.out.println(<span class="string">"嗲用Orange类的harvest()方法的结果是："</span>);</div><div class="line">		Orange orange = <span class="keyword">new</span> Orange();</div><div class="line">		orange.harvest();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Fruit</span> </span>&#123;</div><div class="line">	<span class="keyword">public</span> String color;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Fruit</span><span class="params">()</span> </span>&#123;</div><div class="line">		color = <span class="string">"绿色"</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">harvest</span><span class="params">()</span></span>;	<span class="comment">//抽象方法</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Apple</span> <span class="keyword">extends</span> <span class="title">Fruit</span> </span>&#123;</div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">harvest</span><span class="params">()</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"苹果已经收获！"</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>成员内部类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OuterClass</span> </span>&#123;</div><div class="line">	innerClass in = <span class="keyword">new</span> innerClass();</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ouf</span><span class="params">()</span> </span>&#123;</div><div class="line">		in.inf();</div><div class="line">	&#125;</div><div class="line">	<span class="class"><span class="keyword">class</span> <span class="title">innerClass</span> </span>&#123;</div><div class="line">		innerClass() &#123;</div><div class="line">		&#125;</div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">inf</span><span class="params">()</span> </span>&#123;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">int</span> y =  <span class="number">0</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> innerClass <span class="title">doit</span><span class="params">()</span> </span>&#123;</div><div class="line">		in.y = <span class="number">4</span>;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">new</span> innerClass();</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		OuterClass out = <span class="keyword">new</span> OuterClass();</div><div class="line">		<span class="comment">//内部类的对象实例化操作必须在外部类或外部类中的非静态方法中实现</span></div><div class="line">		OuterClass.innerClass in = out.doit();</div><div class="line">		OuterClass.innerClass in2 = out.new innerClass(); <span class="comment">//实例化内部类对象</span></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>获取内部类和外部类的引用</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OuterClass</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> x;</div><div class="line">	<span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">Inner</span> </span>&#123;</div><div class="line">		<span class="keyword">private</span> <span class="keyword">int</span> x=<span class="number">9</span>;</div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doit</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</div><div class="line">			x++;	<span class="comment">//调用形参x</span></div><div class="line">			<span class="keyword">this</span>.x++;	<span class="comment">//调用内部类的变量</span></div><div class="line">			OuterClass.<span class="keyword">this</span>.x++;	<span class="comment">//调用外部类的变量x</span></div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>局部内部类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SellOutClass</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> String name;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">SellOutClass</span><span class="params">()</span> </span>&#123;</div><div class="line">		name = <span class="string">"苹果"</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sell</span><span class="params">(<span class="keyword">int</span> price)</span> </span>&#123;</div><div class="line">		<span class="class"><span class="keyword">class</span> <span class="title">Apple</span></span>&#123;</div><div class="line">			<span class="keyword">int</span> innerPrice=<span class="number">0</span>;</div><div class="line">			<span class="function"><span class="keyword">public</span> <span class="title">Apple</span><span class="params">(<span class="keyword">int</span> price)</span> </span>&#123;</div><div class="line">				innerPrice = price;</div><div class="line">			&#125;</div><div class="line">			<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">price</span><span class="params">()</span> </span>&#123;</div><div class="line">				System.out.println(<span class="string">"现在开始销售"</span> + name);</div><div class="line">				System.out.println(<span class="string">"单价为："</span> + innerPrice + <span class="string">"元"</span>);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		Apple apple = <span class="keyword">new</span> Apple(price);</div><div class="line">		apple.price();</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		SellOutClass sample = <span class="keyword">new</span> SellOutClass();</div><div class="line">		sample.sell(<span class="number">100</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>匿名内部类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OutString</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		<span class="keyword">final</span> String sourceStr = <span class="string">"吉林省 明日 科技有限公司 —— 编程 词典！"</span>;</div><div class="line">		IStringDeal s = <span class="keyword">new</span> IStringDeal() &#123;	<span class="comment">//匿名内部类</span></div><div class="line">			<span class="meta">@Override</span></div><div class="line">			<span class="function"><span class="keyword">public</span> String <span class="title">filterBlankChar</span><span class="params">()</span> </span>&#123;</div><div class="line">				String convertStr = sourceStr;</div><div class="line">				convertStr = convertStr.replaceAll(<span class="string">" "</span>, <span class="string">""</span>);</div><div class="line">				<span class="keyword">return</span> convertStr;</div><div class="line">			&#125;</div><div class="line">		&#125;;</div><div class="line">		System.out.println(<span class="string">"源字符串："</span> + sourceStr);</div><div class="line">		System.out.println(<span class="string">"转换后的字符串："</span> + s.filterBlankChar());</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">interface</span> <span class="title">IStringDeal</span> </span>&#123; </div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">filterBlankChar</span><span class="params">()</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>静态内部类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StaticInnerClass</span> </span>&#123;</div><div class="line">	<span class="keyword">static</span> <span class="keyword">int</span> x = <span class="number">100</span>;</div><div class="line">	<span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Inner</span> </span>&#123;</div><div class="line">		<span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">doitInner</span><span class="params">()</span> </span>&#123;</div><div class="line">			System.out.println(<span class="string">"外部类的成员变量"</span>+x);</div><div class="line">		&#125;</div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</div><div class="line">			doitInner();</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>内部类的继承</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OutputInnerClass</span> <span class="keyword">extends</span> <span class="title">ClassA</span>.<span class="title">ClassB</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">OutputInnerClass</span><span class="params">(ClassA a)</span> </span>&#123;</div><div class="line">		a.<span class="keyword">super</span>();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ClassA</span> </span>&#123;</div><div class="line">	<span class="class"><span class="keyword">class</span> <span class="title">ClassB</span> </span>&#123;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>实例 - 静态内部类求极值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		<span class="keyword">double</span>[] array = <span class="keyword">new</span> <span class="keyword">double</span>[<span class="number">5</span>];</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;array.length; i++) &#123;</div><div class="line">			array[i] = <span class="number">100</span>*Math.random();</div><div class="line">		&#125;</div><div class="line">		System.out.println(<span class="string">"源数组："</span>);</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;array.length; i++) &#123;</div><div class="line">			System.out.print(array[i] + <span class="string">"  "</span>);</div><div class="line">		&#125;</div><div class="line">		System.out.println();</div><div class="line">		System.out.println(<span class="string">"最大值："</span> + MaxMin.getResult(array).getMax());</div><div class="line">		System.out.println(<span class="string">"最小值："</span> + MaxMin.getResult(array).getMin());</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MaxMin</span> </span>&#123;</div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Result</span> </span>&#123;</div><div class="line">		<span class="keyword">private</span> <span class="keyword">double</span> max;</div><div class="line">		<span class="keyword">private</span> <span class="keyword">double</span> min;</div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="title">Result</span><span class="params">(<span class="keyword">double</span> max, <span class="keyword">double</span> min)</span> </span>&#123;</div><div class="line">			<span class="keyword">this</span>.max = max;</div><div class="line">			<span class="keyword">this</span>.min = min;</div><div class="line">		&#125;</div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getMax</span><span class="params">()</span> </span>&#123;</div><div class="line">			<span class="keyword">return</span> max;</div><div class="line">		&#125;</div><div class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getMin</span><span class="params">()</span> </span>&#123;</div><div class="line">			<span class="keyword">return</span> min;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Result <span class="title">getResult</span><span class="params">(<span class="keyword">double</span>[] array)</span> </span>&#123;</div><div class="line">		<span class="keyword">double</span> max = Double.MIN_VALUE;</div><div class="line">		<span class="keyword">double</span> min = Double.MAX_VALUE;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">double</span> i : array) &#123;</div><div class="line">			<span class="keyword">if</span> (i&gt;max)</div><div class="line">				max = i;</div><div class="line">			<span class="keyword">if</span> (i&lt;min)</div><div class="line">				min = i;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">new</span> Result(max, min);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
 
