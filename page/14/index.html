@@ -207,7 +207,7 @@
         <li class="menu-item menu-item-deeplearn">
           <a href="/DeepLearning" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-align-justify"></i> <br />
             
             深度学习
           </a>
@@ -217,7 +217,7 @@
         <li class="menu-item menu-item-bigdata">
           <a href="/BigData" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-database"></i> <br />
             
             大数据
           </a>
@@ -227,7 +227,7 @@
         <li class="menu-item menu-item-imagepro">
           <a href="/ImageProcessing" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-image"></i> <br />
             
             图像处理
           </a>
@@ -237,7 +237,7 @@
         <li class="menu-item menu-item-ml">
           <a href="/MachineLearning" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-maxcdn"></i> <br />
             
             机器学习
           </a>
@@ -404,15 +404,29 @@
       
         
           
-          说明
-网上关于caffe的安装教程非常多，但是关于每一步是否操作成功，出现了什么样的错误又该如何处理没有给出说明。因为大家的操作系统的环境千差万别，按照博客中的教程一步步的安装，最后可能失败——这是很
-          ...
+            <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
+<li>网上关于caffe的安装教程非常多，但是关于每一步是否操作成功，出现了什么样的错误又该如何处理没有给出说明。因为大家的操作系统的环境千差万别，按照博客中的教程一步步的安装，最后可能失败——这是很常见的哦。有的教程甚至省略了一些细节部分，让小白更不知道如何判断每一步是否操作成功，如何处理出现的错误。</li>
+<li>作者花费了很长时间才成功地将caffe装完，期间遇到好多错误，多次重装操作系统。现在将经验写下来，一方面为了和大家分享，讨论；另一方面是为了记录一下下~~~</li>
+</ul>
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>操作系统： <strong><em>Ubuntu 14.04</em></strong><br>GCC/G++:<strong><em>4.7.x</em></strong><br>OpenCV: <strong><em>2.4.11和3.0.0</em></strong><br>Matlab :<strong><em>R2014b(a)</em></strong><br>Python:   <strong><em>2.7</em></strong></p>
+<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><ul>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48649575" target="_blank" rel="external">综述</a></li>
+<li>0.准备工作</li>
+<li>1.<a href="http://blog.csdn.net/xuezhisdc/article/details/48650015" target="_blank" rel="external">安装GCC4.7和G++4.7并降级</a></li>
+<li>2.<a href="http://blog.csdn.net/xuezhisdc/article/details/48650565" target="_blank" rel="external">安装显卡驱动</a></li>
+<li>3.<a href="http://blog.csdn.net/xuezhisdc/article/details/48651003" target="_blank" rel="external">安装cuda和cudnn</a></li>
+<li>4.<a href="http://blog.csdn.net/xuezhisdc/article/details/48691147" target="_blank" rel="external">安装Matlab</a></li>
+<li>5.<a href="http://blog.csdn.net/xuezhisdc/article/details/48691797" target="_blank" rel="external">安装OpenCV</a></li>
+<li>6.<a href="http://blog.csdn.net/xuezhisdc/article/details/48706843" target="_blank" rel="external">安装Python依赖包</a></li>
+<li>7.<a href="http://blog.csdn.net/xuezhisdc/article/details/48707101" target="_blank" rel="external">安装caffe</a></li>
+</ul>
+<h2 id="安装GCC4-7和G-4-7并降级"><a href="#安装GCC4-7和G-4-7并降级" class="headerlink" title="安装GCC4.7和G++4.7并降级"></a>安装GCC4.7和G++4.7并降级</h2><ul>
+<li>注意：需要联网。<br>###1.下载并安装gcc/g++ 4.7.x<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt-get <span class="keyword">install</span> -y gcc<span class="number">-4.7</span></div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> -y g++<span class="number">-4.7</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="2-链接gcc-g-实现降级"><a href="#2-链接gcc-g-实现降级" class="headerlink" title="2.链接gcc/g++实现降级"></a>2.链接gcc/g++实现降级</h3><figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">cd</span> <span class="comment">/usr/bin</span></div><div class="line"><span class="comment">sudo</span> <span class="comment">rm</span> <span class="comment">gcc</span></div><div class="line"><span class="comment">sudo</span> <span class="comment">ln</span> <span class="literal">-</span><span class="comment">s</span> <span class="comment">gcc</span><span class="literal">-</span><span class="comment">4</span><span class="string">.</span><span class="comment">7</span> <span class="comment">gcc</span></div><div class="line"><span class="comment">sudo</span> <span class="comment">rm</span> <span class="comment">g</span><span class="literal">+</span><span class="literal">+</span></div><div class="line"><span class="comment">sudo</span> <span class="comment">ln</span> <span class="literal">-</span><span class="comment">s</span> <span class="comment">g</span><span class="literal">+</span><span class="literal">+</span><span class="literal">-</span><span class="comment">4</span><span class="string">.</span><span class="comment">7</span> <span class="comment">g</span><span class="literal">+</span><span class="literal">+</span></div><div class="line"><span class="comment">#</span> <span class="comment">查看是否连接到4</span><span class="string">.</span><span class="comment">7</span><span class="string">.</span><span class="comment">x</span></div><div class="line"><span class="comment">ls</span> <span class="comment">–al</span> <span class="comment">gcc</span> <span class="comment">g</span><span class="literal">+</span><span class="literal">+</span></div><div class="line"><span class="comment">gcc</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">version</span></div><div class="line"><span class="comment">g</span><span class="literal">+</span><span class="literal">+</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">version</span></div></pre></td></tr></table></figure>
 
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/09/22/caffe安装系列——安装GCC4.7和G++4.7并降级/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
       
     </div>
@@ -542,15 +556,90 @@
       
         
           
-          说明
-网上关于caffe的安装教程非常多，但是关于每一步是否操作成功，出现了什么样的错误又该如何处理没有给出说明。因为大家的操作系统的环境千差万别，按照博客中的教程一步步的安装，最后可能失败——这是很
-          ...
+            <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
+<li>网上关于caffe的安装教程非常多，但是关于每一步是否操作成功，出现了什么样的错误又该如何处理没有给出说明。因为大家的操作系统的环境千差万别，按照博客中的教程一步步的安装，最后可能失败——这是很常见的哦。有的教程甚至省略了一些细节部分，让小白更不知道如何判断每一步是否操作成功，如何处理出现的错误。</li>
+<li>作者花费了很长时间才成功地将caffe装完，期间遇到好多错误，多次重装操作系统。现在将经验写下来，一方面为了和大家分享，讨论；另一方面是为了记录一下下~~~</li>
+</ul>
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>操作系统： <strong><em>Ubuntu 14.04(64bit)</em></strong><br>GCC/G++:<strong><em>4.7.x</em></strong><br>OpenCV: <strong><em>2.4.11和3.0.0</em></strong><br>Matlab :<strong><em>R2014b(a)</em></strong><br>Python:   <strong><em>2.7</em></strong><br>显卡：Telsa K40m &amp; Telsa K20xm</p>
+<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><ul>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48649575" target="_blank" rel="external">综述</a></li>
+<li>0.准备工作</li>
+<li>1.<a href="http://blog.csdn.net/xuezhisdc/article/details/48650015" target="_blank" rel="external">安装GCC4.7和G++4.7并降级</a></li>
+<li>2.<a href="http://blog.csdn.net/xuezhisdc/article/details/48650565" target="_blank" rel="external">安装显卡驱动</a></li>
+<li>3.<a href="http://blog.csdn.net/xuezhisdc/article/details/48651003" target="_blank" rel="external">安装cuda和cudnn</a></li>
+<li>4.<a href="http://blog.csdn.net/xuezhisdc/article/details/48691147" target="_blank" rel="external">安装Matlab</a></li>
+<li>5.<a href="http://blog.csdn.net/xuezhisdc/article/details/48691797" target="_blank" rel="external">安装OpenCV</a></li>
+<li>6.<a href="http://blog.csdn.net/xuezhisdc/article/details/48706843" target="_blank" rel="external">安装Python依赖包</a></li>
+<li>7.<a href="http://blog.csdn.net/xuezhisdc/article/details/48707101" target="_blank" rel="external">安装caffe</a></li>
+</ul>
+<h2 id="安装cuda"><a href="#安装cuda" class="headerlink" title="安装cuda"></a>安装cuda</h2><ul>
+<li>参考<a href="http://blog.csdn.net/xuezhisdc/article/details/47075401" target="_blank" rel="external">《Ubuntu-安装-cuda7.0-单显卡-超详细教程》</a> <a href="http://ouxinyu.github.io/Blogs/20140723001.html" target="_blank" rel="external">《Caffe + Ubuntu 15.04 + CUDA 7.0 新手安装配置指南》</a></li>
+<li>注意1：安装cuda可以通过二进制安装包安装，也可以通过deb包在线安装。本文使用二进制安装包安装。</li>
+<li><p>注意2：由于前面已经安装了<strong>显卡驱动</strong>，因此关于显卡驱动的选项，选择<strong>no</strong>，即不再安装显卡驱动。</p>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># 安装依赖库</span></div><div class="line">apt-<span class="keyword">get</span> install freeglut3-dev build-essential libx11-dev libxmu-dev libgl1-mesa-dev libglu1-mesa libglu1-mesa-dev libxi-dev </div><div class="line"><span class="meta"># 添加执行权限,并安装。注意不要重复安装显卡驱动。</span></div><div class="line"><span class="meta"># cuda**run根据自己下载的版本更改名称。</span></div><div class="line"><span class="meta"># 选择安装Cuda Samples，后边还会编译它。</span></div><div class="line"><span class="meta"># 选择创建软连接。cuda -&gt; cuda7.0</span></div><div class="line">stop lightdm</div><div class="line">chmod a+x cuda_7<span class="number">.0</span><span class="number">.28</span>_linux.run</div><div class="line">sudo ./cuda_7<span class="number">.0</span><span class="number">.28</span>_linux.run</div></pre></td></tr></table></figure>
+</li>
+<li><p>修改/etc/profile文件，将cuda添加到环境变量中。【注：关于这一点，安装完cuda之后，命令行中有提示！！！细心看一下】</p>
+</li>
+<li>将/usr/local/cuda-7.0/bin添加到环境变量<strong>PATH</strong>路径中，这样一来，就可以在任何路径下调用cuda相关的可执行文件了。</li>
+<li>将/usr/local/cuda7.0/lib64添加环境变量<strong>LD_LIBRARY_PATH </strong>中，作为共享库使用。这样一来，后面编译Cuda Samples 和OpenCV时，就不会提示找不到库的错误了。</li>
+<li><p>操作1：将以下内容添加到文件<strong>/etc/profile</strong>的最后面，保存后，执行命令<code>source /etc/profile</code>，使配置生效。</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">PATH=<span class="regexp">/usr/local</span><span class="regexp">/cuda/bin</span><span class="symbol">:</span><span class="variable">$PATH</span> </div><div class="line">export PATH </div><div class="line">LD_LIBRARY_PATH=<span class="variable">$LD_LIBRARY_PATH</span><span class="symbol">:/usr/local/cuda/lib64</span></div><div class="line">export LD<span class="number">_</span> LIBRARY_PATH</div></pre></td></tr></table></figure>
+</li>
+<li><p>操作2：在目录<code>/etc/ld.so.conf.d/</code>下新建文件 <strong>cuda.conf</strong>，并添加如下内容。然后执行命令<code>sudo ldconfig</code>，使配置生效。</p>
+</li>
+<li><p>解释：下面第一行是上面提到的cuda库文件路径，后面3行是后来综合调试错误和其它博文总结得到的。所以，最好加上，省的出错哦。。。</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">/usr/local/cuda/lib64</div><div class="line">/<span class="class"><span class="keyword">lib</span></span></div><div class="line">/usr/<span class="class"><span class="keyword">lib</span></span></div><div class="line">/usr/lib32</div></pre></td></tr></table></figure>
+</li>
+<li><p>检查cuda是否配置好,在命令行中执行以下命令。</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#输入以下命令，检查是否配置好。如下图所示，说明安装好。</span></div><div class="line">nvcc <span class="comment">--version</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="http://img.blog.csdn.net/20150922143811428" alt="这里写图片描述"></p>
+<h2 id="安装CUDA-SAMPLES"><a href="#安装CUDA-SAMPLES" class="headerlink" title="安装CUDA SAMPLES"></a>安装CUDA SAMPLES</h2><ul>
+<li><strong><em>为什么安装cuda samples?</em></strong></li>
+<li><p>一方面为了后面学习cuda使用，另一方面，可以检验cuda是否真的安装成功。如果cuda samples全部编译通过，没有一个Error（Warning忽略），那么就说明成功地安装了cuda。但如果没有通过编译，或者虽然最后一行显示<strong><em>PASS</em></strong>，但是编译过程中有ERROR，请自行GOOGLE解决之后，再向下安装，否则<strong>失之毫厘谬以千里</strong>！！！</p>
+</li>
+<li><p>make时，请使用<code>make -j</code>，可以最大限度的使用cpu编译，加快编译的速度。</p>
+</li>
+</ul>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># 切换到cuda-samples所在目录</span></div><div class="line"><span class="meta"># 注意，换成自己的路径</span></div><div class="line">cd /home/xuezhisd/NVIDIA_CUDA<span class="number">-7.0</span>_Samples</div><div class="line"><span class="meta"># 编译 make （安装命令 sudo apt-get install cmake)</span></div><div class="line">make –j </div><div class="line"><span class="meta"># 编译完毕，切换release目录</span></div><div class="line">cd ./bin/x86_64/linux/release</div><div class="line"><span class="meta"># 检验是否成功</span></div><div class="line"><span class="meta"># 运行实例 ./deviceQuery</span></div><div class="line">./deviceQuery </div><div class="line"><span class="meta"># 可以认真看看自行结果，它显示了你的NVIDIA显卡的相关信息。</span></div></pre></td></tr></table></figure>
+<ul>
+<li>./deviceQuery执行结果如下图所示：<br><img src="http://img.blog.csdn.net/20160829100835693" alt="这里写图片描述"></li>
+<li><strong><em>一个Error例子</em></strong></li>
+<li>安装CUDA SAMPLES的过程中，可能会出现错误“/usr/bin/ld: cannot find –lGL”</li>
+<li><p>通过Google搜索，找到以下解决方法：</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">locate libGL.so</div><div class="line"><span class="comment"># 返回结果</span></div><div class="line"><span class="comment">#/usr/lib/i386-linux-gnu/mesa/libGL.so.1</span></div><div class="line"><span class="comment">#/usr/lib/i386-linux-gnu/mesa/libGL.so.1.2.0</span></div><div class="line">sudo ln -s /usr/<span class="class"><span class="keyword">lib</span>/<span class="title">i386</span>-<span class="title">linux</span>-<span class="title">gnu</span>/<span class="title">mesa</span>/<span class="title">libGL</span>.<span class="title">so</span>.1.2.0 /<span class="title">usr</span>/<span class="title">lib</span>/<span class="title">libGL</span>.<span class="title">so</span></span></div></pre></td></tr></table></figure>
+</li>
+<li><p>但是，依然不能编译通过。忽略进行后面的步骤，依然会提示一些<em>.so文件找不到。最终在OpenCV那里完全无法再安装了，返回卸掉**</em>卸载NVIDIA DRIVER 和cuda，重新安装驱动和cuda<em>*</em>，成功地编译cuda samples。</p>
+</li>
+<li><p>安装的驱动的方法是在命令行中执行：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo <span class="keyword">stop</span> lightdm </div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> nvidia<span class="number">-346</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>然后将libGLobal.so链接到nvidia提供的libGLobal.so.346.82。后面编译cuda samples和opencv过程中顺利通过。</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo ln –s /usr/<span class="class"><span class="keyword">lib</span>/<span class="title">nvidia</span>-346-<span class="title">updates</span>/<span class="title">libGL</span>.<span class="title">so</span>.346.82 /<span class="title">usr</span>/<span class="title">lib</span>/<span class="title">libGL</span>.<span class="title">so</span></span></div></pre></td></tr></table></figure>
+</li>
+<li><p>即使用NVIDIA提供的libGL.so可以完成编译，不再报错。</p>
+</li>
+<li><p>注意：上面这个错误，就是在先装显卡驱动，后装gcc4.7过程遇到的。所以，请先安装gcc4.7和g++4.7，然后再安装NVDIA显卡驱动，再安装cuda。</p>
+</li>
+</ul>
+<h2 id="安装cudnn"><a href="#安装cudnn" class="headerlink" title="安装cudnn"></a>安装cudnn</h2><ul>
+<li><p>安装cudnn比较简单，简单地说，就是复制几个文件：库文件和头文件。将cudnn的头文件复制到cuda安装路径的include路径下，将cudnn的库文件复制到cuda安装路径的lib64路径下。</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#解压文件</span></div><div class="line">tar -zxvf cudnn-<span class="number">6.5</span>-linux-x64-v2.tgz</div><div class="line"><span class="comment">#切换路径</span></div><div class="line">cd cudnn-<span class="number">6.5</span>-linux-x64-v2</div><div class="line"><span class="comment">#复制lib文件到cuda安装路径下的lib64/</span></div><div class="line">sudo cp <span class="class"><span class="keyword">lib</span>* /<span class="title">usr</span>/<span class="title">local</span>/<span class="title">cuda</span>/<span class="title">lib64</span>/</span></div><div class="line"><span class="comment">#复制头文件</span></div><div class="line">sudo cp cudnn.h /usr/local/cuda/<span class="keyword">include</span>/</div><div class="line"></div><div class="line"><span class="comment">#更新软连接</span></div><div class="line">cd /usr/local/cuda/lib64/ </div><div class="line">sudo rm -rf libcudnn.so libcudnn.so.<span class="number">6.5</span> </div><div class="line">sudo ln -s libcudnn.so.<span class="number">6.5</span>.<span class="number">48</span> libcudnn.so.<span class="number">6.5</span> </div><div class="line">sudo ln -s libcudnn.so.<span class="number">6.5</span> libcudnn.so</div></pre></td></tr></table></figure>
+</li>
+<li><p>到目前为止，cudnn已经安装完了。但是，是否安装成功了呢，还得通过下面的cudnn sample测试。</p>
+<figure class="highlight glsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#运行cudnn-sample-v2</span></div><div class="line">tar –zxvf cudnn-<span class="keyword">sample</span>-v2.tgz</div><div class="line">cd cudnn-<span class="keyword">sample</span>-v2</div><div class="line">make</div><div class="line">./mnistCUDNN</div><div class="line"><span class="meta">#改程序运行成功，说明cudnn安装成功。</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>此时可能出现错误：<strong><em>./mnist CUDNN: error while loading shared libraries: libcudart.so.6.5: cannot ope</em></strong></p>
+</li>
+<li><p>解决方法参考 <a href="https://groups.google.com/forum/#!topic/caffe-users/dcZrE3-60mc" target="_blank" rel="external">https://groups.google.com/forum/#!topic/caffe-users/dcZrE3-60mc</a></p>
+</li>
+<li><p>方法1：在命令行中执行<br><code>export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64</code></p>
+</li>
+<li>方法2：在/etc/profile文件最后添加<code>export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64</code>, 并在命令行中执行<code>source /etc/profile</code>。</li>
+</ul>
 
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/09/22/caffe安装系列——安装cuda和cudnn/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
       
     </div>
@@ -668,16 +757,36 @@
       
         
           
-          说明
-在Ubuntu Server 14.04上安装了xfce4桌面环境，但是却发现在终端中Tab键不能自动补齐(但是Ctrl + I 仍然可以用)。
-出现这种情况的原因是，由于Tab键的功能被窗口快
-          ...
+            <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
+<li>在Ubuntu Server 14.04上安装了xfce4桌面环境，但是却发现<strong><em>在终端中Tab键不能自动补齐</em></strong>(但是<strong><em>Ctrl + I 仍然可以用</em></strong>)。</li>
+<li>出现这种情况的原因是，由于Tab键的功能被窗口快捷键占用，从而Tab键不起作用。即，快捷键冲突了。</li>
+<li>解决方法有两种，其实本质相同。不过就是，一种方法是<strong>在图形界面中更改</strong>，另一种方法是<strong>直接修改配置文件</strong>。</li>
+</ul>
+<h2 id="1-在命令行中修改配置文件的方法"><a href="#1-在命令行中修改配置文件的方法" class="headerlink" title="1. 在命令行中修改配置文件的方法"></a>1. 在命令行中修改配置文件的方法</h2><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#切换路径</span></div><div class="line">cd ~/.config<span class="meta-keyword">/xfce4/</span>xfconf<span class="meta-keyword">/xfce-perchannel-xml/</span></div><div class="line"><span class="meta">#修改文件（快捷键配置文件）</span></div><div class="line">vi xfce4-keyboard-shortcuts.xml</div></pre></td></tr></table></figure>
+<ul>
+<li><p>找到下面这一行</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="keyword">property</span> <span class="built_in">name</span>=<span class="string">"&amp;lt;Super&amp;gt;Tab"</span> type=<span class="string">"string"</span> value=<span class="string">"switch_window_key"</span>/&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>改为</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="keyword">property</span> <span class="built_in">name</span>=<span class="string">"&amp;lt;Super&amp;gt;Tab"</span> type=<span class="string">"empty"</span>/&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>如下图所示<br><img src="http://img.blog.csdn.net/20150922213350275" alt="这里写图片描述"></p>
+</li>
+<li><p>修改完配置文件，<strong><code>重启电脑</code></strong>，使配置文件生效。</p>
+</li>
+</ul>
+<h2 id="2-在图形窗口中修改的方法"><a href="#2-在图形窗口中修改的方法" class="headerlink" title="2. 在图形窗口中修改的方法"></a>2. 在图形窗口中修改的方法</h2><ul>
+<li><p>菜单栏 → 设置 → 窗口设置 。打开<strong>窗口设置</strong>对话框。</p>
+<p><img src="http://img.blog.csdn.net/20150922223218078" width="350" height="600" alt="图片名称" align="center"></p>
+</li>
+<li><p>在窗口管理器中选择快捷键选项卡（Key） →  Switch window for same<br>application </p>
+</li>
+<li>将其快捷键清空，关闭窗口管理器。</li>
+<li>这种方法的好处：不需要重启，即可以解决问题。</li>
+</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p> <a href="http://blog.163.com/thinki_cao/blog/static/83944875201303081111436/" target="_blank" rel="external">《在VNC远程桌面环境Xfce4中Tab键失效的解决方法 》</a><br> <a href="http://ubuntuforums.org/archive/index.php/t-1771058.html" target="_blank" rel="external">http://ubuntuforums.org/archive/index.php/t-1771058.html</a><br><a href="https://answers.launchpad.net/ubuntu/+source/xfce4/+question/206191" target="_blank" rel="external">https://answers.launchpad.net/ubuntu/+source/xfce4/+question/206191</a></p>
 
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/09/22/在VNC中Xfce4中Tab键失效的解决方法/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
       
     </div>
@@ -807,17 +916,15 @@
       
         
           
+            <blockquote>
+</blockquote>
+<ul>
+<li>shell判断文件,目录是否存在或者具有权限<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/sh  </span></div><div class="line">  </div><div class="line">myPath=<span class="string">"/var/log/httpd/"</span>  </div><div class="line">myFile=<span class="string">"/var /log/httpd/access.log"</span>  </div><div class="line">  </div><div class="line"><span class="comment">#这里的-x 参数判断$myPath是否存在并且是否具有可执行权限  </span></div><div class="line"><span class="keyword">if</span> [ ! -x <span class="string">"<span class="variable">$myPath</span>"</span>]; <span class="keyword">then</span>  </div><div class="line">　　mkdir <span class="string">"<span class="variable">$myPath</span>"</span>  </div><div class="line"><span class="keyword">fi</span>  </div><div class="line"></div><div class="line"><span class="comment">#这里的-d 参数判断$myPath是否存在  </span></div><div class="line"><span class="keyword">if</span> [ ! <span class="_">-d</span> <span class="string">"<span class="variable">$myPath</span>"</span>]; <span class="keyword">then</span>  </div><div class="line">　　mkdir <span class="string">"<span class="variable">$myPath</span>"</span>  </div><div class="line"><span class="keyword">fi</span>  </div><div class="line">  </div><div class="line"><span class="comment">#这里的-f参数判断$myFile是否存在  </span></div><div class="line"><span class="keyword">if</span> [ ! <span class="_">-f</span> <span class="string">"<span class="variable">$myFile</span>"</span> ]; <span class="keyword">then</span>  </div><div class="line">　　touch <span class="string">"<span class="variable">$myFile</span>"</span>  </div><div class="line"><span class="keyword">fi</span>  </div><div class="line">  </div><div class="line"><span class="comment">#其他参数还有-n,-n是判断一个变量是否是否有值  </span></div><div class="line"><span class="keyword">if</span> [ ! -n <span class="string">"<span class="variable">$myVar</span>"</span> ]; <span class="keyword">then</span>  </div><div class="line">　　<span class="built_in">echo</span> <span class="string">"<span class="variable">$myVar</span> is empty"</span>  </div><div class="line">　　<span class="built_in">exit</span> 0  </div><div class="line"><span class="keyword">fi</span>  </div><div class="line">  </div><div class="line"><span class="comment">#两个变量判断是否相等  </span></div><div class="line"><span class="keyword">if</span> [ <span class="string">"<span class="variable">$var1</span>"</span> = <span class="string">"<span class="variable">$var2</span>"</span> ]; <span class="keyword">then</span>  </div><div class="line">　　<span class="built_in">echo</span> <span class="string">'$var1 eq $var2'</span>  </div><div class="line"><span class="keyword">else</span>  </div><div class="line">　　<span class="built_in">echo</span> <span class="string">'$var1 not eq $var2'</span>  </div><div class="line"><span class="keyword">fi</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>转载地址：<a href="http://www.cnblogs.com/platero/p/4021561.html" target="_blank" rel="external">http://www.cnblogs.com/platero/p/4021561.html</a></p>
+
           
-
-
-shell判断文件,目录是否存在或者具有权限1234567891011121314151617181920212223242526272829303132#!/bin/sh    myPath=
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/09/22/Linux shell判断文件和文件夹是否存在/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
         
       
     </div>
@@ -865,8 +972,8 @@ shell判断文件,目录是否存在或者具有权限12345678910111213141516171
             
               
                 
-                <a class="post-title-link" href="/2015/09/21/使用Putty无法远程登录，显示服务器拒绝连接/" itemprop="url">
-                  使用Putty无法远程登录，显示服务器拒绝连接
+                <a class="post-title-link" href="/2015/09/21/Putty使用设置/" itemprop="url">
+                  Putty使用设置
                 </a>
               
             
@@ -921,8 +1028,8 @@ shell判断文件,目录是否存在或者具有权限12345678910111213141516171
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/09/21/使用Putty无法远程登录，显示服务器拒绝连接/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/21/使用Putty无法远程登录，显示服务器拒绝连接/" itemprop="commentsCount"></span>
+                <a href="/2015/09/21/Putty使用设置/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/21/Putty使用设置/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -947,18 +1054,18 @@ shell判断文件,目录是否存在或者具有权限12345678910111213141516171
       
         
           
-          putty连接不到linux的原因总结为以下几种情况。
+            <h2 id="Putty中文乱码问题"><a href="#Putty中文乱码问题" class="headerlink" title="Putty中文乱码问题"></a>Putty中文乱码问题</h2><ul>
+<li>使用Putty的时候，中文字符显示为乱码，如何解决。方法就是使用UTF-8传输协议。</li>
+<li>参考<a href="http://jingyan.baidu.com/article/3aed632e5f00ae701080913a.html" target="_blank" rel="external">《怎样解决putty终端乱码的方法》</a><br>##Putty配色问题</li>
+<li>Putty的文件夹显示为深蓝色，颜色太暗，看不清楚。可以设置为ANSI Blue。</li>
+<li>参考<a href="http://blog.sina.com.cn/s/blog_74a7e56e0101bzkk.html" target="_blank" rel="external">《Putty文件夹蓝色太暗问题》</a></li>
+</ul>
+<h2 id="Putty字体"><a href="#Putty字体" class="headerlink" title="Putty字体"></a>Putty字体</h2><ul>
+<li>Putty的字体太小，看起来太费眼。可以将字体大小设置大一点。</li>
+<li>参考文章<a href="http://blog.csdn.net/wengyupeng/article/details/43671351" target="_blank" rel="external">《设置Putty 字体 颜色 全屏》</a></li>
+</ul>
 
-局域网内的两台电脑IP冲突
-当使用DHCP自动分配IP时，两台电脑的IP可能会冲突。这时，使用Putty无法登连接Linux。
-方法：可以设置
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/09/21/使用Putty无法远程登录，显示服务器拒绝连接/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
       
     </div>
