@@ -322,159 +322,6 @@
             
               
                 
-                <a class="post-title-link" href="/2015/07/31/Ubuntu-安装-Chrome/" itemprop="url">
-                  Ubuntu-安装-Chrome
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-07-31T14:34:00+08:00" content="2015-07-31">
-              2015-07-31
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Linux/安装和配置软件/" itemprop="url" rel="index">
-                    <span itemprop="name">安装和配置软件</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/07/31/Ubuntu-安装-Chrome/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/31/Ubuntu-安装-Chrome/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="一、下载Chrome的安装包"><a href="#一、下载Chrome的安装包" class="headerlink" title="一、下载Chrome的安装包"></a>一、下载Chrome的安装包</h2><p>打开终端，输入一下命令（区分64位和32位），下载Chrome的deb安装包。<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#<span class="number">32</span>位</div><div class="line">wget http<span class="variable">s:</span>//<span class="keyword">dl</span>.google.<span class="keyword">com</span>/linux/direct/google-chrome-stable_current_i386.<span class="keyword">deb</span></div><div class="line">#<span class="number">64</span>位</div><div class="line">wget http<span class="variable">s:</span>//<span class="keyword">dl</span>.google.<span class="keyword">com</span>/linux/direct/google-chrome-stable_current_amd64.<span class="keyword">deb</span></div></pre></td></tr></table></figure></p>
-<h2 id="二、安装Chrome"><a href="#二、安装Chrome" class="headerlink" title="二、安装Chrome"></a>二、安装Chrome</h2><ul>
-<li>注意：需要root权限</li>
-<li>在Terminal中输入以下命令<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#<span class="number">32</span>位安装命令</div><div class="line">sudo dpkg -<span class="selector-tag">i</span> google-chrome-stable_current_i386<span class="selector-class">.deb</span></div><div class="line">#<span class="number">64</span>位安装命令</div><div class="line">sudo dpkg -<span class="selector-tag">i</span> google-chrome-stable_current_amd64.deb</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="三、修复安装错误"><a href="#三、修复安装错误" class="headerlink" title="三、修复安装错误"></a>三、修复安装错误</h2><ul>
-<li>安装过程中会提示错误信息“在处理时有错误发生： google-chrome-stable”</li>
-<li><p>英文错误：</p>
-<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">dpkg: <span class="keyword">error</span> processing <span class="keyword">package</span> google-chrome-stable (--install):</div><div class="line">dependency problems - leaving unconfigured</div></pre></td></tr></table></figure>
-</li>
-<li><p>出现这个错误之后，执行下面的命令</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> -f install</div></pre></td></tr></table></figure>
-</li>
-<li><p>执行完成后，Chrome就安装成功了。</p>
-</li>
-<li>在Dash中搜索Chrome，打开Chrome，并绑定到启动栏（launcher）</li>
-</ul>
-<h2 id="四、参考文章："><a href="#四、参考文章：" class="headerlink" title="四、参考文章："></a>四、参考文章：</h2><ul>
-<li><a href="http://www.linuxidc.com/Linux/2014-04/100645.htm" target="_blank" rel="external">http://www.linuxidc.com/Linux/2014-04/100645.htm</a></li>
-<li><a href="http://jingyan.baidu.com/article/a681b0de18071e3b1843463b.html" target="_blank" rel="external">http://jingyan.baidu.com/article/a681b0de18071e3b1843463b.html</a></li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2015/07/31/Ubuntu-安装-搜狗输入法-详细教程/" itemprop="url">
                   Ubuntu-安装-搜狗输入法-详细教程
                 </a>
@@ -601,6 +448,159 @@
 </ul>
 <p>至此，搜狗输入法完成安装。。。</p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://pinyin.sogou.com/linux/help.php" target="_blank" rel="external">http://pinyin.sogou.com/linux/help.php</a><br><a href="http://jingyan.baidu.com/article/0202781189b6ef1bcc9ce513.html" target="_blank" rel="external">http://jingyan.baidu.com/article/0202781189b6ef1bcc9ce513.html</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/07/31/Ubuntu-安装-Chrome/" itemprop="url">
+                  Ubuntu-安装-Chrome
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-07-31T14:34:00+08:00" content="2015-07-31">
+              2015-07-31
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Linux/安装和配置软件/" itemprop="url" rel="index">
+                    <span itemprop="name">安装和配置软件</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/07/31/Ubuntu-安装-Chrome/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/31/Ubuntu-安装-Chrome/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="一、下载Chrome的安装包"><a href="#一、下载Chrome的安装包" class="headerlink" title="一、下载Chrome的安装包"></a>一、下载Chrome的安装包</h2><p>打开终端，输入一下命令（区分64位和32位），下载Chrome的deb安装包。<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#<span class="number">32</span>位</div><div class="line">wget http<span class="variable">s:</span>//<span class="keyword">dl</span>.google.<span class="keyword">com</span>/linux/direct/google-chrome-stable_current_i386.<span class="keyword">deb</span></div><div class="line">#<span class="number">64</span>位</div><div class="line">wget http<span class="variable">s:</span>//<span class="keyword">dl</span>.google.<span class="keyword">com</span>/linux/direct/google-chrome-stable_current_amd64.<span class="keyword">deb</span></div></pre></td></tr></table></figure></p>
+<h2 id="二、安装Chrome"><a href="#二、安装Chrome" class="headerlink" title="二、安装Chrome"></a>二、安装Chrome</h2><ul>
+<li>注意：需要root权限</li>
+<li>在Terminal中输入以下命令<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#<span class="number">32</span>位安装命令</div><div class="line">sudo dpkg -<span class="selector-tag">i</span> google-chrome-stable_current_i386<span class="selector-class">.deb</span></div><div class="line">#<span class="number">64</span>位安装命令</div><div class="line">sudo dpkg -<span class="selector-tag">i</span> google-chrome-stable_current_amd64.deb</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="三、修复安装错误"><a href="#三、修复安装错误" class="headerlink" title="三、修复安装错误"></a>三、修复安装错误</h2><ul>
+<li>安装过程中会提示错误信息“在处理时有错误发生： google-chrome-stable”</li>
+<li><p>英文错误：</p>
+<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">dpkg: <span class="keyword">error</span> processing <span class="keyword">package</span> google-chrome-stable (--install):</div><div class="line">dependency problems - leaving unconfigured</div></pre></td></tr></table></figure>
+</li>
+<li><p>出现这个错误之后，执行下面的命令</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> -f install</div></pre></td></tr></table></figure>
+</li>
+<li><p>执行完成后，Chrome就安装成功了。</p>
+</li>
+<li>在Dash中搜索Chrome，打开Chrome，并绑定到启动栏（launcher）</li>
+</ul>
+<h2 id="四、参考文章："><a href="#四、参考文章：" class="headerlink" title="四、参考文章："></a>四、参考文章：</h2><ul>
+<li><a href="http://www.linuxidc.com/Linux/2014-04/100645.htm" target="_blank" rel="external">http://www.linuxidc.com/Linux/2014-04/100645.htm</a></li>
+<li><a href="http://jingyan.baidu.com/article/a681b0de18071e3b1843463b.html" target="_blank" rel="external">http://jingyan.baidu.com/article/a681b0de18071e3b1843463b.html</a></li>
+</ul>
 
           
         

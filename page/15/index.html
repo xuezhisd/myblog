@@ -322,8 +322,8 @@
             
               
                 
-                <a class="post-title-link" href="/2015/09/21/使用Putty无法远程登录，显示服务器拒绝连接/" itemprop="url">
-                  使用Putty无法远程登录，显示服务器拒绝连接
+                <a class="post-title-link" href="/2015/09/21/Putty使用设置/" itemprop="url">
+                  Putty使用设置
                 </a>
               
             
@@ -378,8 +378,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/09/21/使用Putty无法远程登录，显示服务器拒绝连接/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/21/使用Putty无法远程登录，显示服务器拒绝连接/" itemprop="commentsCount"></span>
+                <a href="/2015/09/21/Putty使用设置/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/21/Putty使用设置/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -404,22 +404,15 @@
       
         
           
-            <p>putty连接不到linux的原因总结为以下几种情况。</p>
-<ul>
-<li><strong>局域网内的两台电脑IP冲突</strong><ul>
-<li>当使用DHCP自动分配IP时，两台电脑的IP可能会冲突。这时，使用Putty无法登连接Linux。</li>
-<li>方法：可以设置/etc/network/interfaces文件，将网卡设置为静态IP，并设置IP，子网掩码等。</li>
+            <h2 id="Putty中文乱码问题"><a href="#Putty中文乱码问题" class="headerlink" title="Putty中文乱码问题"></a>Putty中文乱码问题</h2><ul>
+<li>使用Putty的时候，中文字符显示为乱码，如何解决。方法就是使用UTF-8传输协议。</li>
+<li>参考<a href="http://jingyan.baidu.com/article/3aed632e5f00ae701080913a.html" target="_blank" rel="external">《怎样解决putty终端乱码的方法》</a><br>##Putty配色问题</li>
+<li>Putty的文件夹显示为深蓝色，颜色太暗，看不清楚。可以设置为ANSI Blue。</li>
+<li>参考<a href="http://blog.sina.com.cn/s/blog_74a7e56e0101bzkk.html" target="_blank" rel="external">《Putty文件夹蓝色太暗问题》</a></li>
 </ul>
-</li>
-<li><p><strong>没有安装openssh-server</strong></p>
-<ul>
-<li>这个问题一般出现在刚刚装完操作系统，此时还没有安装openssh-server。</li>
-<li>Putty一般使用SSH连接方式，因为主机没有openssh-server，所以无法连接。</li>
-<li>参考<a href="http://www.linuxidc.com/Linux/2015-01/112045.htm" target="_blank" rel="external">《Ubuntu 安装配置SSH》</a></li>
-<li><p>使用下面命令安装openssh-server之后，问题解决了。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get <span class="keyword">install</span> openssh-<span class="keyword">server</span></div></pre></td></tr></table></figure></li>
-</ul>
-</li>
+<h2 id="Putty字体"><a href="#Putty字体" class="headerlink" title="Putty字体"></a>Putty字体</h2><ul>
+<li>Putty的字体太小，看起来太费眼。可以将字体大小设置大一点。</li>
+<li>参考文章<a href="http://blog.csdn.net/wengyupeng/article/details/43671351" target="_blank" rel="external">《设置Putty 字体 颜色 全屏》</a></li>
 </ul>
 
           
