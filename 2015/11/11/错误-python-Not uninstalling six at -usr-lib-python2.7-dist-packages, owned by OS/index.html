@@ -58,16 +58,16 @@
 
 
 
-<meta name="description" content="错误1234567891011121314151617sudo pip install --upgrade sixDownloading/unpacking six from https://pypi.python.org/packages/3.3/s/six/six-1.9.0-py2.py3-none-any.whl#md5=9ac7e129a80f72d6fc1f0216f6e9627bDo">
+<meta name="description" content="错误12345678sudo pip install --upgrade sixDownloading/unpacking six from https://pypi.python.org/packages/3.3/s/six/six-1.9.0-py2.py3-none-any.whl#md5=9ac7e129a80f72d6fc1f0216f6e9627bDownloading six-1.9">
 <meta property="og:type" content="article">
 <meta property="og:title" content="错误-python-Not uninstalling six at /usr/lib/python2.7/dist-packages, owned by OS">
 <meta property="og:url" content="http://zhangxuezhi.com/2015/11/11/错误-python-Not uninstalling six at -usr-lib-python2.7-dist-packages, owned by OS/index.html">
 <meta property="og:site_name" content="学志の博客">
-<meta property="og:description" content="错误1234567891011121314151617sudo pip install --upgrade sixDownloading/unpacking six from https://pypi.python.org/packages/3.3/s/six/six-1.9.0-py2.py3-none-any.whl#md5=9ac7e129a80f72d6fc1f0216f6e9627bDo">
-<meta property="og:updated_time" content="2016-11-06T16:31:03.111Z">
+<meta property="og:description" content="错误12345678sudo pip install --upgrade sixDownloading/unpacking six from https://pypi.python.org/packages/3.3/s/six/six-1.9.0-py2.py3-none-any.whl#md5=9ac7e129a80f72d6fc1f0216f6e9627bDownloading six-1.9">
+<meta property="og:updated_time" content="2016-11-11T14:48:41.061Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="错误-python-Not uninstalling six at /usr/lib/python2.7/dist-packages, owned by OS">
-<meta name="twitter:description" content="错误1234567891011121314151617sudo pip install --upgrade sixDownloading/unpacking six from https://pypi.python.org/packages/3.3/s/six/six-1.9.0-py2.py3-none-any.whl#md5=9ac7e129a80f72d6fc1f0216f6e9627bDo">
+<meta name="twitter:description" content="错误12345678sudo pip install --upgrade sixDownloading/unpacking six from https://pypi.python.org/packages/3.3/s/six/six-1.9.0-py2.py3-none-any.whl#md5=9ac7e129a80f72d6fc1f0216f6e9627bDownloading six-1.9">
 
 
 
@@ -363,22 +363,43 @@
       
 
       
-        <h2 id="错误"><a href="#错误" class="headerlink" title="错误"></a>错误</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">sudo pip install --upgrade six</div><div class="line">Downloading/unpacking six from https://pypi.python.org/packages/3.3/s/six/six-1.9.0-py2.py3-none-any.whl<span class="comment">#md5=9ac7e129a80f72d6fc1f0216f6e9627b</span></div><div class="line">Downloading six-1.9.0-py2.py3-none-any.whl</div><div class="line">Installing collected packages: six</div><div class="line">Found existing installation: six 1.5.2</div><div class="line">Not uninstalling six at /usr/lib/python2.7/dist-packages, owned by OS</div><div class="line">Successfully installed six</div><div class="line">Cleaning up...</div><div class="line">``` </div><div class="line"></div><div class="line"><span class="comment">## 说明</span></div><div class="line"></div><div class="line"><span class="comment">### 1. `/usr/lib`和`/usr/local/lib`的区别</span></div><div class="line">* 在ubuntu下，直接通过apt-get安装的软件一般会在`/usr`下面，自己编译安装的软件（或者通过一些其他的非官方途径）会在`/usr/<span class="built_in">local</span>`下面</div><div class="line">* 两个文件夹都是有效的，主要是看路径配的是哪一个以PYTHONPATH。</div><div class="line">* 查看Python的搜索路径，发现`/usr/lib`在`/usr/<span class="built_in">local</span>`之前。</div><div class="line">	* 查看方法</div></pre></td></tr></table></figure>
-<pre><code>    python
-    # 进入Python环境
-    import sys
-    sys.path
-<figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">	</div><div class="line">### <span class="number">2.</span> 安装python第三方包有<span class="number">3</span>种方法</div><div class="line">* <span class="number">1</span> 使用系统自带的包管理系统(deb, rpm, 等)</div><div class="line">* <span class="number">2</span> 通过社区开发的各种工具，例如 pip ， easy_install 等</div><div class="line">* <span class="number">3</span> 从源文件安装。</div><div class="line"></div><div class="line">* 第一种方法安装在`/usr/lib`下，第二种和第三种方式安装在`/usr/local/lib`下面。</div><div class="line"></div><div class="line">### 问题分析</div><div class="line">* 上述问题中，应该先使用【默认Ubuntu】apt-get安装了python-six，版本是低版本的；然后使用pip希望使用高版本的six，就出错了。</div><div class="line"></div><div class="line">## 解决问题</div><div class="line">* 在`/usr/local/lib/python2<span class="number">.7</span>/dist-packages/`下，新建mypack.pth文件，输入以下内容</div><div class="line"> 	* 新建这个文件的作用是，Python的搜索路径先搜搜/usr/local/lib/，后搜搜/usr/lib。</div></pre></td></tr></table></figure>
-
-    # 文件内容
-    /usr/local/lib/python2.7/dist-packages/
-```
-</code></pre><ul>
+        <h2 id="错误"><a href="#错误" class="headerlink" title="错误"></a>错误</h2><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">sudo pip install <span class="comment">--upgrade six</span></div><div class="line">Downloading/unpacking <span class="literal">six</span> <span class="built_in">from</span> <span class="keyword">https</span>://pypi.python.org/packages/<span class="number">3.3</span>/s/<span class="literal">six</span>/<span class="literal">six</span><span class="number">-1.9</span><span class="number">.0</span>-py2.py3-<span class="literal">none</span>-<span class="keyword">any</span>.whl<span class="comment">#md5=9ac7e129a80f72d6fc1f0216f6e9627b</span></div><div class="line">Downloading <span class="literal">six</span><span class="number">-1.9</span><span class="number">.0</span>-py2.py3-<span class="literal">none</span>-<span class="keyword">any</span>.whl</div><div class="line">Installing collected packages: <span class="literal">six</span></div><div class="line">Found existing installation: <span class="literal">six</span> <span class="number">1.5</span><span class="number">.2</span></div><div class="line">Not uninstalling <span class="literal">six</span> <span class="keyword">at</span> /usr/lib/python2<span class="number">.7</span>/dist-packages, owned <span class="keyword">by</span> OS</div><div class="line">Successfully installed <span class="literal">six</span></div><div class="line">Cleaning up...</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><h3 id="1-usr-lib和-usr-local-lib的区别"><a href="#1-usr-lib和-usr-local-lib的区别" class="headerlink" title="1. /usr/lib和/usr/local/lib的区别"></a>1. <code>/usr/lib</code>和<code>/usr/local/lib</code>的区别</h3><ul>
+<li>在ubuntu下，直接通过apt-get安装的软件一般会在<code>/usr</code>下面，自己编译安装的软件（或者通过一些其他的非官方途径）会在<code>/usr/local</code>下面</li>
+<li>两个文件夹都是有效的，主要是看路径配的是哪一个以PYTHONPATH。</li>
+<li>查看Python的搜索路径，发现<code>/usr/lib</code>在<code>/usr/local</code>之前。查看方法如下所示：</li>
+</ul>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="title">python</span></div><div class="line"><span class="meta"># 进入Python环境</span></div><div class="line"><span class="keyword">import</span> sys</div><div class="line"><span class="title">sys</span>.path</div></pre></td></tr></table></figure>
+<h3 id="2-安装python第三方包有3种方法"><a href="#2-安装python第三方包有3种方法" class="headerlink" title="2. 安装python第三方包有3种方法"></a>2. 安装python第三方包有3种方法</h3><ul>
+<li>1 使用系统自带的包管理系统(deb, rpm, 等)</li>
+<li>2 通过社区开发的各种工具，例如 pip ， easy_install 等</li>
+<li>3 从源文件安装。</li>
+</ul>
+<blockquote>
+<p>第一种方法安装在<code>/usr/lib</code>下，第二种和第三种方式安装在<code>/usr/local/lib</code>下面。</p>
+</blockquote>
+<h3 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h3><ul>
+<li>上述问题中，应该先使用【默认Ubuntu】apt-get安装了python-six，版本是低版本的；然后使用pip希望使用高版本的six，就出错了。</li>
+</ul>
+<h2 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h2><ul>
+<li>在<code>/usr/local/lib/python2.7/dist-packages/</code>下，新建mypack.pth文件，输入以下内容<ul>
+<li>新建这个文件的作用是，Python的搜索路径先搜搜/usr/local/lib/，后搜搜/usr/lib。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 文件内容</span></div><div class="line">/usr/local/<span class="class"><span class="keyword">lib</span>/<span class="title">python2</span>.7/<span class="title">dist</span>-<span class="title">packages</span>/</span></div></pre></td></tr></table></figure>
+<ul>
 <li>下载six源码<br><a href="https://pypi.python.org/pypi/six" target="_blank" rel="external">https://pypi.python.org/pypi/six</a> or <a href="http://pypi.douban.com/simple/six" target="_blank" rel="external">http://pypi.douban.com/simple/six</a></li>
 <li>解压<code>tar -zxvf six**</code></li>
 <li>切换six**路径，并执行<code>sudo python setup.py install</code></li>
 </ul>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://github.com/pypa/pip/issues/2964" target="_blank" rel="external">https://github.com/pypa/pip/issues/2964</a><br><a href="https://github.com/dccrazyboy/pyeco/blob/master/pyeco.rst" target="_blank" rel="external">Python开发生态环境简介</a><br><a href="https://virtualenv-chinese-docs.readthedocs.org/en/latest/" target="_blank" rel="external">virtualenv</a><br><a href="http://codeyarns.com/2015/02/24/pycuda-error-cannot-import-name-intern/" target="_blank" rel="external">PyCUDA error: cannot import name intern</a></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://github.com/pypa/pip/issues/2964" target="_blank" rel="external">https://github.com/pypa/pip/issues/2964</a></li>
+<li><a href="https://github.com/dccrazyboy/pyeco/blob/master/pyeco.rst" target="_blank" rel="external">Python开发生态环境简介</a></li>
+<li><a href="https://virtualenv-chinese-docs.readthedocs.org/en/latest/" target="_blank" rel="external">virtualenv</a></li>
+<li><a href="http://codeyarns.com/2015/02/24/pycuda-error-cannot-import-name-intern/" target="_blank" rel="external">PyCUDA error: cannot import name intern</a></li>
+</ul>
 
       
     </div>
@@ -619,7 +640,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#错误"><span class="nav-number">1.</span> <span class="nav-text">错误</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">2.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#错误"><span class="nav-number">1.</span> <span class="nav-text">错误</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说明"><span class="nav-number">2.</span> <span class="nav-text">说明</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-usr-lib和-usr-local-lib的区别"><span class="nav-number">2.1.</span> <span class="nav-text">1. /usr/lib和/usr/local/lib的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-安装python第三方包有3种方法"><span class="nav-number">2.2.</span> <span class="nav-text">2. 安装python第三方包有3种方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题分析"><span class="nav-number">2.3.</span> <span class="nav-text">问题分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决问题"><span class="nav-number">3.</span> <span class="nav-text">解决问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
           </div>
         </section>

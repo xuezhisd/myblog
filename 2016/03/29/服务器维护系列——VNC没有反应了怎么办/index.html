@@ -63,11 +63,7 @@
 
 问题描述
 服务器上存在多个用户，大家通过VNC Viewer以图形窗口的形式访问服务器，但是在使用的过程中，VNC界面有时会没有反应，这时应该如何操作呢？
-因为这个问题出现的比较多，在这里整理下，方便大家使用。
-
-解决方法总的来说，就是通过SSH登录系统，然后通过命令重启自己的VNC Server即可。
-
-下载软件PieTTY。点此下载">
+因为这个问题出现的比较多，在这里整理下，方便大家使用。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="服务器维护系列——VNC没有反应了怎么办？">
 <meta property="og:url" content="http://zhangxuezhi.com/2016/03/29/服务器维护系列——VNC没有反应了怎么办/index.html">
@@ -77,16 +73,12 @@
 
 问题描述
 服务器上存在多个用户，大家通过VNC Viewer以图形窗口的形式访问服务器，但是在使用的过程中，VNC界面有时会没有反应，这时应该如何操作呢？
-因为这个问题出现的比较多，在这里整理下，方便大家使用。
-
-解决方法总的来说，就是通过SSH登录系统，然后通过命令重启自己的VNC Server即可。
-
-下载软件PieTTY。点此下载">
+因为这个问题出现的比较多，在这里整理下，方便大家使用。">
 <meta property="og:image" content="http://img.blog.csdn.net/20160329211420717">
 <meta property="og:image" content="http://img.blog.csdn.net/20160329211541240">
 <meta property="og:image" content="http://img.blog.csdn.net/20160329211607068">
 <meta property="og:image" content="http://img.blog.csdn.net/20160329211809940">
-<meta property="og:updated_time" content="2016-11-06T16:31:22.471Z">
+<meta property="og:updated_time" content="2016-11-11T14:36:23.420Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="服务器维护系列——VNC没有反应了怎么办？">
 <meta name="twitter:description" content="服务器维护系列
@@ -94,11 +86,7 @@
 
 问题描述
 服务器上存在多个用户，大家通过VNC Viewer以图形窗口的形式访问服务器，但是在使用的过程中，VNC界面有时会没有反应，这时应该如何操作呢？
-因为这个问题出现的比较多，在这里整理下，方便大家使用。
-
-解决方法总的来说，就是通过SSH登录系统，然后通过命令重启自己的VNC Server即可。
-
-下载软件PieTTY。点此下载">
+因为这个问题出现的比较多，在这里整理下，方便大家使用。">
 <meta name="twitter:image" content="http://img.blog.csdn.net/20160329211420717">
 
 
@@ -402,16 +390,23 @@
 <li>服务器上存在多个用户，大家通过VNC Viewer以图形窗口的形式访问服务器，但是在使用的过程中，VNC界面有时会没有反应，这时应该如何操作呢？</li>
 <li>因为这个问题出现的比较多，在这里整理下，方便大家使用。</li>
 </ul>
+<a id="more"></a>
 <h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p><strong>总的来说，就是通过SSH登录系统，然后通过命令重启自己的VNC Server即可。</strong></p>
 <ul>
 <li>下载软件<strong>PieTTY</strong>。<a href="http://download.csdn.net/detail/xuezhisdc/9475974" target="_blank" rel="external">点此下载</a></li>
 <li>PieTTY的有关设置请参考<a href="http://blog.csdn.net/xuezhisdc/article/details/48622069" target="_blank" rel="external">《Putty使用设置》</a></li>
-<li><p>双击软件，打开登录界面。<br><img src="http://img.blog.csdn.net/20160329211420717" alt="这里写图片描述"></p>
-</li>
-<li><p>输入IP，（其它选项一般不要动）。点击下面的<strong>open</strong>打开登录框。<br><img src="http://img.blog.csdn.net/20160329211541240" alt="这里写图片描述"></p>
-</li>
-<li><p>输入用户名和密码，登录系统。（如果不知道用户名和密码，联系管理员）<br><img src="http://img.blog.csdn.net/20160329211607068" alt="这里写图片描述"></p>
-</li>
+<li>双击软件，打开登录界面。</li>
+</ul>
+<p><img src="http://img.blog.csdn.net/20160329211420717" alt="这里写图片描述"></p>
+<ul>
+<li>输入IP，（其它选项一般不要动）。点击下面的<strong>open</strong>打开登录框。</li>
+</ul>
+<p><img src="http://img.blog.csdn.net/20160329211541240" alt="这里写图片描述"></p>
+<ul>
+<li>输入用户名和密码，登录系统。（如果不知道用户名和密码，联系管理员）</li>
+</ul>
+<p><img src="http://img.blog.csdn.net/20160329211607068" alt="这里写图片描述"></p>
+<ul>
 <li><p>输入以下命令，查看自己的端口号。如下图所示，端口是5。</p>
 <figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">cd</span> .vnc</div><div class="line"><span class="keyword">ls</span></div></pre></td></tr></table></figure>
 </li>
@@ -485,8 +480,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/03/30/PCL系列——读入PCD格式文件/" rel="prev" title="PCL系列——读入PCD格式文件">
-                PCL系列——读入PCD格式文件 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/03/30/PCL系列——从深度图像（RangeImage）中提取NARF关键点/" rel="prev" title="PCL系列——从深度图像（RangeImage）中提取NARF关键点">
+                PCL系列——从深度图像（RangeImage）中提取NARF关键点 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

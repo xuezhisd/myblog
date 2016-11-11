@@ -58,28 +58,31 @@
 
 
 
-<meta name="description" content="一、apt-get 安装deb是debian linus的安装格式，跟red hat的rpm非常相似，最基本的安装命令是：dpkg -i file.deb或者直接双击此文件
-
+<meta name="description" content="一、apt-get 安装
+deb是debian linus的安装格式，跟red hat的rpm非常相似，最基本的安装命令是：dpkg -i file.deb或者直接双击此文件
 dpkg 是Debian Package的简写，是为Debian 专门开发的套件管理系统，方便软件的安装、更新及移除。所有源自Debian的Linux发行版都使用dpkg，例如Ubuntu、Knoppix 等。
 
-以下是一些">
+
+ 以下是">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ubuntu中apt-get安装与默认路径">
 <meta property="og:url" content="http://zhangxuezhi.com/2015/07/28/ubuntu中apt-get安装与默认路径/index.html">
 <meta property="og:site_name" content="学志の博客">
-<meta property="og:description" content="一、apt-get 安装deb是debian linus的安装格式，跟red hat的rpm非常相似，最基本的安装命令是：dpkg -i file.deb或者直接双击此文件
-
+<meta property="og:description" content="一、apt-get 安装
+deb是debian linus的安装格式，跟red hat的rpm非常相似，最基本的安装命令是：dpkg -i file.deb或者直接双击此文件
 dpkg 是Debian Package的简写，是为Debian 专门开发的套件管理系统，方便软件的安装、更新及移除。所有源自Debian的Linux发行版都使用dpkg，例如Ubuntu、Knoppix 等。
 
-以下是一些">
-<meta property="og:updated_time" content="2016-11-06T16:29:50.096Z">
+
+ 以下是">
+<meta property="og:updated_time" content="2016-11-11T16:00:43.946Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ubuntu中apt-get安装与默认路径">
-<meta name="twitter:description" content="一、apt-get 安装deb是debian linus的安装格式，跟red hat的rpm非常相似，最基本的安装命令是：dpkg -i file.deb或者直接双击此文件
-
+<meta name="twitter:description" content="一、apt-get 安装
+deb是debian linus的安装格式，跟red hat的rpm非常相似，最基本的安装命令是：dpkg -i file.deb或者直接双击此文件
 dpkg 是Debian Package的简写，是为Debian 专门开发的套件管理系统，方便软件的安装、更新及移除。所有源自Debian的Linux发行版都使用dpkg，例如Ubuntu、Knoppix 等。
 
-以下是一些">
+
+ 以下是">
 
 
 
@@ -375,25 +378,53 @@ dpkg 是Debian Package的简写，是为Debian 专门开发的套件管理系统
       
 
       
-        <h2 id="一、apt-get-安装"><a href="#一、apt-get-安装" class="headerlink" title="一、apt-get 安装"></a>一、apt-get 安装</h2><pre><code>deb是debian linus的安装格式，跟red hat的rpm非常相似，最基本的安装命令是：dpkg -i file.deb或者直接双击此文件
-
-dpkg 是Debian Package的简写，是为Debian 专门开发的套件管理系统，方便软件的安装、更新及移除。所有源自Debian的Linux发行版都使用dpkg，例如Ubuntu、Knoppix 等。
-</code></pre><ul>
-<li>以下是一些 dpkg 的普通用法：</li>
+        <h2 id="一、apt-get-安装"><a href="#一、apt-get-安装" class="headerlink" title="一、apt-get 安装"></a>一、apt-get 安装</h2><ul>
+<li>deb是debian linus的安装格式，跟red hat的rpm非常相似，最基本的安装命令是：dpkg -i file.deb或者直接双击此文件</li>
+<li>dpkg 是Debian Package的简写，是为Debian 专门开发的套件管理系统，方便软件的安装、更新及移除。所有源自Debian的Linux发行版都使用dpkg，例如Ubuntu、Knoppix 等。</li>
 </ul>
-<h3 id="dpkg-i"><a href="#dpkg-i" class="headerlink" title="dpkg -i"></a>dpkg -i</h3><pre><code>安装一个 Debian 软件包，如你手动下载的文件。
-</code></pre><h3 id="dpkg-c"><a href="#dpkg-c" class="headerlink" title="dpkg -c"></a>dpkg -c</h3><pre><code>列出 的内容。
-</code></pre><h3 id="dpkg-I"><a href="#dpkg-I" class="headerlink" title="dpkg -I"></a>dpkg -I</h3><pre><code>从 中提取包裹信息。
-</code></pre><h3 id="dpkg-r"><a href="#dpkg-r" class="headerlink" title="dpkg -r"></a>dpkg -r</h3><pre><code>移除一个已安装的包裹。
-</code></pre><h3 id="dpkg-P"><a href="#dpkg-P" class="headerlink" title="dpkg -P"></a>dpkg -P</h3><pre><code>完全清除一个已安装的包裹。和 remove 不同的是，remove 只是删掉数据和可执行文件，purge 另外还删除所有的配制文件。
-</code></pre><h3 id="dpkg-L"><a href="#dpkg-L" class="headerlink" title="dpkg -L"></a>dpkg -L</h3><pre><code>列出 安装的所有文件清单。同时请看 dpkg -c 来检查一个 .deb 文件的内容。
-</code></pre><h3 id="dpkg-s"><a href="#dpkg-s" class="headerlink" title="dpkg -s"></a>dpkg -s</h3><pre><code>显示已安装包裹的信息。同时请看 apt-cache 显示 Debian 存档中的包裹信息，以及 dpkg -I 来显示从一个 .deb 文件中提取的包裹信息。
-</code></pre><h3 id="dpkg-reconfigure"><a href="#dpkg-reconfigure" class="headerlink" title="dpkg-reconfigure"></a>dpkg-reconfigure</h3><pre><code>重新配制一个已经安装的包裹，如果它使用的是 debconf (debconf 为包裹安装提供了一个统一的配制界面)。
-</code></pre><h2 id="二、软件安装后相关文件位置"><a href="#二、软件安装后相关文件位置" class="headerlink" title="二、软件安装后相关文件位置"></a>二、软件安装后相关文件位置</h2><h3 id="下载的软件存放位置"><a href="#下载的软件存放位置" class="headerlink" title="下载的软件存放位置"></a>下载的软件存放位置</h3><p>/var/cache/apt/archives</p>
-<h3 id="安装后软件默认位置"><a href="#安装后软件默认位置" class="headerlink" title="安装后软件默认位置"></a>安装后软件默认位置</h3><p>/usr/share</p>
-<h3 id="可执行文件位置"><a href="#可执行文件位置" class="headerlink" title="可执行文件位置"></a>可执行文件位置</h3><p>/usr/bin</p>
-<h3 id="配置文件位置"><a href="#配置文件位置" class="headerlink" title="配置文件位置"></a>配置文件位置</h3><p>/etc</p>
-<h3 id="lib文件位置"><a href="#lib文件位置" class="headerlink" title="lib文件位置"></a>lib文件位置</h3><p>/usr/lib</p>
+<blockquote>
+<p> 以下是一些 dpkg 的普通用法：</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="dpkg-i"><a href="#dpkg-i" class="headerlink" title="dpkg -i"></a>dpkg -i</h3><ul>
+<li>安装一个 Debian 软件包，如你手动下载的文件。</li>
+</ul>
+<h3 id="dpkg-c"><a href="#dpkg-c" class="headerlink" title="dpkg -c"></a>dpkg -c</h3><ul>
+<li>列出 的内容。</li>
+</ul>
+<h3 id="dpkg-I"><a href="#dpkg-I" class="headerlink" title="dpkg -I"></a>dpkg -I</h3><ul>
+<li>从 中提取包裹信息。</li>
+</ul>
+<h3 id="dpkg-r"><a href="#dpkg-r" class="headerlink" title="dpkg -r"></a>dpkg -r</h3><ul>
+<li>移除一个已安装的包裹。</li>
+</ul>
+<h3 id="dpkg-P"><a href="#dpkg-P" class="headerlink" title="dpkg -P"></a>dpkg -P</h3><ul>
+<li>完全清除一个已安装的包裹。和 remove 不同的是，remove 只是删掉数据和可执行文件，purge 另外还删除所有的配制文件。</li>
+</ul>
+<h3 id="dpkg-L"><a href="#dpkg-L" class="headerlink" title="dpkg -L"></a>dpkg -L</h3><ul>
+<li>列出 安装的所有文件清单。同时请看 dpkg -c 来检查一个 .deb 文件的内容。</li>
+</ul>
+<h3 id="dpkg-s"><a href="#dpkg-s" class="headerlink" title="dpkg -s"></a>dpkg -s</h3><ul>
+<li>显示已安装包裹的信息。同时请看 apt-cache 显示 Debian 存档中的包裹信息，以及 dpkg -I 来显示从一个 .deb 文件中提取的包裹信息。</li>
+</ul>
+<h3 id="dpkg-reconfigure"><a href="#dpkg-reconfigure" class="headerlink" title="dpkg-reconfigure"></a>dpkg-reconfigure</h3><ul>
+<li>重新配制一个已经安装的包裹，如果它使用的是 debconf (debconf 为包裹安装提供了一个统一的配制界面)。</li>
+</ul>
+<h2 id="二、软件安装后相关文件位置"><a href="#二、软件安装后相关文件位置" class="headerlink" title="二、软件安装后相关文件位置"></a>二、软件安装后相关文件位置</h2><h3 id="下载的软件存放位置"><a href="#下载的软件存放位置" class="headerlink" title="下载的软件存放位置"></a>下载的软件存放位置</h3><ul>
+<li>/var/cache/apt/archives</li>
+</ul>
+<h3 id="安装后软件默认位置"><a href="#安装后软件默认位置" class="headerlink" title="安装后软件默认位置"></a>安装后软件默认位置</h3><ul>
+<li>/usr/share</li>
+</ul>
+<h3 id="可执行文件位置"><a href="#可执行文件位置" class="headerlink" title="可执行文件位置"></a>可执行文件位置</h3><ul>
+<li>/usr/bin</li>
+</ul>
+<h3 id="配置文件位置"><a href="#配置文件位置" class="headerlink" title="配置文件位置"></a>配置文件位置</h3><ul>
+<li>/etc</li>
+</ul>
+<h3 id="lib文件位置"><a href="#lib文件位置" class="headerlink" title="lib文件位置"></a>lib文件位置</h3><ul>
+<li>/usr/lib</li>
+</ul>
 
       
     </div>

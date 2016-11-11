@@ -361,112 +361,20 @@
 
       
         
-          
-            <h1 id="相关资料"><a href="#相关资料" class="headerlink" title="相关资料"></a>相关资料</h1><ul>
-<li><a href="http://blog.csdn.net/whqet/article/details/44900145" target="_blank" rel="external">CSDN Markdown简明教程</a></li>
-<li>dd<br><a href="http://blog.csdn.net/whqet/article/details/44274215" target="_blank" rel="external">CSDN Markdown简明教程1-关于Markdown</a><br><a href="http://blog.csdn.net/whqet/article/details/44274999" target="_blank" rel="external">CSDN Markdown简明教程2-基本使用</a><br><a href="">CSDN Markdown简明教程3-表格和公式</a><br><a href="">CSDN Markdown简明教程4-UML图</a><br><a href="">CSDN Markdown简明教程5-快速上手</a></li>
+          <h1 id="相关资料"><a href="#相关资料" class="headerlink" title="相关资料"></a>相关资料</h1><ul>
+<li><a href="http://blog.csdn.net/whqet/article/details/44900145">CSDN Markdown简明教程</a></li>
+<li><a href="http://blog.csdn.net/whqet/article/details/44274215">CSDN Markdown简明教程1-关于Markdown</a></li>
+<li><a href="http://blog.csdn.net/whqet/article/details/44274999">CSDN Markdown简明教程2-基本使用</a></li>
+<li><a href="">CSDN Markdown简明教程3-表格和公式</a></li>
+<li><a href="">CSDN Markdown简明教程4-UML图</a></li>
+<li><a href="">CSDN Markdown简明教程5-快速上手</a></li>
 </ul>
 <h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p><em>斜体</em>：<code>*斜体*</code><br><strong>粗体</strong>：<code>**粗体**</code><br><strong><em>斜体</em></strong>：<code>***斜体+粗体***</code></p>
-<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><p><del>删除线</del>：<del>删除线</del></p>
-<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><pre><code># 一号标题
-## 二号标题
-### 三号标题
-#### 四号标题
-##### 五号标题
-###### 六号标题
-</code></pre><p>效果如下所示：</p>
-<h1 id="一号标题"><a href="#一号标题" class="headerlink" title="一号标题"></a>一号标题</h1><h2 id="二号标题"><a href="#二号标题" class="headerlink" title="二号标题"></a>二号标题</h2><h3 id="三号标题"><a href="#三号标题" class="headerlink" title="三号标题"></a>三号标题</h3><h4 id="四号标题"><a href="#四号标题" class="headerlink" title="四号标题"></a>四号标题</h4><h5 id="五号标题"><a href="#五号标题" class="headerlink" title="五号标题"></a>五号标题</h5><h6 id="六号标题"><a href="#六号标题" class="headerlink" title="六号标题"></a>六号标题</h6><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><h3 id="一般引用"><a href="#一般引用" class="headerlink" title="一般引用"></a>一般引用</h3><pre><code>&gt; 引用一行
-</code></pre><p>效果如下所示：</p>
-<blockquote>
-<p>引用一行</p>
-<p>引用段落：Markdown是一种轻量级的标记语言，把作者从繁杂的排版工作中解放出来，实现<strong>易读易写</strong>的文章写作，已经逐渐成为事实上的行业标准。<br>引用段落的时候，可以偷懒只在整个段落的第一行最前面加&gt;。<br><strong>结束引用，用个<em>空行</em></strong></p>
-</blockquote>
-<p>效果如下所示：</p>
-<pre><code>&gt; 引用段落：Markdown是一种轻量级的标记语言，把作者从繁杂的排版工作中解放出来，实现**易读易写**的文章写作，已经逐渐成为事实上的行业标准。
-&gt; 引用段落的时候，可以偷懒只在整个段落的第一行最前面加&gt;。
-&gt;**结束引用，用个*空行***
-</code></pre><p>###嵌套引用</p>
-<pre><code>&gt; 外引用
-&gt;  &gt; 嵌套引用
- &gt; 
-&gt;  外引用
-</code></pre><p>效果如下所示：</p>
-<blockquote>
-<p>外引用</p>
-<blockquote>
-<p>嵌套引用</p>
-</blockquote>
-<p> 外引用</p>
-</blockquote>
-<h2 id="代码格式化"><a href="#代码格式化" class="headerlink" title="代码格式化"></a>代码格式化</h2><h3 id="行内代码"><a href="#行内代码" class="headerlink" title="行内代码"></a>行内代码</h3><p>行内通过’<code>高亮</code>‘来实现高亮。    </p>
-<pre><code>`高亮`文字
-</code></pre><p>效果如下所示：<br><code>高亮</code>文字</p>
-<h3 id="区块代码"><a href="#区块代码" class="headerlink" title="区块代码"></a>区块代码</h3><ul>
-<li>如果需要代码块和语法高亮，可以使用三个反引号开始和结束一段代码；同时可以标注语言类型。<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="keyword">print</span> <span class="string">"Hello,World!"</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><ul>
-<li>星号(*)/加号(+)或减号(-)为无序列表标记</li>
-<li>空行开始，空行结束</li>
-</ul>
-<p><strong>星号</strong><br><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="bullet">* </span>Red</div><div class="line"><span class="bullet">* </span>Green</div><div class="line"><span class="bullet">* </span>Blue</div></pre></td></tr></table></figure></p>
-<p>效果如下所示：</p>
-<ul>
-<li>Red</li>
-<li>Green</li>
-<li>Blue</li>
-</ul>
-<p><strong>减号</strong><br><figure class="highlight haml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">-<span class="ruby"> Red</span></div><div class="line">-<span class="ruby"> Green</span></div><div class="line">-<span class="ruby"> Blue</span></div></pre></td></tr></table></figure></p>
-<p>效果如下所示：</p>
-<ul>
-<li>Red</li>
-<li>Green</li>
-<li>Blue</li>
-</ul>
-<p><strong>加号</strong><br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="bullet">+ </span>Red</div><div class="line"><span class="bullet">+ </span>Green</div><div class="line"><span class="bullet">+ </span>Blue</div></pre></td></tr></table></figure></p>
-<p>效果如下所示：</p>
-<ul>
-<li>Red</li>
-<li>Green</li>
-<li>Blue</li>
-</ul>
-<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><ul>
-<li>使用数字接着一个英文句点表示一个有序列表，</li>
-<li>数字对序列没有影响</li>
-<li>空行开始，空行结束<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="bullet">1. </span>文字</div><div class="line"><span class="bullet">2. </span>图片</div><div class="line"><span class="bullet">4. </span>表格</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>效果如下所示：</p>
-<ol>
-<li>文字</li>
-<li>图片</li>
-<li>表格</li>
-</ol>
-<h3 id="列表嵌套"><a href="#列表嵌套" class="headerlink" title="列表嵌套"></a>列表嵌套</h3><ul>
-<li>列表可以嵌套，添加tab缩进表示层次。<figure class="highlight haml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">1. 文字</div><div class="line">    1. 强调</div><div class="line">        -<span class="ruby"> 粗体</span></div><div class="line">        -<span class="ruby"> 斜体</span></div><div class="line">        -<span class="ruby"> 粗体和斜体</span></div><div class="line">    2. 引用</div><div class="line">2. 图片</div><div class="line">3. 表格</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>效果如下所示：</p>
-<ol>
-<li>文字<ol>
-<li>强调<ul>
-<li>粗体</li>
-<li>斜体</li>
-<li>粗体和斜体</li>
-</ul>
-</li>
-<li>引用</li>
-</ol>
-</li>
-<li>图片</li>
-<li>表格</li>
-</ol>
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><h3 id="行内式链接"><a href="#行内式链接" class="headerlink" title="行内式链接"></a>行内式链接</h3><ul>
-<li><code>[baidu](http:www.baidu.com)</code>：<a href="http:www.baidu.com" target="_blank" rel="external">baidu</a></li>
-</ul>
-<p>###参考式链接</p>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/06/24/Markdown-语法-笔记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -595,8 +503,12 @@
 
       
         
-          
-            <h1 id="解决双系统时间不一致问题"><a href="#解决双系统时间不一致问题" class="headerlink" title="解决双系统时间不一致问题"></a>解决双系统时间不一致问题</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>最近需要使用Linux（Ubuntu），所以在自己的电脑上安装了双系统（Windows+Ubuntu）。但是发现Windows的时间不正确，每次开机时，时间都会慢8个小时。<br>每次通过同步互联网时间可以更正，但是重启后又是如此。<br>后来，发现windows time服务没有开启。将其设置为自启动之后，每次开机后依然如此。而且windows time服务没有开启。<br>最后发现<code>两个系统的时间时间相差8小时</code>，意识到时两个系统设置不同引起的。</p>
+          <h1 id="解决双系统时间不一致问题"><a href="#解决双系统时间不一致问题" class="headerlink" title="解决双系统时间不一致问题"></a>解决双系统时间不一致问题</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><ul>
+<li>最近需要使用Linux（Ubuntu），所以在自己的电脑上安装了双系统（Windows+Ubuntu）。但是发现Windows的时间不正确，每次开机时，时间都会慢8个小时。</li>
+<li>每次通过同步互联网时间可以更正，但是重启后又是如此。</li>
+<li>后来，发现windows time服务没有开启。将其设置为自启动之后，每次开机后依然如此。而且windows time服务没有开启。</li>
+<li>最后发现<code>两个系统的时间时间相差8小时</code>，意识到时两个系统设置不同引起的。</li>
+</ul>
 <h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><ul>
 <li>UTC即Universal Time Coordinated，协调世界时</li>
 <li>GMT 即Greenwich Mean Time，格林尼治平时</li>
@@ -604,44 +516,11 @@
 <li>Linux/Unix/Mac把硬件时间当作 UTC，操作系统中显示的时间是硬件时间经过换算得来的。</li>
 <li>当PC中同时有多 系统共存时，就出现了问题。</li>
 </ul>
-<h2 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h2><h3 id="方法一Ubuntu不使用UTC"><a href="#方法一Ubuntu不使用UTC" class="headerlink" title="方法一Ubuntu不使用UTC"></a>方法一<code>Ubuntu不使用UTC</code></h3><p>如果Ubuntu 不使用 UTC 时间，则可以与 Windows时间 保持一致。<br>ubuntu默认开启UTC,即协调世界时，关闭它即可</p>
-<pre><code>sudo vi /etc/default/rcS
-</code></pre><p>将<code>UTC=yes</code>改为<code>UTC=no</code></p>
-<h3 id="方法二修改-Windows-对硬件时间的对待方式"><a href="#方法二修改-Windows-对硬件时间的对待方式" class="headerlink" title="方法二修改 Windows 对硬件时间的对待方式"></a>方法二<code>修改 Windows 对硬件时间的对待方式</code></h3><ul>
-<li>让 Windows 把硬件时间当作 UTC</li>
-<li><p>方法：</p>
-<ul>
-<li><p>开 始-&gt;运行-&gt;CMD，在命令行中输入下面命令并回车</p>
-<p>Reg add KLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1</p>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="CentOS时间同步问题"><a href="#CentOS时间同步问题" class="headerlink" title="CentOS时间同步问题"></a>CentOS时间同步问题</h1><h2 id="编辑时间配置文件"><a href="#编辑时间配置文件" class="headerlink" title="编辑时间配置文件"></a>编辑时间配置文件</h2><ul>
-<li><p>使用vi编辑<code>/etc/sysconfig/clock</code>文件，添加如下内容：</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">ZONE</span>=<span class="string">"Asia/Shanghai"</span></div><div class="line"><span class="attr">UTC</span>=<span class="literal">false</span>       #设置为<span class="literal">false</span>，硬件时钟不于utc时间一致</div><div class="line"><span class="attr">ARC</span>=<span class="literal">false</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>使配置立即生效<code>source /etc/sysconfig/clock</code></p>
-</li>
-</ul>
-<h2 id="设置为上海时区"><a href="#设置为上海时区" class="headerlink" title="设置为上海时区"></a>设置为上海时区</h2><ul>
-<li>执行下面的命令，将Linux的时区设置为上海时区<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ln -sf <span class="regexp">/usr/</span>share<span class="regexp">/zoneinfo/</span>Asia<span class="regexp">/Shanghai    /</span>etc<span class="regexp">/localtime</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="对准时间"><a href="#对准时间" class="headerlink" title="对准时间"></a>对准时间</h2><ul>
-<li>注意：需要联网</li>
-<li>安装ntpdate的命令:<code>yum install ntp</code></li>
-<li>执行以下命令，对准时间<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ntpdate us<span class="selector-class">.pool</span><span class="selector-class">.ntp</span><span class="selector-class">.org</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="设置硬件时间和系统时间一致并校准"><a href="#设置硬件时间和系统时间一致并校准" class="headerlink" title="设置硬件时间和系统时间一致并校准"></a>设置硬件时间和系统时间一致并校准</h2><ul>
-<li>命令：<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="regexp">/sbin/</span>hwclock --systohc   <span class="comment">#设置硬件时间和系统时间一致并校准</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>至此，CentOS的时间已经同步了。</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://www.ithov.com/linux/122268.shtml" target="_blank" rel="external">http://www.ithov.com/linux/122268.shtml</a><br><a href="http://os.51cto.com/art/201004/192549.htm" target="_blank" rel="external">http://os.51cto.com/art/201004/192549.htm</a></p>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/06/24/双系统(Linux)时间不一致问题/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>

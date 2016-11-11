@@ -361,67 +361,15 @@
 
       
         
-          
-            <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
+          <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
 <li>网上关于caffe的安装教程非常多，但是关于每一步是否操作成功，出现了什么样的错误又该如何处理没有给出说明。因为大家的操作系统的环境千差万别，按照博客中的教程一步步的安装，最后可能失败——这是很常见的哦。有的教程甚至省略了一些细节部分，让小白更不知道如何判断每一步是否操作成功，如何处理出现的错误。</li>
 <li>作者花费了很长时间才成功地将caffe装完，期间遇到好多错误，多次重装操作系统。现在将经验写下来，一方面为了和大家分享，讨论；另一方面是为了记录一下下~~~</li>
 </ul>
-<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>操作系统： <strong><em>Ubuntu 14.04(64bit)</em></strong><br>GCC/G++:<strong><em>4.7.x</em></strong><br>OpenCV: <strong><em>2.4.11和3.0.0</em></strong><br>Matlab :<strong><em>R2014b(a)</em></strong><br>Python:   <strong><em>2.7</em></strong><br>显卡：Telsa K40m &amp; Telsa K20xm</p>
-<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><ul>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48649575" target="_blank" rel="external">综述</a></li>
-<li>0.准备工作</li>
-<li>1.<a href="http://blog.csdn.net/xuezhisdc/article/details/48650015" target="_blank" rel="external">安装GCC4.7和G++4.7并降级</a></li>
-<li>2.<a href="http://blog.csdn.net/xuezhisdc/article/details/48650565" target="_blank" rel="external">安装显卡驱动</a></li>
-<li>3.<a href="http://blog.csdn.net/xuezhisdc/article/details/48651003" target="_blank" rel="external">安装cuda和cudnn</a></li>
-<li>4.<a href="http://blog.csdn.net/xuezhisdc/article/details/48691147" target="_blank" rel="external">安装Matlab</a></li>
-<li>5.<a href="http://blog.csdn.net/xuezhisdc/article/details/48691797" target="_blank" rel="external">安装OpenCV</a></li>
-<li>6.<a href="http://blog.csdn.net/xuezhisdc/article/details/48706843" target="_blank" rel="external">安装Python依赖包</a></li>
-<li>7.<a href="http://blog.csdn.net/xuezhisdc/article/details/48707101" target="_blank" rel="external">安装caffe</a></li>
-</ul>
-<h2 id="安装OpenCV"><a href="#安装OpenCV" class="headerlink" title="安装OpenCV"></a>安装OpenCV</h2><ul>
-<li>安装前，请下载我的安装脚本,如下图所示。<a href="http://pan.baidu.com/s/1geAezRH" target="_blank" rel="external">点此下载</a><br><img src="http://img.blog.csdn.net/20150923231755240" alt="这里写图片描述"></li>
-<li>这个脚本是我根据GitHub上大神写的<a href="https://github.com/jayrambhia/Install-OpenCV" target="_blank" rel="external">安装OpenCV的脚本</a>改造的，这个脚本有一些问题，有些包安装不上，比如mmfpeg，有些包前后安装相互冲突，后面的会把前面的卸载等等。</li>
-<li>使用这个脚本的方法就是，先给5个脚本执行权限<code>chmod +x *.sh</code>，然后依照顺序执行这些脚本。</li>
-<li><p>执行1dependeccies.sh的方法是<code>sudo sh 1dependencies.sh</code>。这个脚本主要是安装OpenCV的一些依赖库。</p>
-<figure class="highlight q"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line">#!/bin/bash</div><div class="line">#edited <span class="keyword">by</span> xuezhi zhang.</div><div class="line">echo <span class="string">"--- Removing any pre-installed ffmpeg and x264"</span></div><div class="line">sudo apt-<span class="built_in">get</span> -qq remove ffmpeg x264 libx264-<span class="built_in">dev</span></div><div class="line">#function install_dependency &#123;</div><div class="line">#    echo <span class="string">"--- Installing dependency: $1"</span></div><div class="line">#    sudo apt-<span class="built_in">get</span> -y install $<span class="number">1</span></div><div class="line">#&#125;</div><div class="line">echo <span class="string">"Installing dependency"</span></div><div class="line">sudo apt-<span class="built_in">get</span> -y install libopencv-<span class="built_in">dev</span></div><div class="line">sudo apt-<span class="built_in">get</span> -y install build-essential</div><div class="line"># conflict</div><div class="line">#sudo apt-<span class="built_in">get</span> -y install checkinstall</div><div class="line">sudo apt-<span class="built_in">get</span> -y install cmake</div><div class="line">sudo apt-<span class="built_in">get</span> -y install pkg-config</div><div class="line">sudo apt-<span class="built_in">get</span> -y install yasm</div><div class="line">sudo apt-<span class="built_in">get</span> -y install libjasper-<span class="built_in">dev</span></div><div class="line">sudo apt-<span class="built_in">get</span> -y install libavcodec-<span class="built_in">dev</span></div><div class="line">sudo apt-<span class="built_in">get</span> -y install libavformat-<span class="built_in">dev</span></div><div class="line">sudo apt-<span class="built_in">get</span> -y install libswscale-<span class="built_in">dev</span></div><div class="line">sudo apt-<span class="built_in">get</span> -y install libdc1394<span class="number">-22</span>-<span class="built_in">dev</span></div><div class="line">sudo apt-<span class="built_in">get</span> -y install libxine-<span class="built_in">dev</span></div><div class="line">#echo <span class="string">"===================================================="</span></div><div class="line"># conflict with libxine-<span class="built_in">dev</span></div><div class="line">#sudo apt-<span class="built_in">get</span> -y install libxine2-<span class="built_in">dev</span></div><div class="line">sudo apt-<span class="built_in">get</span> -y install libgstreamer0<span class="number">.10</span>-<span class="built_in">dev</span></div><div class="line">sudo apt-<span class="built_in">get</span> -y install libgstreamer-plugins-base0<span class="number">.10</span>-<span class="built_in">dev</span></div><div class="line">sudo apt-<span class="built_in">get</span> -y install libv4l-<span class="built_in">dev</span></div><div class="line">sudo apt-<span class="built_in">get</span> -y install python-<span class="built_in">dev</span></div><div class="line">sudo apt-<span class="built_in">get</span> -y install python-numpy</div><div class="line">sudo apt-<span class="built_in">get</span> -y install python-scipy</div><div class="line">sudo apt-<span class="built_in">get</span> -y install  python-sphinx</div><div class="line">sudo apt-<span class="built_in">get</span> -y install libtbb-<span class="built_in">dev</span></div><div class="line">sudo apt-<span class="built_in">get</span> -y install libqt4-<span class="built_in">dev</span></div><div class="line">sudo apt-<span class="built_in">get</span> -y install libgtk2<span class="number">.0</span>-<span class="built_in">dev</span></div><div class="line">sudo apt-<span class="built_in">get</span> -y install libfaac-<span class="built_in">dev</span></div><div class="line">sudo apt-<span class="built_in">get</span> -y install libmp3lame-<span class="built_in">dev</span></div><div class="line">sudo apt-<span class="built_in">get</span> -y install libopencore-amrnb-<span class="built_in">dev</span></div><div class="line">sudo apt-<span class="built_in">get</span> -y install libopencore-amrwb-<span class="built_in">dev</span></div><div class="line">sudo apt-<span class="built_in">get</span> -y install libtheora-<span class="built_in">dev</span></div><div class="line">sudo apt-<span class="built_in">get</span> -y install libvorbis-<span class="built_in">dev</span></div><div class="line">sudo apt-<span class="built_in">get</span> -y install libxvidcore-<span class="built_in">dev</span></div><div class="line">sudo apt-<span class="built_in">get</span> -y install x264</div><div class="line">sudo apt-<span class="built_in">get</span> -y install v4l-utils</div><div class="line">sudo apt-<span class="built_in">get</span> -y install unzip</div><div class="line">sudo apt-<span class="built_in">get</span> -y install libgtk2<span class="number">.0</span><span class="number">-0</span></div><div class="line">sudo apt-<span class="built_in">get</span> -y install libjpeg-<span class="built_in">dev</span></div><div class="line">sudo apt-<span class="built_in">get</span> -y install libjpeg62 </div><div class="line"># conflict</div><div class="line">#sudo apt-<span class="built_in">get</span> -y install libjpeg62-<span class="built_in">dev</span></div><div class="line">sudo apt-<span class="built_in">get</span> -y install libtiff4-<span class="built_in">dev</span></div><div class="line">sudo apt-<span class="built_in">get</span> -y install libtiff5-<span class="built_in">dev</span></div><div class="line">sudo apt-<span class="built_in">get</span> -y install qt5-default</div><div class="line">echo <span class="string">"===================================================="</span></div><div class="line">echo <span class="string">"^^^^^^^^^^^^^^^^^^^^^^Over^^^^^^^^^^^^^^^^^^^^^^^^^^"</span></div><div class="line">echo <span class="string">"===================================================="</span></div><div class="line"></div><div class="line">#install_dependency ffmpeg</div><div class="line">#install fail, run file of ffmpeg_install to install it</div></pre></td></tr></table></figure>
-</li>
-<li><p>执行2download.sh的方法是<code>sudo sh 2download.sh</code>。这个脚本主要是下载一个安装包，为后面编译安装做准备。</p>
-</li>
-<li><p>执行2download.sh前，修改一下脚本，选择opencv-2.4.11和opencv-3.0.0，注释（#）另外一个就OK。</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">echo</span> <span class="string">"===================================================="</span></div><div class="line"><span class="keyword">echo</span> <span class="string">"--- Dowloading v4l-utils"</span></div><div class="line"><span class="keyword">echo</span> <span class="string">"===================================================="</span></div><div class="line">wget http:<span class="comment">//www.linuxtv.org/downloads/v4l-utils/v4l-utils-0.8.5.tar.bz2</span></div><div class="line"></div><div class="line"><span class="keyword">echo</span> <span class="string">"===================================================="</span></div><div class="line"><span class="keyword">echo</span> <span class="string">"--- Dowloading mmfpeg-2.8"</span></div><div class="line"><span class="keyword">echo</span> <span class="string">"===================================================="</span></div><div class="line">wget http:<span class="comment">//ffmpeg.org/releases/ffmpeg-2.8.tar.bz2</span></div><div class="line"><span class="keyword">echo</span> <span class="string">"===================================================="</span></div><div class="line"><span class="keyword">echo</span> <span class="string">"Downloading OpenCV"</span></div><div class="line"><span class="keyword">echo</span> <span class="string">"===================================================="</span></div><div class="line"><span class="comment"># opencv-2.4.11和opencv-3.0.0根据自己的需要，选择下载一个就OK了。</span></div><div class="line"><span class="comment"># 下载 opencv-2.4.11.zip</span></div><div class="line">wget -O opencv<span class="number">-2.4</span><span class="number">.11</span>.zip http:<span class="comment">//sourceforge.net/projects/opencvlibrary/files/opencv-unix/2.4.11/opencv-2.4.11.zip/download</span></div><div class="line"><span class="comment"># 下载 opencv-3.0.0</span></div><div class="line"><span class="comment">#wget -O opencv-3.0.0.zip http://sourceforge.net/projects/opencvlibrary/files/opencv-unix/3.0.0/opencv-3.0.0.zip/download</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>执行3mmfpeg_install.sh的方法是<code>sudo sh 3mmfpeg_install.sh</code>。这个脚本主要是安装mmfpeg。为后面安装OpenCV做准备。</p>
-</li>
-<li><p>因为mmfpeg不能使用apt-get安装，因此需要自己编译安装。</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">echo</span> <span class="string">"===================================================="</span></div><div class="line"><span class="keyword">echo</span> <span class="string">"Installing dependency"</span></div><div class="line"><span class="keyword">echo</span> <span class="string">"===================================================="</span></div><div class="line">sudo apt-<span class="built_in">get</span> install -<span class="keyword">y</span> libx264-dev libxext-dev libxfixes-dev</div><div class="line"></div><div class="line"><span class="keyword">echo</span> <span class="string">"===================================================="</span></div><div class="line"><span class="keyword">echo</span> <span class="string">"--- Configure mmfpeg-2.8"</span></div><div class="line"><span class="keyword">echo</span> <span class="string">"===================================================="</span></div><div class="line">tar -xf ffmpeg-<span class="number">2.8</span>.tar.bz2</div><div class="line"><span class="keyword">cd</span> ffmpeg-<span class="number">2.8</span></div><div class="line">./configure --prefix=/usr/local/ffmpeg --enable-gpl --enable-version3 --enable-nonfree --enable-postproc --enable-pthreads --enable-libfaac --enable-libmp3lame --enable-libtheora --enable-libx264 --enable-libxvid --enable-x11grab --enable-libvorbis</div><div class="line"></div><div class="line"><span class="keyword">echo</span> <span class="string">"===================================================="</span></div><div class="line"><span class="keyword">echo</span> <span class="string">"--- Making mmfpeg-2.8"</span></div><div class="line"><span class="keyword">echo</span> <span class="string">"===================================================="</span></div><div class="line"><span class="keyword">make</span> -<span class="keyword">j</span></div><div class="line"></div><div class="line"><span class="keyword">echo</span> <span class="string">"===================================================="</span></div><div class="line"><span class="keyword">echo</span> <span class="string">"--- Installing mmfpeg-2.8"</span></div><div class="line"><span class="keyword">echo</span> <span class="string">"===================================================="</span></div><div class="line"><span class="keyword">make</span> install</div><div class="line"><span class="keyword">cd</span> ..</div></pre></td></tr></table></figure>
-</li>
-<li><p>执行4v4l_install.sh，安装v4l。</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">echo</span> <span class="string">"===================================================="</span></div><div class="line"><span class="keyword">echo</span> <span class="string">"---Installing v4l---"</span></div><div class="line"><span class="keyword">echo</span> <span class="string">"===================================================="</span></div><div class="line">#wget http://www.linuxtv.org/downloads/v4l-utils/v4l-utils-<span class="number">0.8</span>.<span class="number">5</span>.tar.bz2</div><div class="line">tar -xvf v4l-utils-<span class="number">0.8</span>.<span class="number">5</span>.tar.bz2</div><div class="line"><span class="keyword">cd</span> v4l-utils-<span class="number">0.8</span>.<span class="number">5</span></div><div class="line"><span class="keyword">make</span> -<span class="keyword">j</span></div><div class="line">sudo <span class="keyword">make</span> install</div><div class="line"><span class="keyword">cd</span> ..</div></pre></td></tr></table></figure>
-</li>
-<li><p>安装OpenCV有两个选择，OpenCV2.4.11和OpenCV3.0.0，分别对应于5opencv2411.sh和5opencv300.sh，根据自己的需要选择执行哪个脚本。【注意：和前面2download.sh中下载的版本保持一致】</p>
-</li>
-<li>注意根据自己的显卡，修改 CUDA_GENERATION。如果是Fermi架构，就需要将Kepler修改成Fermi</li>
-<li>安装opencv2.4.11之前，根据最下面的错误分析中的错误1，修改opencvpath/cmake/OpenCVDetectCUDA.cmake文件之后，再执行脚本，否则可能出错。<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"># added <span class="keyword">by</span> xuezhi zhang.</div><div class="line"># </div><div class="line"># OpenCV 2.4.11</div><div class="line"># http:<span class="comment">//vinayhacks.blogspot.com.es/2011/11/installing-opencv-231-with-ffmpeg-on-64.html</span></div><div class="line">echo <span class="string">"===================================================="</span></div><div class="line">echo <span class="string">"Installing OpenCV"</span></div><div class="line">echo <span class="string">"===================================================="</span></div><div class="line"></div><div class="line">sudo unzip opencv-2.4.11.<span class="keyword">zip</span></div><div class="line"><span class="keyword">cd</span> opencv-2.4.11</div><div class="line">sudo <span class="keyword">mkdir</span> build</div><div class="line"><span class="keyword">cd</span> build</div><div class="line"># 注意根据自己的显卡，修改 CUDA_GENERATION。如果是Fermi架构，就需要将Kepler修改成Fermi</div><div class="line">sudo cmake -<span class="keyword">D</span> CMAKE_BUILD_TYPE=RELEASE -<span class="keyword">D</span> CMAKE_INSTALL_PREFIX=/usr/<span class="keyword">local</span> -<span class="keyword">D</span> WITH_TBB=<span class="keyword">ON</span> -<span class="keyword">D</span> BUILD_NEW_PYTHON_SUPPORT=<span class="keyword">ON</span> -<span class="keyword">D</span> WITH_V4L=<span class="keyword">ON</span> -<span class="keyword">D</span> INSTALL_C_EXAMPLES=<span class="keyword">ON</span> -<span class="keyword">D</span> INSTALL_PYTHON_EXAMPLES=<span class="keyword">ON</span> -<span class="keyword">D</span> BUILD_EXAMPLES=<span class="keyword">ON</span> -<span class="keyword">D</span> WITH_QT=<span class="keyword">ON</span> -<span class="keyword">D</span> WITH_OPENGL=<span class="keyword">ON</span> CUDA_GENERATION=Kepler ..</div><div class="line">#make -j 32</div><div class="line">sudo make -<span class="built_in">j</span></div><div class="line">sudo make install</div><div class="line">sudo <span class="keyword">sh</span> -c 'echo <span class="string">"/usr/local/lib"</span> &gt; /etc/ld.<span class="keyword">so</span>.<span class="keyword">conf</span>.<span class="keyword">d</span>/opencv.<span class="keyword">conf</span>'</div><div class="line">sudo ldconfig</div><div class="line">echo <span class="string">"OpenCV ready to be used"</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="判定OpenCV是否安装成功"><a href="#判定OpenCV是否安装成功" class="headerlink" title="判定OpenCV是否安装成功"></a>判定OpenCV是否安装成功</h2><ul>
-<li>安装过程中如果没有返回错误，说明安装没有问题，如果有任何错误提示，请自行Google解决。</li>
-<li>安装成功之后，如下所示。<br><img src="http://img.blog.csdn.net/20150924090717807" alt="这里写图片描述"></li>
-</ul>
-<h2 id="OpenCV安装过程中的错误"><a href="#OpenCV安装过程中的错误" class="headerlink" title="OpenCV安装过程中的错误"></a>OpenCV安装过程中的错误</h2><ul>
-<li>因为OpenCV有很多依赖包，因此安装过程非常的复杂。如果依赖的包没有安装，或者操作系统的编译环境有问题的话，很造成容易编译失败。</li>
-<li><strong><em>错误1： cannot build OpenCV 2.4.11 with CUDA 7.0</em></strong></li>
-<li>这个问题已经解决，<a href="https://github.com/Itseez/opencv/pull/3886" target="_blank" rel="external">参考网址</a>。</li>
-<li>这是一个和cuda的架构1.1（cuda7.0不再支持架构1.x）有关的错误，通过修改opencvpath/cmake/OpenCVDetectCUDA.cmake文件解决。如下图所示。<br><img src="http://img.blog.csdn.net/20150924091021080" alt="这里写图片描述"></li>
-<li><strong><em>错误2：error: a storage class is not allowed in an explicit specialization</em></strong></li>
-<li>这是cuda和opencv版本不适应的错误。</li>
-<li>这个问题也已经解决，<a href="http://code.opencv.org/issues/3814" target="_blank" rel="external">参考网址</a>。</li>
-<li>因此，最好的组合方式【cuda7.0 + opencv3.0.】和【cuda6.5+opencv2.4.11】。这两种组合方法，我都已经在Ubuntu14.04操作系统（64位版本）上成功地安装了。</li>
-<li>网上安装OpenCV的教程很多都是通过Install-OpenCV脚本来安装的，但我在使用过程中发现会出现问题，而网络教程有没有说明遇到问题如何解决，因此很坑。最终，借助Google，解决的所有问题，成功安装了所有依赖和OpenCV3.0。因此，如果大家遇到什么编译错误，不要害怕，google一下，一般别人已经遇到这个问题，并成功地解决了。</li>
-</ul>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://ouxinyu.github.io/Blogs/20140723001.html" target="_blank" rel="external">《Caffe + Ubuntu 15.04 + CUDA 7.0 新手安装配置指南》</a>——欧新宇<br><a href="http://sourceforge.net/projects/opencvlibrary/files/opencv-unix/" target="_blank" rel="external">opencv 项目</a><br><a href="http://pan.baidu.com/s/1mgH5dbE" target="_blank" rel="external">我的opencv安装脚本</a><br><a href="https://github.com/jayrambhia/Install-OpenCV" target="_blank" rel="external">GitHub上的opencv安装脚本</a></p>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/09/24/caffe安装系列——安装OpenCV/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -550,40 +498,15 @@
 
       
         
-          
-            <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
+          <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
 <li>网上关于caffe的安装教程非常多，但是关于每一步是否操作成功，出现了什么样的错误又该如何处理没有给出说明。因为大家的操作系统的环境千差万别，按照博客中的教程一步步的安装，最后可能失败——这是很常见的哦。有的教程甚至省略了一些细节部分，让小白更不知道如何判断每一步是否操作成功，如何处理出现的错误。</li>
 <li>作者花费了很长时间才成功地将caffe装完，期间遇到好多错误，多次重装操作系统。现在将经验写下来，一方面为了和大家分享，讨论；另一方面是为了记录一下下~~~</li>
 </ul>
-<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>操作系统： <strong><em>Ubuntu 14.04</em></strong><br>GCC/G++:<strong><em>4.7.x</em></strong><br>OpenCV: <strong><em>2.4.11和3.0.0</em></strong><br>Matlab :<strong><em>R2014b(a)</em></strong><br>Python:   <strong><em>2.7</em></strong></p>
-<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><ul>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48649575" target="_blank" rel="external">综述</a></li>
-<li>0.准备工作</li>
-<li>1.<a href="http://blog.csdn.net/xuezhisdc/article/details/48650015" target="_blank" rel="external">安装GCC4.7和G++4.7并降级</a></li>
-<li>2.<a href="http://blog.csdn.net/xuezhisdc/article/details/48650565" target="_blank" rel="external">安装显卡驱动</a></li>
-<li>3.<a href="http://blog.csdn.net/xuezhisdc/article/details/48651003" target="_blank" rel="external">安装cuda和cudnn</a></li>
-<li>4.<a href="http://blog.csdn.net/xuezhisdc/article/details/48691147" target="_blank" rel="external">安装Matlab</a></li>
-<li>5.<a href="http://blog.csdn.net/xuezhisdc/article/details/48691797" target="_blank" rel="external">安装OpenCV</a></li>
-<li>6.<a href="http://blog.csdn.net/xuezhisdc/article/details/48706843" target="_blank" rel="external">安装Python依赖包</a></li>
-<li>7.<a href="http://blog.csdn.net/xuezhisdc/article/details/48707101" target="_blank" rel="external">安装caffe</a></li>
-</ul>
-<h2 id="安装theano依赖包"><a href="#安装theano依赖包" class="headerlink" title="安装theano依赖包"></a>安装theano依赖包</h2><ul>
-<li><p>安装基本的依赖包</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"># 安装ipython</div><div class="line"># 安装gfortran,后面编译过程中会用到</div><div class="line"># 安装blas,Ubuntu下对应的是libopenblas，其它操作系统可能需要安装其它版本的blas——这是个OS相关的。</div><div class="line"># 安装lapack，Ubuntu下对应的是liblapack-dev，和OS相关。</div><div class="line"># 安装atlas，Ubuntu下对应的是libatlas-base-dev，和OS相关。</div><div class="line"># -y,遇到需要用户选择的项，都选y</div><div class="line">sudo apt-get install -y ipython ipython-notebook pandoc </div><div class="line">sudo apt-get install -y gfortran libopenblas-dev liblapack-dev libatlas-base-dev </div><div class="line"># 安装pip</div><div class="line">sudo apt-get install -y python-pip python-dev python-nose g++ git </div><div class="line">sudo apt-get install -y python-numpy python-scipy  </div><div class="line"># 自己编译的原因是，防止theano出错</div><div class="line"># 使用豆瓣的python源，下载速度快</div><div class="line">sudo pip install numpy -i http://pypi.douban.com/simple </div><div class="line">sudo pip install scipy -i http://pypi.douban.com/simple </div><div class="line"># 查看目录/tmp/pip_build_root</div><div class="line">sudo apt-get install -y python-matplotlib python-sklearn python-sklearn-lib</div></pre></td></tr></table></figure>
-</li>
-<li><p>安装boost和pyCUDA</p>
-<figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 安装boost和和pyCUDA。pyCUDA需要boost。</span></div><div class="line"><span class="string">sudo </span><span class="string">apt-get </span><span class="string">install </span>-y <span class="string">libboost-all-</span><span class="string">dev </span></div><div class="line"><span class="comment"># 下载pycuda源代码</span></div><div class="line"><span class="string">git </span><span class="string">clone </span><span class="built_in">--recursive</span> <span class="string">http:</span>//<span class="string">git.</span><span class="string">tiker.</span><span class="string">net/</span><span class="string">trees/</span><span class="string">pycuda.</span><span class="string">git</span></div><div class="line"><span class="string">cd </span><span class="string">pycuda</span></div><div class="line"><span class="string">sudo </span>./<span class="string">configure.</span><span class="string">py </span><span class="built_in">--cuda-root=/usr/local/cuda</span> <span class="built_in">--cudadrv-lib-dir=/usr/lib/x86_64-linux-gnu</span> <span class="built_in">--boost-inc-dir=/usr/include</span> <span class="built_in">--boost-lib-dir=/usr/lib</span> <span class="built_in">--boost-python-libname=boost_python</span> <span class="built_in">--boost-thread-libname=boost_thread</span> <span class="built_in">--no-use-shipped-boost</span> </div><div class="line"><span class="comment">#多核编译</span></div><div class="line"><span class="string">make </span>-j </div><div class="line"><span class="comment">#安装</span></div><div class="line"><span class="string">sudo </span><span class="string">python </span><span class="string">setup.</span><span class="string">py </span><span class="string">install</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>安装Theano</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo pip install theano -<span class="selector-tag">i</span> http:<span class="comment">//pypi.douban.com/simple</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>安装pyCaffe需要的依赖</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"># 使用apt-<span class="built_in">get</span>安装大多数包</div><div class="line">sudo apt-<span class="built_in">get</span> install -<span class="keyword">y</span> <span class="keyword">python</span>-numpy <span class="keyword">python</span>-scipy <span class="keyword">python</span>-matplotlib <span class="keyword">python</span>-sklearn <span class="keyword">python</span>-skimage <span class="keyword">python</span>-h5py <span class="keyword">python</span>-protobuf <span class="keyword">python</span>-leveldb <span class="keyword">python</span>-networkx <span class="keyword">python</span>-nose <span class="keyword">python</span>-pandas <span class="keyword">python</span>-gflags cython ipython <span class="keyword">python</span>-yaml </div><div class="line">sudo apt-<span class="built_in">get</span> install -<span class="keyword">y</span> protobuf-<span class="keyword">c</span>-<span class="keyword">compiler</span> protobuf-compile</div><div class="line"># 因为有些包使用apt-<span class="built_in">get</span>安装失败，所以使用pip重新安装它们，防止后面编译caffe过程中报错。</div><div class="line">sudo pip install protobuf --upgrade -i http://pypi.douban.<span class="keyword">com</span>/simple</div><div class="line">sudo pip install pillow --upgrade -i http://pypi.douban.<span class="keyword">com</span>/simple</div><div class="line">sudo pip install six --upgrade -i http://pypi.douban.<span class="keyword">com</span>/simple</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>至此，安装python依赖包的工作已经完成。也没有什么检查安装成功的评价标准。</p>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/09/24/caffe安装系列——安装python依赖包/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -712,106 +635,15 @@
 
       
         
-          
-            <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
+          <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
 <li>网上关于caffe的安装教程非常多，但是关于每一步是否操作成功，出现了什么样的错误又该如何处理没有给出说明。因为大家的操作系统的环境千差万别，按照博客中的教程一步步的安装，最后可能失败——这是很常见的哦。有的教程甚至省略了一些细节部分，让小白更不知道如何判断每一步是否操作成功，如何处理出现的错误。</li>
 <li>作者花费了很长时间才成功地将caffe装完，期间遇到好多错误，多次重装操作系统。现在将经验写下来，一方面为了和大家分享，讨论；另一方面是为了记录一下下~~~</li>
 </ul>
-<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>操作系统： <strong><em>Ubuntu 14.04</em></strong><br>GCC/G++:<strong><em>4.7.x</em></strong><br>OpenCV: <strong><em>2.4.11和3.0.0</em></strong><br>Matlab :<strong><em>R2014b(a)</em></strong><br>Python:   <strong><em>2.7</em></strong></p>
-<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><ul>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48649575" target="_blank" rel="external">综述</a></li>
-<li>0.准备工作</li>
-<li>1.<a href="http://blog.csdn.net/xuezhisdc/article/details/48650015" target="_blank" rel="external">安装GCC4.7和G++4.7并降级</a></li>
-<li>2.<a href="http://blog.csdn.net/xuezhisdc/article/details/48650565" target="_blank" rel="external">安装显卡驱动</a></li>
-<li>3.<a href="http://blog.csdn.net/xuezhisdc/article/details/48651003" target="_blank" rel="external">安装cuda和cudnn</a></li>
-<li>4.<a href="http://blog.csdn.net/xuezhisdc/article/details/48691147" target="_blank" rel="external">安装Matlab</a></li>
-<li>5.<a href="http://blog.csdn.net/xuezhisdc/article/details/48691797" target="_blank" rel="external">安装OpenCV</a></li>
-<li>6.<a href="http://blog.csdn.net/xuezhisdc/article/details/48706843" target="_blank" rel="external">安装Python依赖包</a></li>
-<li>7.<a href="http://blog.csdn.net/xuezhisdc/article/details/48707101" target="_blank" rel="external">安装caffe</a></li>
-</ul>
-<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><h3 id="0-准备工作"><a href="#0-准备工作" class="headerlink" title="0.准备工作"></a>0.准备工作</h3><ul>
-<li>安装Ubuntu 14.04（15.04）,最好安装较新版本的Ubuntu。为什么选择Ubuntu呢？一方面，个人使用习惯，感觉Ubuntu安装软件等特别方便，使用特别顺手；另一方面，caffe项目最初貌似在Ubuntu上开发的，原生嘛。</li>
-<li>安装过程需要下载东东，因此需要<strong>联网</strong>。</li>
-<li>安装<h3 id="1-安装GCC4-7和G-4-7并降级"><a href="#1-安装GCC4-7和G-4-7并降级" class="headerlink" title="1.安装GCC4.7和G++4.7并降级"></a>1.安装GCC4.7和G++4.7并降级</h3></li>
-<li><strong><em>为什么要先安装GCC和G++，并需要降级呢？</em></strong></li>
-<li>Ubuntu14.04版本默认的GCC和G++都是4.8。而Matlab默认支持的mex编译器是GCC4.7.x和G++4.7.x。因此需要额外安装GCC4.7和G++4.7并降级。</li>
-<li><strong><em>为什么需要先安装编译器GCC和G++，而不是先安装显卡驱动和cuda等等呢？</em></strong></li>
-<li>首先，先安装显卡驱动，后安装GCC并降级的安装顺序过程中，遇到了很多问题。比如，在安装CUDA SAMPLES的过程中，遇到了问题<strong>/usr/bin/ld: cannot find –lGL</strong>，后面通过网上教程，重新连接该库文件，仍然不能通过OpenCV的编译。但是，先安装GCC，再安装显卡驱动，就不会遇到这个问题了。</li>
-<li><p>其次，请先看下图。这是在成功地安装完显卡驱动之后，查看加载的显卡的版本信息时返回的结果。注意，包含了GCC4.7.3。说明，显卡安装过程中，会和GCC的版本产生联系。。。。这也就不不难理解为什么在编译Cuda Samples过程中会遇到上面的问题。<br><img src="http://img.blog.csdn.net/20150922092210340" alt="这里写图片描述"></p>
-</li>
-<li><p>所以，请先安装GCC4.7和G++4.7，然后在执行下面的步骤。</p>
-</li>
-</ul>
-<h3 id="2-安装NVIDIA显卡驱动"><a href="#2-安装NVIDIA显卡驱动" class="headerlink" title="2.安装NVIDIA显卡驱动"></a>2.<a href="http://blog.csdn.net/xuezhisdc/article/details/48650565" target="_blank" rel="external">安装NVIDIA显卡驱动</a></h3><ul>
-<li><strong><em>为什么需要安装NVIDIA显卡驱动，Ubuntu没有自带的显卡驱动吗？</em></strong></li>
-<li>Ubuntu自带的显卡驱动是开源的Nouveau，据说是一个比较烂的东东。而且，最关键的是cuda不支持Nouveau。如果想使用cuda进行GPU计算，必须安装NVIDIA显卡驱动。</li>
-<li><strong><em>选择哪个版本的显卡驱动呢</em></strong></li>
-<li>这个问题需要结合操作系统，显卡和个人需求来讨论。</li>
-<li>操作系统影响显卡驱动的版本。比如，我在Ubuntu14.04 Server上安装NVIDIA-352显卡驱动，说是由于dkms，安装失败。目前，通过apt-get方式可以安装的最新NVIDIA显卡驱动是NVIDIA-346。</li>
-<li>显卡嘛，硬件当然要和驱动适应才行</li>
-<li>个人需求，主要从cuda的角度考虑。比如cuda7.5需要显卡驱动最低版本是nvidia-352；cuda7.0需要显卡驱动最低版本是nvidia-336；cuda6.5需要显卡驱动最低版本是nvidia-33*；其他的记不清楚啦。。。</li>
-<li><strong><em>显卡驱动的安装方式有哪些</em></strong></li>
-<li>方法一：去NVIDIA官网下载相应的驱动二进制安装包，然后安装。</li>
-<li>方法二：通过<code>apt-get</code>来安装。</li>
-<li>区别：apt-get安装方便，但是不能安装最新的显卡驱动，目前ubuntu14.04通过apt-get可以安装nvidia-346显卡。</li>
-<li>安装过程中注意事项：①需要关闭显示管理器，②二进制安装需要修改文件，并重启。</li>
-</ul>
-<h3 id="3-安装cuda和cudnn"><a href="#3-安装cuda和cudnn" class="headerlink" title="3.安装cuda和cudnn"></a>3.<a href="http://blog.csdn.net/xuezhisdc/article/details/48651003" target="_blank" rel="external">安装cuda和cudnn</a></h3><ul>
-<li><strong><em>安装cuda的方式有哪些？</em></strong></li>
-<li>方法一：官网下载cuda开发包的二进制安装包进行安装。</li>
-<li>方法二：官网下载cuda开发包的deb文件进行安装。</li>
-<li><strong><em>cuda版本的选择问题？</em></strong></li>
-<li>根据个人需求和操作系统来决定，显卡驱动版本。</li>
-<li>cuda6.5是一个分界点，cuda6.5支持compute_11，compute_12. etc. compute_1X系列架构；从cuda7.0开始，不支持compute_1X系列架构，最低是compute_20架构。</li>
-<li>cuda对显卡驱动有要求。比如cuda7.5需要显卡驱动最低版本是nvidia-352；cuda7.0需要显卡驱动最低版本是nvidia-336；cuda6.5需要显卡驱动最低版本是nvidia-33*；其他的记不清楚啦。因此，结合自己操作系统可以安装的NVIDIA显卡驱动来决定选择哪个版本的cuda。</li>
-<li><strong><em>为什么安装cudnn？</em></strong></li>
-<li>cudnn可以简单的理解为<code>CUDa cNN</code>，即在GPU上做卷积运算。最近几年，深度学习很火，尤其是CNN（卷积神经网络）。通过cudnn，可以极大的提高CNN训练速度。简单的说，实用GPU是为了快，实用cudnn是为了更快。</li>
-</ul>
-<h3 id="4-安装Matlab"><a href="#4-安装Matlab" class="headerlink" title="4.安装Matlab"></a>4.<a href="http://blog.csdn.net/xuezhisdc/article/details/48691147" target="_blank" rel="external">安装Matlab</a></h3><ul>
-<li>在Ubuntu中安装Matlab比较简单，除了几个注意事项，和Windows中安装没有区别。</li>
-<li><strong><em>为什么需要安装Matlab？</em></strong></li>
-<li>caffe有Matlab的接口，因此如果需要使用Matlab调用caffe，进行编程，就需要安装Matlab。如果你觉得使用C或Python编程比较难，就请安装Matlab。当然如果不需要，并且后面不会编译caffe生成Matlab的接口，就不需要安装Matlab了。这个纯粹根据个人需求来定。</li>
-<li>Matlab是商业软件，请自行百度下载。。。【主要是太大了，不方便提供】</li>
-</ul>
-<h3 id="5-安装OpenCV"><a href="#5-安装OpenCV" class="headerlink" title="5.安装OpenCV"></a>5.<a href="http://blog.csdn.net/xuezhisdc/article/details/48691797" target="_blank" rel="external">安装OpenCV</a></h3><ul>
-<li><strong><em>为什么需要安装OpenCV？</em></strong></li>
-<li>caffe是用来做深度学习的，深度学习的一大应用对象就是图像和视频。而OpenCV是目前最火的开源计算机视觉库，非常多的项目多用到了OpenCV，当然caffe也依赖OpenCV。所以，需要安装OpenCV，否则无法使用caffe哦。。。</li>
-<li><strong><em>OpenCV安装简单吗？</em></strong></li>
-<li>答案是因人而异。有的人觉得简单，可以自己弄，有的人觉得难，没关系，大神们有写的安装脚本<a href="https://github.com/jayrambhia/Install-OpenCV" target="_blank" rel="external">点此*下载</a>，运行一下就OK了。</li>
-<li>但是，使用别人脚本安装的方法，也会遇到一些问题。如果遇到问题，请Google解决。</li>
-<li>最简单的方式是使用我修改过的脚本，按照顺序执行12345个脚本，基本不需要修改就能成功安装。</li>
-<li>最后提醒，安装OpenCV是挺麻烦的，请耐心安装，编译不过的话，查看错误Google，解决了再编译，一遍遍的尝试，最后就能解决问题了。</li>
-<li><strong><em>应该安装OpenCV哪个版本呢？</em></strong></li>
-<li>OpenCV的版本和cuda的版本最好匹配。这样子安排的目的是为了减少错误出现的概率。比如，我无错误编译成功的组合有【cuda7.0 + opencv3.0】，【cuda6.5+opencv2.11】。</li>
-<li>应该安装最新的，又不该安装最新的。呵呵，好别扭哦。针对于低版本的cuda，最好安装opencv2.x。而且是opencv2.x中最新的。</li>
-<li>低版本cuda安装opencv2.x的原因是，opencv的一些文件中涉及一些关于cuda架构的设置，opencv2.x中有支持相应的架构的配置。从这个角度看，cuda6.5是最保险的， 因为它既支持compute_1x，也支持更高的架构。</li>
-</ul>
-<h3 id="6-安装Python相关依赖"><a href="#6-安装Python相关依赖" class="headerlink" title="6.安装Python相关依赖"></a>6.<a href="http://blog.csdn.net/xuezhisdc/article/details/48706843" target="_blank" rel="external">安装Python相关依赖</a></h3><ul>
-<li><strong><em>为什么要安装python相关依赖？？？</em></strong></li>
-<li>首先，python在linux中应用非常的广泛，很多项目都会涉及python，caffe也不例外。</li>
-<li>其次，caffe提供了python的接口，为了后面使用，也需要这些依赖。</li>
-<li><strong><em>这些依赖都可以通过apt-get安装吗？</em></strong></li>
-<li>答案是否定的。</li>
-<li>首先，google一下<code>apt-get vs pip</code>，查看两者区别。</li>
-<li>其次，安装theano的时候，发现apt-get安装的numPy和sciPy无法通过测试，并且造成theano测试失败。使用pip安装成功。参考<a href="http://blog.csdn.net/xuezhisdc/article/details/47065475" target="_blank" rel="external">《Ubuntu14.04安装Theano详细教程》</a>。</li>
-<li>最后，在安装caffe的过程中，发现有几个python依赖包必须通过pip安装（即自行编译），否则无法成功地编译caffe。</li>
-</ul>
-<h3 id="7-安装caffe"><a href="#7-安装caffe" class="headerlink" title="7.安装caffe"></a>7.<a href="http://blog.csdn.net/xuezhisdc/article/details/48707101" target="_blank" rel="external">安装caffe</a></h3><ul>
-<li>再重复一遍，请在上面所有步骤成功执行的前提下，安装caffe，否则编译肯定不会通过的。</li>
-<li><strong><em>caffe源代码能不能直接拿过来编译呢？</em></strong></li>
-<li>不能。至少需要修改一个文件Makefile.config。该文件给caffe编译提供了必要的信息。</li>
-<li>如果opencv的版本是3.0，还需要修改其他项。</li>
-<li>其他的请参考安装caffe的教程</li>
-</ul>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
-<li>至此，ubuntu下安装caffe的工作已经结束了。如果你完全按照本教程操作，相信你一定已经成功安装caffe了，并且对caffe有了一定的了解。</li>
-<li><strong><em>世上无难事只怕有坚持</em></strong>，安装过程虽然很复杂，但是只要坚持，不断的Google解决它，caffe就一定能安装。</li>
-<li>错误不可怕，它是成功的障碍，同时也为我们成长提供了阶梯——所谓的能力，很大一部分是通过不断解决问题来获取的。</li>
-<li>下面开始学习如何使用caffe做深度学习的研究喽，祝大家学习愉快。。。</li>
-</ul>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://ouxinyu.github.io/Blogs/20140723001.html" target="_blank" rel="external">《Caffe + Ubuntu 15.04 + CUDA 7.0 新手安装配置指南》</a>——欧新宇<br>这个教程很好，请查看本教程的过程中，结合欧新宇的教程一并查看。<br><a href="https://github.com/BVLC/caffe" target="_blank" rel="external">《caffe - GitHub主页》</a></p>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/09/24/caffe安装系列——综述/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -940,49 +772,15 @@
 
       
         
-          
-            <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
+          <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
 <li>网上关于caffe的安装教程非常多，但是关于每一步是否操作成功，出现了什么样的错误又该如何处理没有给出说明。因为大家的操作系统的环境千差万别，按照博客中的教程一步步的安装，最后可能失败——这是很常见的哦。有的教程甚至省略了一些细节部分，让小白更不知道如何判断每一步是否操作成功，如何处理出现的错误。</li>
 <li>作者花费了很长时间才成功地将caffe装完，期间遇到好多错误，多次重装操作系统。现在将经验写下来，一方面为了和大家分享，讨论；另一方面是为了记录一下下~~~</li>
 </ul>
-<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>操作系统： <strong><em>Ubuntu 14.04(64 bit)</em></strong><br>GCC/G++:<strong><em>4.7.x</em></strong><br>OpenCV: <strong><em>2.4.11和3.0.0</em></strong><br>Matlab :<strong><em>R2014b(a)</em></strong><br>Python:   <strong><em>2.7</em></strong><br>显卡：Telsa K40m &amp; Telsa K20xm</p>
-<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><ul>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48649575" target="_blank" rel="external">综述</a></li>
-<li>0.准备工作</li>
-<li>1.<a href="http://blog.csdn.net/xuezhisdc/article/details/48650015" target="_blank" rel="external">安装GCC4.7和G++4.7并降级</a></li>
-<li>2.<a href="http://blog.csdn.net/xuezhisdc/article/details/48650565" target="_blank" rel="external">安装显卡驱动</a></li>
-<li>3.<a href="http://blog.csdn.net/xuezhisdc/article/details/48651003" target="_blank" rel="external">安装cuda和cudnn</a></li>
-<li>4.<a href="http://blog.csdn.net/xuezhisdc/article/details/48691147" target="_blank" rel="external">安装Matlab</a></li>
-<li>5.<a href="http://blog.csdn.net/xuezhisdc/article/details/48691797" target="_blank" rel="external">安装OpenCV</a></li>
-<li>6.<a href="http://blog.csdn.net/xuezhisdc/article/details/48706843" target="_blank" rel="external">安装Python依赖包</a></li>
-<li>7.<a href="http://blog.csdn.net/xuezhisdc/article/details/48707101" target="_blank" rel="external">安装caffe</a></li>
-</ul>
-<h2 id="安装NVIDIA显卡驱动"><a href="#安装NVIDIA显卡驱动" class="headerlink" title="安装NVIDIA显卡驱动"></a>安装NVIDIA显卡驱动</h2><h3 id="0-版本说明"><a href="#0-版本说明" class="headerlink" title="0.版本说明"></a>0.版本说明</h3><p>cuda6.5 <strong><em>NVIDIA-Linux-x86_64-346.xx</em></strong> (Ubuntu 14.04)<br>cuda7.0 <strong><em>NVIDIA-Linux-x86_64-346.xx</em></strong> (Ubuntu 14.04)<br>cuda7.5 <strong><em>NVIDIA-Linux-x86_64-352.xx</em></strong> (Ubuntu 15.04)</p>
-<h3 id="1-使用apt-get安装"><a href="#1-使用apt-get安装" class="headerlink" title="1.使用apt-get安装"></a>1.使用apt-get安装</h3><ul>
-<li><p>安装32位兼容包</p>
-<figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># 32位兼容包</span></div><div class="line"><span class="meta"># 为什么呢？安装二进制安装包时，提示是否安装32bit兼容包，因此，最好安装上32兼容包，以后操作系统上安装32bit软件也方便啊。。。</span></div><div class="line">sudo apt-<span class="keyword">get</span> install lib32z1</div></pre></td></tr></table></figure>
-</li>
-<li><p>关闭图形显示管理器</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 需要关闭图形显示管理器（Display Manager）。显卡，当然和显示有关喽，因此最好关闭图形显示管理器。</span></div><div class="line"><span class="literal">stop</span> lightdm</div></pre></td></tr></table></figure>
-</li>
-<li><p>安装显卡驱动</p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 安装显卡驱动。截止目前为止，<span class="number">346</span>显卡驱动是Ubuntu可以通过apt-get安装的最新显卡驱动，也是cuda7<span class="number">.0</span>支持的最低显卡驱动版本。</div><div class="line">sudo apt-get install nvidia<span class="number">-346</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>重启电脑，检查是否成功</p>
-<ul>
-<li>电脑重启后，命令行中输入<code>cat /proc/driver/nvidia/version</code>查看显卡信息。如下图所示</li>
-<li>如果/proc/driver/目录下没有nvidia目录，说明nvidia显卡驱动没有加载，也就意味着安装失败。请参考其它教程，保证安装完成。<br><img src="http://img.blog.csdn.net/20150922092210340" alt="这里写图片描述"></li>
-</ul>
-</li>
-<li>注意：务必成功安装显卡驱动之后，再继续其它步骤，否则。。。。</li>
-<li>注意：先将GCC和G++降级，然后再安装驱动。</li>
-</ul>
-<h3 id="2-使用二进制安装包安装"><a href="#2-使用二进制安装包安装" class="headerlink" title="2.使用二进制安装包安装"></a>2.使用二进制安装包安装</h3><ul>
-<li>下载驱动</li>
-<li>参考<a href="http://blog.csdn.net/xuezhisdc/article/details/47075401" target="_blank" rel="external">《Ubuntu-安装-cuda7.0-单显卡-超详细教程》</a>安装。。。</li>
-</ul>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/09/24/caffe安装系列——安装NVIDIA显卡驱动/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1111,68 +909,15 @@
 
       
         
-          
-            <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
+          <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
 <li>网上关于caffe的安装教程非常多，但是关于每一步是否操作成功，出现了什么样的错误又该如何处理没有给出说明。因为大家的操作系统的环境千差万别，按照博客中的教程一步步的安装，最后可能失败——这是很常见的哦。有的教程甚至省略了一些细节部分，让小白更不知道如何判断每一步是否操作成功，如何处理出现的错误。</li>
 <li>作者花费了很长时间才成功地将caffe装完，期间遇到好多错误，多次重装操作系统。现在将经验写下来，一方面为了和大家分享，讨论；另一方面是为了记录一下下~~~</li>
 </ul>
-<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>操作系统： <strong><em>Ubuntu 14.04(64bit)</em></strong><br>GCC/G++:<strong><em>4.7.x</em></strong><br>OpenCV: <strong><em>2.4.11和3.0.0</em></strong><br>Matlab :<strong><em>R2014b(a)</em></strong><br>Python:   <strong><em>2.7</em></strong><br>显卡：Telsa K40m &amp; Telsa K20xm</p>
-<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><ul>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48649575" target="_blank" rel="external">综述</a></li>
-<li>0.准备工作</li>
-<li>1.<a href="http://blog.csdn.net/xuezhisdc/article/details/48650015" target="_blank" rel="external">安装GCC4.7和G++4.7并降级</a></li>
-<li>2.<a href="http://blog.csdn.net/xuezhisdc/article/details/48650565" target="_blank" rel="external">安装显卡驱动</a></li>
-<li>3.<a href="http://blog.csdn.net/xuezhisdc/article/details/48651003" target="_blank" rel="external">安装cuda和cudnn</a></li>
-<li>4.<a href="http://blog.csdn.net/xuezhisdc/article/details/48691147" target="_blank" rel="external">安装Matlab</a></li>
-<li>5.<a href="http://blog.csdn.net/xuezhisdc/article/details/48691797" target="_blank" rel="external">安装OpenCV</a></li>
-<li>6.<a href="http://blog.csdn.net/xuezhisdc/article/details/48706843" target="_blank" rel="external">安装Python依赖包</a></li>
-<li>7.<a href="http://blog.csdn.net/xuezhisdc/article/details/48707101" target="_blank" rel="external">安装caffe</a></li>
-</ul>
-<h2 id="安装Matlab"><a href="#安装Matlab" class="headerlink" title="安装Matlab"></a>安装Matlab</h2><h3 id="1-下载Matlab"><a href="#1-下载Matlab" class="headerlink" title="1. 下载Matlab"></a>1. 下载Matlab</h3><ul>
-<li>下载地址，请自行百度解决。太大了，不方便提供。</li>
-<li>版本选择问题。最好下载较新的版本。比如R2014a，R2014b和R2015a等。</li>
-<li>下载破解文件Crack文件。一般情况下，crack文件是包含在下载的Matlab安装镜像里面的——除非你下载的是MathWork公司提供的原版。如果里面没有crack文件，自行<strong><em>Google</em></strong>解决。<br>###2. 安装Matlab</li>
-<li>Matlab安装过程请参考下面的连接（欧新宇）。里面给出了详细的教程。</li>
-<li><p>说明几点：</p>
-<ul>
-<li>Windows下安装Matlab，直接双击安装文件即可。但是，在Ubuntu中安装Matlab时，是<strong><em>在命令行中安装</em></strong>的。具体而言，在命令行中，切换到Matlab安装包路径下，执行<code>sudo ./install</code>，就会跳出安装会话框。</li>
-<li><em>Ubuntu安装Matlab需要在图形界面中操作</em>。如上所言，执行<code>sudo ./install</code>之后，会跳出图形对话框，如果是在纯粹的命令行上，应该无法进行。</li>
-<li>安装过程中，依次会提示<strong>输入序列号</strong>，<strong>证书路径</strong>。</li>
-</ul>
-</li>
-<li><p>切记：图形安装对话框结束之后，Matlab并没有安装完成。</p>
-<ul>
-<li>这时尝试打开Matlab会报错。通过在命令行中执行<code>matlab</code>，可以看到返回的错误信息是<strong><em>没哟激活</em></strong>。</li>
-<li>但是，你可能疑惑，为什么呢？最后激活步骤，明明导入了证书文件（*.lic）?!</li>
-<li>这是因为，我们使用的是盗版的的Matlab，所以还需要额外的一步：<strong><em>替换libmwservices.so库文件</em></strong>。</li>
-<li>替换需要在命令行中操作，还需要root权限（超级用户）。因为需要将libmwservices.so复制到<code>/usr/local/Matlab/R2014b/***</code>目录下，该目录属于root用户，所以需要在命令行中是，使用<code>cp</code>（或<code>mv</code>）命令完成。</li>
-<li>替换libmwservices.so之后就可以成功运行Matlab了。<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo cp libmwservices.so <span class="regexp">/usr/</span>local<span class="regexp">/MATLAB/</span>R2014a<span class="regexp">/bin/g</span>lnxa64<span class="regexp">/</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="3-GCC和G-版本问题"><a href="#3-GCC和G-版本问题" class="headerlink" title="3.GCC和G++版本问题"></a>3.GCC和G++版本问题</h3><ul>
-<li>前面<a href="http://blog.csdn.net/xuezhisdc/article/details/48650015" target="_blank" rel="external"> 《caffe安装系列——安装GCC4.7和G++4.7并降级》</a>介绍了如何实现GCC和G++降级，并提到了为什么这样操作——Ubuntu14.04版本默认的GCC和G++都是4.8。而Matlab默认支持的mex编译器是GCC4.7.x和G++4.7.x。因此需要额外安装GCC4.7和G++4.7并降级。<br>*请注意一点： <a href="http://blog.csdn.net/xuezhisdc/article/details/48650015" target="_blank" rel="external"> 《caffe安装系列——安装GCC4.7和G++4.7并降级》</a>实现了GCC和G++的降级，但是并没有更改任何的关于Matlab文件。Matalb要使用GCC4.7和G++4.7，还需要做一些工作——重新连接 libstdc++.so.6文件。</li>
-<li>具体操作命令如下所示：<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">#拷贝文件</div><div class="line">sudo cp /usr/lib/x86_64-linux-gnu/libstdc++.so<span class="number">.6</span><span class="number">.0</span><span class="number">.20</span> /usr/local/MATLAB/R2014a/sys/os/glnxa64/libstdc++.so<span class="number">.6</span><span class="number">.0</span><span class="number">.20</span></div><div class="line"># libstdc++.so<span class="number">.6</span><span class="number">.0</span><span class="number">.20</span>的版本，可能因为系统不同而不同，使用最新的就可以了。Ubuntu14<span class="number">.04</span>的最新版本是libstdc++.so<span class="number">.6</span><span class="number">.0</span><span class="number">.19</span>。</div><div class="line"># 切换路径</div><div class="line">cd /usr/local/MATLAB/R2014a/sys/os/glnxa64/</div><div class="line"># 修改权限</div><div class="line">chmod <span class="number">555</span> libstdc++.so<span class="number">.6</span><span class="number">.0</span><span class="number">.20</span></div><div class="line">#（仅仅是备份，可以不操作）。</div><div class="line">sudo mv libstdc++.so<span class="number">.6</span> libstdc++.so<span class="number">.6</span>.backup </div><div class="line"># 重新链接</div><div class="line">ln –s libstdc++.so<span class="number">.6</span><span class="number">.0</span><span class="number">.20</span> libstdc++.so<span class="number">.6</span></div><div class="line"># 使配置生效</div><div class="line">sudo ldconfig -v</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="4-建立Matlab的快捷方式"><a href="#4-建立Matlab的快捷方式" class="headerlink" title="4. 建立Matlab的快捷方式"></a>4. 建立Matlab的快捷方式</h3><ul>
-<li><p>新建一个文本文件（使用vi, gedit等），输入以下内容。退出保存。将该文件放到/home/yourname/Desktop/目录下，既可以看到Matlab的快捷方式。</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="section">[Desktop Entry]</span></div><div class="line"><span class="attr">Name</span>=Matlab <span class="number">2014</span>b</div><div class="line"><span class="attr">Exec</span>=/usr/local/MATLAB/R2014b/bin/matlab -desktop</div><div class="line"><span class="attr">Icon</span>=/usr/local/MATLAB/R2014b/toolbox/nnet/nnresource/icons/matlab.png</div><div class="line"><span class="attr">Type</span>=Application</div></pre></td></tr></table></figure>
-</li>
-<li><p><strong>Exec</strong>是可执行文件，需要是绝对路径。</p>
-</li>
-<li><strong>Icon</strong>是图标，如果没有设置的话，不会显示Matlab的标志图标</li>
-<li>以上路径根据自己安装路径更改。</li>
-<li>快捷方式带一个小锁的问题。看看该文件的属主是谁，如果不是自己，使用<code>chown</code>命令将属主改为自己；如果没有执行权限，使用<code>chmod</code>命令增加可执行权限。</li>
-</ul>
-<h2 id="检查"><a href="#检查" class="headerlink" title="检查"></a>检查</h2><ul>
-<li><strong>检查Matlab是否安装成功</strong>。在命令行中输入matlab，回车。如果打开Matalb，说明安装成功。如果没有打开，将路径切换到Matlab安装路径下的bin文件夹下，再次执行matlab，如果还没有打开，就说明没有安装成功。如果任何一次打开了，就说明安装成功了。</li>
-<li><strong>检查GCC版本问题</strong>。通过命令<code>strings /usr/local/MATLAB/R2014a/sys/os/glnxa64/libstdc++.so.6 | grep GLIBCXX</code>，可以看一下，是否已经成功包含了GLIBCXX_3.4.20（Ubuntu14.04中是GLIBCXX_3.4.19），如果已经存在，基本上就成功了。</li>
-</ul>
-<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="http://ouxinyu.github.io/Blogs/20140723001.html" target="_blank" rel="external">《Caffe + Ubuntu 15.04 + CUDA 7.0 新手安装配置指南》</a>——欧新宇<br> <a href="http://blog.csdn.net/xuezhisdc/article/details/48650015" target="_blank" rel="external"> 《caffe安装系列——安装GCC4.7和G++4.7并降级》</a></p>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/09/23/caffe安装系列——安装Matlab/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>

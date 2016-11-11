@@ -361,354 +361,17 @@
 
       
         
-          
-            <h2 id="一、说明"><a href="#一、说明" class="headerlink" title="一、说明"></a>一、说明</h2><ul>
+          <h2 id="一、说明"><a href="#一、说明" class="headerlink" title="一、说明"></a>一、说明</h2><ul>
 <li>本教程是在台式机上安装的，只有一个NVIDIA显卡。</li>
 <li>操作系统是Ubuntu 14.04 (64bit)。</li>
 <li>双显卡的笔记本请移步<a href="">Ubuntu-安装-cuda7.0-双显卡-超详细教程</a></li>
 </ul>
-<h2 id="二、准备"><a href="#二、准备" class="headerlink" title="二、准备"></a>二、准备</h2><p><strong><em>说明：本文假设下载的文件都在~/Dowloads/下面</em></strong></p>
-<p>###1. 更新操作系统<br><figure class="highlight q"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="built_in">get</span> <span class="keyword">update</span></div></pre></td></tr></table></figure></p>
-<h3 id="2-下载cuda7-0"><a href="#2-下载cuda7-0" class="headerlink" title="2. 下载cuda7.0"></a>2. 下载cuda7.0</h3><p><a href="https://developer.nvidia.com/cuda-downloads" target="_blank" rel="external">点此下载</a> </p>
-<ul>
-<li><p>如果不是该版本，可以搜索，如下图所示；</p>
-</li>
-<li><p>点击”Linux x86”，选择“Ubuntu 14.04”行的最后一个“RUN”下载；</p>
-<p>  <img src="http://img.blog.csdn.net/20150731081204846" alt="这里写图片描述"></p>
-<p>  <img src="http://img.blog.csdn.net/20150731081542503" alt="这里写图片描述"></p>
-</li>
-</ul>
-<h3 id="3-下载NVIDIA显卡驱动"><a href="#3-下载NVIDIA显卡驱动" class="headerlink" title="3. 下载NVIDIA显卡驱动"></a>3. 下载NVIDIA显卡驱动</h3><p><a href="http://www.nvidia.cn/Download/index.aspx?lang=cn" target="_blank" rel="external">点此下载</a></p>
-<ul>
-<li><p>选择自己电脑对应的配置，然后点击“搜索”；</p>
-</li>
-<li><p>点击“DOWLOAD”，进行下载；</p>
-<p>  <img src="http://img.blog.csdn.net/20150731081921600" alt="这里写图片描述"></p>
-<p>  <img src="http://img.blog.csdn.net/20150731082244468" alt="这里写图片描述"></p>
-</li>
-</ul>
-<h2 id="三、验证系统是否符合要求"><a href="#三、验证系统是否符合要求" class="headerlink" title="三、验证系统是否符合要求"></a>三、验证系统是否符合要求</h2><h3 id="1-验证显卡是否支持cuda"><a href="#1-验证显卡是否支持cuda" class="headerlink" title="1. 验证显卡是否支持cuda"></a>1. 验证显卡是否支持cuda</h3><ul>
-<li><p>终端输入命令，如图所示。如果只返回两条信息，即有两个显卡，可以继续下面教程，否则请移步<a href="http://blog.csdn.net/xuezhisdc/article/details/47075401" target="_blank" rel="external">《Ubuntu-安装-cuda7.0-双显卡-超详细教程》</a></p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">lspci | grep VGA</div></pre></td></tr></table></figure>
-<p>  <img src="http://img.blog.csdn.net/20150731082709383" alt="这里写图片描述"></p>
-</li>
-<li><p>如果操作系统是Ubuntu Server，即使有NVIDIA显卡，执行上面的命令可能也不会返回相关信息。这时需要执行的命令是 <code>lspci |grep nvidia -i</code> ，就能返回正常的结果。</p>
-</li>
-<li>终端会显示显卡型号，在<a href="https://developer.nvidia.com/cuda-gpus中查找，是否有你的显卡型号，只要存在，就表明显卡支持cuda，同时还可以查看显卡的计算能力，数值越大越好。" target="_blank" rel="external">https://developer.nvidia.com/cuda-gpus中查找，是否有你的显卡型号，只要存在，就表明显卡支持cuda，同时还可以查看显卡的计算能力，数值越大越好。</a></li>
-</ul>
-<h3 id="2-查看系统类型"><a href="#2-查看系统类型" class="headerlink" title="2. 查看系统类型"></a>2. 查看系统类型</h3><ul>
-<li><p>命令行输入下面命令;</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">uname -m &amp;&amp; cat /etc/*release</div></pre></td></tr></table></figure>
-</li>
-<li><p>第一行显示有x86_64，说明系统是x86构架64位系统;</p>
-<p>  <img src="http://img.blog.csdn.net/20150731083253009" alt="这里写图片描述"></p>
-</li>
-</ul>
-<h2 id="四、安装NVIDIA显卡驱动"><a href="#四、安装NVIDIA显卡驱动" class="headerlink" title="四、安装NVIDIA显卡驱动"></a>四、安装NVIDIA显卡驱动</h2><blockquote>
-<p>说明：前面下载的cuda7.0<em>.run中含有NVIDIA显卡驱动，而且安装时会提示安装驱动。但是，由于Ubuntu中已经为NVIDIA显卡安装了驱动nouveau，而且该驱动正在运行中，所以安装驱动的过程稍微麻烦，建议<em>*先单独安装显卡驱动，再安装cuda</em></em></p>
-</blockquote>
-<h3 id="1-切换到tty1"><a href="#1-切换到tty1" class="headerlink" title="1. 切换到tty1"></a>1. 切换到tty1</h3><ul>
-<li><p>说明，视窗会使用显卡，如果在视窗下，原来的驱动nouveau不会停止，也就不能安装成功</p>
-</li>
-<li><p>按组合键”Ctrl+Alt+F1“，切换到tty1；</p>
-</li>
-</ul>
-<h3 id="2-关闭显示器管理器"><a href="#2-关闭显示器管理器" class="headerlink" title="2. 关闭显示器管理器"></a>2. 关闭显示器管理器</h3><ul>
-<li>输入命令<code>sudo stop lightdm</code>，关闭显示器管理器。否则后面旧的显卡驱动无法禁用，新的显卡驱动无法安装。</li>
-</ul>
-<h3 id="3-禁用旧的显卡驱动"><a href="#3-禁用旧的显卡驱动" class="headerlink" title="3. 禁用旧的显卡驱动"></a>3. 禁用旧的显卡驱动</h3><ul>
-<li><p>注意：<code>禁用旧的显卡驱动</code>这一步可以不操作，后面安装新的NVIDIA显卡驱动时，会提示该问题；那时选择相应的选项即可创建该文件。</p>
-</li>
-<li><p>禁用旧的显卡驱动；切换到/etc/modprobe.d/，新建文件nvidia-installer-disable-nouveau.conf，输入以下内容，保存退出；</p>
-  <figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">blacklist</span> nouveau</div><div class="line"><span class="attribute"><span class="nomarkup">options</span></span> nouveau modeset=0</div></pre></td></tr></table></figure>
-</li>
-<li><p>在文件/etc/default/grub的最后，添加一行，如下所示；</p>
-  <figure class="highlight fix"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attr">rdblacklist nouveau</span></div><div class="line">nouveau.modeset=<span class="string">0</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="4-安装新的驱动"><a href="#4-安装新的驱动" class="headerlink" title="4. 安装新的驱动"></a>4. 安装新的驱动</h3><ul>
-<li>小技巧：如果按照第3步做完了，重启后依然无法安装新的NVIDIA显卡驱动，那么可以通过software manger安装NVIDIA低版本的显卡驱动（它就会自动关闭nouveau），重启后卸载低版本显卡驱动，接着安装当前版本的显卡驱动。这样一般情况下可以成功。（曲线救国）</li>
-<li><p>执行以下命令安装</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 切换到驱动所在的路径</span></div><div class="line"><span class="built_in">cd</span> ~/Downloads</div><div class="line"><span class="comment"># 查看驱动的名称(ls)</span></div><div class="line">ls</div><div class="line"><span class="comment"># 开始安装,注意将驱动名换成你下载的驱动的名称</span></div><div class="line">sudo sh ./NVIDIA-Linux-x86_64-352.30.run</div></pre></td></tr></table></figure>
-</li>
-<li><p>安装过程中，根据提示，选择<code>accept</code>, ‘yes’或默认选项</p>
-<ul>
-<li>选项：Accept →  Continue → installation →  OK → OK → OK </li>
-</ul>
-</li>
-<li><p>当提示<strong>重启</strong>时，重启继续。(如果前面没有禁用nouveau，会提示向/etc/modprobe.d/路径下添加文件，其实是在尝试禁用nouveau。如果出现该提示，需要重启电脑之后，再次运行显卡安装程序，重新开始安装一遍。)</p>
-</li>
-<li><p>重启后，切换到tty（Ctrl+Alt+F1），关闭显示器管理（<em><code>sudo stop lightdm</code></em>），重新运行安装驱动命令 （<em><code>sudo sh ./NVIDIA-Linux-x86_64-352.30.run</code></em>）</p>
-</li>
-<li><p>当提示<strong>*would you run nvidia-Xconfig utility … </strong>，选择Yes。</p>
-</li>
-</ul>
-<h3 id="5-检验驱动是否安装成功"><a href="#5-检验驱动是否安装成功" class="headerlink" title="5. 检验驱动是否安装成功"></a>5. 检验驱动是否安装成功</h3><ul>
-<li><p>打开终端，输入以下命令：</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /proc/driver/nvidia/version</div></pre></td></tr></table></figure>
-</li>
-<li><p>如果显示驱动版本，说明安装成功。如下图所示。</p>
-<p>  <img src="http://img.blog.csdn.net/20150731094233828" alt="这里写图片描述"></p>
-</li>
-</ul>
-<h2 id="五、安装cuda"><a href="#五、安装cuda" class="headerlink" title="五、安装cuda"></a>五、安装cuda</h2><p><strong><em>注意，请在成功安装显卡驱动的前提下继续安装cuda，否则也会安装失败。</em></strong></p>
-<h3 id="1-安装依赖库"><a href="#1-安装依赖库" class="headerlink" title="1. 安装依赖库"></a>1. 安装依赖库</h3><ul>
-<li><p>请先在Terminal中安装以下依赖库：</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install freeglut3-dev</div><div class="line">sudo apt-get install build-essential</div><div class="line">sudo apt-get install libx11-dev</div><div class="line">sudo apt-get install libxmu-dev </div><div class="line">sudo apt-get install libxi-dev </div><div class="line">sudo apt-get install libglu1-mesa </div><div class="line">sudo apt-get install libglu1-mesa-dev</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="2-运行cuda安装命令"><a href="#2-运行cuda安装命令" class="headerlink" title="2. 运行cuda安装命令"></a>2. 运行cuda安装命令</h3><ul>
-<li><p>在Terminal中运行以下命令，开始安装cuda：</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 注意，将cuda名称换成自己下载的名称</span></div><div class="line"><span class="comment"># 添加执行权限</span></div><div class="line">chmod a+x cuda_7.0.28_linux.run</div><div class="line">sudo ./cuda_7.0.28_linux.run</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
-<li><p>安装过程中会提示安装<strong>NVIDIA驱动</strong>，OpenGL，CUDA安装包和SAMPLE包。此处只安装后面三个。由于前面已经安装了最新版的NVIDIA驱动，此处不用再安装。</p>
-</li>
-<li><p>安装过程中，根据提示，选择accept, ‘yes’或默认选项；</p>
-</li>
-<li><p><strong><em>…symbolic link …</em></strong>选项选择Yes，否则没有<em><code>/usr/local/cuda/</code></em>，只有<em><code>/usr/local/cuda7.0/</code></em></p>
-</li>
-<li><p>安装完成之后，启动显示器管理（<code>sudo start lightdm</code>），切换回视窗界面。</p>
-</li>
-</ul>
-<h3 id="3-配置环境变量"><a href="#3-配置环境变量" class="headerlink" title="3. 配置环境变量"></a>3. 配置环境变量</h3><ul>
-<li><p>打开终端，在文件/etc/profile的最后添加以下内容：</p>
-  <figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">PATH=<span class="regexp">/usr/</span>local<span class="regexp">/cuda/</span>bin:<span class="variable">$PATH</span></div><div class="line">export PATH</div></pre></td></tr></table></figure>
-</li>
-<li><p>保存后, 执行下列命令, 使环境变量立即生效</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">source</span> /etc/profile</div></pre></td></tr></table></figure>
-</li>
-<li><p>在 /etc/ld.so.conf.d/新建文件 cuda.conf，并添加如下内容：</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/<span class="built_in">local</span>/cuda/lib64</div></pre></td></tr></table></figure>
-</li>
-<li><p>执行下列命令使之立刻生效:</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo ldconfig</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="4-检验环境是否设置好"><a href="#4-检验环境是否设置好" class="headerlink" title="4. 检验环境是否设置好"></a>4. 检验环境是否设置好</h3><ul>
-<li>打开终端，输入<code>cuda</code>，按2次”Tab键“，如果有弹出的命令提示，就说明环境配置成功。</li>
-</ul>
-<h3 id="5-安装其他一些辅助库"><a href="#5-安装其他一些辅助库" class="headerlink" title="5.安装其他一些辅助库"></a>5.安装其他一些辅助库</h3><figure class="highlight q"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="built_in">get</span> install freeglut3-<span class="built_in">dev</span> build-essential libx11-<span class="built_in">dev</span> libxmu-<span class="built_in">dev</span> libxi-<span class="built_in">dev</span> libgl1-mesa-glx libglu1-mesa libglu1-mesa-<span class="built_in">dev</span></div></pre></td></tr></table></figure>
-<h2 id="六、安装CUDA-SAMPLES"><a href="#六、安装CUDA-SAMPLES" class="headerlink" title="六、安装CUDA SAMPLES"></a>六、安装CUDA SAMPLES</h2><ul>
-<li><p>安装cuda过程中，cuda samples默认安装了，并且存储在当前用户目录下（<strong><em>/home/xuezhisd/NVIDIA_CUDA-7.0_Samples</em></strong>），如下图所示：</p>
-<p>  <img src="http://img.blog.csdn.net/20150731094513416" alt="这里写图片描述"></p>
-</li>
-</ul>
-<h3 id="1-验证nvcc"><a href="#1-验证nvcc" class="headerlink" title="1. 验证nvcc"></a>1. 验证nvcc</h3><ul>
-<li>输入命令<em><code>nvcc --version</code></em>，如果已经安装了，会显示版本号；如果没有安装，按照提示完成安装。</li>
-</ul>
-<h3 id="2-make-cuda-samples"><a href="#2-make-cuda-samples" class="headerlink" title="2. make cuda samples"></a>2. make cuda samples</h3><ul>
-<li><p>切换到cuda-samples路径，使用<strong><em><code>make</code></em></strong>命令：</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#切换到cuda-samples所在目录</span></div><div class="line"><span class="comment">#注意，换成自己的路径</span></div><div class="line"><span class="built_in">cd</span> /home/xuezhisd/NVIDIA_CUDA-7.0_Samples</div><div class="line"><span class="comment">#编译 make （安装命令 sudo apt-get install cmake)</span></div><div class="line">make</div><div class="line"><span class="comment">#编译完毕，切换release目录</span></div><div class="line"><span class="built_in">cd</span> ./bin/x86_64/linux/release</div><div class="line"><span class="comment">#检验是否成功</span></div><div class="line"><span class="comment">#运行实例 ./deviceQuery</span></div><div class="line">./deviceQuery</div></pre></td></tr></table></figure>
-</li>
-<li><p>显示如下结果，说明成功。</p>
-<p>  <img src="http://img.blog.csdn.net/20150731141630016" alt="这里写图片描述"><br>  <img src="http://img.blog.csdn.net/20150731141752530" alt="这里写图片描述"></p>
-</li>
-</ul>
-<h2 id="七、安装cuDNN"><a href="#七、安装cuDNN" class="headerlink" title="七、安装cuDNN"></a>七、安装cuDNN</h2><h3 id="1-下载cuDNN"><a href="#1-下载cuDNN" class="headerlink" title="1. 下载cuDNN"></a>1. 下载cuDNN</h3><ul>
-<li><a href="https://developer.nvidia.com/cudnn" target="_blank" rel="external">官方下载</a> 需要注册和验证，麻烦。</li>
-<li>我将我下载文件上传到百度网盘中了，有需要的可以点击此处直接下载 <a href="http://pan.baidu.com/s/1sjBl5cL" target="_blank" rel="external">cudnn</a>    &amp;     <a href="http://pan.baidu.com/s/1hq8ggfy" target="_blank" rel="external">cudnn-samples</a></li>
-</ul>
-<h3 id="2-安装cuDNNE"><a href="#2-安装cuDNNE" class="headerlink" title="2. 安装cuDNNE"></a>2. 安装cuDNNE</h3><ul>
-<li><p>解压，并复制文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#解压文件</span></div><div class="line">tar -zxvf cudnn-6.5-linux-x64-v2.tgz</div><div class="line"><span class="comment">#切换路径</span></div><div class="line"><span class="built_in">cd</span> cudnn-6.5-linux-x64-v2</div><div class="line"><span class="comment">#复制lib文件到cuda安装路径下的lib64/</span></div><div class="line">sudo cp lib* /usr/<span class="built_in">local</span>/cuda/lib64/</div><div class="line"><span class="comment">#复制头文件</span></div><div class="line">sudo cp cudnn.h /usr/<span class="built_in">local</span>/cuda/include/</div></pre></td></tr></table></figure>
-</li>
-<li><p>更新软连接</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/cuda/lib64/</div><div class="line">sudo rm -rf libcudnn.so libcudnn.so.6.5</div><div class="line">sudo ln <span class="_">-s</span> libcudnn.so.6.5.48 libcudnn.so.6.5</div><div class="line">sudo ln <span class="_">-s</span> libcudnn.so.6.5 libcudnn.so</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>至此，cuDNN完成安装。</p>
-<h2 id="八、参考文章"><a href="#八、参考文章" class="headerlink" title="八、参考文章"></a>八、参考文章</h2><p><a href="http://www.linuxidc.com/Linux/2013-05/84814.htm" target="_blank" rel="external">Ubuntu 13.04 双显卡安装NVIDIA GT 630M驱动</a></p>
-<p><a href="http://www.cnblogs.com/platero/p/3993877.html" target="_blank" rel="external">Caffe + Ubuntu 14.04 64bit + CUDA 6.5 配置说明</a></p>
-<p><a href="http://www.bubuko.com/infodetail-462458.html" target="_blank" rel="external">Ubuntu14.04+cuda6.5+opencv2.4.9+MATLAB2013a+caffe配置记录（二）</a></p>
-<p><a href="https://www.google.com.hk/webhp?sourceid=chrome-instant&amp;ion=1&amp;espv=2&amp;ie=UTF-8#q=ERROR%3A%20Module%20nouveau%20is%20in%20use" target="_blank" rel="external">ERROR: Module nouveau is in use</a></p>
-<p><a href="http://www.pimp-my-rig.com/2012/01/unload-nouveau-install-nvidia-driver.html" target="_blank" rel="external">HOW-TO: Unload nouveau and Install Nvidia Driver</a></p>
-<p><a href="http://www.linuxidc.com/Linux/2015-07/120449.htm" target="_blank" rel="external">Caffe在Ubuntu 14.04 64bit 下的安装</a></p>
-<p><a href="http://blog.csdn.net/guicydy/article/details/45367217" target="_blank" rel="external">ubutu14.04LTS+opencv2.4.9+matlab 2014a+caffe+cuDNN</a></p>
-<p><a href="http://blog.sina.com.cn/s/blog_403db75501010yp2.html" target="_blank" rel="external">Optimus双显卡用Bumblebee3.0在ubuntu12.04下配置CUDA4.2</a></p>
-<p><a href="http://www.cnblogs.com/platero/p/4070756.html" target="_blank" rel="external">Ubuntu 14.04 Nvidia显卡驱动安装及设置</a><br><a href="http://www.shangxueba.com/jingyan/1661938.html" target="_blank" rel="external">ubuntu 11.10驱动gtx 460显卡 禁用nouveau </a></p>
-<ul>
-<li><p>ERROR: 启动过程中，会出现两个错误，执行以下命令可以解决。</p>
-  <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt-get <span class="keyword">purge</span> nvidia<span class="number">-304</span></div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> nvidia<span class="number">-331</span></div></pre></td></tr></table></figure></li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/07/31/Ubuntu-安装-搜狗输入法-详细教程/" itemprop="url">
-                  Ubuntu-安装-搜狗输入法-详细教程
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-07-31T14:34:00+08:00" content="2015-07-31">
-              2015-07-31
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Linux/安装和配置软件/" itemprop="url" rel="index">
-                    <span itemprop="name">安装和配置软件</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/07/31/Ubuntu-安装-搜狗输入法-详细教程/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/31/Ubuntu-安装-搜狗输入法-详细教程/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Ubuntu安装搜狗输入法"><a href="#Ubuntu安装搜狗输入法" class="headerlink" title="Ubuntu安装搜狗输入法"></a>Ubuntu安装搜狗输入法</h1><h2 id="下载deb安装包"><a href="#下载deb安装包" class="headerlink" title="下载deb安装包"></a>下载deb安装包</h2><ul>
-<li><a href="http://pinyin.sogou.com/linux/?r=pinyin" target="_blank" rel="external">安装包 下载地址</a></li>
-<li>系统32位的点击“立即下载32bit”，如下图所示；</li>
-<li>系统64位的点击“立即下载64bit”，如下图所示。<br><img src="http://img.blog.csdn.net/20150731074947628" alt="这里写图片描述"></li>
-</ul>
-<h2 id="安装fcitx"><a href="#安装fcitx" class="headerlink" title="安装fcitx"></a>安装fcitx</h2><ul>
-<li>打开Terminal，输入以下命令，安装fcitx<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install fcitx</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="安装搜狗输入法"><a href="#安装搜狗输入法" class="headerlink" title="安装搜狗输入法"></a>安装搜狗输入法</h2><ul>
-<li>输入以下命令，安装第一步下载的deb安装包</li>
-<li>注意：deb包名根据你下载的包名而定。</li>
-<li><p>下面以64位版本为例。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">sudo</span> <span class="selector-tag">dpkg</span> <span class="selector-tag">-i</span> <span class="selector-tag">sogoupinyin_1</span><span class="selector-class">.2</span><span class="selector-class">.0</span><span class="selector-class">.0048_amd64</span><span class="selector-class">.deb</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>如果出现错误，则输入以下命令，修复。</p>
-<figure class="highlight q"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="built_in">get</span> <span class="keyword">update</span></div><div class="line">sudo apt-<span class="built_in">get</span> -f install</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="配置输入方法"><a href="#配置输入方法" class="headerlink" title="配置输入方法"></a>配置输入方法</h2><ul>
-<li><p>输入以下命令</p>
-<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">im-<span class="built_in">config</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>跳出一个对话框，如下图所示，点击“OK”；<br><img src="http://img.blog.csdn.net/20150731075138684" alt="这里写图片描述"></p>
-</li>
-<li>点击“Yes”；<br><img src="http://img.blog.csdn.net/20150731075324395" alt="这里写图片描述"></li>
-<li>选择fcitx，点击“OK”；<br><img src="http://img.blog.csdn.net/20150731075426623" alt="这里写图片描述"></li>
-<li>点击“OK”；<br><img src="http://img.blog.csdn.net/20150731075404825" alt="这里写图片描述"></li>
-</ul>
-<h2 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h2><ul>
-<li>重启电脑，使配置生效。</li>
-</ul>
-<h2 id="添加搜狗输入法"><a href="#添加搜狗输入法" class="headerlink" title="添加搜狗输入法"></a>添加搜狗输入法</h2><ul>
-<li>点击右上角的<strong><code>小键盘图标</code></strong>，<br><img src="http://img.blog.csdn.net/20150731075545762" alt="这里写图片描述"></li>
-<li>选择<strong><code>配置</code></strong>选项，打开输入法配置对话框，点击左下角的<strong><code>+</code></strong>按钮；<br><img src="http://img.blog.csdn.net/20150731075710704" alt="这里写图片描述"></li>
-<li>在弹出的对话框中，取消<code>Only show current language</code>选项；<br><img src="http://img.blog.csdn.net/20150731075715863" alt="这里写图片描述"></li>
-<li>拖动滚动条到最后，选择<code>sougou  china</code>；<br><img src="http://img.blog.csdn.net/20150731075921662" alt="这里写图片描述"></li>
-<li><p>点击“Ok”，完成安装。<br><img src="http://img.blog.csdn.net/20150731080008992" alt="这里写图片描述"></p>
-</li>
-<li><p>注： 切换输入法快捷键“Ctrl + 空格”，切换中英文快捷键“Shift”</p>
-</li>
-</ul>
-<p>至此，搜狗输入法完成安装。。。</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://pinyin.sogou.com/linux/help.php" target="_blank" rel="external">http://pinyin.sogou.com/linux/help.php</a><br><a href="http://jingyan.baidu.com/article/0202781189b6ef1bcc9ce513.html" target="_blank" rel="external">http://jingyan.baidu.com/article/0202781189b6ef1bcc9ce513.html</a></p>
-
-          
+<h2 id="二、准备"><a href="#二、准备" class="headerlink" title="二、准备"></a>二、准备</h2><p><strong>说明：本文假设下载的文件都在~/Dowloads/下面</strong></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/08/02/Ubuntu-安装-cuda7.0-单显卡-超详细教程/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -837,31 +500,162 @@
 
       
         
-          
-            <h2 id="一、下载Chrome的安装包"><a href="#一、下载Chrome的安装包" class="headerlink" title="一、下载Chrome的安装包"></a>一、下载Chrome的安装包</h2><p>打开终端，输入一下命令（区分64位和32位），下载Chrome的deb安装包。<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#<span class="number">32</span>位</div><div class="line">wget http<span class="variable">s:</span>//<span class="keyword">dl</span>.google.<span class="keyword">com</span>/linux/direct/google-chrome-stable_current_i386.<span class="keyword">deb</span></div><div class="line">#<span class="number">64</span>位</div><div class="line">wget http<span class="variable">s:</span>//<span class="keyword">dl</span>.google.<span class="keyword">com</span>/linux/direct/google-chrome-stable_current_amd64.<span class="keyword">deb</span></div></pre></td></tr></table></figure></p>
+          <h2 id="一、下载Chrome的安装包"><a href="#一、下载Chrome的安装包" class="headerlink" title="一、下载Chrome的安装包"></a>一、下载Chrome的安装包</h2><ul>
+<li>打开终端，输入一下命令（区分64位和32位），下载Chrome的deb安装包。<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#<span class="number">32</span>位</div><div class="line">wget http<span class="variable">s:</span>//<span class="keyword">dl</span>.google.<span class="keyword">com</span>/linux/direct/google-chrome-stable_current_i386.<span class="keyword">deb</span></div><div class="line">#<span class="number">64</span>位</div><div class="line">wget http<span class="variable">s:</span>//<span class="keyword">dl</span>.google.<span class="keyword">com</span>/linux/direct/google-chrome-stable_current_amd64.<span class="keyword">deb</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
 <h2 id="二、安装Chrome"><a href="#二、安装Chrome" class="headerlink" title="二、安装Chrome"></a>二、安装Chrome</h2><ul>
 <li>注意：需要root权限</li>
 <li>在Terminal中输入以下命令<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#<span class="number">32</span>位安装命令</div><div class="line">sudo dpkg -<span class="selector-tag">i</span> google-chrome-stable_current_i386<span class="selector-class">.deb</span></div><div class="line">#<span class="number">64</span>位安装命令</div><div class="line">sudo dpkg -<span class="selector-tag">i</span> google-chrome-stable_current_amd64.deb</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="三、修复安装错误"><a href="#三、修复安装错误" class="headerlink" title="三、修复安装错误"></a>三、修复安装错误</h2><ul>
-<li>安装过程中会提示错误信息“在处理时有错误发生： google-chrome-stable”</li>
-<li><p>英文错误：</p>
-<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">dpkg: <span class="keyword">error</span> processing <span class="keyword">package</span> google-chrome-stable (--install):</div><div class="line">dependency problems - leaving unconfigured</div></pre></td></tr></table></figure>
-</li>
-<li><p>出现这个错误之后，执行下面的命令</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> -f install</div></pre></td></tr></table></figure>
-</li>
-<li><p>执行完成后，Chrome就安装成功了。</p>
-</li>
-<li>在Dash中搜索Chrome，打开Chrome，并绑定到启动栏（launcher）</li>
-</ul>
-<h2 id="四、参考文章："><a href="#四、参考文章：" class="headerlink" title="四、参考文章："></a>四、参考文章：</h2><ul>
-<li><a href="http://www.linuxidc.com/Linux/2014-04/100645.htm" target="_blank" rel="external">http://www.linuxidc.com/Linux/2014-04/100645.htm</a></li>
-<li><a href="http://jingyan.baidu.com/article/a681b0de18071e3b1843463b.html" target="_blank" rel="external">http://jingyan.baidu.com/article/a681b0de18071e3b1843463b.html</a></li>
-</ul>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/07/31/Ubuntu-安装-Chrome/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/07/31/Ubuntu-安装-搜狗输入法-详细教程/" itemprop="url">
+                  Ubuntu-安装-搜狗输入法-详细教程
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-07-31T14:34:00+08:00" content="2015-07-31">
+              2015-07-31
+            </time>
+          </span>
 
           
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Linux/安装和配置软件/" itemprop="url" rel="index">
+                    <span itemprop="name">安装和配置软件</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/07/31/Ubuntu-安装-搜狗输入法-详细教程/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/31/Ubuntu-安装-搜狗输入法-详细教程/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="下载deb安装包"><a href="#下载deb安装包" class="headerlink" title="下载deb安装包"></a>下载deb安装包</h2><ul>
+<li><a href="http://pinyin.sogou.com/linux/?r=pinyin">安装包 下载地址</a></li>
+<li>系统32位的点击“立即下载32bit”，如下图所示；</li>
+<li>系统64位的点击“立即下载64bit”，如下图所示。<br><img src="http://img.blog.csdn.net/20150731074947628" alt="这里写图片描述"></li>
+</ul>
+<h2 id="安装fcitx"><a href="#安装fcitx" class="headerlink" title="安装fcitx"></a>安装fcitx</h2><ul>
+<li>打开Terminal，输入以下命令，安装fcitx<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install fcitx</div></pre></td></tr></table></figure>
+</li>
+</ul>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/07/31/Ubuntu-安装-搜狗输入法-详细教程/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -990,8 +784,7 @@
 
       
         
-          
-            <h2 id="系统环境"><a href="#系统环境" class="headerlink" title="系统环境"></a>系统环境</h2><ul>
+          <h2 id="系统环境"><a href="#系统环境" class="headerlink" title="系统环境"></a>系统环境</h2><ul>
 <li>Ubuntu 14.04</li>
 <li>Python2.7</li>
 </ul>
@@ -999,26 +792,12 @@
 sudo python --version
 sudo apt-get install python-gevent python-pip
 sudo pip install shadowsocks
-</code></pre><h2 id="找到shadowsocks的安装位置"><a href="#找到shadowsocks的安装位置" class="headerlink" title="找到shadowsocks的安装位置"></a>找到shadowsocks的安装位置</h2><pre><code>sudo find / -name shadows*
-</code></pre><p>其中， “/“是根目录下， *是通配符。<br>我的安装路径是<code>/usr/local/lib/python2.7/dist-packages/shadowsocks</code></p>
-<h2 id="新建并修改配置文件"><a href="#新建并修改配置文件" class="headerlink" title="新建并修改配置文件"></a>新建并修改配置文件</h2><p>在安装路径下新建文件config.json，路径<code>/usr/local/lib/python2.7/dist-packages/shadowsocks</code>，创建命令<code>sudo touch config.json</code></p>
-<p>文件内容：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line"><span class="attr">"server"</span>:<span class="string">"79.45.115.110"</span>,</div><div class="line"><span class="attr">"server_port"</span>:<span class="number">12801</span>,</div><div class="line"><span class="attr">"local_port"</span>:<span class="number">10808</span>,</div><div class="line"><span class="attr">"password"</span>:<span class="string">"123456"</span>,</div><div class="line"><span class="attr">"timeout"</span>:<span class="number">600</span>,</div><div class="line"><span class="attr">"method"</span>:<span class="string">"aes-256-cfb"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="运行shadowsocks"><a href="#运行shadowsocks" class="headerlink" title="运行shadowsocks"></a>运行shadowsocks</h2><p>在安装路径下，输入<code>sslocal</code>，即可启动shadowsocks。</p>
-<h2 id="开机自动启动"><a href="#开机自动启动" class="headerlink" title="开机自动启动"></a>开机自动启动</h2><ul>
-<li><p>修改rc.local文件</p>
-<p>  cd /etc/<br>  sudo vim rc.local</p>
-</li>
-</ul>
-<p>加上一行：</p>
-<pre><code>/usr/local/bin/sslocal -c /usr/local/lib/python2.7/dist-packages/shadowsocks/config.json
-</code></pre><h2 id="配置SwitchySharp"><a href="#配置SwitchySharp" class="headerlink" title="配置SwitchySharp"></a>配置SwitchySharp</h2><ul>
-<li><a href="http://pan.baidu.com/s/1eQCoeQ2" target="_blank" rel="external">下载Switchysharp</a></li>
-<li><a href="http://jingyan.baidu.com/article/380abd0a5543221d90192c9f.html" target="_blank" rel="external">安装Switchysharp</a></li>
-<li>配置如下图所示，注意：端口根据根据配置中填写，上面的配置是10808，所以此处端口应该由1080改为：10808<br>  <img src="http://img.blog.csdn.net/20150802191807396" alt="这里写图片描述"></li>
-</ul>
-
-          
+</code></pre>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/07/31/Ubuntu-安装-Shadowsocks/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1147,28 +926,18 @@ sudo pip install shadowsocks
 
       
         
-          
-            <h2 id="一、apt-get-安装"><a href="#一、apt-get-安装" class="headerlink" title="一、apt-get 安装"></a>一、apt-get 安装</h2><pre><code>deb是debian linus的安装格式，跟red hat的rpm非常相似，最基本的安装命令是：dpkg -i file.deb或者直接双击此文件
-
-dpkg 是Debian Package的简写，是为Debian 专门开发的套件管理系统，方便软件的安装、更新及移除。所有源自Debian的Linux发行版都使用dpkg，例如Ubuntu、Knoppix 等。
-</code></pre><ul>
-<li>以下是一些 dpkg 的普通用法：</li>
+          <h2 id="一、apt-get-安装"><a href="#一、apt-get-安装" class="headerlink" title="一、apt-get 安装"></a>一、apt-get 安装</h2><ul>
+<li>deb是debian linus的安装格式，跟red hat的rpm非常相似，最基本的安装命令是：dpkg -i file.deb或者直接双击此文件</li>
+<li>dpkg 是Debian Package的简写，是为Debian 专门开发的套件管理系统，方便软件的安装、更新及移除。所有源自Debian的Linux发行版都使用dpkg，例如Ubuntu、Knoppix 等。</li>
 </ul>
-<h3 id="dpkg-i"><a href="#dpkg-i" class="headerlink" title="dpkg -i"></a>dpkg -i</h3><pre><code>安装一个 Debian 软件包，如你手动下载的文件。
-</code></pre><h3 id="dpkg-c"><a href="#dpkg-c" class="headerlink" title="dpkg -c"></a>dpkg -c</h3><pre><code>列出 的内容。
-</code></pre><h3 id="dpkg-I"><a href="#dpkg-I" class="headerlink" title="dpkg -I"></a>dpkg -I</h3><pre><code>从 中提取包裹信息。
-</code></pre><h3 id="dpkg-r"><a href="#dpkg-r" class="headerlink" title="dpkg -r"></a>dpkg -r</h3><pre><code>移除一个已安装的包裹。
-</code></pre><h3 id="dpkg-P"><a href="#dpkg-P" class="headerlink" title="dpkg -P"></a>dpkg -P</h3><pre><code>完全清除一个已安装的包裹。和 remove 不同的是，remove 只是删掉数据和可执行文件，purge 另外还删除所有的配制文件。
-</code></pre><h3 id="dpkg-L"><a href="#dpkg-L" class="headerlink" title="dpkg -L"></a>dpkg -L</h3><pre><code>列出 安装的所有文件清单。同时请看 dpkg -c 来检查一个 .deb 文件的内容。
-</code></pre><h3 id="dpkg-s"><a href="#dpkg-s" class="headerlink" title="dpkg -s"></a>dpkg -s</h3><pre><code>显示已安装包裹的信息。同时请看 apt-cache 显示 Debian 存档中的包裹信息，以及 dpkg -I 来显示从一个 .deb 文件中提取的包裹信息。
-</code></pre><h3 id="dpkg-reconfigure"><a href="#dpkg-reconfigure" class="headerlink" title="dpkg-reconfigure"></a>dpkg-reconfigure</h3><pre><code>重新配制一个已经安装的包裹，如果它使用的是 debconf (debconf 为包裹安装提供了一个统一的配制界面)。
-</code></pre><h2 id="二、软件安装后相关文件位置"><a href="#二、软件安装后相关文件位置" class="headerlink" title="二、软件安装后相关文件位置"></a>二、软件安装后相关文件位置</h2><h3 id="下载的软件存放位置"><a href="#下载的软件存放位置" class="headerlink" title="下载的软件存放位置"></a>下载的软件存放位置</h3><p>/var/cache/apt/archives</p>
-<h3 id="安装后软件默认位置"><a href="#安装后软件默认位置" class="headerlink" title="安装后软件默认位置"></a>安装后软件默认位置</h3><p>/usr/share</p>
-<h3 id="可执行文件位置"><a href="#可执行文件位置" class="headerlink" title="可执行文件位置"></a>可执行文件位置</h3><p>/usr/bin</p>
-<h3 id="配置文件位置"><a href="#配置文件位置" class="headerlink" title="配置文件位置"></a>配置文件位置</h3><p>/etc</p>
-<h3 id="lib文件位置"><a href="#lib文件位置" class="headerlink" title="lib文件位置"></a>lib文件位置</h3><p>/usr/lib</p>
-
-          
+<blockquote>
+<p> 以下是一些 dpkg 的普通用法：</p>
+</blockquote>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/07/28/ubuntu中apt-get安装与默认路径/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>

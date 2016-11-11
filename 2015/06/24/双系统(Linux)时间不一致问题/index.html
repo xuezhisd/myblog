@@ -58,16 +58,28 @@
 
 
 
-<meta name="description" content="解决双系统时间不一致问题问题描述最近需要使用Linux（Ubuntu），所以在自己的电脑上安装了双系统（Windows+Ubuntu）。但是发现Windows的时间不正确，每次开机时，时间都会慢8个小时。每次通过同步互联网时间可以更正，但是重启后又是如此。后来，发现windows time服务没有开启。将其设置为自启动之后，每次开机后依然如此。而且windows time服务没有开启。最后发现两个">
+<meta name="description" content="解决双系统时间不一致问题问题描述
+最近需要使用Linux（Ubuntu），所以在自己的电脑上安装了双系统（Windows+Ubuntu）。但是发现Windows的时间不正确，每次开机时，时间都会慢8个小时。
+每次通过同步互联网时间可以更正，但是重启后又是如此。
+后来，发现windows time服务没有开启。将其设置为自启动之后，每次开机后依然如此。而且windows time服务没有开启。
+最后">
 <meta property="og:type" content="article">
 <meta property="og:title" content="双系统(Linux)时间不一致问题">
 <meta property="og:url" content="http://zhangxuezhi.com/2015/06/24/双系统(Linux)时间不一致问题/index.html">
 <meta property="og:site_name" content="学志の博客">
-<meta property="og:description" content="解决双系统时间不一致问题问题描述最近需要使用Linux（Ubuntu），所以在自己的电脑上安装了双系统（Windows+Ubuntu）。但是发现Windows的时间不正确，每次开机时，时间都会慢8个小时。每次通过同步互联网时间可以更正，但是重启后又是如此。后来，发现windows time服务没有开启。将其设置为自启动之后，每次开机后依然如此。而且windows time服务没有开启。最后发现两个">
-<meta property="og:updated_time" content="2016-11-06T16:31:56.567Z">
+<meta property="og:description" content="解决双系统时间不一致问题问题描述
+最近需要使用Linux（Ubuntu），所以在自己的电脑上安装了双系统（Windows+Ubuntu）。但是发现Windows的时间不正确，每次开机时，时间都会慢8个小时。
+每次通过同步互联网时间可以更正，但是重启后又是如此。
+后来，发现windows time服务没有开启。将其设置为自启动之后，每次开机后依然如此。而且windows time服务没有开启。
+最后">
+<meta property="og:updated_time" content="2016-11-11T16:12:14.481Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="双系统(Linux)时间不一致问题">
-<meta name="twitter:description" content="解决双系统时间不一致问题问题描述最近需要使用Linux（Ubuntu），所以在自己的电脑上安装了双系统（Windows+Ubuntu）。但是发现Windows的时间不正确，每次开机时，时间都会慢8个小时。每次通过同步互联网时间可以更正，但是重启后又是如此。后来，发现windows time服务没有开启。将其设置为自启动之后，每次开机后依然如此。而且windows time服务没有开启。最后发现两个">
+<meta name="twitter:description" content="解决双系统时间不一致问题问题描述
+最近需要使用Linux（Ubuntu），所以在自己的电脑上安装了双系统（Windows+Ubuntu）。但是发现Windows的时间不正确，每次开机时，时间都会慢8个小时。
+每次通过同步互联网时间可以更正，但是重启后又是如此。
+后来，发现windows time服务没有开启。将其设置为自启动之后，每次开机后依然如此。而且windows time服务没有开启。
+最后">
 
 
 
@@ -363,7 +375,12 @@
       
 
       
-        <h1 id="解决双系统时间不一致问题"><a href="#解决双系统时间不一致问题" class="headerlink" title="解决双系统时间不一致问题"></a>解决双系统时间不一致问题</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>最近需要使用Linux（Ubuntu），所以在自己的电脑上安装了双系统（Windows+Ubuntu）。但是发现Windows的时间不正确，每次开机时，时间都会慢8个小时。<br>每次通过同步互联网时间可以更正，但是重启后又是如此。<br>后来，发现windows time服务没有开启。将其设置为自启动之后，每次开机后依然如此。而且windows time服务没有开启。<br>最后发现<code>两个系统的时间时间相差8小时</code>，意识到时两个系统设置不同引起的。</p>
+        <h1 id="解决双系统时间不一致问题"><a href="#解决双系统时间不一致问题" class="headerlink" title="解决双系统时间不一致问题"></a>解决双系统时间不一致问题</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><ul>
+<li>最近需要使用Linux（Ubuntu），所以在自己的电脑上安装了双系统（Windows+Ubuntu）。但是发现Windows的时间不正确，每次开机时，时间都会慢8个小时。</li>
+<li>每次通过同步互联网时间可以更正，但是重启后又是如此。</li>
+<li>后来，发现windows time服务没有开启。将其设置为自启动之后，每次开机后依然如此。而且windows time服务没有开启。</li>
+<li>最后发现<code>两个系统的时间时间相差8小时</code>，意识到时两个系统设置不同引起的。</li>
+</ul>
 <h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><ul>
 <li>UTC即Universal Time Coordinated，协调世界时</li>
 <li>GMT 即Greenwich Mean Time，格林尼治平时</li>
@@ -371,15 +388,14 @@
 <li>Linux/Unix/Mac把硬件时间当作 UTC，操作系统中显示的时间是硬件时间经过换算得来的。</li>
 <li>当PC中同时有多 系统共存时，就出现了问题。</li>
 </ul>
-<h2 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h2><h3 id="方法一Ubuntu不使用UTC"><a href="#方法一Ubuntu不使用UTC" class="headerlink" title="方法一Ubuntu不使用UTC"></a>方法一<code>Ubuntu不使用UTC</code></h3><p>如果Ubuntu 不使用 UTC 时间，则可以与 Windows时间 保持一致。<br>ubuntu默认开启UTC,即协调世界时，关闭它即可</p>
+<a id="more"></a>
+<h2 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h2><h3 id="方法一-Ubuntu不使用UTC"><a href="#方法一-Ubuntu不使用UTC" class="headerlink" title="方法一 Ubuntu不使用UTC"></a>方法一 Ubuntu不使用UTC</h3><p>如果Ubuntu 不使用 UTC 时间，则可以与 Windows时间 保持一致。<br>ubuntu默认开启UTC,即协调世界时，关闭它即可</p>
 <pre><code>sudo vi /etc/default/rcS
 </code></pre><p>将<code>UTC=yes</code>改为<code>UTC=no</code></p>
-<h3 id="方法二修改-Windows-对硬件时间的对待方式"><a href="#方法二修改-Windows-对硬件时间的对待方式" class="headerlink" title="方法二修改 Windows 对硬件时间的对待方式"></a>方法二<code>修改 Windows 对硬件时间的对待方式</code></h3><ul>
+<h3 id="方法二-修改-Windows-对硬件时间的对待方式"><a href="#方法二-修改-Windows-对硬件时间的对待方式" class="headerlink" title="方法二 修改 Windows 对硬件时间的对待方式"></a>方法二 修改 Windows 对硬件时间的对待方式</h3><ul>
 <li>让 Windows 把硬件时间当作 UTC</li>
-<li><p>方法：</p>
-<ul>
-<li><p>开 始-&gt;运行-&gt;CMD，在命令行中输入下面命令并回车</p>
-<p>Reg add KLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1</p>
+<li>方法：<ul>
+<li>开 始-&gt;运行-&gt;CMD，在命令行中输入下面命令并回车<figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Reg add KLM<span class="symbol">\S</span>YSTEM<span class="symbol">\C</span>urrentControlSet<span class="symbol">\C</span>ontrol<span class="symbol">\T</span>imeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1</div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -406,7 +422,10 @@
 </li>
 </ul>
 <p>至此，CentOS的时间已经同步了。</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://www.ithov.com/linux/122268.shtml" target="_blank" rel="external">http://www.ithov.com/linux/122268.shtml</a><br><a href="http://os.51cto.com/art/201004/192549.htm" target="_blank" rel="external">http://os.51cto.com/art/201004/192549.htm</a></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://www.ithov.com/linux/122268.shtml" target="_blank" rel="external">http://www.ithov.com/linux/122268.shtml</a></li>
+<li><a href="http://os.51cto.com/art/201004/192549.htm" target="_blank" rel="external">http://os.51cto.com/art/201004/192549.htm</a></li>
+</ul>
 
       
     </div>
@@ -639,7 +658,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#解决双系统时间不一致问题"><span class="nav-number">1.</span> <span class="nav-text">解决双系统时间不一致问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题描述"><span class="nav-number">1.1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题分析"><span class="nav-number">1.2.</span> <span class="nav-text">问题分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题解决"><span class="nav-number">1.3.</span> <span class="nav-text">问题解决</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法一Ubuntu不使用UTC"><span class="nav-number">1.3.1.</span> <span class="nav-text">方法一Ubuntu不使用UTC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法二修改-Windows-对硬件时间的对待方式"><span class="nav-number">1.3.2.</span> <span class="nav-text">方法二修改 Windows 对硬件时间的对待方式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CentOS时间同步问题"><span class="nav-number">2.</span> <span class="nav-text">CentOS时间同步问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#编辑时间配置文件"><span class="nav-number">2.1.</span> <span class="nav-text">编辑时间配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置为上海时区"><span class="nav-number">2.2.</span> <span class="nav-text">设置为上海时区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对准时间"><span class="nav-number">2.3.</span> <span class="nav-text">对准时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置硬件时间和系统时间一致并校准"><span class="nav-number">2.4.</span> <span class="nav-text">设置硬件时间和系统时间一致并校准</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">2.5.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#解决双系统时间不一致问题"><span class="nav-number">1.</span> <span class="nav-text">解决双系统时间不一致问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题描述"><span class="nav-number">1.1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题分析"><span class="nav-number">1.2.</span> <span class="nav-text">问题分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题解决"><span class="nav-number">1.3.</span> <span class="nav-text">问题解决</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法一-Ubuntu不使用UTC"><span class="nav-number">1.3.1.</span> <span class="nav-text">方法一 Ubuntu不使用UTC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法二-修改-Windows-对硬件时间的对待方式"><span class="nav-number">1.3.2.</span> <span class="nav-text">方法二 修改 Windows 对硬件时间的对待方式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CentOS时间同步问题"><span class="nav-number">2.</span> <span class="nav-text">CentOS时间同步问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#编辑时间配置文件"><span class="nav-number">2.1.</span> <span class="nav-text">编辑时间配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置为上海时区"><span class="nav-number">2.2.</span> <span class="nav-text">设置为上海时区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对准时间"><span class="nav-number">2.3.</span> <span class="nav-text">对准时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置硬件时间和系统时间一致并校准"><span class="nav-number">2.4.</span> <span class="nav-text">设置硬件时间和系统时间一致并校准</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">2.5.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

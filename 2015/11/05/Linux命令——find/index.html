@@ -64,15 +64,7 @@
 提示：
 
 任何位于参数之前的字符串都将被视为欲查找的目录名；
-如果使用该命令时，不设置任何参数，则find命令将在当前目录下查找子目录与文件，并且将查找到的子目录和文件全部进行显示；
-
-
-选项： 
--name：指定模式，大小写敏感；
--iname：指定模式，大小写不敏感；
--type：指定文件类型
-–help：显示帮助信息
-–version：显示版本信息">
+如果使用该命令时，不设置任何参数，则find命令将在当前目录下查找子目录与文件，并且将查找到的子目录和文件全部进行显示；">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux命令——find">
 <meta property="og:url" content="http://zhangxuezhi.com/2015/11/05/Linux命令——find/index.html">
@@ -83,16 +75,8 @@
 提示：
 
 任何位于参数之前的字符串都将被视为欲查找的目录名；
-如果使用该命令时，不设置任何参数，则find命令将在当前目录下查找子目录与文件，并且将查找到的子目录和文件全部进行显示；
-
-
-选项： 
--name：指定模式，大小写敏感；
--iname：指定模式，大小写不敏感；
--type：指定文件类型
-–help：显示帮助信息
-–version：显示版本信息">
-<meta property="og:updated_time" content="2016-11-06T16:27:04.800Z">
+如果使用该命令时，不设置任何参数，则find命令将在当前目录下查找子目录与文件，并且将查找到的子目录和文件全部进行显示；">
+<meta property="og:updated_time" content="2016-11-11T14:51:06.650Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux命令——find">
 <meta name="twitter:description" content="find
@@ -101,15 +85,7 @@
 提示：
 
 任何位于参数之前的字符串都将被视为欲查找的目录名；
-如果使用该命令时，不设置任何参数，则find命令将在当前目录下查找子目录与文件，并且将查找到的子目录和文件全部进行显示；
-
-
-选项： 
--name：指定模式，大小写敏感；
--iname：指定模式，大小写不敏感；
--type：指定文件类型
-–help：显示帮助信息
-–version：显示版本信息">
+如果使用该命令时，不设置任何参数，则find命令将在当前目录下查找子目录与文件，并且将查找到的子目录和文件全部进行显示；">
 
 
 
@@ -414,6 +390,9 @@
 <li>如果使用该命令时，不设置任何参数，则find命令将在当前目录下查找子目录与文件，并且将查找到的子目录和文件全部进行显示；</li>
 </ul>
 </li>
+</ul>
+<a id="more"></a>
+<ul>
 <li><strong>选项</strong>： <ul>
 <li>-name：指定模式，大小写敏感；</li>
 <li>-iname：指定模式，大小写<strong>不敏感</strong>；</li>
@@ -427,7 +406,12 @@
 <li><strong>示例</strong>：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 列出当前目录及子目录下的所有文件和文件夹</span></div><div class="line">find .</div><div class="line"></div><div class="line"><span class="comment"># 在主目录下，查找test.txt文件</span></div><div class="line">find ~ -name test.txt</div><div class="line"><span class="comment"># 在主目录及其子目录下，查找test.txt文件</span></div><div class="line">find ~ -name <span class="string">"test.txt"</span></div><div class="line"></div><div class="line"><span class="comment"># 在主目录下，查找以txt结尾的文件</span></div><div class="line">find ~ -name <span class="string">"*.txt"</span></div><div class="line"><span class="comment"># 在主目录下，查找以txt结尾的文件【但忽略大小写】</span></div><div class="line">find ~ -iname <span class="string">"*.txt"</span></div><div class="line"></div><div class="line"><span class="comment"># 根据【文件类型】查找</span></div><div class="line"><span class="comment"># 在主目录及其子目录下下查找“普通文件”</span></div><div class="line">find ~ -type f </div><div class="line"><span class="comment"># 在主目录及其子目录下下查找“符号连接”</span></div><div class="line">find ~ -type l</div><div class="line"><span class="comment"># 在主目录及其子目录下下查找“目录”</span></div><div class="line">find ~ -type d</div><div class="line"><span class="comment"># 在主目录及其子目录下下查找“字符设备”</span></div><div class="line">find ~ -type c</div><div class="line"><span class="comment"># 在主目录及其子目录下下查找“块设备”</span></div><div class="line">find ~ -type b</div><div class="line"><span class="comment"># 在主目录及其子目录下下查找“套接字”</span></div><div class="line">find ~ -type s</div><div class="line"></div><div class="line"><span class="comment"># 显示帮助信息</span></div><div class="line">find --help</div><div class="line"><span class="comment"># 显示版本信息</span></div><div class="line">find --version</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h2><p><a href="http://www.lx138.com/" target="_blank" rel="external">Linux命令查询网站</a><br><a href="http://man.linuxde.net/" target="_blank" rel="external">Linux命令大全</a><br><a href="http://baidu.com/" target="_blank" rel="external">baidu</a><br><a href="google.com.hk">Google</a></p>
+<h2 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h2><ul>
+<li><a href="http://www.lx138.com/" target="_blank" rel="external">Linux命令查询网站</a></li>
+<li><a href="http://man.linuxde.net/" target="_blank" rel="external">Linux命令大全</a></li>
+<li><a href="http://baidu.com/" target="_blank" rel="external">baidu</a></li>
+<li><a href="http://google.com.hk" target="_blank" rel="external">Google</a></li>
+</ul>
 
       
     </div>

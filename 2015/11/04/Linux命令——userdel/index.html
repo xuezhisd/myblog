@@ -59,54 +59,18 @@
 
 
 <meta name="description" content="userdel
-功能：删除用户账号
-提示：
-一次删除一个用户；
-删除的用户必须存在；
-userdel 不 允 许 你 移 除 正 在线 上 的 使 用 者 帐 号 。 你 必 须 砍 掉 此 帐 号 现 在 在 系 统 上 执 行 的 程 序 才 能 进 行 帐 号 删 除 ；
-
-
-选项： 
--f：强制删除用户，即使用户当前已登录；
--r：删除用户的同时，删除与用户相关的所有文件。
-
-
-示例：12">
+功能：删除用户账号">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux命令——userdel">
 <meta property="og:url" content="http://zhangxuezhi.com/2015/11/04/Linux命令——userdel/index.html">
 <meta property="og:site_name" content="学志の博客">
 <meta property="og:description" content="userdel
-功能：删除用户账号
-提示：
-一次删除一个用户；
-删除的用户必须存在；
-userdel 不 允 许 你 移 除 正 在线 上 的 使 用 者 帐 号 。 你 必 须 砍 掉 此 帐 号 现 在 在 系 统 上 执 行 的 程 序 才 能 进 行 帐 号 删 除 ；
-
-
-选项： 
--f：强制删除用户，即使用户当前已登录；
--r：删除用户的同时，删除与用户相关的所有文件。
-
-
-示例：12">
-<meta property="og:updated_time" content="2016-11-06T16:27:19.040Z">
+功能：删除用户账号">
+<meta property="og:updated_time" content="2016-11-11T14:53:30.382Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux命令——userdel">
 <meta name="twitter:description" content="userdel
-功能：删除用户账号
-提示：
-一次删除一个用户；
-删除的用户必须存在；
-userdel 不 允 许 你 移 除 正 在线 上 的 使 用 者 帐 号 。 你 必 须 砍 掉 此 帐 号 现 在 在 系 统 上 执 行 的 程 序 才 能 进 行 帐 号 删 除 ；
-
-
-选项： 
--f：强制删除用户，即使用户当前已登录；
--r：删除用户的同时，删除与用户相关的所有文件。
-
-
-示例：12">
+功能：删除用户账号">
 
 
 
@@ -404,6 +368,9 @@ userdel 不 允 许 你 移 除 正 在线 上 的 使 用 者 帐 号 。 你 �
       
         <h2 id="userdel"><a href="#userdel" class="headerlink" title="userdel"></a>userdel</h2><ul>
 <li><strong>功能</strong>：删除用户账号</li>
+</ul>
+<a id="more"></a>
+<ul>
 <li><strong>提示</strong>：<ul>
 <li>一次删除一个用户；</li>
 <li>删除的用户必须存在；</li>
@@ -418,7 +385,12 @@ userdel 不 允 许 你 移 除 正 在线 上 的 使 用 者 帐 号 。 你 �
 <li><strong>示例</strong>：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 删除用户test</span></div><div class="line">userdel <span class="built_in">test</span> </div><div class="line"><span class="comment"># 删除用户test的同时，删除用户登录目录以及目录下的文件</span></div><div class="line">userdel <span class="built_in">test</span> -r </div><div class="line"><span class="comment"># 强制删除用户</span></div><div class="line">userdel <span class="built_in">test</span> <span class="_">-f</span> </div><div class="line"><span class="comment"># 强制删除用户，并删除用户登录目录以及目录下的文件</span></div><div class="line">userdel <span class="built_in">test</span> -fr</div><div class="line"></div><div class="line"><span class="comment"># 删除已经登录的用户</span></div><div class="line"><span class="comment"># 先查看当前登录的用户，并记录TTY</span></div><div class="line">w</div><div class="line"><span class="comment"># 关闭希望删除的用户</span></div><div class="line">pkill -kill -t [TTY]</div><div class="line">userdel <span class="built_in">test</span> -rf</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h2><p><a href="http://www.lx138.com/" target="_blank" rel="external">Linux命令查询网站</a><br><a href="http://man.linuxde.net/" target="_blank" rel="external">Linux命令大全</a><br><a href="http://baidu.com/" target="_blank" rel="external">baidu</a><br><a href="google.com.hk">Google</a></p>
+<h2 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h2><ul>
+<li><a href="http://www.lx138.com/" target="_blank" rel="external">Linux命令查询网站</a></li>
+<li><a href="http://man.linuxde.net/" target="_blank" rel="external">Linux命令大全</a></li>
+<li><a href="http://baidu.com/" target="_blank" rel="external">baidu</a></li>
+<li><a href="http://google.com.hk" target="_blank" rel="external">Google</a></li>
+</ul>
 
       
     </div>

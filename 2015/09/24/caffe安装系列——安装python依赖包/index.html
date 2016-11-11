@@ -68,7 +68,7 @@
 <meta property="og:description" content="说明
 网上关于caffe的安装教程非常多，但是关于每一步是否操作成功，出现了什么样的错误又该如何处理没有给出说明。因为大家的操作系统的环境千差万别，按照博客中的教程一步步的安装，最后可能失败——这是很常见的哦。有的教程甚至省略了一些细节部分，让小白更不知道如何判断每一步是否操作成功，如何处理出现的错误。
 作者花费了很长时间才成功地将caffe装完，期间遇到好多错误，多次重装操作系统。现在将经验写下">
-<meta property="og:updated_time" content="2016-11-06T16:32:40.110Z">
+<meta property="og:updated_time" content="2016-11-11T15:18:54.911Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="caffe安装系列——安装python依赖包">
 <meta name="twitter:description" content="说明
@@ -373,18 +373,19 @@
 <li>网上关于caffe的安装教程非常多，但是关于每一步是否操作成功，出现了什么样的错误又该如何处理没有给出说明。因为大家的操作系统的环境千差万别，按照博客中的教程一步步的安装，最后可能失败——这是很常见的哦。有的教程甚至省略了一些细节部分，让小白更不知道如何判断每一步是否操作成功，如何处理出现的错误。</li>
 <li>作者花费了很长时间才成功地将caffe装完，期间遇到好多错误，多次重装操作系统。现在将经验写下来，一方面为了和大家分享，讨论；另一方面是为了记录一下下~~~</li>
 </ul>
+<a id="more"></a>
 <h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>操作系统： <strong><em>Ubuntu 14.04</em></strong><br>GCC/G++:<strong><em>4.7.x</em></strong><br>OpenCV: <strong><em>2.4.11和3.0.0</em></strong><br>Matlab :<strong><em>R2014b(a)</em></strong><br>Python:   <strong><em>2.7</em></strong></p>
-<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><ul>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48649575" target="_blank" rel="external">综述</a></li>
-<li>0.准备工作</li>
-<li>1.<a href="http://blog.csdn.net/xuezhisdc/article/details/48650015" target="_blank" rel="external">安装GCC4.7和G++4.7并降级</a></li>
-<li>2.<a href="http://blog.csdn.net/xuezhisdc/article/details/48650565" target="_blank" rel="external">安装显卡驱动</a></li>
-<li>3.<a href="http://blog.csdn.net/xuezhisdc/article/details/48651003" target="_blank" rel="external">安装cuda和cudnn</a></li>
-<li>4.<a href="http://blog.csdn.net/xuezhisdc/article/details/48691147" target="_blank" rel="external">安装Matlab</a></li>
-<li>5.<a href="http://blog.csdn.net/xuezhisdc/article/details/48691797" target="_blank" rel="external">安装OpenCV</a></li>
-<li>6.<a href="http://blog.csdn.net/xuezhisdc/article/details/48706843" target="_blank" rel="external">安装Python依赖包</a></li>
-<li>7.<a href="http://blog.csdn.net/xuezhisdc/article/details/48707101" target="_blank" rel="external">安装caffe</a></li>
-</ul>
+<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><ol>
+<li><a href="http://zhangxuezhi.com/2015/09/24/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E7%BB%BC%E8%BF%B0/">综述</a></li>
+<li><a href="">准备工作</a></li>
+<li><a href="http://zhangxuezhi.com/2015/09/22/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85GCC4.7%E5%92%8CG++4.7%E5%B9%B6%E9%99%8D%E7%BA%A7/">安装GCC4.7和G++4.7并降级</a></li>
+<li><a href="http://zhangxuezhi.com/2015/09/24/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85NVIDIA%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8/">安装显卡驱动</a></li>
+<li><a href="http://zhangxuezhi.com/2015/09/22/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85cuda%E5%92%8Ccudnn/">安装cuda和cudnn</a></li>
+<li><a href="http://zhangxuezhi.com/2015/09/23/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85Matlab/">安装Matlab</a></li>
+<li><a href="http://zhangxuezhi.com/2015/09/24/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85OpenCV/">安装OpenCV</a></li>
+<li><a href="http://zhangxuezhi.com/2015/09/24/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85python%E4%BE%9D%E8%B5%96%E5%8C%85/">安装Python依赖包</a></li>
+<li><a href="http://zhangxuezhi.com/2015/10/13/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85caffe/">安装caffe</a></li>
+</ol>
 <h2 id="安装theano依赖包"><a href="#安装theano依赖包" class="headerlink" title="安装theano依赖包"></a>安装theano依赖包</h2><ul>
 <li><p>安装基本的依赖包</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"># 安装ipython</div><div class="line"># 安装gfortran,后面编译过程中会用到</div><div class="line"># 安装blas,Ubuntu下对应的是libopenblas，其它操作系统可能需要安装其它版本的blas——这是个OS相关的。</div><div class="line"># 安装lapack，Ubuntu下对应的是liblapack-dev，和OS相关。</div><div class="line"># 安装atlas，Ubuntu下对应的是libatlas-base-dev，和OS相关。</div><div class="line"># -y,遇到需要用户选择的项，都选y</div><div class="line">sudo apt-get install -y ipython ipython-notebook pandoc </div><div class="line">sudo apt-get install -y gfortran libopenblas-dev liblapack-dev libatlas-base-dev </div><div class="line"># 安装pip</div><div class="line">sudo apt-get install -y python-pip python-dev python-nose g++ git </div><div class="line">sudo apt-get install -y python-numpy python-scipy  </div><div class="line"># 自己编译的原因是，防止theano出错</div><div class="line"># 使用豆瓣的python源，下载速度快</div><div class="line">sudo pip install numpy -i http://pypi.douban.com/simple </div><div class="line">sudo pip install scipy -i http://pypi.douban.com/simple </div><div class="line"># 查看目录/tmp/pip_build_root</div><div class="line">sudo apt-get install -y python-matplotlib python-sklearn python-sklearn-lib</div></pre></td></tr></table></figure>

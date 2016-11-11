@@ -62,14 +62,7 @@
 打开终端对额快捷键：[Ctrl] + [Alt] + [T]
 
 2. Dash主页图标
-在Dash主页中搜索terminal，即可找到终端。
-
-打开Dash的快捷键
-windows键
-
-将./添加到PATH目的编写的脚本文件test.py，赋予执行权限之后，每一次都需下面的命令来执行。想要省去./1./test.py
-变成1test.py
-1. 临时方法在终端中即可修改">
+在Dash主页中搜索terminal，即可找到终端。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu使用过程中遇到的问题">
 <meta property="og:url" content="http://zhangxuezhi.com/2015/06/29/Ubuntu使用过程中遇到的问题/index.html">
@@ -78,29 +71,15 @@ windows键
 打开终端对额快捷键：[Ctrl] + [Alt] + [T]
 
 2. Dash主页图标
-在Dash主页中搜索terminal，即可找到终端。
-
-打开Dash的快捷键
-windows键
-
-将./添加到PATH目的编写的脚本文件test.py，赋予执行权限之后，每一次都需下面的命令来执行。想要省去./1./test.py
-变成1test.py
-1. 临时方法在终端中即可修改">
-<meta property="og:updated_time" content="2016-11-06T16:29:44.551Z">
+在Dash主页中搜索terminal，即可找到终端。">
+<meta property="og:updated_time" content="2016-11-11T16:05:56.055Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu使用过程中遇到的问题">
 <meta name="twitter:description" content="打开终端的方法1. 快捷键
 打开终端对额快捷键：[Ctrl] + [Alt] + [T]
 
 2. Dash主页图标
-在Dash主页中搜索terminal，即可找到终端。
-
-打开Dash的快捷键
-windows键
-
-将./添加到PATH目的编写的脚本文件test.py，赋予执行权限之后，每一次都需下面的命令来执行。想要省去./1./test.py
-变成1test.py
-1. 临时方法在终端中即可修改">
+在Dash主页中搜索terminal，即可找到终端。">
 
 
 
@@ -402,6 +381,7 @@ windows键
 <h2 id="2-Dash主页图标"><a href="#2-Dash主页图标" class="headerlink" title="2. Dash主页图标"></a>2. Dash主页图标</h2><ul>
 <li>在Dash主页中搜索<code>terminal</code>，即可找到终端。</li>
 </ul>
+<a id="more"></a>
 <h1 id="打开Dash的快捷键"><a href="#打开Dash的快捷键" class="headerlink" title="打开Dash的快捷键"></a>打开Dash的快捷键</h1><ul>
 <li>windows键</li>
 </ul>
@@ -420,29 +400,29 @@ windows键
 <p>修改后：<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">PATH</span>=<span class="string">".:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"</span></div></pre></td></tr></table></figure></p>
 <p>注意：<code>.</code>添加在<strong>最前面</strong>。</p>
 <ul>
-<li>输入以下命令，使配置立刻生效，避免重启电脑。<figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">source</span> <span class="regexp">/etc/</span>environment</div></pre></td></tr></table></figure>
-</li>
+<li>输入以下命令，使配置立刻生效，避免重启电脑。</li>
 </ul>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">source</span> <span class="regexp">/etc/</span>environment</div></pre></td></tr></table></figure>
 <h2 id="3-修改～-bashrc-文件"><a href="#3-修改～-bashrc-文件" class="headerlink" title="3. 修改～/.bashrc 文件"></a>3. 修改～/.bashrc 文件</h2><ul>
 <li>该文件编辑保存后，可立即在新打开的终端窗口内生效。</li>
 <li>该方式只对当前用户有效。</li>
-<li>在该文件的最后添加如下语句<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> PATH=.:<span class="variable">$PATH</span></div></pre></td></tr></table></figure>
-</li>
+<li>在该文件的最后添加如下语句</li>
 </ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> PATH=.:<span class="variable">$PATH</span></div></pre></td></tr></table></figure>
 <h2 id="4-修改profile-文件"><a href="#4-修改profile-文件" class="headerlink" title="4. 修改profile 文件"></a>4. 修改profile 文件</h2><ul>
 <li>文件位置：<strong><code>/etc/profile</code></strong></li>
 <li>该文件编辑保存后，重启系统，变量生效。</li>
 <li>该方式添加的变量对所有的用户都有效。</li>
-<li>在文件的最后面追加：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> PATH=.:<span class="variable">$PATH</span></div></pre></td></tr></table></figure>
-</li>
+<li>在文件的最后面追加：</li>
 </ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> PATH=.:<span class="variable">$PATH</span></div></pre></td></tr></table></figure>
 <h1 id="安装软件源码的步骤"><a href="#安装软件源码的步骤" class="headerlink" title="安装软件源码的步骤"></a>安装软件<strong>源码</strong>的步骤</h1><p>分为3个步骤<br><figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">./configure</div><div class="line"><span class="built_in">make</span> </div><div class="line"><span class="built_in">make</span> install</div><div class="line"><span class="built_in">make</span> clean <span class="meta">#清理临时文件</span></div></pre></td></tr></table></figure></p>
 <p><a href="http://www.cnblogs.com/huangfenghit/archive/2011/02/17/1957057.html" target="_blank" rel="external">参考</a></p>
 <h1 id="vim不显色的问题"><a href="#vim不显色的问题" class="headerlink" title="vim不显色的问题"></a>vim不显色的问题</h1><ul>
 <li>打开vim查看加载那些脚本。底行模式下输入<code>:scriptnames</code>。</li>
-<li>设置<code>.vimrc</code>文件，将该文件设置成以下内容。<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">set</span> nocompatible        <span class="string">" Vim settings, not Vi settings.  must be first</span></div><div class="line">set autoindent          " <span class="keyword">Auto</span> align <span class="keyword">when</span> <span class="keyword">insert</span> <span class="keyword">new</span> line, <span class="keyword">for</span> <span class="keyword">instance</span>, <span class="keyword">when</span> <span class="keyword">using</span> o <span class="keyword">or</span> O <span class="keyword">to</span> <span class="keyword">insert</span> <span class="keyword">new</span> line.</div><div class="line"><span class="keyword">set</span> ruler               <span class="string">" Show ruler at the bottom-right of vim window</span></div><div class="line">set showcmd</div><div class="line">set backspace=indent,eol,start          " <span class="keyword">Enable</span> <span class="keyword">delete</span> <span class="keyword">for</span> backspace <span class="keyword">under</span> <span class="keyword">insert</span> <span class="keyword">mode</span><span class="string">"</span></div><div class="line">colorscheme darkblue</div><div class="line">set number              " <span class="keyword">Show</span> line <span class="built_in">number</span></div><div class="line">syntax <span class="keyword">on</span></div><div class="line"><span class="keyword">if</span> &amp;term =~ <span class="string">"xterm"</span></div><div class="line">  <span class="keyword">if</span> has(<span class="string">"terminfo"</span>)</div><div class="line">    <span class="keyword">set</span> t_Co=<span class="number">8</span></div><div class="line">    <span class="keyword">set</span> t_Sf=^[[<span class="number">3</span>%p1%dm</div><div class="line">    <span class="keyword">set</span> t_Sb=^[[<span class="number">4</span>%p1%dm</div><div class="line">  <span class="keyword">else</span></div><div class="line">    <span class="keyword">set</span> t_Co=<span class="number">8</span></div><div class="line">    <span class="keyword">set</span> t_Sf=^[[<span class="number">3</span>%dm</div><div class="line">    <span class="keyword">set</span> t_Sb=^[[<span class="number">4</span>%dm</div><div class="line">  endif</div><div class="line">endif</div></pre></td></tr></table></figure>
-</li>
+<li>设置<code>.vimrc</code>文件，将该文件设置成以下内容。</li>
 </ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">set</span> nocompatible        <span class="string">" Vim settings, not Vi settings.  must be first</span></div><div class="line">set autoindent          " <span class="keyword">Auto</span> align <span class="keyword">when</span> <span class="keyword">insert</span> <span class="keyword">new</span> line, <span class="keyword">for</span> <span class="keyword">instance</span>, <span class="keyword">when</span> <span class="keyword">using</span> o <span class="keyword">or</span> O <span class="keyword">to</span> <span class="keyword">insert</span> <span class="keyword">new</span> line.</div><div class="line"><span class="keyword">set</span> ruler               <span class="string">" Show ruler at the bottom-right of vim window</span></div><div class="line">set showcmd</div><div class="line">set backspace=indent,eol,start          " <span class="keyword">Enable</span> <span class="keyword">delete</span> <span class="keyword">for</span> backspace <span class="keyword">under</span> <span class="keyword">insert</span> <span class="keyword">mode</span><span class="string">"</span></div><div class="line">colorscheme darkblue</div><div class="line">set number              " <span class="keyword">Show</span> line <span class="built_in">number</span></div><div class="line">syntax <span class="keyword">on</span></div><div class="line"><span class="keyword">if</span> &amp;term =~ <span class="string">"xterm"</span></div><div class="line">  <span class="keyword">if</span> has(<span class="string">"terminfo"</span>)</div><div class="line">    <span class="keyword">set</span> t_Co=<span class="number">8</span></div><div class="line">    <span class="keyword">set</span> t_Sf=^[[<span class="number">3</span>%p1%dm</div><div class="line">    <span class="keyword">set</span> t_Sb=^[[<span class="number">4</span>%p1%dm</div><div class="line">  <span class="keyword">else</span></div><div class="line">    <span class="keyword">set</span> t_Co=<span class="number">8</span></div><div class="line">    <span class="keyword">set</span> t_Sf=^[[<span class="number">3</span>%dm</div><div class="line">    <span class="keyword">set</span> t_Sb=^[[<span class="number">4</span>%dm</div><div class="line">  endif</div><div class="line">endif</div></pre></td></tr></table></figure>
 <p><a href="http://www.cnblogs.com/softwaretesting/archive/2012/01/10/2317820.html" target="_blank" rel="external">参考文章</a></p>
 <h1 id="vim不能正常使用方向键与退格键的问题"><a href="#vim不能正常使用方向键与退格键的问题" class="headerlink" title="vim不能正常使用方向键与退格键的问题"></a>vim不能正常使用方向键与退格键的问题</h1><ul>
 <li>vim出现问题的原因可能是由于版本低</li>
@@ -454,13 +434,13 @@ windows键
 <h1 id="如何是配置立即生效"><a href="#如何是配置立即生效" class="headerlink" title="如何是配置立即生效"></a>如何是配置立即生效</h1><ul>
 <li>使配置立即生效的命令<strong><code>source</code></strong></li>
 <li>好处：不用重启电脑</li>
-<li><p>示例1：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#使environtment修改后立即生效</span></div><div class="line">source <span class="regexp">/etc/</span>environment</div></pre></td></tr></table></figure>
-</li>
-<li><p>示例2：</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#使<span class="keyword">profile</span>修改后立即生效</div><div class="line"><span class="keyword">source</span> /etc/<span class="keyword">profile</span></div></pre></td></tr></table></figure></li>
+<li>示例1：</li>
 </ul>
-
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#使environtment修改后立即生效</span></div><div class="line">source <span class="regexp">/etc/</span>environment</div></pre></td></tr></table></figure>
+<ul>
+<li>示例2：</li>
+</ul>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#使<span class="keyword">profile</span>修改后立即生效</div><div class="line"><span class="keyword">source</span> /etc/<span class="keyword">profile</span></div></pre></td></tr></table></figure>
       
     </div>
 
@@ -522,8 +502,8 @@ windows键
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/07/14/Ubuntu-安装-Python包/" rel="prev" title="Ubuntu-安装-Python包">
-                Ubuntu-安装-Python包 <i class="fa fa-chevron-right"></i>
+              <a href="/2015/07/14/Ubuntu-安装-有道词典/" rel="prev" title="Ubuntu-安装-有道词典">
+                Ubuntu-安装-有道词典 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

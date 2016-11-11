@@ -61,9 +61,7 @@
 <meta name="description" content="说明
 在Ubuntu Server 14.04上安装了xfce4桌面环境，但是却发现在终端中Tab键不能自动补齐(但是Ctrl + I 仍然可以用)。
 出现这种情况的原因是，由于Tab键的功能被窗口快捷键占用，从而Tab键不起作用。即，快捷键冲突了。
-解决方法有两种，其实本质相同。不过就是，一种方法是在图形界面中更改，另一种方法是直接修改配置文件。
-
-1. 在命令行中修改配置文件的方法1234#切">
+解决方法有两种，其实本质相同。不过就是，一种方法是在图形界面中更改，另一种方法是直接修改配置文件。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在VNC中Xfce4中Tab键失效的解决方法">
 <meta property="og:url" content="http://zhangxuezhi.com/2015/09/22/在VNC中Xfce4中Tab键失效的解决方法/index.html">
@@ -71,20 +69,16 @@
 <meta property="og:description" content="说明
 在Ubuntu Server 14.04上安装了xfce4桌面环境，但是却发现在终端中Tab键不能自动补齐(但是Ctrl + I 仍然可以用)。
 出现这种情况的原因是，由于Tab键的功能被窗口快捷键占用，从而Tab键不起作用。即，快捷键冲突了。
-解决方法有两种，其实本质相同。不过就是，一种方法是在图形界面中更改，另一种方法是直接修改配置文件。
-
-1. 在命令行中修改配置文件的方法1234#切">
+解决方法有两种，其实本质相同。不过就是，一种方法是在图形界面中更改，另一种方法是直接修改配置文件。">
 <meta property="og:image" content="http://img.blog.csdn.net/20150922213350275">
 <meta property="og:image" content="http://img.blog.csdn.net/20150922223218078">
-<meta property="og:updated_time" content="2016-11-06T16:22:28.843Z">
+<meta property="og:updated_time" content="2016-11-11T15:33:51.795Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在VNC中Xfce4中Tab键失效的解决方法">
 <meta name="twitter:description" content="说明
 在Ubuntu Server 14.04上安装了xfce4桌面环境，但是却发现在终端中Tab键不能自动补齐(但是Ctrl + I 仍然可以用)。
 出现这种情况的原因是，由于Tab键的功能被窗口快捷键占用，从而Tab键不起作用。即，快捷键冲突了。
-解决方法有两种，其实本质相同。不过就是，一种方法是在图形界面中更改，另一种方法是直接修改配置文件。
-
-1. 在命令行中修改配置文件的方法1234#切">
+解决方法有两种，其实本质相同。不过就是，一种方法是在图形界面中更改，另一种方法是直接修改配置文件。">
 <meta name="twitter:image" content="http://img.blog.csdn.net/20150922213350275">
 
 
@@ -374,29 +368,36 @@
 <li>出现这种情况的原因是，由于Tab键的功能被窗口快捷键占用，从而Tab键不起作用。即，快捷键冲突了。</li>
 <li>解决方法有两种，其实本质相同。不过就是，一种方法是<strong>在图形界面中更改</strong>，另一种方法是<strong>直接修改配置文件</strong>。</li>
 </ul>
+<a id="more"></a>
 <h2 id="1-在命令行中修改配置文件的方法"><a href="#1-在命令行中修改配置文件的方法" class="headerlink" title="1. 在命令行中修改配置文件的方法"></a>1. 在命令行中修改配置文件的方法</h2><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#切换路径</span></div><div class="line">cd ~/.config<span class="meta-keyword">/xfce4/</span>xfconf<span class="meta-keyword">/xfce-perchannel-xml/</span></div><div class="line"><span class="meta">#修改文件（快捷键配置文件）</span></div><div class="line">vi xfce4-keyboard-shortcuts.xml</div></pre></td></tr></table></figure>
 <ul>
-<li><p>找到下面这一行</p>
+<li>找到下面这一行</li>
+</ul>
 <figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="keyword">property</span> <span class="built_in">name</span>=<span class="string">"&amp;lt;Super&amp;gt;Tab"</span> type=<span class="string">"string"</span> value=<span class="string">"switch_window_key"</span>/&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>改为</p>
+<ul>
+<li>改为</li>
+</ul>
 <figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="keyword">property</span> <span class="built_in">name</span>=<span class="string">"&amp;lt;Super&amp;gt;Tab"</span> type=<span class="string">"empty"</span>/&gt;</div></pre></td></tr></table></figure>
-</li>
+<ul>
 <li><p>如下图所示<br><img src="http://img.blog.csdn.net/20150922213350275" alt="这里写图片描述"></p>
 </li>
 <li><p>修改完配置文件，<strong><code>重启电脑</code></strong>，使配置文件生效。</p>
 </li>
 </ul>
 <h2 id="2-在图形窗口中修改的方法"><a href="#2-在图形窗口中修改的方法" class="headerlink" title="2. 在图形窗口中修改的方法"></a>2. 在图形窗口中修改的方法</h2><ul>
-<li><p>菜单栏 → 设置 → 窗口设置 。打开<strong>窗口设置</strong>对话框。</p>
+<li>菜单栏 → 设置 → 窗口设置 。打开<strong>窗口设置</strong>对话框。</li>
+</ul>
 <p><img src="http://img.blog.csdn.net/20150922223218078" width="350" height="600" alt="图片名称" align="center"></p>
-</li>
-<li><p>在窗口管理器中选择快捷键选项卡（Key） →  Switch window for same<br>application </p>
-</li>
+<ul>
+<li>在窗口管理器中选择快捷键选项卡（Key） →  Switch window for same<br>application </li>
 <li>将其快捷键清空，关闭窗口管理器。</li>
 <li>这种方法的好处：不需要重启，即可以解决问题。</li>
 </ul>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p> <a href="http://blog.163.com/thinki_cao/blog/static/83944875201303081111436/" target="_blank" rel="external">《在VNC远程桌面环境Xfce4中Tab键失效的解决方法 》</a><br> <a href="http://ubuntuforums.org/archive/index.php/t-1771058.html" target="_blank" rel="external">http://ubuntuforums.org/archive/index.php/t-1771058.html</a><br><a href="https://answers.launchpad.net/ubuntu/+source/xfce4/+question/206191" target="_blank" rel="external">https://answers.launchpad.net/ubuntu/+source/xfce4/+question/206191</a></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://blog.163.com/thinki_cao/blog/static/83944875201303081111436/" target="_blank" rel="external">《在VNC远程桌面环境Xfce4中Tab键失效的解决方法 》</a></li>
+<li><a href="http://ubuntuforums.org/archive/index.php/t-1771058.html" target="_blank" rel="external">http://ubuntuforums.org/archive/index.php/t-1771058.html</a></li>
+<li><a href="https://answers.launchpad.net/ubuntu/+source/xfce4/+question/206191" target="_blank" rel="external">https://answers.launchpad.net/ubuntu/+source/xfce4/+question/206191</a></li>
+</ul>
 
       
     </div>
@@ -457,8 +458,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/09/22/caffe安装系列——安装cuda和cudnn/" rel="prev" title="caffe安装系列——安装cuda和cudnn">
-                caffe安装系列——安装cuda和cudnn <i class="fa fa-chevron-right"></i>
+              <a href="/2015/09/22/Ubuntu Server 添加、删除和修改用户/" rel="prev" title="Ubuntu Server 添加、删除和修改用户">
+                Ubuntu Server 添加、删除和修改用户 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

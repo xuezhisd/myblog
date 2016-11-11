@@ -59,42 +59,33 @@
 
 
 <meta name="description" content="因为最近需要学习深度学习，因此想要配置Theano，来开发深度学习算法。但是发现Theano安装总是出现问题。于是在这里中总结一下。
+
 环境
 操作系统：ubuntu14.04
 Python：2.7.6
-需要联网
-
-相关库简介
-BLAS（Basic Linear Algebra Subprograms）是基础线性代数子程序库，里面拥有大量已经编写好的关于线性代数运算的程序;
-LAPACK （Linea">
+需要联网">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu14.04安装Theano详细教程">
 <meta property="og:url" content="http://zhangxuezhi.com/2015/11/19/Ubuntu14.04安装Theano详细教程/index.html">
 <meta property="og:site_name" content="学志の博客">
 <meta property="og:description" content="因为最近需要学习深度学习，因此想要配置Theano，来开发深度学习算法。但是发现Theano安装总是出现问题。于是在这里中总结一下。
+
 环境
 操作系统：ubuntu14.04
 Python：2.7.6
-需要联网
-
-相关库简介
-BLAS（Basic Linear Algebra Subprograms）是基础线性代数子程序库，里面拥有大量已经编写好的关于线性代数运算的程序;
-LAPACK （Linea">
+需要联网">
 <meta property="og:image" content="http://img.blog.csdn.net/20150726185255050">
 <meta property="og:image" content="http://img.blog.csdn.net/20150726185208417">
 <meta property="og:image" content="http://img.blog.csdn.net/20150726185356526">
-<meta property="og:updated_time" content="2016-11-06T16:29:16.264Z">
+<meta property="og:updated_time" content="2016-11-11T14:41:33.464Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu14.04安装Theano详细教程">
 <meta name="twitter:description" content="因为最近需要学习深度学习，因此想要配置Theano，来开发深度学习算法。但是发现Theano安装总是出现问题。于是在这里中总结一下。
+
 环境
 操作系统：ubuntu14.04
 Python：2.7.6
-需要联网
-
-相关库简介
-BLAS（Basic Linear Algebra Subprograms）是基础线性代数子程序库，里面拥有大量已经编写好的关于线性代数运算的程序;
-LAPACK （Linea">
+需要联网">
 <meta name="twitter:image" content="http://img.blog.csdn.net/20150726185255050">
 
 
@@ -391,12 +382,15 @@ LAPACK （Linea">
       
 
       
-        <p>因为最近需要学习深度学习，因此想要配置Theano，来开发深度学习算法。但是发现Theano安装总是出现问题。于是在这里中总结一下。</p>
+        <blockquote>
+<p>因为最近需要学习深度学习，因此想要配置Theano，来开发深度学习算法。但是发现Theano安装总是出现问题。于是在这里中总结一下。</p>
+</blockquote>
 <h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><ul>
 <li>操作系统：ubuntu14.04</li>
 <li>Python：2.7.6</li>
 <li>需要联网</li>
 </ul>
+<a id="more"></a>
 <h2 id="相关库简介"><a href="#相关库简介" class="headerlink" title="相关库简介"></a>相关库简介</h2><ul>
 <li><strong><em>BLAS</em></strong>（Basic Linear Algebra Subprograms）是基础线性代数子程序库，里面拥有大量已经编写好的关于线性代数运算的程序;</li>
 <li><strong><em>LAPACK</em></strong> （Linear Algebra PACKage）包含了求解科学与工程计算中最常见的数值线性代数问题，如求解线性方程组、线性最小二乘问题、特征值问题和奇异值问题等;</li>
@@ -415,9 +409,10 @@ LAPACK （Linea">
 </ul>
 <h2 id="检查numpy和scipy是否通过测试"><a href="#检查numpy和scipy是否通过测试" class="headerlink" title="检查numpy和scipy是否通过测试"></a>检查numpy和scipy是否通过测试</h2><ul>
 <li>说明：如果你的numpy和scipy是通过<code>apt-get</code>安装的，那么它们的单元测试可能会通不过！！！（我在安装过程中没有通过测试，scipy出现了<strong>Error</strong>）</li>
-<li><p>如果numpy或scipy不能通过测试，就需要卸载，然后重新按照本文介绍的顺序安装。</p>
+<li>如果numpy或scipy不能通过测试，就需要卸载，然后重新按照本文介绍的顺序安装。</li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 检查numpy是否通过测试</span></div><div class="line">python -c <span class="string">"import numpy;numpy.test()"</span></div></pre></td></tr></table></figure>
-</li>
+<ul>
 <li><p>如果numpy通过测试，会出现如下图所示的结果。注意最后一行<strong><em>errors=0 failures=0</em></strong>。如果没有通过测试，需要卸载并重新安装。<br><img src="http://img.blog.csdn.net/20150726185255050" alt="numpy测试结果"></p>
 </li>
 <li><p>如果scipy通过测试，会出现如下图所示的结果。注意最后一行<strong><em>errors=0 failures=0</em></strong>。如果没有通过测试，需要卸载并重新安装。<br><img src="http://img.blog.csdn.net/20150726185208417" alt="scipy通过测试"></p>
@@ -470,12 +465,9 @@ LAPACK （Linea">
 <li><a href="http://blog.sina.com.cn/s/blog_6cb8e53d0101keak.html" target="_blank" rel="external">ATLAS + NumPy + SciPy + Theano 的python科学计算环境搭建 </a></li>
 <li><a href="http://stackoverflow.com/questions/11443302/compiling-numpy-with-openblas-integration" target="_blank" rel="external">Compiling numpy with OpenBLAS integration</a></li>
 <li><a href="http://www.tuicool.com/articles/Ub6vqiQ" target="_blank" rel="external">依赖关系</a></li>
-<li><p><a href="http://deeplearning.net/software/theano/install.html#install" target="_blank" rel="external">官方安装教程</a></p>
-</li>
-<li><p><a href="http://stackoverflow.com/questions/7496547/does-python-scipy-need-blas" target="_blank" rel="external">http://stackoverflow.com/questions/7496547/does-python-scipy-need-blas</a></p>
-</li>
-<li><p><a href="http://www.linuxidc.com/Linux/2014-10/107503.htm" target="_blank" rel="external">http://www.linuxidc.com/Linux/2014-10/107503.htm</a></p>
-</li>
+<li><a href="http://deeplearning.net/software/theano/install.html#install" target="_blank" rel="external">官方安装教程</a></li>
+<li><a href="http://stackoverflow.com/questions/7496547/does-python-scipy-need-blas" target="_blank" rel="external">http://stackoverflow.com/questions/7496547/does-python-scipy-need-blas</a></li>
+<li><a href="http://www.linuxidc.com/Linux/2014-10/107503.htm" target="_blank" rel="external">http://www.linuxidc.com/Linux/2014-10/107503.htm</a></li>
 <li><a href="http://www.scipy.org/scipylib/building/linux.html#installation-from-source" target="_blank" rel="external">http://www.scipy.org/scipylib/building/linux.html#installation-from-source</a></li>
 </ul>
 

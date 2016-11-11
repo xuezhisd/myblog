@@ -59,39 +59,18 @@
 
 
 <meta name="description" content="diff
-功能：逐行比较两个文件
-提示：
-默认情况下，跟两个参数，指定对比的文件名称；
-如果一个参数指定文件名称，另一个参数指定路径，则将与该路径下同名的文件进行比较；
-如果使用“-”代替“文件”参数，则要比较的内容将来自标准输入；
-diff命令是以逐行的方式，比较文本文件的异同处；
-如果该命令指定进行目录的比较，则将会比较该目录中具有相同文件名的文件，而不会对其子目录文件进行任何比较操作；
-返回">
+功能：逐行比较两个文件">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux命令——diff">
 <meta property="og:url" content="http://zhangxuezhi.com/2015/11/05/Linux命令——diff/index.html">
 <meta property="og:site_name" content="学志の博客">
 <meta property="og:description" content="diff
-功能：逐行比较两个文件
-提示：
-默认情况下，跟两个参数，指定对比的文件名称；
-如果一个参数指定文件名称，另一个参数指定路径，则将与该路径下同名的文件进行比较；
-如果使用“-”代替“文件”参数，则要比较的内容将来自标准输入；
-diff命令是以逐行的方式，比较文本文件的异同处；
-如果该命令指定进行目录的比较，则将会比较该目录中具有相同文件名的文件，而不会对其子目录文件进行任何比较操作；
-返回">
-<meta property="og:updated_time" content="2016-11-06T16:26:59.385Z">
+功能：逐行比较两个文件">
+<meta property="og:updated_time" content="2016-11-11T14:50:57.003Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux命令——diff">
 <meta name="twitter:description" content="diff
-功能：逐行比较两个文件
-提示：
-默认情况下，跟两个参数，指定对比的文件名称；
-如果一个参数指定文件名称，另一个参数指定路径，则将与该路径下同名的文件进行比较；
-如果使用“-”代替“文件”参数，则要比较的内容将来自标准输入；
-diff命令是以逐行的方式，比较文本文件的异同处；
-如果该命令指定进行目录的比较，则将会比较该目录中具有相同文件名的文件，而不会对其子目录文件进行任何比较操作；
-返回">
+功能：逐行比较两个文件">
 
 
 
@@ -389,6 +368,9 @@ diff命令是以逐行的方式，比较文本文件的异同处；
       
         <h2 id="diff"><a href="#diff" class="headerlink" title="diff"></a>diff</h2><ul>
 <li><strong>功能</strong>：逐行比较两个文件</li>
+</ul>
+<a id="more"></a>
+<ul>
 <li><strong>提示</strong>：<ul>
 <li>默认情况下，跟两个参数，指定对比的文件名称；</li>
 <li>如果一个参数指定文件名称，另一个参数指定路径，则将与该路径下同名的文件进行比较；</li>
@@ -408,7 +390,12 @@ diff命令是以逐行的方式，比较文本文件的异同处；
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 比较test.txt和test.c</span></div><div class="line">diff test.txt test.c</div><div class="line"><span class="comment"># 比较test.txt和work/test.txt</span></div><div class="line">diff test.txt work</div><div class="line"><span class="comment"># 比较test.txt和test.c，将显示全部内容，并标出不同之处</span></div><div class="line">diff test.txt test.c -c</div><div class="line"><span class="comment"># 比较test.txt和test.c，但忽略大小写</span></div><div class="line">diff test.txt test.c -i</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h2><p><a href="http://www.lx138.com/" target="_blank" rel="external">Linux命令查询网站</a><br><a href="http://man.linuxde.net/" target="_blank" rel="external">Linux命令大全</a><br><a href="http://baidu.com/" target="_blank" rel="external">baidu</a><br><a href="google.com.hk">Google</a></p>
+<h2 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h2><ul>
+<li><a href="http://www.lx138.com/" target="_blank" rel="external">Linux命令查询网站</a></li>
+<li><a href="http://man.linuxde.net/" target="_blank" rel="external">Linux命令大全</a></li>
+<li><a href="http://baidu.com/" target="_blank" rel="external">baidu</a></li>
+<li><a href="http://google.com.hk" target="_blank" rel="external">Google</a></li>
+</ul>
 
       
     </div>

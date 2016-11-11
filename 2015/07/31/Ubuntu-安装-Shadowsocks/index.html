@@ -65,9 +65,7 @@ Python2.7
 安装依赖关系sudo apt-get update
 sudo python --version
 sudo apt-get install python-gevent python-pip
-sudo pip install shadowsocks
-找到shadowsocks的安装位置sudo find / -name shadows*
-其中，">
+sudo pip install shadowsocks">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu-安装-Shadowsocks">
 <meta property="og:url" content="http://zhangxuezhi.com/2015/07/31/Ubuntu-安装-Shadowsocks/index.html">
@@ -79,11 +77,9 @@ Python2.7
 安装依赖关系sudo apt-get update
 sudo python --version
 sudo apt-get install python-gevent python-pip
-sudo pip install shadowsocks
-找到shadowsocks的安装位置sudo find / -name shadows*
-其中，">
+sudo pip install shadowsocks">
 <meta property="og:image" content="http://img.blog.csdn.net/20150802191807396">
-<meta property="og:updated_time" content="2016-11-06T16:29:30.952Z">
+<meta property="og:updated_time" content="2016-11-11T15:58:23.477Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu-安装-Shadowsocks">
 <meta name="twitter:description" content="系统环境
@@ -93,9 +89,7 @@ Python2.7
 安装依赖关系sudo apt-get update
 sudo python --version
 sudo apt-get install python-gevent python-pip
-sudo pip install shadowsocks
-找到shadowsocks的安装位置sudo find / -name shadows*
-其中，">
+sudo pip install shadowsocks">
 <meta name="twitter:image" content="http://img.blog.csdn.net/20150802191807396">
 
 
@@ -400,20 +394,22 @@ sudo pip install shadowsocks
 sudo python --version
 sudo apt-get install python-gevent python-pip
 sudo pip install shadowsocks
-</code></pre><h2 id="找到shadowsocks的安装位置"><a href="#找到shadowsocks的安装位置" class="headerlink" title="找到shadowsocks的安装位置"></a>找到shadowsocks的安装位置</h2><pre><code>sudo find / -name shadows*
-</code></pre><p>其中， “/“是根目录下， *是通配符。<br>我的安装路径是<code>/usr/local/lib/python2.7/dist-packages/shadowsocks</code></p>
+</code></pre><a id="more"></a>
+<h2 id="找到shadowsocks的安装位置"><a href="#找到shadowsocks的安装位置" class="headerlink" title="找到shadowsocks的安装位置"></a>找到shadowsocks的安装位置</h2><figure class="highlight sqf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo <span class="built_in">find</span> / -<span class="built_in">name</span> shadows*</div></pre></td></tr></table></figure>
+<p>其中， “/“是根目录下， *是通配符。<br>我的安装路径是<code>/usr/local/lib/python2.7/dist-packages/shadowsocks</code></p>
 <h2 id="新建并修改配置文件"><a href="#新建并修改配置文件" class="headerlink" title="新建并修改配置文件"></a>新建并修改配置文件</h2><p>在安装路径下新建文件config.json，路径<code>/usr/local/lib/python2.7/dist-packages/shadowsocks</code>，创建命令<code>sudo touch config.json</code></p>
 <p>文件内容：</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line"><span class="attr">"server"</span>:<span class="string">"79.45.115.110"</span>,</div><div class="line"><span class="attr">"server_port"</span>:<span class="number">12801</span>,</div><div class="line"><span class="attr">"local_port"</span>:<span class="number">10808</span>,</div><div class="line"><span class="attr">"password"</span>:<span class="string">"123456"</span>,</div><div class="line"><span class="attr">"timeout"</span>:<span class="number">600</span>,</div><div class="line"><span class="attr">"method"</span>:<span class="string">"aes-256-cfb"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="运行shadowsocks"><a href="#运行shadowsocks" class="headerlink" title="运行shadowsocks"></a>运行shadowsocks</h2><p>在安装路径下，输入<code>sslocal</code>，即可启动shadowsocks。</p>
 <h2 id="开机自动启动"><a href="#开机自动启动" class="headerlink" title="开机自动启动"></a>开机自动启动</h2><ul>
 <li><p>修改rc.local文件</p>
-<p>  cd /etc/<br>  sudo vim rc.local</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">cd</span> /etc/</div><div class="line">sudo vim rc.<span class="keyword">local</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>加上一行：</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/local/bin/sslocal -c /usr/local/<span class="class"><span class="keyword">lib</span>/<span class="title">python2</span>.7/<span class="title">dist</span>-<span class="title">packages</span>/<span class="title">shadowsocks</span>/<span class="title">config</span>.<span class="title">json</span></span></div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>加上一行：</p>
-<pre><code>/usr/local/bin/sslocal -c /usr/local/lib/python2.7/dist-packages/shadowsocks/config.json
-</code></pre><h2 id="配置SwitchySharp"><a href="#配置SwitchySharp" class="headerlink" title="配置SwitchySharp"></a>配置SwitchySharp</h2><ul>
+<h2 id="配置SwitchySharp"><a href="#配置SwitchySharp" class="headerlink" title="配置SwitchySharp"></a>配置SwitchySharp</h2><ul>
 <li><a href="http://pan.baidu.com/s/1eQCoeQ2" target="_blank" rel="external">下载Switchysharp</a></li>
 <li><a href="http://jingyan.baidu.com/article/380abd0a5543221d90192c9f.html" target="_blank" rel="external">安装Switchysharp</a></li>
 <li>配置如下图所示，注意：端口根据根据配置中填写，上面的配置是10808，所以此处端口应该由1080改为：10808<br>  <img src="http://img.blog.csdn.net/20150802191807396" alt="这里写图片描述"></li>
@@ -480,8 +476,8 @@ sudo pip install shadowsocks
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/07/31/Ubuntu-安装-Chrome/" rel="prev" title="Ubuntu-安装-Chrome">
-                Ubuntu-安装-Chrome <i class="fa fa-chevron-right"></i>
+              <a href="/2015/07/31/Ubuntu-安装-搜狗输入法-详细教程/" rel="prev" title="Ubuntu-安装-搜狗输入法-详细教程">
+                Ubuntu-安装-搜狗输入法-详细教程 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

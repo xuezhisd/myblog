@@ -71,7 +71,7 @@
 <meta property="og:image" content="http://img.blog.csdn.net/20150923231755240">
 <meta property="og:image" content="http://img.blog.csdn.net/20150924090717807">
 <meta property="og:image" content="http://img.blog.csdn.net/20150924091021080">
-<meta property="og:updated_time" content="2016-11-06T16:32:43.863Z">
+<meta property="og:updated_time" content="2016-11-11T15:18:04.337Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="caffe安装系列——安装OpenCV">
 <meta name="twitter:description" content="说明
@@ -377,18 +377,19 @@
 <li>网上关于caffe的安装教程非常多，但是关于每一步是否操作成功，出现了什么样的错误又该如何处理没有给出说明。因为大家的操作系统的环境千差万别，按照博客中的教程一步步的安装，最后可能失败——这是很常见的哦。有的教程甚至省略了一些细节部分，让小白更不知道如何判断每一步是否操作成功，如何处理出现的错误。</li>
 <li>作者花费了很长时间才成功地将caffe装完，期间遇到好多错误，多次重装操作系统。现在将经验写下来，一方面为了和大家分享，讨论；另一方面是为了记录一下下~~~</li>
 </ul>
+<a id="more"></a>
 <h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>操作系统： <strong><em>Ubuntu 14.04(64bit)</em></strong><br>GCC/G++:<strong><em>4.7.x</em></strong><br>OpenCV: <strong><em>2.4.11和3.0.0</em></strong><br>Matlab :<strong><em>R2014b(a)</em></strong><br>Python:   <strong><em>2.7</em></strong><br>显卡：Telsa K40m &amp; Telsa K20xm</p>
-<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><ul>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48649575" target="_blank" rel="external">综述</a></li>
-<li>0.准备工作</li>
-<li>1.<a href="http://blog.csdn.net/xuezhisdc/article/details/48650015" target="_blank" rel="external">安装GCC4.7和G++4.7并降级</a></li>
-<li>2.<a href="http://blog.csdn.net/xuezhisdc/article/details/48650565" target="_blank" rel="external">安装显卡驱动</a></li>
-<li>3.<a href="http://blog.csdn.net/xuezhisdc/article/details/48651003" target="_blank" rel="external">安装cuda和cudnn</a></li>
-<li>4.<a href="http://blog.csdn.net/xuezhisdc/article/details/48691147" target="_blank" rel="external">安装Matlab</a></li>
-<li>5.<a href="http://blog.csdn.net/xuezhisdc/article/details/48691797" target="_blank" rel="external">安装OpenCV</a></li>
-<li>6.<a href="http://blog.csdn.net/xuezhisdc/article/details/48706843" target="_blank" rel="external">安装Python依赖包</a></li>
-<li>7.<a href="http://blog.csdn.net/xuezhisdc/article/details/48707101" target="_blank" rel="external">安装caffe</a></li>
-</ul>
+<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><ol>
+<li><a href="http://zhangxuezhi.com/2015/09/24/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E7%BB%BC%E8%BF%B0/">综述</a></li>
+<li><a href="">准备工作</a></li>
+<li><a href="http://zhangxuezhi.com/2015/09/22/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85GCC4.7%E5%92%8CG++4.7%E5%B9%B6%E9%99%8D%E7%BA%A7/">安装GCC4.7和G++4.7并降级</a></li>
+<li><a href="http://zhangxuezhi.com/2015/09/24/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85NVIDIA%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8/">安装显卡驱动</a></li>
+<li><a href="http://zhangxuezhi.com/2015/09/22/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85cuda%E5%92%8Ccudnn/">安装cuda和cudnn</a></li>
+<li><a href="http://zhangxuezhi.com/2015/09/23/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85Matlab/">安装Matlab</a></li>
+<li><a href="http://zhangxuezhi.com/2015/09/24/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85OpenCV/">安装OpenCV</a></li>
+<li><a href="http://zhangxuezhi.com/2015/09/24/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85python%E4%BE%9D%E8%B5%96%E5%8C%85/">安装Python依赖包</a></li>
+<li><a href="http://zhangxuezhi.com/2015/10/13/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85caffe/">安装caffe</a></li>
+</ol>
 <h2 id="安装OpenCV"><a href="#安装OpenCV" class="headerlink" title="安装OpenCV"></a>安装OpenCV</h2><ul>
 <li>安装前，请下载我的安装脚本,如下图所示。<a href="http://pan.baidu.com/s/1geAezRH" target="_blank" rel="external">点此下载</a><br><img src="http://img.blog.csdn.net/20150923231755240" alt="这里写图片描述"></li>
 <li>这个脚本是我根据GitHub上大神写的<a href="https://github.com/jayrambhia/Install-OpenCV" target="_blank" rel="external">安装OpenCV的脚本</a>改造的，这个脚本有一些问题，有些包安装不上，比如mmfpeg，有些包前后安装相互冲突，后面的会把前面的卸载等等。</li>
@@ -430,7 +431,12 @@
 <li>因此，最好的组合方式【cuda7.0 + opencv3.0.】和【cuda6.5+opencv2.4.11】。这两种组合方法，我都已经在Ubuntu14.04操作系统（64位版本）上成功地安装了。</li>
 <li>网上安装OpenCV的教程很多都是通过Install-OpenCV脚本来安装的，但我在使用过程中发现会出现问题，而网络教程有没有说明遇到问题如何解决，因此很坑。最终，借助Google，解决的所有问题，成功安装了所有依赖和OpenCV3.0。因此，如果大家遇到什么编译错误，不要害怕，google一下，一般别人已经遇到这个问题，并成功地解决了。</li>
 </ul>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://ouxinyu.github.io/Blogs/20140723001.html" target="_blank" rel="external">《Caffe + Ubuntu 15.04 + CUDA 7.0 新手安装配置指南》</a>——欧新宇<br><a href="http://sourceforge.net/projects/opencvlibrary/files/opencv-unix/" target="_blank" rel="external">opencv 项目</a><br><a href="http://pan.baidu.com/s/1mgH5dbE" target="_blank" rel="external">我的opencv安装脚本</a><br><a href="https://github.com/jayrambhia/Install-OpenCV" target="_blank" rel="external">GitHub上的opencv安装脚本</a></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://ouxinyu.github.io/Blogs/20140723001.html" target="_blank" rel="external">《Caffe + Ubuntu 15.04 + CUDA 7.0 新手安装配置指南》</a>——欧新宇 </li>
+<li><a href="http://sourceforge.net/projects/opencvlibrary/files/opencv-unix/" target="_blank" rel="external">opencv 项目</a></li>
+<li><a href="http://pan.baidu.com/s/1mgH5dbE" target="_blank" rel="external">我的opencv安装脚本</a></li>
+<li><a href="https://github.com/jayrambhia/Install-OpenCV" target="_blank" rel="external">GitHub上的opencv安装脚本</a></li>
+</ul>
 
       
     </div>
@@ -497,8 +503,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/10/13/服务器安装并配置Ubuntu Server 14.04/" rel="prev" title="服务器安装并配置Ubuntu Server 14.04">
-                服务器安装并配置Ubuntu Server 14.04 <i class="fa fa-chevron-right"></i>
+              <a href="/2015/10/13/caffe安装系列——安装caffe/" rel="prev" title="caffe安装系列——安装caffe">
+                caffe安装系列——安装caffe <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

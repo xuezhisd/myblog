@@ -59,39 +59,18 @@
 
 
 <meta name="description" content="adduser
-功能：建立用户账号
-在Slackware中，adduser指令是个script程序，利用交谈的方式取得输入的用户帐号资料，然后再交由真正建立帐号的useradd指令建立新用户，如此可方便管理员建立用户帐号。
-在RedHatLinux中，adduser指令则是useradd指令的符号连接，两者实际上是同一个指令。
-参考：useradd
-
-useradd
-功能：建立用户账号
-提示：">
+功能：建立用户账号">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux命令——adduser">
 <meta property="og:url" content="http://zhangxuezhi.com/2015/11/04/Linux命令——adduser/index.html">
 <meta property="og:site_name" content="学志の博客">
 <meta property="og:description" content="adduser
-功能：建立用户账号
-在Slackware中，adduser指令是个script程序，利用交谈的方式取得输入的用户帐号资料，然后再交由真正建立帐号的useradd指令建立新用户，如此可方便管理员建立用户帐号。
-在RedHatLinux中，adduser指令则是useradd指令的符号连接，两者实际上是同一个指令。
-参考：useradd
-
-useradd
-功能：建立用户账号
-提示：">
-<meta property="og:updated_time" content="2016-11-06T16:26:47.976Z">
+功能：建立用户账号">
+<meta property="og:updated_time" content="2016-11-11T14:56:19.727Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux命令——adduser">
 <meta name="twitter:description" content="adduser
-功能：建立用户账号
-在Slackware中，adduser指令是个script程序，利用交谈的方式取得输入的用户帐号资料，然后再交由真正建立帐号的useradd指令建立新用户，如此可方便管理员建立用户帐号。
-在RedHatLinux中，adduser指令则是useradd指令的符号连接，两者实际上是同一个指令。
-参考：useradd
-
-useradd
-功能：建立用户账号
-提示：">
+功能：建立用户账号">
 
 
 
@@ -390,7 +369,7 @@ useradd
         <blockquote>
 </blockquote>
 <h2 id="adduser"><a href="#adduser" class="headerlink" title="adduser"></a>adduser</h2><ul>
-<li><strong>功能</strong>：建立用户账号</li>
+<li><strong>功能</strong>：建立用户账号<a id="more"></a></li>
 <li>在Slackware中，adduser指令是个script程序，利用交谈的方式取得输入的用户帐号资料，然后再交由真正建立帐号的useradd指令建立新用户，如此可方便管理员建立用户帐号。</li>
 <li>在RedHatLinux中，adduser指令则是useradd指令的符号连接，两者实际上是同一个指令。</li>
 <li><strong>参考</strong>：<code>useradd</code></li>
@@ -420,10 +399,15 @@ useradd
 <li>-u：指定用户id；</li>
 </ul>
 </li>
-<li><strong>示例</strong>：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 新建用户test</span></div><div class="line">useradd <span class="built_in">test</span> </div><div class="line"><span class="comment"># 新建用户test，并添加备注</span></div><div class="line">useradd <span class="built_in">test</span> -c <span class="string">"temp user"</span></div><div class="line"><span class="comment"># 新建用户test，并指定目录</span></div><div class="line">useradd <span class="built_in">test</span> <span class="_">-d</span> /home/<span class="built_in">test</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># 添加新用户jack，主要组:sales,次要组：company</span></div><div class="line">useradd jack –g sales –G company,employees </div><div class="line"><span class="comment"># 新建用户test，并自动建立用户登入目录</span></div><div class="line">useradd <span class="built_in">test</span> -m</div><div class="line"><span class="comment"># 新建系统用户test</span></div><div class="line">useradd <span class="built_in">test</span> -r </div><div class="line"><span class="comment"># 新建一个用户，并指定用户登录后使用的shell</span></div><div class="line">useradd <span class="built_in">test</span> <span class="_">-s</span> /bin/bash</div><div class="line"><span class="comment"># 建立一个新用户账户，并设置ID：</span></div><div class="line">useradd <span class="built_in">test</span> －u 544</div></pre></td></tr></table></figure>
-</li>
+<li><strong>示例</strong>：</li>
 </ul>
-<h2 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h2><p><a href="http://www.lx138.com/" target="_blank" rel="external">Linux命令查询网站</a><br><a href="http://man.linuxde.net/" target="_blank" rel="external">Linux命令大全</a><br><a href="http://baidu.com/" target="_blank" rel="external">baidu</a><br><a href="google.com.hk">Google</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 新建用户test</span></div><div class="line">useradd <span class="built_in">test</span> </div><div class="line"><span class="comment"># 新建用户test，并添加备注</span></div><div class="line">useradd <span class="built_in">test</span> -c <span class="string">"temp user"</span></div><div class="line"><span class="comment"># 新建用户test，并指定目录</span></div><div class="line">useradd <span class="built_in">test</span> <span class="_">-d</span> /home/<span class="built_in">test</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># 添加新用户jack，主要组:sales,次要组：company</span></div><div class="line">useradd jack –g sales –G company,employees </div><div class="line"><span class="comment"># 新建用户test，并自动建立用户登入目录</span></div><div class="line">useradd <span class="built_in">test</span> -m</div><div class="line"><span class="comment"># 新建系统用户test</span></div><div class="line">useradd <span class="built_in">test</span> -r </div><div class="line"><span class="comment"># 新建一个用户，并指定用户登录后使用的shell</span></div><div class="line">useradd <span class="built_in">test</span> <span class="_">-s</span> /bin/bash</div><div class="line"><span class="comment"># 建立一个新用户账户，并设置ID：</span></div><div class="line">useradd <span class="built_in">test</span> －u 544</div></pre></td></tr></table></figure>
+<h2 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h2><ul>
+<li><a href="http://www.lx138.com/" target="_blank" rel="external">Linux命令查询网站</a></li>
+<li><a href="http://man.linuxde.net/" target="_blank" rel="external">Linux命令大全</a></li>
+<li><a href="http://baidu.com/" target="_blank" rel="external">baidu</a></li>
+<li><a href="http://google.com.hk" target="_blank" rel="external">Google</a></li>
+</ul>
 
       
     </div>
@@ -478,8 +462,8 @@ useradd
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/11/04/Linux命令——who/" rel="next" title="Linux命令——who">
-                <i class="fa fa-chevron-left"></i> Linux命令——who
+              <a href="/2015/11/04/Linux命令——whoami/" rel="next" title="Linux命令——whoami">
+                <i class="fa fa-chevron-left"></i> Linux命令——whoami
               </a>
             
           </div>

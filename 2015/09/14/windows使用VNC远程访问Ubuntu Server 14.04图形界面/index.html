@@ -58,25 +58,25 @@
 
 
 
-<meta name="description" content="说明昨天刚刚在服务器上面安装完Ubuntu Server 14.04，并且装上了桌面环境Gnome。今天希望通过VNC可以远程访问Ubuntu图形界面，这样使用时就方便多了，既不用跑机房，也不必非得使用终端（Terminal）。
-问题按照网上的教程安装vnc4server之后，并设置xstartup文件。在windows端通过VNCViewer登录，只能看到命令行，其他的看不到。
-安装以下软件
-在">
+<meta name="description" content="说明
+昨天刚刚在服务器上面安装完Ubuntu Server 14.04，并且装上了桌面环境Gnome。今天希望通过VNC可以远程访问Ubuntu图形界面，这样使用时就方便多了，既不用跑机房，也不必非得使用终端（Terminal）。
+
+问题按照网上的教程安装vnc4server之后，并设置xstartup文件。在windows端通过VNCViewer登录，只能看到命令行，其他的看不到。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="windows使用VNC远程访问Ubuntu Server 14.04图形界面">
 <meta property="og:url" content="http://zhangxuezhi.com/2015/09/14/windows使用VNC远程访问Ubuntu Server 14.04图形界面/index.html">
 <meta property="og:site_name" content="学志の博客">
-<meta property="og:description" content="说明昨天刚刚在服务器上面安装完Ubuntu Server 14.04，并且装上了桌面环境Gnome。今天希望通过VNC可以远程访问Ubuntu图形界面，这样使用时就方便多了，既不用跑机房，也不必非得使用终端（Terminal）。
-问题按照网上的教程安装vnc4server之后，并设置xstartup文件。在windows端通过VNCViewer登录，只能看到命令行，其他的看不到。
-安装以下软件
-在">
-<meta property="og:updated_time" content="2016-11-06T16:30:09.280Z">
+<meta property="og:description" content="说明
+昨天刚刚在服务器上面安装完Ubuntu Server 14.04，并且装上了桌面环境Gnome。今天希望通过VNC可以远程访问Ubuntu图形界面，这样使用时就方便多了，既不用跑机房，也不必非得使用终端（Terminal）。
+
+问题按照网上的教程安装vnc4server之后，并设置xstartup文件。在windows端通过VNCViewer登录，只能看到命令行，其他的看不到。">
+<meta property="og:updated_time" content="2016-11-11T15:47:31.573Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="windows使用VNC远程访问Ubuntu Server 14.04图形界面">
-<meta name="twitter:description" content="说明昨天刚刚在服务器上面安装完Ubuntu Server 14.04，并且装上了桌面环境Gnome。今天希望通过VNC可以远程访问Ubuntu图形界面，这样使用时就方便多了，既不用跑机房，也不必非得使用终端（Terminal）。
-问题按照网上的教程安装vnc4server之后，并设置xstartup文件。在windows端通过VNCViewer登录，只能看到命令行，其他的看不到。
-安装以下软件
-在">
+<meta name="twitter:description" content="说明
+昨天刚刚在服务器上面安装完Ubuntu Server 14.04，并且装上了桌面环境Gnome。今天希望通过VNC可以远程访问Ubuntu图形界面，这样使用时就方便多了，既不用跑机房，也不必非得使用终端（Terminal）。
+
+问题按照网上的教程安装vnc4server之后，并设置xstartup文件。在windows端通过VNCViewer登录，只能看到命令行，其他的看不到。">
 
 
 
@@ -372,8 +372,11 @@
       
 
       
-        <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>昨天刚刚在服务器上面安装完Ubuntu Server 14.04，并且装上了桌面环境Gnome。今天希望通过VNC可以远程访问Ubuntu图形界面，这样使用时就方便多了，既不用跑机房，也不必非得使用终端（Terminal）。</p>
+        <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><blockquote>
+<p>昨天刚刚在服务器上面安装完Ubuntu Server 14.04，并且装上了桌面环境Gnome。今天希望通过VNC可以远程访问Ubuntu图形界面，这样使用时就方便多了，既不用跑机房，也不必非得使用终端（Terminal）。</p>
+</blockquote>
 <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>按照网上的教程安装vnc4server之后，并设置xstartup文件。在windows端通过VNCViewer登录，只能看到命令行，其他的看不到。</p>
+<a id="more"></a>
 <h2 id="安装以下软件"><a href="#安装以下软件" class="headerlink" title="安装以下软件"></a>安装以下软件</h2><ul>
 <li>在终端中运行以下命令，安装相应软件</li>
 </ul>
@@ -384,7 +387,13 @@
 </ul>
 <h2 id="修改xstartup"><a href="#修改xstartup" class="headerlink" title="修改xstartup"></a>修改xstartup</h2><p>将~/.vnc/xstartup的内容修改成如下（复制，粘贴）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line"></div><div class="line"><span class="comment"># Uncomment the following two lines for normal desktop:</span></div><div class="line"><span class="built_in">export</span> XKL_XMODMAP_DISABLE=1</div><div class="line"> <span class="built_in">unset</span> SESSION_MANAGER</div><div class="line"><span class="comment"># exec /etc/X11/xinit/xinitrc</span></div><div class="line"><span class="built_in">unset</span> DBUS_SESSION_BUS_ADDRESS</div><div class="line"></div><div class="line">gnome-panel &amp;</div><div class="line">gnome-settings-daemon &amp;</div><div class="line">metacity &amp;</div><div class="line">nautilus &amp;</div><div class="line">gnome-terminal &amp;</div></pre></td></tr></table></figure></p>
 <h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><p>运行vncserver，在Windows中访问该主机，即可以看到图形窗口。</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://blog.sina.com.cn/s/blog_677265f601012mqg.html" target="_blank" rel="external">window下使用vnc远程登录ubuntu/linux图形界面</a> —— 最初参阅文章<br><a href="http://blog.csdn.net/sunnylgz/article/details/40779973" target="_blank" rel="external">Windows使用VNC viewer访问Ubuntu 14.04远程桌面的简单方法</a> —— 远程共享设置主要参考了该文章<br><a href="http://www.zhixing123.cn/ubuntu/41953.html" target="_blank" rel="external">Windows远程桌面连接ubuntu 14.04图解设置教程</a><br><a href="http://wangkerui.com/archives/391" target="_blank" rel="external">windows远程（xrdp+vnc）连接ubuntu linux</a><br><a href="http://blog.csdn.net/wwq_1111/article/details/46502873" target="_blank" rel="external">Ubuntu14.04使用VNC无法显示图形界面问题的解决</a> —— xstartup文件配置参考该文章</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://blog.sina.com.cn/s/blog_677265f601012mqg.html" target="_blank" rel="external">window下使用vnc远程登录ubuntu/linux图形界面</a> —— 最初参阅文章</li>
+<li><a href="http://blog.csdn.net/sunnylgz/article/details/40779973" target="_blank" rel="external">Windows使用VNC viewer访问Ubuntu 14.04远程桌面的简单方法</a> —— 远程共享设置主要参考了该文章</li>
+<li><a href="http://www.zhixing123.cn/ubuntu/41953.html" target="_blank" rel="external">Windows远程桌面连接ubuntu 14.04图解设置教程</a></li>
+<li><a href="http://wangkerui.com/archives/391" target="_blank" rel="external">windows远程（xrdp+vnc）连接ubuntu linux</a></li>
+<li><a href="http://blog.csdn.net/wwq_1111/article/details/46502873" target="_blank" rel="external">Ubuntu14.04使用VNC无法显示图形界面问题的解决</a> —— xstartup文件配置参考该文章</li>
+</ul>
 
       
     </div>

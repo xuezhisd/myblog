@@ -68,7 +68,7 @@
 <meta property="og:description" content="说明
 网上关于caffe的安装教程非常多，但是关于每一步是否操作成功，出现了什么样的错误又该如何处理没有给出说明。因为大家的操作系统的环境千差万别，按照博客中的教程一步步的安装，最后可能失败——这是很常见的哦。有的教程甚至省略了一些细节部分，让小白更不知道如何判断每一步是否操作成功，如何处理出现的错误。
 作者花费了很长时间才成功地将caffe装完，期间遇到好多错误，多次重装操作系统。现在将经验写下">
-<meta property="og:updated_time" content="2016-11-06T16:32:55.862Z">
+<meta property="og:updated_time" content="2016-11-11T15:30:13.338Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="caffe安装系列——安装GCC4.7和G++4.7并降级">
 <meta name="twitter:description" content="说明
@@ -298,7 +298,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-09-22T14:21:00+08:00" content="2015-09-22">
+            <time itemprop="dateCreated" datetime="2015-09-22T14:21:03+08:00" content="2015-09-22">
               2015-09-22
             </time>
           </span>
@@ -373,22 +373,23 @@
 <li>网上关于caffe的安装教程非常多，但是关于每一步是否操作成功，出现了什么样的错误又该如何处理没有给出说明。因为大家的操作系统的环境千差万别，按照博客中的教程一步步的安装，最后可能失败——这是很常见的哦。有的教程甚至省略了一些细节部分，让小白更不知道如何判断每一步是否操作成功，如何处理出现的错误。</li>
 <li>作者花费了很长时间才成功地将caffe装完，期间遇到好多错误，多次重装操作系统。现在将经验写下来，一方面为了和大家分享，讨论；另一方面是为了记录一下下~~~</li>
 </ul>
+<a id="more"></a>
 <h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>操作系统： <strong><em>Ubuntu 14.04</em></strong><br>GCC/G++:<strong><em>4.7.x</em></strong><br>OpenCV: <strong><em>2.4.11和3.0.0</em></strong><br>Matlab :<strong><em>R2014b(a)</em></strong><br>Python:   <strong><em>2.7</em></strong></p>
-<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><ul>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48649575" target="_blank" rel="external">综述</a></li>
-<li>0.准备工作</li>
-<li>1.<a href="http://blog.csdn.net/xuezhisdc/article/details/48650015" target="_blank" rel="external">安装GCC4.7和G++4.7并降级</a></li>
-<li>2.<a href="http://blog.csdn.net/xuezhisdc/article/details/48650565" target="_blank" rel="external">安装显卡驱动</a></li>
-<li>3.<a href="http://blog.csdn.net/xuezhisdc/article/details/48651003" target="_blank" rel="external">安装cuda和cudnn</a></li>
-<li>4.<a href="http://blog.csdn.net/xuezhisdc/article/details/48691147" target="_blank" rel="external">安装Matlab</a></li>
-<li>5.<a href="http://blog.csdn.net/xuezhisdc/article/details/48691797" target="_blank" rel="external">安装OpenCV</a></li>
-<li>6.<a href="http://blog.csdn.net/xuezhisdc/article/details/48706843" target="_blank" rel="external">安装Python依赖包</a></li>
-<li>7.<a href="http://blog.csdn.net/xuezhisdc/article/details/48707101" target="_blank" rel="external">安装caffe</a></li>
-</ul>
+<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><ol>
+<li><a href="http://zhangxuezhi.com/2015/09/24/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E7%BB%BC%E8%BF%B0/">综述</a></li>
+<li><a href="">准备工作</a></li>
+<li><a href="http://zhangxuezhi.com/2015/09/22/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85GCC4.7%E5%92%8CG++4.7%E5%B9%B6%E9%99%8D%E7%BA%A7/">安装GCC4.7和G++4.7并降级</a></li>
+<li><a href="http://zhangxuezhi.com/2015/09/24/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85NVIDIA%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8/">安装显卡驱动</a></li>
+<li><a href="http://zhangxuezhi.com/2015/09/22/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85cuda%E5%92%8Ccudnn/">安装cuda和cudnn</a></li>
+<li><a href="http://zhangxuezhi.com/2015/09/23/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85Matlab/">安装Matlab</a></li>
+<li><a href="http://zhangxuezhi.com/2015/09/24/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85OpenCV/">安装OpenCV</a></li>
+<li><a href="http://zhangxuezhi.com/2015/09/24/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85python%E4%BE%9D%E8%B5%96%E5%8C%85/">安装Python依赖包</a></li>
+<li><a href="http://zhangxuezhi.com/2015/10/13/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85caffe/">安装caffe</a></li>
+</ol>
 <h2 id="安装GCC4-7和G-4-7并降级"><a href="#安装GCC4-7和G-4-7并降级" class="headerlink" title="安装GCC4.7和G++4.7并降级"></a>安装GCC4.7和G++4.7并降级</h2><ul>
-<li>注意：需要联网。<br>###1.下载并安装gcc/g++ 4.7.x<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt-get <span class="keyword">install</span> -y gcc<span class="number">-4.7</span></div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> -y g++<span class="number">-4.7</span></div></pre></td></tr></table></figure>
-</li>
+<li>注意：需要联网。</li>
 </ul>
+<h3 id="1-下载并安装gcc-g-4-7-x"><a href="#1-下载并安装gcc-g-4-7-x" class="headerlink" title="1.下载并安装gcc/g++ 4.7.x"></a>1.下载并安装gcc/g++ 4.7.x</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt-get <span class="keyword">install</span> -y gcc<span class="number">-4.7</span></div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> -y g++<span class="number">-4.7</span></div></pre></td></tr></table></figure>
 <h3 id="2-链接gcc-g-实现降级"><a href="#2-链接gcc-g-实现降级" class="headerlink" title="2.链接gcc/g++实现降级"></a>2.链接gcc/g++实现降级</h3><figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">cd</span> <span class="comment">/usr/bin</span></div><div class="line"><span class="comment">sudo</span> <span class="comment">rm</span> <span class="comment">gcc</span></div><div class="line"><span class="comment">sudo</span> <span class="comment">ln</span> <span class="literal">-</span><span class="comment">s</span> <span class="comment">gcc</span><span class="literal">-</span><span class="comment">4</span><span class="string">.</span><span class="comment">7</span> <span class="comment">gcc</span></div><div class="line"><span class="comment">sudo</span> <span class="comment">rm</span> <span class="comment">g</span><span class="literal">+</span><span class="literal">+</span></div><div class="line"><span class="comment">sudo</span> <span class="comment">ln</span> <span class="literal">-</span><span class="comment">s</span> <span class="comment">g</span><span class="literal">+</span><span class="literal">+</span><span class="literal">-</span><span class="comment">4</span><span class="string">.</span><span class="comment">7</span> <span class="comment">g</span><span class="literal">+</span><span class="literal">+</span></div><div class="line"><span class="comment">#</span> <span class="comment">查看是否连接到4</span><span class="string">.</span><span class="comment">7</span><span class="string">.</span><span class="comment">x</span></div><div class="line"><span class="comment">ls</span> <span class="comment">–al</span> <span class="comment">gcc</span> <span class="comment">g</span><span class="literal">+</span><span class="literal">+</span></div><div class="line"><span class="comment">gcc</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">version</span></div><div class="line"><span class="comment">g</span><span class="literal">+</span><span class="literal">+</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">version</span></div></pre></td></tr></table></figure>
 
       
@@ -456,8 +457,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/09/23/caffe安装系列——安装Matlab/" rel="prev" title="caffe安装系列——安装Matlab">
-                caffe安装系列——安装Matlab <i class="fa fa-chevron-right"></i>
+              <a href="/2015/09/22/caffe安装系列——安装cuda和cudnn/" rel="prev" title="caffe安装系列——安装cuda和cudnn">
+                caffe安装系列——安装cuda和cudnn <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -632,7 +633,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#说明"><span class="nav-number">1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境"><span class="nav-number">2.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装步骤"><span class="nav-number">3.</span> <span class="nav-text">安装步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装GCC4-7和G-4-7并降级"><span class="nav-number">4.</span> <span class="nav-text">安装GCC4.7和G++4.7并降级</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-链接gcc-g-实现降级"><span class="nav-number">4.1.</span> <span class="nav-text">2.链接gcc/g++实现降级</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#说明"><span class="nav-number">1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境"><span class="nav-number">2.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装步骤"><span class="nav-number">3.</span> <span class="nav-text">安装步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装GCC4-7和G-4-7并降级"><span class="nav-number">4.</span> <span class="nav-text">安装GCC4.7和G++4.7并降级</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-下载并安装gcc-g-4-7-x"><span class="nav-number">4.1.</span> <span class="nav-text">1.下载并安装gcc/g++ 4.7.x</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-链接gcc-g-实现降级"><span class="nav-number">4.2.</span> <span class="nav-text">2.链接gcc/g++实现降级</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
