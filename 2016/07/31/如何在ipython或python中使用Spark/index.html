@@ -62,13 +62,7 @@
 说明：
 spark 1.6.0
 scala 2.10.5
-spark安装路径是/usr/local/spark；已经在.bashrc中配置了SPARK_HOME环境变量。
-
-
-
-##方法一
-
-/usr/local/spark/bin/pyspark默认打开的是python，而不是ipython。通过在pyspark文件中添加一行，来使用ipython打开。">
+spark安装路径是/usr/local/spark；已经在.bashrc中配置了SPARK_HOME环境变量。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何在ipython或python中使用Spark">
 <meta property="og:url" content="http://zhangxuezhi.com/2016/07/31/如何在ipython或python中使用Spark/index.html">
@@ -77,27 +71,15 @@ spark安装路径是/usr/local/spark；已经在.bashrc中配置了SPARK_HOME环
 说明：
 spark 1.6.0
 scala 2.10.5
-spark安装路径是/usr/local/spark；已经在.bashrc中配置了SPARK_HOME环境变量。
-
-
-
-##方法一
-
-/usr/local/spark/bin/pyspark默认打开的是python，而不是ipython。通过在pyspark文件中添加一行，来使用ipython打开。">
-<meta property="og:updated_time" content="2016-11-06T16:31:41.879Z">
+spark安装路径是/usr/local/spark；已经在.bashrc中配置了SPARK_HOME环境变量。">
+<meta property="og:updated_time" content="2016-11-11T13:21:48.899Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何在ipython或python中使用Spark">
 <meta name="twitter:description" content="如何在ipython中使用spark
 说明：
 spark 1.6.0
 scala 2.10.5
-spark安装路径是/usr/local/spark；已经在.bashrc中配置了SPARK_HOME环境变量。
-
-
-
-##方法一
-
-/usr/local/spark/bin/pyspark默认打开的是python，而不是ipython。通过在pyspark文件中添加一行，来使用ipython打开。">
+spark安装路径是/usr/local/spark；已经在.bashrc中配置了SPARK_HOME环境变量。">
 
 
 
@@ -401,38 +383,38 @@ spark安装路径是/usr/local/spark；已经在.bashrc中配置了SPARK_HOME环
 </ul>
 </li>
 </ul>
-<p>##方法一</p>
-<ul>
-<li><p><code>/usr/local/spark/bin/pyspark</code>默认打开的是python，而不是ipython。通过在pyspark文件中添加一行，来使用ipython打开。</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">cp pyspark ipyspark</div><div class="line">vi ipyspark</div><div class="line"><span class="comment"># 在最前面添加</span></div><div class="line">IPYTHON=1</div><div class="line"><span class="comment"># 启动</span></div><div class="line">ipyspark</div></pre></td></tr></table></figure>
-</li>
+<a id="more"></a>
+<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><ul>
+<li><code>/usr/local/spark/bin/pyspark</code>默认打开的是python，而不是ipython。通过在pyspark文件中添加一行，来使用ipython打开。</li>
 </ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">cp pyspark ipyspark</div><div class="line">vi ipyspark</div><div class="line"><span class="comment"># 在最前面添加</span></div><div class="line">IPYTHON=1</div><div class="line"><span class="comment"># 启动</span></div><div class="line">ipyspark</div></pre></td></tr></table></figure>
 <h2 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h2><ul>
-<li><p>通过为spark创建一个ipython 配置的方式实现。</p>
-  <figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 为spark创建一个ipython 配置</span></div><div class="line">ipython profile create spark</div><div class="line"><span class="comment"># 创建启动配置文件</span></div><div class="line">cd ~<span class="regexp">/.config/i</span>python<span class="regexp">/profile_spark/</span>startup</div><div class="line">vi <span class="number">00</span>-pyspark-setup.py</div></pre></td></tr></table></figure>
-</li>
-<li><p>在00-pyspark-setup.py中添加如下内容：</p>
-  <figure class="highlight xl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="keyword">import</span> sys</div><div class="line"># Configure the environment</div><div class="line"><span class="keyword">if</span> <span class="string">'SPARK_HOME'</span> <span class="built_in">not</span> <span class="built_in">in</span> os.environ:</div><div class="line">    os.environ[<span class="string">'SPARK_HOME'</span>] = <span class="string">'/srv/spark'</span></div><div class="line"># Create a variable <span class="keyword">for</span> our root <span class="built_in">path</span></div><div class="line">SPARK_HOME = os.environ[<span class="string">'SPARK_HOME'</span>]</div><div class="line"># Add the PySpark/py4j to the Python Path</div><div class="line">sys.<span class="built_in">path</span>.insert(<span class="number">0</span>, os.<span class="built_in">path</span>.join(SPARK_HOME, <span class="string">"python"</span>, <span class="string">"pyspark"</span>))</div><div class="line">sys.<span class="built_in">path</span>.insert(<span class="number">0</span>, os.<span class="built_in">path</span>.join(SPARK_HOME, <span class="string">"python"</span>, <span class="string">"lib"</span>, <span class="string">"py4j-0.9-src.zip"</span>))</div><div class="line">sys.<span class="built_in">path</span>.insert(<span class="number">0</span>, os.<span class="built_in">path</span>.join(SPARK_HOME, <span class="string">"python"</span>))</div></pre></td></tr></table></figure>
-</li>
-<li><p>启动ipython</p>
-  <figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">ipython</span> –profile spark</div></pre></td></tr></table></figure>
-</li>
+<li>通过为spark创建一个ipython 配置的方式实现。</li>
 </ul>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 为spark创建一个ipython 配置</span></div><div class="line">ipython profile create spark</div><div class="line"><span class="comment"># 创建启动配置文件</span></div><div class="line">cd ~<span class="regexp">/.config/i</span>python<span class="regexp">/profile_spark/</span>startup</div><div class="line">vi <span class="number">00</span>-pyspark-setup.py</div></pre></td></tr></table></figure>
+<ul>
+<li>在00-pyspark-setup.py中添加如下内容：</li>
+</ul>
+<figure class="highlight xl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="keyword">import</span> sys</div><div class="line"># Configure the environment</div><div class="line"><span class="keyword">if</span> <span class="string">'SPARK_HOME'</span> <span class="built_in">not</span> <span class="built_in">in</span> os.environ:</div><div class="line">    os.environ[<span class="string">'SPARK_HOME'</span>] = <span class="string">'/srv/spark'</span></div><div class="line"># Create a variable <span class="keyword">for</span> our root <span class="built_in">path</span></div><div class="line">SPARK_HOME = os.environ[<span class="string">'SPARK_HOME'</span>]</div><div class="line"># Add the PySpark/py4j to the Python Path</div><div class="line">sys.<span class="built_in">path</span>.insert(<span class="number">0</span>, os.<span class="built_in">path</span>.join(SPARK_HOME, <span class="string">"python"</span>, <span class="string">"pyspark"</span>))</div><div class="line">sys.<span class="built_in">path</span>.insert(<span class="number">0</span>, os.<span class="built_in">path</span>.join(SPARK_HOME, <span class="string">"python"</span>, <span class="string">"lib"</span>, <span class="string">"py4j-0.9-src.zip"</span>))</div><div class="line">sys.<span class="built_in">path</span>.insert(<span class="number">0</span>, os.<span class="built_in">path</span>.join(SPARK_HOME, <span class="string">"python"</span>))</div></pre></td></tr></table></figure>
+<ul>
+<li>启动ipython</li>
+</ul>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">ipython</span> –profile spark</div></pre></td></tr></table></figure>
 <h2 id="测试程序"><a href="#测试程序" class="headerlink" title="测试程序"></a>测试程序</h2><ul>
-<li><p>在ipython中输入一下命令，如果下面的程序执行完后输出一个数字，说明正确。</p>
-  <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> pyspark <span class="keyword">import</span>  SparkContext</div><div class="line">sc = SparkContext( <span class="string">'local'</span>, <span class="string">'pyspark'</span>)</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">isprime</span><span class="params">(n)</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line">    check if integer n is a prime</div><div class="line">    """</div><div class="line">    <span class="comment"># make sure n is a positive integer</span></div><div class="line">    n = abs(int(n))</div><div class="line">    <span class="comment"># 0 and 1 are not primes</span></div><div class="line">    <span class="keyword">if</span> n &lt; <span class="number">2</span>:</div><div class="line">        <span class="keyword">return</span> <span class="keyword">False</span></div><div class="line">    <span class="comment"># 2 is the only even prime number</span></div><div class="line">    <span class="keyword">if</span> n == <span class="number">2</span>:</div><div class="line">        <span class="keyword">return</span> <span class="keyword">True</span></div><div class="line">    <span class="comment"># all other even numbers are not primes</span></div><div class="line">    <span class="keyword">if</span> <span class="keyword">not</span> n &amp; <span class="number">1</span>:</div><div class="line">        <span class="keyword">return</span> <span class="keyword">False</span></div><div class="line">    <span class="comment"># for all odd numbers</span></div><div class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">3</span>, int(n**<span class="number">0.5</span>)+<span class="number">1</span>, <span class="number">2</span>):</div><div class="line">        <span class="keyword">if</span> n % x == <span class="number">0</span>:</div><div class="line">            <span class="keyword">return</span> <span class="keyword">False</span></div><div class="line">    <span class="keyword">return</span> <span class="keyword">True</span></div><div class="line"></div><div class="line"><span class="comment"># Create an RDD of numbers from 0 to 1,000,000</span></div><div class="line">nums = sc.parallelize(xrange(<span class="number">1000000</span>))</div><div class="line"><span class="comment"># Compute the number of primes in the RDD</span></div><div class="line"><span class="keyword">print</span> “Result: ”, nums.filter(isprime).count()</div></pre></td></tr></table></figure>
-</li>
+<li>在ipython中输入一下命令，如果下面的程序执行完后输出一个数字，说明正确。</li>
 </ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> pyspark <span class="keyword">import</span>  SparkContext</div><div class="line">sc = SparkContext( <span class="string">'local'</span>, <span class="string">'pyspark'</span>)</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">isprime</span><span class="params">(n)</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line">    check if integer n is a prime</div><div class="line">    """</div><div class="line">    <span class="comment"># make sure n is a positive integer</span></div><div class="line">    n = abs(int(n))</div><div class="line">    <span class="comment"># 0 and 1 are not primes</span></div><div class="line">    <span class="keyword">if</span> n &lt; <span class="number">2</span>:</div><div class="line">        <span class="keyword">return</span> <span class="keyword">False</span></div><div class="line">    <span class="comment"># 2 is the only even prime number</span></div><div class="line">    <span class="keyword">if</span> n == <span class="number">2</span>:</div><div class="line">        <span class="keyword">return</span> <span class="keyword">True</span></div><div class="line">    <span class="comment"># all other even numbers are not primes</span></div><div class="line">    <span class="keyword">if</span> <span class="keyword">not</span> n &amp; <span class="number">1</span>:</div><div class="line">        <span class="keyword">return</span> <span class="keyword">False</span></div><div class="line">    <span class="comment"># for all odd numbers</span></div><div class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">3</span>, int(n**<span class="number">0.5</span>)+<span class="number">1</span>, <span class="number">2</span>):</div><div class="line">        <span class="keyword">if</span> n % x == <span class="number">0</span>:</div><div class="line">            <span class="keyword">return</span> <span class="keyword">False</span></div><div class="line">    <span class="keyword">return</span> <span class="keyword">True</span></div><div class="line"></div><div class="line"><span class="comment"># Create an RDD of numbers from 0 to 1,000,000</span></div><div class="line">nums = sc.parallelize(xrange(<span class="number">1000000</span>))</div><div class="line"><span class="comment"># Compute the number of primes in the RDD</span></div><div class="line"><span class="keyword">print</span> “Result: ”, nums.filter(isprime).count()</div></pre></td></tr></table></figure>
 <h2 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h2><ul>
 <li>将上面的程序放入test.py文件，执行命令<code>python test.py</code>。发现错误。因为没有将pyspark路径加入<code>PYTHONPATH</code>环境变量。</li>
-<li><p>在~/.bashrc或/etc/profile中添加如下内容:</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># python can call pyspark directly</span></div><div class="line"><span class="built_in">export</span> PYTHONPATH=<span class="variable">$SPARK_HOME</span>/python:<span class="variable">$SPARK_HOME</span>/python/pyspark:<span class="variable">$SPARK_HOME</span>/python/lib/py4j-0.9-src.zip:<span class="variable">$PYTHONPATH</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>执行如下命令：</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 使配置生效</span></div><div class="line"><span class="built_in">source</span> ~/.bashrc</div><div class="line"><span class="comment"># 测试程序</span></div><div class="line">python test.py</div></pre></td></tr></table></figure>
-</li>
-<li><p>此时，已经能够运行了。</p>
-</li>
+<li>在~/.bashrc或/etc/profile中添加如下内容:</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># python can call pyspark directly</span></div><div class="line"><span class="built_in">export</span> PYTHONPATH=<span class="variable">$SPARK_HOME</span>/python:<span class="variable">$SPARK_HOME</span>/python/pyspark:<span class="variable">$SPARK_HOME</span>/python/lib/py4j-0.9-src.zip:<span class="variable">$PYTHONPATH</span></div></pre></td></tr></table></figure>
+<ul>
+<li>执行如下命令：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 使配置生效</span></div><div class="line"><span class="built_in">source</span> ~/.bashrc</div><div class="line"><span class="comment"># 测试程序</span></div><div class="line">python test.py</div></pre></td></tr></table></figure>
+<ul>
+<li>此时，已经能够运行了。</li>
 </ul>
 
       
@@ -595,7 +577,7 @@ spark安装路径是/usr/local/spark；已经在.bashrc中配置了SPARK_HOME环
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">96</span>
+              <span class="site-state-item-count">97</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -674,7 +656,7 @@ spark安装路径是/usr/local/spark；已经在.bashrc中配置了SPARK_HOME环
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#如何在ipython中使用spark"><span class="nav-number">1.</span> <span class="nav-text">如何在ipython中使用spark</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#方法二："><span class="nav-number">1.1.</span> <span class="nav-text">方法二：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试程序"><span class="nav-number">1.2.</span> <span class="nav-text">测试程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法三"><span class="nav-number">1.3.</span> <span class="nav-text">方法三</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#如何在ipython中使用spark"><span class="nav-number">1.</span> <span class="nav-text">如何在ipython中使用spark</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#方法一"><span class="nav-number">1.1.</span> <span class="nav-text">方法一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法二："><span class="nav-number">1.2.</span> <span class="nav-text">方法二：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试程序"><span class="nav-number">1.3.</span> <span class="nav-text">测试程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法三"><span class="nav-number">1.4.</span> <span class="nav-text">方法三</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

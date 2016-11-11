@@ -280,6 +280,158 @@
             
               
                 
+                <a class="post-title-link" href="/2016/03/30/PCL系列——将点云数据写入PCD格式文件/" itemprop="url">
+                  PCL系列——将点云数据写入PCD格式文件
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-30T13:30:00+08:00" content="2016-03-30">
+              2016-03-30
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/图像处理/" itemprop="url" rel="index">
+                    <span itemprop="name">图像处理</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/图像处理/PCL/" itemprop="url" rel="index">
+                    <span itemprop="name">PCL</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/30/PCL系列——将点云数据写入PCD格式文件/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/30/PCL系列——将点云数据写入PCD格式文件/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="PCL系列"><a href="#PCL系列" class="headerlink" title="PCL系列"></a>PCL系列</h2><ul>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51012300" target="_blank" rel="external">PCL系列——读入PCD格式文件操作</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51012463" target="_blank" rel="external">PCL系列——将点云数据写入PCD格式文件</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51014388" target="_blank" rel="external">PCL系列——拼接两个点云</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51018872" target="_blank" rel="external">PCL系列——从深度图像(RangeImage)中提取NARF关键点</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51019461" target="_blank" rel="external">PCL系列——如何可视化深度图像</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51023251" target="_blank" rel="external">PCL系列——如何使用迭代最近点法（ICP）配准</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51030943" target="_blank" rel="external">PCL系列——如何逐渐地配准一对点云</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51034189" target="_blank" rel="external">PCL系列——三维重构之泊松重构</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51034272" target="_blank" rel="external">PCL系列——三维重构之贪婪三角投影算法</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51034359" target="_blank" rel="external">PCL系列——三维重构之移动立方体算法</a></li>
+</ul>
+<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><ul>
+<li>在VS2010 中新建一个文件pcd_write.cpp，然后将下面的代码复制到文件中。</li>
+<li>参照之前的文章，配置项目的属性。设置包含目录和库目录和附加依赖项。</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span> <span class="comment">//标准输入输出流</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/io/pcd_io.h&gt;</span> <span class="comment">//PCL的PCD格式文件的输入输出头文件</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/point_types.h&gt;</span> <span class="comment">//PCL对各种格式的点的支持头文件</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span>  <span class="title">main</span> <span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span></span></div><div class="line">&#123;</div><div class="line">  pcl::PointCloud&lt;pcl::PointXYZ&gt; cloud; <span class="comment">// 创建点云（不是指针）</span></div><div class="line"></div><div class="line">  <span class="comment">//填充点云数据</span></div><div class="line">  cloud.width    = <span class="number">5</span>; <span class="comment">//设置点云宽度</span></div><div class="line">  cloud.height   = <span class="number">1</span>; <span class="comment">//设置点云高度</span></div><div class="line">  cloud.is_dense = <span class="literal">false</span>; <span class="comment">//非密集型</span></div><div class="line">  cloud.points.resize (cloud.width * cloud.height); <span class="comment">//变形，无序</span></div><div class="line">	<span class="comment">//设置这些点的坐标</span></div><div class="line">  <span class="keyword">for</span> (<span class="keyword">size_t</span> i = <span class="number">0</span>; i &lt; cloud.points.size (); ++i)</div><div class="line">  &#123;</div><div class="line">    cloud.points[i].x = <span class="number">1024</span> * rand () / (RAND_MAX + <span class="number">1.0f</span>);</div><div class="line">    cloud.points[i].y = <span class="number">1024</span> * rand () / (RAND_MAX + <span class="number">1.0f</span>);</div><div class="line">    cloud.points[i].z = <span class="number">1024</span> * rand () / (RAND_MAX + <span class="number">1.0f</span>);</div><div class="line">  &#125;</div><div class="line">	<span class="comment">//保存到PCD文件</span></div><div class="line">  pcl::io::savePCDFileASCII (<span class="string">"test_pcd.pcd"</span>, cloud); <span class="comment">//将点云保存到PCD文件中</span></div><div class="line">  <span class="built_in">std</span>::<span class="built_in">cerr</span> &lt;&lt; <span class="string">"Saved "</span> &lt;&lt; cloud.points.size () &lt;&lt; <span class="string">" data points to test_pcd.pcd."</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line">	<span class="comment">//显示点云数据</span></div><div class="line">  <span class="keyword">for</span> (<span class="keyword">size_t</span> i = <span class="number">0</span>; i &lt; cloud.points.size (); ++i)</div><div class="line">    <span class="built_in">std</span>::<span class="built_in">cerr</span> &lt;&lt; <span class="string">"    "</span> &lt;&lt; cloud.points[i].x &lt;&lt; <span class="string">" "</span> &lt;&lt; cloud.points[i].y &lt;&lt; <span class="string">" "</span> &lt;&lt; cloud.points[i].z &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> (<span class="number">0</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>运行结束后，在项目目录下生成test_pcd.pcd文件，内容如下图所示。<br><img src="http://img.blog.csdn.net/20160330105303294" alt="这里写图片描述"></li>
+</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://pointclouds.org/documentation/tutorials/writing_pcd.php#writing-pcd" target="_blank" rel="external">Writing Point Cloud data to PCD files</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/03/30/PCL系列——如何可视化深度图像/" itemprop="url">
                   PCL系列——如何可视化深度图像
                 </a>
@@ -899,143 +1051,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/03/28/Visual Studio——设置缩进/" itemprop="url">
-                  Visual Studio——设置缩进
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-28T13:33:00+08:00" content="2016-03-28">
-              2016-03-28
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/编程工具/" itemprop="url" rel="index">
-                    <span itemprop="name">编程工具</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/编程工具/VS/" itemprop="url" rel="index">
-                    <span itemprop="name">VS</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/03/28/Visual Studio——设置缩进/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/28/Visual Studio——设置缩进/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>Visual Studio默认的缩进是4个空格。但是当编写的程序比较大时，发现4个空格很不方便，因此希望将默认的缩进调整成2个空格。</p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ul>
-<li>依次选择：<strong>菜单栏</strong>→<strong>工具</strong>→<strong>选项</strong>，打开选项对话框。如下图所示。</li>
-<li>在左侧的导航栏中依次选择：<strong>文本编辑器</strong>→<strong>C++(或所有语言)</strong>→<strong>制表符</strong>。</li>
-<li>在右侧设置<code>制表符大小</code>和<code>缩进大小</code>为2。<br><img src="http://img.blog.csdn.net/20160328163952262" alt="这里写图片描述"></li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1081,7 +1096,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">96</span>
+              <span class="site-state-item-count">97</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

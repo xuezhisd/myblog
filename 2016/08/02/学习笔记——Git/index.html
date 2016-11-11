@@ -76,7 +76,7 @@
 <meta property="og:image" content="http://img.blog.csdn.net/20160802111026992">
 <meta property="og:image" content="http://img.blog.csdn.net/20160802111056218">
 <meta property="og:image" content="http://img.blog.csdn.net/20160802112427859">
-<meta property="og:updated_time" content="2016-11-06T16:32:12.303Z">
+<meta property="og:updated_time" content="2016-11-11T13:18:48.996Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记——Git">
 <meta name="twitter:description" content="说明，此博文是学习《Git教程——廖雪峰》的笔记
@@ -382,6 +382,7 @@
 <p>说明，此博文是学习《Git教程——廖雪峰》的笔记</p>
 </blockquote>
 <h1 id="一、安装和设置"><a href="#一、安装和设置" class="headerlink" title="一、安装和设置"></a>一、安装和设置</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Ubuntu安装Git</span></div><div class="line">sudo apt-get install git -y</div><div class="line"><span class="comment"># 设置全局用户名和邮件，该机器上所有仓库使用该配置</span></div><div class="line">$ git config --global user.name <span class="string">"Your Name"</span></div><div class="line">$ git config --global user.email <span class="string">"email@example.com"</span></div></pre></td></tr></table></figure>
+<a id="more"></a>
 <h1 id="二、创建版本库"><a href="#二、创建版本库" class="headerlink" title="二、创建版本库"></a>二、创建版本库</h1><h2 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 创建一个空目录</span></div><div class="line">mkdir learngit</div><div class="line"><span class="built_in">cd</span> learngit</div><div class="line"><span class="built_in">pwd</span></div><div class="line"><span class="comment"># 将目录变成“Git仓库”</span></div><div class="line">git init</div></pre></td></tr></table></figure>
 <ul>
 <li>该Git库是空仓库。不要私自修改.git目录，Git用它来跟踪管理版本库。</li>
@@ -389,22 +390,23 @@
 <li>所有的版本控制系统，其实只能跟踪文本文件的改动，Git也是如此。对于图片和视频等二进制文件，可以使用Git管理，但没法跟踪文件的变化。</li>
 </ul>
 <h2 id="添加和提交文件"><a href="#添加和提交文件" class="headerlink" title="添加和提交文件"></a>添加和提交文件</h2><ul>
-<li><p>创建readme.txt，添加如下内容。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Git is a version control system.</div><div class="line">Git is free software.</div></pre></td></tr></table></figure>
-</li>
-<li><p>使用下面的命令添加和提交文件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 添加到仓库</span></div><div class="line">git add readme.txt</div><div class="line"><span class="comment"># 提交到仓库</span></div><div class="line">git commit –m “wrote a readme file”</div></pre></td></tr></table></figure>
-</li>
-<li><p><code>-m “….”</code>是注释，便于查找改动。推荐使用。</p>
-</li>
-<li><code>git commit</code> 相当于保存一个快照，可以用于恢复。</li>
-<li><p>为什么Git添加文件需要add、commit两步？因为commit可以一次提交很多文件。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 多次add，一次提交</span></div><div class="line">git add file1.txt</div><div class="line">git add file2.txt file3.txt</div><div class="line">git commit –m “add 3 file.”</div><div class="line">``` </div><div class="line"></div><div class="line"><span class="comment">## 查看仓库状态和文件变化</span></div><div class="line">* 要随时掌握工作区的状态，使用git status命令。</div><div class="line">* 如果git status告诉你有文件被修改过，使用git diff查看修改内容。</div><div class="line">* 修改readme.txt，如下所示。</div><div class="line">```bash</div><div class="line">Git is a distributed version control system.</div><div class="line">Git is free software.</div></pre></td></tr></table></figure>
-</li>
-<li><p>输入以下命令练习。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 掌握仓库的当前状态</span></div><div class="line">git status <span class="comment">#红色</span></div><div class="line"><span class="comment"># 查看修改内容</span></div><div class="line"><span class="comment"># git diff的显示格式是Unix通用的diff格式</span></div><div class="line">git diff readme.txt</div><div class="line"><span class="comment"># 添加到仓库</span></div><div class="line">git status <span class="comment">#绿色</span></div><div class="line"><span class="comment"># 提交到仓库</span></div><div class="line">git commit -m “add distributed”</div><div class="line">git status</div></pre></td></tr></table></figure>
-</li>
+<li>创建readme.txt，添加如下内容。</li>
 </ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Git is a version control system.</div><div class="line">Git is free software.</div></pre></td></tr></table></figure>
+<ul>
+<li>使用下面的命令添加和提交文件：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 添加到仓库</span></div><div class="line">git add readme.txt</div><div class="line"><span class="comment"># 提交到仓库</span></div><div class="line">git commit –m “wrote a readme file”</div></pre></td></tr></table></figure>
+<ul>
+<li><code>-m “….”</code>是注释，便于查找改动。推荐使用。</li>
+<li><code>git commit</code> 相当于保存一个快照，可以用于恢复。</li>
+<li>为什么Git添加文件需要add、commit两步？因为commit可以一次提交很多文件。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 多次add，一次提交</span></div><div class="line">git add file1.txt</div><div class="line">git add file2.txt file3.txt</div><div class="line">git commit –m “add 3 file.”</div><div class="line">``` </div><div class="line"></div><div class="line"><span class="comment">## 查看仓库状态和文件变化</span></div><div class="line">* 要随时掌握工作区的状态，使用git status命令。</div><div class="line">* 如果git status告诉你有文件被修改过，使用git diff查看修改内容。</div><div class="line">* 修改readme.txt，如下所示。</div><div class="line"></div><div class="line">```bash</div><div class="line">Git is a distributed version control system.</div><div class="line">Git is free software.</div></pre></td></tr></table></figure>
+<ul>
+<li>输入以下命令练习。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 掌握仓库的当前状态</span></div><div class="line">git status <span class="comment">#红色</span></div><div class="line"><span class="comment"># 查看修改内容</span></div><div class="line"><span class="comment"># git diff的显示格式是Unix通用的diff格式</span></div><div class="line">git diff readme.txt</div><div class="line"><span class="comment"># 添加到仓库</span></div><div class="line">git status <span class="comment">#绿色</span></div><div class="line"><span class="comment"># 提交到仓库</span></div><div class="line">git commit -m “add distributed”</div><div class="line">git status</div></pre></td></tr></table></figure>
 <h1 id="三、时光穿梭机"><a href="#三、时光穿梭机" class="headerlink" title="三、时光穿梭机"></a>三、时光穿梭机</h1><h2 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h2><ul>
 <li><code>git log</code> 显示提交日志（从最近到最远）</li>
 <li><code>git log –pretty=online</code> 精简显示</li>
@@ -419,8 +421,10 @@
 <li>穿梭前，用git log可以查看提交历史，以便确定要回退到哪个版本。</li>
 <li>要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本。</li>
 </ul>
-<p>修改readme.txt，如下所示。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Git is a distributed version control system.</div><div class="line">Git is free software distributed under the GPL.</div></pre></td></tr></table></figure></p>
-<p>输入以下命令练习。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 提交</span></div><div class="line">git add readme.txt</div><div class="line">git commit –m “append GPL”</div><div class="line"><span class="comment"># 查看提交日志</span></div><div class="line">git <span class="built_in">log</span></div><div class="line"><span class="comment"># 保存提交日志</span></div><div class="line">git <span class="built_in">log</span> &gt; ../log.txt</div><div class="line"><span class="comment"># 精简显示日志</span></div><div class="line">git <span class="built_in">log</span> –pretty=oneline</div><div class="line"><span class="comment"># 回退到上个版本</span></div><div class="line">git reset –hard HEAD^</div><div class="line"><span class="comment"># 查看提交日志（最新的已经没有了）</span></div><div class="line">git <span class="built_in">log</span></div><div class="line"><span class="comment"># 恢复最新版本（前提：命令行窗口未关）</span></div><div class="line"><span class="comment"># 查看最新版本的版本号。假定为: 73bdb9efc29b3ed95567e57e4640418e8e809307</span></div><div class="line">git reset –hard 73bdb9efc</div><div class="line"><span class="comment"># 如果命令行窗口已关，通过git reflog命令查看历史命令（包含版本号）</span></div><div class="line">git reflog</div></pre></td></tr></table></figure></p>
+<p>修改readme.txt，如下所示。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Git is a distributed version control system.</div><div class="line">Git is free software distributed under the GPL.</div></pre></td></tr></table></figure>
+<p>输入以下命令练习。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 提交</span></div><div class="line">git add readme.txt</div><div class="line">git commit –m “append GPL”</div><div class="line"><span class="comment"># 查看提交日志</span></div><div class="line">git <span class="built_in">log</span></div><div class="line"><span class="comment"># 保存提交日志</span></div><div class="line">git <span class="built_in">log</span> &gt; ../log.txt</div><div class="line"><span class="comment"># 精简显示日志</span></div><div class="line">git <span class="built_in">log</span> –pretty=oneline</div><div class="line"><span class="comment"># 回退到上个版本</span></div><div class="line">git reset –hard HEAD^</div><div class="line"><span class="comment"># 查看提交日志（最新的已经没有了）</span></div><div class="line">git <span class="built_in">log</span></div><div class="line"><span class="comment"># 恢复最新版本（前提：命令行窗口未关）</span></div><div class="line"><span class="comment"># 查看最新版本的版本号。假定为: 73bdb9efc29b3ed95567e57e4640418e8e809307</span></div><div class="line">git reset –hard 73bdb9efc</div><div class="line"><span class="comment"># 如果命令行窗口已关，通过git reflog命令查看历史命令（包含版本号）</span></div><div class="line">git reflog</div></pre></td></tr></table></figure>
 <h2 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h2><ul>
 <li>Git区别于其它版本控制器之处在于：Git有暂存区。</li>
 <li>工作区：在电脑里能看到的目录。</li>
@@ -430,27 +434,29 @@
 <li>master分支是创建Git版本库时，Git自动创建的。</li>
 <li>简单理解：需要提交的文件修改通通放到暂存区，然后，一次性提交暂存区的所有修改到当前分支。</li>
 </ul>
-<p>修改readme.txt，如下所示。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Git is a distributed version control system.</div><div class="line">Git is free software distributed under the GPL.</div><div class="line">Git has a mutable index called stage.</div></pre></td></tr></table></figure></p>
+<p>修改readme.txt，如下所示。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Git is a distributed version control system.</div><div class="line">Git is free software distributed under the GPL.</div><div class="line">Git has a mutable index called stage.</div></pre></td></tr></table></figure>
 <ul>
 <li>在工作区新增文件LICENSE，内容随便。</li>
 </ul>
-<p>执行以下命令，检查状态和添加文件。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git status</div><div class="line">git add readme.txt</div><div class="line">git add LICENSE</div><div class="line">git status</div></pre></td></tr></table></figure></p>
+<p>执行以下命令，检查状态和添加文件。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git status</div><div class="line">git add readme.txt</div><div class="line">git add LICENSE</div><div class="line">git status</div></pre></td></tr></table></figure>
 <ul>
 <li>暂存区的状态如下图所示。<br><img src="http://img.blog.csdn.net/20160802105927894" alt="这里写图片描述"></li>
-<li>git add命令实际上就是把要提交的所有修改放到暂存区（Stage），然后，执行git commit就可以一次性把暂存区的所有修改提交到分支。<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git commit -m “understand how stage works”</div><div class="line">git stauts</div></pre></td></tr></table></figure>
-</li>
+<li>git add命令实际上就是把要提交的所有修改放到暂存区（Stage），然后，执行git commit就可以一次性把暂存区的所有修改提交到分支。</li>
 </ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git commit -m “understand how stage works”</div><div class="line">git stauts</div></pre></td></tr></table></figure>
 <p><img src="http://img.blog.csdn.net/20160802110018172" alt="这里写图片描述"></p>
 <ul>
 <li>暂存区是Git非常重要的概念，弄明白了暂存区，就弄明白了Git的很多操作到底干了什么。</li>
 </ul>
 <h2 id="管理修改"><a href="#管理修改" class="headerlink" title="管理修改"></a>管理修改</h2><ul>
 <li>Git比其它版本控制系统优秀的地方在于：GTI跟踪并管理修改，而非文件。</li>
-<li><p>下面的例子说明了这个过程。</p>
+<li>下面的例子说明了这个过程。</li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 修改readme.txt</span></div><div class="line">git add readme.txt</div><div class="line">git status</div><div class="line"><span class="comment"># 继续修改</span></div><div class="line">git commit -m “git tracks changes”</div><div class="line">git status</div><div class="line"><span class="comment">#说明：第一次修改提交了，第二次修改没有提交</span></div><div class="line"><span class="comment"># 检查工作区和版本库里最新版的区别</span></div><div class="line">git diff HEAD -- readme.txt</div></pre></td></tr></table></figure>
-</li>
-<li><p>Git跟踪修改原理：每次修改，如果不add到暂存区，那就不会加入到commit中。</p>
-</li>
+<ul>
+<li>Git跟踪修改原理：每次修改，如果不add到暂存区，那就不会加入到commit中。</li>
 </ul>
 <h2 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h2><ul>
 <li>git checkout – filename</li>
@@ -461,14 +467,15 @@
 <li>如果已经推送到远程，就没有办法删除了。</li>
 </ul>
 <h2 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h2><ul>
-<li><p>真的删除文件</p>
+<li>真的删除文件</li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">rm test.txt</div><div class="line">git rm test.txt</div><div class="line">git commit -m “remove test.txt”</div></pre></td></tr></table></figure>
-</li>
-<li><p>误删文件，恢复到最新版</p>
+<ul>
+<li>误删文件，恢复到最新版</li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">rm test.txt</div><div class="line"><span class="comment"># 发现删错了，恢复</span></div><div class="line">git checkout -- tes.txt</div></pre></td></tr></table></figure>
-</li>
-<li><p>命令git rm用于删除一个文件。如果一个文件已经被提交到版本库，那么你永远不用担心误删，但是要小心，你只能恢复文件到最新版本，你会丢失最近一次提交后你修改的内容。</p>
-</li>
+<ul>
+<li>命令git rm用于删除一个文件。如果一个文件已经被提交到版本库，那么你永远不用担心误删，但是要小心，你只能恢复文件到最新版本，你会丢失最近一次提交后你修改的内容。</li>
 </ul>
 <h1 id="四、远程仓库"><a href="#四、远程仓库" class="headerlink" title="四、远程仓库"></a>四、远程仓库</h1><ul>
 <li>Git杀手级功能：远程仓库。Git是分布式版本控制系统，同一个Git仓库，可以分布到不同的机器上。</li>
@@ -476,36 +483,34 @@
 <li>实际情况：找一台电脑充当服务器的角色，每天24小时开机，其他每个人都从这个“服务器”仓库克隆一份到自己的电脑上，并且各自把各自的提交推送到服务器仓库里，也从服务器仓库中拉取别人的提交。</li>
 <li>Github，提供了Git仓库托管服务。国内有类似的coding。</li>
 <li>本地Git仓库和GitHub仓库之间的传输是通过SSH加密的。</li>
-<li><p>配置：</p>
-<ul>
-<li><p>第1步：创建SSH Key。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 创建SSH Key</span></div><div class="line">ssh-keygen -t rsa</div><div class="line">ssh-keygen -t rsa -C “youremail@example.com” </div><div class="line"><span class="comment">#~/.ssh目录下生成两个文件：id_rsa（私匙）和id_rsa.pub（公匙）</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面；然后，点“Bew SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容</p>
-</li>
+<li>配置：<ul>
+<li>第1步：创建SSH Key。</li>
 </ul>
 </li>
-<li><p>为什么GitHub需要SSH Key呢？因为GitHub需要识别出你推送的提交确实是你推送的，而不是别人冒充的。</p>
-</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 创建SSH Key</span></div><div class="line">ssh-keygen -t rsa</div><div class="line">ssh-keygen -t rsa -C “youremail@example.com” </div><div class="line"><span class="comment">#~/.ssh目录下生成两个文件：id_rsa（私匙）和id_rsa.pub（公匙）</span></div></pre></td></tr></table></figure>
+<pre><code>* 第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面；然后，点“Bew SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容
+</code></pre><ul>
+<li>为什么GitHub需要SSH Key呢？因为GitHub需要识别出你推送的提交确实是你推送的，而不是别人冒充的。</li>
 <li>Github上的免费托管的Git仓库是公开的，别人可以看到。国内的coding.net可以免费托管私有仓库。</li>
 </ul>
 <h2 id="添加远程仓库"><a href="#添加远程仓库" class="headerlink" title="添加远程仓库"></a>添加远程仓库</h2><ul>
-<li><p>在Github上创建一个远程库，可以克隆这个库，或者和本地的仓库进行合并。</p>
-<ul>
+<li>在Github上创建一个远程库，可以克隆这个库，或者和本地的仓库进行合并。<ul>
 <li>在Github上创建远程库learngit；</li>
 <li>上传自己的SSH公匙；</li>
 <li>关联本地仓库和远程仓库。</li>
-<li>推送代码<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#关联远程库</span></div><div class="line">git remote add origin git@github.com:xuezhisd/learngit.git</div><div class="line"><span class="comment">#关联后，远程库的名字就是origin</span></div><div class="line"><span class="comment"># 推送本地库内容到远程库上</span></div><div class="line">git push -u origin master</div><div class="line"><span class="comment"># -u把本地的master分支和远程的master分支关联起来，简化以后推送命令。</span></div><div class="line"><span class="comment"># 以后使用下面命令推送</span></div><div class="line">git push orgin master</div></pre></td></tr></table></figure>
-</li>
+<li>推送代码</li>
 </ul>
 </li>
-<li><p>本地库的内容推送到远程，用git push命令。</p>
-</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#关联远程库</span></div><div class="line">git remote add origin git@github.com:xuezhisd/learngit.git</div><div class="line"><span class="comment">#关联后，远程库的名字就是origin</span></div><div class="line"><span class="comment"># 推送本地库内容到远程库上</span></div><div class="line">git push -u origin master</div><div class="line"><span class="comment"># -u把本地的master分支和远程的master分支关联起来，简化以后推送命令。</span></div><div class="line"><span class="comment"># 以后使用下面命令推送</span></div><div class="line">git push orgin master</div></pre></td></tr></table></figure>
+<ul>
+<li>本地库的内容推送到远程，用git push命令。</li>
 </ul>
 <h2 id="从远程库克隆"><a href="#从远程库克隆" class="headerlink" title="从远程库克隆"></a>从远程库克隆</h2><ul>
-<li>要克隆一个仓库，首先必须知道仓库的地址，然后使用git clone命令克隆。<br>Git支持多种协议，包括https，但通过ssh支持的原生git协议速度最快。<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> git@github.com:xuezhisd/learngit.git</div><div class="line">git <span class="built_in">clone</span> https://github.com/xuezhisd/learngit.git</div><div class="line"><span class="built_in">cd</span> learngit</div><div class="line">ls</div></pre></td></tr></table></figure>
-</li>
+<li>要克隆一个仓库，首先必须知道仓库的地址，然后使用git clone命令克隆。<br>Git支持多种协议，包括https，但通过ssh支持的原生git协议速度最快。</li>
 </ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> git@github.com:xuezhisd/learngit.git</div><div class="line">git <span class="built_in">clone</span> https://github.com/xuezhisd/learngit.git</div><div class="line"><span class="built_in">cd</span> learngit</div><div class="line">ls</div></pre></td></tr></table></figure>
 <h2 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h2><ul>
 <li>分支==平行宇宙</li>
 <li>通过创建自己的分支，既可以随时提交，又能避免丢失每天进度的风险。直到开发完成后，在一次性合并到原来的分支上。既安全，有不影响别人工作。</li>
@@ -516,57 +521,57 @@
 <li>Git用master指向最新的提交，再用HEAD指向master，就能确定当前分支，以及当前分支的提交点：<br><img src="http://img.blog.csdn.net/20160802110930107" alt="这里写图片描述"></li>
 <li>创建dev分支，并把HEAD指向dev：<br><img src="http://img.blog.csdn.net/20160802110957404" alt="这里写图片描述"></li>
 <li>dev上的工作完成了，就可以把dev合并到master上：<br><img src="http://img.blog.csdn.net/20160802111026992" alt="这里写图片描述"></li>
-<li><p>合并完分支后，可以删除dev分支。删除dev分支就是把dev指针给删掉：<br><img src="http://img.blog.csdn.net/20160802111056218" alt="这里写图片描述"></p>
+<li>合并完分支后，可以删除dev分支。删除dev分支就是把dev指针给删掉：<br><img src="http://img.blog.csdn.net/20160802111056218" alt="这里写图片描述"></li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 创建dev分支，然后切换到dev分支</span></div><div class="line"><span class="comment"># -b表示创建并切换分支</span></div><div class="line">git checkout -b dev</div><div class="line"><span class="comment"># 查看当前分支</span></div><div class="line">git branch</div><div class="line"><span class="comment"># 修改readme.txt</span></div><div class="line"><span class="comment"># 提交</span></div><div class="line">git add readme.txt</div><div class="line">git commit -m “branch <span class="built_in">test</span>”</div><div class="line"><span class="comment"># 切回master分支</span></div><div class="line">git checkout master</div><div class="line"><span class="comment"># 将dev分支的工作合并到master分支</span></div><div class="line"><span class="comment"># 注意：当前在master分支中</span></div><div class="line">git merge dev</div><div class="line"><span class="comment"># 删除dev分支</span></div><div class="line">git branch <span class="_">-d</span> dev</div><div class="line"><span class="comment"># 查看剩余分支</span></div><div class="line">git branch</div></pre></td></tr></table></figure>
-</li>
-<li><p>git merge命令用于合并指定分支到当前分支。</p>
-</li>
+<ul>
+<li>git merge命令用于合并指定分支到当前分支。</li>
 </ul>
 <h2 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h2><ul>
 <li>当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。</li>
-<li>用git log –graph命令可以看到分支合并图。<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 添加分支</span></div><div class="line">git checkout -b feature1</div><div class="line"><span class="comment">#readme.txt最后一行添加</span></div><div class="line"><span class="comment">#Creating a new branch is quick AND simple</span></div><div class="line"><span class="comment">#提交</span></div><div class="line">git add readme.txt</div><div class="line">git commit -m “AND simple”</div><div class="line"><span class="comment">#切回master</span></div><div class="line">git checkout master</div><div class="line"><span class="comment">#readme.txt最后一行添加</span></div><div class="line"><span class="comment">#Creating a new branch is quick &amp; simple.</span></div><div class="line">gti add readme.txt</div><div class="line">git commit -m “&amp; simple”</div><div class="line"><span class="comment"># 此时，master分支和feature1分支各自有了新的提交。此时，快速合并无法执行</span></div><div class="line"><span class="comment"># 尝试合并</span></div><div class="line">git merge feature1</div><div class="line">git status</div><div class="line"><span class="comment"># 查看冲突内容，修改为</span></div><div class="line"><span class="comment"># Creating a new branch is quick and simple.</span></div><div class="line"><span class="comment"># 重新提交</span></div><div class="line">git add readme.txt</div><div class="line">git commit -m “conflict fixed”</div><div class="line"><span class="comment"># 查看分支合并情况</span></div><div class="line">git <span class="built_in">log</span> --graph --pretty-oneline --abbrev-commit</div><div class="line"><span class="comment"># 删除feature1分支</span></div><div class="line">git branch <span class="_">-d</span> feature1</div></pre></td></tr></table></figure>
-</li>
+<li>用git log –graph命令可以看到分支合并图。</li>
 </ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 添加分支</span></div><div class="line">git checkout -b feature1</div><div class="line"><span class="comment">#readme.txt最后一行添加</span></div><div class="line"><span class="comment">#Creating a new branch is quick AND simple</span></div><div class="line"><span class="comment">#提交</span></div><div class="line">git add readme.txt</div><div class="line">git commit -m “AND simple”</div><div class="line"><span class="comment">#切回master</span></div><div class="line">git checkout master</div><div class="line"><span class="comment">#readme.txt最后一行添加</span></div><div class="line"><span class="comment">#Creating a new branch is quick &amp; simple.</span></div><div class="line">gti add readme.txt</div><div class="line">git commit -m “&amp; simple”</div><div class="line"><span class="comment"># 此时，master分支和feature1分支各自有了新的提交。此时，快速合并无法执行</span></div><div class="line"><span class="comment"># 尝试合并</span></div><div class="line">git merge feature1</div><div class="line">git status</div><div class="line"><span class="comment"># 查看冲突内容，修改为</span></div><div class="line"><span class="comment"># Creating a new branch is quick and simple.</span></div><div class="line"><span class="comment"># 重新提交</span></div><div class="line">git add readme.txt</div><div class="line">git commit -m “conflict fixed”</div><div class="line"><span class="comment"># 查看分支合并情况</span></div><div class="line">git <span class="built_in">log</span> --graph --pretty-oneline --abbrev-commit</div><div class="line"><span class="comment"># 删除feature1分支</span></div><div class="line">git branch <span class="_">-d</span> feature1</div></pre></td></tr></table></figure>
 <h2 id="分支管理策略"><a href="#分支管理策略" class="headerlink" title="分支管理策略"></a>分支管理策略</h2><ul>
 <li>分支管理的几个基本原则：<ul>
 <li>master分支应该是稳定的，仅用于发布新版本，不用来干活；</li>
 <li>平时大家都在dev分支上干活。发布新版本时，再合并到master分支上。</li>
 </ul>
 </li>
-<li><p>强制禁用Fast forward模式，Git就会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息。</p>
+<li>强制禁用Fast forward模式，Git就会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息。</li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 创建并切换dev分支</span></div><div class="line">git checkout -b dev</div><div class="line"><span class="comment"># 随便修改readme.txt文件</span></div><div class="line"><span class="comment"># 提交</span></div><div class="line">git add readme.txt</div><div class="line">git commit -m “add merge”</div><div class="line"><span class="comment"># 切回master分支</span></div><div class="line"><span class="comment"># 合并dev分支</span></div><div class="line"><span class="comment"># --no-ff参数：表示禁用Fast forward</span></div><div class="line">git merge --no-ff -m “merge with no-ff” dev</div><div class="line"><span class="comment"># 查看分支历史</span></div><div class="line">git <span class="built_in">log</span> --graph --pretty=oneline --abbrev-commit</div></pre></td></tr></table></figure>
-</li>
-<li><p>Git分支十分强大，在团队开发中应该充分应用。</p>
-</li>
+<ul>
+<li>Git分支十分强大，在团队开发中应该充分应用。</li>
 <li>合并分支时，加上–no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并。</li>
 </ul>
 <h2 id="Bug分支"><a href="#Bug分支" class="headerlink" title="Bug分支"></a>Bug分支</h2><ul>
 <li>鉴于Git的分支如此强大，每个bug都可以通过一个新的临时分支来修复，修复后，合并分支，然后将临时分支删除。</li>
 <li>先将正在工作现场“储藏”起来，等修复完Bug之后，再恢复现场，继续工作。</li>
-<li><p>git stash 把当前工作现场“储藏”起来，等以后恢复现场后继续工作。</p>
+<li>git stash 把当前工作现场“储藏”起来，等以后恢复现场后继续工作。</li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 保存工作现场</span></div><div class="line">git stash</div><div class="line"><span class="comment"># 查看工作区，就是干净的，可以放心创建分支修复Bug</span></div><div class="line"><span class="comment"># 假定需从master分支上修复，就从master创建临时分支</span></div><div class="line"><span class="comment"># 切回master分支</span></div><div class="line">git checkout master</div><div class="line"><span class="comment"># 创建并切到issue-101分支（Bug分支）</span></div><div class="line">git checkout -b issue-101</div><div class="line"><span class="comment"># 修改Bug</span></div><div class="line"><span class="comment"># 提交</span></div><div class="line">git add readme.txt</div><div class="line">git commit -m “fix bug 101”</div><div class="line"><span class="comment"># 切回master分支，合并</span></div><div class="line">git checkout master</div><div class="line">git merge --no-ff -m “merged bug fix 101” issue-101</div><div class="line"><span class="comment"># 删除Bug分支</span></div><div class="line">git branch <span class="_">-d</span> issue-101</div><div class="line"><span class="comment"># 切回dev分支</span></div><div class="line">git checkout dev</div><div class="line"><span class="comment"># 查看装填，此时是干净的</span></div><div class="line">git status</div><div class="line"><span class="comment"># 查看工作现场（此时工作现场存在）</span></div><div class="line">git stash list</div><div class="line"><span class="comment"># 恢复现场，并删除stash内容</span></div><div class="line">git stash pop</div><div class="line"><span class="comment"># 查看工作现场（此时无stash内容了）</span></div><div class="line">git stash list</div></pre></td></tr></table></figure>
-</li>
-<li><p>修复bug时，我们会通过创建新的bug分支进行修复，然后合并，最后删除；</p>
-</li>
+<ul>
+<li>修复bug时，我们会通过创建新的bug分支进行修复，然后合并，最后删除；</li>
 <li>当手头工作没有完成时，先把工作现场git stash一下，然后去修复bug，修复后，再git stash pop，回到工作现场。</li>
 </ul>
 <h2 id="Feature分支"><a href="#Feature分支" class="headerlink" title="Feature分支"></a>Feature分支</h2><ul>
-<li><p>每添加一个新功能，最好新建一个feature分支，在上面开发，完成后，合并，最后，删除该feature分支。</p>
+<li>每添加一个新功能，最好新建一个feature分支，在上面开发，完成后，合并，最后，删除该feature分支。</li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 为Vulan功能创建并切换分支</span></div><div class="line">git checkout -b feature-vulcan</div><div class="line"><span class="comment">#开发功能</span></div><div class="line"><span class="comment">#开发完毕，提交</span></div><div class="line">git add vulcan.py</div><div class="line">git status</div><div class="line">git commit -m “add feature vulcan”</div><div class="line"><span class="comment"># 切回dev分支</span></div><div class="line">git checkout dev</div><div class="line"><span class="comment">#因某些状况，新功能取消，就地销毁该分支</span></div><div class="line">git branch -D feature-vulcan</div></pre></td></tr></table></figure>
-</li>
-<li><p>开发一个新feature，最好新建一个分支；</p>
-</li>
+<ul>
+<li>开发一个新feature，最好新建一个分支；</li>
 <li>如果要丢弃一个没有被合并过的分支，可以通过git branch -D <name>强行删除。</name></li>
 </ul>
 <h2 id="多人协作"><a href="#多人协作" class="headerlink" title="多人协作"></a>多人协作</h2><ul>
 <li>从远程仓库克隆时，Git自动把本地的master分支和远程的master分支对应起来，并且，远程仓库的默认名称是origin。</li>
-<li><p><strong>推送分支</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 查看远程库信息</span></div><div class="line">git remote</div><div class="line"><span class="comment"># 查看更详细的远程库信息</span></div><div class="line">git remote -v</div><div class="line"><span class="comment"># 推送master分支到远程库master</span></div><div class="line">git push origin master</div><div class="line"><span class="comment"># 推送dev分支到远程库dev</span></div><div class="line">git push origin dev</div></pre></td></tr></table></figure>
-</li>
-<li><p><strong>抓取分支</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 克隆远程库</span></div><div class="line">git <span class="built_in">clone</span> git@github.com:xuezhisd/learngit.git</div><div class="line"><span class="comment"># 从远程库克隆时，默认只有master分支</span></div><div class="line"><span class="comment"># 查看分支</span></div><div class="line">git branch</div><div class="line"><span class="comment">#在dev分支上开发，就必须创建远程origin的dev分支到本地</span></div><div class="line">git checkout -b dev origin/dev</div><div class="line"><span class="comment"># 多人协作时，可能同时修改了dev分支中的同一文件，这时就会推送失败</span></div><div class="line"><span class="comment"># 此时需要先抓取分支</span></div><div class="line"><span class="comment"># 地dev分支与远程origin/dev分支的链接</span></div><div class="line">git branch --set-upstream dev origin/dev</div><div class="line">git pull</div><div class="line"><span class="comment"># 有冲突，需要手动解决，再push</span></div></pre></td></tr></table></figure>
-</li>
+<li><strong>推送分支</strong></li>
 </ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 查看远程库信息</span></div><div class="line">git remote</div><div class="line"><span class="comment"># 查看更详细的远程库信息</span></div><div class="line">git remote -v</div><div class="line"><span class="comment"># 推送master分支到远程库master</span></div><div class="line">git push origin master</div><div class="line"><span class="comment"># 推送dev分支到远程库dev</span></div><div class="line">git push origin dev</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>抓取分支</strong></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 克隆远程库</span></div><div class="line">git <span class="built_in">clone</span> git@github.com:xuezhisd/learngit.git</div><div class="line"><span class="comment"># 从远程库克隆时，默认只有master分支</span></div><div class="line"><span class="comment"># 查看分支</span></div><div class="line">git branch</div><div class="line"><span class="comment">#在dev分支上开发，就必须创建远程origin的dev分支到本地</span></div><div class="line">git checkout -b dev origin/dev</div><div class="line"><span class="comment"># 多人协作时，可能同时修改了dev分支中的同一文件，这时就会推送失败</span></div><div class="line"><span class="comment"># 此时需要先抓取分支</span></div><div class="line"><span class="comment"># 地dev分支与远程origin/dev分支的链接</span></div><div class="line">git branch --set-upstream dev origin/dev</div><div class="line">git pull</div><div class="line"><span class="comment"># 有冲突，需要手动解决，再push</span></div></pre></td></tr></table></figure>
 <h1 id="五、标签管理"><a href="#五、标签管理" class="headerlink" title="五、标签管理"></a>五、标签管理</h1><ul>
 <li>发布一个版本时，我们通常先在版本库中打一个标签（tag），这样，就唯一确定了打标签时刻的版本。标签也是版本库的一个快照。</li>
 <li>Git的标签虽然是版本库的快照，但其实它就是指向某个commit的指针（跟分支很像，但是分支可以移动，标签不能移动）。</li>
@@ -574,38 +579,42 @@
 <li>tag如下图所示：<br><img src="http://img.blog.csdn.net/20160802112427859" alt="这里写图片描述"></li>
 </ul>
 <h2 id="创建标签"><a href="#创建标签" class="headerlink" title="创建标签"></a>创建标签</h2><ul>
-<li><p>首先，切到需要打标签的分支上：</p>
+<li>首先，切到需要打标签的分支上：</li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 查看分支情况</span></div><div class="line">git branch</div><div class="line"><span class="comment"># 切换</span></div><div class="line">git checkout master</div></pre></td></tr></table></figure>
-</li>
-<li><p>然后，使用命令<code>git tag name</code>打标签：</p>
+<ul>
+<li>然后，使用命令<code>git tag name</code>打标签：</li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git tag v1.0</div></pre></td></tr></table></figure>
-</li>
-<li><p>查看所有的标签：</p>
+<ul>
+<li>查看所有的标签：</li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git tag</div></pre></td></tr></table></figure>
-</li>
-<li><p>默认标签是打在最新提交的commit上。如果想给历史commit打标签，需要先找到它的<code>commit id</code>，然后打标签：</p>
+<ul>
+<li>默认标签是打在最新提交的commit上。如果想给历史commit打标签，需要先找到它的<code>commit id</code>，然后打标签：</li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 查找标签</span></div><div class="line">git <span class="built_in">log</span> --pretty=oneline -abbrev-commit</div><div class="line"><span class="comment"># 为历史提交打标签</span></div><div class="line"><span class="comment"># 加入想打标签的commit id是6224937</span></div><div class="line">git tag v0.9 62249</div><div class="line"><span class="comment"># 查看所有标签</span></div><div class="line"><span class="comment"># 注：标签按字母顺序列出</span></div><div class="line">git tag</div><div class="line"><span class="comment"># 查看标签信息</span></div><div class="line">git show v0.9</div></pre></td></tr></table></figure>
-</li>
-<li><p>创建带注释的标签：</p>
+<ul>
+<li>创建带注释的标签：</li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 创建带注释的标签</span></div><div class="line">git tag <span class="_">-a</span> v0.1 -m <span class="string">"version 0.1 released"</span> 3628164</div><div class="line"><span class="comment"># 查看标签信息</span></div><div class="line">git show v0.1</div></pre></td></tr></table></figure>
-</li>
-<li><p>使用PGP私匙签名打标签：</p>
+<ul>
+<li>使用PGP私匙签名打标签：</li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -m 用私匙签名一个标签</span></div><div class="line">fec145a是commit id</div><div class="line">git tag <span class="_">-s</span> -m <span class="string">"signed version 0.2 released"</span> fec145a</div><div class="line"><span class="comment"># 查看PGP签名信息</span></div><div class="line">git show v0.2</div></pre></td></tr></table></figure>
-</li>
-</ul>
 <h2 id="操作标签"><a href="#操作标签" class="headerlink" title="操作标签"></a>操作标签</h2><ul>
-<li><p>标签打错了，删除标签：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git tag <span class="_">-d</span> v0.1</div></pre></td></tr></table></figure>
-</li>
-<li><p>创建的标签只存储在本地，不会自动推送到远程。</p>
-</li>
-<li><p>将某个标签推送到远程：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 推送v1.0标签</span></div><div class="line">git push origin v1.0</div><div class="line"><span class="comment"># 推送所有标签（为上传的）</span></div><div class="line">git push origin --tags</div></pre></td></tr></table></figure>
-</li>
-<li><p>删除远程标签</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 先删除本地标签</span></div><div class="line">git tag <span class="_">-d</span> v0.9</div><div class="line"><span class="comment"># 再从远程删除</span></div><div class="line">git push origin :refs/tags/v0.9</div></pre></td></tr></table></figure>
-</li>
+<li>标签打错了，删除标签：</li>
 </ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git tag <span class="_">-d</span> v0.1</div></pre></td></tr></table></figure>
+<ul>
+<li>创建的标签只存储在本地，不会自动推送到远程。</li>
+<li>将某个标签推送到远程：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 推送v1.0标签</span></div><div class="line">git push origin v1.0</div><div class="line"><span class="comment"># 推送所有标签（为上传的）</span></div><div class="line">git push origin --tags</div></pre></td></tr></table></figure>
+<ul>
+<li>删除远程标签</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 先删除本地标签</span></div><div class="line">git tag <span class="_">-d</span> v0.9</div><div class="line"><span class="comment"># 再从远程删除</span></div><div class="line">git push origin :refs/tags/v0.9</div></pre></td></tr></table></figure>
 <h1 id="六、参考"><a href="#六、参考" class="headerlink" title="六、参考"></a>六、参考</h1><ul>
 <li><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">Git教程——廖雪峰</a></li>
 </ul>
@@ -768,7 +777,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">96</span>
+              <span class="site-state-item-count">97</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

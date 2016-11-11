@@ -280,6 +280,165 @@
             
               
                 
+                <a class="post-title-link" href="/2015/09/22/Ubuntu Server 添加、删除和修改用户/" itemprop="url">
+                  Ubuntu Server 添加、删除和修改用户
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-09-22T14:21:00+08:00" content="2015-09-22">
+              2015-09-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Linux/经验/" itemprop="url" rel="index">
+                    <span itemprop="name">经验</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/09/22/Ubuntu Server 添加、删除和修改用户/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/22/Ubuntu Server 添加、删除和修改用户/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="添加用户"><a href="#添加用户" class="headerlink" title="添加用户"></a>添加用户</h2><ul>
+<li>添加用户的命令如下所示。添加一个用户名为sam的用户，主目录是/home/sam。<figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># -d 指定用户目录</span></div><div class="line"><span class="meta"># -m 创建用户目录（如果该目录不存在）</span></div><div class="line"><span class="meta"># useradd –d /home/sam -m sam</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="修改密码"><a href="#修改密码" class="headerlink" title="修改密码"></a>修改密码</h2><ul>
+<li><p>root用在终端中运行以下命令，为sam用户重新设置密码。</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">sudo passwd sam</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>设置root密码。root用户初始密码是随机的。按照下面的命令可以重新设置固定的root密码。</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">sudo passwd root</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h2><ul>
+<li>root用在终端中运行以下命令，将删除sam，但不删除其主目录。<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">sudo userdel sam</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="添加超级用户权限"><a href="#添加超级用户权限" class="headerlink" title="添加超级用户权限"></a>添加超级用户权限</h2><ul>
+<li><p>修改<code>/etc/sudoers</code>文件，将sam添加到超级用户列表中，可以将sam设置成超级用户。</p>
+<ul>
+<li><p>执行下面的命令，使用vi打开sudoers文件；</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi <span class="regexp">/etc/</span>sudoers</div></pre></td></tr></table></figure>
+</li>
+<li><p>在<code>root ALL=(ALL) ALL</code>后面添加新的一行<code>sam ALL=(ALL) ALL</code> ，保存并退出，添加超级用户权限完成。</p>
+</li>
+<li>sam具有了超级用户权限，就可以具有root所有权限。执行命令式，使用sudo开头，并输入sam的密码，即能使用root权限执行命令。</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2015/09/22/caffe安装系列——安装GCC4.7和G++4.7并降级/" itemprop="url">
                   caffe安装系列——安装GCC4.7和G++4.7并降级
                 </a>
@@ -645,153 +804,6 @@
             
               
                 
-                <a class="post-title-link" href="/2015/09/22/在VNC中Xfce4中Tab键失效的解决方法/" itemprop="url">
-                  在VNC中Xfce4中Tab键失效的解决方法
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-09-22T14:19:00+08:00" content="2015-09-22">
-              2015-09-22
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/09/22/在VNC中Xfce4中Tab键失效的解决方法/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/22/在VNC中Xfce4中Tab键失效的解决方法/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
-<li>在Ubuntu Server 14.04上安装了xfce4桌面环境，但是却发现<strong><em>在终端中Tab键不能自动补齐</em></strong>(但是<strong><em>Ctrl + I 仍然可以用</em></strong>)。</li>
-<li>出现这种情况的原因是，由于Tab键的功能被窗口快捷键占用，从而Tab键不起作用。即，快捷键冲突了。</li>
-<li>解决方法有两种，其实本质相同。不过就是，一种方法是<strong>在图形界面中更改</strong>，另一种方法是<strong>直接修改配置文件</strong>。</li>
-</ul>
-<h2 id="1-在命令行中修改配置文件的方法"><a href="#1-在命令行中修改配置文件的方法" class="headerlink" title="1. 在命令行中修改配置文件的方法"></a>1. 在命令行中修改配置文件的方法</h2><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#切换路径</span></div><div class="line">cd ~/.config<span class="meta-keyword">/xfce4/</span>xfconf<span class="meta-keyword">/xfce-perchannel-xml/</span></div><div class="line"><span class="meta">#修改文件（快捷键配置文件）</span></div><div class="line">vi xfce4-keyboard-shortcuts.xml</div></pre></td></tr></table></figure>
-<ul>
-<li><p>找到下面这一行</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="keyword">property</span> <span class="built_in">name</span>=<span class="string">"&amp;lt;Super&amp;gt;Tab"</span> type=<span class="string">"string"</span> value=<span class="string">"switch_window_key"</span>/&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>改为</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="keyword">property</span> <span class="built_in">name</span>=<span class="string">"&amp;lt;Super&amp;gt;Tab"</span> type=<span class="string">"empty"</span>/&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>如下图所示<br><img src="http://img.blog.csdn.net/20150922213350275" alt="这里写图片描述"></p>
-</li>
-<li><p>修改完配置文件，<strong><code>重启电脑</code></strong>，使配置文件生效。</p>
-</li>
-</ul>
-<h2 id="2-在图形窗口中修改的方法"><a href="#2-在图形窗口中修改的方法" class="headerlink" title="2. 在图形窗口中修改的方法"></a>2. 在图形窗口中修改的方法</h2><ul>
-<li><p>菜单栏 → 设置 → 窗口设置 。打开<strong>窗口设置</strong>对话框。</p>
-<p><img src="http://img.blog.csdn.net/20150922223218078" width="350" height="600" alt="图片名称" align="center"></p>
-</li>
-<li><p>在窗口管理器中选择快捷键选项卡（Key） →  Switch window for same<br>application </p>
-</li>
-<li>将其快捷键清空，关闭窗口管理器。</li>
-<li>这种方法的好处：不需要重启，即可以解决问题。</li>
-</ul>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p> <a href="http://blog.163.com/thinki_cao/blog/static/83944875201303081111436/" target="_blank" rel="external">《在VNC远程桌面环境Xfce4中Tab键失效的解决方法 》</a><br> <a href="http://ubuntuforums.org/archive/index.php/t-1771058.html" target="_blank" rel="external">http://ubuntuforums.org/archive/index.php/t-1771058.html</a><br><a href="https://answers.launchpad.net/ubuntu/+source/xfce4/+question/206191" target="_blank" rel="external">https://answers.launchpad.net/ubuntu/+source/xfce4/+question/206191</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2015/09/22/Linux shell判断文件和文件夹是否存在/" itemprop="url">
                   Linux shell判断文件和文件夹是否存在
                 </a>
@@ -930,8 +942,8 @@
             
               
                 
-                <a class="post-title-link" href="/2015/09/21/Putty使用设置/" itemprop="url">
-                  Putty使用设置
+                <a class="post-title-link" href="/2015/09/22/在VNC中Xfce4中Tab键失效的解决方法/" itemprop="url">
+                  在VNC中Xfce4中Tab键失效的解决方法
                 </a>
               
             
@@ -944,8 +956,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-09-21T14:23:00+08:00" content="2015-09-21">
-              2015-09-21
+            <time itemprop="dateCreated" datetime="2015-09-22T14:19:00+08:00" content="2015-09-22">
+              2015-09-22
             </time>
           </span>
 
@@ -965,18 +977,6 @@
 
                 
                 
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Linux/经验/" itemprop="url" rel="index">
-                    <span itemprop="name">经验</span>
-                  </a>
-                </span>
-
-                
-                
 
               
             </span>
@@ -986,8 +986,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/09/21/Putty使用设置/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/21/Putty使用设置/" itemprop="commentsCount"></span>
+                <a href="/2015/09/22/在VNC中Xfce4中Tab键失效的解决方法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/22/在VNC中Xfce4中Tab键失效的解决方法/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -1012,16 +1012,34 @@
       
         
           
-            <h2 id="Putty中文乱码问题"><a href="#Putty中文乱码问题" class="headerlink" title="Putty中文乱码问题"></a>Putty中文乱码问题</h2><ul>
-<li>使用Putty的时候，中文字符显示为乱码，如何解决。方法就是使用UTF-8传输协议。</li>
-<li>参考<a href="http://jingyan.baidu.com/article/3aed632e5f00ae701080913a.html" target="_blank" rel="external">《怎样解决putty终端乱码的方法》</a><br>##Putty配色问题</li>
-<li>Putty的文件夹显示为深蓝色，颜色太暗，看不清楚。可以设置为ANSI Blue。</li>
-<li>参考<a href="http://blog.sina.com.cn/s/blog_74a7e56e0101bzkk.html" target="_blank" rel="external">《Putty文件夹蓝色太暗问题》</a></li>
+            <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
+<li>在Ubuntu Server 14.04上安装了xfce4桌面环境，但是却发现<strong><em>在终端中Tab键不能自动补齐</em></strong>(但是<strong><em>Ctrl + I 仍然可以用</em></strong>)。</li>
+<li>出现这种情况的原因是，由于Tab键的功能被窗口快捷键占用，从而Tab键不起作用。即，快捷键冲突了。</li>
+<li>解决方法有两种，其实本质相同。不过就是，一种方法是<strong>在图形界面中更改</strong>，另一种方法是<strong>直接修改配置文件</strong>。</li>
 </ul>
-<h2 id="Putty字体"><a href="#Putty字体" class="headerlink" title="Putty字体"></a>Putty字体</h2><ul>
-<li>Putty的字体太小，看起来太费眼。可以将字体大小设置大一点。</li>
-<li>参考文章<a href="http://blog.csdn.net/wengyupeng/article/details/43671351" target="_blank" rel="external">《设置Putty 字体 颜色 全屏》</a></li>
+<h2 id="1-在命令行中修改配置文件的方法"><a href="#1-在命令行中修改配置文件的方法" class="headerlink" title="1. 在命令行中修改配置文件的方法"></a>1. 在命令行中修改配置文件的方法</h2><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#切换路径</span></div><div class="line">cd ~/.config<span class="meta-keyword">/xfce4/</span>xfconf<span class="meta-keyword">/xfce-perchannel-xml/</span></div><div class="line"><span class="meta">#修改文件（快捷键配置文件）</span></div><div class="line">vi xfce4-keyboard-shortcuts.xml</div></pre></td></tr></table></figure>
+<ul>
+<li><p>找到下面这一行</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="keyword">property</span> <span class="built_in">name</span>=<span class="string">"&amp;lt;Super&amp;gt;Tab"</span> type=<span class="string">"string"</span> value=<span class="string">"switch_window_key"</span>/&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>改为</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="keyword">property</span> <span class="built_in">name</span>=<span class="string">"&amp;lt;Super&amp;gt;Tab"</span> type=<span class="string">"empty"</span>/&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>如下图所示<br><img src="http://img.blog.csdn.net/20150922213350275" alt="这里写图片描述"></p>
+</li>
+<li><p>修改完配置文件，<strong><code>重启电脑</code></strong>，使配置文件生效。</p>
+</li>
 </ul>
+<h2 id="2-在图形窗口中修改的方法"><a href="#2-在图形窗口中修改的方法" class="headerlink" title="2. 在图形窗口中修改的方法"></a>2. 在图形窗口中修改的方法</h2><ul>
+<li><p>菜单栏 → 设置 → 窗口设置 。打开<strong>窗口设置</strong>对话框。</p>
+<p><img src="http://img.blog.csdn.net/20150922223218078" width="350" height="600" alt="图片名称" align="center"></p>
+</li>
+<li><p>在窗口管理器中选择快捷键选项卡（Key） →  Switch window for same<br>application </p>
+</li>
+<li>将其快捷键清空，关闭窗口管理器。</li>
+<li>这种方法的好处：不需要重启，即可以解决问题。</li>
+</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p> <a href="http://blog.163.com/thinki_cao/blog/static/83944875201303081111436/" target="_blank" rel="external">《在VNC远程桌面环境Xfce4中Tab键失效的解决方法 》</a><br> <a href="http://ubuntuforums.org/archive/index.php/t-1771058.html" target="_blank" rel="external">http://ubuntuforums.org/archive/index.php/t-1771058.html</a><br><a href="https://answers.launchpad.net/ubuntu/+source/xfce4/+question/206191" target="_blank" rel="external">https://answers.launchpad.net/ubuntu/+source/xfce4/+question/206191</a></p>
 
           
         
@@ -1095,7 +1113,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">96</span>
+              <span class="site-state-item-count">97</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

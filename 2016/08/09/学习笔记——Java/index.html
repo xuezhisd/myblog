@@ -60,21 +60,24 @@
 
 <meta name="description" content="Java基础语法
 第一个Java程序（HelloWorld.java）
-  12345public class HelloWorld &amp;#123; // 公开类     public static void main(String []args) &amp;#123; // 程序入口       System.out.println(&quot;Hello World&quot;);    // 标准输出    &amp;#125;">
+
+12345public class HelloWorld &amp;#123; // 公开类     public static void main(String []args) &amp;#123; // 程序入口       System.out.println(&quot;Hello World&quot;);    // 标准输出    &amp;#125;&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="学习笔记——Java">
 <meta property="og:url" content="http://zhangxuezhi.com/2016/08/09/学习笔记——Java/index.html">
 <meta property="og:site_name" content="学志の博客">
 <meta property="og:description" content="Java基础语法
 第一个Java程序（HelloWorld.java）
-  12345public class HelloWorld &amp;#123; // 公开类     public static void main(String []args) &amp;#123; // 程序入口       System.out.println(&quot;Hello World&quot;);    // 标准输出    &amp;#125;">
+
+12345public class HelloWorld &amp;#123; // 公开类     public static void main(String []args) &amp;#123; // 程序入口       System.out.println(&quot;Hello World&quot;);    // 标准输出    &amp;#125;&amp;">
 <meta property="og:image" content="http://img.blog.csdn.net/20160809133521483">
-<meta property="og:updated_time" content="2016-11-06T16:32:17.967Z">
+<meta property="og:updated_time" content="2016-11-11T13:15:38.748Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记——Java">
 <meta name="twitter:description" content="Java基础语法
 第一个Java程序（HelloWorld.java）
-  12345public class HelloWorld &amp;#123; // 公开类     public static void main(String []args) &amp;#123; // 程序入口       System.out.println(&quot;Hello World&quot;);    // 标准输出    &amp;#125;">
+
+12345public class HelloWorld &amp;#123; // 公开类     public static void main(String []args) &amp;#123; // 程序入口       System.out.println(&quot;Hello World&quot;);    // 标准输出    &amp;#125;&amp;">
 <meta name="twitter:image" content="http://img.blog.csdn.net/20160809133521483">
 
 
@@ -372,11 +375,12 @@
 
       
         <h2 id="Java基础语法"><a href="#Java基础语法" class="headerlink" title="Java基础语法"></a>Java基础语法</h2><ul>
-<li><p>第一个Java程序（HelloWorld.java）</p>
-  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>&#123; <span class="comment">// 公开类 </span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span> </span>&#123; <span class="comment">// 程序入口</span></div><div class="line">       System.out.println(<span class="string">"Hello World"</span>);    <span class="comment">// 标准输出</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>一个Java程序可以认为是一系列对象的集合，而这些对象通过调用彼此的方法来协同工作。</p>
-</li>
+<li>第一个Java程序（HelloWorld.java）</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>&#123; <span class="comment">// 公开类 </span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span> </span>&#123; <span class="comment">// 程序入口</span></div><div class="line">       System.out.println(<span class="string">"Hello World"</span>);    <span class="comment">// 标准输出</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<ul>
+<li>一个Java程序可以认为是一系列对象的集合，而这些对象通过调用彼此的方法来协同工作。</li>
 <li>类、对象、方法和实例<ul>
 <li>类：类是一个模板，它描述一类对象的行为和状态。</li>
 <li>对象：对象是类的一个实例，有状态和行为。</li>
@@ -667,8 +671,10 @@
 </ul>
 </li>
 <li><p>举例：定义类</p>
-  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Dog</span></span>&#123; <span class="comment">// Dog类（模板）</span></div><div class="line">   String breed;  <span class="comment">// 实例变量（属性）</span></div><div class="line">   <span class="keyword">int</span> age;</div><div class="line">   String color;</div><div class="line">   <span class="function"><span class="keyword">void</span> <span class="title">barking</span><span class="params">()</span></span>&#123;<span class="comment">// 方法</span></div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Dog</span></span>&#123; <span class="comment">// Dog类（模板）</span></div><div class="line">   String breed;  <span class="comment">// 实例变量（属性）</span></div><div class="line">   <span class="keyword">int</span> age;</div><div class="line">   String color;</div><div class="line">   <span class="function"><span class="keyword">void</span> <span class="title">barking</span><span class="params">()</span></span>&#123;<span class="comment">// 方法</span></div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
 <li><p>类变量：</p>
 <ul>
 <li><strong>局部变量</strong>：<strong>在方法、构造方法或者语句块中</strong>定义的变量被称为局部变量。变量声明和初始化都是在方法中，方法结束后，变量就会自动销毁。</li>
@@ -696,10 +702,12 @@
 </li>
 <li><p>访问实例的<strong>变量和方法</strong></p>
 <ul>
-<li>运算符：<strong>.</strong><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 实例化对象 */</span></div><div class="line">ObjectReference = new Constructor()<span class="comment">;</span></div><div class="line"><span class="comment">/* 访问其中的变量 */</span></div><div class="line">ObjectReference.variableName<span class="comment">;</span></div><div class="line"><span class="comment">/* 访问类中的方法 */</span></div><div class="line">ObjectReference.MethodName()<span class="comment">;</span></div></pre></td></tr></table></figure>
-</li>
+<li>运算符：<strong>.</strong></li>
 </ul>
 </li>
+</ul>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 实例化对象 */</span></div><div class="line">ObjectReference = new Constructor()<span class="comment">;</span></div><div class="line"><span class="comment">/* 访问其中的变量 */</span></div><div class="line">ObjectReference.variableName<span class="comment">;</span></div><div class="line"><span class="comment">/* 访问类中的方法 */</span></div><div class="line">ObjectReference.MethodName()<span class="comment">;</span></div></pre></td></tr></table></figure>
+<ul>
 <li><p>源文件声明规则</p>
 <ul>
 <li>一个源文件中只能有一个public类</li>
@@ -907,30 +915,34 @@
 <li>for（主要用于数组）</li>
 </ul>
 </li>
-<li><p>while</p>
-<ul>
-<li>最基本循环<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">while</span><span class="params">( 布尔表达式 )</span></span> &#123;</div><div class="line">	<span class="comment">//循环内容</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
+<li>while<ul>
+<li>最基本循环</li>
 </ul>
 </li>
-<li><p>do…while</p>
+</ul>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">while</span><span class="params">( 布尔表达式 )</span></span> &#123;</div><div class="line">    <span class="comment">//循环内容</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <ul>
-<li>至少执行一次<figure class="highlight gcode"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">do</span> &#123;</div><div class="line">       <span class="comment">//代码语句</span></div><div class="line">&#125;<span class="keyword">while</span><span class="comment">(布尔表达式)</span>;</div></pre></td></tr></table></figure>
-</li>
+<li>do…while<ul>
+<li>至少执行一次</li>
 </ul>
 </li>
-<li><p>for</p>
+</ul>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">do</span> &#123;</div><div class="line">       <span class="comment">//代码语句</span></div><div class="line">&#125;<span class="keyword">while</span><span class="comment">(布尔表达式)</span>;</div></pre></td></tr></table></figure>
 <ul>
-<li>for循环执行的次数是在执行前就确定的<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">for</span><span class="params">(初始化; 布尔表达式; 更新)</span></span> &#123;</div><div class="line">    <span class="comment">//代码语句</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
+<li>for<ul>
+<li>for循环执行的次数是在执行前就确定的</li>
 </ul>
 </li>
-<li><p>增强for循环</p>
+</ul>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">for</span><span class="params">(初始化; 布尔表达式; 更新)</span></span> &#123;</div><div class="line">    <span class="comment">//代码语句</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <ul>
-<li>主要用于数组<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">for</span><span class="params">(声明语句 : 表达式)</span></span></div><div class="line">&#123;</div><div class="line">   <span class="comment">//代码句子</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
+<li>增强for循环<ul>
+<li>主要用于数组</li>
 </ul>
 </li>
+</ul>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">for</span><span class="params">(声明语句 : 表达式)</span></span></div><div class="line">&#123;</div><div class="line">   <span class="comment">//代码句子</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
 <li><p>break</p>
 <ul>
 <li>跳出一层循环和switch语句块</li>
@@ -950,81 +962,81 @@
 </ul>
 </li>
 <li><p>if</p>
-  <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">if</span><span class="params">(布尔表达式)</span></span></div><div class="line">&#123;</div><div class="line">   <span class="comment">//如果布尔表达式为true将执行的语句</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
-<li><p>if…else…</p>
-  <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(布尔表达式)&#123;</div><div class="line">   <span class="regexp">//</span>如果布尔表达式的值为<span class="literal">true</span></div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">   <span class="regexp">//</span>如果布尔表达式的值为<span class="literal">false</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>if…else if…else</p>
-  <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(布尔表达式 <span class="number">1</span>)&#123;</div><div class="line">   <span class="regexp">//</span>如果布尔表达式 <span class="number">1</span>的值为<span class="literal">true</span>执行代码</div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(布尔表达式 <span class="number">2</span>)&#123;</div><div class="line">   <span class="regexp">//</span>如果布尔表达式 <span class="number">2</span>的值为<span class="literal">true</span>执行代码</div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(布尔表达式 <span class="number">3</span>)&#123;</div><div class="line">   <span class="regexp">//</span>如果布尔表达式 <span class="number">3</span>的值为<span class="literal">true</span>执行代码</div><div class="line">&#125;<span class="keyword">else</span> &#123;</div><div class="line">   <span class="regexp">//</span>如果以上布尔表达式都不为<span class="literal">true</span>执行代码</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>嵌套的if…else</p>
-  <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(布尔表达式 <span class="number">1</span>)&#123;</div><div class="line">   <span class="regexp">//</span><span class="regexp">//</span>如果布尔表达式 <span class="number">1</span>的值为<span class="literal">true</span>执行代码</div><div class="line">   <span class="keyword">if</span>(布尔表达式 <span class="number">2</span>)&#123;</div><div class="line">      <span class="regexp">//</span><span class="regexp">//</span>如果布尔表达式 <span class="number">2</span>的值为<span class="literal">true</span>执行代码</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>switch</p>
+</ul>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">if</span><span class="params">(布尔表达式)</span></span></div><div class="line">&#123;</div><div class="line">   <span class="comment">//如果布尔表达式为true将执行的语句</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <ul>
+<li>if…else…</li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(布尔表达式)&#123;</div><div class="line">   <span class="regexp">//</span>如果布尔表达式的值为<span class="literal">true</span></div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">   <span class="regexp">//</span>如果布尔表达式的值为<span class="literal">false</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>if…else if…else</li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(布尔表达式 <span class="number">1</span>)&#123;</div><div class="line">   <span class="regexp">//</span>如果布尔表达式 <span class="number">1</span>的值为<span class="literal">true</span>执行代码</div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(布尔表达式 <span class="number">2</span>)&#123;</div><div class="line">   <span class="regexp">//</span>如果布尔表达式 <span class="number">2</span>的值为<span class="literal">true</span>执行代码</div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(布尔表达式 <span class="number">3</span>)&#123;</div><div class="line">   <span class="regexp">//</span>如果布尔表达式 <span class="number">3</span>的值为<span class="literal">true</span>执行代码</div><div class="line">&#125;<span class="keyword">else</span> &#123;</div><div class="line">   <span class="regexp">//</span>如果以上布尔表达式都不为<span class="literal">true</span>执行代码</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>嵌套的if…else</li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(布尔表达式 <span class="number">1</span>)&#123;</div><div class="line">   <span class="regexp">//</span><span class="regexp">//</span>如果布尔表达式 <span class="number">1</span>的值为<span class="literal">true</span>执行代码</div><div class="line">   <span class="keyword">if</span>(布尔表达式 <span class="number">2</span>)&#123;</div><div class="line">      <span class="regexp">//</span><span class="regexp">//</span>如果布尔表达式 <span class="number">2</span>的值为<span class="literal">true</span>执行代码</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>switch<ul>
 <li>判断一个变量与一系列值中某个值是否相等，每个值称为一个分支。</li>
-<li><p>switch语句中的变量类型只能为byte、short、int或者char。</p>
+<li>switch语句中的变量类型只能为byte、short、int或者char。</li>
+</ul>
+</li>
+</ul>
 <figure class="highlight ceylon"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">switch</span>(expression)&#123;</div><div class="line">    <span class="keyword">case</span> <span class="keyword">value</span> :</div><div class="line">       <span class="comment">//语句</span></div><div class="line">       <span class="keyword">break</span>; <span class="comment">//可选</span></div><div class="line">    <span class="keyword">case</span> <span class="keyword">value</span> :</div><div class="line">       <span class="comment">//语句</span></div><div class="line">       <span class="keyword">break</span>; <span class="comment">//可选</span></div><div class="line">    <span class="comment">//你可以有任意数量的case语句</span></div><div class="line">    <span class="keyword">default</span> : <span class="comment">//可选</span></div><div class="line">       <span class="comment">//语句</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
 <h2 id="Number类"><a href="#Number类" class="headerlink" title="Number类"></a>Number类</h2><ul>
 <li>Java语言为每一个内置数据类型提供了对应的包装类。</li>
 <li>所有的包装类（Integer、Long、Byte、Double、Float、Short）都是抽象类Number的子类。</li>
 <li>由编译器特别支持的包装称为<strong>装箱</strong>，所以当内置数据类型被当作对象使用的时候，编译器会把内置类型装箱为<strong>包装类</strong>。相似的，编译器也可以把一个对象<strong>拆箱</strong>为内置类型。Number类属于java.lang包。</li>
-<li><p>区分：内置数据类型和对象？</p>
-  <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">Integer x</span> = 5;</div></pre></td></tr></table></figure>
-</li>
+<li>区分：内置数据类型和对象？</li>
 </ul>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">Integer x</span> = 5;</div></pre></td></tr></table></figure>
 <h2 id="Character类"><a href="#Character类" class="headerlink" title="Character类"></a>Character类</h2><ul>
 <li>用于对单个字符进行操作。</li>
 <li>Character 类在对象中包装一个基本类型 char 的值。</li>
 <li>需要使用对象，而不是内置数据类型的情况。</li>
 <li>注意:String类是不可改变的，所以你一旦创建了String对象，那它的值就无法改变了。 如果需要对字符串做很多修改，那么应该选择使用StringBuffer &amp; StringBuilder 类。</li>
-<li><p>用于获取有关对象的信息的方法称为访问器方法。</p>
-  <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">Character ch</span> = <span class="string">'a'</span>;</div></pre></td></tr></table></figure>
-</li>
+<li>用于获取有关对象的信息的方法称为访问器方法。</li>
 </ul>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">Character ch</span> = <span class="string">'a'</span>;</div></pre></td></tr></table></figure>
 <h2 id="String类"><a href="#String类" class="headerlink" title="String类"></a>String类</h2><ul>
 <li>在Java中，String属于对象。</li>
 <li>创建字符串：<code>String greeting = &quot;Hello world!&quot;;</code></li>
-<li><p>方法：</p>
-<ul>
+<li>方法：<ul>
 <li>字符串长度：str.length()</li>
 <li>连接字符串：str.concat()、str1+str2</li>
-<li><p>创建格式化字符串</p>
-<ul>
+<li>创建格式化字符串<ul>
 <li>printf()</li>
 <li>format()</li>
 <li>String类的静态方法format()能用来创建可复用的格式化字符串，而不仅仅是用于一次打印输出。</li>
 </ul>
+</li>
+</ul>
+</li>
+</ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">System.out.printf(<span class="string">"浮点型变量的的值为 "</span> +</div><div class="line">                  <span class="string">"%f, 整型变量的值为 "</span> +</div><div class="line">                  <span class="string">" %d, 字符串变量的值为 "</span> +</div><div class="line">                  <span class="string">"is %s"</span>, floatVar, intVar, stringVar);</div><div class="line"><span class="comment">// or</span></div><div class="line">String fs;</div><div class="line">fs = String.format(<span class="string">"浮点型变量的的值为 "</span> +</div><div class="line">                   <span class="string">"%f, 整型变量的值为 "</span> +</div><div class="line">                   <span class="string">" %d, 字符串变量的值为 "</span> +</div><div class="line">                   <span class="string">" %s"</span>, floatVar, intVar, stringVar);</div><div class="line">System.out.println(fs);</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
 <h2 id="StringBuffer和StringBuilder"><a href="#StringBuffer和StringBuilder" class="headerlink" title="StringBuffer和StringBuilder"></a>StringBuffer和StringBuilder</h2><ul>
 <li>当对字符串进行修改的时候，需要使用StringBuffer和StringBuilder类。</li>
 <li>StringBuilder的方法不是线程安全的（不能同步访问），这一点和StringBuffer不同。</li>
-<li><p>StringBuilder有速度优势，一般使用它。当程序要求线程安全时，必须使用StringBuffer。</p>
-  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</div><div class="line">       StringBuffer sBuffer = <span class="keyword">new</span> StringBuffer(<span class="string">" test"</span>);</div><div class="line">       sBuffer.append(<span class="string">" String Buffer"</span>);</div><div class="line">       System.out.println(sBuffer);  </div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
+<li>StringBuilder有速度优势，一般使用它。当程序要求线程安全时，必须使用StringBuffer。</li>
 </ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</div><div class="line">       StringBuffer sBuffer = <span class="keyword">new</span> StringBuffer(<span class="string">" test"</span>);</div><div class="line">       sBuffer.append(<span class="string">" String Buffer"</span>);</div><div class="line">       System.out.println(sBuffer);  </div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="Java数组"><a href="#Java数组" class="headerlink" title="Java数组"></a>Java数组</h2><ul>
 <li>Java数组是用来存储固定大小的同类型元素。</li>
-<li><p>声明数组变量：</p>
-  <figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">dataType</span><span class="selector-attr">[]</span> <span class="selector-tag">arrayRefVar</span>;   <span class="comment">// 首选的方法</span></div><div class="line"><span class="comment">//或</span></div><div class="line"><span class="selector-tag">dataType</span> <span class="selector-tag">arrayRefVar</span><span class="selector-attr">[]</span>;  <span class="comment">// 效果相同，但不是首选方法</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>创建数组（new）</p>
-  <figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">arrayRefVar = <span class="keyword">new</span> <span class="type">dataType</span>[arraySize];</div><div class="line"><span class="comment">// 1. 使用dataType[arraySize]创建了一个数组。</span></div><div class="line"><span class="comment">// 2. 把新创建的数组的引用赋值给变量 arrayRefVar。</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>创建数组和声明数组变量</p>
-  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">dataType[] arrayRefVar = <span class="keyword">new</span> dataType[arraySize];</div><div class="line">dataType[] arrayRefVar = &#123;value0, value1, ..., valuek&#125;;</div></pre></td></tr></table></figure>
-</li>
-<li><p>处理数组</p>
+<li>声明数组变量：</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">dataType</span><span class="selector-attr">[]</span> <span class="selector-tag">arrayRefVar</span>;   <span class="comment">// 首选的方法</span></div><div class="line"><span class="comment">//或</span></div><div class="line"><span class="selector-tag">dataType</span> <span class="selector-tag">arrayRefVar</span><span class="selector-attr">[]</span>;  <span class="comment">// 效果相同，但不是首选方法</span></div></pre></td></tr></table></figure>
 <ul>
+<li>创建数组（new）</li>
+</ul>
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">arrayRefVar = <span class="keyword">new</span> <span class="type">dataType</span>[arraySize];</div><div class="line"><span class="comment">// 1. 使用dataType[arraySize]创建了一个数组。</span></div><div class="line"><span class="comment">// 2. 把新创建的数组的引用赋值给变量 arrayRefVar。</span></div></pre></td></tr></table></figure>
+<ul>
+<li>创建数组和声明数组变量</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">dataType[] arrayRefVar = <span class="keyword">new</span> dataType[arraySize];</div><div class="line">dataType[] arrayRefVar = &#123;value0, value1, ..., valuek&#125;;</div></pre></td></tr></table></figure>
+<ul>
+<li>处理数组<ul>
 <li>数组元素类型和大小都是确定的，通常使用基本循环或foreach循环。</li>
 <li>foreach循环或者加强型循环，它能在不使用下标的情况下遍历数组。</li>
 <li>数组可以作为参数传递给方法。</li>
@@ -1067,11 +1079,11 @@
 <li>println()：方法</li>
 </ul>
 </li>
-<li><p>方法的定义：</p>
-  <figure class="highlight lasso"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">修饰符 返回值类型 方法名 (参数类型 参数名)&#123;</div><div class="line">    <span class="params">...</span></div><div class="line">    方法体</div><div class="line">    <span class="params">...</span></div><div class="line">    <span class="keyword">return</span> 返回值;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>方法调用：</p>
+<li>方法的定义：</li>
+</ul>
+<figure class="highlight lasso"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">修饰符 返回值类型 方法名 (参数类型 参数名)&#123;</div><div class="line">    <span class="params">...</span></div><div class="line">    方法体</div><div class="line">    <span class="params">...</span></div><div class="line">    <span class="keyword">return</span> 返回值;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <ul>
+<li>方法调用：<ul>
 <li>根据是否返回值，分为2种：<ul>
 <li>方法返回一个值的时候，方法调用通常被当做一个值。</li>
 <li>如果方法返回值是void，方法调用一定是一条语句。</li>
@@ -1084,11 +1096,11 @@
 <li>Java.io包几乎包含了所有操作输入、输出需要的类。所有这些流类代表了输入源和输出目标。</li>
 <li>Java.io包中的流支持很多种格式。</li>
 <li>一个流可以理解为一个数据的序列。</li>
-<li><p>读取控制台输入</p>
-  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">BufferedReader br = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> </div><div class="line">                      InputStreamReader(System.in));</div><div class="line"><span class="comment">//从控制台读取单字符</span></div><div class="line"><span class="keyword">char</span> c = br.read();</div><div class="line"><span class="comment">//从控制台读取字符串</span></div><div class="line">String str = br.readLine();</div></pre></td></tr></table></figure>
-</li>
-<li><p>控制台输出</p>
+<li>读取控制台输入</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">BufferedReader br = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> </div><div class="line">                      InputStreamReader(System.in));</div><div class="line"><span class="comment">//从控制台读取单字符</span></div><div class="line"><span class="keyword">char</span> c = br.read();</div><div class="line"><span class="comment">//从控制台读取字符串</span></div><div class="line">String str = br.readLine();</div></pre></td></tr></table></figure>
 <ul>
+<li>控制台输出<ul>
 <li>控制台的输出由 print( ) 和println( )完成。这些方法都由类PrintStream 定义，System.out是该类对象的一个引用。</li>
 <li>PrintStream 继承了OutputStream类，并且实现了方法write()。这样，write()也可以用来往控制台写操作。</li>
 </ul>
@@ -1256,7 +1268,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">96</span>
+              <span class="site-state-item-count">97</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

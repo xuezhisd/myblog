@@ -74,7 +74,7 @@
 虚拟机：VMware Workstation或VirtualBox  注：VMware Workstation的功能更强大，但是软件体积也比较大；而且在Ubuntu中我没有安装成功。VirtualBox软件体积小，更加">
 <meta property="og:image" content="http://img.blog.csdn.net/20160731101242857">
 <meta property="og:image" content="http://img.blog.csdn.net/20160731095102565">
-<meta property="og:updated_time" content="2016-11-06T16:31:39.023Z">
+<meta property="og:updated_time" content="2016-11-11T13:25:24.043Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何安装Hadoop 2.6.0完全分布式？">
 <meta name="twitter:description" content="本教程是关于如何在Ubuntu中搭建完全分布式Hadoop2.6.*环境的完整教程。
@@ -387,13 +387,16 @@
 <li>JDK：Java 1.8</li>
 <li>集群节点：2个（master, slave1）</li>
 </ul>
+<a id="more"></a>
 <h2 id="二、安装虚拟机"><a href="#二、安装虚拟机" class="headerlink" title="二、安装虚拟机"></a>二、安装虚拟机</h2><ul>
 <li>此处考虑到跨平台的因素，选择使用VirtualBox</li>
 <li>存在两种安装方式，下载deb包和添加路径，使用apt-get命令安装。</li>
 <li>请点击下面的链接自行安装<br>参考：<br><a href="http://jingyan.baidu.com/article/870c6fc3092aedb03fe4be28.html" target="_blank" rel="external">Ubuntu15.04系统安装Virtualbox虚拟机</a></li>
 </ul>
 <h2 id="三、准备工作"><a href="#三、准备工作" class="headerlink" title="三、准备工作"></a>三、准备工作</h2><h3 id="安装Java"><a href="#安装Java" class="headerlink" title="安装Java"></a>安装Java</h3><h4 id="下载JDK"><a href="#下载JDK" class="headerlink" title="下载JDK"></a>下载JDK</h4><ul>
-<li>JDK下载地址：<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="external">官网下载地址，点此下载</a><h4 id="安装JDK"><a href="#安装JDK" class="headerlink" title="安装JDK"></a>安装JDK</h4></li>
+<li>JDK下载地址：<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="external">官网下载地址，点此下载</a></li>
+</ul>
+<h4 id="安装JDK"><a href="#安装JDK" class="headerlink" title="安装JDK"></a>安装JDK</h4><ul>
 <li>安装方法很简单，简单的说就2步：<ul>
 <li>第一步：解压，并复制文件到指定路径。如<code>/usr/local/jdk</code></li>
 <li>第二部：添加路径，修改配置文件。如修改<code>/etc/profile</code>或<code>~/.bashrc</code>。</li>
@@ -426,13 +429,15 @@
 <li><p>网络连接方式图如下所示。<br><img src="http://img.blog.csdn.net/20160731095102565" alt="这里写图片描述"></p>
 </li>
 <li><p>第一台虚拟机的<code>/etc/network/interfaces</code>文件内容如下所示：</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">auto eth0</div><div class="line"><span class="comment">#iface eth0 inet dhcp</span></div><div class="line">iface eth0 inet static</div><div class="line">address 192.168.36.100</div><div class="line">gateway 192.168.36.254</div><div class="line">netmask 255.255.255.0</div><div class="line">iface eth0 inet6 auto</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">auto eth0</div><div class="line"><span class="comment">#iface eth0 inet dhcp</span></div><div class="line">iface eth0 inet static</div><div class="line">address 192.168.36.100</div><div class="line">gateway 192.168.36.254</div><div class="line">netmask 255.255.255.0</div><div class="line">iface eth0 inet6 auto</div></pre></td></tr></table></figure>
 </li>
-<li><p>第二台虚拟机的<code>/etc/network/interfaces</code>文件内容如下所示：</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">auto eth0</div><div class="line"><span class="comment">#iface eth0 inet dhcp</span></div><div class="line">iface eth0 inet static</div><div class="line">address 192.168.36.101</div><div class="line">gateway 192.168.36.254</div><div class="line">netmask 255.255.255.0</div><div class="line">iface eth0 inet6 auto</div></pre></td></tr></table></figure>
+</ul>
+<ul>
+<li>第二台虚拟机的<code>/etc/network/interfaces</code>文件内容如下所示：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">auto eth0</div><div class="line"><span class="comment">#iface eth0 inet dhcp</span></div><div class="line">iface eth0 inet static</div><div class="line">address 192.168.36.101</div><div class="line">gateway 192.168.36.254</div><div class="line">netmask 255.255.255.0</div><div class="line">iface eth0 inet6 auto</div></pre></td></tr></table></figure>
 </li>
-<li><p>注意：因为我们学校有IPv6网络，因此也配置了<code>inet6</code>，如果没有的话可以忽略这一项。</p>
-</li>
+</ul>
+<ul>
+<li>注意：因为我们学校有IPv6网络，因此也配置了<code>inet6</code>，如果没有的话可以忽略这一项。</li>
 </ul>
 <h3 id="修改hostname"><a href="#修改hostname" class="headerlink" title="修改hostname"></a>修改hostname</h3><ul>
 <li>Hadoop集群中的各个节点通过主机名互相通信，同时为了好区分主节点和数据节点。此处需要重新设置主机名。</li>
@@ -729,7 +734,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">96</span>
+              <span class="site-state-item-count">97</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

@@ -280,6 +280,165 @@
             
               
                 
+                <a class="post-title-link" href="/2016/04/01/PCL系列——三维重构之移动立方体算法/" itemprop="url">
+                  PCL系列——三维重构之移动立方体算法
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-01T13:24:00+08:00" content="2016-04-01">
+              2016-04-01
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/图像处理/" itemprop="url" rel="index">
+                    <span itemprop="name">图像处理</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/图像处理/PCL/" itemprop="url" rel="index">
+                    <span itemprop="name">PCL</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/01/PCL系列——三维重构之移动立方体算法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/01/PCL系列——三维重构之移动立方体算法/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="PCL系列"><a href="#PCL系列" class="headerlink" title="PCL系列"></a>PCL系列</h2><ul>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51012300" target="_blank" rel="external">PCL系列——读入PCD格式文件操作</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51012463" target="_blank" rel="external">PCL系列——将点云数据写入PCD格式文件</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51014388" target="_blank" rel="external">PCL系列——拼接两个点云</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51018872" target="_blank" rel="external">PCL系列——从深度图像(RangeImage)中提取NARF关键点</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51019461" target="_blank" rel="external">PCL系列——如何可视化深度图像</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51023251" target="_blank" rel="external">PCL系列——如何使用迭代最近点法（ICP）配准</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51030943" target="_blank" rel="external">PCL系列——如何逐渐地配准一对点云</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51034189" target="_blank" rel="external">PCL系列——三维重构之泊松重构</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51034272" target="_blank" rel="external">PCL系列——三维重构之贪婪三角投影算法</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51034359" target="_blank" rel="external">PCL系列——三维重构之移动立方体算法</a></li>
+</ul>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>通过本教程，我们将会学会：</p>
+<ul>
+<li>如果通过移动立方体算法进行三维点云重构。</li>
+<li>程序支持两种文件格式：<code>*.pcd</code>和<code>*.ply</code>。</li>
+<li>程序先读取点云文件；然后计算法向量，并将法向量和点云坐标放在一起；接着使用移动立方体算法进行重构，最后显示结果。</li>
+</ul>
+<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><ul>
+<li>在VS2010 中新建一个文件 <code>recon_marchingCubes.cpp</code>，然后将下面的代码复制到文件中。</li>
+<li>参照之前的文章，配置项目的属性。设置包含目录和库目录和附加依赖项。</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/point_types.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/io/pcd_io.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/io/ply_io.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/kdtree/kdtree_flann.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/features/normal_3d.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/surface/marching_cubes_hoppe.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/surface/marching_cubes_rbf.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/surface/gp3.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/visualization/pcl_visualizer.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;boost/thread/thread.hpp&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fstream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span></span></div><div class="line">&#123;</div><div class="line">	<span class="comment">// 确定文件格式</span></div><div class="line">	<span class="keyword">char</span> tmpStr[<span class="number">100</span>];</div><div class="line">	<span class="built_in">strcpy</span>(tmpStr,argv[<span class="number">1</span>]);</div><div class="line">	<span class="keyword">char</span>* pext = <span class="built_in">strrchr</span>(tmpStr, <span class="string">'.'</span>);</div><div class="line">	<span class="built_in">std</span>::<span class="function"><span class="built_in">string</span> <span class="title">extply</span><span class="params">(<span class="string">"ply"</span>)</span></span>;</div><div class="line">	<span class="built_in">std</span>::<span class="function"><span class="built_in">string</span> <span class="title">extpcd</span><span class="params">(<span class="string">"pcd"</span>)</span></span>;</div><div class="line">	<span class="keyword">if</span>(pext)&#123;</div><div class="line">		*pext=<span class="string">'\0'</span>;</div><div class="line">		pext++;</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">std</span>::<span class="function"><span class="built_in">string</span> <span class="title">ext</span><span class="params">(pext)</span></span>;</div><div class="line">	<span class="comment">//如果不支持文件格式，退出程序</span></div><div class="line">	<span class="keyword">if</span> (!((ext == extply)||(ext == extpcd)))&#123;</div><div class="line">		<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"文件格式不支持!"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line">		<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"支持文件格式：*.pcd和*.ply！"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line">		<span class="keyword">return</span>(<span class="number">-1</span>);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">//根据文件格式选择输入方式</span></div><div class="line">  pcl::PointCloud&lt;pcl::PointXYZ&gt;::<span class="function">Ptr <span class="title">cloud</span><span class="params">(<span class="keyword">new</span> pcl::PointCloud&lt;pcl::PointXYZ&gt;)</span> </span>; <span class="comment">//创建点云对象指针，用于存储输入</span></div><div class="line">	<span class="keyword">if</span> (ext == extply)&#123;</div><div class="line">		<span class="keyword">if</span> (pcl::io::loadPLYFile(argv[<span class="number">1</span>] , *cloud) == <span class="number">-1</span>)&#123;</div><div class="line">			PCL_ERROR(<span class="string">"Could not read ply file!\n"</span>) ;</div><div class="line">			<span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">else</span>&#123;</div><div class="line">		<span class="keyword">if</span> (pcl::io::loadPCDFile(argv[<span class="number">1</span>] , *cloud) == <span class="number">-1</span>)&#123;</div><div class="line">			PCL_ERROR(<span class="string">"Could not read pcd file!\n"</span>) ;</div><div class="line">			<span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">  <span class="comment">// 估计法向量</span></div><div class="line">  pcl::NormalEstimation&lt;pcl::PointXYZ, pcl::Normal&gt; n;</div><div class="line">  pcl::PointCloud&lt;pcl::Normal&gt;::<span class="function">Ptr <span class="title">normals</span> <span class="params">(<span class="keyword">new</span> pcl::PointCloud&lt;pcl::Normal&gt;)</span></span>;</div><div class="line">  pcl::search::KdTree&lt;pcl::PointXYZ&gt;::<span class="function">Ptr <span class="title">tree</span> <span class="params">(<span class="keyword">new</span> pcl::search::KdTree&lt;pcl::PointXYZ&gt;)</span></span>;</div><div class="line">  tree-&gt;setInputCloud(cloud);</div><div class="line">  n.setInputCloud(cloud);</div><div class="line">  n.setSearchMethod(tree);</div><div class="line">  n.setKSearch(<span class="number">20</span>);</div><div class="line">  n.compute (*normals); <span class="comment">//计算法线，结果存储在normals中</span></div><div class="line">  <span class="comment">//* normals 不能同时包含点的法向量和表面的曲率</span></div><div class="line"></div><div class="line">  <span class="comment">//将点云和法线放到一起</span></div><div class="line">  pcl::PointCloud&lt;pcl::PointNormal&gt;::<span class="function">Ptr <span class="title">cloud_with_normals</span> <span class="params">(<span class="keyword">new</span> pcl::PointCloud&lt;pcl::PointNormal&gt;)</span></span>;</div><div class="line">  pcl::concatenateFields (*cloud, *normals, *cloud_with_normals);</div><div class="line">  <span class="comment">//* cloud_with_normals = cloud + normals</span></div><div class="line"></div><div class="line"></div><div class="line">  <span class="comment">//创建搜索树</span></div><div class="line">  pcl::search::KdTree&lt;pcl::PointNormal&gt;::<span class="function">Ptr <span class="title">tree2</span> <span class="params">(<span class="keyword">new</span> pcl::search::KdTree&lt;pcl::PointNormal&gt;)</span></span>;</div><div class="line">  tree2-&gt;setInputCloud (cloud_with_normals);</div><div class="line"></div><div class="line">  <span class="comment">//初始化MarchingCubes对象，并设置参数</span></div><div class="line">	pcl::MarchingCubes&lt;pcl::PointNormal&gt; *mc;</div><div class="line">	mc = <span class="keyword">new</span> pcl::MarchingCubesHoppe&lt;pcl::PointNormal&gt; ();</div><div class="line">	<span class="comment">/*</span></div><div class="line">  if (hoppe_or_rbf == 0)</div><div class="line">    mc = new pcl::MarchingCubesHoppe&lt;pcl::PointNormal&gt; ();</div><div class="line">  else</div><div class="line">  &#123;</div><div class="line">    mc = new pcl::MarchingCubesRBF&lt;pcl::PointNormal&gt; ();</div><div class="line">    (reinterpret_cast&lt;pcl::MarchingCubesRBF&lt;pcl::PointNormal&gt;*&gt; (mc))-&gt;setOffSurfaceDisplacement (off_surface_displacement);</div><div class="line">  &#125;</div><div class="line">	*/</div><div class="line"></div><div class="line">	<span class="comment">//创建多变形网格，用于存储结果</span></div><div class="line">  pcl::PolygonMesh mesh;</div><div class="line"></div><div class="line">  <span class="comment">//设置MarchingCubes对象的参数</span></div><div class="line">  mc-&gt;setIsoLevel (<span class="number">0.0f</span>);</div><div class="line">  mc-&gt;setGridResolution (<span class="number">50</span>, <span class="number">50</span>, <span class="number">50</span>);</div><div class="line">  mc-&gt;setPercentageExtendGrid (<span class="number">0.0f</span>);</div><div class="line"></div><div class="line">  <span class="comment">//设置搜索方法</span></div><div class="line">  mc-&gt;setInputCloud (cloud_with_normals);</div><div class="line"></div><div class="line">	<span class="comment">//执行重构，结果保存在mesh中</span></div><div class="line">	mc-&gt;reconstruct (mesh);</div><div class="line">	</div><div class="line">	<span class="comment">//保存网格图</span></div><div class="line">	pcl::io::savePLYFile(<span class="string">"result.ply"</span>, mesh);</div><div class="line"></div><div class="line">	<span class="comment">// 显示结果图</span></div><div class="line">  boost::<span class="built_in">shared_ptr</span>&lt;pcl::visualization::PCLVisualizer&gt; viewer (<span class="keyword">new</span> pcl::visualization::PCLVisualizer (<span class="string">"3D Viewer"</span>));</div><div class="line">  viewer-&gt;setBackgroundColor (<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>); <span class="comment">//设置背景</span></div><div class="line">  viewer-&gt;addPolygonMesh(mesh,<span class="string">"my"</span>); <span class="comment">//设置显示的网格</span></div><div class="line">  viewer-&gt;addCoordinateSystem (<span class="number">1.0</span>); <span class="comment">//设置坐标系</span></div><div class="line">  viewer-&gt;initCameraParameters ();</div><div class="line">  <span class="keyword">while</span> (!viewer-&gt;wasStopped ())&#123;</div><div class="line">    viewer-&gt;spinOnce (<span class="number">100</span>);</div><div class="line">    boost::this_thread::sleep (boost::posix_time::microseconds (<span class="number">100000</span>));</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> (<span class="number">0</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>重新生成项目。</li>
+<li>到改项目的Debug目录下，按住Shift，同时点击鼠标右键，在当前窗口打开CMD窗口。</li>
+<li>在命令行中输入<code>recon_marchingCubes.exe bunny.points.ply</code>，执行程序。得到如下图所示的结果。<br><img src="http://img.blog.csdn.net/20160401095126535" alt="移动立方体算法的结果"></li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/04/01/PCL系列——三维重构之贪婪三角投影算法/" itemprop="url">
                   PCL系列——三维重构之贪婪三角投影算法
                 </a>
@@ -389,165 +548,6 @@
 <li>重新生成项目。</li>
 <li>到改项目的Debug目录下，按住Shift，同时点击鼠标右键，在当前窗口打开CMD窗口。</li>
 <li>在命令行中输入<code>recon_greedyProjection.exe bunny.points.ply</code>，执行程序。得到如下图所示的结果。<br><img src="http://img.blog.csdn.net/20160401094420876" alt="这里写图片描述"></li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/01/PCL系列——三维重构之泊松重构/" itemprop="url">
-                  PCL系列——三维重构之泊松重构
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-01T13:24:00+08:00" content="2016-04-01">
-              2016-04-01
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/图像处理/" itemprop="url" rel="index">
-                    <span itemprop="name">图像处理</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/图像处理/PCL/" itemprop="url" rel="index">
-                    <span itemprop="name">PCL</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/01/PCL系列——三维重构之泊松重构/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/01/PCL系列——三维重构之泊松重构/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="PCL系列"><a href="#PCL系列" class="headerlink" title="PCL系列"></a>PCL系列</h2><ul>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51012300" target="_blank" rel="external">PCL系列——读入PCD格式文件操作</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51012463" target="_blank" rel="external">PCL系列——将点云数据写入PCD格式文件</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51014388" target="_blank" rel="external">PCL系列——拼接两个点云</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51018872" target="_blank" rel="external">PCL系列——从深度图像(RangeImage)中提取NARF关键点</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51019461" target="_blank" rel="external">PCL系列——如何可视化深度图像</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51023251" target="_blank" rel="external">PCL系列——如何使用迭代最近点法（ICP）配准</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51030943" target="_blank" rel="external">PCL系列——如何逐渐地配准一对点云</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51034189" target="_blank" rel="external">PCL系列——三维重构之泊松重构</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51034272" target="_blank" rel="external">PCL系列——三维重构之贪婪三角投影算法</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51034359" target="_blank" rel="external">PCL系列——三维重构之移动立方体算法</a></li>
-</ul>
-<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>通过本教程，我们将会学会：</p>
-<ul>
-<li>如果通过泊松算法进行三维点云重构。</li>
-<li>程序支持两种文件格式：<code>*.pcd</code>和<code>*.ply</code></li>
-<li>程序先读取点云文件，然后计算法向量，接着使用泊松算法进行重构，最后显示结果。</li>
-</ul>
-<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><ul>
-<li>在VS2010 中新建一个文件 <code>recon_poisson.cpp</code>，然后将下面的代码复制到文件中。</li>
-<li>参照之前的文章，配置项目的属性。设置包含目录和库目录和附加依赖项。</li>
-</ul>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">//点的类型的头文件</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/point_types.h&gt;</span></span></div><div class="line"><span class="comment">//点云文件IO（pcd文件和ply文件）</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/io/pcd_io.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/io/ply_io.h&gt;</span></span></div><div class="line"><span class="comment">//kd树</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/kdtree/kdtree_flann.h&gt;</span></span></div><div class="line"><span class="comment">//特征提取</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/features/normal_3d_omp.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/features/normal_3d.h&gt;</span></span></div><div class="line"><span class="comment">//重构</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/surface/gp3.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/surface/poisson.h&gt;</span></span></div><div class="line"><span class="comment">//可视化</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/visualization/pcl_visualizer.h&gt;</span></span></div><div class="line"><span class="comment">//多线程</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;boost/thread/thread.hpp&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fstream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span></span></div><div class="line">&#123;</div><div class="line">	<span class="comment">// 确定文件格式</span></div><div class="line">	<span class="keyword">char</span> tmpStr[<span class="number">100</span>];</div><div class="line">	<span class="built_in">strcpy</span>(tmpStr,argv[<span class="number">1</span>]);</div><div class="line">	<span class="keyword">char</span>* pext = <span class="built_in">strrchr</span>(tmpStr, <span class="string">'.'</span>);</div><div class="line">	<span class="built_in">std</span>::<span class="function"><span class="built_in">string</span> <span class="title">extply</span><span class="params">(<span class="string">"ply"</span>)</span></span>;</div><div class="line">	<span class="built_in">std</span>::<span class="function"><span class="built_in">string</span> <span class="title">extpcd</span><span class="params">(<span class="string">"pcd"</span>)</span></span>;</div><div class="line">	<span class="keyword">if</span>(pext)&#123;</div><div class="line">		*pext=<span class="string">'\0'</span>;</div><div class="line">		pext++;</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">std</span>::<span class="function"><span class="built_in">string</span> <span class="title">ext</span><span class="params">(pext)</span></span>;</div><div class="line">	<span class="comment">//如果不支持文件格式，退出程序</span></div><div class="line">	<span class="keyword">if</span> (!((ext == extply)||(ext == extpcd)))&#123;</div><div class="line">		<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"文件格式不支持!"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line">		<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"支持文件格式：*.pcd和*.ply！"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line">		<span class="keyword">return</span>(<span class="number">-1</span>);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">//根据文件格式选择输入方式</span></div><div class="line">  pcl::PointCloud&lt;pcl::PointXYZ&gt;::<span class="function">Ptr <span class="title">cloud</span><span class="params">(<span class="keyword">new</span> pcl::PointCloud&lt;pcl::PointXYZ&gt;)</span> </span>; <span class="comment">//创建点云对象指针，用于存储输入</span></div><div class="line">	<span class="keyword">if</span> (ext == extply)&#123;</div><div class="line">		<span class="keyword">if</span> (pcl::io::loadPLYFile(argv[<span class="number">1</span>] , *cloud) == <span class="number">-1</span>)&#123;</div><div class="line">			PCL_ERROR(<span class="string">"Could not read ply file!\n"</span>) ;</div><div class="line">			<span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">else</span>&#123;</div><div class="line">		<span class="keyword">if</span> (pcl::io::loadPCDFile(argv[<span class="number">1</span>] , *cloud) == <span class="number">-1</span>)&#123;</div><div class="line">			PCL_ERROR(<span class="string">"Could not read pcd file!\n"</span>) ;</div><div class="line">			<span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">// 计算法向量</span></div><div class="line">  pcl::PointCloud&lt;pcl::PointNormal&gt;::<span class="function">Ptr <span class="title">cloud_with_normals</span><span class="params">(<span class="keyword">new</span> pcl::PointCloud&lt;pcl::PointNormal&gt;)</span></span>; <span class="comment">//法向量点云对象指针</span></div><div class="line">  pcl::NormalEstimation&lt;pcl::PointXYZ , pcl::Normal&gt; n ;<span class="comment">//法线估计对象</span></div><div class="line">  pcl::PointCloud&lt;pcl::Normal&gt;::<span class="function">Ptr <span class="title">normals</span><span class="params">(<span class="keyword">new</span> pcl::PointCloud&lt;pcl::Normal&gt;)</span> </span>;<span class="comment">//存储估计的法线的指针</span></div><div class="line">  pcl::search::KdTree&lt;pcl::PointXYZ&gt;::<span class="function">Ptr <span class="title">tree</span><span class="params">(<span class="keyword">new</span> pcl::search::KdTree&lt;pcl::PointXYZ&gt;)</span> </span>;</div><div class="line">  tree-&gt;setInputCloud(cloud) ;</div><div class="line">  n.setInputCloud(cloud) ;</div><div class="line">  n.setSearchMethod(tree) ;</div><div class="line">  n.setKSearch(<span class="number">20</span>);</div><div class="line">	n.compute(*normals); <span class="comment">//计算法线，结果存储在normals中</span></div><div class="line"></div><div class="line">	<span class="comment">//将点云和法线放到一起</span></div><div class="line">  pcl::concatenateFields(*cloud , *normals , *cloud_with_normals) ;</div><div class="line"></div><div class="line">	<span class="comment">//创建搜索树</span></div><div class="line">  pcl::search::KdTree&lt;pcl::PointNormal&gt;::<span class="function">Ptr <span class="title">tree2</span><span class="params">(<span class="keyword">new</span> pcl::search::KdTree&lt;pcl::PointNormal&gt;)</span> </span>;</div><div class="line">  tree2-&gt;setInputCloud(cloud_with_normals) ;</div><div class="line">	<span class="comment">//创建Poisson对象，并设置参数</span></div><div class="line">  pcl::Poisson&lt;pcl::PointNormal&gt; pn ;</div><div class="line">	pn.setConfidence(<span class="literal">false</span>); <span class="comment">//是否使用法向量的大小作为置信信息。如果false，所有法向量均归一化。</span></div><div class="line">	pn.setDegree(<span class="number">2</span>); <span class="comment">//设置参数degree[1,5],值越大越精细，耗时越久。</span></div><div class="line">	pn.setDepth(<span class="number">8</span>); <span class="comment">//树的最大深度，求解2^d x 2^d x 2^d立方体元。由于八叉树自适应采样密度，指定值仅为最大深度。</span></div><div class="line">	pn.setIsoDivide(<span class="number">8</span>); <span class="comment">//用于提取ISO等值面的算法的深度</span></div><div class="line">	pn.setManifold(<span class="literal">false</span>); <span class="comment">//是否添加多边形的重心，当多边形三角化时。 设置流行标志，如果设置为true，则对多边形进行细分三角话时添加重心，设置false则不添加</span></div><div class="line">	pn.setOutputPolygons(<span class="literal">false</span>); <span class="comment">//是否输出多边形网格（而不是三角化移动立方体的结果）</span></div><div class="line">	pn.setSamplesPerNode(<span class="number">3.0</span>); <span class="comment">//设置落入一个八叉树结点中的样本点的最小数量。无噪声，[1.0-5.0],有噪声[15.-20.]平滑</span></div><div class="line">	pn.setScale(<span class="number">1.25</span>); <span class="comment">//设置用于重构的立方体直径和样本边界立方体直径的比率。</span></div><div class="line">	pn.setSolverDivide(<span class="number">8</span>); <span class="comment">//设置求解线性方程组的Gauss-Seidel迭代方法的深度</span></div><div class="line">	<span class="comment">//pn.setIndices();</span></div><div class="line"></div><div class="line">	<span class="comment">//设置搜索方法和输入点云</span></div><div class="line">	pn.setSearchMethod(tree2);</div><div class="line">	pn.setInputCloud(cloud_with_normals);</div><div class="line">	<span class="comment">//创建多变形网格，用于存储结果</span></div><div class="line">	pcl::PolygonMesh mesh ;</div><div class="line">	<span class="comment">//执行重构</span></div><div class="line">	pn.performReconstruction(mesh);</div><div class="line"></div><div class="line">	<span class="comment">//保存网格图</span></div><div class="line">	pcl::io::savePLYFile(<span class="string">"result.ply"</span>, mesh);</div><div class="line"></div><div class="line">	<span class="comment">// 显示结果图</span></div><div class="line">	boost::<span class="built_in">shared_ptr</span>&lt;pcl::visualization::PCLVisualizer&gt; viewer(<span class="keyword">new</span> pcl::visualization::PCLVisualizer(<span class="string">"3D viewer"</span>)) ;</div><div class="line">	viewer-&gt;setBackgroundColor(<span class="number">0</span> , <span class="number">0</span> , <span class="number">0</span>) ;</div><div class="line">	viewer-&gt;addPolygonMesh(mesh , <span class="string">"my"</span>) ;</div><div class="line">	viewer-&gt;addCoordinateSystem (<span class="number">50.0</span>);</div><div class="line">	viewer-&gt;initCameraParameters() ;</div><div class="line">	<span class="keyword">while</span> (!viewer-&gt;wasStopped())&#123;</div><div class="line">		viewer-&gt;spinOnce(<span class="number">100</span>) ;</div><div class="line">		boost::this_thread::sleep(boost::posix_time::microseconds(<span class="number">100000</span>)) ;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li>重新生成项目。</li>
-<li>到改项目的Debug目录下，按住Shift，同时点击鼠标右键，在当前窗口打开CMD窗口。</li>
-<li>在命令行中输入<code>recon_poisson.exe bunny.points.ply</code>，执行程序。得到如下图所示的结果。<br><img src="http://img.blog.csdn.net/20160401093428810" alt="泊松重构结果图"></li>
 </ul>
 
           
@@ -760,6 +760,165 @@
             
               
                 
+                <a class="post-title-link" href="/2016/04/01/PCL系列——三维重构之泊松重构/" itemprop="url">
+                  PCL系列——三维重构之泊松重构
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-01T13:24:00+08:00" content="2016-04-01">
+              2016-04-01
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/图像处理/" itemprop="url" rel="index">
+                    <span itemprop="name">图像处理</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/图像处理/PCL/" itemprop="url" rel="index">
+                    <span itemprop="name">PCL</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/01/PCL系列——三维重构之泊松重构/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/01/PCL系列——三维重构之泊松重构/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="PCL系列"><a href="#PCL系列" class="headerlink" title="PCL系列"></a>PCL系列</h2><ul>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51012300" target="_blank" rel="external">PCL系列——读入PCD格式文件操作</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51012463" target="_blank" rel="external">PCL系列——将点云数据写入PCD格式文件</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51014388" target="_blank" rel="external">PCL系列——拼接两个点云</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51018872" target="_blank" rel="external">PCL系列——从深度图像(RangeImage)中提取NARF关键点</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51019461" target="_blank" rel="external">PCL系列——如何可视化深度图像</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51023251" target="_blank" rel="external">PCL系列——如何使用迭代最近点法（ICP）配准</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51030943" target="_blank" rel="external">PCL系列——如何逐渐地配准一对点云</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51034189" target="_blank" rel="external">PCL系列——三维重构之泊松重构</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51034272" target="_blank" rel="external">PCL系列——三维重构之贪婪三角投影算法</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51034359" target="_blank" rel="external">PCL系列——三维重构之移动立方体算法</a></li>
+</ul>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>通过本教程，我们将会学会：</p>
+<ul>
+<li>如果通过泊松算法进行三维点云重构。</li>
+<li>程序支持两种文件格式：<code>*.pcd</code>和<code>*.ply</code></li>
+<li>程序先读取点云文件，然后计算法向量，接着使用泊松算法进行重构，最后显示结果。</li>
+</ul>
+<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><ul>
+<li>在VS2010 中新建一个文件 <code>recon_poisson.cpp</code>，然后将下面的代码复制到文件中。</li>
+<li>参照之前的文章，配置项目的属性。设置包含目录和库目录和附加依赖项。</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">//点的类型的头文件</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/point_types.h&gt;</span></span></div><div class="line"><span class="comment">//点云文件IO（pcd文件和ply文件）</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/io/pcd_io.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/io/ply_io.h&gt;</span></span></div><div class="line"><span class="comment">//kd树</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/kdtree/kdtree_flann.h&gt;</span></span></div><div class="line"><span class="comment">//特征提取</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/features/normal_3d_omp.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/features/normal_3d.h&gt;</span></span></div><div class="line"><span class="comment">//重构</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/surface/gp3.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/surface/poisson.h&gt;</span></span></div><div class="line"><span class="comment">//可视化</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/visualization/pcl_visualizer.h&gt;</span></span></div><div class="line"><span class="comment">//多线程</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;boost/thread/thread.hpp&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fstream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span></span></div><div class="line">&#123;</div><div class="line">	<span class="comment">// 确定文件格式</span></div><div class="line">	<span class="keyword">char</span> tmpStr[<span class="number">100</span>];</div><div class="line">	<span class="built_in">strcpy</span>(tmpStr,argv[<span class="number">1</span>]);</div><div class="line">	<span class="keyword">char</span>* pext = <span class="built_in">strrchr</span>(tmpStr, <span class="string">'.'</span>);</div><div class="line">	<span class="built_in">std</span>::<span class="function"><span class="built_in">string</span> <span class="title">extply</span><span class="params">(<span class="string">"ply"</span>)</span></span>;</div><div class="line">	<span class="built_in">std</span>::<span class="function"><span class="built_in">string</span> <span class="title">extpcd</span><span class="params">(<span class="string">"pcd"</span>)</span></span>;</div><div class="line">	<span class="keyword">if</span>(pext)&#123;</div><div class="line">		*pext=<span class="string">'\0'</span>;</div><div class="line">		pext++;</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">std</span>::<span class="function"><span class="built_in">string</span> <span class="title">ext</span><span class="params">(pext)</span></span>;</div><div class="line">	<span class="comment">//如果不支持文件格式，退出程序</span></div><div class="line">	<span class="keyword">if</span> (!((ext == extply)||(ext == extpcd)))&#123;</div><div class="line">		<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"文件格式不支持!"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line">		<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"支持文件格式：*.pcd和*.ply！"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line">		<span class="keyword">return</span>(<span class="number">-1</span>);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">//根据文件格式选择输入方式</span></div><div class="line">  pcl::PointCloud&lt;pcl::PointXYZ&gt;::<span class="function">Ptr <span class="title">cloud</span><span class="params">(<span class="keyword">new</span> pcl::PointCloud&lt;pcl::PointXYZ&gt;)</span> </span>; <span class="comment">//创建点云对象指针，用于存储输入</span></div><div class="line">	<span class="keyword">if</span> (ext == extply)&#123;</div><div class="line">		<span class="keyword">if</span> (pcl::io::loadPLYFile(argv[<span class="number">1</span>] , *cloud) == <span class="number">-1</span>)&#123;</div><div class="line">			PCL_ERROR(<span class="string">"Could not read ply file!\n"</span>) ;</div><div class="line">			<span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">else</span>&#123;</div><div class="line">		<span class="keyword">if</span> (pcl::io::loadPCDFile(argv[<span class="number">1</span>] , *cloud) == <span class="number">-1</span>)&#123;</div><div class="line">			PCL_ERROR(<span class="string">"Could not read pcd file!\n"</span>) ;</div><div class="line">			<span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">// 计算法向量</span></div><div class="line">  pcl::PointCloud&lt;pcl::PointNormal&gt;::<span class="function">Ptr <span class="title">cloud_with_normals</span><span class="params">(<span class="keyword">new</span> pcl::PointCloud&lt;pcl::PointNormal&gt;)</span></span>; <span class="comment">//法向量点云对象指针</span></div><div class="line">  pcl::NormalEstimation&lt;pcl::PointXYZ , pcl::Normal&gt; n ;<span class="comment">//法线估计对象</span></div><div class="line">  pcl::PointCloud&lt;pcl::Normal&gt;::<span class="function">Ptr <span class="title">normals</span><span class="params">(<span class="keyword">new</span> pcl::PointCloud&lt;pcl::Normal&gt;)</span> </span>;<span class="comment">//存储估计的法线的指针</span></div><div class="line">  pcl::search::KdTree&lt;pcl::PointXYZ&gt;::<span class="function">Ptr <span class="title">tree</span><span class="params">(<span class="keyword">new</span> pcl::search::KdTree&lt;pcl::PointXYZ&gt;)</span> </span>;</div><div class="line">  tree-&gt;setInputCloud(cloud) ;</div><div class="line">  n.setInputCloud(cloud) ;</div><div class="line">  n.setSearchMethod(tree) ;</div><div class="line">  n.setKSearch(<span class="number">20</span>);</div><div class="line">	n.compute(*normals); <span class="comment">//计算法线，结果存储在normals中</span></div><div class="line"></div><div class="line">	<span class="comment">//将点云和法线放到一起</span></div><div class="line">  pcl::concatenateFields(*cloud , *normals , *cloud_with_normals) ;</div><div class="line"></div><div class="line">	<span class="comment">//创建搜索树</span></div><div class="line">  pcl::search::KdTree&lt;pcl::PointNormal&gt;::<span class="function">Ptr <span class="title">tree2</span><span class="params">(<span class="keyword">new</span> pcl::search::KdTree&lt;pcl::PointNormal&gt;)</span> </span>;</div><div class="line">  tree2-&gt;setInputCloud(cloud_with_normals) ;</div><div class="line">	<span class="comment">//创建Poisson对象，并设置参数</span></div><div class="line">  pcl::Poisson&lt;pcl::PointNormal&gt; pn ;</div><div class="line">	pn.setConfidence(<span class="literal">false</span>); <span class="comment">//是否使用法向量的大小作为置信信息。如果false，所有法向量均归一化。</span></div><div class="line">	pn.setDegree(<span class="number">2</span>); <span class="comment">//设置参数degree[1,5],值越大越精细，耗时越久。</span></div><div class="line">	pn.setDepth(<span class="number">8</span>); <span class="comment">//树的最大深度，求解2^d x 2^d x 2^d立方体元。由于八叉树自适应采样密度，指定值仅为最大深度。</span></div><div class="line">	pn.setIsoDivide(<span class="number">8</span>); <span class="comment">//用于提取ISO等值面的算法的深度</span></div><div class="line">	pn.setManifold(<span class="literal">false</span>); <span class="comment">//是否添加多边形的重心，当多边形三角化时。 设置流行标志，如果设置为true，则对多边形进行细分三角话时添加重心，设置false则不添加</span></div><div class="line">	pn.setOutputPolygons(<span class="literal">false</span>); <span class="comment">//是否输出多边形网格（而不是三角化移动立方体的结果）</span></div><div class="line">	pn.setSamplesPerNode(<span class="number">3.0</span>); <span class="comment">//设置落入一个八叉树结点中的样本点的最小数量。无噪声，[1.0-5.0],有噪声[15.-20.]平滑</span></div><div class="line">	pn.setScale(<span class="number">1.25</span>); <span class="comment">//设置用于重构的立方体直径和样本边界立方体直径的比率。</span></div><div class="line">	pn.setSolverDivide(<span class="number">8</span>); <span class="comment">//设置求解线性方程组的Gauss-Seidel迭代方法的深度</span></div><div class="line">	<span class="comment">//pn.setIndices();</span></div><div class="line"></div><div class="line">	<span class="comment">//设置搜索方法和输入点云</span></div><div class="line">	pn.setSearchMethod(tree2);</div><div class="line">	pn.setInputCloud(cloud_with_normals);</div><div class="line">	<span class="comment">//创建多变形网格，用于存储结果</span></div><div class="line">	pcl::PolygonMesh mesh ;</div><div class="line">	<span class="comment">//执行重构</span></div><div class="line">	pn.performReconstruction(mesh);</div><div class="line"></div><div class="line">	<span class="comment">//保存网格图</span></div><div class="line">	pcl::io::savePLYFile(<span class="string">"result.ply"</span>, mesh);</div><div class="line"></div><div class="line">	<span class="comment">// 显示结果图</span></div><div class="line">	boost::<span class="built_in">shared_ptr</span>&lt;pcl::visualization::PCLVisualizer&gt; viewer(<span class="keyword">new</span> pcl::visualization::PCLVisualizer(<span class="string">"3D viewer"</span>)) ;</div><div class="line">	viewer-&gt;setBackgroundColor(<span class="number">0</span> , <span class="number">0</span> , <span class="number">0</span>) ;</div><div class="line">	viewer-&gt;addPolygonMesh(mesh , <span class="string">"my"</span>) ;</div><div class="line">	viewer-&gt;addCoordinateSystem (<span class="number">50.0</span>);</div><div class="line">	viewer-&gt;initCameraParameters() ;</div><div class="line">	<span class="keyword">while</span> (!viewer-&gt;wasStopped())&#123;</div><div class="line">		viewer-&gt;spinOnce(<span class="number">100</span>) ;</div><div class="line">		boost::this_thread::sleep(boost::posix_time::microseconds(<span class="number">100000</span>)) ;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>重新生成项目。</li>
+<li>到改项目的Debug目录下，按住Shift，同时点击鼠标右键，在当前窗口打开CMD窗口。</li>
+<li>在命令行中输入<code>recon_poisson.exe bunny.points.ply</code>，执行程序。得到如下图所示的结果。<br><img src="http://img.blog.csdn.net/20160401093428810" alt="泊松重构结果图"></li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/03/31/PCL系列——如何使用迭代最近点法（ICP）配准/" itemprop="url">
                   PCL系列——如何使用迭代最近点法（ICP）配准
                 </a>
@@ -903,158 +1062,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/03/30/PCL系列——将点云数据写入PCD格式文件/" itemprop="url">
-                  PCL系列——将点云数据写入PCD格式文件
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-30T13:30:00+08:00" content="2016-03-30">
-              2016-03-30
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/图像处理/" itemprop="url" rel="index">
-                    <span itemprop="name">图像处理</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/图像处理/PCL/" itemprop="url" rel="index">
-                    <span itemprop="name">PCL</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/03/30/PCL系列——将点云数据写入PCD格式文件/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/30/PCL系列——将点云数据写入PCD格式文件/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="PCL系列"><a href="#PCL系列" class="headerlink" title="PCL系列"></a>PCL系列</h2><ul>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51012300" target="_blank" rel="external">PCL系列——读入PCD格式文件操作</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51012463" target="_blank" rel="external">PCL系列——将点云数据写入PCD格式文件</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51014388" target="_blank" rel="external">PCL系列——拼接两个点云</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51018872" target="_blank" rel="external">PCL系列——从深度图像(RangeImage)中提取NARF关键点</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51019461" target="_blank" rel="external">PCL系列——如何可视化深度图像</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51023251" target="_blank" rel="external">PCL系列——如何使用迭代最近点法（ICP）配准</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51030943" target="_blank" rel="external">PCL系列——如何逐渐地配准一对点云</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51034189" target="_blank" rel="external">PCL系列——三维重构之泊松重构</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51034272" target="_blank" rel="external">PCL系列——三维重构之贪婪三角投影算法</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/51034359" target="_blank" rel="external">PCL系列——三维重构之移动立方体算法</a></li>
-</ul>
-<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><ul>
-<li>在VS2010 中新建一个文件pcd_write.cpp，然后将下面的代码复制到文件中。</li>
-<li>参照之前的文章，配置项目的属性。设置包含目录和库目录和附加依赖项。</li>
-</ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span> <span class="comment">//标准输入输出流</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/io/pcd_io.h&gt;</span> <span class="comment">//PCL的PCD格式文件的输入输出头文件</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/point_types.h&gt;</span> <span class="comment">//PCL对各种格式的点的支持头文件</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span>  <span class="title">main</span> <span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span></span></div><div class="line">&#123;</div><div class="line">  pcl::PointCloud&lt;pcl::PointXYZ&gt; cloud; <span class="comment">// 创建点云（不是指针）</span></div><div class="line"></div><div class="line">  <span class="comment">//填充点云数据</span></div><div class="line">  cloud.width    = <span class="number">5</span>; <span class="comment">//设置点云宽度</span></div><div class="line">  cloud.height   = <span class="number">1</span>; <span class="comment">//设置点云高度</span></div><div class="line">  cloud.is_dense = <span class="literal">false</span>; <span class="comment">//非密集型</span></div><div class="line">  cloud.points.resize (cloud.width * cloud.height); <span class="comment">//变形，无序</span></div><div class="line">	<span class="comment">//设置这些点的坐标</span></div><div class="line">  <span class="keyword">for</span> (<span class="keyword">size_t</span> i = <span class="number">0</span>; i &lt; cloud.points.size (); ++i)</div><div class="line">  &#123;</div><div class="line">    cloud.points[i].x = <span class="number">1024</span> * rand () / (RAND_MAX + <span class="number">1.0f</span>);</div><div class="line">    cloud.points[i].y = <span class="number">1024</span> * rand () / (RAND_MAX + <span class="number">1.0f</span>);</div><div class="line">    cloud.points[i].z = <span class="number">1024</span> * rand () / (RAND_MAX + <span class="number">1.0f</span>);</div><div class="line">  &#125;</div><div class="line">	<span class="comment">//保存到PCD文件</span></div><div class="line">  pcl::io::savePCDFileASCII (<span class="string">"test_pcd.pcd"</span>, cloud); <span class="comment">//将点云保存到PCD文件中</span></div><div class="line">  <span class="built_in">std</span>::<span class="built_in">cerr</span> &lt;&lt; <span class="string">"Saved "</span> &lt;&lt; cloud.points.size () &lt;&lt; <span class="string">" data points to test_pcd.pcd."</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line">	<span class="comment">//显示点云数据</span></div><div class="line">  <span class="keyword">for</span> (<span class="keyword">size_t</span> i = <span class="number">0</span>; i &lt; cloud.points.size (); ++i)</div><div class="line">    <span class="built_in">std</span>::<span class="built_in">cerr</span> &lt;&lt; <span class="string">"    "</span> &lt;&lt; cloud.points[i].x &lt;&lt; <span class="string">" "</span> &lt;&lt; cloud.points[i].y &lt;&lt; <span class="string">" "</span> &lt;&lt; cloud.points[i].z &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> (<span class="number">0</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li>运行结束后，在项目目录下生成test_pcd.pcd文件，内容如下图所示。<br><img src="http://img.blog.csdn.net/20160330105303294" alt="这里写图片描述"></li>
-</ul>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://pointclouds.org/documentation/tutorials/writing_pcd.php#writing-pcd" target="_blank" rel="external">Writing Point Cloud data to PCD files</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1100,7 +1107,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">96</span>
+              <span class="site-state-item-count">97</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

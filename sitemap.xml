@@ -2,9 +2,163 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://zhangxuezhi.com/2016/04/20/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E6%8B%BC%E6%8E%A5%E4%B8%A4%E4%B8%AA%E7%82%B9%E4%BA%91/</loc>
+    
+    <lastmod>2016-11-11T13:35:03.012Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangxuezhi.com/2016/04/20/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%B9%B3%E9%9D%A2%E6%A8%A1%E5%9E%8B%E5%88%86%E5%89%B2/</loc>
+    
+    <lastmod>2016-11-11T13:32:34.821Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangxuezhi.com/2016/07/11/%E5%81%A5%E5%BA%B7%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E5%A2%9E%E5%BC%BA%E5%85%8D%E7%96%AB%E5%8A%9B/</loc>
+    
+    <lastmod>2016-11-11T13:26:41.752Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangxuezhi.com/2016/07/31/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85Hadoop%202.6.0%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8F/</loc>
+    
+    <lastmod>2016-11-11T13:25:24.043Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangxuezhi.com/2016/07/31/%E5%A6%82%E4%BD%95%E5%9C%A8ipython%E6%88%96python%E4%B8%AD%E4%BD%BF%E7%94%A8Spark/</loc>
+    
+    <lastmod>2016-11-11T13:21:48.899Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangxuezhi.com/2016/08/02/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94Git/</loc>
+    
+    <lastmod>2016-11-11T13:18:48.996Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangxuezhi.com/2016/08/09/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94Java/</loc>
+    
+    <lastmod>2016-11-11T13:15:38.748Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangxuezhi.com/2016/08/05/%E5%89%91%E6%8C%87Offer%E2%80%94%E2%80%94Python%E7%AD%94%E6%A1%88/</loc>
+    
+    <lastmod>2016-11-11T13:12:59.640Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangxuezhi.com/2016/08/10/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-1-%E5%9F%BA%E7%A1%80/</loc>
+    
+    <lastmod>2016-11-11T12:59:24.492Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangxuezhi.com/2016/08/11/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-3-%E6%95%B0%E7%BB%84/</loc>
+    
+    <lastmod>2016-11-11T12:58:15.986Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangxuezhi.com/2016/08/11/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-2-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/</loc>
+    
+    <lastmod>2016-11-11T12:56:06.549Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangxuezhi.com/2016/08/11/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-4-%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc>
+    
+    <lastmod>2016-11-11T12:55:04.052Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangxuezhi.com/2016/08/12/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-5-%E6%8E%A5%E5%8F%A3%E3%80%81%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81/</loc>
+    
+    <lastmod>2016-11-11T12:54:16.728Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangxuezhi.com/2016/08/12/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-6-%E7%B1%BB%E7%9A%84%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/</loc>
+    
+    <lastmod>2016-11-11T12:51:48.045Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangxuezhi.com/2016/08/12/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-7-%E9%9B%86%E5%90%88%E7%B1%BB/</loc>
+    
+    <lastmod>2016-11-11T12:49:46.043Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangxuezhi.com/2016/08/13/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-8-%E8%BE%93%E5%85%A5-%E8%BE%93%E5%87%BA/</loc>
+    
+    <lastmod>2016-11-11T12:47:51.019Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangxuezhi.com/2016/08/13/%E5%88%B7%E9%A2%98-CC150-Java%E5%AE%9E%E7%8E%B0/</loc>
+    
+    <lastmod>2016-11-11T12:46:18.501Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangxuezhi.com/2016/08/15/%E9%94%99%E8%AF%AF-Ubuntu-no%20talloc%20stackframe%20at%20-source3-param-loadparm.c-4864,%20leaking%20memory/</loc>
+    
+    <lastmod>2016-11-11T12:42:41.085Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangxuezhi.com/2016/08/28/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-%E6%95%B0%E7%BB%84-API-%E7%BB%83%E4%B9%A0/</loc>
+    
+    <lastmod>2016-11-11T12:39:22.771Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangxuezhi.com/2016/08/28/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-String-API-%E7%BB%83%E4%B9%A0/</loc>
+    
+    <lastmod>2016-11-11T12:37:21.106Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangxuezhi.com/2016/09/04/%E5%89%91%E6%8C%87Offer%E2%80%94%E2%80%94Java%E7%AD%94%E6%A1%88/</loc>
+    
+    <lastmod>2016-11-11T12:35:12.833Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhangxuezhi.com/2016/09/19/%E8%A7%A3%E5%86%B3Ubuntu%E4%B8%AD%E6%96%87%E6%98%BE%E7%A4%BA%E4%B8%BA%E4%B9%B1%E7%A0%81/</loc>
+    
+    <lastmod>2016-11-11T09:26:53.786Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://zhangxuezhi.com/2016/11/01/hexo%E6%95%99%E7%A8%8B%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94hexo%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</loc>
     
-    <lastmod>2016-11-10T13:24:31.100Z</lastmod>
+    <lastmod>2016-11-11T09:25:57.307Z</lastmod>
     
   </url>
   
@@ -107,20 +261,6 @@
   </url>
   
   <url>
-    <loc>http://zhangxuezhi.com/2016/08/09/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94Java/</loc>
-    
-    <lastmod>2016-11-06T16:32:17.967Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangxuezhi.com/2016/08/02/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94Git/</loc>
-    
-    <lastmod>2016-11-06T16:32:12.303Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://zhangxuezhi.com/2015/07/15/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%A7%BB%E5%8A%A8%E5%90%8E%EF%BC%8C%E6%97%A0%E6%B3%95%E8%BF%9E%E7%BD%91/</loc>
     
     <lastmod>2016-11-06T16:32:07.071Z</lastmod>
@@ -149,13 +289,6 @@
   </url>
   
   <url>
-    <loc>http://zhangxuezhi.com/2016/08/13/%E5%88%B7%E9%A2%98-CC150-Java%E5%AE%9E%E7%8E%B0/</loc>
-    
-    <lastmod>2016-11-06T16:31:52.607Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://zhangxuezhi.com/2015/09/12/%E4%BD%BF%E7%94%A8XX-Net%E7%BF%BB%E5%A2%99(%E8%AE%BF%E9%97%AEgoogle%E5%AD%A6%E6%9C%AF%E3%80%81youtube%E3%80%81Facebook%E7%AD%89%E7%AD%89%EF%BC%89/</loc>
     
     <lastmod>2016-11-06T16:31:48.927Z</lastmod>
@@ -166,48 +299,6 @@
     <loc>http://zhangxuezhi.com/2015/09/21/%E4%BD%BF%E7%94%A8Putty%E6%97%A0%E6%B3%95%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%EF%BC%8C%E6%98%BE%E7%A4%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8B%92%E7%BB%9D%E8%BF%9E%E6%8E%A5/</loc>
     
     <lastmod>2016-11-06T16:31:44.646Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangxuezhi.com/2016/07/31/%E5%A6%82%E4%BD%95%E5%9C%A8ipython%E6%88%96python%E4%B8%AD%E4%BD%BF%E7%94%A8Spark/</loc>
-    
-    <lastmod>2016-11-06T16:31:41.879Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangxuezhi.com/2016/07/31/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85Hadoop%202.6.0%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8F/</loc>
-    
-    <lastmod>2016-11-06T16:31:39.023Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangxuezhi.com/2016/09/19/%E8%A7%A3%E5%86%B3Ubuntu%E4%B8%AD%E6%96%87%E6%98%BE%E7%A4%BA%E4%B8%BA%E4%B9%B1%E7%A0%81/</loc>
-    
-    <lastmod>2016-11-06T16:31:35.767Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangxuezhi.com/2016/07/11/%E5%81%A5%E5%BA%B7%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E5%A2%9E%E5%BC%BA%E5%85%8D%E7%96%AB%E5%8A%9B/</loc>
-    
-    <lastmod>2016-11-06T16:31:32.647Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangxuezhi.com/2016/08/05/%E5%89%91%E6%8C%87Offer%E2%80%94%E2%80%94Python%E7%AD%94%E6%A1%88/</loc>
-    
-    <lastmod>2016-11-06T16:31:29.728Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangxuezhi.com/2016/09/04/%E5%89%91%E6%8C%87Offer%E2%80%94%E2%80%94Java%E7%AD%94%E6%A1%88/</loc>
-    
-    <lastmod>2016-11-06T16:31:26.463Z</lastmod>
     
   </url>
   
@@ -240,86 +331,9 @@
   </url>
   
   <url>
-    <loc>http://zhangxuezhi.com/2016/08/15/%E9%94%99%E8%AF%AF-Ubuntu-no%20talloc%20stackframe%20at%20-source3-param-loadparm.c-4864,%20leaking%20memory/</loc>
-    
-    <lastmod>2016-11-06T16:31:06.967Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://zhangxuezhi.com/2015/11/11/%E9%94%99%E8%AF%AF-python-Not%20uninstalling%20six%20at%20-usr-lib-python2.7-dist-packages,%20owned%20by%20OS/</loc>
     
     <lastmod>2016-11-06T16:31:03.111Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangxuezhi.com/2016/08/28/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-%E6%95%B0%E7%BB%84-API-%E7%BB%83%E4%B9%A0/</loc>
-    
-    <lastmod>2016-11-06T16:30:59.799Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangxuezhi.com/2016/08/28/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-String-API-%E7%BB%83%E4%B9%A0/</loc>
-    
-    <lastmod>2016-11-06T16:30:56.600Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangxuezhi.com/2016/08/13/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-8-%E8%BE%93%E5%85%A5-%E8%BE%93%E5%87%BA/</loc>
-    
-    <lastmod>2016-11-06T16:30:53.695Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangxuezhi.com/2016/08/12/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-7-%E9%9B%86%E5%90%88%E7%B1%BB/</loc>
-    
-    <lastmod>2016-11-06T16:30:50.519Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangxuezhi.com/2016/08/12/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-6-%E7%B1%BB%E7%9A%84%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/</loc>
-    
-    <lastmod>2016-11-06T16:30:47.367Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangxuezhi.com/2016/08/12/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-5-%E6%8E%A5%E5%8F%A3%E3%80%81%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81/</loc>
-    
-    <lastmod>2016-11-06T16:30:44.167Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangxuezhi.com/2016/08/11/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-4-%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc>
-    
-    <lastmod>2016-11-06T16:30:37.903Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangxuezhi.com/2016/08/11/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-3-%E6%95%B0%E7%BB%84/</loc>
-    
-    <lastmod>2016-11-06T16:30:32.391Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangxuezhi.com/2016/08/11/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-2-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/</loc>
-    
-    <lastmod>2016-11-06T16:30:28.375Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangxuezhi.com/2016/08/10/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-1-%E5%9F%BA%E7%A1%80/</loc>
-    
-    <lastmod>2016-11-06T16:30:24.752Z</lastmod>
     
   </url>
   
@@ -523,13 +537,6 @@
     <loc>http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E5%8F%AF%E8%A7%86%E5%8C%96%E6%B7%B1%E5%BA%A6%E5%9B%BE%E5%83%8F/</loc>
     
     <lastmod>2016-11-06T16:28:30.120Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangxuezhi.com/2016/04/20/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%B9%B3%E9%9D%A2%E6%A8%A1%E5%9E%8B%E5%88%86%E5%89%B2/</loc>
-    
-    <lastmod>2016-11-06T16:28:27.496Z</lastmod>
     
   </url>
   

@@ -280,6 +280,154 @@
             
               
                 
+                <a class="post-title-link" href="/2015/11/04/Linux命令——userdel/" itemprop="url">
+                  Linux命令——userdel
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-11-04T14:01:00+08:00" content="2015-11-04">
+              2015-11-04
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Linux/命令/" itemprop="url" rel="index">
+                    <span itemprop="name">命令</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/11/04/Linux命令——userdel/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/04/Linux命令——userdel/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="userdel"><a href="#userdel" class="headerlink" title="userdel"></a>userdel</h2><ul>
+<li><strong>功能</strong>：删除用户账号</li>
+<li><strong>提示</strong>：<ul>
+<li>一次删除一个用户；</li>
+<li>删除的用户必须存在；</li>
+<li>userdel 不 允 许 你 移 除 正 在线 上 的 使 用 者 帐 号 。 你 必 须 砍 掉 此 帐 号 现 在 在 系 统 上 执 行 的 程 序 才 能 进 行 帐 号 删 除 ；</li>
+</ul>
+</li>
+<li><strong>选项</strong>： <ul>
+<li>-f：强制删除用户，即使用户当前已登录；</li>
+<li>-r：删除用户的同时，删除与用户相关的所有文件。</li>
+</ul>
+</li>
+<li><strong>示例</strong>：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 删除用户test</span></div><div class="line">userdel <span class="built_in">test</span> </div><div class="line"><span class="comment"># 删除用户test的同时，删除用户登录目录以及目录下的文件</span></div><div class="line">userdel <span class="built_in">test</span> -r </div><div class="line"><span class="comment"># 强制删除用户</span></div><div class="line">userdel <span class="built_in">test</span> <span class="_">-f</span> </div><div class="line"><span class="comment"># 强制删除用户，并删除用户登录目录以及目录下的文件</span></div><div class="line">userdel <span class="built_in">test</span> -fr</div><div class="line"></div><div class="line"><span class="comment"># 删除已经登录的用户</span></div><div class="line"><span class="comment"># 先查看当前登录的用户，并记录TTY</span></div><div class="line">w</div><div class="line"><span class="comment"># 关闭希望删除的用户</span></div><div class="line">pkill -kill -t [TTY]</div><div class="line">userdel <span class="built_in">test</span> -rf</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h2><p><a href="http://www.lx138.com/" target="_blank" rel="external">Linux命令查询网站</a><br><a href="http://man.linuxde.net/" target="_blank" rel="external">Linux命令大全</a><br><a href="http://baidu.com/" target="_blank" rel="external">baidu</a><br><a href="google.com.hk">Google</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2015/11/04/Linux命令——adduser/" itemprop="url">
                   Linux命令——adduser
                 </a>
@@ -603,163 +751,6 @@
             
               
                 
-                <a class="post-title-link" href="/2015/11/04/Linux命令——who/" itemprop="url">
-                  Linux命令——who
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-11-04T13:59:00+08:00" content="2015-11-04">
-              2015-11-04
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Linux/命令/" itemprop="url" rel="index">
-                    <span itemprop="name">命令</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/11/04/Linux命令——who/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/04/Linux命令——who/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="who"><a href="#who" class="headerlink" title="who"></a>who</h2><ul>
-<li><strong>功能</strong>：显示登录用户的信息</li>
-<li><strong>提示</strong>：<ul>
-<li>执行who命令可得知目前有那些用户登入系统；</li>
-<li>单独执行who命令会列出登入帐号，使用的终端机，登入时间和从何处登入；</li>
-</ul>
-</li>
-<li><p><strong>选项</strong>： </p>
-<ul>
-<li>-b：显示系统上次启动时间</li>
-<li>-H或–heading：显示头信息【标题栏】； </li>
-<li>-u：显示闲置时间； </li>
-<li>-m：显示当前用户的信息，等价于<code>who am i</code>； </li>
-<li>-q或–count：只显示登入系统的用户名和总人数；</li>
-<li>-r：显示当前运行级别（runlevel） ;</li>
-<li>-s：此参数将忽略不予处理，仅负责解决who指令其他版本的兼容性问题； </li>
-<li>-w或-T：显示用户的信息状态栏； </li>
-<li>–help：在线帮助； </li>
-<li>–version：显示版本信息；</li>
-</ul>
-</li>
-<li><p><strong>示例</strong>：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 显示系统上次启动时间</span></div><div class="line">who -b</div><div class="line"><span class="comment"># 显示头信息【标题栏】</span></div><div class="line">who -H</div><div class="line">who --heading</div><div class="line"><span class="comment"># 突出显示“闲置时间”</span></div><div class="line"><span class="comment"># 若该用户在前一分钟之内有进行任何动作，将标示成"."号，如果该用户已超过24小时没有任何动作，则标示出"old"字符串</span></div><div class="line">who -u</div><div class="line"><span class="comment"># 显示当前用户的信息</span></div><div class="line">who -m</div><div class="line">who am i</div><div class="line"><span class="comment"># 只显示登入系统的用户名和总人数</span></div><div class="line">who -q</div><div class="line">who --count</div><div class="line"><span class="comment"># 显示当前运行级别</span></div><div class="line">who -r</div><div class="line"><span class="comment"># 显示用户的信息状态栏</span></div><div class="line">who -w</div><div class="line">who -T</div><div class="line"><span class="comment"># 显示在线帮助信息</span></div><div class="line">who --help</div><div class="line"><span class="comment"># 显示版本信息</span></div><div class="line">who --version</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h2><p><a href="http://www.lx138.com/" target="_blank" rel="external">Linux命令查询网站</a><br><a href="http://man.linuxde.net/" target="_blank" rel="external">Linux命令大全</a><br><a href="http://baidu.com/" target="_blank" rel="external">baidu</a><br><a href="google.com.hk">Google</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2015/11/04/Linux命令——whoami/" itemprop="url">
                   Linux命令——whoami
                 </a>
@@ -907,8 +898,8 @@
             
               
                 
-                <a class="post-title-link" href="/2015/11/04/Linux命令——visudo/" itemprop="url">
-                  Linux命令——visudo
+                <a class="post-title-link" href="/2015/11/04/Linux命令——who/" itemprop="url">
+                  Linux命令——who
                 </a>
               
             
@@ -921,7 +912,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-11-04T13:58:00+08:00" content="2015-11-04">
+            <time itemprop="dateCreated" datetime="2015-11-04T13:59:00+08:00" content="2015-11-04">
               2015-11-04
             </time>
           </span>
@@ -963,8 +954,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/11/04/Linux命令——visudo/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/04/Linux命令——visudo/" itemprop="commentsCount"></span>
+                <a href="/2015/11/04/Linux命令——who/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/04/Linux命令——who/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -989,22 +980,29 @@
       
         
           
-            <h2 id="visudo"><a href="#visudo" class="headerlink" title="visudo"></a>visudo</h2><ul>
-<li><strong>功能</strong>：编辑sudoers文件</li>
+            <h2 id="who"><a href="#who" class="headerlink" title="who"></a>who</h2><ul>
+<li><strong>功能</strong>：显示登录用户的信息</li>
 <li><strong>提示</strong>：<ul>
-<li>需要超级用户权限；</li>
-<li>默认编辑/etc/sudoers文件；</li>
-<li>sudoers文件的默认权限是440，即默认无法修改；</li>
-<li>visudo可以在不更改sudoers文件权限的情况下，直接修改sudoers文件；</li>
+<li>执行who命令可得知目前有那些用户登入系统；</li>
+<li>单独执行who命令会列出登入帐号，使用的终端机，登入时间和从何处登入；</li>
 </ul>
 </li>
-<li><strong>选项</strong>： <ul>
-<li>-c：使用<strong>check-only</strong>模式，打印语法等错误信息；</li>
-<li>-q：使用<strong>quiet</strong>模式，不打印语法等错误信息；</li>
-<li>-f：指定sudoers文件；</li>
+<li><p><strong>选项</strong>： </p>
+<ul>
+<li>-b：显示系统上次启动时间</li>
+<li>-H或–heading：显示头信息【标题栏】； </li>
+<li>-u：显示闲置时间； </li>
+<li>-m：显示当前用户的信息，等价于<code>who am i</code>； </li>
+<li>-q或–count：只显示登入系统的用户名和总人数；</li>
+<li>-r：显示当前运行级别（runlevel） ;</li>
+<li>-s：此参数将忽略不予处理，仅负责解决who指令其他版本的兼容性问题； </li>
+<li>-w或-T：显示用户的信息状态栏； </li>
+<li>–help：在线帮助； </li>
+<li>–version：显示版本信息；</li>
 </ul>
 </li>
-<li><strong>示例</strong>：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 编辑/etc/sudoers文件</span></div><div class="line">visudo</div><div class="line"><span class="comment"># 编辑/etc/sudoers文件，并检查语法等错误</span></div><div class="line">visudo -c</div><div class="line"><span class="comment"># 编辑/etc/sudoers文件，但不打印语法等错误</span></div><div class="line">visudo -q</div><div class="line"><span class="comment"># 显示版本信息</span></div><div class="line">visudo -V</div></pre></td></tr></table></figure>
+<li><p><strong>示例</strong>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 显示系统上次启动时间</span></div><div class="line">who -b</div><div class="line"><span class="comment"># 显示头信息【标题栏】</span></div><div class="line">who -H</div><div class="line">who --heading</div><div class="line"><span class="comment"># 突出显示“闲置时间”</span></div><div class="line"><span class="comment"># 若该用户在前一分钟之内有进行任何动作，将标示成"."号，如果该用户已超过24小时没有任何动作，则标示出"old"字符串</span></div><div class="line">who -u</div><div class="line"><span class="comment"># 显示当前用户的信息</span></div><div class="line">who -m</div><div class="line">who am i</div><div class="line"><span class="comment"># 只显示登入系统的用户名和总人数</span></div><div class="line">who -q</div><div class="line">who --count</div><div class="line"><span class="comment"># 显示当前运行级别</span></div><div class="line">who -r</div><div class="line"><span class="comment"># 显示用户的信息状态栏</span></div><div class="line">who -w</div><div class="line">who -T</div><div class="line"><span class="comment"># 显示在线帮助信息</span></div><div class="line">who --help</div><div class="line"><span class="comment"># 显示版本信息</span></div><div class="line">who --version</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h2><p><a href="http://www.lx138.com/" target="_blank" rel="external">Linux命令查询网站</a><br><a href="http://man.linuxde.net/" target="_blank" rel="external">Linux命令大全</a><br><a href="http://baidu.com/" target="_blank" rel="external">baidu</a><br><a href="google.com.hk">Google</a></p>
@@ -1081,7 +1079,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">96</span>
+              <span class="site-state-item-count">97</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
