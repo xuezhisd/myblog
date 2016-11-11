@@ -1,0 +1,2410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/11/01/hexo%E6%95%99%E7%A8%8B%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94hexo%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2016-11-10T13:24:31.100Z</lastmod>
+    <data>
+        <display>
+        <title>hexo教程系列——hexo安装教程</title>
+        <pubTime>2016-11-01T15:02:00.000Z</pubTime>
+        
+        <tag>安装和配置软件</tag>
+         
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="博客维护" url="http://zhangxuezhi.com/categories/%E5%8D%9A%E5%AE%A2%E7%BB%B4%E6%8A%A4/"/>
+          
+             
+              <breadCrumb title="Hexo" url="http://zhangxuezhi.com/categories/%E5%8D%9A%E5%AE%A2%E7%BB%B4%E6%8A%A4/Hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/11/02/hexo%E6%95%99%E7%A8%8B%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94hexo%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2016-11-10T13:23:42.953Z</lastmod>
+    <data>
+        <display>
+        <title>hexo教程系列——hexo配置教程</title>
+        <pubTime>2016-11-02T12:41:00.000Z</pubTime>
+        
+        <tag>安装和配置软件</tag>
+         
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="博客维护" url="http://zhangxuezhi.com/categories/%E5%8D%9A%E5%AE%A2%E7%BB%B4%E6%8A%A4/"/>
+          
+             
+              <breadCrumb title="Hexo" url="http://zhangxuezhi.com/categories/%E5%8D%9A%E5%AE%A2%E7%BB%B4%E6%8A%A4/Hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/11/02/hexo%E6%95%99%E7%A8%8B%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%BD%BF%E7%94%A8Travis%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2hexo/</loc>
+    <lastmod>2016-11-10T13:13:10.663Z</lastmod>
+    <data>
+        <display>
+        <title>hexo教程系列——使用Travis自动部署hexo</title>
+        <pubTime>2016-11-02T13:02:00.000Z</pubTime>
+        
+        <tag>安装和配置软件</tag>
+         
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="博客维护" url="http://zhangxuezhi.com/categories/%E5%8D%9A%E5%AE%A2%E7%BB%B4%E6%8A%A4/"/>
+          
+             
+              <breadCrumb title="Hexo" url="http://zhangxuezhi.com/categories/%E5%8D%9A%E5%AE%A2%E7%BB%B4%E6%8A%A4/Hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+    
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/10/13/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85caffe/</loc>
+    <lastmod>2016-11-06T16:33:06.414Z</lastmod>
+    <data>
+        <display>
+        <title>caffe安装系列——安装caffe</title>
+        <pubTime>2015-10-13T13:02:00.000Z</pubTime>
+        
+        <tag>安装和配置软件</tag>
+         
+        <tag>深度学习</tag>
+         
+        <tag>Caffe</tag>
+         
+         
+           
+             
+              <breadCrumb title="深度学习" url="http://zhangxuezhi.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+          
+             
+              <breadCrumb title="Caffe" url="http://zhangxuezhi.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/Caffe/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/09/22/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85cuda%E5%92%8Ccudnn/</loc>
+    <lastmod>2016-11-06T16:32:58.783Z</lastmod>
+    <data>
+        <display>
+        <title>caffe安装系列——安装cuda和cudnn</title>
+        <pubTime>2015-09-22T06:20:00.000Z</pubTime>
+        
+        <tag>安装和配置软件</tag>
+         
+        <tag>深度学习</tag>
+         
+        <tag>Caffe</tag>
+         
+        <tag>cudnn</tag>
+         
+         
+           
+             
+              <breadCrumb title="深度学习" url="http://zhangxuezhi.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+          
+             
+              <breadCrumb title="Caffe" url="http://zhangxuezhi.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/Caffe/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/09/22/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85GCC4.7%E5%92%8CG++4.7%E5%B9%B6%E9%99%8D%E7%BA%A7/</loc>
+    <lastmod>2016-11-06T16:32:55.862Z</lastmod>
+    <data>
+        <display>
+        <title>caffe安装系列——安装GCC4.7和G++4.7并降级</title>
+        <pubTime>2015-09-22T06:21:00.000Z</pubTime>
+        
+        <tag>安装和配置软件</tag>
+         
+        <tag>深度学习</tag>
+         
+        <tag>Caffe</tag>
+         
+        <tag>GCC</tag>
+         
+         
+           
+             
+              <breadCrumb title="深度学习" url="http://zhangxuezhi.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+          
+             
+              <breadCrumb title="cuda" url="http://zhangxuezhi.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/cuda/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/09/23/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85Matlab/</loc>
+    <lastmod>2016-11-06T16:32:50.982Z</lastmod>
+    <data>
+        <display>
+        <title>caffe安装系列——安装Matlab</title>
+        <pubTime>2015-09-23T06:17:00.000Z</pubTime>
+        
+        <tag>安装和配置软件</tag>
+         
+        <tag>深度学习</tag>
+         
+        <tag>Matlab</tag>
+         
+        <tag>Caffe</tag>
+         
+         
+           
+             
+              <breadCrumb title="深度学习" url="http://zhangxuezhi.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+          
+             
+              <breadCrumb title="cuda" url="http://zhangxuezhi.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/cuda/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/09/24/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85NVIDIA%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8/</loc>
+    <lastmod>2016-11-06T16:32:47.382Z</lastmod>
+    <data>
+        <display>
+        <title>caffe安装系列——安装NVIDIA显卡驱动</title>
+        <pubTime>2015-09-24T06:07:00.000Z</pubTime>
+        
+        <tag>安装和配置软件</tag>
+         
+        <tag>深度学习</tag>
+         
+        <tag>Caffe</tag>
+         
+        <tag>NVIDIA</tag>
+         
+        <tag>显卡驱动</tag>
+         
+         
+           
+             
+              <breadCrumb title="深度学习" url="http://zhangxuezhi.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+          
+             
+              <breadCrumb title="cuda" url="http://zhangxuezhi.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/cuda/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/09/24/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85OpenCV/</loc>
+    <lastmod>2016-11-06T16:32:43.863Z</lastmod>
+    <data>
+        <display>
+        <title>caffe安装系列——安装OpenCV</title>
+        <pubTime>2015-09-24T06:15:00.000Z</pubTime>
+        
+        <tag>安装和配置软件</tag>
+         
+        <tag>深度学习</tag>
+         
+        <tag>Caffe</tag>
+         
+        <tag>OpenCV</tag>
+         
+         
+           
+             
+              <breadCrumb title="深度学习" url="http://zhangxuezhi.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+          
+             
+              <breadCrumb title="cuda" url="http://zhangxuezhi.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/cuda/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/09/24/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85python%E4%BE%9D%E8%B5%96%E5%8C%85/</loc>
+    <lastmod>2016-11-06T16:32:40.110Z</lastmod>
+    <data>
+        <display>
+        <title>caffe安装系列——安装python依赖包</title>
+        <pubTime>2015-09-24T06:13:00.000Z</pubTime>
+        
+        <tag>安装和配置软件</tag>
+         
+        <tag>深度学习</tag>
+         
+        <tag>Python</tag>
+         
+        <tag>Caffe</tag>
+         
+         
+           
+             
+              <breadCrumb title="深度学习" url="http://zhangxuezhi.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+          
+             
+              <breadCrumb title="cuda" url="http://zhangxuezhi.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/cuda/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/09/24/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E7%BB%BC%E8%BF%B0/</loc>
+    <lastmod>2016-11-06T16:32:35.918Z</lastmod>
+    <data>
+        <display>
+        <title>caffe安装系列——综述</title>
+        <pubTime>2015-09-24T06:08:00.000Z</pubTime>
+        
+        <tag>安装和配置软件</tag>
+         
+        <tag>深度学习</tag>
+         
+        <tag>Caffe</tag>
+         
+         
+           
+             
+              <breadCrumb title="深度学习" url="http://zhangxuezhi.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+          
+             
+              <breadCrumb title="cuda" url="http://zhangxuezhi.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/cuda/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/08/09/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94Java/</loc>
+    <lastmod>2016-11-06T16:32:17.967Z</lastmod>
+    <data>
+        <display>
+        <title>学习笔记——Java</title>
+        <pubTime>2016-08-09T05:14:00.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>笔记</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程语言" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+          
+             
+              <breadCrumb title="Java" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/08/02/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94Git/</loc>
+    <lastmod>2016-11-06T16:32:12.303Z</lastmod>
+    <data>
+        <display>
+        <title>学习笔记——Git</title>
+        <pubTime>2016-08-02T05:19:00.000Z</pubTime>
+        
+        <tag>笔记</tag>
+         
+        <tag>Git</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程工具" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/"/>
+          
+             
+              <breadCrumb title="Git" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/Git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/07/15/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%A7%BB%E5%8A%A8%E5%90%8E%EF%BC%8C%E6%97%A0%E6%B3%95%E8%BF%9E%E7%BD%91/</loc>
+    <lastmod>2016-11-06T16:32:07.071Z</lastmod>
+    <data>
+        <display>
+        <title>虚拟机移动后，无法连网</title>
+        <pubTime>2015-07-15T06:46:00.000Z</pubTime>
+        
+        <tag>VMware</tag>
+         
+         
+           
+             
+              <breadCrumb title="Windows" url="http://zhangxuezhi.com/categories/Windows/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/11/03/%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2016-11-06T16:32:04.182Z</lastmod>
+    <data>
+        <display>
+        <title>系统运维学习笔记</title>
+        <pubTime>2015-11-03T06:02:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>运维</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/07/25/%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D%E5%8F%91%E9%9F%B3%E5%AF%B9%E7%85%A7%E8%A1%A8/</loc>
+    <lastmod>2016-11-06T16:32:00.382Z</lastmod>
+    <data>
+        <display>
+        <title>希腊字母发音对照表</title>
+        <pubTime>2015-07-25T06:40:00.000Z</pubTime>
+        
+        <tag>希腊字母</tag>
+         
+         
+           
+             
+              <breadCrumb title="其它" url="http://zhangxuezhi.com/categories/%E5%85%B6%E5%AE%83/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/06/24/%E5%8F%8C%E7%B3%BB%E7%BB%9F(Linux)%E6%97%B6%E9%97%B4%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2016-11-06T16:31:56.567Z</lastmod>
+    <data>
+        <display>
+        <title>双系统(Linux)时间不一致问题</title>
+        <pubTime>2015-06-24T06:50:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="经验" url="http://zhangxuezhi.com/categories/Linux/%E7%BB%8F%E9%AA%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/08/13/%E5%88%B7%E9%A2%98-CC150-Java%E5%AE%9E%E7%8E%B0/</loc>
+    <lastmod>2016-11-06T16:31:52.607Z</lastmod>
+    <data>
+        <display>
+        <title>刷题-CC150-Java实现</title>
+        <pubTime>2016-08-13T05:14:00.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>CC150</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程语言" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+          
+             
+              <breadCrumb title="Java" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/09/12/%E4%BD%BF%E7%94%A8XX-Net%E7%BF%BB%E5%A2%99(%E8%AE%BF%E9%97%AEgoogle%E5%AD%A6%E6%9C%AF%E3%80%81youtube%E3%80%81Facebook%E7%AD%89%E7%AD%89%EF%BC%89/</loc>
+    <lastmod>2016-11-06T16:31:48.927Z</lastmod>
+    <data>
+        <display>
+        <title>使用XX-Net翻墙(访问google学术、youtube、Facebook等等）</title>
+        <pubTime>2015-09-12T13:02:00.000Z</pubTime>
+        
+        <tag>翻墙</tag>
+         
+        <tag>XX-Net</tag>
+         
+         
+           
+             
+              <breadCrumb title="Windows" url="http://zhangxuezhi.com/categories/Windows/"/>
+          
+             
+              <breadCrumb title="经验" url="http://zhangxuezhi.com/categories/Windows/%E7%BB%8F%E9%AA%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/09/21/%E4%BD%BF%E7%94%A8Putty%E6%97%A0%E6%B3%95%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%EF%BC%8C%E6%98%BE%E7%A4%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8B%92%E7%BB%9D%E8%BF%9E%E6%8E%A5/</loc>
+    <lastmod>2016-11-06T16:31:44.646Z</lastmod>
+    <data>
+        <display>
+        <title>使用Putty无法远程登录，显示服务器拒绝连接</title>
+        <pubTime>2015-09-21T06:23:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>Putty</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="经验" url="http://zhangxuezhi.com/categories/Linux/%E7%BB%8F%E9%AA%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/07/31/%E5%A6%82%E4%BD%95%E5%9C%A8ipython%E6%88%96python%E4%B8%AD%E4%BD%BF%E7%94%A8Spark/</loc>
+    <lastmod>2016-11-06T16:31:41.879Z</lastmod>
+    <data>
+        <display>
+        <title>如何在ipython或python中使用Spark</title>
+        <pubTime>2016-07-31T05:21:00.000Z</pubTime>
+        
+        <tag>大数据</tag>
+         
+        <tag>Spark</tag>
+         
+        <tag>python</tag>
+         
+         
+           
+             
+              <breadCrumb title="大数据" url="http://zhangxuezhi.com/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+          
+             
+              <breadCrumb title="Spark" url="http://zhangxuezhi.com/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/Spark/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/07/31/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85Hadoop%202.6.0%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8F/</loc>
+    <lastmod>2016-11-06T16:31:39.023Z</lastmod>
+    <data>
+        <display>
+        <title>如何安装Hadoop 2.6.0完全分布式？</title>
+        <pubTime>2016-07-31T05:20:00.000Z</pubTime>
+        
+        <tag>大数据</tag>
+         
+        <tag>Hadoop</tag>
+         
+         
+           
+             
+              <breadCrumb title="大数据" url="http://zhangxuezhi.com/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+          
+             
+              <breadCrumb title="Hadoop" url="http://zhangxuezhi.com/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/Hadoop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/09/19/%E8%A7%A3%E5%86%B3Ubuntu%E4%B8%AD%E6%96%87%E6%98%BE%E7%A4%BA%E4%B8%BA%E4%B9%B1%E7%A0%81/</loc>
+    <lastmod>2016-11-06T16:31:35.767Z</lastmod>
+    <data>
+        <display>
+        <title>解决Ubuntu中文显示为乱码</title>
+        <pubTime>2016-09-19T04:35:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>乱码</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="经验" url="http://zhangxuezhi.com/categories/Linux/%E7%BB%8F%E9%AA%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/07/11/%E5%81%A5%E5%BA%B7%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E5%A2%9E%E5%BC%BA%E5%85%8D%E7%96%AB%E5%8A%9B/</loc>
+    <lastmod>2016-11-06T16:31:32.647Z</lastmod>
+    <data>
+        <display>
+        <title>健康系列——如何增强免疫力</title>
+        <pubTime>2016-07-11T05:23:00.000Z</pubTime>
+        
+        <tag>健康</tag>
+         
+        <tag>免疫力</tag>
+         
+         
+           
+             
+              <breadCrumb title="健康" url="http://zhangxuezhi.com/categories/%E5%81%A5%E5%BA%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/08/05/%E5%89%91%E6%8C%87Offer%E2%80%94%E2%80%94Python%E7%AD%94%E6%A1%88/</loc>
+    <lastmod>2016-11-06T16:31:29.728Z</lastmod>
+    <data>
+        <display>
+        <title>剑指Offer——Python答案</title>
+        <pubTime>2016-08-05T05:18:00.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>编程语言</tag>
+         
+        <tag>剑指Offer</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程语言" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+          
+             
+              <breadCrumb title="Python" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/09/04/%E5%89%91%E6%8C%87Offer%E2%80%94%E2%80%94Java%E7%AD%94%E6%A1%88/</loc>
+    <lastmod>2016-11-06T16:31:26.463Z</lastmod>
+    <data>
+        <display>
+        <title>剑指Offer——Java答案</title>
+        <pubTime>2016-09-04T04:43:00.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>编程语言</tag>
+         
+        <tag>剑指Offer</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程语言" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+          
+             
+              <breadCrumb title="Java" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/03/29/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BB%B4%E6%8A%A4%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94VNC%E6%B2%A1%E6%9C%89%E5%8F%8D%E5%BA%94%E4%BA%86%E6%80%8E%E4%B9%88%E5%8A%9E/</loc>
+    <lastmod>2016-11-06T16:31:22.471Z</lastmod>
+    <data>
+        <display>
+        <title>服务器维护系列——VNC没有反应了怎么办？</title>
+        <pubTime>2016-03-29T05:33:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>VNC</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="经验" url="http://zhangxuezhi.com/categories/Linux/%E7%BB%8F%E9%AA%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/09/14/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%A6%82%E4%BD%95%E8%BF%9B%E5%85%A5Bios/</loc>
+    <lastmod>2016-11-06T16:31:19.432Z</lastmod>
+    <data>
+        <display>
+        <title>服务器如何进入Bios</title>
+        <pubTime>2015-09-14T06:28:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>安装和配置软件</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="安装和配置软件" url="http://zhangxuezhi.com/categories/Linux/%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/10/13/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85%E5%B9%B6%E9%85%8D%E7%BD%AEUbuntu%20Server%2014.04/</loc>
+    <lastmod>2016-11-06T16:31:14.568Z</lastmod>
+    <data>
+        <display>
+        <title>服务器安装并配置Ubuntu Server 14.04</title>
+        <pubTime>2015-10-13T13:02:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>安装和配置软件</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="安装和配置软件" url="http://zhangxuezhi.com/categories/Linux/%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/03/18/%E9%94%99%E8%AF%AF-VS2010%20error%20-%20%20fatal%20error%20LNK1123%20-%20failure%20during%20conversion%20to%20COFF/</loc>
+    <lastmod>2016-11-06T16:31:10.247Z</lastmod>
+    <data>
+        <display>
+        <title>错误-VS2010 error:LINK:fatal error LNK1123:failure during conversion to COFF:file invalid or c</title>
+        <pubTime>2016-03-18T05:35:00.000Z</pubTime>
+        
+        <tag>错误</tag>
+         
+        <tag>VS</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程工具" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/"/>
+          
+             
+              <breadCrumb title="VS" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/VS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/08/15/%E9%94%99%E8%AF%AF-Ubuntu-no%20talloc%20stackframe%20at%20-source3-param-loadparm.c-4864,%20leaking%20memory/</loc>
+    <lastmod>2016-11-06T16:31:06.967Z</lastmod>
+    <data>
+        <display>
+        <title>错误-Ubuntu-no talloc stackframe at ../source3/param/loadparm.c:4864, leaking memory</title>
+        <pubTime>2016-08-15T05:00:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>安装和配置软件</tag>
+         
+        <tag>错误</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="经验" url="http://zhangxuezhi.com/categories/Linux/%E7%BB%8F%E9%AA%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/11/11/%E9%94%99%E8%AF%AF-python-Not%20uninstalling%20six%20at%20-usr-lib-python2.7-dist-packages,%20owned%20by%20OS/</loc>
+    <lastmod>2016-11-06T16:31:03.111Z</lastmod>
+    <data>
+        <display>
+        <title>错误-python-Not uninstalling six at /usr/lib/python2.7/dist-packages, owned by OS</title>
+        <pubTime>2015-11-11T05:43:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>安装和配置软件</tag>
+         
+        <tag>错误</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="经验" url="http://zhangxuezhi.com/categories/Linux/%E7%BB%8F%E9%AA%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/08/28/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-%E6%95%B0%E7%BB%84-API-%E7%BB%83%E4%B9%A0/</loc>
+    <lastmod>2016-11-06T16:30:59.799Z</lastmod>
+    <data>
+        <display>
+        <title>编码练习——Java-数组-API-练习</title>
+        <pubTime>2016-08-28T04:56:00.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程语言" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+          
+             
+              <breadCrumb title="Java" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/08/28/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-String-API-%E7%BB%83%E4%B9%A0/</loc>
+    <lastmod>2016-11-06T16:30:56.600Z</lastmod>
+    <data>
+        <display>
+        <title>编码练习——Java-String-API-练习</title>
+        <pubTime>2016-08-28T04:58:00.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程语言" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+          
+             
+              <breadCrumb title="Java" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/08/13/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-8-%E8%BE%93%E5%85%A5-%E8%BE%93%E5%87%BA/</loc>
+    <lastmod>2016-11-06T16:30:53.695Z</lastmod>
+    <data>
+        <display>
+        <title>编码练习——Java-8-输入/输出</title>
+        <pubTime>2016-08-13T05:04:00.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程语言" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+          
+             
+              <breadCrumb title="Java" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/08/12/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-7-%E9%9B%86%E5%90%88%E7%B1%BB/</loc>
+    <lastmod>2016-11-06T16:30:50.519Z</lastmod>
+    <data>
+        <display>
+        <title>编码练习——Java-7-集合类</title>
+        <pubTime>2016-08-12T05:55:00.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程语言" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+          
+             
+              <breadCrumb title="Java" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/08/12/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-6-%E7%B1%BB%E7%9A%84%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/</loc>
+    <lastmod>2016-11-06T16:30:47.367Z</lastmod>
+    <data>
+        <display>
+        <title>编码练习——Java-6-类的高级特性</title>
+        <pubTime>2016-08-12T05:05:00.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程语言" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+          
+             
+              <breadCrumb title="Java" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/08/12/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-5-%E6%8E%A5%E5%8F%A3%E3%80%81%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81/</loc>
+    <lastmod>2016-11-06T16:30:44.167Z</lastmod>
+    <data>
+        <display>
+        <title>编码练习——Java-5-接口、继承与多态</title>
+        <pubTime>2016-08-12T05:05:00.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程语言" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+          
+             
+              <breadCrumb title="Java" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/08/11/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-4-%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc>
+    <lastmod>2016-11-06T16:30:37.903Z</lastmod>
+    <data>
+        <display>
+        <title>编码练习——Java-4-字符串</title>
+        <pubTime>2016-08-11T05:15:00.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程语言" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+          
+             
+              <breadCrumb title="Java" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/08/11/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-3-%E6%95%B0%E7%BB%84/</loc>
+    <lastmod>2016-11-06T16:30:32.391Z</lastmod>
+    <data>
+        <display>
+        <title>编码练习——Java-3-数组</title>
+        <pubTime>2016-08-11T05:05:00.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程语言" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+          
+             
+              <breadCrumb title="Java" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/08/11/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-2-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/</loc>
+    <lastmod>2016-11-06T16:30:28.375Z</lastmod>
+    <data>
+        <display>
+        <title>编码练习——Java-2-流程控制</title>
+        <pubTime>2016-08-11T05:05:00.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程语言" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+          
+             
+              <breadCrumb title="Java" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/08/10/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-1-%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2016-11-06T16:30:24.752Z</lastmod>
+    <data>
+        <display>
+        <title>编码练习——Java-1-基础</title>
+        <pubTime>2016-08-10T05:05:00.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程语言" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+          
+             
+              <breadCrumb title="Java" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/11/03/Xshell%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B%E2%80%94%E2%80%94%E9%97%AE%E7%AD%94%E6%96%B9%E5%BC%8F/</loc>
+    <lastmod>2016-11-06T16:30:19.239Z</lastmod>
+    <data>
+        <display>
+        <title>Xshell使用教程——问答方式</title>
+        <pubTime>2015-11-03T06:03:00.000Z</pubTime>
+        
+        <tag>Xshell</tag>
+         
+        <tag>Windows</tag>
+         
+         
+           
+             
+              <breadCrumb title="Windows" url="http://zhangxuezhi.com/categories/Windows/"/>
+          
+             
+              <breadCrumb title="软件" url="http://zhangxuezhi.com/categories/Windows/%E8%BD%AF%E4%BB%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/11/03/Xftp%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B%E2%80%94%E2%80%94%E9%97%AE%E7%AD%94%E6%96%B9%E5%BC%8F/</loc>
+    <lastmod>2016-11-06T16:30:12.151Z</lastmod>
+    <data>
+        <display>
+        <title>Xftp使用教程——问答方式</title>
+        <pubTime>2015-11-03T06:59:00.000Z</pubTime>
+        
+        <tag>Windows</tag>
+         
+        <tag>Xftp</tag>
+         
+         
+           
+             
+              <breadCrumb title="Windows" url="http://zhangxuezhi.com/categories/Windows/"/>
+          
+             
+              <breadCrumb title="软件" url="http://zhangxuezhi.com/categories/Windows/%E8%BD%AF%E4%BB%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/09/14/windows%E4%BD%BF%E7%94%A8VNC%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AEUbuntu%20Server%2014.04%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2/</loc>
+    <lastmod>2016-11-06T16:30:09.280Z</lastmod>
+    <data>
+        <display>
+        <title>windows使用VNC远程访问Ubuntu Server 14.04图形界面</title>
+        <pubTime>2015-09-14T06:29:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>Windows</tag>
+         
+        <tag>VNC</tag>
+         
+         
+           
+             
+              <breadCrumb title="Windows" url="http://zhangxuezhi.com/categories/Windows/"/>
+          
+             
+              <breadCrumb title="经验" url="http://zhangxuezhi.com/categories/Windows/%E7%BB%8F%E9%AA%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/03/23/Windows%E5%8A%9E%E5%85%AC%E6%8A%80%E8%83%BD%E2%80%94%E2%80%94%E5%9C%A8%E5%BD%93%E5%89%8D%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%AD%E6%89%93%E5%BC%80%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%AA%97%E5%8F%A3/</loc>
+    <lastmod>2016-11-06T16:30:04.264Z</lastmod>
+    <data>
+        <display>
+        <title>Windows办公技能——在当前文件夹中打开命令行窗口</title>
+        <pubTime>2016-03-23T05:33:00.000Z</pubTime>
+        
+        <tag>Windows</tag>
+         
+        <tag>命令行</tag>
+         
+         
+           
+             
+              <breadCrumb title="Windows" url="http://zhangxuezhi.com/categories/Windows/"/>
+          
+             
+              <breadCrumb title="经验" url="http://zhangxuezhi.com/categories/Windows/%E7%BB%8F%E9%AA%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/07/16/VMware%E7%9A%84%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%97%A0%E6%B3%95ping%E5%88%B0/</loc>
+    <lastmod>2016-11-06T16:30:00.847Z</lastmod>
+    <data>
+        <display>
+        <title>VMware的虚拟机无法ping到</title>
+        <pubTime>2015-07-16T06:44:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>VMware</tag>
+         
+        <tag>ping</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="经验" url="http://zhangxuezhi.com/categories/Linux/%E7%BB%8F%E9%AA%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/03/28/Visual%20Studio%E2%80%94%E2%80%94%E8%AE%BE%E7%BD%AE%E7%BC%A9%E8%BF%9B/</loc>
+    <lastmod>2016-11-06T16:29:57.079Z</lastmod>
+    <data>
+        <display>
+        <title>Visual Studio——设置缩进</title>
+        <pubTime>2016-03-28T05:33:00.000Z</pubTime>
+        
+        <tag>Visual Studio</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程工具" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/"/>
+          
+             
+              <breadCrumb title="VS" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/VS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/09/14/U%E7%9B%98%E5%AE%89%E8%A3%85Ubuntu%20Server%20%EF%BC%8CCD-ROM%E8%87%AA%E6%A3%80%EF%BC%8C%E5%AE%89%E8%A3%85%E5%A4%B1%E8%B4%A5/</loc>
+    <lastmod>2016-11-06T16:29:53.304Z</lastmod>
+    <data>
+        <display>
+        <title>U盘安装Ubuntu Server ，CD-ROM自检，安装失败</title>
+        <pubTime>2015-09-14T06:27:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="经验" url="http://zhangxuezhi.com/categories/Linux/%E7%BB%8F%E9%AA%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/07/28/ubuntu%E4%B8%ADapt-get%E5%AE%89%E8%A3%85%E4%B8%8E%E9%BB%98%E8%AE%A4%E8%B7%AF%E5%BE%84/</loc>
+    <lastmod>2016-11-06T16:29:50.096Z</lastmod>
+    <data>
+        <display>
+        <title>ubuntu中apt-get安装与默认路径</title>
+        <pubTime>2015-07-28T06:37:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="经验" url="http://zhangxuezhi.com/categories/Linux/%E7%BB%8F%E9%AA%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/06/29/Ubuntu%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2016-11-06T16:29:44.551Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu使用过程中遇到的问题</title>
+        <pubTime>2015-06-29T06:48:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>学习笔记</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="经验" url="http://zhangxuezhi.com/categories/Linux/%E7%BB%8F%E9%AA%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/07/14/Ubuntu-%E5%AE%89%E8%A3%85-%E6%9C%89%E9%81%93%E8%AF%8D%E5%85%B8/</loc>
+    <lastmod>2016-11-06T16:29:40.855Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu-安装-有道词典</title>
+        <pubTime>2015-07-14T06:47:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>安装和配置软件</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="安装和配置软件" url="http://zhangxuezhi.com/categories/Linux/%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/07/31/Ubuntu-%E5%AE%89%E8%A3%85-%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95-%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2016-11-06T16:29:37.624Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu-安装-搜狗输入法-详细教程</title>
+        <pubTime>2015-07-31T06:34:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>安装和配置软件</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="安装和配置软件" url="http://zhangxuezhi.com/categories/Linux/%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/09/17/Ubuntu-%E5%AE%89%E8%A3%85-theano+caffe-%E8%B6%85%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2016-11-06T16:29:34.296Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu-安装-theano+caffe-超详细教程</title>
+        <pubTime>2015-09-17T06:24:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>安装和配置软件</tag>
+         
+        <tag>深度学习</tag>
+         
+        <tag>theano</tag>
+         
+        <tag>caffe</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="安装和配置软件" url="http://zhangxuezhi.com/categories/Linux/%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/07/31/Ubuntu-%E5%AE%89%E8%A3%85-Shadowsocks/</loc>
+    <lastmod>2016-11-06T16:29:30.952Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu-安装-Shadowsocks</title>
+        <pubTime>2015-07-31T06:32:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>安装和配置软件</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="安装和配置软件" url="http://zhangxuezhi.com/categories/Linux/%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/07/14/Ubuntu-%E5%AE%89%E8%A3%85-Python%E5%8C%85/</loc>
+    <lastmod>2016-11-06T16:29:27.767Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu-安装-Python包</title>
+        <pubTime>2015-07-14T06:47:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>安装和配置软件</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="安装和配置软件" url="http://zhangxuezhi.com/categories/Linux/%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/08/02/Ubuntu-%E5%AE%89%E8%A3%85-cuda7.0-%E5%8D%95%E6%98%BE%E5%8D%A1-%E8%B6%85%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2016-11-06T16:29:24.295Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu-安装-cuda7.0-单显卡-超详细教程</title>
+        <pubTime>2015-08-02T06:31:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>安装和配置软件</tag>
+         
+        <tag>深度学习</tag>
+         
+        <tag>cuda</tag>
+         
+         
+           
+             
+              <breadCrumb title="深度学习" url="http://zhangxuezhi.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+          
+             
+              <breadCrumb title="cuda" url="http://zhangxuezhi.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/cuda/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/07/31/Ubuntu-%E5%AE%89%E8%A3%85-Chrome/</loc>
+    <lastmod>2016-11-06T16:29:20.160Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu-安装-Chrome</title>
+        <pubTime>2015-07-31T06:34:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>安装和配置软件</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="安装和配置软件" url="http://zhangxuezhi.com/categories/Linux/%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/11/19/Ubuntu14.04%E5%AE%89%E8%A3%85Theano%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2016-11-06T16:29:16.264Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu14.04安装Theano详细教程</title>
+        <pubTime>2015-11-19T05:40:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>安装和配置软件</tag>
+         
+        <tag>深度学习</tag>
+         
+        <tag>theano</tag>
+         
+         
+           
+             
+              <breadCrumb title="深度学习" url="http://zhangxuezhi.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+          
+             
+              <breadCrumb title="Theano" url="http://zhangxuezhi.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/Theano/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/09/22/Ubuntu%20Server%20%E6%B7%BB%E5%8A%A0%E3%80%81%E5%88%A0%E9%99%A4%E5%92%8C%E4%BF%AE%E6%94%B9%E7%94%A8%E6%88%B7/</loc>
+    <lastmod>2016-11-06T16:29:12.448Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu Server 添加、删除和修改用户</title>
+        <pubTime>2015-09-22T06:21:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="经验" url="http://zhangxuezhi.com/categories/Linux/%E7%BB%8F%E9%AA%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/09/14/Ubuntu%20Server%2014.04%E5%AE%89%E8%A3%85Gnome%E6%A1%8C%E9%9D%A2%E7%8E%AF%E5%A2%83/</loc>
+    <lastmod>2016-11-06T16:29:09.456Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu Server 14.04安装Gnome桌面环境</title>
+        <pubTime>2015-09-14T06:26:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>安装和配置软件</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="安装和配置软件" url="http://zhangxuezhi.com/categories/Linux/%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/09/15/Ubuntu%2014.04%2064bit%20%E5%AE%89%E8%A3%8532%E4%BD%8D%E5%85%BC%E5%AE%B9%E5%8C%85/</loc>
+    <lastmod>2016-11-06T16:29:06.128Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu 14.04 64bit 安装32位兼容包</title>
+        <pubTime>2015-09-15T06:26:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>安装和配置软件</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="安装和配置软件" url="http://zhangxuezhi.com/categories/Linux/%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/07/17/tar-Exiting%20with%20failure%20status%20due%20to%20previous%20errors/</loc>
+    <lastmod>2016-11-06T16:29:02.248Z</lastmod>
+    <data>
+        <display>
+        <title>tar:Exiting with failure status due to previous errors</title>
+        <pubTime>2015-07-17T06:43:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>错误</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="经验" url="http://zhangxuezhi.com/categories/Linux/%E7%BB%8F%E9%AA%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/06/28/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E6%9C%AA%E5%AE%8C)/</loc>
+    <lastmod>2016-11-06T16:28:58.920Z</lastmod>
+    <data>
+        <display>
+        <title>Python学习笔记(未完)</title>
+        <pubTime>2015-06-28T06:50:00.000Z</pubTime>
+        
+        <tag>学习笔记</tag>
+         
+        <tag>Python</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程语言" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+          
+             
+              <breadCrumb title="Python" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/09/21/Putty%E4%BD%BF%E7%94%A8%E8%AE%BE%E7%BD%AE/</loc>
+    <lastmod>2016-11-06T16:28:55.624Z</lastmod>
+    <data>
+        <display>
+        <title>Putty使用设置</title>
+        <pubTime>2015-09-21T06:23:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>Putty</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="经验" url="http://zhangxuezhi.com/categories/Linux/%E7%BB%8F%E9%AA%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E7%A7%BB%E5%8A%A8%E7%AB%8B%E6%96%B9%E4%BD%93%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2016-11-06T16:28:48.904Z</lastmod>
+    <data>
+        <display>
+        <title>PCL系列——三维重构之移动立方体算法</title>
+        <pubTime>2016-04-01T05:24:00.000Z</pubTime>
+        
+        <tag>PCL</tag>
+         
+        <tag>三维重构</tag>
+         
+         
+           
+             
+              <breadCrumb title="图像处理" url="http://zhangxuezhi.com/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+          
+             
+              <breadCrumb title="PCL" url="http://zhangxuezhi.com/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/PCL/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E8%B4%AA%E5%A9%AA%E4%B8%89%E8%A7%92%E6%8A%95%E5%BD%B1%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2016-11-06T16:28:45.456Z</lastmod>
+    <data>
+        <display>
+        <title>PCL系列——三维重构之贪婪三角投影算法</title>
+        <pubTime>2016-04-01T05:24:00.000Z</pubTime>
+        
+        <tag>PCL</tag>
+         
+        <tag>三维重构</tag>
+         
+         
+           
+             
+              <breadCrumb title="图像处理" url="http://zhangxuezhi.com/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+          
+             
+              <breadCrumb title="PCL" url="http://zhangxuezhi.com/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/PCL/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E6%B3%8A%E6%9D%BE%E9%87%8D%E6%9E%84/</loc>
+    <lastmod>2016-11-06T16:28:39.648Z</lastmod>
+    <data>
+        <display>
+        <title>PCL系列——三维重构之泊松重构</title>
+        <pubTime>2016-04-01T05:24:00.000Z</pubTime>
+        
+        <tag>PCL</tag>
+         
+        <tag>三维重构</tag>
+         
+         
+           
+             
+              <breadCrumb title="图像处理" url="http://zhangxuezhi.com/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+          
+             
+              <breadCrumb title="PCL" url="http://zhangxuezhi.com/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/PCL/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E9%80%90%E6%B8%90%E5%9C%B0%E9%85%8D%E5%87%86%E4%B8%80%E5%AF%B9%E7%82%B9%E4%BA%91/</loc>
+    <lastmod>2016-11-06T16:28:36.672Z</lastmod>
+    <data>
+        <display>
+        <title>PCL系列——如何逐渐地配准一对点云</title>
+        <pubTime>2016-04-01T05:24:00.000Z</pubTime>
+        
+        <tag>PCL</tag>
+         
+        <tag>配准</tag>
+         
+         
+           
+             
+              <breadCrumb title="图像处理" url="http://zhangxuezhi.com/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+          
+             
+              <breadCrumb title="PCL" url="http://zhangxuezhi.com/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/PCL/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/03/31/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E8%BF%AD%E4%BB%A3%E6%9C%80%E8%BF%91%E7%82%B9%E6%B3%95%EF%BC%88ICP%EF%BC%89%E9%85%8D%E5%87%86/</loc>
+    <lastmod>2016-11-06T16:28:32.984Z</lastmod>
+    <data>
+        <display>
+        <title>PCL系列——如何使用迭代最近点法（ICP）配准</title>
+        <pubTime>2016-03-31T05:24:00.000Z</pubTime>
+        
+        <tag>PCL</tag>
+         
+        <tag>配准</tag>
+         
+         
+           
+             
+              <breadCrumb title="图像处理" url="http://zhangxuezhi.com/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+          
+             
+              <breadCrumb title="PCL" url="http://zhangxuezhi.com/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/PCL/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E5%8F%AF%E8%A7%86%E5%8C%96%E6%B7%B1%E5%BA%A6%E5%9B%BE%E5%83%8F/</loc>
+    <lastmod>2016-11-06T16:28:30.120Z</lastmod>
+    <data>
+        <display>
+        <title>PCL系列——如何可视化深度图像</title>
+        <pubTime>2016-03-30T05:28:00.000Z</pubTime>
+        
+        <tag>PCL</tag>
+         
+         
+           
+             
+              <breadCrumb title="图像处理" url="http://zhangxuezhi.com/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+          
+             
+              <breadCrumb title="PCL" url="http://zhangxuezhi.com/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/PCL/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/04/20/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%B9%B3%E9%9D%A2%E6%A8%A1%E5%9E%8B%E5%88%86%E5%89%B2/</loc>
+    <lastmod>2016-11-06T16:28:27.496Z</lastmod>
+    <data>
+        <display>
+        <title>PCL系列——平面模型分割</title>
+        <pubTime>2016-04-20T05:24:00.000Z</pubTime>
+        
+        <tag>PCL</tag>
+         
+         
+           
+             
+              <breadCrumb title="图像处理" url="http://zhangxuezhi.com/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+          
+             
+              <breadCrumb title="PCL" url="http://zhangxuezhi.com/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/PCL/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%B0%86%E7%82%B9%E4%BA%91%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5PCD%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/</loc>
+    <lastmod>2016-11-06T16:28:24.593Z</lastmod>
+    <data>
+        <display>
+        <title>PCL系列——将点云数据写入PCD格式文件</title>
+        <pubTime>2016-03-30T05:30:00.000Z</pubTime>
+        
+        <tag>PCL</tag>
+         
+         
+           
+             
+              <breadCrumb title="图像处理" url="http://zhangxuezhi.com/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+          
+             
+              <breadCrumb title="PCL" url="http://zhangxuezhi.com/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/PCL/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E8%AF%BB%E5%85%A5PCD%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/</loc>
+    <lastmod>2016-11-06T16:28:21.728Z</lastmod>
+    <data>
+        <display>
+        <title>PCL系列——读入PCD格式文件</title>
+        <pubTime>2016-03-30T05:24:00.000Z</pubTime>
+        
+        <tag>PCL</tag>
+         
+         
+           
+             
+              <breadCrumb title="图像处理" url="http://zhangxuezhi.com/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+          
+             
+              <breadCrumb title="PCL" url="http://zhangxuezhi.com/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/PCL/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%BB%8E%E6%B7%B1%E5%BA%A6%E5%9B%BE%E5%83%8F(RangeImage)%E4%B8%AD%E6%8F%90%E5%8F%96NARF%E5%85%B3%E9%94%AE%E7%82%B9/</loc>
+    <lastmod>2016-11-06T16:28:18.521Z</lastmod>
+    <data>
+        <display>
+        <title>PCL系列——从深度图像(RangeImage)中提取NARF关键点</title>
+        <pubTime>2016-03-30T05:24:00.000Z</pubTime>
+        
+        <tag>PCL</tag>
+         
+        <tag>关键点</tag>
+         
+         
+           
+             
+              <breadCrumb title="图像处理" url="http://zhangxuezhi.com/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+          
+             
+              <breadCrumb title="PCL" url="http://zhangxuezhi.com/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/PCL/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/07/25/Matlab%E5%B7%A5%E5%85%B7%E7%AE%B1%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80%E6%B1%87%E6%80%BB/</loc>
+    <lastmod>2016-11-06T16:27:55.104Z</lastmod>
+    <data>
+        <display>
+        <title>Matlab工具箱下载地址汇总</title>
+        <pubTime>2015-07-25T06:40:00.000Z</pubTime>
+        
+        <tag>Matlab</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程语言" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+          
+             
+              <breadCrumb title="Matlab" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Matlab/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/08/24/MatConvNet%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2016-11-06T16:27:49.992Z</lastmod>
+    <data>
+        <display>
+        <title>MatConvNet学习笔记</title>
+        <pubTime>2015-08-24T06:30:00.000Z</pubTime>
+        
+        <tag>深度学习</tag>
+         
+        <tag>MatConvNet</tag>
+         
+         
+           
+             
+              <breadCrumb title="深度学习" url="http://zhangxuezhi.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+          
+             
+              <breadCrumb title="MatConvNet" url="http://zhangxuezhi.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/MatConvNet/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/06/24/Markdown-%E8%AF%AD%E6%B3%95-%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2016-11-06T16:27:46.529Z</lastmod>
+    <data>
+        <display>
+        <title>Markdown-语法-笔记</title>
+        <pubTime>2015-06-24T06:51:00.000Z</pubTime>
+        
+        <tag>学习笔记</tag>
+         
+        <tag>Markdown</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程语言" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+          
+             
+              <breadCrumb title="Markdown" url="http://zhangxuezhi.com/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Markdown/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/11/13/Linux%E7%BB%88%E7%AB%AF%E6%8F%90%E7%A4%BA%E7%AC%A6%E6%98%BE%E7%A4%BA%E9%A2%9C%E8%89%B2/</loc>
+    <lastmod>2016-11-06T16:27:43.329Z</lastmod>
+    <data>
+        <display>
+        <title>Linux终端提示符显示颜色</title>
+        <pubTime>2015-11-13T05:42:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>终端</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="经验" url="http://zhangxuezhi.com/categories/Linux/%E7%BB%8F%E9%AA%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/06/28/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2016-11-06T16:27:39.096Z</lastmod>
+    <data>
+        <display>
+        <title>Linux学习笔记</title>
+        <pubTime>2015-06-28T06:49:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>学习笔记</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="学习笔记" url="http://zhangxuezhi.com/categories/Linux/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/11/14/Linux%E4%B8%8B%E5%AE%89%E8%A3%85Eclipse/</loc>
+    <lastmod>2016-11-06T16:27:35.617Z</lastmod>
+    <data>
+        <display>
+        <title>Linux下安装Eclipse</title>
+        <pubTime>2015-11-14T05:42:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>安装和配置软件</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="安装和配置软件" url="http://zhangxuezhi.com/categories/Linux/%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/11/04/Linux%E5%91%BD%E4%BB%A4%E2%80%94%E2%80%94whoami/</loc>
+    <lastmod>2016-11-06T16:27:32.497Z</lastmod>
+    <data>
+        <display>
+        <title>Linux命令——whoami</title>
+        <pubTime>2015-11-04T05:59:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>命令</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="命令" url="http://zhangxuezhi.com/categories/Linux/%E5%91%BD%E4%BB%A4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/11/04/Linux%E5%91%BD%E4%BB%A4%E2%80%94%E2%80%94who/</loc>
+    <lastmod>2016-11-06T16:27:28.729Z</lastmod>
+    <data>
+        <display>
+        <title>Linux命令——who</title>
+        <pubTime>2015-11-04T05:59:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>命令</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="命令" url="http://zhangxuezhi.com/categories/Linux/%E5%91%BD%E4%BB%A4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/11/04/Linux%E5%91%BD%E4%BB%A4%E2%80%94%E2%80%94w/</loc>
+    <lastmod>2016-11-06T16:27:25.560Z</lastmod>
+    <data>
+        <display>
+        <title>Linux命令——w</title>
+        <pubTime>2015-11-04T06:00:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>命令</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="命令" url="http://zhangxuezhi.com/categories/Linux/%E5%91%BD%E4%BB%A4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/11/04/Linux%E5%91%BD%E4%BB%A4%E2%80%94%E2%80%94visudo/</loc>
+    <lastmod>2016-11-06T16:27:22.496Z</lastmod>
+    <data>
+        <display>
+        <title>Linux命令——visudo</title>
+        <pubTime>2015-11-04T05:58:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>命令</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="命令" url="http://zhangxuezhi.com/categories/Linux/%E5%91%BD%E4%BB%A4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/11/04/Linux%E5%91%BD%E4%BB%A4%E2%80%94%E2%80%94userdel/</loc>
+    <lastmod>2016-11-06T16:27:19.040Z</lastmod>
+    <data>
+        <display>
+        <title>Linux命令——userdel</title>
+        <pubTime>2015-11-04T06:01:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>命令</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="命令" url="http://zhangxuezhi.com/categories/Linux/%E5%91%BD%E4%BB%A4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/11/04/Linux%E5%91%BD%E4%BB%A4%E2%80%94%E2%80%94useradd/</loc>
+    <lastmod>2016-11-06T16:27:15.713Z</lastmod>
+    <data>
+        <display>
+        <title>Linux命令——useradd</title>
+        <pubTime>2015-11-04T06:02:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>命令</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="命令" url="http://zhangxuezhi.com/categories/Linux/%E5%91%BD%E4%BB%A4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/11/04/Linux%E5%91%BD%E4%BB%A4%E2%80%94%E2%80%94uname/</loc>
+    <lastmod>2016-11-06T16:27:11.585Z</lastmod>
+    <data>
+        <display>
+        <title>Linux命令——uname</title>
+        <pubTime>2015-11-04T05:58:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>命令</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="命令" url="http://zhangxuezhi.com/categories/Linux/%E5%91%BD%E4%BB%A4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/11/04/Linux%E5%91%BD%E4%BB%A4%E2%80%94%E2%80%94unalias/</loc>
+    <lastmod>2016-11-06T16:27:08.273Z</lastmod>
+    <data>
+        <display>
+        <title>Linux命令——unalias</title>
+        <pubTime>2015-11-04T05:46:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>命令</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="命令" url="http://zhangxuezhi.com/categories/Linux/%E5%91%BD%E4%BB%A4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/11/05/Linux%E5%91%BD%E4%BB%A4%E2%80%94%E2%80%94find/</loc>
+    <lastmod>2016-11-06T16:27:04.800Z</lastmod>
+    <data>
+        <display>
+        <title>Linux命令——find</title>
+        <pubTime>2015-11-05T05:45:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>命令</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="命令" url="http://zhangxuezhi.com/categories/Linux/%E5%91%BD%E4%BB%A4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/11/05/Linux%E5%91%BD%E4%BB%A4%E2%80%94%E2%80%94diff/</loc>
+    <lastmod>2016-11-06T16:26:59.385Z</lastmod>
+    <data>
+        <display>
+        <title>Linux命令——diff</title>
+        <pubTime>2015-11-05T05:44:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>命令</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="命令" url="http://zhangxuezhi.com/categories/Linux/%E5%91%BD%E4%BB%A4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/11/04/Linux%E5%91%BD%E4%BB%A4%E2%80%94%E2%80%94awk/</loc>
+    <lastmod>2016-11-06T16:26:54.921Z</lastmod>
+    <data>
+        <display>
+        <title>Linux命令——awk</title>
+        <pubTime>2015-11-04T05:45:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>命令</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="命令" url="http://zhangxuezhi.com/categories/Linux/%E5%91%BD%E4%BB%A4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/11/04/Linux%E5%91%BD%E4%BB%A4%E2%80%94%E2%80%94alias/</loc>
+    <lastmod>2016-11-06T16:26:51.098Z</lastmod>
+    <data>
+        <display>
+        <title>Linux命令——alias</title>
+        <pubTime>2015-11-04T05:47:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>命令</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="命令" url="http://zhangxuezhi.com/categories/Linux/%E5%91%BD%E4%BB%A4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/11/04/Linux%E5%91%BD%E4%BB%A4%E2%80%94%E2%80%94adduser/</loc>
+    <lastmod>2016-11-06T16:26:47.976Z</lastmod>
+    <data>
+        <display>
+        <title>Linux命令——adduser</title>
+        <pubTime>2015-11-04T06:00:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>命令</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="命令" url="http://zhangxuezhi.com/categories/Linux/%E5%91%BD%E4%BB%A4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/09/22/Linux%20shell%E5%88%A4%E6%96%AD%E6%96%87%E4%BB%B6%E5%92%8C%E6%96%87%E4%BB%B6%E5%A4%B9%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8/</loc>
+    <lastmod>2016-11-06T16:26:43.841Z</lastmod>
+    <data>
+        <display>
+        <title>Linux shell判断文件和文件夹是否存在</title>
+        <pubTime>2015-09-22T06:19:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>shell</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+             
+              <breadCrumb title="经验" url="http://zhangxuezhi.com/categories/Linux/%E7%BB%8F%E9%AA%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhangxuezhi.com/2015/09/22/%E5%9C%A8VNC%E4%B8%ADXfce4%E4%B8%ADTab%E9%94%AE%E5%A4%B1%E6%95%88%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2016-11-06T16:22:28.843Z</lastmod>
+    <data>
+        <display>
+        <title>在VNC中Xfce4中Tab键失效的解决方法</title>
+        <pubTime>2015-09-22T06:19:00.000Z</pubTime>
+        
+        <tag>VNC</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://zhangxuezhi.com/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+    
+</urlset>

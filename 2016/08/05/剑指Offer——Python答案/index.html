@@ -1,0 +1,1100 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next pisces">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Python,编程语言,剑指Offer," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="学志の博客" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="说明
+《剑指Offer》书中所有题目的答案是C++语言编写的。本人在牛客网上做题时，用Python编写了一套答案，整理如下。
+《剑指Offer》在线刷题网址：牛客网-剑指Offer
+牛客网上的剑指Offer题目有一点需要说明：题目不是完全一样，具体要求有点小的改动。不知道是故意为之，还没认真输入题目。
+
+题目二维数组中的查找
+第一种方法：
+
+1234567891011# 借助于in# -*- co">
+<meta property="og:type" content="article">
+<meta property="og:title" content="剑指Offer——Python答案">
+<meta property="og:url" content="http://zhangxuezhi.com/2016/08/05/剑指Offer——Python答案/index.html">
+<meta property="og:site_name" content="学志の博客">
+<meta property="og:description" content="说明
+《剑指Offer》书中所有题目的答案是C++语言编写的。本人在牛客网上做题时，用Python编写了一套答案，整理如下。
+《剑指Offer》在线刷题网址：牛客网-剑指Offer
+牛客网上的剑指Offer题目有一点需要说明：题目不是完全一样，具体要求有点小的改动。不知道是故意为之，还没认真输入题目。
+
+题目二维数组中的查找
+第一种方法：
+
+1234567891011# 借助于in# -*- co">
+<meta property="og:updated_time" content="2016-11-06T16:31:29.728Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="剑指Offer——Python答案">
+<meta name="twitter:description" content="说明
+《剑指Offer》书中所有题目的答案是C++语言编写的。本人在牛客网上做题时，用Python编写了一套答案，整理如下。
+《剑指Offer》在线刷题网址：牛客网-剑指Offer
+牛客网上的剑指Offer题目有一点需要说明：题目不是完全一样，具体要求有点小的改动。不知道是故意为之，还没认真输入题目。
+
+题目二维数组中的查找
+第一种方法：
+
+1234567891011# 借助于in# -*- co">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '13664197',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://zhangxuezhi.com/2016/08/05/剑指Offer——Python答案/"/>
+
+
+  <title> 剑指Offer——Python答案 | 学志の博客 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-86892026-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?bb56a0fd60eeb517330f8b1bbaad2dc4";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">学志の博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">记录学习的技能和遇到的问题</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'fzTkQ4sTRYdzmXMx-fab','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                剑指Offer——Python答案
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-05T13:18:00+08:00" content="2016-08-05">
+              2016-08-05
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程语言/" itemprop="url" rel="index">
+                    <span itemprop="name">编程语言</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程语言/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/05/剑指Offer——Python答案/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/05/剑指Offer——Python答案/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv"><i class="fa fa-eye"></i>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>人阅读
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><ul>
+<li>《剑指Offer》书中所有题目的答案是C++语言编写的。本人在<a href="http://www.nowcoder.com/activity/oj" target="_blank" rel="external">牛客网</a>上做题时，用Python编写了一套答案，整理如下。</li>
+<li>《剑指Offer》在线刷题网址：<a href="http://www.nowcoder.com/ta/coding-interviews?page=1" target="_blank" rel="external">牛客网-剑指Offer</a></li>
+<li>牛客网上的剑指Offer题目有一点需要说明：题目不是完全一样，具体要求有点小的改动。不知道是故意为之，还没认真输入题目。</li>
+</ul>
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><h2 id="二维数组中的查找"><a href="#二维数组中的查找" class="headerlink" title="二维数组中的查找"></a>二维数组中的查找</h2><ul>
+<li>第一种方法：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 借助于in</span></div><div class="line"><span class="comment"># -*- coding:utf-8 -*-</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="comment"># array 二维列表</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">Find</span><span class="params">(self, array, target)</span>:</span></div><div class="line">        <span class="comment"># write code here</span></div><div class="line">        flag = <span class="keyword">False</span></div><div class="line">        <span class="keyword">for</span> index <span class="keyword">in</span> range(len(array)):</div><div class="line">            <span class="keyword">if</span> target <span class="keyword">in</span> array[index]:</div><div class="line">                flag = <span class="keyword">True</span></div><div class="line">        <span class="keyword">return</span> flag</div></pre></td></tr></table></figure>
+<ul>
+<li>第二种方法：<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 线性复杂度</span></div><div class="line"><span class="comment"># -*- coding:utf-8 -*-</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="comment"># array 二维列表</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">Find</span><span class="params">(self, array, target)</span>:</span></div><div class="line">        <span class="comment"># write code here</span></div><div class="line">        <span class="comment"># 标识变量</span></div><div class="line">        found = <span class="keyword">False</span></div><div class="line">        <span class="comment"># 检查输入 None，空数组</span></div><div class="line">        <span class="keyword">if</span> array == <span class="keyword">None</span>:</div><div class="line">            <span class="keyword">return</span> found</div><div class="line">        nRow = len(array)</div><div class="line">        nCol = len(array[<span class="number">0</span>])</div><div class="line">        <span class="comment"># 右上角位置</span></div><div class="line">        row = <span class="number">0</span></div><div class="line">        col =  nCol<span class="number">-1</span></div><div class="line">        <span class="comment"># 从右上角遍历</span></div><div class="line">        <span class="keyword">while</span> (row&lt;nRow) <span class="keyword">and</span> (col&gt;=<span class="number">0</span>):</div><div class="line">            <span class="keyword">if</span> array[row][col] ==  target:</div><div class="line">            	found = <span class="keyword">True</span></div><div class="line">                <span class="keyword">break</span></div><div class="line">            <span class="keyword">elif</span> array[row][col] &gt;  target:</div><div class="line">                col = col<span class="number">-1</span></div><div class="line">            <span class="keyword">else</span>:</div><div class="line">                row = row+<span class="number">1</span></div><div class="line">        <span class="keyword">return</span> found</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="替换空格"><a href="#替换空格" class="headerlink" title="替换空格"></a>替换空格</h2><ul>
+<li><p>第一种方法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding:utf-8 -*-</span></div><div class="line"><span class="comment"># 线性空间复杂度</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="comment"># s 源字符串</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">replaceSpace</span><span class="params">(self, s)</span>:</span></div><div class="line">        <span class="comment"># write code here</span></div><div class="line">        <span class="keyword">if</span> s == <span class="keyword">None</span>:</div><div class="line">            <span class="keyword">return</span> <span class="keyword">None</span></div><div class="line">        <span class="keyword">if</span> len(s) == <span class="number">0</span>:</div><div class="line">            <span class="keyword">return</span> <span class="string">''</span></div><div class="line">        result = <span class="string">''</span></div><div class="line">        <span class="keyword">for</span> item <span class="keyword">in</span> s:</div><div class="line">            <span class="keyword">if</span> item.isspace():</div><div class="line">            	result = result+<span class="string">'%20'</span></div><div class="line">            <span class="keyword">else</span>:</div><div class="line">                result = result+item</div><div class="line">        <span class="keyword">return</span> result</div></pre></td></tr></table></figure>
+</li>
+<li><p>第二种方法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding:utf-8 -*-</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="comment"># s 源字符串</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">replaceSpace</span><span class="params">(self, s)</span>:</span></div><div class="line">        <span class="comment"># write code here</span></div><div class="line">        <span class="keyword">return</span> s.replace(<span class="string">' '</span>, <span class="string">'%20'</span>)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="从头到尾打印链表"><a href="#从头到尾打印链表" class="headerlink" title="从头到尾打印链表"></a>从头到尾打印链表</h2><ul>
+<li><p>第一种方法：使用insert()方法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding:utf-8 -*-</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="comment"># 返回从尾部到头部的列表值序列，例如[1,2,3]</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">printListFromTailToHead</span><span class="params">(self, listNode)</span>:</span></div><div class="line">        <span class="comment"># write code here</span></div><div class="line">        L = []</div><div class="line">        head = listNode</div><div class="line">        <span class="keyword">while</span> head:</div><div class="line">            L.insert(<span class="number">0</span>, head.val)</div><div class="line">            head = head.next</div><div class="line">        <span class="keyword">return</span> L</div></pre></td></tr></table></figure>
+</li>
+<li><p>第二种方法：使用append()和reverse()</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding:utf-8 -*-</span></div><div class="line"><span class="comment"># 假定是个栈结构，append移动元素少</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="comment"># 返回从尾部到头部的列表值序列，例如[1,2,3]</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">printListFromTailToHead</span><span class="params">(self, listNode)</span>:</span></div><div class="line">        <span class="comment"># write code here</span></div><div class="line">        L = []</div><div class="line">        head = listNode</div><div class="line">        <span class="keyword">while</span> head:</div><div class="line">            L.append(head.val)</div><div class="line">            head = head.next</div><div class="line">        L.reverse()</div><div class="line">        <span class="keyword">return</span> L</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="重建二叉树"><a href="#重建二叉树" class="headerlink" title="重建二叉树"></a>重建二叉树</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding:utf-8 -*-</span></div><div class="line"><span class="comment"># class TreeNode:</span></div><div class="line"><span class="comment">#     def __init__(self, x):</span></div><div class="line"><span class="comment">#         self.val = x</span></div><div class="line"><span class="comment">#         self.left = None</span></div><div class="line"><span class="comment">#         self.right = None</span></div><div class="line"></div><div class="line">    </div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="comment"># 返回构造的TreeNode根节点</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reConstructBinaryTree</span><span class="params">(self, pre, tin)</span>:</span></div><div class="line">        <span class="comment"># write code here</span></div><div class="line">        <span class="keyword">if</span> (len(pre) == <span class="number">0</span>) <span class="keyword">or</span> (len(tin) == <span class="number">0</span>):</div><div class="line">            <span class="keyword">return</span> <span class="keyword">None</span></div><div class="line">            </div><div class="line">        rootValue = pre[<span class="number">0</span>]</div><div class="line">        root = TreeNode(rootValue)</div><div class="line">        <span class="keyword">if</span> len(pre)==<span class="number">1</span>:</div><div class="line">            <span class="keyword">return</span> root</div><div class="line">        rootTinIndex = <span class="number">0</span></div><div class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(tin)):</div><div class="line">            <span class="keyword">if</span> tin[i] == rootValue:</div><div class="line">                rootTinIndex = i</div><div class="line">        preStart = <span class="number">1</span></div><div class="line">        preEnd = rootTinIndex+<span class="number">1</span></div><div class="line">        tinStart = <span class="number">0</span></div><div class="line">        tinEnd = rootTinIndex</div><div class="line">        <span class="keyword">if</span> rootTinIndex &gt; <span class="number">0</span>:</div><div class="line">            root.left = self.reConstructBinaryTree(pre[preStart:preEnd], tin[tinStart:tinEnd])</div><div class="line">        <span class="keyword">if</span> rootTinIndex &lt; len(pre):</div><div class="line">            root.right = self.reConstructBinaryTree(pre[preEnd:], tin[tinEnd+<span class="number">1</span>:])</div><div class="line">        <span class="keyword">return</span> root</div></pre></td></tr></table></figure>
+<h2 id="用两个栈实现队列"><a href="#用两个栈实现队列" class="headerlink" title="用两个栈实现队列"></a>用两个栈实现队列</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding:utf-8 -*-</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    stack1 = []</div><div class="line">    stack2 = []</div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">push</span><span class="params">(self, node)</span>:</span></div><div class="line">        <span class="comment"># write code here</span></div><div class="line">        self.stack1.append(node)</div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">pop</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="comment"># return xx</span></div><div class="line">        <span class="keyword">if</span> len(self.stack2) !=  <span class="number">0</span>:</div><div class="line">            <span class="keyword">return</span> self.stack2.pop()</div><div class="line">        <span class="keyword">elif</span> len(self.stack1) != <span class="number">0</span>:</div><div class="line">            <span class="keyword">while</span> len(self.stack1):</div><div class="line">            	self.stack2.append(self.stack1.pop())</div><div class="line">            <span class="keyword">return</span> self.stack2.pop()</div></pre></td></tr></table></figure>
+<h2 id="旋转数组的最小数字"><a href="#旋转数组的最小数字" class="headerlink" title="旋转数组的最小数字"></a>旋转数组的最小数字</h2><ul>
+<li><p>第一种方法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding:utf-8 -*-</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">minNumberInRotateArray</span><span class="params">(self, rotateArray)</span>:</span></div><div class="line">        <span class="comment"># write code here</span></div><div class="line">        <span class="keyword">if</span> len(rotateArray) == <span class="number">0</span>:</div><div class="line">            <span class="keyword">return</span> <span class="number">0</span></div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            <span class="keyword">return</span> min(rotateArray)</div></pre></td></tr></table></figure>
+</li>
+<li><p>第二种方法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding:utf-8 -*-</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">minNumberInRotateArray</span><span class="params">(self, rotateArray)</span>:</span></div><div class="line">        <span class="comment"># write code here</span></div><div class="line">        <span class="keyword">if</span> len(rotateArray) == <span class="number">0</span>:</div><div class="line">            <span class="keyword">return</span> <span class="number">0</span></div><div class="line">        <span class="string">'''</span></div><div class="line">        if len(rotateArray) == 1:</div><div class="line">            return rotateArray[0];</div><div class="line">		'''</div><div class="line">        index1 = <span class="number">0</span></div><div class="line">        index2 = len(rotateArray)<span class="number">-1</span></div><div class="line">        indexMid = index1</div><div class="line">        <span class="keyword">while</span> rotateArray[index1] &gt;= rotateArray[index2]:</div><div class="line">            <span class="keyword">if</span> index2-index1 == <span class="number">1</span>:</div><div class="line">                indexMid = index2</div><div class="line">                <span class="keyword">break</span></div><div class="line">            indexMid = (index1+index2)//<span class="number">2</span></div><div class="line">            <span class="keyword">if</span> rotateArray[indexMid] &gt;= rotateArray[index1]:</div><div class="line">                index1 = indexMid</div><div class="line">            <span class="keyword">elif</span> rotateArray[indexMid] &lt;= rotateArray[index2]:</div><div class="line">                index2 = indexMid </div><div class="line">        <span class="keyword">return</span> rotateArray[indexMid]</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="斐波那契数列"><a href="#斐波那契数列" class="headerlink" title="斐波那契数列"></a>斐波那契数列</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding:utf-8 -*-</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">Fibonacci</span><span class="params">(self, n)</span>:</span></div><div class="line">        <span class="comment"># write code here</span></div><div class="line">        N2 = <span class="number">0</span></div><div class="line">        N1 = <span class="number">1</span></div><div class="line">        <span class="keyword">if</span> n&lt;=<span class="number">0</span>:</div><div class="line">            <span class="keyword">return</span> <span class="number">0</span></div><div class="line">        <span class="keyword">if</span> n==<span class="number">1</span>:</div><div class="line">            <span class="keyword">return</span> <span class="number">1</span></div><div class="line">        <span class="keyword">while</span> n&gt;<span class="number">1</span>:</div><div class="line">            N1 = N1+N2</div><div class="line">            N2 = N1-N2</div><div class="line">            n = n<span class="number">-1</span></div><div class="line">        <span class="keyword">return</span> N1</div></pre></td></tr></table></figure>
+<h2 id="跳台阶"><a href="#跳台阶" class="headerlink" title="跳台阶"></a>跳台阶</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding:utf-8 -*-</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">jumpFloor</span><span class="params">(self, number)</span>:</span></div><div class="line">        <span class="comment"># write code here</span></div><div class="line">        N1 = <span class="number">2</span></div><div class="line">        N2 = <span class="number">1</span></div><div class="line">        <span class="keyword">if</span> number==<span class="number">1</span>:</div><div class="line">            <span class="keyword">return</span> <span class="number">1</span></div><div class="line">        <span class="keyword">if</span> number==<span class="number">2</span>:</div><div class="line">            <span class="keyword">return</span> <span class="number">2</span></div><div class="line">        <span class="keyword">while</span> number&gt;<span class="number">2</span>:</div><div class="line">            N1 = N1+N2</div><div class="line">            N2 = N1-N2</div><div class="line">            number = number<span class="number">-1</span></div><div class="line">            </div><div class="line">        <span class="keyword">return</span> N1</div></pre></td></tr></table></figure>
+<h2 id="变态跳台阶"><a href="#变态跳台阶" class="headerlink" title="变态跳台阶"></a>变态跳台阶</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding:utf-8 -*-</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">jumpFloorII</span><span class="params">(self, number)</span>:</span></div><div class="line">        <span class="comment"># write code here</span></div><div class="line">        <span class="comment"># 规律：f(n) = 2^(n-1)</span></div><div class="line">        <span class="keyword">return</span> <span class="number">2</span>**(number<span class="number">-1</span>)</div></pre></td></tr></table></figure>
+<h2 id="矩形覆盖"><a href="#矩形覆盖" class="headerlink" title="矩形覆盖"></a>矩形覆盖</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding:utf-8 -*-</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">rectCover</span><span class="params">(self, number)</span>:</span></div><div class="line">        <span class="comment"># write code here</span></div><div class="line">        <span class="comment"># 菲波那切数列</span></div><div class="line">        N1 = <span class="number">2</span></div><div class="line">        N2 = <span class="number">1</span></div><div class="line">        <span class="keyword">if</span> number &lt;= <span class="number">0</span>:</div><div class="line">            <span class="keyword">return</span> <span class="number">0</span></div><div class="line">        <span class="keyword">if</span> number == <span class="number">1</span>:</div><div class="line">            <span class="keyword">return</span> N2</div><div class="line">        <span class="keyword">if</span> number == <span class="number">2</span>:</div><div class="line">            <span class="keyword">return</span> N1</div><div class="line">        <span class="keyword">while</span> number &gt; <span class="number">2</span>:</div><div class="line">            N1 = N1+N2</div><div class="line">            N2 = N1-N2</div><div class="line">            number -=<span class="number">1</span></div><div class="line">            </div><div class="line">        <span class="keyword">return</span> N1</div></pre></td></tr></table></figure>
+<h2 id="二进制中1的个数"><a href="#二进制中1的个数" class="headerlink" title="二进制中1的个数"></a>二进制中1的个数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding:utf-8 -*-</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">NumberOf1</span><span class="params">(self, n)</span>:</span></div><div class="line">        <span class="comment"># write code here</span></div><div class="line">        flag = <span class="number">1</span></div><div class="line">        print(type(flag))</div><div class="line">        count = <span class="number">0</span></div><div class="line">        <span class="comment"># int 4字节，4x8=32位</span></div><div class="line">        <span class="comment"># python能表示任意大的数字，所以手动限定</span></div><div class="line">        maxBit = <span class="number">32</span></div><div class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(maxBit):</div><div class="line">            <span class="keyword">if</span> n &amp; flag:</div><div class="line">                count += <span class="number">1</span></div><div class="line">            flag = flag &lt;&lt; <span class="number">1</span></div><div class="line">        <span class="keyword">return</span> count</div></pre></td></tr></table></figure>
+<h2 id="数值的整数次方"><a href="#数值的整数次方" class="headerlink" title="数值的整数次方"></a>数值的整数次方</h2><ul>
+<li><p>第一种方法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding:utf-8 -*-</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">Power</span><span class="params">(self, base, exponent)</span>:</span></div><div class="line">        <span class="comment"># write code here</span></div><div class="line">        <span class="keyword">return</span> base ** exponent</div></pre></td></tr></table></figure>
+</li>
+<li><p>第二种方法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding:utf-8 -*-</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">Power</span><span class="params">(self, base, exponent)</span>:</span></div><div class="line">        <span class="comment"># write code here</span></div><div class="line">        result = <span class="number">1.0</span></div><div class="line">        <span class="keyword">if</span> exponent &gt;= <span class="number">0</span>:</div><div class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(exponent):</div><div class="line">            	result *= base</div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(abs(exponent)):</div><div class="line">                result *= base</div><div class="line">            result = <span class="number">1.0</span>/result</div><div class="line">        <span class="keyword">return</span> result</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="调整数组顺序使奇数位于偶数前面"><a href="#调整数组顺序使奇数位于偶数前面" class="headerlink" title="调整数组顺序使奇数位于偶数前面"></a>调整数组顺序使奇数位于偶数前面</h2><ul>
+<li>第一种方法：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding:utf-8 -*-</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reOrderArray</span><span class="params">(self, array)</span>:</span></div><div class="line">        <span class="comment"># write code here</span></div><div class="line">        oddL = [item <span class="keyword">for</span> item <span class="keyword">in</span> array <span class="keyword">if</span> item % <span class="number">2</span>]</div><div class="line">        evenL = [item <span class="keyword">for</span> item <span class="keyword">in</span> array <span class="keyword">if</span> <span class="keyword">not</span> (item % <span class="number">2</span>)]</div><div class="line">        result = oddL + evenL</div><div class="line">        <span class="keyword">return</span> result</div></pre></td></tr></table></figure>
+<ul>
+<li>第二种方法：<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding:utf-8 -*-</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reOrderArray</span><span class="params">(self, array)</span>:</span></div><div class="line">        <span class="comment"># write code here</span></div><div class="line">        oddL = filter(<span class="keyword">lambda</span> x: x%<span class="number">2</span>, array)</div><div class="line">        evenL = filter(<span class="keyword">lambda</span> x:<span class="keyword">not</span> (x%<span class="number">2</span>), array)</div><div class="line">        result = oddL + evenL</div><div class="line">        <span class="keyword">return</span> result</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="链表中倒数第k个结点"><a href="#链表中倒数第k个结点" class="headerlink" title="链表中倒数第k个结点"></a>链表中倒数第k个结点</h2><ul>
+<li><p>第一种方法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding:utf-8 -*-</span></div><div class="line"><span class="comment"># class ListNode:</span></div><div class="line"><span class="comment">#     def __init__(self, x):</span></div><div class="line"><span class="comment">#         self.val = x</span></div><div class="line"><span class="comment">#         self.next = None</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">FindKthToTail</span><span class="params">(self, head, k)</span>:</span></div><div class="line">        <span class="comment"># 检查输入：空表</span></div><div class="line">        <span class="keyword">if</span>  <span class="keyword">not</span> head:</div><div class="line">            <span class="keyword">return</span> head</div><div class="line">        <span class="comment"># 检查输入：k&lt;=0</span></div><div class="line">        <span class="keyword">if</span> k &lt;= <span class="number">0</span>:</div><div class="line">            <span class="keyword">return</span> ListNode(<span class="number">0</span>).next</div><div class="line">        pNode = head</div><div class="line">        p1 = head</div><div class="line">        p2 = head</div><div class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(k<span class="number">-1</span>):</div><div class="line">            <span class="comment"># 检查k大于链表长度的情况</span></div><div class="line">            <span class="keyword">if</span> p1.next:</div><div class="line">            	p1 = p1.next</div><div class="line">            <span class="keyword">else</span>:</div><div class="line">                <span class="keyword">return</span> p1.next</div><div class="line">        <span class="keyword">while</span> p1.next :</div><div class="line">            p1 = p1.next</div><div class="line">            p2 = p2.next</div><div class="line">        <span class="keyword">return</span> p2</div></pre></td></tr></table></figure>
+</li>
+<li><p>第二种方法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding:utf-8 -*-</span></div><div class="line"><span class="comment"># class ListNode:</span></div><div class="line"><span class="comment">#     def __init__(self, x):</span></div><div class="line"><span class="comment">#         self.val = x</span></div><div class="line"><span class="comment">#         self.next = None</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">FindKthToTail</span><span class="params">(self, head, k)</span>:</span></div><div class="line">        <span class="comment"># 检查输入：空表</span></div><div class="line">        <span class="keyword">if</span>  <span class="keyword">not</span> head:</div><div class="line">            <span class="keyword">return</span> head</div><div class="line">        <span class="comment"># 检查输入：k&lt;=0</span></div><div class="line">        <span class="keyword">if</span> k &lt;= <span class="number">0</span>:</div><div class="line">            <span class="keyword">return</span> ListNode(<span class="number">0</span>).next</div><div class="line">        <span class="comment"># 栈</span></div><div class="line">        stack1 = []</div><div class="line">        pNode = head</div><div class="line">        stack1.append(pNode)</div><div class="line">        <span class="keyword">while</span> pNode.next:</div><div class="line">            pNode = pNode.next</div><div class="line">            stack1.append(pNode)</div><div class="line">        <span class="keyword">if</span> k &lt;= len(stack1):</div><div class="line">            <span class="keyword">return</span> stack1[-k]</div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            <span class="keyword">return</span> ListNode(<span class="number">0</span>).next</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="反转链表"><a href="#反转链表" class="headerlink" title="反转链表"></a>反转链表</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding:utf-8 -*-</span></div><div class="line"><span class="comment"># class ListNode:</span></div><div class="line"><span class="comment">#     def __init__(self, x):</span></div><div class="line"><span class="comment">#         self.val = x</span></div><div class="line"><span class="comment">#         self.next = None</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="comment"># 返回ListNode</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">ReverseList</span><span class="params">(self, pHead)</span>:</span></div><div class="line">        <span class="comment"># write code here</span></div><div class="line">        <span class="comment"># 检查输入:空链表</span></div><div class="line">        <span class="keyword">if</span> <span class="keyword">not</span> pHead:</div><div class="line">            <span class="keyword">return</span> pHead</div><div class="line">        pNode = pHead</div><div class="line">        <span class="keyword">while</span> pNode:</div><div class="line">            pAfter = pNode.next</div><div class="line">            <span class="keyword">if</span> <span class="keyword">not</span> pAfter:</div><div class="line">                pReversedHead = pNode</div><div class="line">            <span class="keyword">if</span> pNode == pHead:</div><div class="line">                pNode.next = <span class="keyword">None</span></div><div class="line">            <span class="keyword">else</span>:</div><div class="line">                pNode.next = pBefore</div><div class="line">            pBefore = pNode</div><div class="line">            pNode = pAfter</div><div class="line">        <span class="keyword">return</span> pReversedHead</div></pre></td></tr></table></figure>
+<h2 id="合并两个排序的链表"><a href="#合并两个排序的链表" class="headerlink" title="合并两个排序的链表"></a>合并两个排序的链表</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding:utf-8 -*-</span></div><div class="line"><span class="comment"># class ListNode:</span></div><div class="line"><span class="comment">#     def __init__(self, x):</span></div><div class="line"><span class="comment">#         self.val = x</span></div><div class="line"><span class="comment">#         self.next = None</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="comment"># 返回合并后列表</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">Merge</span><span class="params">(self, pHead1, pHead2)</span>:</span></div><div class="line">        <span class="comment"># 检查输入：空链表</span></div><div class="line">        <span class="keyword">if</span> <span class="keyword">not</span> pHead1:</div><div class="line">            <span class="keyword">return</span> pHead2</div><div class="line">        <span class="keyword">if</span> <span class="keyword">not</span> pHead2:</div><div class="line">            <span class="keyword">return</span> pHead1</div><div class="line">        <span class="comment"># 确定pHead</span></div><div class="line">        pNode1 = pHead1</div><div class="line">        pNode2 = pHead2</div><div class="line">        <span class="keyword">if</span> pNode1.val &lt;= pNode2.val:</div><div class="line">            pNode = pNode1</div><div class="line">            pNode1 = pNode1.next</div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            pNode = pNode2</div><div class="line">            pNode2 = pNode2.next</div><div class="line">        pHead = pNode</div><div class="line">        <span class="keyword">while</span> pNode1 <span class="keyword">or</span> pNode2:</div><div class="line">            <span class="keyword">if</span> <span class="keyword">not</span> pNode1:</div><div class="line">                pNode.next = pNode2</div><div class="line">                pNode2 = pNode2.next</div><div class="line">            <span class="keyword">elif</span> <span class="keyword">not</span> pNode2:</div><div class="line">                pNode.next = pNode1</div><div class="line">                pNode1 = pNode1.next</div><div class="line">            <span class="keyword">else</span>:</div><div class="line">                <span class="keyword">if</span> pNode1.val &lt;= pNode2.val:</div><div class="line">                    pNode.next = pNode1</div><div class="line">                    pNode1 = pNode1.next</div><div class="line">                <span class="keyword">else</span>:</div><div class="line">                    pNode.next = pNode2</div><div class="line">                    pNode2 = pNode2.next</div><div class="line">            pNode = pNode.next</div><div class="line">        <span class="keyword">return</span> pHead</div></pre></td></tr></table></figure>
+<h2 id="树的子结构"><a href="#树的子结构" class="headerlink" title="树的子结构"></a>树的子结构</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding:utf-8 -*-</span></div><div class="line"><span class="comment"># class TreeNode:</span></div><div class="line"><span class="comment">#     def __init__(self, x):</span></div><div class="line"><span class="comment">#         self.val = x</span></div><div class="line"><span class="comment">#         self.left = None</span></div><div class="line"><span class="comment">#         self.right = None</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">DoesTree1HaveTree2</span><span class="params">(self, pRoot1, pRoot2)</span>:</span></div><div class="line">        <span class="keyword">if</span> <span class="keyword">not</span> pRoot2:</div><div class="line">            <span class="keyword">return</span> <span class="keyword">True</span></div><div class="line">        <span class="keyword">if</span> <span class="keyword">not</span> pRoot1:</div><div class="line">            <span class="keyword">return</span> <span class="keyword">False</span></div><div class="line">        <span class="keyword">if</span> pRoot1.val != pRoot2.val:</div><div class="line">            <span class="keyword">return</span> <span class="keyword">False</span></div><div class="line">        </div><div class="line">        <span class="keyword">return</span> self.DoesTree1HaveTree2(pRoot1.left, pRoot2.left) <span class="keyword">and</span> self.DoesTree1HaveTree2(pRoot1.right, pRoot2.right)</div><div class="line">        </div><div class="line">        </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">HasSubtree</span><span class="params">(self, pRoot1, pRoot2)</span>:</span></div><div class="line">        <span class="comment"># write code here</span></div><div class="line">        result = <span class="keyword">False</span></div><div class="line">        <span class="keyword">if</span> pRoot1 <span class="keyword">and</span> pRoot2:</div><div class="line">            <span class="keyword">if</span> pRoot1.val == pRoot2.val:</div><div class="line">                result = self.DoesTree1HaveTree2(pRoot1, pRoot2)</div><div class="line">            <span class="keyword">if</span> <span class="keyword">not</span> result:</div><div class="line">                result = self.HasSubtree(pRoot1.left, pRoot2)</div><div class="line">            <span class="keyword">if</span> <span class="keyword">not</span> result:</div><div class="line">                result = self.HasSubtree(pRoot1.right, pRoot2)</div><div class="line">        <span class="keyword">return</span> result</div></pre></td></tr></table></figure>
+<h2 id="包含min函数的栈"><a href="#包含min函数的栈" class="headerlink" title="包含min函数的栈"></a>包含min函数的栈</h2><ul>
+<li><p>第一种方法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding:utf-8 -*-</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        self.data = []</div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">push</span><span class="params">(self, node)</span>:</span></div><div class="line">        <span class="comment"># write code here</span></div><div class="line">        self.data.append(node)</div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">pop</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="comment"># write code here</span></div><div class="line">        <span class="keyword">return</span> self.data.pop()</div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">top</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="comment"># write code here</span></div><div class="line">        <span class="keyword">return</span> self.data[<span class="number">-1</span>]</div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">min</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="comment"># write code here</span></div><div class="line">        <span class="keyword">return</span> min(self.data)</div></pre></td></tr></table></figure>
+</li>
+<li><p>第二种方法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding:utf-8 -*-</span></div><div class="line"><span class="comment"># 借助于辅助栈，操作的时间复杂度都为O(1)</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        self.stackData = []</div><div class="line">        self.stackMin = []</div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">push</span><span class="params">(self, node)</span>:</span></div><div class="line">        <span class="comment"># write code here</span></div><div class="line">        self.stackData.append(node)</div><div class="line">        <span class="keyword">if</span> (len(self.stackMin)==<span class="number">0</span>) <span class="keyword">or</span> (node&lt;self.stackMin[<span class="number">-1</span>]):</div><div class="line">            self.stackMin.append(node)</div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            self.stackMin.append(self.stackMin[<span class="number">-1</span>])</div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">pop</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="comment"># write code here</span></div><div class="line">        <span class="keyword">if</span> len(self.stackData) &lt;= <span class="number">0</span>:</div><div class="line">            <span class="keyword">print</span> <span class="string">"Stack is empty, can't pop."</span></div><div class="line">            <span class="keyword">return</span></div><div class="line">        self.stackMin.pop()</div><div class="line">        <span class="keyword">return</span> self.stackData.pop()</div><div class="line">        </div><div class="line">        </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">top</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="comment"># write code here</span></div><div class="line">        <span class="keyword">return</span> self.stackData[<span class="number">-1</span>]</div><div class="line">        </div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">min</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="comment"># write code here</span></div><div class="line">        <span class="keyword">if</span> len(self.stackMin) &lt;= <span class="number">0</span>:</div><div class="line">            <span class="keyword">print</span> <span class="string">"Stack is empty, can't pop."</span></div><div class="line">            <span class="keyword">return</span></div><div class="line">        <span class="keyword">return</span> self.stackMin[<span class="number">-1</span>]</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="栈的压入、弹出序列"><a href="#栈的压入、弹出序列" class="headerlink" title="栈的压入、弹出序列"></a>栈的压入、弹出序列</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding:utf-8 -*-</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        self.stackT =[]</div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">IsPopOrder</span><span class="params">(self, pushV, popV)</span>:</span></div><div class="line">        <span class="comment"># write code here</span></div><div class="line">        flag = <span class="keyword">False</span></div><div class="line">        pushV.reverse()</div><div class="line">        popV.reverse()</div><div class="line">        <span class="keyword">while</span> len(pushV)&gt;<span class="number">0</span>:</div><div class="line">            self.stackT.append(pushV.pop())</div><div class="line">            <span class="keyword">while</span> (len(self.stackT)&gt;<span class="number">0</span>) <span class="keyword">and</span> (len(popV)&gt;<span class="number">0</span>) <span class="keyword">and</span> (self.stackT[<span class="number">-1</span>] == popV[<span class="number">-1</span>]):</div><div class="line">                self.stackT.pop()</div><div class="line">                popV.pop()</div><div class="line">        <span class="keyword">if</span> len(self.stackT) == <span class="number">0</span>:</div><div class="line">            flag = <span class="keyword">True</span></div><div class="line">        <span class="keyword">return</span> flag</div></pre></td></tr></table></figure>
+<h2 id="从上往下打印二叉树"><a href="#从上往下打印二叉树" class="headerlink" title="从上往下打印二叉树"></a>从上往下打印二叉树</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding:utf-8 -*-</span></div><div class="line"><span class="comment"># class TreeNode:</span></div><div class="line"><span class="comment">#     def __init__(self, x):</span></div><div class="line"><span class="comment">#         self.val = x</span></div><div class="line"><span class="comment">#         self.left = None</span></div><div class="line"><span class="comment">#         self.right = None</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="comment"># 返回从上到下每个节点值列表，例：[1,2,3]</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        self.queue = []</div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">PrintFromTopToBottom</span><span class="params">(self, root)</span>:</span></div><div class="line">        <span class="comment"># write code here</span></div><div class="line">        result = []</div><div class="line">        <span class="keyword">if</span> <span class="keyword">not</span> root:</div><div class="line">            <span class="keyword">return</span> []</div><div class="line">        self.queue.append(root)</div><div class="line">        <span class="keyword">while</span> len(self.queue) &gt; <span class="number">0</span>:</div><div class="line">            <span class="comment">#print self.queue[0]</span></div><div class="line">            tmpNode = self.queue[<span class="number">0</span>]</div><div class="line">            result.append(tmpNode.val)</div><div class="line">            <span class="keyword">if</span> tmpNode.left:</div><div class="line">                self.queue.append(tmpNode.left)</div><div class="line">            <span class="keyword">if</span> tmpNode.right:</div><div class="line">                self.queue.append(tmpNode.right)</div><div class="line">            self.queue.remove(self.queue[<span class="number">0</span>])</div><div class="line">        <span class="keyword">return</span> result</div></pre></td></tr></table></figure>
+<h2 id="二叉搜索树的后序遍历序列"><a href="#二叉搜索树的后序遍历序列" class="headerlink" title="二叉搜索树的后序遍历序列"></a>二叉搜索树的后序遍历序列</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding:utf-8 -*-</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">VerifySquenceOfBST</span><span class="params">(self, sequence)</span>:</span></div><div class="line">        <span class="keyword">if</span> <span class="keyword">not</span> sequence:</div><div class="line">            <span class="keyword">return</span> <span class="keyword">False</span></div><div class="line">        length = len(sequence)</div><div class="line">        <span class="keyword">if</span> length&lt;=<span class="number">0</span>:</div><div class="line">            <span class="keyword">return</span> <span class="keyword">False</span></div><div class="line">        rootValue = sequence[length<span class="number">-1</span>]</div><div class="line">        i = <span class="number">0</span></div><div class="line">        <span class="keyword">for</span> ii <span class="keyword">in</span> range(length<span class="number">-1</span>):</div><div class="line">            <span class="keyword">if</span> sequence[i] &gt; rootValue:</div><div class="line">                <span class="keyword">break</span></div><div class="line">            i = i+<span class="number">1</span></div><div class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(i, length<span class="number">-1</span>):</div><div class="line">            <span class="keyword">if</span> sequence[j] &lt; rootValue:</div><div class="line">                <span class="keyword">return</span> <span class="keyword">False</span></div><div class="line">        leftFlag = <span class="keyword">True</span></div><div class="line">        <span class="keyword">if</span> i &gt; <span class="number">0</span>:</div><div class="line">            leftFlag = self.VerifySquenceOfBST(sequence[:i])</div><div class="line">        rightFlag = <span class="keyword">True</span></div><div class="line">        <span class="keyword">if</span> i &lt; length<span class="number">-1</span>:</div><div class="line">            rightFlag = self.VerifySquenceOfBST(sequence[i:length<span class="number">-1</span>])</div><div class="line">        <span class="keyword">return</span> leftFlag <span class="keyword">and</span> rightFlag</div></pre></td></tr></table></figure>
+<p><strong>(持续更新中……)</strong></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div></div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechat-reward-image.jpg" alt="张学志 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay-reward-image.jpg" alt="张学志 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag">#Python</a>
+          
+            <a href="/tags/编程语言/" rel="tag">#编程语言</a>
+          
+            <a href="/tags/剑指Offer/" rel="tag">#剑指Offer</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/02/学习笔记——Git/" rel="next" title="学习笔记——Git">
+                <i class="fa fa-chevron-left"></i> 学习笔记——Git
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/08/09/学习笔记——Java/" rel="prev" title="学习笔记——Java">
+                学习笔记——Java <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/08/05/剑指Offer——Python答案/"
+           data-title="剑指Offer——Python答案" data-url="http://zhangxuezhi.com/2016/08/05/剑指Offer——Python答案/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="张学志" />
+          <p class="site-author-name" itemprop="name">张学志</p>
+          <p class="site-description motion-element" itemprop="description">做自己爱做的事，爱自己在做的事！</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">96</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">30</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">53</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xuezhisd/" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.csdn.net/xuezhisdc" target="_blank" title="CSDN">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  CSDN
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#说明"><span class="nav-number">1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#题目"><span class="nav-number">2.</span> <span class="nav-text">题目</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二维数组中的查找"><span class="nav-number">2.1.</span> <span class="nav-text">二维数组中的查找</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#替换空格"><span class="nav-number">2.2.</span> <span class="nav-text">替换空格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#从头到尾打印链表"><span class="nav-number">2.3.</span> <span class="nav-text">从头到尾打印链表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重建二叉树"><span class="nav-number">2.4.</span> <span class="nav-text">重建二叉树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用两个栈实现队列"><span class="nav-number">2.5.</span> <span class="nav-text">用两个栈实现队列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#旋转数组的最小数字"><span class="nav-number">2.6.</span> <span class="nav-text">旋转数组的最小数字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#斐波那契数列"><span class="nav-number">2.7.</span> <span class="nav-text">斐波那契数列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#跳台阶"><span class="nav-number">2.8.</span> <span class="nav-text">跳台阶</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变态跳台阶"><span class="nav-number">2.9.</span> <span class="nav-text">变态跳台阶</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#矩形覆盖"><span class="nav-number">2.10.</span> <span class="nav-text">矩形覆盖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二进制中1的个数"><span class="nav-number">2.11.</span> <span class="nav-text">二进制中1的个数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数值的整数次方"><span class="nav-number">2.12.</span> <span class="nav-text">数值的整数次方</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调整数组顺序使奇数位于偶数前面"><span class="nav-number">2.13.</span> <span class="nav-text">调整数组顺序使奇数位于偶数前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链表中倒数第k个结点"><span class="nav-number">2.14.</span> <span class="nav-text">链表中倒数第k个结点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#反转链表"><span class="nav-number">2.15.</span> <span class="nav-text">反转链表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#合并两个排序的链表"><span class="nav-number">2.16.</span> <span class="nav-text">合并两个排序的链表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#树的子结构"><span class="nav-number">2.17.</span> <span class="nav-text">树的子结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#包含min函数的栈"><span class="nav-number">2.18.</span> <span class="nav-text">包含min函数的栈</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#栈的压入、弹出序列"><span class="nav-number">2.19.</span> <span class="nav-text">栈的压入、弹出序列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#从上往下打印二叉树"><span class="nav-number">2.20.</span> <span class="nav-text">从上往下打印二叉树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉搜索树的后序遍历序列"><span class="nav-number">2.21.</span> <span class="nav-text">二叉搜索树的后序遍历序列</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder"><a href="http://zhangxuezhi.com">张学志</a> </span>
+    <span class="circle">
+    &nbsp;<i class="fa fa-anchor"></i>
+  </span>
+  <span class="bei-an" >  &nbsp;<a href="http://icp.chinaz.com/info?q=zhangxuezhi.com">陕ICP备16007504号</a> </span>
+</div>
+
+<div class="zhangxuezhi-add">
+  <span>
+    <span>
+      <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260765871'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260765871' type='text/javascript'%3E%3C/script%3E"));</script>
+    </span>
+    &nbsp;&nbsp;
+    <span>
+      <a href="/sitemap.xml">Google网站地图</a>
+    </span>
+    &nbsp;&nbsp;
+    <span>
+      <a href="/baidusitemap.xml">百度网站地图</a>
+    </span>
+
+  </span>
+</div> 
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div> 
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+-->
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"zhangxuezhi"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = false;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = decodeURIComponent(data.url);
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title >= 0 || index_content >= 0 ){
+                                isMatch = true;
+								if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            } 
+							
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+</body>
+</html>
