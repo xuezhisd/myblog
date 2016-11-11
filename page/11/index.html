@@ -280,6 +280,156 @@
             
               
                 
+                <a class="post-title-link" href="/2015/11/04/Linux命令——visudo/" itemprop="url">
+                  Linux命令——visudo
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-11-04T13:58:00+08:00" content="2015-11-04">
+              2015-11-04
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Linux/命令/" itemprop="url" rel="index">
+                    <span itemprop="name">命令</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/11/04/Linux命令——visudo/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/04/Linux命令——visudo/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="visudo"><a href="#visudo" class="headerlink" title="visudo"></a>visudo</h2><ul>
+<li><strong>功能</strong>：编辑sudoers文件</li>
+<li><strong>提示</strong>：<ul>
+<li>需要超级用户权限；</li>
+<li>默认编辑/etc/sudoers文件；</li>
+<li>sudoers文件的默认权限是440，即默认无法修改；</li>
+<li>visudo可以在不更改sudoers文件权限的情况下，直接修改sudoers文件；</li>
+</ul>
+</li>
+<li><strong>选项</strong>： <ul>
+<li>-c：使用<strong>check-only</strong>模式，打印语法等错误信息；</li>
+<li>-q：使用<strong>quiet</strong>模式，不打印语法等错误信息；</li>
+<li>-f：指定sudoers文件；</li>
+</ul>
+</li>
+<li><strong>示例</strong>：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 编辑/etc/sudoers文件</span></div><div class="line">visudo</div><div class="line"><span class="comment"># 编辑/etc/sudoers文件，并检查语法等错误</span></div><div class="line">visudo -c</div><div class="line"><span class="comment"># 编辑/etc/sudoers文件，但不打印语法等错误</span></div><div class="line">visudo -q</div><div class="line"><span class="comment"># 显示版本信息</span></div><div class="line">visudo -V</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h2><p><a href="http://www.lx138.com/" target="_blank" rel="external">Linux命令查询网站</a><br><a href="http://man.linuxde.net/" target="_blank" rel="external">Linux命令大全</a><br><a href="http://baidu.com/" target="_blank" rel="external">baidu</a><br><a href="google.com.hk">Google</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2015/11/04/Linux命令——uname/" itemprop="url">
                   Linux命令——uname
                 </a>
@@ -383,156 +533,6 @@
 </li>
 <li><p><strong>示例</strong>：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 显示内核名称（如Linux）</span></div><div class="line">uname</div><div class="line">uname <span class="_">-s</span></div><div class="line"><span class="comment"># 显示操作系统名称</span></div><div class="line">uname -o</div><div class="line"><span class="comment"># 显示所有信息</span></div><div class="line">uname <span class="_">-a</span></div><div class="line"><span class="comment"># 显示系统架构（如x86_64）</span></div><div class="line">uname -m</div><div class="line"><span class="comment"># 显示主机名</span></div><div class="line">uname -n</div><div class="line"><span class="comment"># 显示内核的发行编号</span></div><div class="line">uname -r</div><div class="line"><span class="comment"># 显示内核的版本</span></div><div class="line">uname -v</div><div class="line"><span class="comment"># 显示帮助</span></div><div class="line">uname --help</div><div class="line"><span class="comment"># 显示版本</span></div><div class="line">uname --version</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h2><p><a href="http://www.lx138.com/" target="_blank" rel="external">Linux命令查询网站</a><br><a href="http://man.linuxde.net/" target="_blank" rel="external">Linux命令大全</a><br><a href="http://baidu.com/" target="_blank" rel="external">baidu</a><br><a href="google.com.hk">Google</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/11/04/Linux命令——visudo/" itemprop="url">
-                  Linux命令——visudo
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-11-04T13:58:00+08:00" content="2015-11-04">
-              2015-11-04
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Linux/命令/" itemprop="url" rel="index">
-                    <span itemprop="name">命令</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/11/04/Linux命令——visudo/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/04/Linux命令——visudo/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="visudo"><a href="#visudo" class="headerlink" title="visudo"></a>visudo</h2><ul>
-<li><strong>功能</strong>：编辑sudoers文件</li>
-<li><strong>提示</strong>：<ul>
-<li>需要超级用户权限；</li>
-<li>默认编辑/etc/sudoers文件；</li>
-<li>sudoers文件的默认权限是440，即默认无法修改；</li>
-<li>visudo可以在不更改sudoers文件权限的情况下，直接修改sudoers文件；</li>
-</ul>
-</li>
-<li><strong>选项</strong>： <ul>
-<li>-c：使用<strong>check-only</strong>模式，打印语法等错误信息；</li>
-<li>-q：使用<strong>quiet</strong>模式，不打印语法等错误信息；</li>
-<li>-f：指定sudoers文件；</li>
-</ul>
-</li>
-<li><strong>示例</strong>：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 编辑/etc/sudoers文件</span></div><div class="line">visudo</div><div class="line"><span class="comment"># 编辑/etc/sudoers文件，并检查语法等错误</span></div><div class="line">visudo -c</div><div class="line"><span class="comment"># 编辑/etc/sudoers文件，但不打印语法等错误</span></div><div class="line">visudo -q</div><div class="line"><span class="comment"># 显示版本信息</span></div><div class="line">visudo -V</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h2><p><a href="http://www.lx138.com/" target="_blank" rel="external">Linux命令查询网站</a><br><a href="http://man.linuxde.net/" target="_blank" rel="external">Linux命令大全</a><br><a href="http://baidu.com/" target="_blank" rel="external">baidu</a><br><a href="google.com.hk">Google</a></p>
