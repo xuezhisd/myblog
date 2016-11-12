@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>http://zhangxuezhi.com/2016/08/12/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-6-%E7%B1%BB%E7%9A%84%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/</loc>
-    <lastmod>2016-11-12T03:24:13.724Z</lastmod>
+    <loc>http://zhangxuezhi.com/2016/08/12/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-5-%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/</loc>
+    <lastmod>2016-11-12T03:34:04.003Z</lastmod>
     <data>
         <display>
-        <title>编码练习——Java-6-类的高级特性</title>
-        <pubTime>2016-08-12T05:05:02.000Z</pubTime>
+        <title>编码练习——Java-5-类和对象</title>
+        <pubTime>2016-08-12T05:05:01.000Z</pubTime>
         
         <tag>Java</tag>
          
@@ -27,12 +27,12 @@
 
     
   <url>
-    <loc>http://zhangxuezhi.com/2016/08/12/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-5-%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/</loc>
-    <lastmod>2016-11-12T03:22:08.903Z</lastmod>
+    <loc>http://zhangxuezhi.com/2016/08/12/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-6-%E7%B1%BB%E7%9A%84%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/</loc>
+    <lastmod>2016-11-12T03:24:13.724Z</lastmod>
     <data>
         <display>
-        <title>编码练习——Java-5-类和对象</title>
-        <pubTime>2016-08-12T05:05:01.000Z</pubTime>
+        <title>编码练习——Java-6-类的高级特性</title>
+        <pubTime>2016-08-12T05:05:02.000Z</pubTime>
         
         <tag>Java</tag>
          
@@ -1001,9 +1001,9 @@
         <title>Xftp使用教程——问答方式</title>
         <pubTime>2015-11-03T06:59:00.000Z</pubTime>
         
-        <tag>Windows</tag>
-         
         <tag>Xftp</tag>
+         
+        <tag>Windows</tag>
          
          
            

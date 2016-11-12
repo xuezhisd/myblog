@@ -280,8 +280,8 @@
             
               
                 
-                <a class="post-title-link" href="/2015/09/22/在VNC中Xfce4中Tab键失效的解决方法/" itemprop="url">
-                  在VNC中Xfce4中Tab键失效的解决方法
+                <a class="post-title-link" href="/2015/09/22/Linux shell判断文件和文件夹是否存在/" itemprop="url">
+                  Linux shell判断文件和文件夹是否存在
                 </a>
               
             
@@ -296,132 +296,6 @@
             <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-09-22T14:19:00+08:00" content="2015-09-22">
               2015-09-22
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/09/22/在VNC中Xfce4中Tab键失效的解决方法/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/22/在VNC中Xfce4中Tab键失效的解决方法/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
-<li>在Ubuntu Server 14.04上安装了xfce4桌面环境，但是却发现<strong><em>在终端中Tab键不能自动补齐</em></strong>(但是<strong><em>Ctrl + I 仍然可以用</em></strong>)。</li>
-<li>出现这种情况的原因是，由于Tab键的功能被窗口快捷键占用，从而Tab键不起作用。即，快捷键冲突了。</li>
-<li>解决方法有两种，其实本质相同。不过就是，一种方法是<strong>在图形界面中更改</strong>，另一种方法是<strong>直接修改配置文件</strong>。</li>
-</ul>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/09/22/在VNC中Xfce4中Tab键失效的解决方法/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/09/21/使用Putty无法远程登录，显示服务器拒绝连接/" itemprop="url">
-                  使用Putty无法远程登录，显示服务器拒绝连接
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-09-21T14:23:00+08:00" content="2015-09-21">
-              2015-09-21
             </time>
           </span>
 
@@ -462,8 +336,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/09/21/使用Putty无法远程登录，显示服务器拒绝连接/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/21/使用Putty无法远程登录，显示服务器拒绝连接/" itemprop="commentsCount"></span>
+                <a href="/2015/09/22/Linux shell判断文件和文件夹是否存在/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/22/Linux shell判断文件和文件夹是否存在/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -487,19 +361,18 @@
 
       
         
-          <blockquote>
-<p>putty连接不到linux的原因总结为以下几种情况。</p>
+          
+            <blockquote>
 </blockquote>
-<h2 id="局域网内的两台电脑IP冲突"><a href="#局域网内的两台电脑IP冲突" class="headerlink" title="局域网内的两台电脑IP冲突"></a><strong>局域网内的两台电脑IP冲突</strong></h2><ul>
-<li>当使用DHCP自动分配IP时，两台电脑的IP可能会冲突。这时，使用Putty无法登连接Linux。</li>
-<li>方法：可以设置/etc/network/interfaces文件，将网卡设置为静态IP，并设置IP，子网掩码等。</li>
+<ul>
+<li><p>shell判断文件,目录是否存在或者具有权限</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/sh  </span></div><div class="line">  </div><div class="line">myPath=<span class="string">"/var/log/httpd/"</span>  </div><div class="line">myFile=<span class="string">"/var /log/httpd/access.log"</span>  </div><div class="line">  </div><div class="line"><span class="comment">#这里的-x 参数判断$myPath是否存在并且是否具有可执行权限  </span></div><div class="line"><span class="keyword">if</span> [ ! -x <span class="string">"<span class="variable">$myPath</span>"</span>]; <span class="keyword">then</span>  </div><div class="line">　　mkdir <span class="string">"<span class="variable">$myPath</span>"</span>  </div><div class="line"><span class="keyword">fi</span>  </div><div class="line"></div><div class="line"><span class="comment">#这里的-d 参数判断$myPath是否存在  </span></div><div class="line"><span class="keyword">if</span> [ ! <span class="_">-d</span> <span class="string">"<span class="variable">$myPath</span>"</span>]; <span class="keyword">then</span>  </div><div class="line">　　mkdir <span class="string">"<span class="variable">$myPath</span>"</span>  </div><div class="line"><span class="keyword">fi</span>  </div><div class="line">  </div><div class="line"><span class="comment">#这里的-f参数判断$myFile是否存在  </span></div><div class="line"><span class="keyword">if</span> [ ! <span class="_">-f</span> <span class="string">"<span class="variable">$myFile</span>"</span> ]; <span class="keyword">then</span>  </div><div class="line">　　touch <span class="string">"<span class="variable">$myFile</span>"</span>  </div><div class="line"><span class="keyword">fi</span>  </div><div class="line">  </div><div class="line"><span class="comment">#其他参数还有-n,-n是判断一个变量是否是否有值  </span></div><div class="line"><span class="keyword">if</span> [ ! -n <span class="string">"<span class="variable">$myVar</span>"</span> ]; <span class="keyword">then</span>  </div><div class="line">　　<span class="built_in">echo</span> <span class="string">"<span class="variable">$myVar</span> is empty"</span>  </div><div class="line">　　<span class="built_in">exit</span> 0  </div><div class="line"><span class="keyword">fi</span>  </div><div class="line">  </div><div class="line"><span class="comment">#两个变量判断是否相等  </span></div><div class="line"><span class="keyword">if</span> [ <span class="string">"<span class="variable">$var1</span>"</span> = <span class="string">"<span class="variable">$var2</span>"</span> ]; <span class="keyword">then</span>  </div><div class="line">　　<span class="built_in">echo</span> <span class="string">'$var1 eq $var2'</span>  </div><div class="line"><span class="keyword">else</span>  </div><div class="line">　　<span class="built_in">echo</span> <span class="string">'$var1 not eq $var2'</span>  </div><div class="line"><span class="keyword">fi</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>转载地址：<a href="http://www.cnblogs.com/platero/p/4021561.html" target="_blank" rel="external">http://www.cnblogs.com/platero/p/4021561.html</a></p>
+</li>
 </ul>
-<h2 id="没有安装openssh-server"><a href="#没有安装openssh-server" class="headerlink" title="没有安装openssh-server"></a><strong>没有安装openssh-server</strong></h2>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/09/21/使用Putty无法远程登录，显示服务器拒绝连接/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+
+          
         
       
     </div>
@@ -643,6 +516,147 @@
 </ul>
 
           
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/09/21/使用Putty无法远程登录，显示服务器拒绝连接/" itemprop="url">
+                  使用Putty无法远程登录，显示服务器拒绝连接
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-09-21T14:23:00+08:00" content="2015-09-21">
+              2015-09-21
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Linux/经验/" itemprop="url" rel="index">
+                    <span itemprop="name">经验</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/09/21/使用Putty无法远程登录，显示服务器拒绝连接/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/21/使用Putty无法远程登录，显示服务器拒绝连接/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p>putty连接不到linux的原因总结为以下几种情况。</p>
+</blockquote>
+<h2 id="局域网内的两台电脑IP冲突"><a href="#局域网内的两台电脑IP冲突" class="headerlink" title="局域网内的两台电脑IP冲突"></a><strong>局域网内的两台电脑IP冲突</strong></h2><ul>
+<li>当使用DHCP自动分配IP时，两台电脑的IP可能会冲突。这时，使用Putty无法登连接Linux。</li>
+<li>方法：可以设置/etc/network/interfaces文件，将网卡设置为静态IP，并设置IP，子网掩码等。</li>
+</ul>
+<h2 id="没有安装openssh-server"><a href="#没有安装openssh-server" class="headerlink" title="没有安装openssh-server"></a><strong>没有安装openssh-server</strong></h2>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/09/21/使用Putty无法远程登录，显示服务器拒绝连接/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>

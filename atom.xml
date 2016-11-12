@@ -1063,23 +1063,26 @@
     <link href="http://zhangxuezhi.com/2016/08/12/%E7%BC%96%E7%A0%81%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94Java-5-%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/"/>
     <id>http://zhangxuezhi.com/2016/08/12/编码练习——Java-5-类和对象/</id>
     <published>2016-08-12T05:05:01.000Z</published>
-    <updated>2016-11-12T03:22:08.903Z</updated>
+    <updated>2016-11-12T03:34:04.003Z</updated>
     
     <content type="html"><![CDATA[<h2 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h2><ul>
-<li><p>构造方法</p>
+<li>构造方法</li>
+</ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AnyThing</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">AnyThing</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>(<span class="string">"this调用有参构造方法"</span>);</div><div class="line">		System.out.println(<span class="string">"无参构造函数"</span>);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">AnyThing</span><span class="params">(String name)</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"有参构造方法"</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>主方法</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;args.length; i++) &#123;</div><div class="line">			System.out.println(args[i]);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>成员变量</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Book</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> id;</div><div class="line">	<span class="keyword">private</span> String name;</div><div class="line">	<span class="keyword">private</span> String category;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">int</span> id = <span class="number">0</span>;</div><div class="line">		setName(<span class="string">"Java"</span>);</div><div class="line">		<span class="keyword">return</span> id + <span class="keyword">this</span>.name;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.name = name;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> Book <span class="title">getBook</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String argvs[])</span> </span>&#123;</div><div class="line">		Book book = <span class="keyword">new</span> Book();</div><div class="line">		String name = book.getName();</div><div class="line">		System.out.println(name);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>静态变量、常量和方法</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line">	<span class="keyword">static</span> <span class="keyword">double</span> PI=<span class="number">3.1415</span>;</div><div class="line">	<span class="keyword">static</span> <span class="keyword">int</span> id;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">method1</span><span class="params">()</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"静态方法"</span>);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method2</span><span class="params">()</span> </span>&#123;</div><div class="line">		System.out.println(Test.PI);</div><div class="line">		System.out.println(Test.id);</div><div class="line">		Test.method1();</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		Test test = <span class="keyword">new</span> Test();</div><div class="line">		test.method2();</div><div class="line">		Test.method1();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>权限修饰符</p>
 <ul>
+<li>主方法</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;args.length; i++) &#123;</div><div class="line">			System.out.println(args[i]);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>成员变量</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Book</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> id;</div><div class="line">	<span class="keyword">private</span> String name;</div><div class="line">	<span class="keyword">private</span> String category;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">int</span> id = <span class="number">0</span>;</div><div class="line">		setName(<span class="string">"Java"</span>);</div><div class="line">		<span class="keyword">return</span> id + <span class="keyword">this</span>.name;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.name = name;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> Book <span class="title">getBook</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String argvs[])</span> </span>&#123;</div><div class="line">		Book book = <span class="keyword">new</span> Book();</div><div class="line">		String name = book.getName();</div><div class="line">		System.out.println(name);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>静态变量、常量和方法</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line">	<span class="keyword">static</span> <span class="keyword">double</span> PI=<span class="number">3.1415</span>;</div><div class="line">	<span class="keyword">static</span> <span class="keyword">int</span> id;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">method1</span><span class="params">()</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"静态方法"</span>);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method2</span><span class="params">()</span> </span>&#123;</div><div class="line">		System.out.println(Test.PI);</div><div class="line">		System.out.println(Test.id);</div><div class="line">		Test.method1();</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		Test test = <span class="keyword">new</span> Test();</div><div class="line">		test.method2();</div><div class="line">		Test.method1();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>权限修饰符<ul>
 <li>public</li>
 <li>protected</li>
 <li>private</li>
@@ -1087,49 +1090,56 @@
 </li>
 </ul>
 <ul>
-<li>实例 - 自定义图书类<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Book</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> String title;</div><div class="line">	<span class="keyword">private</span> String author;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">double</span> price;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Book</span><span class="params">(String title, String author, <span class="keyword">double</span> price)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.title = title;</div><div class="line">		<span class="keyword">this</span>.author = author;</div><div class="line">		<span class="keyword">this</span>.price = price;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getTitle</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> title;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getAuthor</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> author;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getPrice</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> price;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
+<li>实例 - 自定义图书类</li>
 </ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Book</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> String title;</div><div class="line">	<span class="keyword">private</span> String author;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">double</span> price;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Book</span><span class="params">(String title, String author, <span class="keyword">double</span> price)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.title = title;</div><div class="line">		<span class="keyword">this</span>.author = author;</div><div class="line">		<span class="keyword">this</span>.price = price;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getTitle</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> title;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getAuthor</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> author;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getPrice</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> price;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		Book book = <span class="keyword">new</span> Book(<span class="string">"《Java从入门到精通》"</span>, <span class="string">"明日科技"</span>, <span class="number">59.8</span>);</div><div class="line">		System.out.println(<span class="string">"书名："</span> + book.getTitle());</div><div class="line">		System.out.println(<span class="string">"作者："</span> + book.getAuthor());</div><div class="line">		System.out.println(<span class="string">"价格："</span> + book.getPrice() + <span class="string">"元"</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <ul>
-<li><p>实例 - 温度单位换算工具</p>
+<li>实例 - 温度单位换算工具</li>
+</ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.Scanner;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CelsiusConverter</span> </span>&#123;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getFahrenheit</span><span class="params">(<span class="keyword">double</span> celsius)</span> </span>&#123;</div><div class="line">		<span class="keyword">double</span> fahrenheit = <span class="number">1.8</span> * celsius + <span class="number">32</span>;</div><div class="line">		<span class="keyword">return</span> fahrenheit;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"请输入要转换的温度（单位：摄氏度）"</span>);</div><div class="line">		Scanner in = <span class="keyword">new</span> Scanner(System.in);</div><div class="line">		<span class="keyword">double</span> celsius = in.nextDouble();</div><div class="line">		CelsiusConverter converter = <span class="keyword">new</span> CelsiusConverter();</div><div class="line">		<span class="keyword">double</span> fahrenheit = converter.getFahrenheit(celsius);</div><div class="line">		System.out.println(<span class="string">"转换完成的温度（单位：华氏度）："</span> + fahrenheit);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>创建对象</p>
+<ul>
+<li>创建对象</li>
+</ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Test</span><span class="params">()</span> </span>&#123;	<span class="comment">//构造方法</span></div><div class="line">		System.out.println(<span class="string">"创建对象..."</span>);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		<span class="keyword">new</span> Test();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>调用类成员（变量和函数）</p>
+<ul>
+<li>调用类成员（变量和函数）</li>
+</ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TransferProperty</span> </span>&#123;</div><div class="line">	<span class="keyword">int</span> i=<span class="number">47</span>;	<span class="comment">// 成员变量</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">call</span><span class="params">()</span> </span>&#123;	<span class="comment">//成员方法</span></div><div class="line">		System.out.println(<span class="string">"调用call()方法"</span>);</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++) &#123;</div><div class="line">			System.out.print(i + <span class="string">"  "</span>);</div><div class="line">			<span class="keyword">if</span> (i==<span class="number">2</span>)</div><div class="line">				System.out.println(<span class="string">"\n"</span>);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;	<span class="comment">//构造方法</span></div><div class="line">		TransferProperty t1 = <span class="keyword">new</span> TransferProperty();</div><div class="line">		TransferProperty t2 = <span class="keyword">new</span> TransferProperty();</div><div class="line">		t2.i=<span class="number">60</span>;</div><div class="line">		<span class="comment">//使用第一个对象调用类成员变量</span></div><div class="line">		System.out.println(<span class="string">"第一个实例对象调用变量i的结果："</span> + t1.i++);</div><div class="line">		t1.call();</div><div class="line">		<span class="comment">//使用第二个对象调用类成员变量</span></div><div class="line">		System.out.println(<span class="string">"第二个实例对象调用变量i的结果："</span> + t2.i);</div><div class="line">		t2.call();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>对象的比较</p>
+<ul>
+<li>对象的比较</li>
+</ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		String c1 = <span class="keyword">new</span> String(<span class="string">"abc"</span>);</div><div class="line">		String c2 = <span class="keyword">new</span> String(<span class="string">"abc"</span>);</div><div class="line">		String c3 = c1;</div><div class="line">		System.out.println(<span class="string">"c2==c3的运算结果："</span> + (c2==c3));</div><div class="line">		System.out.println(<span class="string">"c2.equals(c3)的运算结果："</span> + (c2.equals(c3)));</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>实例 - 统计图书销量（静态变量）<br>Book类</p>
+<ul>
+<li>实例 - 统计图书销量（静态变量）<br>Book类</li>
+</ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Book</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> counter=<span class="number">0</span>;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Book</span><span class="params">(String title)</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"售出图书："</span> + title);</div><div class="line">		counter++;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getCounter</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> counter;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>测试类（Test）<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.Random;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		String[] titles = &#123;<span class="string">"《Java从入门到精通》"</span>, <span class="string">"《Java编程词典》"</span>, <span class="string">"&lt;视频学Java&gt;"</span>&#125;;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++) &#123;</div><div class="line">			<span class="keyword">new</span> Book(titles[<span class="keyword">new</span> Random().nextInt(<span class="number">3</span>)]);</div><div class="line">		&#125;</div><div class="line">		System.out.println(<span class="string">"总计销售了"</span> + Book.getCounter() + <span class="string">"本图书！"</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>测试类（Test）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.Random;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		String[] titles = &#123;<span class="string">"《Java从入门到精通》"</span>, <span class="string">"《Java编程词典》"</span>, <span class="string">"&lt;视频学Java&gt;"</span>&#125;;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++) &#123;</div><div class="line">			<span class="keyword">new</span> Book(titles[<span class="keyword">new</span> Random().nextInt(<span class="number">3</span>)]);</div><div class="line">		&#125;</div><div class="line">		System.out.println(<span class="string">"总计销售了"</span> + Book.getCounter() + <span class="string">"本图书！"</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <ul>
-<li>实例 - 重新计算对象的哈希码<br>Cat类<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.awt.Color;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Cat</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> String name;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> age;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">double</span> weight;</div><div class="line">	<span class="keyword">private</span> Color color;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Cat</span><span class="params">(String name, <span class="keyword">int</span> age, <span class="keyword">double</span> weight, Color color)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.name = name;</div><div class="line">		<span class="keyword">this</span>.age = age;</div><div class="line">		<span class="keyword">this</span>.weight = weight;</div><div class="line">		<span class="keyword">this</span>.color=  color;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object obj)</span> </span>&#123;</div><div class="line">		<span class="keyword">if</span> (<span class="keyword">this</span> == obj) &#123;</div><div class="line">			<span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span> (obj == <span class="keyword">null</span>) &#123;</div><div class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span> (getClass() != obj.getClass()) &#123;</div><div class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">		&#125;</div><div class="line">		Cat cat = (Cat) obj;</div><div class="line">		<span class="keyword">return</span> name.equals(cat.name) &amp;&amp; (age == cat.age) </div><div class="line">				&amp;&amp; (weight == cat.weight) &amp;&amp; (color.equals(cat.color));</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> <span class="number">7</span>*name.hashCode() + <span class="number">11</span>* <span class="keyword">new</span> Integer(age).hashCode() + <span class="number">13</span>* <span class="keyword">new</span> Double(weight).hashCode() + <span class="number">17</span>* color.hashCode();</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
+<li>实例 - 重新计算对象的哈希码<br>Cat类</li>
 </ul>
-<p>测试类（Test）<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		Cat cat1 = <span class="keyword">new</span> Cat(<span class="string">"Java"</span>, <span class="number">12</span>, <span class="number">21</span>, Color.BLACK);</div><div class="line">		Cat cat2 = <span class="keyword">new</span> Cat(<span class="string">"C++"</span>, <span class="number">12</span>, <span class="number">21</span>, Color.WHITE);</div><div class="line">		Cat cat3 = <span class="keyword">new</span> Cat(<span class="string">"Java"</span>, <span class="number">12</span>,<span class="number">21</span>,Color.BLACK);</div><div class="line">		</div><div class="line">		System.out.println(<span class="string">"猫咪1号的哈希码："</span> + cat1.hashCode());</div><div class="line">		System.out.println(<span class="string">"猫咪2号的哈希码："</span> + cat2.hashCode());</div><div class="line">		System.out.println(<span class="string">"猫咪3号的哈希码："</span> + cat3.hashCode());</div><div class="line">		System.out.println(<span class="string">"猫咪1号是否与猫咪2号相同："</span> + cat1.equals(cat2));</div><div class="line">		System.out.println(<span class="string">"猫咪1号是否与猫咪3号相同："</span> + cat1.equals(cat3));</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.awt.Color;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Cat</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> String name;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> age;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">double</span> weight;</div><div class="line">	<span class="keyword">private</span> Color color;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Cat</span><span class="params">(String name, <span class="keyword">int</span> age, <span class="keyword">double</span> weight, Color color)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.name = name;</div><div class="line">		<span class="keyword">this</span>.age = age;</div><div class="line">		<span class="keyword">this</span>.weight = weight;</div><div class="line">		<span class="keyword">this</span>.color=  color;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object obj)</span> </span>&#123;</div><div class="line">		<span class="keyword">if</span> (<span class="keyword">this</span> == obj) &#123;</div><div class="line">			<span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span> (obj == <span class="keyword">null</span>) &#123;</div><div class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span> (getClass() != obj.getClass()) &#123;</div><div class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">		&#125;</div><div class="line">		Cat cat = (Cat) obj;</div><div class="line">		<span class="keyword">return</span> name.equals(cat.name) &amp;&amp; (age == cat.age) </div><div class="line">				&amp;&amp; (weight == cat.weight) &amp;&amp; (color.equals(cat.color));</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> <span class="number">7</span>*name.hashCode() + <span class="number">11</span>* <span class="keyword">new</span> Integer(age).hashCode() + <span class="number">13</span>* <span class="keyword">new</span> Double(weight).hashCode() + <span class="number">17</span>* color.hashCode();</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>测试类（Test）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		Cat cat1 = <span class="keyword">new</span> Cat(<span class="string">"Java"</span>, <span class="number">12</span>, <span class="number">21</span>, Color.BLACK);</div><div class="line">		Cat cat2 = <span class="keyword">new</span> Cat(<span class="string">"C++"</span>, <span class="number">12</span>, <span class="number">21</span>, Color.WHITE);</div><div class="line">		Cat cat3 = <span class="keyword">new</span> Cat(<span class="string">"Java"</span>, <span class="number">12</span>,<span class="number">21</span>,Color.BLACK);</div><div class="line">		</div><div class="line">		System.out.println(<span class="string">"猫咪1号的哈希码："</span> + cat1.hashCode());</div><div class="line">		System.out.println(<span class="string">"猫咪2号的哈希码："</span> + cat2.hashCode());</div><div class="line">		System.out.println(<span class="string">"猫咪3号的哈希码："</span> + cat3.hashCode());</div><div class="line">		System.out.println(<span class="string">"猫咪1号是否与猫咪2号相同："</span> + cat1.equals(cat2));</div><div class="line">		System.out.println(<span class="string">"猫咪1号是否与猫咪3号相同："</span> + cat1.equals(cat3));</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <ul>
-<li><p>实例 - 汉诺塔问题求解</p>
+<li>实例 - 汉诺塔问题求解</li>
+</ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">moveDish</span><span class="params">(<span class="keyword">int</span> level, <span class="keyword">char</span> from, <span class="keyword">char</span> inter, <span class="keyword">char</span> to)</span> </span>&#123;</div><div class="line">		<span class="keyword">if</span> (level == <span class="number">1</span>) &#123;</div><div class="line">			System.out.println(<span class="string">"从 "</span> + from + <span class="string">" 移动盘子 1 号到 "</span> + to);</div><div class="line">		&#125; <span class="keyword">else</span> &#123;</div><div class="line">			moveDish(level-<span class="number">1</span>, from, to, inter);</div><div class="line">			System.out.println(<span class="string">"从 "</span> + from + <span class="string">" 移动盘子 "</span> + level + <span class="string">" 号到 "</span> + to);</div><div class="line">			moveDish(level-<span class="number">1</span>, inter, from, to);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		<span class="keyword">int</span> nDisks = <span class="number">3</span>;</div><div class="line">		moveDish(nDisks, <span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>实例 - 单例模式的应用<br>Emperor类</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Emperor</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> Emperor emperor=<span class="keyword">null</span>;</div><div class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Emperor</span><span class="params">()</span> </span>&#123;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Emperor <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">if</span>(emperor==<span class="keyword">null</span>) &#123;</div><div class="line">			emperor = <span class="keyword">new</span> Emperor();</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> emperor;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">getName</span><span class="params">()</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"我是皇帝：明日科技"</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
+<ul>
+<li>实例 - 单例模式的应用<br>Emperor类</li>
 </ul>
-<p>测试类（Test）<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"创建皇帝1对象："</span>);</div><div class="line">		Emperor emperor1 = Emperor.getInstance();</div><div class="line">		emperor1.getName();</div><div class="line">		System.out.println(<span class="string">"创建皇帝2对象："</span>);</div><div class="line">		Emperor emperor2 = Emperor.getInstance();</div><div class="line">		emperor2.getName();</div><div class="line">		System.out.println(<span class="string">"创建皇帝3对象："</span>);</div><div class="line">		Emperor emperor3 = Emperor.getInstance();</div><div class="line">		emperor3.getName();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Emperor</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> Emperor emperor=<span class="keyword">null</span>;</div><div class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Emperor</span><span class="params">()</span> </span>&#123;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Emperor <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">if</span>(emperor==<span class="keyword">null</span>) &#123;</div><div class="line">			emperor = <span class="keyword">new</span> Emperor();</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> emperor;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">getName</span><span class="params">()</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"我是皇帝：明日科技"</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>测试类（Test）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"创建皇帝1对象："</span>);</div><div class="line">		Emperor emperor1 = Emperor.getInstance();</div><div class="line">		emperor1.getName();</div><div class="line">		System.out.println(<span class="string">"创建皇帝2对象："</span>);</div><div class="line">		Emperor emperor2 = Emperor.getInstance();</div><div class="line">		emperor2.getName();</div><div class="line">		System.out.println(<span class="string">"创建皇帝3对象："</span>);</div><div class="line">		Emperor emperor3 = Emperor.getInstance();</div><div class="line">		emperor3.getName();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 ]]></content>
     
     <summary type="html">
     
       &lt;h2 id=&quot;基本&quot;&gt;&lt;a href=&quot;#基本&quot; class=&quot;headerlink&quot; title=&quot;基本&quot;&gt;&lt;/a&gt;基本&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;构造方法&lt;/p&gt;
-&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=
+&lt;li&gt;构造方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td cl
     
     </summary>
     
@@ -3460,81 +3470,6 @@
   </entry>
   
   <entry>
-    <title>PCL系列——三维重构之移动立方体算法</title>
-    <link href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E7%A7%BB%E5%8A%A8%E7%AB%8B%E6%96%B9%E4%BD%93%E7%AE%97%E6%B3%95/"/>
-    <id>http://zhangxuezhi.com/2016/04/01/PCL系列——三维重构之移动立方体算法/</id>
-    <published>2016-04-01T05:24:00.000Z</published>
-    <updated>2016-11-11T14:12:47.202Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="PCL系列"><a href="#PCL系列" class="headerlink" title="PCL系列"></a>PCL系列</h2><ul>
-<li><a href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E8%AF%BB%E5%85%A5PCD%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/">PCL系列——读入PCD格式文件操作</a></li>
-<li><a href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%B0%86%E7%82%B9%E4%BA%91%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5PCD%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/">PCL系列——将点云数据写入PCD格式文件</a></li>
-<li><a href="http://zhangxuezhi.com/2016/04/20/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E6%8B%BC%E6%8E%A5%E4%B8%A4%E4%B8%AA%E7%82%B9%E4%BA%91/">PCL系列——拼接两个点云</a></li>
-<li><a href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%BB%8E%E6%B7%B1%E5%BA%A6%E5%9B%BE%E5%83%8F%EF%BC%88RangeImage%EF%BC%89%E4%B8%AD%E6%8F%90%E5%8F%96NARF%E5%85%B3%E9%94%AE%E7%82%B9/">PCL系列——从深度图像（RangeImage）中提取NARF关键点</a></li>
-<li><a href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E5%8F%AF%E8%A7%86%E5%8C%96%E6%B7%B1%E5%BA%A6%E5%9B%BE%E5%83%8F/">PCL系列——如何可视化深度图像</a></li>
-<li><a href="http://zhangxuezhi.com/2016/03/31/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E8%BF%AD%E4%BB%A3%E6%9C%80%E8%BF%91%E7%82%B9%E6%B3%95%EF%BC%88ICP%EF%BC%89%E9%85%8D%E5%87%86/">PCL系列——如何使用迭代最近点法（ICP）配准</a></li>
-<li><a href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E9%80%90%E6%B8%90%E5%9C%B0%E9%85%8D%E5%87%86%E4%B8%80%E5%AF%B9%E7%82%B9%E4%BA%91/">PCL系列——如何逐渐地配准一对点云</a></li>
-<li><a href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E6%B3%8A%E6%9D%BE%E9%87%8D%E6%9E%84/">PCL系列——三维重构之泊松重构</a></li>
-<li><a href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E8%B4%AA%E5%A9%AA%E4%B8%89%E8%A7%92%E6%8A%95%E5%BD%B1%E7%AE%97%E6%B3%95/">PCL系列——三维重构之贪婪三角投影算法</a></li>
-<li><a href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E7%A7%BB%E5%8A%A8%E7%AB%8B%E6%96%B9%E4%BD%93%E7%AE%97%E6%B3%95/">PCL系列——三维重构之移动立方体算法</a></li>
-<li><a href="http://zhangxuezhi.com/2016/04/20/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%B9%B3%E9%9D%A2%E6%A8%A1%E5%9E%8B%E5%88%86%E5%89%B2/">PCL系列——平面模型分割</a></li>
-</ul>
-<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>通过本教程，我们将会学会：</p>
-<ul>
-<li>如果通过移动立方体算法进行三维点云重构。</li>
-<li>程序支持两种文件格式：<code>*.pcd</code>和<code>*.ply</code>。</li>
-<li>程序先读取点云文件；然后计算法向量，并将法向量和点云坐标放在一起；接着使用移动立方体算法进行重构，最后显示结果。</li>
-</ul>
-<a id="more"></a>
-<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><ul>
-<li>在VS2010 中新建一个文件 <code>recon_marchingCubes.cpp</code>，然后将下面的代码复制到文件中。</li>
-<li>参照之前的文章，配置项目的属性。设置包含目录和库目录和附加依赖项。</li>
-</ul>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/point_types.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/io/pcd_io.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/io/ply_io.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/kdtree/kdtree_flann.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/features/normal_3d.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/surface/marching_cubes_hoppe.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/surface/marching_cubes_rbf.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/surface/gp3.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/visualization/pcl_visualizer.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;boost/thread/thread.hpp&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fstream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span></span></div><div class="line">&#123;</div><div class="line">	<span class="comment">// 确定文件格式</span></div><div class="line">	<span class="keyword">char</span> tmpStr[<span class="number">100</span>];</div><div class="line">	<span class="built_in">strcpy</span>(tmpStr,argv[<span class="number">1</span>]);</div><div class="line">	<span class="keyword">char</span>* pext = <span class="built_in">strrchr</span>(tmpStr, <span class="string">'.'</span>);</div><div class="line">	<span class="built_in">std</span>::<span class="function"><span class="built_in">string</span> <span class="title">extply</span><span class="params">(<span class="string">"ply"</span>)</span></span>;</div><div class="line">	<span class="built_in">std</span>::<span class="function"><span class="built_in">string</span> <span class="title">extpcd</span><span class="params">(<span class="string">"pcd"</span>)</span></span>;</div><div class="line">	<span class="keyword">if</span>(pext)&#123;</div><div class="line">		*pext=<span class="string">'\0'</span>;</div><div class="line">		pext++;</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">std</span>::<span class="function"><span class="built_in">string</span> <span class="title">ext</span><span class="params">(pext)</span></span>;</div><div class="line">	<span class="comment">//如果不支持文件格式，退出程序</span></div><div class="line">	<span class="keyword">if</span> (!((ext == extply)||(ext == extpcd)))&#123;</div><div class="line">		<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"文件格式不支持!"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line">		<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"支持文件格式：*.pcd和*.ply！"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line">		<span class="keyword">return</span>(<span class="number">-1</span>);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">//根据文件格式选择输入方式</span></div><div class="line">  pcl::PointCloud&lt;pcl::PointXYZ&gt;::<span class="function">Ptr <span class="title">cloud</span><span class="params">(<span class="keyword">new</span> pcl::PointCloud&lt;pcl::PointXYZ&gt;)</span> </span>; <span class="comment">//创建点云对象指针，用于存储输入</span></div><div class="line">	<span class="keyword">if</span> (ext == extply)&#123;</div><div class="line">		<span class="keyword">if</span> (pcl::io::loadPLYFile(argv[<span class="number">1</span>] , *cloud) == <span class="number">-1</span>)&#123;</div><div class="line">			PCL_ERROR(<span class="string">"Could not read ply file!\n"</span>) ;</div><div class="line">			<span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">else</span>&#123;</div><div class="line">		<span class="keyword">if</span> (pcl::io::loadPCDFile(argv[<span class="number">1</span>] , *cloud) == <span class="number">-1</span>)&#123;</div><div class="line">			PCL_ERROR(<span class="string">"Could not read pcd file!\n"</span>) ;</div><div class="line">			<span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">  <span class="comment">// 估计法向量</span></div><div class="line">  pcl::NormalEstimation&lt;pcl::PointXYZ, pcl::Normal&gt; n;</div><div class="line">  pcl::PointCloud&lt;pcl::Normal&gt;::<span class="function">Ptr <span class="title">normals</span> <span class="params">(<span class="keyword">new</span> pcl::PointCloud&lt;pcl::Normal&gt;)</span></span>;</div><div class="line">  pcl::search::KdTree&lt;pcl::PointXYZ&gt;::<span class="function">Ptr <span class="title">tree</span> <span class="params">(<span class="keyword">new</span> pcl::search::KdTree&lt;pcl::PointXYZ&gt;)</span></span>;</div><div class="line">  tree-&gt;setInputCloud(cloud);</div><div class="line">  n.setInputCloud(cloud);</div><div class="line">  n.setSearchMethod(tree);</div><div class="line">  n.setKSearch(<span class="number">20</span>);</div><div class="line">  n.compute (*normals); <span class="comment">//计算法线，结果存储在normals中</span></div><div class="line">  <span class="comment">//* normals 不能同时包含点的法向量和表面的曲率</span></div><div class="line"></div><div class="line">  <span class="comment">//将点云和法线放到一起</span></div><div class="line">  pcl::PointCloud&lt;pcl::PointNormal&gt;::<span class="function">Ptr <span class="title">cloud_with_normals</span> <span class="params">(<span class="keyword">new</span> pcl::PointCloud&lt;pcl::PointNormal&gt;)</span></span>;</div><div class="line">  pcl::concatenateFields (*cloud, *normals, *cloud_with_normals);</div><div class="line">  <span class="comment">//* cloud_with_normals = cloud + normals</span></div><div class="line"></div><div class="line"></div><div class="line">  <span class="comment">//创建搜索树</span></div><div class="line">  pcl::search::KdTree&lt;pcl::PointNormal&gt;::<span class="function">Ptr <span class="title">tree2</span> <span class="params">(<span class="keyword">new</span> pcl::search::KdTree&lt;pcl::PointNormal&gt;)</span></span>;</div><div class="line">  tree2-&gt;setInputCloud (cloud_with_normals);</div><div class="line"></div><div class="line">  <span class="comment">//初始化MarchingCubes对象，并设置参数</span></div><div class="line">	pcl::MarchingCubes&lt;pcl::PointNormal&gt; *mc;</div><div class="line">	mc = <span class="keyword">new</span> pcl::MarchingCubesHoppe&lt;pcl::PointNormal&gt; ();</div><div class="line">	<span class="comment">/*</span></div><div class="line">  if (hoppe_or_rbf == 0)</div><div class="line">    mc = new pcl::MarchingCubesHoppe&lt;pcl::PointNormal&gt; ();</div><div class="line">  else</div><div class="line">  &#123;</div><div class="line">    mc = new pcl::MarchingCubesRBF&lt;pcl::PointNormal&gt; ();</div><div class="line">    (reinterpret_cast&lt;pcl::MarchingCubesRBF&lt;pcl::PointNormal&gt;*&gt; (mc))-&gt;setOffSurfaceDisplacement (off_surface_displacement);</div><div class="line">  &#125;</div><div class="line">	*/</div><div class="line"></div><div class="line">	<span class="comment">//创建多变形网格，用于存储结果</span></div><div class="line">  pcl::PolygonMesh mesh;</div><div class="line"></div><div class="line">  <span class="comment">//设置MarchingCubes对象的参数</span></div><div class="line">  mc-&gt;setIsoLevel (<span class="number">0.0f</span>);</div><div class="line">  mc-&gt;setGridResolution (<span class="number">50</span>, <span class="number">50</span>, <span class="number">50</span>);</div><div class="line">  mc-&gt;setPercentageExtendGrid (<span class="number">0.0f</span>);</div><div class="line"></div><div class="line">  <span class="comment">//设置搜索方法</span></div><div class="line">  mc-&gt;setInputCloud (cloud_with_normals);</div><div class="line"></div><div class="line">	<span class="comment">//执行重构，结果保存在mesh中</span></div><div class="line">	mc-&gt;reconstruct (mesh);</div><div class="line">	</div><div class="line">	<span class="comment">//保存网格图</span></div><div class="line">	pcl::io::savePLYFile(<span class="string">"result.ply"</span>, mesh);</div><div class="line"></div><div class="line">	<span class="comment">// 显示结果图</span></div><div class="line">  boost::<span class="built_in">shared_ptr</span>&lt;pcl::visualization::PCLVisualizer&gt; viewer (<span class="keyword">new</span> pcl::visualization::PCLVisualizer (<span class="string">"3D Viewer"</span>));</div><div class="line">  viewer-&gt;setBackgroundColor (<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>); <span class="comment">//设置背景</span></div><div class="line">  viewer-&gt;addPolygonMesh(mesh,<span class="string">"my"</span>); <span class="comment">//设置显示的网格</span></div><div class="line">  viewer-&gt;addCoordinateSystem (<span class="number">1.0</span>); <span class="comment">//设置坐标系</span></div><div class="line">  viewer-&gt;initCameraParameters ();</div><div class="line">  <span class="keyword">while</span> (!viewer-&gt;wasStopped ())&#123;</div><div class="line">    viewer-&gt;spinOnce (<span class="number">100</span>);</div><div class="line">    boost::this_thread::sleep (boost::posix_time::microseconds (<span class="number">100000</span>));</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> (<span class="number">0</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li>重新生成项目。</li>
-<li>到改项目的Debug目录下，按住Shift，同时点击鼠标右键，在当前窗口打开CMD窗口。</li>
-<li>在命令行中输入<code>recon_marchingCubes.exe bunny.points.ply</code>，执行程序。得到如下图所示的结果。</li>
-</ul>
-<p><img src="http://img.blog.csdn.net/20160401095126535" alt="移动立方体算法的结果"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;PCL系列&quot;&gt;&lt;a href=&quot;#PCL系列&quot; class=&quot;headerlink&quot; title=&quot;PCL系列&quot;&gt;&lt;/a&gt;PCL系列&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E8%AF%BB%E5%85%A5PCD%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/&quot;&gt;PCL系列——读入PCD格式文件操作&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%B0%86%E7%82%B9%E4%BA%91%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5PCD%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/&quot;&gt;PCL系列——将点云数据写入PCD格式文件&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/04/20/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E6%8B%BC%E6%8E%A5%E4%B8%A4%E4%B8%AA%E7%82%B9%E4%BA%91/&quot;&gt;PCL系列——拼接两个点云&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%BB%8E%E6%B7%B1%E5%BA%A6%E5%9B%BE%E5%83%8F%EF%BC%88RangeImage%EF%BC%89%E4%B8%AD%E6%8F%90%E5%8F%96NARF%E5%85%B3%E9%94%AE%E7%82%B9/&quot;&gt;PCL系列——从深度图像（RangeImage）中提取NARF关键点&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E5%8F%AF%E8%A7%86%E5%8C%96%E6%B7%B1%E5%BA%A6%E5%9B%BE%E5%83%8F/&quot;&gt;PCL系列——如何可视化深度图像&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/03/31/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E8%BF%AD%E4%BB%A3%E6%9C%80%E8%BF%91%E7%82%B9%E6%B3%95%EF%BC%88ICP%EF%BC%89%E9%85%8D%E5%87%86/&quot;&gt;PCL系列——如何使用迭代最近点法（ICP）配准&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E9%80%90%E6%B8%90%E5%9C%B0%E9%85%8D%E5%87%86%E4%B8%80%E5%AF%B9%E7%82%B9%E4%BA%91/&quot;&gt;PCL系列——如何逐渐地配准一对点云&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E6%B3%8A%E6%9D%BE%E9%87%8D%E6%9E%84/&quot;&gt;PCL系列——三维重构之泊松重构&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E8%B4%AA%E5%A9%AA%E4%B8%89%E8%A7%92%E6%8A%95%E5%BD%B1%E7%AE%97%E6%B3%95/&quot;&gt;PCL系列——三维重构之贪婪三角投影算法&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E7%A7%BB%E5%8A%A8%E7%AB%8B%E6%96%B9%E4%BD%93%E7%AE%97%E6%B3%95/&quot;&gt;PCL系列——三维重构之移动立方体算法&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/04/20/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%B9%B3%E9%9D%A2%E6%A8%A1%E5%9E%8B%E5%88%86%E5%89%B2/&quot;&gt;PCL系列——平面模型分割&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;说明&quot;&gt;&lt;a href=&quot;#说明&quot; class=&quot;headerlink&quot; title=&quot;说明&quot;&gt;&lt;/a&gt;说明&lt;/h2&gt;&lt;p&gt;通过本教程，我们将会学会：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;如果通过移动立方体算法进行三维点云重构。&lt;/li&gt;
-&lt;li&gt;程序支持两种文件格式：&lt;code&gt;*.pcd&lt;/code&gt;和&lt;code&gt;*.ply&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;程序先读取点云文件；然后计算法向量，并将法向量和点云坐标放在一起；接着使用移动立方体算法进行重构，最后显示结果。&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="图像处理" scheme="http://zhangxuezhi.com/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
-    
-      <category term="PCL" scheme="http://zhangxuezhi.com/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/PCL/"/>
-    
-    
-      <category term="PCL" scheme="http://zhangxuezhi.com/tags/PCL/"/>
-    
-      <category term="三维重构" scheme="http://zhangxuezhi.com/tags/%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
     <title>PCL系列——三维重构之贪婪三角投影算法</title>
     <link href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E8%B4%AA%E5%A9%AA%E4%B8%89%E8%A7%92%E6%8A%95%E5%BD%B1%E7%AE%97%E6%B3%95/"/>
     <id>http://zhangxuezhi.com/2016/04/01/PCL系列——三维重构之贪婪三角投影算法/</id>
@@ -3594,6 +3529,81 @@
 &lt;li&gt;如果通过贪婪三角投影算法进行三维点云重构。&lt;/li&gt;
 &lt;li&gt;程序支持两种文件格式：&lt;code&gt;*.pcd&lt;/code&gt;和&lt;code&gt;*.ply&lt;/code&gt;。&lt;/li&gt;
 &lt;li&gt;程序先读取点云文件；然后计算法向量，并将法向量和点云坐标放在一起；接着使用贪婪三角投影算法进行重构，最后显示结果。&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="图像处理" scheme="http://zhangxuezhi.com/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    
+      <category term="PCL" scheme="http://zhangxuezhi.com/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/PCL/"/>
+    
+    
+      <category term="PCL" scheme="http://zhangxuezhi.com/tags/PCL/"/>
+    
+      <category term="三维重构" scheme="http://zhangxuezhi.com/tags/%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PCL系列——三维重构之移动立方体算法</title>
+    <link href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E7%A7%BB%E5%8A%A8%E7%AB%8B%E6%96%B9%E4%BD%93%E7%AE%97%E6%B3%95/"/>
+    <id>http://zhangxuezhi.com/2016/04/01/PCL系列——三维重构之移动立方体算法/</id>
+    <published>2016-04-01T05:24:00.000Z</published>
+    <updated>2016-11-11T14:12:47.202Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="PCL系列"><a href="#PCL系列" class="headerlink" title="PCL系列"></a>PCL系列</h2><ul>
+<li><a href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E8%AF%BB%E5%85%A5PCD%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/">PCL系列——读入PCD格式文件操作</a></li>
+<li><a href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%B0%86%E7%82%B9%E4%BA%91%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5PCD%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/">PCL系列——将点云数据写入PCD格式文件</a></li>
+<li><a href="http://zhangxuezhi.com/2016/04/20/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E6%8B%BC%E6%8E%A5%E4%B8%A4%E4%B8%AA%E7%82%B9%E4%BA%91/">PCL系列——拼接两个点云</a></li>
+<li><a href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%BB%8E%E6%B7%B1%E5%BA%A6%E5%9B%BE%E5%83%8F%EF%BC%88RangeImage%EF%BC%89%E4%B8%AD%E6%8F%90%E5%8F%96NARF%E5%85%B3%E9%94%AE%E7%82%B9/">PCL系列——从深度图像（RangeImage）中提取NARF关键点</a></li>
+<li><a href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E5%8F%AF%E8%A7%86%E5%8C%96%E6%B7%B1%E5%BA%A6%E5%9B%BE%E5%83%8F/">PCL系列——如何可视化深度图像</a></li>
+<li><a href="http://zhangxuezhi.com/2016/03/31/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E8%BF%AD%E4%BB%A3%E6%9C%80%E8%BF%91%E7%82%B9%E6%B3%95%EF%BC%88ICP%EF%BC%89%E9%85%8D%E5%87%86/">PCL系列——如何使用迭代最近点法（ICP）配准</a></li>
+<li><a href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E9%80%90%E6%B8%90%E5%9C%B0%E9%85%8D%E5%87%86%E4%B8%80%E5%AF%B9%E7%82%B9%E4%BA%91/">PCL系列——如何逐渐地配准一对点云</a></li>
+<li><a href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E6%B3%8A%E6%9D%BE%E9%87%8D%E6%9E%84/">PCL系列——三维重构之泊松重构</a></li>
+<li><a href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E8%B4%AA%E5%A9%AA%E4%B8%89%E8%A7%92%E6%8A%95%E5%BD%B1%E7%AE%97%E6%B3%95/">PCL系列——三维重构之贪婪三角投影算法</a></li>
+<li><a href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E7%A7%BB%E5%8A%A8%E7%AB%8B%E6%96%B9%E4%BD%93%E7%AE%97%E6%B3%95/">PCL系列——三维重构之移动立方体算法</a></li>
+<li><a href="http://zhangxuezhi.com/2016/04/20/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%B9%B3%E9%9D%A2%E6%A8%A1%E5%9E%8B%E5%88%86%E5%89%B2/">PCL系列——平面模型分割</a></li>
+</ul>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>通过本教程，我们将会学会：</p>
+<ul>
+<li>如果通过移动立方体算法进行三维点云重构。</li>
+<li>程序支持两种文件格式：<code>*.pcd</code>和<code>*.ply</code>。</li>
+<li>程序先读取点云文件；然后计算法向量，并将法向量和点云坐标放在一起；接着使用移动立方体算法进行重构，最后显示结果。</li>
+</ul>
+<a id="more"></a>
+<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><ul>
+<li>在VS2010 中新建一个文件 <code>recon_marchingCubes.cpp</code>，然后将下面的代码复制到文件中。</li>
+<li>参照之前的文章，配置项目的属性。设置包含目录和库目录和附加依赖项。</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/point_types.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/io/pcd_io.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/io/ply_io.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/kdtree/kdtree_flann.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/features/normal_3d.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/surface/marching_cubes_hoppe.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/surface/marching_cubes_rbf.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/surface/gp3.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/visualization/pcl_visualizer.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;boost/thread/thread.hpp&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fstream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span></span></div><div class="line">&#123;</div><div class="line">	<span class="comment">// 确定文件格式</span></div><div class="line">	<span class="keyword">char</span> tmpStr[<span class="number">100</span>];</div><div class="line">	<span class="built_in">strcpy</span>(tmpStr,argv[<span class="number">1</span>]);</div><div class="line">	<span class="keyword">char</span>* pext = <span class="built_in">strrchr</span>(tmpStr, <span class="string">'.'</span>);</div><div class="line">	<span class="built_in">std</span>::<span class="function"><span class="built_in">string</span> <span class="title">extply</span><span class="params">(<span class="string">"ply"</span>)</span></span>;</div><div class="line">	<span class="built_in">std</span>::<span class="function"><span class="built_in">string</span> <span class="title">extpcd</span><span class="params">(<span class="string">"pcd"</span>)</span></span>;</div><div class="line">	<span class="keyword">if</span>(pext)&#123;</div><div class="line">		*pext=<span class="string">'\0'</span>;</div><div class="line">		pext++;</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">std</span>::<span class="function"><span class="built_in">string</span> <span class="title">ext</span><span class="params">(pext)</span></span>;</div><div class="line">	<span class="comment">//如果不支持文件格式，退出程序</span></div><div class="line">	<span class="keyword">if</span> (!((ext == extply)||(ext == extpcd)))&#123;</div><div class="line">		<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"文件格式不支持!"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line">		<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"支持文件格式：*.pcd和*.ply！"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line">		<span class="keyword">return</span>(<span class="number">-1</span>);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">//根据文件格式选择输入方式</span></div><div class="line">  pcl::PointCloud&lt;pcl::PointXYZ&gt;::<span class="function">Ptr <span class="title">cloud</span><span class="params">(<span class="keyword">new</span> pcl::PointCloud&lt;pcl::PointXYZ&gt;)</span> </span>; <span class="comment">//创建点云对象指针，用于存储输入</span></div><div class="line">	<span class="keyword">if</span> (ext == extply)&#123;</div><div class="line">		<span class="keyword">if</span> (pcl::io::loadPLYFile(argv[<span class="number">1</span>] , *cloud) == <span class="number">-1</span>)&#123;</div><div class="line">			PCL_ERROR(<span class="string">"Could not read ply file!\n"</span>) ;</div><div class="line">			<span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">else</span>&#123;</div><div class="line">		<span class="keyword">if</span> (pcl::io::loadPCDFile(argv[<span class="number">1</span>] , *cloud) == <span class="number">-1</span>)&#123;</div><div class="line">			PCL_ERROR(<span class="string">"Could not read pcd file!\n"</span>) ;</div><div class="line">			<span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">  <span class="comment">// 估计法向量</span></div><div class="line">  pcl::NormalEstimation&lt;pcl::PointXYZ, pcl::Normal&gt; n;</div><div class="line">  pcl::PointCloud&lt;pcl::Normal&gt;::<span class="function">Ptr <span class="title">normals</span> <span class="params">(<span class="keyword">new</span> pcl::PointCloud&lt;pcl::Normal&gt;)</span></span>;</div><div class="line">  pcl::search::KdTree&lt;pcl::PointXYZ&gt;::<span class="function">Ptr <span class="title">tree</span> <span class="params">(<span class="keyword">new</span> pcl::search::KdTree&lt;pcl::PointXYZ&gt;)</span></span>;</div><div class="line">  tree-&gt;setInputCloud(cloud);</div><div class="line">  n.setInputCloud(cloud);</div><div class="line">  n.setSearchMethod(tree);</div><div class="line">  n.setKSearch(<span class="number">20</span>);</div><div class="line">  n.compute (*normals); <span class="comment">//计算法线，结果存储在normals中</span></div><div class="line">  <span class="comment">//* normals 不能同时包含点的法向量和表面的曲率</span></div><div class="line"></div><div class="line">  <span class="comment">//将点云和法线放到一起</span></div><div class="line">  pcl::PointCloud&lt;pcl::PointNormal&gt;::<span class="function">Ptr <span class="title">cloud_with_normals</span> <span class="params">(<span class="keyword">new</span> pcl::PointCloud&lt;pcl::PointNormal&gt;)</span></span>;</div><div class="line">  pcl::concatenateFields (*cloud, *normals, *cloud_with_normals);</div><div class="line">  <span class="comment">//* cloud_with_normals = cloud + normals</span></div><div class="line"></div><div class="line"></div><div class="line">  <span class="comment">//创建搜索树</span></div><div class="line">  pcl::search::KdTree&lt;pcl::PointNormal&gt;::<span class="function">Ptr <span class="title">tree2</span> <span class="params">(<span class="keyword">new</span> pcl::search::KdTree&lt;pcl::PointNormal&gt;)</span></span>;</div><div class="line">  tree2-&gt;setInputCloud (cloud_with_normals);</div><div class="line"></div><div class="line">  <span class="comment">//初始化MarchingCubes对象，并设置参数</span></div><div class="line">	pcl::MarchingCubes&lt;pcl::PointNormal&gt; *mc;</div><div class="line">	mc = <span class="keyword">new</span> pcl::MarchingCubesHoppe&lt;pcl::PointNormal&gt; ();</div><div class="line">	<span class="comment">/*</span></div><div class="line">  if (hoppe_or_rbf == 0)</div><div class="line">    mc = new pcl::MarchingCubesHoppe&lt;pcl::PointNormal&gt; ();</div><div class="line">  else</div><div class="line">  &#123;</div><div class="line">    mc = new pcl::MarchingCubesRBF&lt;pcl::PointNormal&gt; ();</div><div class="line">    (reinterpret_cast&lt;pcl::MarchingCubesRBF&lt;pcl::PointNormal&gt;*&gt; (mc))-&gt;setOffSurfaceDisplacement (off_surface_displacement);</div><div class="line">  &#125;</div><div class="line">	*/</div><div class="line"></div><div class="line">	<span class="comment">//创建多变形网格，用于存储结果</span></div><div class="line">  pcl::PolygonMesh mesh;</div><div class="line"></div><div class="line">  <span class="comment">//设置MarchingCubes对象的参数</span></div><div class="line">  mc-&gt;setIsoLevel (<span class="number">0.0f</span>);</div><div class="line">  mc-&gt;setGridResolution (<span class="number">50</span>, <span class="number">50</span>, <span class="number">50</span>);</div><div class="line">  mc-&gt;setPercentageExtendGrid (<span class="number">0.0f</span>);</div><div class="line"></div><div class="line">  <span class="comment">//设置搜索方法</span></div><div class="line">  mc-&gt;setInputCloud (cloud_with_normals);</div><div class="line"></div><div class="line">	<span class="comment">//执行重构，结果保存在mesh中</span></div><div class="line">	mc-&gt;reconstruct (mesh);</div><div class="line">	</div><div class="line">	<span class="comment">//保存网格图</span></div><div class="line">	pcl::io::savePLYFile(<span class="string">"result.ply"</span>, mesh);</div><div class="line"></div><div class="line">	<span class="comment">// 显示结果图</span></div><div class="line">  boost::<span class="built_in">shared_ptr</span>&lt;pcl::visualization::PCLVisualizer&gt; viewer (<span class="keyword">new</span> pcl::visualization::PCLVisualizer (<span class="string">"3D Viewer"</span>));</div><div class="line">  viewer-&gt;setBackgroundColor (<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>); <span class="comment">//设置背景</span></div><div class="line">  viewer-&gt;addPolygonMesh(mesh,<span class="string">"my"</span>); <span class="comment">//设置显示的网格</span></div><div class="line">  viewer-&gt;addCoordinateSystem (<span class="number">1.0</span>); <span class="comment">//设置坐标系</span></div><div class="line">  viewer-&gt;initCameraParameters ();</div><div class="line">  <span class="keyword">while</span> (!viewer-&gt;wasStopped ())&#123;</div><div class="line">    viewer-&gt;spinOnce (<span class="number">100</span>);</div><div class="line">    boost::this_thread::sleep (boost::posix_time::microseconds (<span class="number">100000</span>));</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> (<span class="number">0</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>重新生成项目。</li>
+<li>到改项目的Debug目录下，按住Shift，同时点击鼠标右键，在当前窗口打开CMD窗口。</li>
+<li>在命令行中输入<code>recon_marchingCubes.exe bunny.points.ply</code>，执行程序。得到如下图所示的结果。</li>
+</ul>
+<p><img src="http://img.blog.csdn.net/20160401095126535" alt="移动立方体算法的结果"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;PCL系列&quot;&gt;&lt;a href=&quot;#PCL系列&quot; class=&quot;headerlink&quot; title=&quot;PCL系列&quot;&gt;&lt;/a&gt;PCL系列&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E8%AF%BB%E5%85%A5PCD%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/&quot;&gt;PCL系列——读入PCD格式文件操作&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%B0%86%E7%82%B9%E4%BA%91%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5PCD%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/&quot;&gt;PCL系列——将点云数据写入PCD格式文件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/04/20/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E6%8B%BC%E6%8E%A5%E4%B8%A4%E4%B8%AA%E7%82%B9%E4%BA%91/&quot;&gt;PCL系列——拼接两个点云&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%BB%8E%E6%B7%B1%E5%BA%A6%E5%9B%BE%E5%83%8F%EF%BC%88RangeImage%EF%BC%89%E4%B8%AD%E6%8F%90%E5%8F%96NARF%E5%85%B3%E9%94%AE%E7%82%B9/&quot;&gt;PCL系列——从深度图像（RangeImage）中提取NARF关键点&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E5%8F%AF%E8%A7%86%E5%8C%96%E6%B7%B1%E5%BA%A6%E5%9B%BE%E5%83%8F/&quot;&gt;PCL系列——如何可视化深度图像&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/03/31/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E8%BF%AD%E4%BB%A3%E6%9C%80%E8%BF%91%E7%82%B9%E6%B3%95%EF%BC%88ICP%EF%BC%89%E9%85%8D%E5%87%86/&quot;&gt;PCL系列——如何使用迭代最近点法（ICP）配准&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E9%80%90%E6%B8%90%E5%9C%B0%E9%85%8D%E5%87%86%E4%B8%80%E5%AF%B9%E7%82%B9%E4%BA%91/&quot;&gt;PCL系列——如何逐渐地配准一对点云&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E6%B3%8A%E6%9D%BE%E9%87%8D%E6%9E%84/&quot;&gt;PCL系列——三维重构之泊松重构&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E8%B4%AA%E5%A9%AA%E4%B8%89%E8%A7%92%E6%8A%95%E5%BD%B1%E7%AE%97%E6%B3%95/&quot;&gt;PCL系列——三维重构之贪婪三角投影算法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E7%A7%BB%E5%8A%A8%E7%AB%8B%E6%96%B9%E4%BD%93%E7%AE%97%E6%B3%95/&quot;&gt;PCL系列——三维重构之移动立方体算法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/04/20/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%B9%B3%E9%9D%A2%E6%A8%A1%E5%9E%8B%E5%88%86%E5%89%B2/&quot;&gt;PCL系列——平面模型分割&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;说明&quot;&gt;&lt;a href=&quot;#说明&quot; class=&quot;headerlink&quot; title=&quot;说明&quot;&gt;&lt;/a&gt;说明&lt;/h2&gt;&lt;p&gt;通过本教程，我们将会学会：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果通过移动立方体算法进行三维点云重构。&lt;/li&gt;
+&lt;li&gt;程序支持两种文件格式：&lt;code&gt;*.pcd&lt;/code&gt;和&lt;code&gt;*.ply&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;程序先读取点云文件；然后计算法向量，并将法向量和点云坐标放在一起；接着使用移动立方体算法进行重构，最后显示结果。&lt;/li&gt;
 &lt;/ul&gt;
     
     </summary>
@@ -3836,6 +3846,72 @@
   </entry>
   
   <entry>
+    <title>PCL系列——读入PCD格式文件</title>
+    <link href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E8%AF%BB%E5%85%A5PCD%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/"/>
+    <id>http://zhangxuezhi.com/2016/03/30/PCL系列——读入PCD格式文件/</id>
+    <published>2016-03-30T05:24:00.000Z</published>
+    <updated>2016-11-11T14:34:06.888Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="PCL系列"><a href="#PCL系列" class="headerlink" title="PCL系列"></a>PCL系列</h2><ul>
+<li><a href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E8%AF%BB%E5%85%A5PCD%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/">PCL系列——读入PCD格式文件操作</a></li>
+<li><a href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%B0%86%E7%82%B9%E4%BA%91%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5PCD%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/">PCL系列——将点云数据写入PCD格式文件</a></li>
+<li><a href="http://zhangxuezhi.com/2016/04/20/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E6%8B%BC%E6%8E%A5%E4%B8%A4%E4%B8%AA%E7%82%B9%E4%BA%91/">PCL系列——拼接两个点云</a></li>
+<li><a href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%BB%8E%E6%B7%B1%E5%BA%A6%E5%9B%BE%E5%83%8F%EF%BC%88RangeImage%EF%BC%89%E4%B8%AD%E6%8F%90%E5%8F%96NARF%E5%85%B3%E9%94%AE%E7%82%B9/">PCL系列——从深度图像（RangeImage）中提取NARF关键点</a></li>
+<li><a href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E5%8F%AF%E8%A7%86%E5%8C%96%E6%B7%B1%E5%BA%A6%E5%9B%BE%E5%83%8F/">PCL系列——如何可视化深度图像</a></li>
+<li><a href="http://zhangxuezhi.com/2016/03/31/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E8%BF%AD%E4%BB%A3%E6%9C%80%E8%BF%91%E7%82%B9%E6%B3%95%EF%BC%88ICP%EF%BC%89%E9%85%8D%E5%87%86/">PCL系列——如何使用迭代最近点法（ICP）配准</a></li>
+<li><a href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E9%80%90%E6%B8%90%E5%9C%B0%E9%85%8D%E5%87%86%E4%B8%80%E5%AF%B9%E7%82%B9%E4%BA%91/">PCL系列——如何逐渐地配准一对点云</a></li>
+<li><a href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E6%B3%8A%E6%9D%BE%E9%87%8D%E6%9E%84/">PCL系列——三维重构之泊松重构</a></li>
+<li><a href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E8%B4%AA%E5%A9%AA%E4%B8%89%E8%A7%92%E6%8A%95%E5%BD%B1%E7%AE%97%E6%B3%95/">PCL系列——三维重构之贪婪三角投影算法</a></li>
+<li><a href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E7%A7%BB%E5%8A%A8%E7%AB%8B%E6%96%B9%E4%BD%93%E7%AE%97%E6%B3%95/">PCL系列——三维重构之移动立方体算法</a></li>
+<li><a href="http://zhangxuezhi.com/2016/04/20/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%B9%B3%E9%9D%A2%E6%A8%A1%E5%9E%8B%E5%88%86%E5%89%B2/">PCL系列——平面模型分割</a></li>
+</ul>
+<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><ul>
+<li>在VS2010 中新建一个文件read_pcd.cpp，然后将下面的代码复制到文件中。</li>
+<li>参照之前的文章，配置项目的属性。设置包含目录和库目录和附加依赖项。</li>
+</ul>
+<a id="more"></a>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span> <span class="comment">//标准输入输出流</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/io/pcd_io.h&gt;</span> <span class="comment">//PCL的PCD格式文件的输入输出头文件</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/point_types.h&gt;</span> <span class="comment">//PCL对各种格式的点的支持头文件</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span></span></div><div class="line">&#123;</div><div class="line">  pcl::PointCloud&lt;pcl::PointXYZ&gt;::<span class="function">Ptr <span class="title">cloud</span> <span class="params">(<span class="keyword">new</span> pcl::PointCloud&lt;pcl::PointXYZ&gt;)</span></span>; <span class="comment">// 创建点云（指针）</span></div><div class="line"></div><div class="line">  <span class="keyword">if</span> (pcl::io::loadPCDFile&lt;pcl::PointXYZ&gt; (<span class="string">"test_pcd.pcd"</span>, *cloud) == <span class="number">-1</span>) <span class="comment">//* 读入PCD格式的文件，如果文件不存在，返回-1</span></div><div class="line">  &#123;</div><div class="line">    PCL_ERROR (<span class="string">"Couldn't read file test_pcd.pcd \n"</span>); <span class="comment">//文件不存在时，返回错误，终止程序。</span></div><div class="line">    <span class="keyword">return</span> (<span class="number">-1</span>);</div><div class="line">  &#125;</div><div class="line">  <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"Loaded "</span></div><div class="line">            &lt;&lt; cloud-&gt;width * cloud-&gt;height</div><div class="line">            &lt;&lt; <span class="string">" data points from test_file.pcd with the following fields: "</span></div><div class="line">            &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line">  <span class="comment">//for (size_t i = 0; i &lt; cloud-&gt;points.size (); ++i) //显示所有的点</span></div><div class="line">	<span class="keyword">for</span> (<span class="keyword">size_t</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; ++i) <span class="comment">// 为了方便观察，只显示前5个点</span></div><div class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"    "</span> &lt;&lt; cloud-&gt;points[i].x</div><div class="line">              &lt;&lt; <span class="string">" "</span>    &lt;&lt; cloud-&gt;points[i].y</div><div class="line">              &lt;&lt; <span class="string">" "</span>    &lt;&lt; cloud-&gt;points[i].z &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> (<span class="number">0</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>编译运行，如下图所示。</li>
+</ul>
+<p><img src="http://img.blog.csdn.net/20160330103906416" alt="这里写图片描述"></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://pointclouds.org/documentation/tutorials/reading_pcd.php#reading-pcd" target="_blank" rel="external">Reading Point Cloud data from PCD files</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;PCL系列&quot;&gt;&lt;a href=&quot;#PCL系列&quot; class=&quot;headerlink&quot; title=&quot;PCL系列&quot;&gt;&lt;/a&gt;PCL系列&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E8%AF%BB%E5%85%A5PCD%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/&quot;&gt;PCL系列——读入PCD格式文件操作&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%B0%86%E7%82%B9%E4%BA%91%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5PCD%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/&quot;&gt;PCL系列——将点云数据写入PCD格式文件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/04/20/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E6%8B%BC%E6%8E%A5%E4%B8%A4%E4%B8%AA%E7%82%B9%E4%BA%91/&quot;&gt;PCL系列——拼接两个点云&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%BB%8E%E6%B7%B1%E5%BA%A6%E5%9B%BE%E5%83%8F%EF%BC%88RangeImage%EF%BC%89%E4%B8%AD%E6%8F%90%E5%8F%96NARF%E5%85%B3%E9%94%AE%E7%82%B9/&quot;&gt;PCL系列——从深度图像（RangeImage）中提取NARF关键点&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E5%8F%AF%E8%A7%86%E5%8C%96%E6%B7%B1%E5%BA%A6%E5%9B%BE%E5%83%8F/&quot;&gt;PCL系列——如何可视化深度图像&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/03/31/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E8%BF%AD%E4%BB%A3%E6%9C%80%E8%BF%91%E7%82%B9%E6%B3%95%EF%BC%88ICP%EF%BC%89%E9%85%8D%E5%87%86/&quot;&gt;PCL系列——如何使用迭代最近点法（ICP）配准&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E9%80%90%E6%B8%90%E5%9C%B0%E9%85%8D%E5%87%86%E4%B8%80%E5%AF%B9%E7%82%B9%E4%BA%91/&quot;&gt;PCL系列——如何逐渐地配准一对点云&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E6%B3%8A%E6%9D%BE%E9%87%8D%E6%9E%84/&quot;&gt;PCL系列——三维重构之泊松重构&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E8%B4%AA%E5%A9%AA%E4%B8%89%E8%A7%92%E6%8A%95%E5%BD%B1%E7%AE%97%E6%B3%95/&quot;&gt;PCL系列——三维重构之贪婪三角投影算法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E7%A7%BB%E5%8A%A8%E7%AB%8B%E6%96%B9%E4%BD%93%E7%AE%97%E6%B3%95/&quot;&gt;PCL系列——三维重构之移动立方体算法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/04/20/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%B9%B3%E9%9D%A2%E6%A8%A1%E5%9E%8B%E5%88%86%E5%89%B2/&quot;&gt;PCL系列——平面模型分割&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;操作&quot;&gt;&lt;a href=&quot;#操作&quot; class=&quot;headerlink&quot; title=&quot;操作&quot;&gt;&lt;/a&gt;操作&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;在VS2010 中新建一个文件read_pcd.cpp，然后将下面的代码复制到文件中。&lt;/li&gt;
+&lt;li&gt;参照之前的文章，配置项目的属性。设置包含目录和库目录和附加依赖项。&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="图像处理" scheme="http://zhangxuezhi.com/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    
+      <category term="PCL" scheme="http://zhangxuezhi.com/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/PCL/"/>
+    
+    
+      <category term="PCL" scheme="http://zhangxuezhi.com/tags/PCL/"/>
+    
+  </entry>
+  
+  <entry>
     <title>PCL系列——从深度图像（RangeImage）中提取NARF关键点</title>
     <link href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%BB%8E%E6%B7%B1%E5%BA%A6%E5%9B%BE%E5%83%8F%EF%BC%88RangeImage%EF%BC%89%E4%B8%AD%E6%8F%90%E5%8F%96NARF%E5%85%B3%E9%94%AE%E7%82%B9/"/>
     <id>http://zhangxuezhi.com/2016/03/30/PCL系列——从深度图像（RangeImage）中提取NARF关键点/</id>
@@ -3907,72 +3983,6 @@
       <category term="PCL" scheme="http://zhangxuezhi.com/tags/PCL/"/>
     
       <category term="关键点" scheme="http://zhangxuezhi.com/tags/%E5%85%B3%E9%94%AE%E7%82%B9/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PCL系列——读入PCD格式文件</title>
-    <link href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E8%AF%BB%E5%85%A5PCD%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/"/>
-    <id>http://zhangxuezhi.com/2016/03/30/PCL系列——读入PCD格式文件/</id>
-    <published>2016-03-30T05:24:00.000Z</published>
-    <updated>2016-11-11T14:34:06.888Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="PCL系列"><a href="#PCL系列" class="headerlink" title="PCL系列"></a>PCL系列</h2><ul>
-<li><a href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E8%AF%BB%E5%85%A5PCD%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/">PCL系列——读入PCD格式文件操作</a></li>
-<li><a href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%B0%86%E7%82%B9%E4%BA%91%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5PCD%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/">PCL系列——将点云数据写入PCD格式文件</a></li>
-<li><a href="http://zhangxuezhi.com/2016/04/20/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E6%8B%BC%E6%8E%A5%E4%B8%A4%E4%B8%AA%E7%82%B9%E4%BA%91/">PCL系列——拼接两个点云</a></li>
-<li><a href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%BB%8E%E6%B7%B1%E5%BA%A6%E5%9B%BE%E5%83%8F%EF%BC%88RangeImage%EF%BC%89%E4%B8%AD%E6%8F%90%E5%8F%96NARF%E5%85%B3%E9%94%AE%E7%82%B9/">PCL系列——从深度图像（RangeImage）中提取NARF关键点</a></li>
-<li><a href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E5%8F%AF%E8%A7%86%E5%8C%96%E6%B7%B1%E5%BA%A6%E5%9B%BE%E5%83%8F/">PCL系列——如何可视化深度图像</a></li>
-<li><a href="http://zhangxuezhi.com/2016/03/31/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E8%BF%AD%E4%BB%A3%E6%9C%80%E8%BF%91%E7%82%B9%E6%B3%95%EF%BC%88ICP%EF%BC%89%E9%85%8D%E5%87%86/">PCL系列——如何使用迭代最近点法（ICP）配准</a></li>
-<li><a href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E9%80%90%E6%B8%90%E5%9C%B0%E9%85%8D%E5%87%86%E4%B8%80%E5%AF%B9%E7%82%B9%E4%BA%91/">PCL系列——如何逐渐地配准一对点云</a></li>
-<li><a href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E6%B3%8A%E6%9D%BE%E9%87%8D%E6%9E%84/">PCL系列——三维重构之泊松重构</a></li>
-<li><a href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E8%B4%AA%E5%A9%AA%E4%B8%89%E8%A7%92%E6%8A%95%E5%BD%B1%E7%AE%97%E6%B3%95/">PCL系列——三维重构之贪婪三角投影算法</a></li>
-<li><a href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E7%A7%BB%E5%8A%A8%E7%AB%8B%E6%96%B9%E4%BD%93%E7%AE%97%E6%B3%95/">PCL系列——三维重构之移动立方体算法</a></li>
-<li><a href="http://zhangxuezhi.com/2016/04/20/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%B9%B3%E9%9D%A2%E6%A8%A1%E5%9E%8B%E5%88%86%E5%89%B2/">PCL系列——平面模型分割</a></li>
-</ul>
-<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><ul>
-<li>在VS2010 中新建一个文件read_pcd.cpp，然后将下面的代码复制到文件中。</li>
-<li>参照之前的文章，配置项目的属性。设置包含目录和库目录和附加依赖项。</li>
-</ul>
-<a id="more"></a>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span> <span class="comment">//标准输入输出流</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/io/pcd_io.h&gt;</span> <span class="comment">//PCL的PCD格式文件的输入输出头文件</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/point_types.h&gt;</span> <span class="comment">//PCL对各种格式的点的支持头文件</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span></span></div><div class="line">&#123;</div><div class="line">  pcl::PointCloud&lt;pcl::PointXYZ&gt;::<span class="function">Ptr <span class="title">cloud</span> <span class="params">(<span class="keyword">new</span> pcl::PointCloud&lt;pcl::PointXYZ&gt;)</span></span>; <span class="comment">// 创建点云（指针）</span></div><div class="line"></div><div class="line">  <span class="keyword">if</span> (pcl::io::loadPCDFile&lt;pcl::PointXYZ&gt; (<span class="string">"test_pcd.pcd"</span>, *cloud) == <span class="number">-1</span>) <span class="comment">//* 读入PCD格式的文件，如果文件不存在，返回-1</span></div><div class="line">  &#123;</div><div class="line">    PCL_ERROR (<span class="string">"Couldn't read file test_pcd.pcd \n"</span>); <span class="comment">//文件不存在时，返回错误，终止程序。</span></div><div class="line">    <span class="keyword">return</span> (<span class="number">-1</span>);</div><div class="line">  &#125;</div><div class="line">  <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"Loaded "</span></div><div class="line">            &lt;&lt; cloud-&gt;width * cloud-&gt;height</div><div class="line">            &lt;&lt; <span class="string">" data points from test_file.pcd with the following fields: "</span></div><div class="line">            &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line">  <span class="comment">//for (size_t i = 0; i &lt; cloud-&gt;points.size (); ++i) //显示所有的点</span></div><div class="line">	<span class="keyword">for</span> (<span class="keyword">size_t</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; ++i) <span class="comment">// 为了方便观察，只显示前5个点</span></div><div class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"    "</span> &lt;&lt; cloud-&gt;points[i].x</div><div class="line">              &lt;&lt; <span class="string">" "</span>    &lt;&lt; cloud-&gt;points[i].y</div><div class="line">              &lt;&lt; <span class="string">" "</span>    &lt;&lt; cloud-&gt;points[i].z &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> (<span class="number">0</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li>编译运行，如下图所示。</li>
-</ul>
-<p><img src="http://img.blog.csdn.net/20160330103906416" alt="这里写图片描述"></p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li><a href="http://pointclouds.org/documentation/tutorials/reading_pcd.php#reading-pcd" target="_blank" rel="external">Reading Point Cloud data from PCD files</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;PCL系列&quot;&gt;&lt;a href=&quot;#PCL系列&quot; class=&quot;headerlink&quot; title=&quot;PCL系列&quot;&gt;&lt;/a&gt;PCL系列&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E8%AF%BB%E5%85%A5PCD%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/&quot;&gt;PCL系列——读入PCD格式文件操作&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%B0%86%E7%82%B9%E4%BA%91%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5PCD%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/&quot;&gt;PCL系列——将点云数据写入PCD格式文件&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/04/20/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E6%8B%BC%E6%8E%A5%E4%B8%A4%E4%B8%AA%E7%82%B9%E4%BA%91/&quot;&gt;PCL系列——拼接两个点云&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%BB%8E%E6%B7%B1%E5%BA%A6%E5%9B%BE%E5%83%8F%EF%BC%88RangeImage%EF%BC%89%E4%B8%AD%E6%8F%90%E5%8F%96NARF%E5%85%B3%E9%94%AE%E7%82%B9/&quot;&gt;PCL系列——从深度图像（RangeImage）中提取NARF关键点&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E5%8F%AF%E8%A7%86%E5%8C%96%E6%B7%B1%E5%BA%A6%E5%9B%BE%E5%83%8F/&quot;&gt;PCL系列——如何可视化深度图像&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/03/31/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E8%BF%AD%E4%BB%A3%E6%9C%80%E8%BF%91%E7%82%B9%E6%B3%95%EF%BC%88ICP%EF%BC%89%E9%85%8D%E5%87%86/&quot;&gt;PCL系列——如何使用迭代最近点法（ICP）配准&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E9%80%90%E6%B8%90%E5%9C%B0%E9%85%8D%E5%87%86%E4%B8%80%E5%AF%B9%E7%82%B9%E4%BA%91/&quot;&gt;PCL系列——如何逐渐地配准一对点云&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E6%B3%8A%E6%9D%BE%E9%87%8D%E6%9E%84/&quot;&gt;PCL系列——三维重构之泊松重构&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E8%B4%AA%E5%A9%AA%E4%B8%89%E8%A7%92%E6%8A%95%E5%BD%B1%E7%AE%97%E6%B3%95/&quot;&gt;PCL系列——三维重构之贪婪三角投影算法&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E7%A7%BB%E5%8A%A8%E7%AB%8B%E6%96%B9%E4%BD%93%E7%AE%97%E6%B3%95/&quot;&gt;PCL系列——三维重构之移动立方体算法&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://zhangxuezhi.com/2016/04/20/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%B9%B3%E9%9D%A2%E6%A8%A1%E5%9E%8B%E5%88%86%E5%89%B2/&quot;&gt;PCL系列——平面模型分割&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;操作&quot;&gt;&lt;a href=&quot;#操作&quot; class=&quot;headerlink&quot; title=&quot;操作&quot;&gt;&lt;/a&gt;操作&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;在VS2010 中新建一个文件read_pcd.cpp，然后将下面的代码复制到文件中。&lt;/li&gt;
-&lt;li&gt;参照之前的文章，配置项目的属性。设置包含目录和库目录和附加依赖项。&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="图像处理" scheme="http://zhangxuezhi.com/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
-    
-      <category term="PCL" scheme="http://zhangxuezhi.com/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/PCL/"/>
-    
-    
-      <category term="PCL" scheme="http://zhangxuezhi.com/tags/PCL/"/>
     
   </entry>
   
@@ -4697,6 +4707,63 @@
   </entry>
   
   <entry>
+    <title>Linux命令——w</title>
+    <link href="http://zhangxuezhi.com/2015/11/04/Linux%E5%91%BD%E4%BB%A4%E2%80%94%E2%80%94w/"/>
+    <id>http://zhangxuezhi.com/2015/11/04/Linux命令——w/</id>
+    <published>2015-11-04T06:00:00.000Z</published>
+    <updated>2016-11-11T14:54:53.384Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="w"><a href="#w" class="headerlink" title="w"></a>w</h2><ul>
+<li><strong>功能</strong>：显示已经陆的用户列表，和他们正在执行的指令。<a id="more"></a></li>
+<li><strong>提示</strong>：<ul>
+<li>单独执行w命令会显示所有的用户和他们执行的命令；</li>
+<li>您也可指定用户名称，仅显示某位用户和他正在执行的命令；</li>
+</ul>
+</li>
+<li><strong>选项</strong>： <ul>
+<li>-h：不打印头信息； </li>
+<li>-u：显示进程和cpu时间时，忽略用户名【su切换到其它用户时，有区别】；</li>
+<li>-s：使用短输出格式； </li>
+<li>-f：显示用户从哪登录； </li>
+<li>-V：显示版本信息。</li>
+</ul>
+</li>
+<li><p><strong>示例</strong>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 显示所有用户的信息</span></div><div class="line">w</div><div class="line"><span class="comment"># 显示用户test的信息</span></div><div class="line">w <span class="built_in">test</span></div><div class="line"><span class="comment"># 显示所有用户的信息，但是不显示头信息【标题栏】</span></div><div class="line">w -h</div><div class="line"><span class="comment"># 显示短输出格式【精简格式】</span></div><div class="line">w <span class="_">-s</span></div><div class="line"><span class="comment"># 显示/不显示用户从哪里登录</span></div><div class="line">w <span class="_">-f</span></div><div class="line"><span class="comment"># 显示版本</span></div><div class="line">w -V</div></pre></td></tr></table></figure>
+</li>
+<li><p>参数 <code>u</code> 举例说明：<br><img src="http://img.blog.csdn.net/20151104201659742" alt="这里写图片描述"></p>
+</li>
+<li><p>参数 <code>s</code> 举例说明：</p>
+</li>
+</ul>
+<p><img src="http://img.blog.csdn.net/20151104201811864" alt="这里写图片描述"></p>
+<h2 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h2><ul>
+<li><a href="http://www.lx138.com/" target="_blank" rel="external">Linux命令查询网站</a></li>
+<li><a href="http://man.linuxde.net/" target="_blank" rel="external">Linux命令大全</a></li>
+<li><a href="http://baidu.com/" target="_blank" rel="external">baidu</a></li>
+<li><a href="http://google.com.hk" target="_blank" rel="external">Google</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;w&quot;&gt;&lt;a href=&quot;#w&quot; class=&quot;headerlink&quot; title=&quot;w&quot;&gt;&lt;/a&gt;w&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;功能&lt;/strong&gt;：显示已经陆的用户列表，和他们正在执行的指令。
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://zhangxuezhi.com/categories/Linux/"/>
+    
+      <category term="命令" scheme="http://zhangxuezhi.com/categories/Linux/%E5%91%BD%E4%BB%A4/"/>
+    
+    
+      <category term="Linux" scheme="http://zhangxuezhi.com/tags/Linux/"/>
+    
+      <category term="命令" scheme="http://zhangxuezhi.com/tags/%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux命令——adduser</title>
     <link href="http://zhangxuezhi.com/2015/11/04/Linux%E5%91%BD%E4%BB%A4%E2%80%94%E2%80%94adduser/"/>
     <id>http://zhangxuezhi.com/2015/11/04/Linux命令——adduser/</id>
@@ -4753,63 +4820,6 @@
 &lt;/blockquote&gt;
 &lt;h2 id=&quot;adduser&quot;&gt;&lt;a href=&quot;#adduser&quot; class=&quot;headerlink&quot; title=&quot;adduser&quot;&gt;&lt;/a&gt;adduser&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;功能&lt;/strong&gt;：建立用户账号
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://zhangxuezhi.com/categories/Linux/"/>
-    
-      <category term="命令" scheme="http://zhangxuezhi.com/categories/Linux/%E5%91%BD%E4%BB%A4/"/>
-    
-    
-      <category term="Linux" scheme="http://zhangxuezhi.com/tags/Linux/"/>
-    
-      <category term="命令" scheme="http://zhangxuezhi.com/tags/%E5%91%BD%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux命令——w</title>
-    <link href="http://zhangxuezhi.com/2015/11/04/Linux%E5%91%BD%E4%BB%A4%E2%80%94%E2%80%94w/"/>
-    <id>http://zhangxuezhi.com/2015/11/04/Linux命令——w/</id>
-    <published>2015-11-04T06:00:00.000Z</published>
-    <updated>2016-11-11T14:54:53.384Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="w"><a href="#w" class="headerlink" title="w"></a>w</h2><ul>
-<li><strong>功能</strong>：显示已经陆的用户列表，和他们正在执行的指令。<a id="more"></a></li>
-<li><strong>提示</strong>：<ul>
-<li>单独执行w命令会显示所有的用户和他们执行的命令；</li>
-<li>您也可指定用户名称，仅显示某位用户和他正在执行的命令；</li>
-</ul>
-</li>
-<li><strong>选项</strong>： <ul>
-<li>-h：不打印头信息； </li>
-<li>-u：显示进程和cpu时间时，忽略用户名【su切换到其它用户时，有区别】；</li>
-<li>-s：使用短输出格式； </li>
-<li>-f：显示用户从哪登录； </li>
-<li>-V：显示版本信息。</li>
-</ul>
-</li>
-<li><p><strong>示例</strong>：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 显示所有用户的信息</span></div><div class="line">w</div><div class="line"><span class="comment"># 显示用户test的信息</span></div><div class="line">w <span class="built_in">test</span></div><div class="line"><span class="comment"># 显示所有用户的信息，但是不显示头信息【标题栏】</span></div><div class="line">w -h</div><div class="line"><span class="comment"># 显示短输出格式【精简格式】</span></div><div class="line">w <span class="_">-s</span></div><div class="line"><span class="comment"># 显示/不显示用户从哪里登录</span></div><div class="line">w <span class="_">-f</span></div><div class="line"><span class="comment"># 显示版本</span></div><div class="line">w -V</div></pre></td></tr></table></figure>
-</li>
-<li><p>参数 <code>u</code> 举例说明：<br><img src="http://img.blog.csdn.net/20151104201659742" alt="这里写图片描述"></p>
-</li>
-<li><p>参数 <code>s</code> 举例说明：</p>
-</li>
-</ul>
-<p><img src="http://img.blog.csdn.net/20151104201811864" alt="这里写图片描述"></p>
-<h2 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h2><ul>
-<li><a href="http://www.lx138.com/" target="_blank" rel="external">Linux命令查询网站</a></li>
-<li><a href="http://man.linuxde.net/" target="_blank" rel="external">Linux命令大全</a></li>
-<li><a href="http://baidu.com/" target="_blank" rel="external">baidu</a></li>
-<li><a href="http://google.com.hk" target="_blank" rel="external">Google</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;w&quot;&gt;&lt;a href=&quot;#w&quot; class=&quot;headerlink&quot; title=&quot;w&quot;&gt;&lt;/a&gt;w&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;功能&lt;/strong&gt;：显示已经陆的用户列表，和他们正在执行的指令。
     
     </summary>
     
@@ -4931,6 +4941,57 @@
   </entry>
   
   <entry>
+    <title>Linux命令——visudo</title>
+    <link href="http://zhangxuezhi.com/2015/11/04/Linux%E5%91%BD%E4%BB%A4%E2%80%94%E2%80%94visudo/"/>
+    <id>http://zhangxuezhi.com/2015/11/04/Linux命令——visudo/</id>
+    <published>2015-11-04T05:58:00.000Z</published>
+    <updated>2016-11-11T14:58:47.813Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="visudo"><a href="#visudo" class="headerlink" title="visudo"></a>visudo</h2><ul>
+<li><strong>功能</strong>：编辑sudoers文件<a id="more"></a></li>
+<li><strong>提示</strong>：<ul>
+<li>需要超级用户权限；</li>
+<li>默认编辑/etc/sudoers文件；</li>
+<li>sudoers文件的默认权限是440，即默认无法修改；</li>
+<li>visudo可以在不更改sudoers文件权限的情况下，直接修改sudoers文件；</li>
+</ul>
+</li>
+<li><strong>选项</strong>： <ul>
+<li>-c：使用<strong>check-only</strong>模式，打印语法等错误信息；</li>
+<li>-q：使用<strong>quiet</strong>模式，不打印语法等错误信息；</li>
+<li>-f：指定sudoers文件；</li>
+</ul>
+</li>
+<li><strong>示例</strong>：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 编辑/etc/sudoers文件</span></div><div class="line">visudo</div><div class="line"><span class="comment"># 编辑/etc/sudoers文件，并检查语法等错误</span></div><div class="line">visudo -c</div><div class="line"><span class="comment"># 编辑/etc/sudoers文件，但不打印语法等错误</span></div><div class="line">visudo -q</div><div class="line"><span class="comment"># 显示版本信息</span></div><div class="line">visudo -V</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h2><ul>
+<li><a href="http://www.lx138.com/" target="_blank" rel="external">Linux命令查询网站</a></li>
+<li><a href="http://man.linuxde.net/" target="_blank" rel="external">Linux命令大全</a></li>
+<li><a href="http://baidu.com/" target="_blank" rel="external">baidu</a></li>
+<li><a href="http://google.com.hk" target="_blank" rel="external">Google</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;visudo&quot;&gt;&lt;a href=&quot;#visudo&quot; class=&quot;headerlink&quot; title=&quot;visudo&quot;&gt;&lt;/a&gt;visudo&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;功能&lt;/strong&gt;：编辑sudoers文件
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://zhangxuezhi.com/categories/Linux/"/>
+    
+      <category term="命令" scheme="http://zhangxuezhi.com/categories/Linux/%E5%91%BD%E4%BB%A4/"/>
+    
+    
+      <category term="Linux" scheme="http://zhangxuezhi.com/tags/Linux/"/>
+    
+      <category term="命令" scheme="http://zhangxuezhi.com/tags/%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux命令——uname</title>
     <link href="http://zhangxuezhi.com/2015/11/04/Linux%E5%91%BD%E4%BB%A4%E2%80%94%E2%80%94uname/"/>
     <id>http://zhangxuezhi.com/2015/11/04/Linux命令——uname/</id>
@@ -4972,57 +5033,6 @@
     
       &lt;h2 id=&quot;uname&quot;&gt;&lt;a href=&quot;#uname&quot; class=&quot;headerlink&quot; title=&quot;uname&quot;&gt;&lt;/a&gt;uname&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;功能&lt;/strong&gt;：显示系统信息
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://zhangxuezhi.com/categories/Linux/"/>
-    
-      <category term="命令" scheme="http://zhangxuezhi.com/categories/Linux/%E5%91%BD%E4%BB%A4/"/>
-    
-    
-      <category term="Linux" scheme="http://zhangxuezhi.com/tags/Linux/"/>
-    
-      <category term="命令" scheme="http://zhangxuezhi.com/tags/%E5%91%BD%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux命令——visudo</title>
-    <link href="http://zhangxuezhi.com/2015/11/04/Linux%E5%91%BD%E4%BB%A4%E2%80%94%E2%80%94visudo/"/>
-    <id>http://zhangxuezhi.com/2015/11/04/Linux命令——visudo/</id>
-    <published>2015-11-04T05:58:00.000Z</published>
-    <updated>2016-11-11T14:58:47.813Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="visudo"><a href="#visudo" class="headerlink" title="visudo"></a>visudo</h2><ul>
-<li><strong>功能</strong>：编辑sudoers文件<a id="more"></a></li>
-<li><strong>提示</strong>：<ul>
-<li>需要超级用户权限；</li>
-<li>默认编辑/etc/sudoers文件；</li>
-<li>sudoers文件的默认权限是440，即默认无法修改；</li>
-<li>visudo可以在不更改sudoers文件权限的情况下，直接修改sudoers文件；</li>
-</ul>
-</li>
-<li><strong>选项</strong>： <ul>
-<li>-c：使用<strong>check-only</strong>模式，打印语法等错误信息；</li>
-<li>-q：使用<strong>quiet</strong>模式，不打印语法等错误信息；</li>
-<li>-f：指定sudoers文件；</li>
-</ul>
-</li>
-<li><strong>示例</strong>：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 编辑/etc/sudoers文件</span></div><div class="line">visudo</div><div class="line"><span class="comment"># 编辑/etc/sudoers文件，并检查语法等错误</span></div><div class="line">visudo -c</div><div class="line"><span class="comment"># 编辑/etc/sudoers文件，但不打印语法等错误</span></div><div class="line">visudo -q</div><div class="line"><span class="comment"># 显示版本信息</span></div><div class="line">visudo -V</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h2><ul>
-<li><a href="http://www.lx138.com/" target="_blank" rel="external">Linux命令查询网站</a></li>
-<li><a href="http://man.linuxde.net/" target="_blank" rel="external">Linux命令大全</a></li>
-<li><a href="http://baidu.com/" target="_blank" rel="external">baidu</a></li>
-<li><a href="http://google.com.hk" target="_blank" rel="external">Google</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;visudo&quot;&gt;&lt;a href=&quot;#visudo&quot; class=&quot;headerlink&quot; title=&quot;visudo&quot;&gt;&lt;/a&gt;visudo&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;功能&lt;/strong&gt;：编辑sudoers文件
     
     </summary>
     
@@ -5307,9 +5317,9 @@
       <category term="软件" scheme="http://zhangxuezhi.com/categories/Windows/%E8%BD%AF%E4%BB%B6/"/>
     
     
-      <category term="Windows" scheme="http://zhangxuezhi.com/tags/Windows/"/>
-    
       <category term="Xftp" scheme="http://zhangxuezhi.com/tags/Xftp/"/>
+    
+      <category term="Windows" scheme="http://zhangxuezhi.com/tags/Windows/"/>
     
   </entry>
   
@@ -5660,6 +5670,65 @@
   </entry>
   
   <entry>
+    <title>服务器安装并配置Ubuntu Server 14.04</title>
+    <link href="http://zhangxuezhi.com/2015/10/13/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85%E5%B9%B6%E9%85%8D%E7%BD%AEUbuntu%20Server%2014.04/"/>
+    <id>http://zhangxuezhi.com/2015/10/13/服务器安装并配置Ubuntu Server 14.04/</id>
+    <published>2015-10-13T13:02:00.000Z</published>
+    <updated>2016-11-11T15:09:38.870Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h2><ul>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48437097" target="_blank" rel="external">服务器如何进入Bios</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48437187" target="_blank" rel="external">U盘安装Ubuntu Server ，CD-ROM自检，安装失败</a></li>
+</ul>
+<h2 id="远程访问"><a href="#远程访问" class="headerlink" title="远程访问"></a>远程访问</h2><ul>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48437221" target="_blank" rel="external">使用Putty无法远程登录，显示服务器拒绝连接</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48622069" target="_blank" rel="external">Putty使用设置</a><a id="more"></a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48437247" target="_blank" rel="external">Ubuntu Server 14.04安装Gnome桌面环境</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48437007" target="_blank" rel="external">windows使用VNC远程访问Ubuntu Server 14.04图形界面</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48662435" target="_blank" rel="external">在VNC中Xfce4中Tab键失效的解决方法</a></li>
+</ul>
+<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><ul>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48437901" target="_blank" rel="external">Ubuntu Server 添加/删除/修改用户</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48468143" target="_blank" rel="external">Ubuntu 14.04 64位安装32位兼容包</a></li>
+<li><a href="">开机自启任务</a></li>
+<li><a href="http://blog.csdn.net/eager7/article/details/14221901" target="_blank" rel="external">linux创建新用户后shell无法自动补全命令</a></li>
+<li><a href="http://www.cnblogs.com/vincedotnet/p/4013099.html" target="_blank" rel="external">ubuntu14.04设置静态ip</a></li>
+<li><a href="http://blog.sina.com.cn/s/blog_674d87000100pzmh.html" target="_blank" rel="external">linux下查看网关的命令</a></li>
+</ul>
+<h2 id="安装软件"><a href="#安装软件" class="headerlink" title="安装软件"></a>安装软件</h2><ul>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/46872285" target="_blank" rel="external">Ubuntu-安装-Chrome</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/46876717" target="_blank" rel="external">Ubuntu-安装-搜狗输入法-详细教程</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/46878577" target="_blank" rel="external">Ubuntu-安装-Python包</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/47065475" target="_blank" rel="external">Ubuntu14.04安装Theano详细教程</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/47075401" target="_blank" rel="external"> Ubuntu-安装-cuda7.0-单显卡-超详细教程</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/47169583" target="_blank" rel="external">Ubuntu-安装-theano+caffe-超详细教程</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;安装过程&quot;&gt;&lt;a href=&quot;#安装过程&quot; class=&quot;headerlink&quot; title=&quot;安装过程&quot;&gt;&lt;/a&gt;安装过程&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/xuezhisdc/article/details/48437097&quot;&gt;服务器如何进入Bios&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/xuezhisdc/article/details/48437187&quot;&gt;U盘安装Ubuntu Server ，CD-ROM自检，安装失败&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;远程访问&quot;&gt;&lt;a href=&quot;#远程访问&quot; class=&quot;headerlink&quot; title=&quot;远程访问&quot;&gt;&lt;/a&gt;远程访问&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/xuezhisdc/article/details/48437221&quot;&gt;使用Putty无法远程登录，显示服务器拒绝连接&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/xuezhisdc/article/details/48622069&quot;&gt;Putty使用设置&lt;/a&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://zhangxuezhi.com/categories/Linux/"/>
+    
+      <category term="安装和配置软件" scheme="http://zhangxuezhi.com/categories/Linux/%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+      <category term="Linux" scheme="http://zhangxuezhi.com/tags/Linux/"/>
+    
+      <category term="安装和配置软件" scheme="http://zhangxuezhi.com/tags/%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>caffe安装系列——安装caffe</title>
     <link href="http://zhangxuezhi.com/2015/10/13/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85caffe/"/>
     <id>http://zhangxuezhi.com/2015/10/13/caffe安装系列——安装caffe/</id>
@@ -5771,65 +5840,6 @@
       <category term="深度学习" scheme="http://zhangxuezhi.com/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
       <category term="Caffe" scheme="http://zhangxuezhi.com/tags/Caffe/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>服务器安装并配置Ubuntu Server 14.04</title>
-    <link href="http://zhangxuezhi.com/2015/10/13/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85%E5%B9%B6%E9%85%8D%E7%BD%AEUbuntu%20Server%2014.04/"/>
-    <id>http://zhangxuezhi.com/2015/10/13/服务器安装并配置Ubuntu Server 14.04/</id>
-    <published>2015-10-13T13:02:00.000Z</published>
-    <updated>2016-11-11T15:09:38.870Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h2><ul>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48437097" target="_blank" rel="external">服务器如何进入Bios</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48437187" target="_blank" rel="external">U盘安装Ubuntu Server ，CD-ROM自检，安装失败</a></li>
-</ul>
-<h2 id="远程访问"><a href="#远程访问" class="headerlink" title="远程访问"></a>远程访问</h2><ul>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48437221" target="_blank" rel="external">使用Putty无法远程登录，显示服务器拒绝连接</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48622069" target="_blank" rel="external">Putty使用设置</a><a id="more"></a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48437247" target="_blank" rel="external">Ubuntu Server 14.04安装Gnome桌面环境</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48437007" target="_blank" rel="external">windows使用VNC远程访问Ubuntu Server 14.04图形界面</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48662435" target="_blank" rel="external">在VNC中Xfce4中Tab键失效的解决方法</a></li>
-</ul>
-<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><ul>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48437901" target="_blank" rel="external">Ubuntu Server 添加/删除/修改用户</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48468143" target="_blank" rel="external">Ubuntu 14.04 64位安装32位兼容包</a></li>
-<li><a href="">开机自启任务</a></li>
-<li><a href="http://blog.csdn.net/eager7/article/details/14221901" target="_blank" rel="external">linux创建新用户后shell无法自动补全命令</a></li>
-<li><a href="http://www.cnblogs.com/vincedotnet/p/4013099.html" target="_blank" rel="external">ubuntu14.04设置静态ip</a></li>
-<li><a href="http://blog.sina.com.cn/s/blog_674d87000100pzmh.html" target="_blank" rel="external">linux下查看网关的命令</a></li>
-</ul>
-<h2 id="安装软件"><a href="#安装软件" class="headerlink" title="安装软件"></a>安装软件</h2><ul>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/46872285" target="_blank" rel="external">Ubuntu-安装-Chrome</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/46876717" target="_blank" rel="external">Ubuntu-安装-搜狗输入法-详细教程</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/46878577" target="_blank" rel="external">Ubuntu-安装-Python包</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/47065475" target="_blank" rel="external">Ubuntu14.04安装Theano详细教程</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/47075401" target="_blank" rel="external"> Ubuntu-安装-cuda7.0-单显卡-超详细教程</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/47169583" target="_blank" rel="external">Ubuntu-安装-theano+caffe-超详细教程</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;安装过程&quot;&gt;&lt;a href=&quot;#安装过程&quot; class=&quot;headerlink&quot; title=&quot;安装过程&quot;&gt;&lt;/a&gt;安装过程&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/xuezhisdc/article/details/48437097&quot;&gt;服务器如何进入Bios&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/xuezhisdc/article/details/48437187&quot;&gt;U盘安装Ubuntu Server ，CD-ROM自检，安装失败&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;远程访问&quot;&gt;&lt;a href=&quot;#远程访问&quot; class=&quot;headerlink&quot; title=&quot;远程访问&quot;&gt;&lt;/a&gt;远程访问&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/xuezhisdc/article/details/48437221&quot;&gt;使用Putty无法远程登录，显示服务器拒绝连接&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/xuezhisdc/article/details/48622069&quot;&gt;Putty使用设置&lt;/a&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://zhangxuezhi.com/categories/Linux/"/>
-    
-      <category term="安装和配置软件" scheme="http://zhangxuezhi.com/categories/Linux/%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6/"/>
-    
-    
-      <category term="Linux" scheme="http://zhangxuezhi.com/tags/Linux/"/>
-    
-      <category term="安装和配置软件" scheme="http://zhangxuezhi.com/tags/%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6/"/>
     
   </entry>
   
@@ -6554,45 +6564,6 @@
   </entry>
   
   <entry>
-    <title>Linux shell判断文件和文件夹是否存在</title>
-    <link href="http://zhangxuezhi.com/2015/09/22/Linux%20shell%E5%88%A4%E6%96%AD%E6%96%87%E4%BB%B6%E5%92%8C%E6%96%87%E4%BB%B6%E5%A4%B9%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8/"/>
-    <id>http://zhangxuezhi.com/2015/09/22/Linux shell判断文件和文件夹是否存在/</id>
-    <published>2015-09-22T06:19:00.000Z</published>
-    <updated>2016-11-11T15:34:30.998Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-</blockquote>
-<ul>
-<li><p>shell判断文件,目录是否存在或者具有权限</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/sh  </span></div><div class="line">  </div><div class="line">myPath=<span class="string">"/var/log/httpd/"</span>  </div><div class="line">myFile=<span class="string">"/var /log/httpd/access.log"</span>  </div><div class="line">  </div><div class="line"><span class="comment">#这里的-x 参数判断$myPath是否存在并且是否具有可执行权限  </span></div><div class="line"><span class="keyword">if</span> [ ! -x <span class="string">"<span class="variable">$myPath</span>"</span>]; <span class="keyword">then</span>  </div><div class="line">　　mkdir <span class="string">"<span class="variable">$myPath</span>"</span>  </div><div class="line"><span class="keyword">fi</span>  </div><div class="line"></div><div class="line"><span class="comment">#这里的-d 参数判断$myPath是否存在  </span></div><div class="line"><span class="keyword">if</span> [ ! <span class="_">-d</span> <span class="string">"<span class="variable">$myPath</span>"</span>]; <span class="keyword">then</span>  </div><div class="line">　　mkdir <span class="string">"<span class="variable">$myPath</span>"</span>  </div><div class="line"><span class="keyword">fi</span>  </div><div class="line">  </div><div class="line"><span class="comment">#这里的-f参数判断$myFile是否存在  </span></div><div class="line"><span class="keyword">if</span> [ ! <span class="_">-f</span> <span class="string">"<span class="variable">$myFile</span>"</span> ]; <span class="keyword">then</span>  </div><div class="line">　　touch <span class="string">"<span class="variable">$myFile</span>"</span>  </div><div class="line"><span class="keyword">fi</span>  </div><div class="line">  </div><div class="line"><span class="comment">#其他参数还有-n,-n是判断一个变量是否是否有值  </span></div><div class="line"><span class="keyword">if</span> [ ! -n <span class="string">"<span class="variable">$myVar</span>"</span> ]; <span class="keyword">then</span>  </div><div class="line">　　<span class="built_in">echo</span> <span class="string">"<span class="variable">$myVar</span> is empty"</span>  </div><div class="line">　　<span class="built_in">exit</span> 0  </div><div class="line"><span class="keyword">fi</span>  </div><div class="line">  </div><div class="line"><span class="comment">#两个变量判断是否相等  </span></div><div class="line"><span class="keyword">if</span> [ <span class="string">"<span class="variable">$var1</span>"</span> = <span class="string">"<span class="variable">$var2</span>"</span> ]; <span class="keyword">then</span>  </div><div class="line">　　<span class="built_in">echo</span> <span class="string">'$var1 eq $var2'</span>  </div><div class="line"><span class="keyword">else</span>  </div><div class="line">　　<span class="built_in">echo</span> <span class="string">'$var1 not eq $var2'</span>  </div><div class="line"><span class="keyword">fi</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>转载地址：<a href="http://www.cnblogs.com/platero/p/4021561.html" target="_blank" rel="external">http://www.cnblogs.com/platero/p/4021561.html</a></p>
-</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;shell判断文件,目录是否存在或者具有权限&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div cla
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://zhangxuezhi.com/categories/Linux/"/>
-    
-      <category term="经验" scheme="http://zhangxuezhi.com/categories/Linux/%E7%BB%8F%E9%AA%8C/"/>
-    
-    
-      <category term="Linux" scheme="http://zhangxuezhi.com/tags/Linux/"/>
-    
-      <category term="shell" scheme="http://zhangxuezhi.com/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
     <title>在VNC中Xfce4中Tab键失效的解决方法</title>
     <link href="http://zhangxuezhi.com/2015/09/22/%E5%9C%A8VNC%E4%B8%ADXfce4%E4%B8%ADTab%E9%94%AE%E5%A4%B1%E6%95%88%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
     <id>http://zhangxuezhi.com/2015/09/22/在VNC中Xfce4中Tab键失效的解决方法/</id>
@@ -6654,6 +6625,84 @@
   </entry>
   
   <entry>
+    <title>Linux shell判断文件和文件夹是否存在</title>
+    <link href="http://zhangxuezhi.com/2015/09/22/Linux%20shell%E5%88%A4%E6%96%AD%E6%96%87%E4%BB%B6%E5%92%8C%E6%96%87%E4%BB%B6%E5%A4%B9%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8/"/>
+    <id>http://zhangxuezhi.com/2015/09/22/Linux shell判断文件和文件夹是否存在/</id>
+    <published>2015-09-22T06:19:00.000Z</published>
+    <updated>2016-11-11T15:34:30.998Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+</blockquote>
+<ul>
+<li><p>shell判断文件,目录是否存在或者具有权限</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/sh  </span></div><div class="line">  </div><div class="line">myPath=<span class="string">"/var/log/httpd/"</span>  </div><div class="line">myFile=<span class="string">"/var /log/httpd/access.log"</span>  </div><div class="line">  </div><div class="line"><span class="comment">#这里的-x 参数判断$myPath是否存在并且是否具有可执行权限  </span></div><div class="line"><span class="keyword">if</span> [ ! -x <span class="string">"<span class="variable">$myPath</span>"</span>]; <span class="keyword">then</span>  </div><div class="line">　　mkdir <span class="string">"<span class="variable">$myPath</span>"</span>  </div><div class="line"><span class="keyword">fi</span>  </div><div class="line"></div><div class="line"><span class="comment">#这里的-d 参数判断$myPath是否存在  </span></div><div class="line"><span class="keyword">if</span> [ ! <span class="_">-d</span> <span class="string">"<span class="variable">$myPath</span>"</span>]; <span class="keyword">then</span>  </div><div class="line">　　mkdir <span class="string">"<span class="variable">$myPath</span>"</span>  </div><div class="line"><span class="keyword">fi</span>  </div><div class="line">  </div><div class="line"><span class="comment">#这里的-f参数判断$myFile是否存在  </span></div><div class="line"><span class="keyword">if</span> [ ! <span class="_">-f</span> <span class="string">"<span class="variable">$myFile</span>"</span> ]; <span class="keyword">then</span>  </div><div class="line">　　touch <span class="string">"<span class="variable">$myFile</span>"</span>  </div><div class="line"><span class="keyword">fi</span>  </div><div class="line">  </div><div class="line"><span class="comment">#其他参数还有-n,-n是判断一个变量是否是否有值  </span></div><div class="line"><span class="keyword">if</span> [ ! -n <span class="string">"<span class="variable">$myVar</span>"</span> ]; <span class="keyword">then</span>  </div><div class="line">　　<span class="built_in">echo</span> <span class="string">"<span class="variable">$myVar</span> is empty"</span>  </div><div class="line">　　<span class="built_in">exit</span> 0  </div><div class="line"><span class="keyword">fi</span>  </div><div class="line">  </div><div class="line"><span class="comment">#两个变量判断是否相等  </span></div><div class="line"><span class="keyword">if</span> [ <span class="string">"<span class="variable">$var1</span>"</span> = <span class="string">"<span class="variable">$var2</span>"</span> ]; <span class="keyword">then</span>  </div><div class="line">　　<span class="built_in">echo</span> <span class="string">'$var1 eq $var2'</span>  </div><div class="line"><span class="keyword">else</span>  </div><div class="line">　　<span class="built_in">echo</span> <span class="string">'$var1 not eq $var2'</span>  </div><div class="line"><span class="keyword">fi</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>转载地址：<a href="http://www.cnblogs.com/platero/p/4021561.html" target="_blank" rel="external">http://www.cnblogs.com/platero/p/4021561.html</a></p>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;shell判断文件,目录是否存在或者具有权限&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div cla
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://zhangxuezhi.com/categories/Linux/"/>
+    
+      <category term="经验" scheme="http://zhangxuezhi.com/categories/Linux/%E7%BB%8F%E9%AA%8C/"/>
+    
+    
+      <category term="Linux" scheme="http://zhangxuezhi.com/tags/Linux/"/>
+    
+      <category term="shell" scheme="http://zhangxuezhi.com/tags/shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Putty使用设置</title>
+    <link href="http://zhangxuezhi.com/2015/09/21/Putty%E4%BD%BF%E7%94%A8%E8%AE%BE%E7%BD%AE/"/>
+    <id>http://zhangxuezhi.com/2015/09/21/Putty使用设置/</id>
+    <published>2015-09-21T06:23:00.000Z</published>
+    <updated>2016-11-11T15:36:19.949Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Putty中文乱码问题"><a href="#Putty中文乱码问题" class="headerlink" title="Putty中文乱码问题"></a>Putty中文乱码问题</h2><ul>
+<li>使用Putty的时候，中文字符显示为乱码，如何解决。方法就是使用UTF-8传输协议。</li>
+<li>参考<a href="http://jingyan.baidu.com/article/3aed632e5f00ae701080913a.html" target="_blank" rel="external">《怎样解决putty终端乱码的方法》</a></li>
+</ul>
+<h2 id="Putty配色问题"><a href="#Putty配色问题" class="headerlink" title="Putty配色问题"></a>Putty配色问题</h2><ul>
+<li>Putty的文件夹显示为深蓝色，颜色太暗，看不清楚。可以设置为ANSI Blue。</li>
+<li>参考<a href="http://blog.sina.com.cn/s/blog_74a7e56e0101bzkk.html" target="_blank" rel="external">《Putty文件夹蓝色太暗问题》</a></li>
+</ul>
+<h2 id="Putty字体"><a href="#Putty字体" class="headerlink" title="Putty字体"></a>Putty字体</h2><ul>
+<li>Putty的字体太小，看起来太费眼。可以将字体大小设置大一点。</li>
+<li>参考文章<a href="http://blog.csdn.net/wengyupeng/article/details/43671351" target="_blank" rel="external">《设置Putty 字体 颜色 全屏》</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Putty中文乱码问题&quot;&gt;&lt;a href=&quot;#Putty中文乱码问题&quot; class=&quot;headerlink&quot; title=&quot;Putty中文乱码问题&quot;&gt;&lt;/a&gt;Putty中文乱码问题&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;使用Putty的时候，中文字符显示为乱码，如何解决。方法
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://zhangxuezhi.com/categories/Linux/"/>
+    
+      <category term="经验" scheme="http://zhangxuezhi.com/categories/Linux/%E7%BB%8F%E9%AA%8C/"/>
+    
+    
+      <category term="Linux" scheme="http://zhangxuezhi.com/tags/Linux/"/>
+    
+      <category term="Putty" scheme="http://zhangxuezhi.com/tags/Putty/"/>
+    
+  </entry>
+  
+  <entry>
     <title>使用Putty无法远程登录，显示服务器拒绝连接</title>
     <link href="http://zhangxuezhi.com/2015/09/21/%E4%BD%BF%E7%94%A8Putty%E6%97%A0%E6%B3%95%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%EF%BC%8C%E6%98%BE%E7%A4%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8B%92%E7%BB%9D%E8%BF%9E%E6%8E%A5/"/>
     <id>http://zhangxuezhi.com/2015/09/21/使用Putty无法远程登录，显示服务器拒绝连接/</id>
@@ -6686,45 +6735,6 @@
 &lt;li&gt;方法：可以设置/etc/network/interfaces文件，将网卡设置为静态IP，并设置IP，子网掩码等。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;没有安装openssh-server&quot;&gt;&lt;a href=&quot;#没有安装openssh-server&quot; class=&quot;headerlink&quot; title=&quot;没有安装openssh-server&quot;&gt;&lt;/a&gt;&lt;strong&gt;没有安装openssh-server&lt;/strong&gt;&lt;/h2&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://zhangxuezhi.com/categories/Linux/"/>
-    
-      <category term="经验" scheme="http://zhangxuezhi.com/categories/Linux/%E7%BB%8F%E9%AA%8C/"/>
-    
-    
-      <category term="Linux" scheme="http://zhangxuezhi.com/tags/Linux/"/>
-    
-      <category term="Putty" scheme="http://zhangxuezhi.com/tags/Putty/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Putty使用设置</title>
-    <link href="http://zhangxuezhi.com/2015/09/21/Putty%E4%BD%BF%E7%94%A8%E8%AE%BE%E7%BD%AE/"/>
-    <id>http://zhangxuezhi.com/2015/09/21/Putty使用设置/</id>
-    <published>2015-09-21T06:23:00.000Z</published>
-    <updated>2016-11-11T15:36:19.949Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Putty中文乱码问题"><a href="#Putty中文乱码问题" class="headerlink" title="Putty中文乱码问题"></a>Putty中文乱码问题</h2><ul>
-<li>使用Putty的时候，中文字符显示为乱码，如何解决。方法就是使用UTF-8传输协议。</li>
-<li>参考<a href="http://jingyan.baidu.com/article/3aed632e5f00ae701080913a.html" target="_blank" rel="external">《怎样解决putty终端乱码的方法》</a></li>
-</ul>
-<h2 id="Putty配色问题"><a href="#Putty配色问题" class="headerlink" title="Putty配色问题"></a>Putty配色问题</h2><ul>
-<li>Putty的文件夹显示为深蓝色，颜色太暗，看不清楚。可以设置为ANSI Blue。</li>
-<li>参考<a href="http://blog.sina.com.cn/s/blog_74a7e56e0101bzkk.html" target="_blank" rel="external">《Putty文件夹蓝色太暗问题》</a></li>
-</ul>
-<h2 id="Putty字体"><a href="#Putty字体" class="headerlink" title="Putty字体"></a>Putty字体</h2><ul>
-<li>Putty的字体太小，看起来太费眼。可以将字体大小设置大一点。</li>
-<li>参考文章<a href="http://blog.csdn.net/wengyupeng/article/details/43671351" target="_blank" rel="external">《设置Putty 字体 颜色 全屏》</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Putty中文乱码问题&quot;&gt;&lt;a href=&quot;#Putty中文乱码问题&quot; class=&quot;headerlink&quot; title=&quot;Putty中文乱码问题&quot;&gt;&lt;/a&gt;Putty中文乱码问题&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;使用Putty的时候，中文字符显示为乱码，如何解决。方法
     
     </summary>
     
@@ -7492,6 +7502,66 @@ floatX = float32
   </entry>
   
   <entry>
+    <title>Ubuntu-安装-Chrome</title>
+    <link href="http://zhangxuezhi.com/2015/07/31/Ubuntu-%E5%AE%89%E8%A3%85-Chrome/"/>
+    <id>http://zhangxuezhi.com/2015/07/31/Ubuntu-安装-Chrome/</id>
+    <published>2015-07-31T06:34:00.000Z</published>
+    <updated>2016-11-11T15:56:23.903Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="一、下载Chrome的安装包"><a href="#一、下载Chrome的安装包" class="headerlink" title="一、下载Chrome的安装包"></a>一、下载Chrome的安装包</h2><ul>
+<li>打开终端，输入一下命令（区分64位和32位），下载Chrome的deb安装包。<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#<span class="number">32</span>位</div><div class="line">wget http<span class="variable">s:</span>//<span class="keyword">dl</span>.google.<span class="keyword">com</span>/linux/direct/google-chrome-stable_current_i386.<span class="keyword">deb</span></div><div class="line">#<span class="number">64</span>位</div><div class="line">wget http<span class="variable">s:</span>//<span class="keyword">dl</span>.google.<span class="keyword">com</span>/linux/direct/google-chrome-stable_current_amd64.<span class="keyword">deb</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="二、安装Chrome"><a href="#二、安装Chrome" class="headerlink" title="二、安装Chrome"></a>二、安装Chrome</h2><ul>
+<li>注意：需要root权限</li>
+<li>在Terminal中输入以下命令<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#<span class="number">32</span>位安装命令</div><div class="line">sudo dpkg -<span class="selector-tag">i</span> google-chrome-stable_current_i386<span class="selector-class">.deb</span></div><div class="line">#<span class="number">64</span>位安装命令</div><div class="line">sudo dpkg -<span class="selector-tag">i</span> google-chrome-stable_current_amd64.deb</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<a id="more"></a>
+<h2 id="三、修复安装错误"><a href="#三、修复安装错误" class="headerlink" title="三、修复安装错误"></a>三、修复安装错误</h2><ul>
+<li>安装过程中会提示错误信息“在处理时有错误发生： google-chrome-stable”</li>
+<li><p>英文错误：</p>
+<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">dpkg: <span class="keyword">error</span> processing <span class="keyword">package</span> google-chrome-stable (--install):</div><div class="line">dependency problems - leaving unconfigured</div></pre></td></tr></table></figure>
+</li>
+<li><p>出现这个错误之后，执行下面的命令</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> -f install</div></pre></td></tr></table></figure>
+</li>
+<li><p>执行完成后，Chrome就安装成功了。</p>
+</li>
+<li>在Dash中搜索Chrome，打开Chrome，并绑定到启动栏（launcher）</li>
+</ul>
+<h2 id="四、参考文章："><a href="#四、参考文章：" class="headerlink" title="四、参考文章："></a>四、参考文章：</h2><ul>
+<li><a href="http://www.linuxidc.com/Linux/2014-04/100645.htm" target="_blank" rel="external">http://www.linuxidc.com/Linux/2014-04/100645.htm</a></li>
+<li><a href="http://jingyan.baidu.com/article/a681b0de18071e3b1843463b.html" target="_blank" rel="external">http://jingyan.baidu.com/article/a681b0de18071e3b1843463b.html</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;一、下载Chrome的安装包&quot;&gt;&lt;a href=&quot;#一、下载Chrome的安装包&quot; class=&quot;headerlink&quot; title=&quot;一、下载Chrome的安装包&quot;&gt;&lt;/a&gt;一、下载Chrome的安装包&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;打开终端，输入一下命令（区分64位和32位），下载Chrome的deb安装包。&lt;figure class=&quot;highlight vim&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;#&lt;span class=&quot;number&quot;&gt;32&lt;/span&gt;位&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;wget http&lt;span class=&quot;variable&quot;&gt;s:&lt;/span&gt;//&lt;span class=&quot;keyword&quot;&gt;dl&lt;/span&gt;.google.&lt;span class=&quot;keyword&quot;&gt;com&lt;/span&gt;/linux/direct/google-chrome-stable_current_i386.&lt;span class=&quot;keyword&quot;&gt;deb&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;#&lt;span class=&quot;number&quot;&gt;64&lt;/span&gt;位&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;wget http&lt;span class=&quot;variable&quot;&gt;s:&lt;/span&gt;//&lt;span class=&quot;keyword&quot;&gt;dl&lt;/span&gt;.google.&lt;span class=&quot;keyword&quot;&gt;com&lt;/span&gt;/linux/direct/google-chrome-stable_current_amd64.&lt;span class=&quot;keyword&quot;&gt;deb&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;二、安装Chrome&quot;&gt;&lt;a href=&quot;#二、安装Chrome&quot; class=&quot;headerlink&quot; title=&quot;二、安装Chrome&quot;&gt;&lt;/a&gt;二、安装Chrome&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;注意：需要root权限&lt;/li&gt;
+&lt;li&gt;在Terminal中输入以下命令&lt;figure class=&quot;highlight stylus&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;#&lt;span class=&quot;number&quot;&gt;32&lt;/span&gt;位安装命令&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo dpkg -&lt;span class=&quot;selector-tag&quot;&gt;i&lt;/span&gt; google-chrome-stable_current_i386&lt;span class=&quot;selector-class&quot;&gt;.deb&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;#&lt;span class=&quot;number&quot;&gt;64&lt;/span&gt;位安装命令&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo dpkg -&lt;span class=&quot;selector-tag&quot;&gt;i&lt;/span&gt; google-chrome-stable_current_amd64.deb&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://zhangxuezhi.com/categories/Linux/"/>
+    
+      <category term="安装和配置软件" scheme="http://zhangxuezhi.com/categories/Linux/%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+      <category term="Linux" scheme="http://zhangxuezhi.com/tags/Linux/"/>
+    
+      <category term="安装和配置软件" scheme="http://zhangxuezhi.com/tags/%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Ubuntu-安装-搜狗输入法-详细教程</title>
     <link href="http://zhangxuezhi.com/2015/07/31/Ubuntu-%E5%AE%89%E8%A3%85-%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95-%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/"/>
     <id>http://zhangxuezhi.com/2015/07/31/Ubuntu-安装-搜狗输入法-详细教程/</id>
@@ -7557,66 +7627,6 @@ floatX = float32
 &lt;/ul&gt;
 &lt;h2 id=&quot;安装fcitx&quot;&gt;&lt;a href=&quot;#安装fcitx&quot; class=&quot;headerlink&quot; title=&quot;安装fcitx&quot;&gt;&lt;/a&gt;安装fcitx&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;打开Terminal，输入以下命令，安装fcitx&lt;figure class=&quot;highlight actionscript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;sudo apt-&lt;span class=&quot;keyword&quot;&gt;get&lt;/span&gt; install fcitx&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://zhangxuezhi.com/categories/Linux/"/>
-    
-      <category term="安装和配置软件" scheme="http://zhangxuezhi.com/categories/Linux/%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6/"/>
-    
-    
-      <category term="Linux" scheme="http://zhangxuezhi.com/tags/Linux/"/>
-    
-      <category term="安装和配置软件" scheme="http://zhangxuezhi.com/tags/%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ubuntu-安装-Chrome</title>
-    <link href="http://zhangxuezhi.com/2015/07/31/Ubuntu-%E5%AE%89%E8%A3%85-Chrome/"/>
-    <id>http://zhangxuezhi.com/2015/07/31/Ubuntu-安装-Chrome/</id>
-    <published>2015-07-31T06:34:00.000Z</published>
-    <updated>2016-11-11T15:56:23.903Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="一、下载Chrome的安装包"><a href="#一、下载Chrome的安装包" class="headerlink" title="一、下载Chrome的安装包"></a>一、下载Chrome的安装包</h2><ul>
-<li>打开终端，输入一下命令（区分64位和32位），下载Chrome的deb安装包。<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#<span class="number">32</span>位</div><div class="line">wget http<span class="variable">s:</span>//<span class="keyword">dl</span>.google.<span class="keyword">com</span>/linux/direct/google-chrome-stable_current_i386.<span class="keyword">deb</span></div><div class="line">#<span class="number">64</span>位</div><div class="line">wget http<span class="variable">s:</span>//<span class="keyword">dl</span>.google.<span class="keyword">com</span>/linux/direct/google-chrome-stable_current_amd64.<span class="keyword">deb</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="二、安装Chrome"><a href="#二、安装Chrome" class="headerlink" title="二、安装Chrome"></a>二、安装Chrome</h2><ul>
-<li>注意：需要root权限</li>
-<li>在Terminal中输入以下命令<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#<span class="number">32</span>位安装命令</div><div class="line">sudo dpkg -<span class="selector-tag">i</span> google-chrome-stable_current_i386<span class="selector-class">.deb</span></div><div class="line">#<span class="number">64</span>位安装命令</div><div class="line">sudo dpkg -<span class="selector-tag">i</span> google-chrome-stable_current_amd64.deb</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<a id="more"></a>
-<h2 id="三、修复安装错误"><a href="#三、修复安装错误" class="headerlink" title="三、修复安装错误"></a>三、修复安装错误</h2><ul>
-<li>安装过程中会提示错误信息“在处理时有错误发生： google-chrome-stable”</li>
-<li><p>英文错误：</p>
-<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">dpkg: <span class="keyword">error</span> processing <span class="keyword">package</span> google-chrome-stable (--install):</div><div class="line">dependency problems - leaving unconfigured</div></pre></td></tr></table></figure>
-</li>
-<li><p>出现这个错误之后，执行下面的命令</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> -f install</div></pre></td></tr></table></figure>
-</li>
-<li><p>执行完成后，Chrome就安装成功了。</p>
-</li>
-<li>在Dash中搜索Chrome，打开Chrome，并绑定到启动栏（launcher）</li>
-</ul>
-<h2 id="四、参考文章："><a href="#四、参考文章：" class="headerlink" title="四、参考文章："></a>四、参考文章：</h2><ul>
-<li><a href="http://www.linuxidc.com/Linux/2014-04/100645.htm" target="_blank" rel="external">http://www.linuxidc.com/Linux/2014-04/100645.htm</a></li>
-<li><a href="http://jingyan.baidu.com/article/a681b0de18071e3b1843463b.html" target="_blank" rel="external">http://jingyan.baidu.com/article/a681b0de18071e3b1843463b.html</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;一、下载Chrome的安装包&quot;&gt;&lt;a href=&quot;#一、下载Chrome的安装包&quot; class=&quot;headerlink&quot; title=&quot;一、下载Chrome的安装包&quot;&gt;&lt;/a&gt;一、下载Chrome的安装包&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;打开终端，输入一下命令（区分64位和32位），下载Chrome的deb安装包。&lt;figure class=&quot;highlight vim&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;#&lt;span class=&quot;number&quot;&gt;32&lt;/span&gt;位&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;wget http&lt;span class=&quot;variable&quot;&gt;s:&lt;/span&gt;//&lt;span class=&quot;keyword&quot;&gt;dl&lt;/span&gt;.google.&lt;span class=&quot;keyword&quot;&gt;com&lt;/span&gt;/linux/direct/google-chrome-stable_current_i386.&lt;span class=&quot;keyword&quot;&gt;deb&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;#&lt;span class=&quot;number&quot;&gt;64&lt;/span&gt;位&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;wget http&lt;span class=&quot;variable&quot;&gt;s:&lt;/span&gt;//&lt;span class=&quot;keyword&quot;&gt;dl&lt;/span&gt;.google.&lt;span class=&quot;keyword&quot;&gt;com&lt;/span&gt;/linux/direct/google-chrome-stable_current_amd64.&lt;span class=&quot;keyword&quot;&gt;deb&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;二、安装Chrome&quot;&gt;&lt;a href=&quot;#二、安装Chrome&quot; class=&quot;headerlink&quot; title=&quot;二、安装Chrome&quot;&gt;&lt;/a&gt;二、安装Chrome&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;注意：需要root权限&lt;/li&gt;
-&lt;li&gt;在Terminal中输入以下命令&lt;figure class=&quot;highlight stylus&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;#&lt;span class=&quot;number&quot;&gt;32&lt;/span&gt;位安装命令&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo dpkg -&lt;span class=&quot;selector-tag&quot;&gt;i&lt;/span&gt; google-chrome-stable_current_i386&lt;span class=&quot;selector-class&quot;&gt;.deb&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;#&lt;span class=&quot;number&quot;&gt;64&lt;/span&gt;位安装命令&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo dpkg -&lt;span class=&quot;selector-tag&quot;&gt;i&lt;/span&gt; google-chrome-stable_current_amd64.deb&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
     
@@ -8188,39 +8198,6 @@ sudo pip install shadowsocks
   </entry>
   
   <entry>
-    <title>Ubuntu-安装-Python包</title>
-    <link href="http://zhangxuezhi.com/2015/07/14/Ubuntu-%E5%AE%89%E8%A3%85-Python%E5%8C%85/"/>
-    <id>http://zhangxuezhi.com/2015/07/14/Ubuntu-安装-Python包/</id>
-    <published>2015-07-14T06:47:00.000Z</published>
-    <updated>2016-11-06T16:29:27.767Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>Ubuntu下安装Python包可以使用两种方法，一种是用<strong><code>apt-get</code></strong>，另一种是使用<strong><code>pip</code></strong>。</p>
-</blockquote>
-<h2 id="apt-get安装示例"><a href="#apt-get安装示例" class="headerlink" title="apt-get安装示例"></a>apt-get安装示例</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">sudo apt-get <span class="keyword">install</span> python-numpy</div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> python-matplotlib </div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> python-scipy</div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> python-sklearn</div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> python-setuptools </div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> python-pip </div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> python-jinja2</div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> python-PIL </div><div class="line">sudo aptp-<span class="keyword">get</span> <span class="keyword">install</span> python-dev</div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> ipython</div></pre></td></tr></table></figure>
-<h2 id="pip安装示例"><a href="#pip安装示例" class="headerlink" title="pip安装示例"></a>pip安装示例</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo pip <span class="keyword">install</span> nolearn​</div><div class="line">sudo pip <span class="keyword">install</span> Theano</div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;Ubuntu下安装Python包可以使用两种方法，一种是用&lt;strong&gt;&lt;code&gt;apt-get&lt;/code&gt;&lt;/strong&gt;，另一种是使用&lt;strong&gt;&lt;code&gt;pip&lt;/code&gt;&lt;/strong&gt;。&lt;/p&gt;
-&lt;/blockquote
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://zhangxuezhi.com/categories/Linux/"/>
-    
-      <category term="安装和配置软件" scheme="http://zhangxuezhi.com/categories/Linux/%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6/"/>
-    
-    
-      <category term="Linux" scheme="http://zhangxuezhi.com/tags/Linux/"/>
-    
-      <category term="安装和配置软件" scheme="http://zhangxuezhi.com/tags/%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Ubuntu-安装-有道词典</title>
     <link href="http://zhangxuezhi.com/2015/07/14/Ubuntu-%E5%AE%89%E8%A3%85-%E6%9C%89%E9%81%93%E8%AF%8D%E5%85%B8/"/>
     <id>http://zhangxuezhi.com/2015/07/14/Ubuntu-安装-有道词典/</id>
@@ -8240,6 +8217,39 @@ sudo pip install shadowsocks
 &lt;p&gt;Windows下的有道词典非常地好用，在Ubuntu下也可以使用有道词典啦！！！&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&quot;添加源，并更新&quot;&gt;&lt;a href=&quot;#添加源，并更新&quot; class=&quot;headerlink&quot; title=&quot;添加源
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://zhangxuezhi.com/categories/Linux/"/>
+    
+      <category term="安装和配置软件" scheme="http://zhangxuezhi.com/categories/Linux/%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+      <category term="Linux" scheme="http://zhangxuezhi.com/tags/Linux/"/>
+    
+      <category term="安装和配置软件" scheme="http://zhangxuezhi.com/tags/%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu-安装-Python包</title>
+    <link href="http://zhangxuezhi.com/2015/07/14/Ubuntu-%E5%AE%89%E8%A3%85-Python%E5%8C%85/"/>
+    <id>http://zhangxuezhi.com/2015/07/14/Ubuntu-安装-Python包/</id>
+    <published>2015-07-14T06:47:00.000Z</published>
+    <updated>2016-11-06T16:29:27.767Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>Ubuntu下安装Python包可以使用两种方法，一种是用<strong><code>apt-get</code></strong>，另一种是使用<strong><code>pip</code></strong>。</p>
+</blockquote>
+<h2 id="apt-get安装示例"><a href="#apt-get安装示例" class="headerlink" title="apt-get安装示例"></a>apt-get安装示例</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">sudo apt-get <span class="keyword">install</span> python-numpy</div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> python-matplotlib </div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> python-scipy</div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> python-sklearn</div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> python-setuptools </div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> python-pip </div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> python-jinja2</div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> python-PIL </div><div class="line">sudo aptp-<span class="keyword">get</span> <span class="keyword">install</span> python-dev</div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> ipython</div></pre></td></tr></table></figure>
+<h2 id="pip安装示例"><a href="#pip安装示例" class="headerlink" title="pip安装示例"></a>pip安装示例</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo pip <span class="keyword">install</span> nolearn​</div><div class="line">sudo pip <span class="keyword">install</span> Theano</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;Ubuntu下安装Python包可以使用两种方法，一种是用&lt;strong&gt;&lt;code&gt;apt-get&lt;/code&gt;&lt;/strong&gt;，另一种是使用&lt;strong&gt;&lt;code&gt;pip&lt;/code&gt;&lt;/strong&gt;。&lt;/p&gt;
+&lt;/blockquote
     
     </summary>
     
