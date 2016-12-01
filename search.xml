@@ -56,7 +56,7 @@
 </ol>
 <h2 id="创建仓库，推送到GitHub"><a href="#创建仓库，推送到GitHub" class="headerlink" title="创建仓库，推送到GitHub"></a>创建仓库，推送到GitHub</h2><ol>
 <li><p>新建仓库blog。</p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">git</span> init <span class="keyword">blog</span></div><div class="line"><span class="symbol">cd</span> <span class="keyword">blog</span></div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git init blog</div><div class="line"><span class="built_in">cd</span> blog</div></pre></td></tr></table></figure>
 </li>
 <li><p>将原来博客目录下的以下内容复制到blog文件夹中。<br><img src="http://img.zhangxuezhi.com/747d3iy0nq4a39mdnpdx57c51a.png" alt=""></p>
 </li>
@@ -2663,43 +2663,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[PCL系列——三维重构之泊松重构]]></title>
-      <url>http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E6%B3%8A%E6%9D%BE%E9%87%8D%E6%9E%84/</url>
-      <content type="html"><![CDATA[<h2 id="PCL系列"><a href="#PCL系列" class="headerlink" title="PCL系列"></a>PCL系列</h2><ul>
-<li><a href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E8%AF%BB%E5%85%A5PCD%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/">PCL系列——读入PCD格式文件操作</a></li>
-<li><a href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%B0%86%E7%82%B9%E4%BA%91%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5PCD%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/">PCL系列——将点云数据写入PCD格式文件</a></li>
-<li><a href="http://zhangxuezhi.com/2016/04/20/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E6%8B%BC%E6%8E%A5%E4%B8%A4%E4%B8%AA%E7%82%B9%E4%BA%91/">PCL系列——拼接两个点云</a></li>
-<li><a href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%BB%8E%E6%B7%B1%E5%BA%A6%E5%9B%BE%E5%83%8F%EF%BC%88RangeImage%EF%BC%89%E4%B8%AD%E6%8F%90%E5%8F%96NARF%E5%85%B3%E9%94%AE%E7%82%B9/">PCL系列——从深度图像（RangeImage）中提取NARF关键点</a></li>
-<li><a href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E5%8F%AF%E8%A7%86%E5%8C%96%E6%B7%B1%E5%BA%A6%E5%9B%BE%E5%83%8F/">PCL系列——如何可视化深度图像</a></li>
-<li><a href="http://zhangxuezhi.com/2016/03/31/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E8%BF%AD%E4%BB%A3%E6%9C%80%E8%BF%91%E7%82%B9%E6%B3%95%EF%BC%88ICP%EF%BC%89%E9%85%8D%E5%87%86/">PCL系列——如何使用迭代最近点法（ICP）配准</a></li>
-<li><a href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E9%80%90%E6%B8%90%E5%9C%B0%E9%85%8D%E5%87%86%E4%B8%80%E5%AF%B9%E7%82%B9%E4%BA%91/">PCL系列——如何逐渐地配准一对点云</a></li>
-<li><a href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E6%B3%8A%E6%9D%BE%E9%87%8D%E6%9E%84/">PCL系列——三维重构之泊松重构</a></li>
-<li><a href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E8%B4%AA%E5%A9%AA%E4%B8%89%E8%A7%92%E6%8A%95%E5%BD%B1%E7%AE%97%E6%B3%95/">PCL系列——三维重构之贪婪三角投影算法</a></li>
-<li><a href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E7%A7%BB%E5%8A%A8%E7%AB%8B%E6%96%B9%E4%BD%93%E7%AE%97%E6%B3%95/">PCL系列——三维重构之移动立方体算法</a></li>
-<li><a href="http://zhangxuezhi.com/2016/04/20/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%B9%B3%E9%9D%A2%E6%A8%A1%E5%9E%8B%E5%88%86%E5%89%B2/">PCL系列——平面模型分割</a></li>
-</ul>
-<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>通过本教程，我们将会学会：</p>
-<ul>
-<li>如果通过泊松算法进行三维点云重构。</li>
-<li>程序支持两种文件格式：<code>*.pcd</code>和<code>*.ply</code></li>
-<li>程序先读取点云文件，然后计算法向量，接着使用泊松算法进行重构，最后显示结果。</li>
-</ul>
-<a id="more"></a>
-<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><ul>
-<li>在VS2010 中新建一个文件 <code>recon_poisson.cpp</code>，然后将下面的代码复制到文件中。</li>
-<li>参照之前的文章，配置项目的属性。设置包含目录和库目录和附加依赖项。</li>
-</ul>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">//点的类型的头文件</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/point_types.h&gt;</span></span></div><div class="line"><span class="comment">//点云文件IO（pcd文件和ply文件）</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/io/pcd_io.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/io/ply_io.h&gt;</span></span></div><div class="line"><span class="comment">//kd树</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/kdtree/kdtree_flann.h&gt;</span></span></div><div class="line"><span class="comment">//特征提取</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/features/normal_3d_omp.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/features/normal_3d.h&gt;</span></span></div><div class="line"><span class="comment">//重构</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/surface/gp3.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/surface/poisson.h&gt;</span></span></div><div class="line"><span class="comment">//可视化</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/visualization/pcl_visualizer.h&gt;</span></span></div><div class="line"><span class="comment">//多线程</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;boost/thread/thread.hpp&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fstream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span></span></div><div class="line">&#123;</div><div class="line">	<span class="comment">// 确定文件格式</span></div><div class="line">	<span class="keyword">char</span> tmpStr[<span class="number">100</span>];</div><div class="line">	<span class="built_in">strcpy</span>(tmpStr,argv[<span class="number">1</span>]);</div><div class="line">	<span class="keyword">char</span>* pext = <span class="built_in">strrchr</span>(tmpStr, <span class="string">'.'</span>);</div><div class="line">	<span class="built_in">std</span>::<span class="function"><span class="built_in">string</span> <span class="title">extply</span><span class="params">(<span class="string">"ply"</span>)</span></span>;</div><div class="line">	<span class="built_in">std</span>::<span class="function"><span class="built_in">string</span> <span class="title">extpcd</span><span class="params">(<span class="string">"pcd"</span>)</span></span>;</div><div class="line">	<span class="keyword">if</span>(pext)&#123;</div><div class="line">		*pext=<span class="string">'\0'</span>;</div><div class="line">		pext++;</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">std</span>::<span class="function"><span class="built_in">string</span> <span class="title">ext</span><span class="params">(pext)</span></span>;</div><div class="line">	<span class="comment">//如果不支持文件格式，退出程序</span></div><div class="line">	<span class="keyword">if</span> (!((ext == extply)||(ext == extpcd)))&#123;</div><div class="line">		<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"文件格式不支持!"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line">		<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"支持文件格式：*.pcd和*.ply！"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line">		<span class="keyword">return</span>(<span class="number">-1</span>);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">//根据文件格式选择输入方式</span></div><div class="line">  pcl::PointCloud&lt;pcl::PointXYZ&gt;::<span class="function">Ptr <span class="title">cloud</span><span class="params">(<span class="keyword">new</span> pcl::PointCloud&lt;pcl::PointXYZ&gt;)</span> </span>; <span class="comment">//创建点云对象指针，用于存储输入</span></div><div class="line">	<span class="keyword">if</span> (ext == extply)&#123;</div><div class="line">		<span class="keyword">if</span> (pcl::io::loadPLYFile(argv[<span class="number">1</span>] , *cloud) == <span class="number">-1</span>)&#123;</div><div class="line">			PCL_ERROR(<span class="string">"Could not read ply file!\n"</span>) ;</div><div class="line">			<span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">else</span>&#123;</div><div class="line">		<span class="keyword">if</span> (pcl::io::loadPCDFile(argv[<span class="number">1</span>] , *cloud) == <span class="number">-1</span>)&#123;</div><div class="line">			PCL_ERROR(<span class="string">"Could not read pcd file!\n"</span>) ;</div><div class="line">			<span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">// 计算法向量</span></div><div class="line">  pcl::PointCloud&lt;pcl::PointNormal&gt;::<span class="function">Ptr <span class="title">cloud_with_normals</span><span class="params">(<span class="keyword">new</span> pcl::PointCloud&lt;pcl::PointNormal&gt;)</span></span>; <span class="comment">//法向量点云对象指针</span></div><div class="line">  pcl::NormalEstimation&lt;pcl::PointXYZ , pcl::Normal&gt; n ;<span class="comment">//法线估计对象</span></div><div class="line">  pcl::PointCloud&lt;pcl::Normal&gt;::<span class="function">Ptr <span class="title">normals</span><span class="params">(<span class="keyword">new</span> pcl::PointCloud&lt;pcl::Normal&gt;)</span> </span>;<span class="comment">//存储估计的法线的指针</span></div><div class="line">  pcl::search::KdTree&lt;pcl::PointXYZ&gt;::<span class="function">Ptr <span class="title">tree</span><span class="params">(<span class="keyword">new</span> pcl::search::KdTree&lt;pcl::PointXYZ&gt;)</span> </span>;</div><div class="line">  tree-&gt;setInputCloud(cloud) ;</div><div class="line">  n.setInputCloud(cloud) ;</div><div class="line">  n.setSearchMethod(tree) ;</div><div class="line">  n.setKSearch(<span class="number">20</span>);</div><div class="line">	n.compute(*normals); <span class="comment">//计算法线，结果存储在normals中</span></div><div class="line"></div><div class="line">	<span class="comment">//将点云和法线放到一起</span></div><div class="line">  pcl::concatenateFields(*cloud , *normals , *cloud_with_normals) ;</div><div class="line"></div><div class="line">	<span class="comment">//创建搜索树</span></div><div class="line">  pcl::search::KdTree&lt;pcl::PointNormal&gt;::<span class="function">Ptr <span class="title">tree2</span><span class="params">(<span class="keyword">new</span> pcl::search::KdTree&lt;pcl::PointNormal&gt;)</span> </span>;</div><div class="line">  tree2-&gt;setInputCloud(cloud_with_normals) ;</div><div class="line">	<span class="comment">//创建Poisson对象，并设置参数</span></div><div class="line">  pcl::Poisson&lt;pcl::PointNormal&gt; pn ;</div><div class="line">	pn.setConfidence(<span class="literal">false</span>); <span class="comment">//是否使用法向量的大小作为置信信息。如果false，所有法向量均归一化。</span></div><div class="line">	pn.setDegree(<span class="number">2</span>); <span class="comment">//设置参数degree[1,5],值越大越精细，耗时越久。</span></div><div class="line">	pn.setDepth(<span class="number">8</span>); <span class="comment">//树的最大深度，求解2^d x 2^d x 2^d立方体元。由于八叉树自适应采样密度，指定值仅为最大深度。</span></div><div class="line">	pn.setIsoDivide(<span class="number">8</span>); <span class="comment">//用于提取ISO等值面的算法的深度</span></div><div class="line">	pn.setManifold(<span class="literal">false</span>); <span class="comment">//是否添加多边形的重心，当多边形三角化时。 设置流行标志，如果设置为true，则对多边形进行细分三角话时添加重心，设置false则不添加</span></div><div class="line">	pn.setOutputPolygons(<span class="literal">false</span>); <span class="comment">//是否输出多边形网格（而不是三角化移动立方体的结果）</span></div><div class="line">	pn.setSamplesPerNode(<span class="number">3.0</span>); <span class="comment">//设置落入一个八叉树结点中的样本点的最小数量。无噪声，[1.0-5.0],有噪声[15.-20.]平滑</span></div><div class="line">	pn.setScale(<span class="number">1.25</span>); <span class="comment">//设置用于重构的立方体直径和样本边界立方体直径的比率。</span></div><div class="line">	pn.setSolverDivide(<span class="number">8</span>); <span class="comment">//设置求解线性方程组的Gauss-Seidel迭代方法的深度</span></div><div class="line">	<span class="comment">//pn.setIndices();</span></div><div class="line"></div><div class="line">	<span class="comment">//设置搜索方法和输入点云</span></div><div class="line">	pn.setSearchMethod(tree2);</div><div class="line">	pn.setInputCloud(cloud_with_normals);</div><div class="line">	<span class="comment">//创建多变形网格，用于存储结果</span></div><div class="line">	pcl::PolygonMesh mesh ;</div><div class="line">	<span class="comment">//执行重构</span></div><div class="line">	pn.performReconstruction(mesh);</div><div class="line"></div><div class="line">	<span class="comment">//保存网格图</span></div><div class="line">	pcl::io::savePLYFile(<span class="string">"result.ply"</span>, mesh);</div><div class="line"></div><div class="line">	<span class="comment">// 显示结果图</span></div><div class="line">	boost::<span class="built_in">shared_ptr</span>&lt;pcl::visualization::PCLVisualizer&gt; viewer(<span class="keyword">new</span> pcl::visualization::PCLVisualizer(<span class="string">"3D viewer"</span>)) ;</div><div class="line">	viewer-&gt;setBackgroundColor(<span class="number">0</span> , <span class="number">0</span> , <span class="number">0</span>) ;</div><div class="line">	viewer-&gt;addPolygonMesh(mesh , <span class="string">"my"</span>) ;</div><div class="line">	viewer-&gt;addCoordinateSystem (<span class="number">50.0</span>);</div><div class="line">	viewer-&gt;initCameraParameters() ;</div><div class="line">	<span class="keyword">while</span> (!viewer-&gt;wasStopped())&#123;</div><div class="line">		viewer-&gt;spinOnce(<span class="number">100</span>) ;</div><div class="line">		boost::this_thread::sleep(boost::posix_time::microseconds(<span class="number">100000</span>)) ;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li>重新生成项目。</li>
-<li>到改项目的Debug目录下，按住Shift，同时点击鼠标右键，在当前窗口打开CMD窗口。</li>
-<li>在命令行中输入<code>recon_poisson.exe bunny.points.ply</code>，执行程序。得到如下图所示的结果。</li>
-</ul>
-<p><img src="http://img.blog.csdn.net/20160401093428810" alt="泊松重构结果图"></p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[PCL系列——如何逐渐地配准一对点云]]></title>
       <url>http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E9%80%90%E6%B8%90%E5%9C%B0%E9%85%8D%E5%87%86%E4%B8%80%E5%AF%B9%E7%82%B9%E4%BA%91/</url>
       <content type="html"><![CDATA[<h2 id="PCL系列"><a href="#PCL系列" class="headerlink" title="PCL系列"></a>PCL系列</h2><ul>
@@ -2736,6 +2699,43 @@
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
 <li><a href="http://pointclouds.org/documentation/tutorials/pairwise_incremental_registration.php#pairwise-incremental-registration" target="_blank" rel="external">How to incrementally register pairs of clouds</a></li>
 </ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[PCL系列——三维重构之泊松重构]]></title>
+      <url>http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E6%B3%8A%E6%9D%BE%E9%87%8D%E6%9E%84/</url>
+      <content type="html"><![CDATA[<h2 id="PCL系列"><a href="#PCL系列" class="headerlink" title="PCL系列"></a>PCL系列</h2><ul>
+<li><a href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E8%AF%BB%E5%85%A5PCD%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/">PCL系列——读入PCD格式文件操作</a></li>
+<li><a href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%B0%86%E7%82%B9%E4%BA%91%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5PCD%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/">PCL系列——将点云数据写入PCD格式文件</a></li>
+<li><a href="http://zhangxuezhi.com/2016/04/20/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E6%8B%BC%E6%8E%A5%E4%B8%A4%E4%B8%AA%E7%82%B9%E4%BA%91/">PCL系列——拼接两个点云</a></li>
+<li><a href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%BB%8E%E6%B7%B1%E5%BA%A6%E5%9B%BE%E5%83%8F%EF%BC%88RangeImage%EF%BC%89%E4%B8%AD%E6%8F%90%E5%8F%96NARF%E5%85%B3%E9%94%AE%E7%82%B9/">PCL系列——从深度图像（RangeImage）中提取NARF关键点</a></li>
+<li><a href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E5%8F%AF%E8%A7%86%E5%8C%96%E6%B7%B1%E5%BA%A6%E5%9B%BE%E5%83%8F/">PCL系列——如何可视化深度图像</a></li>
+<li><a href="http://zhangxuezhi.com/2016/03/31/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E8%BF%AD%E4%BB%A3%E6%9C%80%E8%BF%91%E7%82%B9%E6%B3%95%EF%BC%88ICP%EF%BC%89%E9%85%8D%E5%87%86/">PCL系列——如何使用迭代最近点法（ICP）配准</a></li>
+<li><a href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E9%80%90%E6%B8%90%E5%9C%B0%E9%85%8D%E5%87%86%E4%B8%80%E5%AF%B9%E7%82%B9%E4%BA%91/">PCL系列——如何逐渐地配准一对点云</a></li>
+<li><a href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E6%B3%8A%E6%9D%BE%E9%87%8D%E6%9E%84/">PCL系列——三维重构之泊松重构</a></li>
+<li><a href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E8%B4%AA%E5%A9%AA%E4%B8%89%E8%A7%92%E6%8A%95%E5%BD%B1%E7%AE%97%E6%B3%95/">PCL系列——三维重构之贪婪三角投影算法</a></li>
+<li><a href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E7%A7%BB%E5%8A%A8%E7%AB%8B%E6%96%B9%E4%BD%93%E7%AE%97%E6%B3%95/">PCL系列——三维重构之移动立方体算法</a></li>
+<li><a href="http://zhangxuezhi.com/2016/04/20/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%B9%B3%E9%9D%A2%E6%A8%A1%E5%9E%8B%E5%88%86%E5%89%B2/">PCL系列——平面模型分割</a></li>
+</ul>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>通过本教程，我们将会学会：</p>
+<ul>
+<li>如果通过泊松算法进行三维点云重构。</li>
+<li>程序支持两种文件格式：<code>*.pcd</code>和<code>*.ply</code></li>
+<li>程序先读取点云文件，然后计算法向量，接着使用泊松算法进行重构，最后显示结果。</li>
+</ul>
+<a id="more"></a>
+<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><ul>
+<li>在VS2010 中新建一个文件 <code>recon_poisson.cpp</code>，然后将下面的代码复制到文件中。</li>
+<li>参照之前的文章，配置项目的属性。设置包含目录和库目录和附加依赖项。</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">//点的类型的头文件</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/point_types.h&gt;</span></span></div><div class="line"><span class="comment">//点云文件IO（pcd文件和ply文件）</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/io/pcd_io.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/io/ply_io.h&gt;</span></span></div><div class="line"><span class="comment">//kd树</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/kdtree/kdtree_flann.h&gt;</span></span></div><div class="line"><span class="comment">//特征提取</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/features/normal_3d_omp.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/features/normal_3d.h&gt;</span></span></div><div class="line"><span class="comment">//重构</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/surface/gp3.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/surface/poisson.h&gt;</span></span></div><div class="line"><span class="comment">//可视化</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/visualization/pcl_visualizer.h&gt;</span></span></div><div class="line"><span class="comment">//多线程</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;boost/thread/thread.hpp&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fstream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span></span></div><div class="line">&#123;</div><div class="line">	<span class="comment">// 确定文件格式</span></div><div class="line">	<span class="keyword">char</span> tmpStr[<span class="number">100</span>];</div><div class="line">	<span class="built_in">strcpy</span>(tmpStr,argv[<span class="number">1</span>]);</div><div class="line">	<span class="keyword">char</span>* pext = <span class="built_in">strrchr</span>(tmpStr, <span class="string">'.'</span>);</div><div class="line">	<span class="built_in">std</span>::<span class="function"><span class="built_in">string</span> <span class="title">extply</span><span class="params">(<span class="string">"ply"</span>)</span></span>;</div><div class="line">	<span class="built_in">std</span>::<span class="function"><span class="built_in">string</span> <span class="title">extpcd</span><span class="params">(<span class="string">"pcd"</span>)</span></span>;</div><div class="line">	<span class="keyword">if</span>(pext)&#123;</div><div class="line">		*pext=<span class="string">'\0'</span>;</div><div class="line">		pext++;</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">std</span>::<span class="function"><span class="built_in">string</span> <span class="title">ext</span><span class="params">(pext)</span></span>;</div><div class="line">	<span class="comment">//如果不支持文件格式，退出程序</span></div><div class="line">	<span class="keyword">if</span> (!((ext == extply)||(ext == extpcd)))&#123;</div><div class="line">		<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"文件格式不支持!"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line">		<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"支持文件格式：*.pcd和*.ply！"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line">		<span class="keyword">return</span>(<span class="number">-1</span>);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">//根据文件格式选择输入方式</span></div><div class="line">  pcl::PointCloud&lt;pcl::PointXYZ&gt;::<span class="function">Ptr <span class="title">cloud</span><span class="params">(<span class="keyword">new</span> pcl::PointCloud&lt;pcl::PointXYZ&gt;)</span> </span>; <span class="comment">//创建点云对象指针，用于存储输入</span></div><div class="line">	<span class="keyword">if</span> (ext == extply)&#123;</div><div class="line">		<span class="keyword">if</span> (pcl::io::loadPLYFile(argv[<span class="number">1</span>] , *cloud) == <span class="number">-1</span>)&#123;</div><div class="line">			PCL_ERROR(<span class="string">"Could not read ply file!\n"</span>) ;</div><div class="line">			<span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">else</span>&#123;</div><div class="line">		<span class="keyword">if</span> (pcl::io::loadPCDFile(argv[<span class="number">1</span>] , *cloud) == <span class="number">-1</span>)&#123;</div><div class="line">			PCL_ERROR(<span class="string">"Could not read pcd file!\n"</span>) ;</div><div class="line">			<span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">// 计算法向量</span></div><div class="line">  pcl::PointCloud&lt;pcl::PointNormal&gt;::<span class="function">Ptr <span class="title">cloud_with_normals</span><span class="params">(<span class="keyword">new</span> pcl::PointCloud&lt;pcl::PointNormal&gt;)</span></span>; <span class="comment">//法向量点云对象指针</span></div><div class="line">  pcl::NormalEstimation&lt;pcl::PointXYZ , pcl::Normal&gt; n ;<span class="comment">//法线估计对象</span></div><div class="line">  pcl::PointCloud&lt;pcl::Normal&gt;::<span class="function">Ptr <span class="title">normals</span><span class="params">(<span class="keyword">new</span> pcl::PointCloud&lt;pcl::Normal&gt;)</span> </span>;<span class="comment">//存储估计的法线的指针</span></div><div class="line">  pcl::search::KdTree&lt;pcl::PointXYZ&gt;::<span class="function">Ptr <span class="title">tree</span><span class="params">(<span class="keyword">new</span> pcl::search::KdTree&lt;pcl::PointXYZ&gt;)</span> </span>;</div><div class="line">  tree-&gt;setInputCloud(cloud) ;</div><div class="line">  n.setInputCloud(cloud) ;</div><div class="line">  n.setSearchMethod(tree) ;</div><div class="line">  n.setKSearch(<span class="number">20</span>);</div><div class="line">	n.compute(*normals); <span class="comment">//计算法线，结果存储在normals中</span></div><div class="line"></div><div class="line">	<span class="comment">//将点云和法线放到一起</span></div><div class="line">  pcl::concatenateFields(*cloud , *normals , *cloud_with_normals) ;</div><div class="line"></div><div class="line">	<span class="comment">//创建搜索树</span></div><div class="line">  pcl::search::KdTree&lt;pcl::PointNormal&gt;::<span class="function">Ptr <span class="title">tree2</span><span class="params">(<span class="keyword">new</span> pcl::search::KdTree&lt;pcl::PointNormal&gt;)</span> </span>;</div><div class="line">  tree2-&gt;setInputCloud(cloud_with_normals) ;</div><div class="line">	<span class="comment">//创建Poisson对象，并设置参数</span></div><div class="line">  pcl::Poisson&lt;pcl::PointNormal&gt; pn ;</div><div class="line">	pn.setConfidence(<span class="literal">false</span>); <span class="comment">//是否使用法向量的大小作为置信信息。如果false，所有法向量均归一化。</span></div><div class="line">	pn.setDegree(<span class="number">2</span>); <span class="comment">//设置参数degree[1,5],值越大越精细，耗时越久。</span></div><div class="line">	pn.setDepth(<span class="number">8</span>); <span class="comment">//树的最大深度，求解2^d x 2^d x 2^d立方体元。由于八叉树自适应采样密度，指定值仅为最大深度。</span></div><div class="line">	pn.setIsoDivide(<span class="number">8</span>); <span class="comment">//用于提取ISO等值面的算法的深度</span></div><div class="line">	pn.setManifold(<span class="literal">false</span>); <span class="comment">//是否添加多边形的重心，当多边形三角化时。 设置流行标志，如果设置为true，则对多边形进行细分三角话时添加重心，设置false则不添加</span></div><div class="line">	pn.setOutputPolygons(<span class="literal">false</span>); <span class="comment">//是否输出多边形网格（而不是三角化移动立方体的结果）</span></div><div class="line">	pn.setSamplesPerNode(<span class="number">3.0</span>); <span class="comment">//设置落入一个八叉树结点中的样本点的最小数量。无噪声，[1.0-5.0],有噪声[15.-20.]平滑</span></div><div class="line">	pn.setScale(<span class="number">1.25</span>); <span class="comment">//设置用于重构的立方体直径和样本边界立方体直径的比率。</span></div><div class="line">	pn.setSolverDivide(<span class="number">8</span>); <span class="comment">//设置求解线性方程组的Gauss-Seidel迭代方法的深度</span></div><div class="line">	<span class="comment">//pn.setIndices();</span></div><div class="line"></div><div class="line">	<span class="comment">//设置搜索方法和输入点云</span></div><div class="line">	pn.setSearchMethod(tree2);</div><div class="line">	pn.setInputCloud(cloud_with_normals);</div><div class="line">	<span class="comment">//创建多变形网格，用于存储结果</span></div><div class="line">	pcl::PolygonMesh mesh ;</div><div class="line">	<span class="comment">//执行重构</span></div><div class="line">	pn.performReconstruction(mesh);</div><div class="line"></div><div class="line">	<span class="comment">//保存网格图</span></div><div class="line">	pcl::io::savePLYFile(<span class="string">"result.ply"</span>, mesh);</div><div class="line"></div><div class="line">	<span class="comment">// 显示结果图</span></div><div class="line">	boost::<span class="built_in">shared_ptr</span>&lt;pcl::visualization::PCLVisualizer&gt; viewer(<span class="keyword">new</span> pcl::visualization::PCLVisualizer(<span class="string">"3D viewer"</span>)) ;</div><div class="line">	viewer-&gt;setBackgroundColor(<span class="number">0</span> , <span class="number">0</span> , <span class="number">0</span>) ;</div><div class="line">	viewer-&gt;addPolygonMesh(mesh , <span class="string">"my"</span>) ;</div><div class="line">	viewer-&gt;addCoordinateSystem (<span class="number">50.0</span>);</div><div class="line">	viewer-&gt;initCameraParameters() ;</div><div class="line">	<span class="keyword">while</span> (!viewer-&gt;wasStopped())&#123;</div><div class="line">		viewer-&gt;spinOnce(<span class="number">100</span>) ;</div><div class="line">		boost::this_thread::sleep(boost::posix_time::microseconds(<span class="number">100000</span>)) ;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>重新生成项目。</li>
+<li>到改项目的Debug目录下，按住Shift，同时点击鼠标右键，在当前窗口打开CMD窗口。</li>
+<li>在命令行中输入<code>recon_poisson.exe bunny.points.ply</code>，执行程序。得到如下图所示的结果。</li>
+</ul>
+<p><img src="http://img.blog.csdn.net/20160401093428810" alt="泊松重构结果图"></p>
 ]]></content>
     </entry>
     
@@ -2932,38 +2932,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[PCL系列——读入PCD格式文件]]></title>
-      <url>http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E8%AF%BB%E5%85%A5PCD%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/</url>
-      <content type="html"><![CDATA[<h2 id="PCL系列"><a href="#PCL系列" class="headerlink" title="PCL系列"></a>PCL系列</h2><ul>
-<li><a href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E8%AF%BB%E5%85%A5PCD%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/">PCL系列——读入PCD格式文件操作</a></li>
-<li><a href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%B0%86%E7%82%B9%E4%BA%91%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5PCD%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/">PCL系列——将点云数据写入PCD格式文件</a></li>
-<li><a href="http://zhangxuezhi.com/2016/04/20/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E6%8B%BC%E6%8E%A5%E4%B8%A4%E4%B8%AA%E7%82%B9%E4%BA%91/">PCL系列——拼接两个点云</a></li>
-<li><a href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%BB%8E%E6%B7%B1%E5%BA%A6%E5%9B%BE%E5%83%8F%EF%BC%88RangeImage%EF%BC%89%E4%B8%AD%E6%8F%90%E5%8F%96NARF%E5%85%B3%E9%94%AE%E7%82%B9/">PCL系列——从深度图像（RangeImage）中提取NARF关键点</a></li>
-<li><a href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E5%8F%AF%E8%A7%86%E5%8C%96%E6%B7%B1%E5%BA%A6%E5%9B%BE%E5%83%8F/">PCL系列——如何可视化深度图像</a></li>
-<li><a href="http://zhangxuezhi.com/2016/03/31/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E8%BF%AD%E4%BB%A3%E6%9C%80%E8%BF%91%E7%82%B9%E6%B3%95%EF%BC%88ICP%EF%BC%89%E9%85%8D%E5%87%86/">PCL系列——如何使用迭代最近点法（ICP）配准</a></li>
-<li><a href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E9%80%90%E6%B8%90%E5%9C%B0%E9%85%8D%E5%87%86%E4%B8%80%E5%AF%B9%E7%82%B9%E4%BA%91/">PCL系列——如何逐渐地配准一对点云</a></li>
-<li><a href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E6%B3%8A%E6%9D%BE%E9%87%8D%E6%9E%84/">PCL系列——三维重构之泊松重构</a></li>
-<li><a href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E8%B4%AA%E5%A9%AA%E4%B8%89%E8%A7%92%E6%8A%95%E5%BD%B1%E7%AE%97%E6%B3%95/">PCL系列——三维重构之贪婪三角投影算法</a></li>
-<li><a href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E7%A7%BB%E5%8A%A8%E7%AB%8B%E6%96%B9%E4%BD%93%E7%AE%97%E6%B3%95/">PCL系列——三维重构之移动立方体算法</a></li>
-<li><a href="http://zhangxuezhi.com/2016/04/20/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%B9%B3%E9%9D%A2%E6%A8%A1%E5%9E%8B%E5%88%86%E5%89%B2/">PCL系列——平面模型分割</a></li>
-</ul>
-<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><ul>
-<li>在VS2010 中新建一个文件read_pcd.cpp，然后将下面的代码复制到文件中。</li>
-<li>参照之前的文章，配置项目的属性。设置包含目录和库目录和附加依赖项。</li>
-</ul>
-<a id="more"></a>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span> <span class="comment">//标准输入输出流</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/io/pcd_io.h&gt;</span> <span class="comment">//PCL的PCD格式文件的输入输出头文件</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/point_types.h&gt;</span> <span class="comment">//PCL对各种格式的点的支持头文件</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span></span></div><div class="line">&#123;</div><div class="line">  pcl::PointCloud&lt;pcl::PointXYZ&gt;::<span class="function">Ptr <span class="title">cloud</span> <span class="params">(<span class="keyword">new</span> pcl::PointCloud&lt;pcl::PointXYZ&gt;)</span></span>; <span class="comment">// 创建点云（指针）</span></div><div class="line"></div><div class="line">  <span class="keyword">if</span> (pcl::io::loadPCDFile&lt;pcl::PointXYZ&gt; (<span class="string">"test_pcd.pcd"</span>, *cloud) == <span class="number">-1</span>) <span class="comment">//* 读入PCD格式的文件，如果文件不存在，返回-1</span></div><div class="line">  &#123;</div><div class="line">    PCL_ERROR (<span class="string">"Couldn't read file test_pcd.pcd \n"</span>); <span class="comment">//文件不存在时，返回错误，终止程序。</span></div><div class="line">    <span class="keyword">return</span> (<span class="number">-1</span>);</div><div class="line">  &#125;</div><div class="line">  <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"Loaded "</span></div><div class="line">            &lt;&lt; cloud-&gt;width * cloud-&gt;height</div><div class="line">            &lt;&lt; <span class="string">" data points from test_file.pcd with the following fields: "</span></div><div class="line">            &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line">  <span class="comment">//for (size_t i = 0; i &lt; cloud-&gt;points.size (); ++i) //显示所有的点</span></div><div class="line">	<span class="keyword">for</span> (<span class="keyword">size_t</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; ++i) <span class="comment">// 为了方便观察，只显示前5个点</span></div><div class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"    "</span> &lt;&lt; cloud-&gt;points[i].x</div><div class="line">              &lt;&lt; <span class="string">" "</span>    &lt;&lt; cloud-&gt;points[i].y</div><div class="line">              &lt;&lt; <span class="string">" "</span>    &lt;&lt; cloud-&gt;points[i].z &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> (<span class="number">0</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li>编译运行，如下图所示。</li>
-</ul>
-<p><img src="http://img.blog.csdn.net/20160330103906416" alt="这里写图片描述"></p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li><a href="http://pointclouds.org/documentation/tutorials/reading_pcd.php#reading-pcd" target="_blank" rel="external">Reading Point Cloud data from PCD files</a></li>
-</ul>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[PCL系列——从深度图像（RangeImage）中提取NARF关键点]]></title>
       <url>http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%BB%8E%E6%B7%B1%E5%BA%A6%E5%9B%BE%E5%83%8F%EF%BC%88RangeImage%EF%BC%89%E4%B8%AD%E6%8F%90%E5%8F%96NARF%E5%85%B3%E9%94%AE%E7%82%B9/</url>
       <content type="html"><![CDATA[<h2 id="PCL系列"><a href="#PCL系列" class="headerlink" title="PCL系列"></a>PCL系列</h2><ul>
@@ -2997,6 +2965,38 @@
 </ul>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
 <li><a href="http://pointclouds.org/documentation/tutorials/narf_keypoint_extraction.php#narf-keypoint-extraction" target="_blank" rel="external">How to extract NARF keypoint from a range image</a></li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[PCL系列——读入PCD格式文件]]></title>
+      <url>http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E8%AF%BB%E5%85%A5PCD%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/</url>
+      <content type="html"><![CDATA[<h2 id="PCL系列"><a href="#PCL系列" class="headerlink" title="PCL系列"></a>PCL系列</h2><ul>
+<li><a href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E8%AF%BB%E5%85%A5PCD%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/">PCL系列——读入PCD格式文件操作</a></li>
+<li><a href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%B0%86%E7%82%B9%E4%BA%91%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5PCD%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/">PCL系列——将点云数据写入PCD格式文件</a></li>
+<li><a href="http://zhangxuezhi.com/2016/04/20/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E6%8B%BC%E6%8E%A5%E4%B8%A4%E4%B8%AA%E7%82%B9%E4%BA%91/">PCL系列——拼接两个点云</a></li>
+<li><a href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%BB%8E%E6%B7%B1%E5%BA%A6%E5%9B%BE%E5%83%8F%EF%BC%88RangeImage%EF%BC%89%E4%B8%AD%E6%8F%90%E5%8F%96NARF%E5%85%B3%E9%94%AE%E7%82%B9/">PCL系列——从深度图像（RangeImage）中提取NARF关键点</a></li>
+<li><a href="http://zhangxuezhi.com/2016/03/30/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E5%8F%AF%E8%A7%86%E5%8C%96%E6%B7%B1%E5%BA%A6%E5%9B%BE%E5%83%8F/">PCL系列——如何可视化深度图像</a></li>
+<li><a href="http://zhangxuezhi.com/2016/03/31/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E8%BF%AD%E4%BB%A3%E6%9C%80%E8%BF%91%E7%82%B9%E6%B3%95%EF%BC%88ICP%EF%BC%89%E9%85%8D%E5%87%86/">PCL系列——如何使用迭代最近点法（ICP）配准</a></li>
+<li><a href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E9%80%90%E6%B8%90%E5%9C%B0%E9%85%8D%E5%87%86%E4%B8%80%E5%AF%B9%E7%82%B9%E4%BA%91/">PCL系列——如何逐渐地配准一对点云</a></li>
+<li><a href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E6%B3%8A%E6%9D%BE%E9%87%8D%E6%9E%84/">PCL系列——三维重构之泊松重构</a></li>
+<li><a href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E8%B4%AA%E5%A9%AA%E4%B8%89%E8%A7%92%E6%8A%95%E5%BD%B1%E7%AE%97%E6%B3%95/">PCL系列——三维重构之贪婪三角投影算法</a></li>
+<li><a href="http://zhangxuezhi.com/2016/04/01/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E9%87%8D%E6%9E%84%E4%B9%8B%E7%A7%BB%E5%8A%A8%E7%AB%8B%E6%96%B9%E4%BD%93%E7%AE%97%E6%B3%95/">PCL系列——三维重构之移动立方体算法</a></li>
+<li><a href="http://zhangxuezhi.com/2016/04/20/PCL%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%B9%B3%E9%9D%A2%E6%A8%A1%E5%9E%8B%E5%88%86%E5%89%B2/">PCL系列——平面模型分割</a></li>
+</ul>
+<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><ul>
+<li>在VS2010 中新建一个文件read_pcd.cpp，然后将下面的代码复制到文件中。</li>
+<li>参照之前的文章，配置项目的属性。设置包含目录和库目录和附加依赖项。</li>
+</ul>
+<a id="more"></a>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span> <span class="comment">//标准输入输出流</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/io/pcd_io.h&gt;</span> <span class="comment">//PCL的PCD格式文件的输入输出头文件</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pcl/point_types.h&gt;</span> <span class="comment">//PCL对各种格式的点的支持头文件</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span></span></div><div class="line">&#123;</div><div class="line">  pcl::PointCloud&lt;pcl::PointXYZ&gt;::<span class="function">Ptr <span class="title">cloud</span> <span class="params">(<span class="keyword">new</span> pcl::PointCloud&lt;pcl::PointXYZ&gt;)</span></span>; <span class="comment">// 创建点云（指针）</span></div><div class="line"></div><div class="line">  <span class="keyword">if</span> (pcl::io::loadPCDFile&lt;pcl::PointXYZ&gt; (<span class="string">"test_pcd.pcd"</span>, *cloud) == <span class="number">-1</span>) <span class="comment">//* 读入PCD格式的文件，如果文件不存在，返回-1</span></div><div class="line">  &#123;</div><div class="line">    PCL_ERROR (<span class="string">"Couldn't read file test_pcd.pcd \n"</span>); <span class="comment">//文件不存在时，返回错误，终止程序。</span></div><div class="line">    <span class="keyword">return</span> (<span class="number">-1</span>);</div><div class="line">  &#125;</div><div class="line">  <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"Loaded "</span></div><div class="line">            &lt;&lt; cloud-&gt;width * cloud-&gt;height</div><div class="line">            &lt;&lt; <span class="string">" data points from test_file.pcd with the following fields: "</span></div><div class="line">            &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line">  <span class="comment">//for (size_t i = 0; i &lt; cloud-&gt;points.size (); ++i) //显示所有的点</span></div><div class="line">	<span class="keyword">for</span> (<span class="keyword">size_t</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; ++i) <span class="comment">// 为了方便观察，只显示前5个点</span></div><div class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"    "</span> &lt;&lt; cloud-&gt;points[i].x</div><div class="line">              &lt;&lt; <span class="string">" "</span>    &lt;&lt; cloud-&gt;points[i].y</div><div class="line">              &lt;&lt; <span class="string">" "</span>    &lt;&lt; cloud-&gt;points[i].z &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> (<span class="number">0</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>编译运行，如下图所示。</li>
+</ul>
+<p><img src="http://img.blog.csdn.net/20160330103906416" alt="这里写图片描述"></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://pointclouds.org/documentation/tutorials/reading_pcd.php#reading-pcd" target="_blank" rel="external">Reading Point Cloud data from PCD files</a></li>
 </ul>
 ]]></content>
     </entry>
@@ -3509,6 +3509,33 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Linux命令——whoami]]></title>
+      <url>http://zhangxuezhi.com/2015/11/04/Linux%E5%91%BD%E4%BB%A4%E2%80%94%E2%80%94whoami/</url>
+      <content type="html"><![CDATA[<h2 id="whoami"><a href="#whoami" class="headerlink" title="whoami"></a>whoami</h2><ul>
+<li><strong>功能</strong>：打印当前<strong>有效的</strong>用户名<a id="more"></a></li>
+<li><strong>提示</strong>：<ul>
+<li>等价于于执行 <code>id -un</code> 命令；</li>
+<li>如果使用<code>su</code>切换用户，打印切换后的用户名；</li>
+</ul>
+</li>
+<li><strong>选项</strong>： <ul>
+<li>–help：显示在线帮助； </li>
+<li>–version：显示版本信息。</li>
+</ul>
+</li>
+<li><strong>示例</strong>：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 显示帮助</span></div><div class="line">whoami --help</div><div class="line"><span class="comment"># 显示版本信息</span></div><div class="line">whoami --version</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h2><ul>
+<li><a href="http://www.lx138.com/" target="_blank" rel="external">Linux命令查询网站</a></li>
+<li><a href="http://man.linuxde.net/" target="_blank" rel="external">Linux命令大全</a></li>
+<li><a href="http://baidu.com/" target="_blank" rel="external">baidu</a></li>
+<li><a href="http://google.com.hk" target="_blank" rel="external">Google</a></li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Linux命令——who]]></title>
       <url>http://zhangxuezhi.com/2015/11/04/Linux%E5%91%BD%E4%BB%A4%E2%80%94%E2%80%94who/</url>
       <content type="html"><![CDATA[<h2 id="who"><a href="#who" class="headerlink" title="who"></a>who</h2><ul>
@@ -3534,33 +3561,6 @@
 </li>
 <li><p><strong>示例</strong>：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 显示系统上次启动时间</span></div><div class="line">who -b</div><div class="line"><span class="comment"># 显示头信息【标题栏】</span></div><div class="line">who -H</div><div class="line">who --heading</div><div class="line"><span class="comment"># 突出显示“闲置时间”</span></div><div class="line"><span class="comment"># 若该用户在前一分钟之内有进行任何动作，将标示成"."号，如果该用户已超过24小时没有任何动作，则标示出"old"字符串</span></div><div class="line">who -u</div><div class="line"><span class="comment"># 显示当前用户的信息</span></div><div class="line">who -m</div><div class="line">who am i</div><div class="line"><span class="comment"># 只显示登入系统的用户名和总人数</span></div><div class="line">who -q</div><div class="line">who --count</div><div class="line"><span class="comment"># 显示当前运行级别</span></div><div class="line">who -r</div><div class="line"><span class="comment"># 显示用户的信息状态栏</span></div><div class="line">who -w</div><div class="line">who -T</div><div class="line"><span class="comment"># 显示在线帮助信息</span></div><div class="line">who --help</div><div class="line"><span class="comment"># 显示版本信息</span></div><div class="line">who --version</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h2><ul>
-<li><a href="http://www.lx138.com/" target="_blank" rel="external">Linux命令查询网站</a></li>
-<li><a href="http://man.linuxde.net/" target="_blank" rel="external">Linux命令大全</a></li>
-<li><a href="http://baidu.com/" target="_blank" rel="external">baidu</a></li>
-<li><a href="http://google.com.hk" target="_blank" rel="external">Google</a></li>
-</ul>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Linux命令——whoami]]></title>
-      <url>http://zhangxuezhi.com/2015/11/04/Linux%E5%91%BD%E4%BB%A4%E2%80%94%E2%80%94whoami/</url>
-      <content type="html"><![CDATA[<h2 id="whoami"><a href="#whoami" class="headerlink" title="whoami"></a>whoami</h2><ul>
-<li><strong>功能</strong>：打印当前<strong>有效的</strong>用户名<a id="more"></a></li>
-<li><strong>提示</strong>：<ul>
-<li>等价于于执行 <code>id -un</code> 命令；</li>
-<li>如果使用<code>su</code>切换用户，打印切换后的用户名；</li>
-</ul>
-</li>
-<li><strong>选项</strong>： <ul>
-<li>–help：显示在线帮助； </li>
-<li>–version：显示版本信息。</li>
-</ul>
-</li>
-<li><strong>示例</strong>：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 显示帮助</span></div><div class="line">whoami --help</div><div class="line"><span class="comment"># 显示版本信息</span></div><div class="line">whoami --version</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h2><ul>
@@ -4101,39 +4101,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[服务器安装并配置Ubuntu Server 14.04]]></title>
-      <url>http://zhangxuezhi.com/2015/10/13/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85%E5%B9%B6%E9%85%8D%E7%BD%AEUbuntu%20Server%2014.04/</url>
-      <content type="html"><![CDATA[<h2 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h2><ul>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48437097" target="_blank" rel="external">服务器如何进入Bios</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48437187" target="_blank" rel="external">U盘安装Ubuntu Server ，CD-ROM自检，安装失败</a></li>
-</ul>
-<h2 id="远程访问"><a href="#远程访问" class="headerlink" title="远程访问"></a>远程访问</h2><ul>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48437221" target="_blank" rel="external">使用Putty无法远程登录，显示服务器拒绝连接</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48622069" target="_blank" rel="external">Putty使用设置</a><a id="more"></a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48437247" target="_blank" rel="external">Ubuntu Server 14.04安装Gnome桌面环境</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48437007" target="_blank" rel="external">windows使用VNC远程访问Ubuntu Server 14.04图形界面</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48662435" target="_blank" rel="external">在VNC中Xfce4中Tab键失效的解决方法</a></li>
-</ul>
-<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><ul>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48437901" target="_blank" rel="external">Ubuntu Server 添加/删除/修改用户</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48468143" target="_blank" rel="external">Ubuntu 14.04 64位安装32位兼容包</a></li>
-<li><a href="">开机自启任务</a></li>
-<li><a href="http://blog.csdn.net/eager7/article/details/14221901" target="_blank" rel="external">linux创建新用户后shell无法自动补全命令</a></li>
-<li><a href="http://www.cnblogs.com/vincedotnet/p/4013099.html" target="_blank" rel="external">ubuntu14.04设置静态ip</a></li>
-<li><a href="http://blog.sina.com.cn/s/blog_674d87000100pzmh.html" target="_blank" rel="external">linux下查看网关的命令</a></li>
-</ul>
-<h2 id="安装软件"><a href="#安装软件" class="headerlink" title="安装软件"></a>安装软件</h2><ul>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/46872285" target="_blank" rel="external">Ubuntu-安装-Chrome</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/46876717" target="_blank" rel="external">Ubuntu-安装-搜狗输入法-详细教程</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/46878577" target="_blank" rel="external">Ubuntu-安装-Python包</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/47065475" target="_blank" rel="external">Ubuntu14.04安装Theano详细教程</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/47075401" target="_blank" rel="external"> Ubuntu-安装-cuda7.0-单显卡-超详细教程</a></li>
-<li><a href="http://blog.csdn.net/xuezhisdc/article/details/47169583" target="_blank" rel="external">Ubuntu-安装-theano+caffe-超详细教程</a></li>
-</ul>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[caffe安装系列——安装caffe]]></title>
       <url>http://zhangxuezhi.com/2015/10/13/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85caffe/</url>
       <content type="html"><![CDATA[<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
@@ -4219,6 +4186,39 @@
 <li><strong><em>世上无难事只怕有坚持</em></strong>，安装过程虽然很复杂，但是只要坚持，不断的Google解决它，caffe就一定能安装。</li>
 <li>错误不可怕，它是成功的障碍，同时也为我们成长提供了阶梯——所谓的能力，很大一部分是通过不断解决问题来获取的。</li>
 <li>下面开始学习如何使用caffe做深度学习的研究喽，祝大家学习愉快。。。</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[服务器安装并配置Ubuntu Server 14.04]]></title>
+      <url>http://zhangxuezhi.com/2015/10/13/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85%E5%B9%B6%E9%85%8D%E7%BD%AEUbuntu%20Server%2014.04/</url>
+      <content type="html"><![CDATA[<h2 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h2><ul>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48437097" target="_blank" rel="external">服务器如何进入Bios</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48437187" target="_blank" rel="external">U盘安装Ubuntu Server ，CD-ROM自检，安装失败</a></li>
+</ul>
+<h2 id="远程访问"><a href="#远程访问" class="headerlink" title="远程访问"></a>远程访问</h2><ul>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48437221" target="_blank" rel="external">使用Putty无法远程登录，显示服务器拒绝连接</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48622069" target="_blank" rel="external">Putty使用设置</a><a id="more"></a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48437247" target="_blank" rel="external">Ubuntu Server 14.04安装Gnome桌面环境</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48437007" target="_blank" rel="external">windows使用VNC远程访问Ubuntu Server 14.04图形界面</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48662435" target="_blank" rel="external">在VNC中Xfce4中Tab键失效的解决方法</a></li>
+</ul>
+<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><ul>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48437901" target="_blank" rel="external">Ubuntu Server 添加/删除/修改用户</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/48468143" target="_blank" rel="external">Ubuntu 14.04 64位安装32位兼容包</a></li>
+<li><a href="">开机自启任务</a></li>
+<li><a href="http://blog.csdn.net/eager7/article/details/14221901" target="_blank" rel="external">linux创建新用户后shell无法自动补全命令</a></li>
+<li><a href="http://www.cnblogs.com/vincedotnet/p/4013099.html" target="_blank" rel="external">ubuntu14.04设置静态ip</a></li>
+<li><a href="http://blog.sina.com.cn/s/blog_674d87000100pzmh.html" target="_blank" rel="external">linux下查看网关的命令</a></li>
+</ul>
+<h2 id="安装软件"><a href="#安装软件" class="headerlink" title="安装软件"></a>安装软件</h2><ul>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/46872285" target="_blank" rel="external">Ubuntu-安装-Chrome</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/46876717" target="_blank" rel="external">Ubuntu-安装-搜狗输入法-详细教程</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/46878577" target="_blank" rel="external">Ubuntu-安装-Python包</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/47065475" target="_blank" rel="external">Ubuntu14.04安装Theano详细教程</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/47075401" target="_blank" rel="external"> Ubuntu-安装-cuda7.0-单显卡-超详细教程</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/47169583" target="_blank" rel="external">Ubuntu-安装-theano+caffe-超详细教程</a></li>
 </ul>
 ]]></content>
     </entry>
@@ -4734,6 +4734,21 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Linux shell判断文件和文件夹是否存在]]></title>
+      <url>http://zhangxuezhi.com/2015/09/22/Linux%20shell%E5%88%A4%E6%96%AD%E6%96%87%E4%BB%B6%E5%92%8C%E6%96%87%E4%BB%B6%E5%A4%B9%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8/</url>
+      <content type="html"><![CDATA[<blockquote>
+</blockquote>
+<ul>
+<li><p>shell判断文件,目录是否存在或者具有权限</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/sh  </span></div><div class="line">  </div><div class="line">myPath=<span class="string">"/var/log/httpd/"</span>  </div><div class="line">myFile=<span class="string">"/var /log/httpd/access.log"</span>  </div><div class="line">  </div><div class="line"><span class="comment">#这里的-x 参数判断$myPath是否存在并且是否具有可执行权限  </span></div><div class="line"><span class="keyword">if</span> [ ! -x <span class="string">"<span class="variable">$myPath</span>"</span>]; <span class="keyword">then</span>  </div><div class="line">　　mkdir <span class="string">"<span class="variable">$myPath</span>"</span>  </div><div class="line"><span class="keyword">fi</span>  </div><div class="line"></div><div class="line"><span class="comment">#这里的-d 参数判断$myPath是否存在  </span></div><div class="line"><span class="keyword">if</span> [ ! <span class="_">-d</span> <span class="string">"<span class="variable">$myPath</span>"</span>]; <span class="keyword">then</span>  </div><div class="line">　　mkdir <span class="string">"<span class="variable">$myPath</span>"</span>  </div><div class="line"><span class="keyword">fi</span>  </div><div class="line">  </div><div class="line"><span class="comment">#这里的-f参数判断$myFile是否存在  </span></div><div class="line"><span class="keyword">if</span> [ ! <span class="_">-f</span> <span class="string">"<span class="variable">$myFile</span>"</span> ]; <span class="keyword">then</span>  </div><div class="line">　　touch <span class="string">"<span class="variable">$myFile</span>"</span>  </div><div class="line"><span class="keyword">fi</span>  </div><div class="line">  </div><div class="line"><span class="comment">#其他参数还有-n,-n是判断一个变量是否是否有值  </span></div><div class="line"><span class="keyword">if</span> [ ! -n <span class="string">"<span class="variable">$myVar</span>"</span> ]; <span class="keyword">then</span>  </div><div class="line">　　<span class="built_in">echo</span> <span class="string">"<span class="variable">$myVar</span> is empty"</span>  </div><div class="line">　　<span class="built_in">exit</span> 0  </div><div class="line"><span class="keyword">fi</span>  </div><div class="line">  </div><div class="line"><span class="comment">#两个变量判断是否相等  </span></div><div class="line"><span class="keyword">if</span> [ <span class="string">"<span class="variable">$var1</span>"</span> = <span class="string">"<span class="variable">$var2</span>"</span> ]; <span class="keyword">then</span>  </div><div class="line">　　<span class="built_in">echo</span> <span class="string">'$var1 eq $var2'</span>  </div><div class="line"><span class="keyword">else</span>  </div><div class="line">　　<span class="built_in">echo</span> <span class="string">'$var1 not eq $var2'</span>  </div><div class="line"><span class="keyword">fi</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>转载地址：<a href="http://www.cnblogs.com/platero/p/4021561.html" target="_blank" rel="external">http://www.cnblogs.com/platero/p/4021561.html</a></p>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[在VNC中Xfce4中Tab键失效的解决方法]]></title>
       <url>http://zhangxuezhi.com/2015/09/22/%E5%9C%A8VNC%E4%B8%ADXfce4%E4%B8%ADTab%E9%94%AE%E5%A4%B1%E6%95%88%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
       <content type="html"><![CDATA[<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
@@ -4770,21 +4785,6 @@
 <li><a href="http://blog.163.com/thinki_cao/blog/static/83944875201303081111436/" target="_blank" rel="external">《在VNC远程桌面环境Xfce4中Tab键失效的解决方法 》</a></li>
 <li><a href="http://ubuntuforums.org/archive/index.php/t-1771058.html" target="_blank" rel="external">http://ubuntuforums.org/archive/index.php/t-1771058.html</a></li>
 <li><a href="https://answers.launchpad.net/ubuntu/+source/xfce4/+question/206191" target="_blank" rel="external">https://answers.launchpad.net/ubuntu/+source/xfce4/+question/206191</a></li>
-</ul>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Linux shell判断文件和文件夹是否存在]]></title>
-      <url>http://zhangxuezhi.com/2015/09/22/Linux%20shell%E5%88%A4%E6%96%AD%E6%96%87%E4%BB%B6%E5%92%8C%E6%96%87%E4%BB%B6%E5%A4%B9%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8/</url>
-      <content type="html"><![CDATA[<blockquote>
-</blockquote>
-<ul>
-<li><p>shell判断文件,目录是否存在或者具有权限</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/sh  </span></div><div class="line">  </div><div class="line">myPath=<span class="string">"/var/log/httpd/"</span>  </div><div class="line">myFile=<span class="string">"/var /log/httpd/access.log"</span>  </div><div class="line">  </div><div class="line"><span class="comment">#这里的-x 参数判断$myPath是否存在并且是否具有可执行权限  </span></div><div class="line"><span class="keyword">if</span> [ ! -x <span class="string">"<span class="variable">$myPath</span>"</span>]; <span class="keyword">then</span>  </div><div class="line">　　mkdir <span class="string">"<span class="variable">$myPath</span>"</span>  </div><div class="line"><span class="keyword">fi</span>  </div><div class="line"></div><div class="line"><span class="comment">#这里的-d 参数判断$myPath是否存在  </span></div><div class="line"><span class="keyword">if</span> [ ! <span class="_">-d</span> <span class="string">"<span class="variable">$myPath</span>"</span>]; <span class="keyword">then</span>  </div><div class="line">　　mkdir <span class="string">"<span class="variable">$myPath</span>"</span>  </div><div class="line"><span class="keyword">fi</span>  </div><div class="line">  </div><div class="line"><span class="comment">#这里的-f参数判断$myFile是否存在  </span></div><div class="line"><span class="keyword">if</span> [ ! <span class="_">-f</span> <span class="string">"<span class="variable">$myFile</span>"</span> ]; <span class="keyword">then</span>  </div><div class="line">　　touch <span class="string">"<span class="variable">$myFile</span>"</span>  </div><div class="line"><span class="keyword">fi</span>  </div><div class="line">  </div><div class="line"><span class="comment">#其他参数还有-n,-n是判断一个变量是否是否有值  </span></div><div class="line"><span class="keyword">if</span> [ ! -n <span class="string">"<span class="variable">$myVar</span>"</span> ]; <span class="keyword">then</span>  </div><div class="line">　　<span class="built_in">echo</span> <span class="string">"<span class="variable">$myVar</span> is empty"</span>  </div><div class="line">　　<span class="built_in">exit</span> 0  </div><div class="line"><span class="keyword">fi</span>  </div><div class="line">  </div><div class="line"><span class="comment">#两个变量判断是否相等  </span></div><div class="line"><span class="keyword">if</span> [ <span class="string">"<span class="variable">$var1</span>"</span> = <span class="string">"<span class="variable">$var2</span>"</span> ]; <span class="keyword">then</span>  </div><div class="line">　　<span class="built_in">echo</span> <span class="string">'$var1 eq $var2'</span>  </div><div class="line"><span class="keyword">else</span>  </div><div class="line">　　<span class="built_in">echo</span> <span class="string">'$var1 not eq $var2'</span>  </div><div class="line"><span class="keyword">fi</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>转载地址：<a href="http://www.cnblogs.com/platero/p/4021561.html" target="_blank" rel="external">http://www.cnblogs.com/platero/p/4021561.html</a></p>
-</li>
 </ul>
 ]]></content>
     </entry>
@@ -5302,7 +5302,7 @@ floatX = float32
 </ul>
 <h3 id="3-配置环境变量"><a href="#3-配置环境变量" class="headerlink" title="3. 配置环境变量"></a>3. 配置环境变量</h3><ul>
 <li><p>打开终端，在文件/etc/profile的最后添加以下内容：</p>
-  <figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">PATH=<span class="regexp">/usr/</span>local<span class="regexp">/cuda/</span>bin:<span class="variable">$PATH</span></div><div class="line">export PATH</div></pre></td></tr></table></figure>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">PATH=/usr/<span class="built_in">local</span>/cuda/bin:<span class="variable">$PATH</span></div><div class="line"><span class="built_in">export</span> PATH</div></pre></td></tr></table></figure>
 </li>
 <li><p>保存后, 执行下列命令, 使环境变量立即生效</p>
   <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">source</span> /etc/profile</div></pre></td></tr></table></figure>
@@ -5364,38 +5364,6 @@ floatX = float32
     </entry>
     
     <entry>
-      <title><![CDATA[Ubuntu-安装-Chrome]]></title>
-      <url>http://zhangxuezhi.com/2015/07/31/Ubuntu-%E5%AE%89%E8%A3%85-Chrome/</url>
-      <content type="html"><![CDATA[<h2 id="一、下载Chrome的安装包"><a href="#一、下载Chrome的安装包" class="headerlink" title="一、下载Chrome的安装包"></a>一、下载Chrome的安装包</h2><ul>
-<li>打开终端，输入一下命令（区分64位和32位），下载Chrome的deb安装包。<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#<span class="number">32</span>位</div><div class="line">wget http<span class="variable">s:</span>//<span class="keyword">dl</span>.google.<span class="keyword">com</span>/linux/direct/google-chrome-stable_current_i386.<span class="keyword">deb</span></div><div class="line">#<span class="number">64</span>位</div><div class="line">wget http<span class="variable">s:</span>//<span class="keyword">dl</span>.google.<span class="keyword">com</span>/linux/direct/google-chrome-stable_current_amd64.<span class="keyword">deb</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="二、安装Chrome"><a href="#二、安装Chrome" class="headerlink" title="二、安装Chrome"></a>二、安装Chrome</h2><ul>
-<li>注意：需要root权限</li>
-<li>在Terminal中输入以下命令<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#<span class="number">32</span>位安装命令</div><div class="line">sudo dpkg -<span class="selector-tag">i</span> google-chrome-stable_current_i386<span class="selector-class">.deb</span></div><div class="line">#<span class="number">64</span>位安装命令</div><div class="line">sudo dpkg -<span class="selector-tag">i</span> google-chrome-stable_current_amd64.deb</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<a id="more"></a>
-<h2 id="三、修复安装错误"><a href="#三、修复安装错误" class="headerlink" title="三、修复安装错误"></a>三、修复安装错误</h2><ul>
-<li>安装过程中会提示错误信息“在处理时有错误发生： google-chrome-stable”</li>
-<li><p>英文错误：</p>
-<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">dpkg: <span class="keyword">error</span> processing <span class="keyword">package</span> google-chrome-stable (--install):</div><div class="line">dependency problems - leaving unconfigured</div></pre></td></tr></table></figure>
-</li>
-<li><p>出现这个错误之后，执行下面的命令</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> -f install</div></pre></td></tr></table></figure>
-</li>
-<li><p>执行完成后，Chrome就安装成功了。</p>
-</li>
-<li>在Dash中搜索Chrome，打开Chrome，并绑定到启动栏（launcher）</li>
-</ul>
-<h2 id="四、参考文章："><a href="#四、参考文章：" class="headerlink" title="四、参考文章："></a>四、参考文章：</h2><ul>
-<li><a href="http://www.linuxidc.com/Linux/2014-04/100645.htm" target="_blank" rel="external">http://www.linuxidc.com/Linux/2014-04/100645.htm</a></li>
-<li><a href="http://jingyan.baidu.com/article/a681b0de18071e3b1843463b.html" target="_blank" rel="external">http://jingyan.baidu.com/article/a681b0de18071e3b1843463b.html</a></li>
-</ul>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Ubuntu-安装-搜狗输入法-详细教程]]></title>
       <url>http://zhangxuezhi.com/2015/07/31/Ubuntu-%E5%AE%89%E8%A3%85-%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95-%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</url>
       <content type="html"><![CDATA[<h2 id="下载deb安装包"><a href="#下载deb安装包" class="headerlink" title="下载deb安装包"></a>下载deb安装包</h2><ul>
@@ -5445,6 +5413,38 @@ floatX = float32
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
 <li><a href="http://pinyin.sogou.com/linux/help.php" target="_blank" rel="external">http://pinyin.sogou.com/linux/help.php</a></li>
 <li><a href="http://jingyan.baidu.com/article/0202781189b6ef1bcc9ce513.html" target="_blank" rel="external">http://jingyan.baidu.com/article/0202781189b6ef1bcc9ce513.html</a></li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Ubuntu-安装-Chrome]]></title>
+      <url>http://zhangxuezhi.com/2015/07/31/Ubuntu-%E5%AE%89%E8%A3%85-Chrome/</url>
+      <content type="html"><![CDATA[<h2 id="一、下载Chrome的安装包"><a href="#一、下载Chrome的安装包" class="headerlink" title="一、下载Chrome的安装包"></a>一、下载Chrome的安装包</h2><ul>
+<li>打开终端，输入一下命令（区分64位和32位），下载Chrome的deb安装包。<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#<span class="number">32</span>位</div><div class="line">wget http<span class="variable">s:</span>//<span class="keyword">dl</span>.google.<span class="keyword">com</span>/linux/direct/google-chrome-stable_current_i386.<span class="keyword">deb</span></div><div class="line">#<span class="number">64</span>位</div><div class="line">wget http<span class="variable">s:</span>//<span class="keyword">dl</span>.google.<span class="keyword">com</span>/linux/direct/google-chrome-stable_current_amd64.<span class="keyword">deb</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="二、安装Chrome"><a href="#二、安装Chrome" class="headerlink" title="二、安装Chrome"></a>二、安装Chrome</h2><ul>
+<li>注意：需要root权限</li>
+<li>在Terminal中输入以下命令<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#<span class="number">32</span>位安装命令</div><div class="line">sudo dpkg -<span class="selector-tag">i</span> google-chrome-stable_current_i386<span class="selector-class">.deb</span></div><div class="line">#<span class="number">64</span>位安装命令</div><div class="line">sudo dpkg -<span class="selector-tag">i</span> google-chrome-stable_current_amd64.deb</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<a id="more"></a>
+<h2 id="三、修复安装错误"><a href="#三、修复安装错误" class="headerlink" title="三、修复安装错误"></a>三、修复安装错误</h2><ul>
+<li>安装过程中会提示错误信息“在处理时有错误发生： google-chrome-stable”</li>
+<li><p>英文错误：</p>
+<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">dpkg: <span class="keyword">error</span> processing <span class="keyword">package</span> google-chrome-stable (--install):</div><div class="line">dependency problems - leaving unconfigured</div></pre></td></tr></table></figure>
+</li>
+<li><p>出现这个错误之后，执行下面的命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get <span class="_">-f</span> install</div></pre></td></tr></table></figure>
+</li>
+<li><p>执行完成后，Chrome就安装成功了。</p>
+</li>
+<li>在Dash中搜索Chrome，打开Chrome，并绑定到启动栏（launcher）</li>
+</ul>
+<h2 id="四、参考文章："><a href="#四、参考文章：" class="headerlink" title="四、参考文章："></a>四、参考文章：</h2><ul>
+<li><a href="http://www.linuxidc.com/Linux/2014-04/100645.htm" target="_blank" rel="external">http://www.linuxidc.com/Linux/2014-04/100645.htm</a></li>
+<li><a href="http://jingyan.baidu.com/article/a681b0de18071e3b1843463b.html" target="_blank" rel="external">http://jingyan.baidu.com/article/a681b0de18071e3b1843463b.html</a></li>
 </ul>
 ]]></content>
     </entry>
@@ -5532,6 +5532,17 @@ sudo pip install shadowsocks
 </ul>
 <h3 id="lib文件位置"><a href="#lib文件位置" class="headerlink" title="lib文件位置"></a>lib文件位置</h3><ul>
 <li>/usr/lib</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[希腊字母发音对照表]]></title>
+      <url>http://zhangxuezhi.com/2015/07/25/%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D%E5%8F%91%E9%9F%B3%E5%AF%B9%E7%85%A7%E8%A1%A8/</url>
+      <content type="html"><![CDATA[<h2 id="希腊字母发音对照表"><a href="#希腊字母发音对照表" class="headerlink" title="希腊字母发音对照表"></a>希腊字母发音对照表</h2><p> <img src="http://img.blog.csdn.net/20150725162032105" alt="这里写图片描述"></p>
+<ul>
+<li>转载：<a href="http://www.360doc.com/content/10/0505/21/339365_26252025.shtml" target="_blank" rel="external">http://www.360doc.com/content/10/0505/21/339365_26252025.shtml</a></li>
+<li>推荐：<a href="http://app.baidu.com/greekalphabeta?keyword=%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D%E8%AF%BB%E9%9F%B3" target="_blank" rel="external">希腊字母发音App</a></li>
 </ul>
 ]]></content>
     </entry>
@@ -5770,17 +5781,6 @@ sudo pip install shadowsocks
     </entry>
     
     <entry>
-      <title><![CDATA[希腊字母发音对照表]]></title>
-      <url>http://zhangxuezhi.com/2015/07/25/%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D%E5%8F%91%E9%9F%B3%E5%AF%B9%E7%85%A7%E8%A1%A8/</url>
-      <content type="html"><![CDATA[<h2 id="希腊字母发音对照表"><a href="#希腊字母发音对照表" class="headerlink" title="希腊字母发音对照表"></a>希腊字母发音对照表</h2><p> <img src="http://img.blog.csdn.net/20150725162032105" alt="这里写图片描述"></p>
-<ul>
-<li>转载：<a href="http://www.360doc.com/content/10/0505/21/339365_26252025.shtml" target="_blank" rel="external">http://www.360doc.com/content/10/0505/21/339365_26252025.shtml</a></li>
-<li>推荐：<a href="http://app.baidu.com/greekalphabeta?keyword=%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D%E8%AF%BB%E9%9F%B3" target="_blank" rel="external">希腊字母发音App</a></li>
-</ul>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[tar:Exiting with failure status due to previous errors]]></title>
       <url>http://zhangxuezhi.com/2015/07/17/tar-Exiting%20with%20failure%20status%20due%20to%20previous%20errors/</url>
       <content type="html"><![CDATA[<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><ul>
@@ -5929,7 +5929,7 @@ sudo pip install shadowsocks
 <li>好处：不用重启电脑</li>
 <li>示例1：</li>
 </ul>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#使environtment修改后立即生效</span></div><div class="line">source <span class="regexp">/etc/</span>environment</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#使environtment修改后立即生效</span></div><div class="line"><span class="built_in">source</span> /etc/environment</div></pre></td></tr></table></figure>
 <ul>
 <li>示例2：</li>
 </ul>
@@ -6464,8 +6464,8 @@ sudo pip install shadowsocks
   
     
     <entry>
-      <title><![CDATA[ImageProcessing]]></title>
-      <url>http://zhangxuezhi.com/ImageProcessing/index.html</url>
+      <title><![CDATA[DeepLearning]]></title>
+      <url>http://zhangxuezhi.com/DeepLearning/index.html</url>
       <content type="html"></content>
     </entry>
     
@@ -6476,14 +6476,8 @@ sudo pip install shadowsocks
     </entry>
     
     <entry>
-      <title><![CDATA[about]]></title>
-      <url>http://zhangxuezhi.com/about/index.html</url>
-      <content type="html"><![CDATA[<h2 id="教育经历"><a href="#教育经历" class="headerlink" title="教育经历"></a>教育经历</h2><h2 id="科研成果"><a href="#科研成果" class="headerlink" title="科研成果"></a>科研成果</h2><h2 id="技能"><a href="#技能" class="headerlink" title="技能"></a>技能</h2>]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[DeepLearning]]></title>
-      <url>http://zhangxuezhi.com/DeepLearning/index.html</url>
+      <title><![CDATA[ImageProcessing]]></title>
+      <url>http://zhangxuezhi.com/ImageProcessing/index.html</url>
       <content type="html"></content>
     </entry>
     
@@ -6494,14 +6488,20 @@ sudo pip install shadowsocks
     </entry>
     
     <entry>
-      <title><![CDATA[tags]]></title>
-      <url>http://zhangxuezhi.com/tags/index.html</url>
+      <title><![CDATA[schedule]]></title>
+      <url>http://zhangxuezhi.com/schedule/index.html</url>
       <content type="html"></content>
     </entry>
     
     <entry>
-      <title><![CDATA[schedule]]></title>
-      <url>http://zhangxuezhi.com/schedule/index.html</url>
+      <title><![CDATA[about]]></title>
+      <url>http://zhangxuezhi.com/about/index.html</url>
+      <content type="html"><![CDATA[<h2 id="教育经历"><a href="#教育经历" class="headerlink" title="教育经历"></a>教育经历</h2><h2 id="科研成果"><a href="#科研成果" class="headerlink" title="科研成果"></a>科研成果</h2><h2 id="技能"><a href="#技能" class="headerlink" title="技能"></a>技能</h2>]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[tags]]></title>
+      <url>http://zhangxuezhi.com/tags/index.html</url>
       <content type="html"></content>
     </entry>
     
