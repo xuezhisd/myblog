@@ -3,3 +3,88 @@ http://zhangxuezhi.com/2016/11/02/hexo教程系列——hexo配置教程/
 http://zhangxuezhi.com/2016/11/01/hexo教程系列——hexo安装教程/
 http://zhangxuezhi.com/2016/09/19/解决Ubuntu中文显示为乱码/
 http://zhangxuezhi.com/2016/09/04/剑指Offer——Java答案/
+http://zhangxuezhi.com/2016/08/28/编码练习——Java-String-API-练习/
+http://zhangxuezhi.com/2016/08/28/编码练习——Java-数组-API-练习/
+http://zhangxuezhi.com/2016/08/15/错误-Ubuntu-no talloc stackframe at -source3-param-loadparm.c-4864, leaking memory/
+http://zhangxuezhi.com/2016/08/13/刷题-CC150-Java实现/
+http://zhangxuezhi.com/2016/08/13/编码练习——Java-8-输入-输出/
+http://zhangxuezhi.com/2016/08/12/编码练习——Java-7-集合类/
+http://zhangxuezhi.com/2016/08/12/编码练习——Java-6-类的高级特性/
+http://zhangxuezhi.com/2016/08/12/编码练习——Java-5-类和对象/
+http://zhangxuezhi.com/2016/08/12/编码练习——Java-5-接口、继承与多态/
+http://zhangxuezhi.com/2016/08/11/编码练习——Java-4-字符串/
+http://zhangxuezhi.com/2016/08/11/编码练习——Java-3-数组/
+http://zhangxuezhi.com/2016/08/11/编码练习——Java-2-流程控制/
+http://zhangxuezhi.com/2016/08/10/编码练习——Java-1-基础/
+http://zhangxuezhi.com/2016/08/09/学习笔记——Java/
+http://zhangxuezhi.com/2016/08/05/剑指Offer——Python答案/
+http://zhangxuezhi.com/2016/08/02/学习笔记——Git/
+http://zhangxuezhi.com/2016/07/31/如何在ipython或python中使用Spark/
+http://zhangxuezhi.com/2016/07/31/如何安装Hadoop 2.6.0完全分布式/
+http://zhangxuezhi.com/2016/07/11/健康系列——如何增强免疫力/
+http://zhangxuezhi.com/2016/04/20/PCL系列——平面模型分割/
+http://zhangxuezhi.com/2016/04/20/PCL系列——拼接两个点云/
+http://zhangxuezhi.com/2016/04/01/PCL系列——三维重构之泊松重构/
+http://zhangxuezhi.com/2016/04/01/PCL系列——如何逐渐地配准一对点云/
+http://zhangxuezhi.com/2016/04/01/PCL系列——三维重构之移动立方体算法/
+http://zhangxuezhi.com/2016/04/01/PCL系列——三维重构之贪婪三角投影算法/
+http://zhangxuezhi.com/2016/03/31/PCL系列——如何使用迭代最近点法（ICP）配准/
+http://zhangxuezhi.com/2016/03/30/PCL系列——将点云数据写入PCD格式文件/
+http://zhangxuezhi.com/2016/03/30/PCL系列——如何可视化深度图像/
+http://zhangxuezhi.com/2016/03/30/PCL系列——读入PCD格式文件/
+http://zhangxuezhi.com/2016/03/30/PCL系列——从深度图像（RangeImage）中提取NARF关键点/
+http://zhangxuezhi.com/2016/03/29/服务器维护系列——VNC没有反应了怎么办/
+http://zhangxuezhi.com/2016/03/28/Visual Studio——设置缩进/
+http://zhangxuezhi.com/2016/03/23/Windows办公技能——在当前文件夹中打开命令行窗口/
+http://zhangxuezhi.com/2016/03/18/错误-VS2010 error -  fatal error LNK1123 - failure during conversion to COFF/
+http://zhangxuezhi.com/2015/11/19/Ubuntu14.04安装Theano详细教程/
+http://zhangxuezhi.com/2015/11/14/Linux下安装Eclipse/
+http://zhangxuezhi.com/2015/11/13/Linux终端提示符显示颜色/
+http://zhangxuezhi.com/2015/11/11/错误-python-Not uninstalling six at -usr-lib-python2.7-dist-packages, owned by OS/
+http://zhangxuezhi.com/2015/11/05/Linux命令——find/
+http://zhangxuezhi.com/2015/11/05/Linux命令——diff/
+http://zhangxuezhi.com/2015/11/04/Linux命令——useradd/
+http://zhangxuezhi.com/2015/11/04/Linux命令——userdel/
+http://zhangxuezhi.com/2015/11/04/Linux命令——adduser/
+http://zhangxuezhi.com/2015/11/04/Linux命令——w/
+http://zhangxuezhi.com/2015/11/04/Linux命令——who/
+http://zhangxuezhi.com/2015/11/04/Linux命令——whoami/
+http://zhangxuezhi.com/2015/11/04/Linux命令——uname/
+http://zhangxuezhi.com/2015/11/04/Linux命令——visudo/
+http://zhangxuezhi.com/2015/11/04/Linux命令——alias/
+http://zhangxuezhi.com/2015/11/04/Linux命令——unalias/
+http://zhangxuezhi.com/2015/11/04/Linux命令——awk/
+http://zhangxuezhi.com/2015/11/03/Xftp使用教程——问答方式/
+http://zhangxuezhi.com/2015/11/03/Xshell使用教程——问答方式/
+http://zhangxuezhi.com/2015/11/03/系统运维学习笔记/
+http://zhangxuezhi.com/2015/10/13/caffe安装系列——安装caffe/
+http://zhangxuezhi.com/2015/10/13/服务器安装并配置Ubuntu Server 14.04/
+http://zhangxuezhi.com/2015/09/24/caffe安装系列——安装OpenCV/
+http://zhangxuezhi.com/2015/09/24/caffe安装系列——安装python依赖包/
+http://zhangxuezhi.com/2015/09/24/caffe安装系列——综述/
+http://zhangxuezhi.com/2015/09/24/caffe安装系列——安装NVIDIA显卡驱动/
+http://zhangxuezhi.com/2015/09/23/caffe安装系列——安装Matlab/
+http://zhangxuezhi.com/2015/09/22/caffe安装系列——安装cuda和cudnn/
+http://zhangxuezhi.com/2015/09/22/caffe安装系列——安装GCC4.7和G++4.7并降级/
+http://zhangxuezhi.com/2015/09/22/Ubuntu Server 添加、删除和修改用户/
+http://zhangxuezhi.com/2015/09/22/Linux shell判断文件和文件夹是否存在/
+http://zhangxuezhi.com/2015/09/22/在VNC中Xfce4中Tab键失效的解决方法/
+http://zhangxuezhi.com/2015/09/21/使用Putty无法远程登录，显示服务器拒绝连接/
+http://zhangxuezhi.com/2015/09/21/Putty使用设置/
+http://zhangxuezhi.com/2015/09/17/Ubuntu-安装-theano+caffe-超详细教程/
+http://zhangxuezhi.com/2015/09/15/Ubuntu 14.04 64bit 安装32位兼容包/
+http://zhangxuezhi.com/2015/09/14/windows使用VNC远程访问Ubuntu Server 14.04图形界面/
+http://zhangxuezhi.com/2015/09/14/服务器如何进入Bios/
+http://zhangxuezhi.com/2015/09/14/U盘安装Ubuntu Server ，CD-ROM自检，安装失败/
+http://zhangxuezhi.com/2015/09/14/Ubuntu Server 14.04安装Gnome桌面环境/
+http://zhangxuezhi.com/2015/09/12/使用XX-Net翻墙(访问google学术、youtube、Facebook等等)/
+http://zhangxuezhi.com/2015/08/24/MatConvNet学习笔记/
+http://zhangxuezhi.com/2015/08/02/Ubuntu-安装-cuda7.0-单显卡-超详细教程/
+http://zhangxuezhi.com/2015/07/31/Ubuntu-安装-搜狗输入法-详细教程/
+http://zhangxuezhi.com/2015/07/31/Ubuntu-安装-Chrome/
+http://zhangxuezhi.com/2015/07/31/Ubuntu-安装-Shadowsocks/
+http://zhangxuezhi.com/2015/07/28/ubuntu中apt-get安装与默认路径/
+http://zhangxuezhi.com/2015/07/25/Matlab工具箱下载地址汇总/
+http://zhangxuezhi.com/2015/07/25/希腊字母发音对照表/
+http://zhangxuezhi.com/2015/07/17/tar-Exiting with failure status due to previous errors/
+http://zhangxuezhi.com/2015/07/16/VMware的虚拟机无法ping到/

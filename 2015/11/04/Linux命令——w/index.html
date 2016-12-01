@@ -222,7 +222,7 @@
       
         <li class="menu-item menu-item-search">
           
-            <a href="javascript:;" class="st-search-show-outputs">
+            <a href="javascript:;" class="popup-trigger">
           
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
@@ -237,19 +237,12 @@
   
     <div class="site-search">
       
-  <form class="site-search-form">
-  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
-</form>
-
-<script type="text/javascript">
-  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
-
-  _st('install', 'fzTkQ4sTRYdzmXMx-fab','2.0.0');
-</script>
-
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
 
 
     </div>
@@ -453,16 +446,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/11/04/Linux命令——adduser/" rel="next" title="Linux命令——adduser">
-                <i class="fa fa-chevron-left"></i> Linux命令——adduser
+              <a href="/2015/11/04/Linux命令——who/" rel="next" title="Linux命令——who">
+                <i class="fa fa-chevron-left"></i> Linux命令——who
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/11/04/Linux命令——userdel/" rel="prev" title="Linux命令——userdel">
-                Linux命令——userdel <i class="fa fa-chevron-right"></i>
+              <a href="/2015/11/04/Linux命令——adduser/" rel="prev" title="Linux命令——adduser">
+                Linux命令——adduser <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
