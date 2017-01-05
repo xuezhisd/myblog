@@ -46,7 +46,7 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="学志の博客" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="张学志の博客" type="application/atom+xml" />
 
 
 
@@ -63,8 +63,8 @@
 作者花费了很长时间才成功地将caffe装完，期间遇到好多错误，多次重装操作系统。现在将经验写下">
 <meta property="og:type" content="article">
 <meta property="og:title" content="caffe安装系列——安装cuda和cudnn">
-<meta property="og:url" content="http://zhangxuezhi.com/2015/09/22/caffe安装系列——安装cuda和cudnn/index.html">
-<meta property="og:site_name" content="学志の博客">
+<meta property="og:url" content="http://blog.zhangxuezhi.com/2015/09/22/caffe安装系列——安装cuda和cudnn/index.html">
+<meta property="og:site_name" content="张学志の博客">
 <meta property="og:description" content="说明
 网上关于caffe的安装教程非常多，但是关于每一步是否操作成功，出现了什么样的错误又该如何处理没有给出说明。因为大家的操作系统的环境千差万别，按照博客中的教程一步步的安装，最后可能失败——这是很常见的哦。有的教程甚至省略了一些细节部分，让小白更不知道如何判断每一步是否操作成功，如何处理出现的错误。
 作者花费了很长时间才成功地将caffe装完，期间遇到好多错误，多次重装操作系统。现在将经验写下">
@@ -97,10 +97,10 @@
 
 
 
-  <link rel="canonical" href="http://zhangxuezhi.com/2015/09/22/caffe安装系列——安装cuda和cudnn/"/>
+  <link rel="canonical" href="http://blog.zhangxuezhi.com/2015/09/22/caffe安装系列——安装cuda和cudnn/"/>
 
 
-  <title> caffe安装系列——安装cuda和cudnn | 学志の博客 </title>
+  <title> caffe安装系列——安装cuda和cudnn | 张学志の博客 </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -150,7 +150,7 @@
   <div class="custom-logo-site-title">
     <a href="/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <span class="site-title">学志の博客</span>
+      <span class="site-title">张学志の博客</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
@@ -372,15 +372,15 @@
 <a id="more"></a>
 <h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>操作系统： <strong><em>Ubuntu 14.04(64bit)</em></strong><br>GCC/G++:<strong><em>4.7.x</em></strong><br>OpenCV: <strong><em>2.4.11和3.0.0</em></strong><br>Matlab :<strong><em>R2014b(a)</em></strong><br>Python:   <strong><em>2.7</em></strong><br>显卡：Telsa K40m &amp; Telsa K20xm</p>
 <h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><ol>
-<li><a href="http://zhangxuezhi.com/2015/09/24/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E7%BB%BC%E8%BF%B0/">综述</a></li>
+<li><a href="http://zhangxuezhi.com/2015/09/24/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E7%BB%BC%E8%BF%B0/" target="_blank" rel="external">综述</a></li>
 <li><a href="">准备工作</a></li>
-<li><a href="http://zhangxuezhi.com/2015/09/22/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85GCC4.7%E5%92%8CG++4.7%E5%B9%B6%E9%99%8D%E7%BA%A7/">安装GCC4.7和G++4.7并降级</a></li>
-<li><a href="http://zhangxuezhi.com/2015/09/24/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85NVIDIA%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8/">安装显卡驱动</a></li>
-<li><a href="http://zhangxuezhi.com/2015/09/22/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85cuda%E5%92%8Ccudnn/">安装cuda和cudnn</a></li>
-<li><a href="http://zhangxuezhi.com/2015/09/23/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85Matlab/">安装Matlab</a></li>
-<li><a href="http://zhangxuezhi.com/2015/09/24/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85OpenCV/">安装OpenCV</a></li>
-<li><a href="http://zhangxuezhi.com/2015/09/24/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85python%E4%BE%9D%E8%B5%96%E5%8C%85/">安装Python依赖包</a></li>
-<li><a href="http://zhangxuezhi.com/2015/10/13/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85caffe/">安装caffe</a></li>
+<li><a href="http://zhangxuezhi.com/2015/09/22/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85GCC4.7%E5%92%8CG++4.7%E5%B9%B6%E9%99%8D%E7%BA%A7/" target="_blank" rel="external">安装GCC4.7和G++4.7并降级</a></li>
+<li><a href="http://zhangxuezhi.com/2015/09/24/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85NVIDIA%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8/" target="_blank" rel="external">安装显卡驱动</a></li>
+<li><a href="http://zhangxuezhi.com/2015/09/22/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85cuda%E5%92%8Ccudnn/" target="_blank" rel="external">安装cuda和cudnn</a></li>
+<li><a href="http://zhangxuezhi.com/2015/09/23/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85Matlab/" target="_blank" rel="external">安装Matlab</a></li>
+<li><a href="http://zhangxuezhi.com/2015/09/24/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85OpenCV/" target="_blank" rel="external">安装OpenCV</a></li>
+<li><a href="http://zhangxuezhi.com/2015/09/24/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85python%E4%BE%9D%E8%B5%96%E5%8C%85/" target="_blank" rel="external">安装Python依赖包</a></li>
+<li><a href="http://zhangxuezhi.com/2015/10/13/caffe%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97%E2%80%94%E2%80%94%E5%AE%89%E8%A3%85caffe/" target="_blank" rel="external">安装caffe</a></li>
 </ol>
 <h2 id="安装cuda"><a href="#安装cuda" class="headerlink" title="安装cuda"></a>安装cuda</h2><ul>
 <li>参考<a href="http://blog.csdn.net/xuezhisdc/article/details/47075401" target="_blank" rel="external">《Ubuntu-安装-cuda7.0-单显卡-超详细教程》</a> <a href="http://ouxinyu.github.io/Blogs/20140723001.html" target="_blank" rel="external">《Caffe + Ubuntu 15.04 + CUDA 7.0 新手安装配置指南》</a></li>
@@ -565,7 +565,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2015/09/22/caffe安装系列——安装cuda和cudnn/"
-           data-title="caffe安装系列——安装cuda和cudnn" data-url="http://zhangxuezhi.com/2015/09/22/caffe安装系列——安装cuda和cudnn/">
+           data-title="caffe安装系列——安装cuda和cudnn" data-url="http://blog.zhangxuezhi.com/2015/09/22/caffe安装系列——安装cuda和cudnn/">
       </div>
     
   </div>
