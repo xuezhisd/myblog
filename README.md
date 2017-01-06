@@ -1,4 +1,4 @@
-# [zhangxuezhi.com](http://zhangxuezhi.com)
+# [blog.zhangxuezhi.com](http://blog.zhangxuezhi.com)
 
 [xuezhisd.github.io](http://zhangxuezhi.com)
 

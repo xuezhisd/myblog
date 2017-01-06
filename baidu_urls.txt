@@ -24,15 +24,15 @@ http://blog.zhangxuezhi.com/2016/07/31/如何安装Hadoop 2.6.0完全分布式/
 http://blog.zhangxuezhi.com/2016/07/11/健康系列——如何增强免疫力/
 http://blog.zhangxuezhi.com/2016/04/20/PCL系列——平面模型分割/
 http://blog.zhangxuezhi.com/2016/04/20/PCL系列——拼接两个点云/
-http://blog.zhangxuezhi.com/2016/04/01/PCL系列——如何逐渐地配准一对点云/
 http://blog.zhangxuezhi.com/2016/04/01/PCL系列——三维重构之贪婪三角投影算法/
-http://blog.zhangxuezhi.com/2016/04/01/PCL系列——三维重构之移动立方体算法/
 http://blog.zhangxuezhi.com/2016/04/01/PCL系列——三维重构之泊松重构/
+http://blog.zhangxuezhi.com/2016/04/01/PCL系列——如何逐渐地配准一对点云/
+http://blog.zhangxuezhi.com/2016/04/01/PCL系列——三维重构之移动立方体算法/
 http://blog.zhangxuezhi.com/2016/03/31/PCL系列——如何使用迭代最近点法（ICP）配准/
 http://blog.zhangxuezhi.com/2016/03/30/PCL系列——将点云数据写入PCD格式文件/
 http://blog.zhangxuezhi.com/2016/03/30/PCL系列——如何可视化深度图像/
-http://blog.zhangxuezhi.com/2016/03/30/PCL系列——读入PCD格式文件/
 http://blog.zhangxuezhi.com/2016/03/30/PCL系列——从深度图像（RangeImage）中提取NARF关键点/
+http://blog.zhangxuezhi.com/2016/03/30/PCL系列——读入PCD格式文件/
 http://blog.zhangxuezhi.com/2016/03/29/服务器维护系列——VNC没有反应了怎么办/
 http://blog.zhangxuezhi.com/2016/03/28/Visual Studio——设置缩进/
 http://blog.zhangxuezhi.com/2016/03/23/Windows办公技能——在当前文件夹中打开命令行窗口/
