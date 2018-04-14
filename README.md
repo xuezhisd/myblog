@@ -1,4 +1,4 @@
-# zhangxuezhi.com
+# xuezhisd.top
 # xuezhisd.github.io
 
-xuezhi's blog
+the blog of xuezhi zhang
